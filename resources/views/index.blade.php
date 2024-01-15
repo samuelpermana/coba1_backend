@@ -55,11 +55,11 @@
     </header>
 
     <section class="container">
-        <h2 class="header">AKTIFITAS SM FH UNDIP</h2>
+        <h2 class="header">AKTIVITAS SM FH UNDIP</h2>
         
 
     <section class="container">
-        <h2 class="header">AKTIFITAS LEGISLASI</h2>
+        <h2 class="header">AKTIVITAS LEGISLASI</h2>
         <p class="sub-header">
             Aktivitas tahapan Legislasi yang dibentuk oleh SM FH Undip sebelum disahkan atau ditetapkan.
         </p>
