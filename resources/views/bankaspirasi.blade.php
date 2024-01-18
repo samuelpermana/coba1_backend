@@ -40,7 +40,7 @@
 
           </div>
           <p>{{$aspirasi->message}}</p>
-          <button class="btn">Selengkapnya</button>
+          <!-- <button class="btn">Selengkapnya</button> -->
         </div>
         @endforeach
 
