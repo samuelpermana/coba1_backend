@@ -1,0 +1,349 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  outline: none;
+  border: none;
+  box-sizing: border-box;
+}
+
+img {
+  width: 70%;
+  display: flex;
+  margin-left: 50px;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: #18181b;
+}
+
+nav {
+  width: 1400px;
+  margin: 0 auto; /* Menggunakan auto untuk memastikan navbar berada di tengah */
+  padding: 2rem 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.nav-logo {
+  display: inline-flex;
+  align-items: center; /* Mengatur vertikal ke tengah */
+}
+
+.nav-logo img {
+  max-width: 100px;
+}
+
+.nav-title {
+  display: inline-flex;
+  margin-left: 10px;
+  font-size: 1.2rem;
+  color: #cfb53b;
+  font-weight: 600;
+  align-items: center; /* Mengatur vertikal ke tengah */
+}
+.nav-links {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+}
+
+.link a {
+  position: relative;
+  padding-bottom: 0.75rem;
+  color: #fff;
+}
+
+.link a::after {
+  content: "";
+  position: absolute;
+  height: 2px;
+  width: 0;
+  bottom: 0;
+  left: 50%; /* Menengahkan garis bawah */
+  transform: translateX(-50%); /* Menyempurnakan penempatan garis bawah */
+  background-color: #cfb53b;
+  transition: all 0.3s ease;
+}
+
+.link a:hover::after {
+  width: 70%;
+}
+
+.btn {
+  padding: 1rem 2rem;
+  font-size: 1rem;
+  color: #fff;
+  background: rgb(2, 0, 36);
+  background: linear-gradient(135deg, rgba(2, 0, 36, 1) 0%, rgba(207, 181, 59, 1) 0%, rgba(148, 27, 63, 1) 90%);
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #cfb53b;
+}
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 5rem 2rem;
+}
+
+.blur {
+  position: absolute;
+  box-shadow: 0 0 1000px 50px #cfb53b;
+  z-index: -100;
+}
+
+section .header-JD {
+    color: #cfb53b;
+    margin-bottom: 3rem;
+    font-size: 4rem;
+    font-weight: 700;
+    line-height: 5rem;
+    margin-top: 2rem;
+    text-align: center;
+  }
+
+  section .headerJD {
+    color: #cfb53b;
+    margin-bottom: 3rem;
+    font-size: 4rem;
+    font-weight: 700;
+    line-height: 4rem;
+    margin-top: 2rem;
+    text-align: center;
+  }
+
+  .container img {
+    max-width: 450px;
+    display: block;
+  }
+  
+  .container .star-img {
+    width: 80px;
+    margin: 0;
+    
+    
+  }
+  .features-JD {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 4 kolom */
+    gap: 2rem; /* Jarak antar card */
+  }
+
+  .features-JD .card-JD {
+    display: flex;
+    flex-direction: row;
+    width: 100%; /* Menggunakan lebar 100% agar mengisi seluruh kolom */
+    background-color: #27272a;
+    padding: 0.3rem;
+    border: 1px solid transparent;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+    margin: 0; /* Menghapus margin default */
+    
+  }
+
+  
+  
+  
+  .features-JD .card-JD .blue {
+    background-color: #C0C0C0;
+  }
+  
+  
+  
+  
+  
+  
+  
+  .features-JD .card-JD .content,
+  .features1 .card-JD .content {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Menengahkan elemen sepanjang sumbu utama */
+    justify-content: center; /* Menengahkan elemen sepanjang sumbu lintang */
+    max-width: 334px;
+  }
+  
+  .features-JD .card-JD span,
+  .features1 .card-JD span {
+    display: flex;
+    padding: 1px;
+    margin: 10px 10px 10px 26px;
+    font-size: 120px;
+    color: #000000;
+    border-radius: 8px;
+    justify-content: center;
+    align-items: center;
+    width: 130px;
+    height: 100px;
+    transition: all 1 ease;
+    border: 2px solid transparent;
+  }
+
+  .features-JD .card-JD span:hover,
+  .features1 .card-JD span:hover {
+    
+    border-color: #fefefe;
+  }
+  
+  .features-JD .card-JD h4,
+  .features1 .card-JD h4 {
+    
+    color: #fff;
+    font-size: 1.2rem;
+    font-weight: 600;
+    text-align: center;
+    justify-content: center;
+    margin-top: 0;
+    transition: all 0.3s ease;
+  }
+  .features-JD .card-JD h4:hover{
+    color: #cfb53b;
+  }
+  
+  .features-JD .card-JD p,
+  .features1 .card-JD p {
+    color: #ccc;
+    margin-bottom: 1rem;
+    font-size: 0.9rem;
+  }
+  
+  .features1 .card-JD p {
+    font-size: 0.8rem;
+  }
+  
+  .features-JD .card-JD a,
+  .features1 .card-JD a {
+    color: #fff;
+    font-size: 1.2rem;
+    font-weight: 600;
+    text-align: center;
+    justify-content: center;
+    margin-top: 0;
+    transition: all 0.3s ease;
+
+  }
+  
+  .features-JD .card-JD a:hover,
+  .features1 .card-JD a:hover {
+    color: #cfb53b;
+  }
+
+  footer {
+    position: relative;
+    display: grid;
+    grid-template-columns: 400px repeat(3, 1fr);
+    gap: 2rem;
+  }
+  
+  footer .column .logo {
+    max-width: 100px;
+    margin-bottom: 2rem;
+  }
+  
+  footer .column p {
+    color: #ccc;
+    margin-bottom: 2rem;
+  }
+  
+  footer .column .socials {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+  
+  footer .column .socials a {
+    color: #ccc;
+    border: 1px solid #ccc;
+    padding: 5px 10px;
+    font-size: 1.25rem;
+    border-radius: 100%;
+    transition: all 0.3s ease;
+  }
+  
+  footer .column .socials a:hover {
+    color: #fff;
+    background-color: #cfb53b;
+    border-color: #cfb53b;
+  }
+  
+  footer .column h4 {
+    color: #fff;
+    margin-bottom: 2rem;
+    font-size: 1.2rem;
+    font-weight: 500;
+  }
+  
+  footer .column > a {
+    display: block;
+    color: #ccc;
+    margin-bottom: 1rem;
+    transition: all 0.3s ease;
+  }
+  
+  footer .column > a:hover {
+    color: #cfb53b;
+  }
+  
+  .copyright {
+    max-width: 1200px;
+    margin: auto;
+    padding: 1rem;
+    color: #fff;
+    font-size: 0.8rem;
+    text-align: center;
+  }
+  
+  @media (width < 900px) {
+    .nav-links {
+      display: none;
+    }
+    header {
+      grid-template-columns: repeat(1, 1fr);
+    }
+    header .image {
+      grid-area: 1/1/2/2;
+    }
+    .features {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    .pricing {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    footer {
+      grid-template-columns: 1fr 200px;
+    }
+  }
+  
+  @media (width < 600px) {
+    header .image::before {
+      display: none;
+    }
+  
+    .features {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  
+    .pricing {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  
+    footer {
+      grid-template-columns: 1fr 150px;
+    }
+  }
