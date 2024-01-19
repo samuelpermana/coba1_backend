@@ -40,6 +40,7 @@
             <h4>Aspirasi 1</h4>
             
           </div>
+
           
           <button class="btn3">Selengkapnya</button>
           
@@ -49,6 +50,7 @@
                 Morbi ornare mauris ac ante luctus, at gravida enim vehicula. Aenean consectetur arcu in erat commodo 
                 semper.</p>
             </div>
+
         </div>
         <h2 class="header-BA">BIROKRASI</h2>
         <div class="card">

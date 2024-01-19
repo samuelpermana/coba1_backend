@@ -3,6 +3,7 @@
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AspirasiController;
+use App\Http\Controllers\Auth\AuthController;
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -18,5 +19,18 @@ use App\Http\Controllers\AspirasiController;
 //     return $request->user();
 // });
 
+Route::prefix('auth')->group(function () {
+    Route::post('/login', [AuthController::class, 'login']);
+
+    Route::middleware('auth:api')->group(function () {
+        Route::post('/logout', [AuthController::class, 'logout']);
+    });
+});
+
 Route::post('/aspirasi',[AspirasiController::class, 'createAspirasi']);
 Route::get('/aspirasi',[AspirasiController::class, 'getAspirasi']);
+
+Route::post('/register', [AuthController::class, 'createAccount']);
+// Route::prefix('auth')->group(function () {
+    
+// })
