@@ -1,0 +1,43 @@
+section .header-ba {
+  color: #cfb53b;
+  margin-bottom: 2rem;
+  font-size: 3rem;
+  font-weight: 700;
+  line-height: 4rem;
+  text-align: center;
+  margin-top: 5rem;
+}
+
+.accordion {
+  color: #fff;
+  font-size: 1rem;
+  padding: 1rem 2rem;
+  width: 100%;
+  background: rgb(2, 0, 36);
+  background: linear-gradient(
+    135deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(207, 181, 59, 1) 0%,
+    rgba(148, 27, 63, 1) 90%
+  );
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.5s;
+  font-family: "Poppins", sans-serif;
+}
+
+.panel {
+  color: #fff;
+  padding: 0 18px;
+  border-radius: 15px;
+  background-color: #770000;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease-out;
+  margin-top: 10px;
+  text-align: justify;
+}

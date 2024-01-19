@@ -70,5 +70,9 @@ Route::get('/bksap.html', function () {
     return view('bksap');
 });
 
+Route::get('/bankaspirasicms.html', function () {
+    return view('bankaspirasi-cms');
+});
+
 
 Route::get('/aspirasi',[AspirasiController::class, 'getAspirasi']);

@@ -1,18 +1,3 @@
-var acc = document.getElementsByClassName("accordion");
-var i;
-
-for (i = 0; i < acc.length; i++) {
-  acc[i].addEventListener("click", function () {
-    this.classList.toggle("active");
-    var panel = this.nextElementSibling;
-    if (panel.style.maxHeight) {
-      panel.style.maxHeight = null;
-    } else {
-      panel.style.maxHeight = panel.scrollHeight + "px";
-    }
-  });
-}
-
 // 2. Validasi Form
 const form = document.querySelector("#contact form");
 form.addEventListener("submit", function (e) {
@@ -52,29 +37,4 @@ window.addEventListener("click", function (event) {
   if (event.target === modal) {
     modal.style.display = "none";
   }
-});
-
-$(document).ready(function () {
-  const cards = $(".features .card");
-  let currentIndex = 0;
-
-  function showCard(index) {
-    cards.hide().eq(index).fadeIn();
-  }
-
-  $(".next-btn").click(function () {
-    currentIndex++;
-    if (currentIndex >= cards.length) {
-      currentIndex = 0;
-    }
-    showCard(currentIndex);
-  });
-
-  $(".prev-btn").click(function () {
-    currentIndex--;
-    if (currentIndex < 0) {
-      currentIndex = cards.length - 1;
-    }
-    showCard(currentIndex);
-  });
 });
