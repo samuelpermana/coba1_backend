@@ -70,5 +70,17 @@ Route::get('/bksap.html', function () {
     return view('bksap');
 });
 
+Route::get('/jdih.html', function () {
+    return view('jdih');
+});
+
+Route::get('/perma2020.html', function () {
+    return view('perma2020');
+});
+
+Route::get('/peminjamanruangan.html', function () {
+    return view('peminjamanruangan');
+});
+
 
 Route::get('/aspirasi',[AspirasiController::class, 'getAspirasi']);

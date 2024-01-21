@@ -23,6 +23,8 @@
         <li id="link2" class="link"><a href="faq.html">FAQ</a></li>
         <li id="link3" class="link"><a href="bankaspirasi.html">Bank Aspirasi</a></li>
         <li id="link4" class="link"><a href="selayangpandang.html">Selayang Pandang</a></li>
+        <li id="link4" class="link"><a href="jdih.html">JDIH</a></li>
+        <li id="link4" class="link"><a href="peminjamanruangan.html">Peminjaman Ruangan</a></li>
       </ul>
       <button class="btn">Ajukan Surat</button>
     </nav>
@@ -30,22 +32,56 @@
     <section class="container">
       <h2 class="header">Bank Aspirasi</h2>
       <p class="sub-header">Berisikan tentang keseluruhan Aspirasi beserta jawabannya dari mahasiswa.</p>
+      <h2 class="header-BA">SARPRAS</h2>
+      <p class="sub-header">Berisikan tentang keseluruhan Aspirasi beserta jawabannya dari mahasiswa.</p>
       <div class="pricing">
-        @foreach($aspirasis as $aspirasi)
-
         <div class="card">
           <div class="content">
-            <h4>{{$aspirasi->email}}</h4>
-            <h4>{{$aspirasi->name}}</h4>
-
+            <h4>Aspirasi 1</h4>
+            
           </div>
-          <p>{{$aspirasi->message}}</p>
-          <button class="btn">Selengkapnya</button>
-        </div>
-        @endforeach
 
+          
+          <button class="btn3">Selengkapnya</button>
+          
+          <div class="panel">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent ex velit, lobortis et lorem eget, 
+                ultricies facilisis turpis. Cras volutpat augue non lorem gravida, sed viverra dolor vehicula. 
+                Morbi ornare mauris ac ante luctus, at gravida enim vehicula. Aenean consectetur arcu in erat commodo 
+                semper.</p>
+            </div>
+
+        </div>
+        <h2 class="header-BA">BIROKRASI</h2>
+        <div class="card">
+          <div class="content">
+            <h4>Aspirasi 2</h4>
+          </div>
+          <button class="btn3">Selengkapnya</button>
+          <div class="panel">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent ex velit, lobortis et lorem eget, 
+                ultricies facilisis turpis. Cras volutpat augue non lorem gravida, sed viverra dolor vehicula. 
+                Morbi ornare mauris ac ante luctus, at gravida enim vehicula. Aenean consectetur arcu in erat commodo 
+                semper. </p>
+            </div>
+        </div>
+        <h2 class="header-BA">AKADEMIK</h2>
+        <div class="card">
+          <div class="content">
+            <h4>Aspirasi 2</h4>
+          </div>
+          <button class="btn3">Selengkapnya</button>
+          <div class="panel">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent ex velit, lobortis et lorem eget, 
+                ultricies facilisis turpis. Cras volutpat augue non lorem gravida, sed viverra dolor vehicula. 
+                Morbi ornare mauris ac ante luctus, at gravida enim vehicula. Aenean consectetur arcu in erat commodo 
+                semper. </p>
+            </div>
+        </div>
+        
       </div>
     </section>
+
 
     <footer class="container">
       <span class="blur"></span>
@@ -83,6 +119,6 @@
 
     <div class="copyright">Copyright Â© 2023 SENAT FH UNDIP. All Rights Reserved.</div>
 
-    <script src="script.js"></script>
+    <script src="script4.js"></script>
   </body>
 </html>

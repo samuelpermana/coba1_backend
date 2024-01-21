@@ -24,6 +24,8 @@
             <li id="link2" class="link"><a href="faq.html">FAQ</a></li>
             <li id="link3" class="link"><a href="bankaspirasi.html">Bank Aspirasi</a></li>
             <li id="link3" class="link"><a href="selayangpandang.html">Selayang Pandang</a></li>
+            <li id="link4" class="link"><a href="jdih.html">JDIH</a></li>
+            <li id="link4" class="link"><a href="peminjamanruangan.html">Peminjaman Ruangan</a></li>
         </ul>
         <button class="btn">Ajukan Surat</button>
     </nav>
@@ -36,6 +38,12 @@
         <input type="text" id="name" name="name" required>
 
         <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="email">Angkatan:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="email">id line:</label>
         <input type="email" id="email" name="email" required>
 
         <div class="message-container">
