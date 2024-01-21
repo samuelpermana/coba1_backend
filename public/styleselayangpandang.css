@@ -137,3 +137,115 @@ header .content h1 {
     margin-top: 2rem;
     text-align: center;
   }
+
+  .features {
+    margin-top: 4rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: space-between;
+    gap: 2rem;
+  }
+  
+  .features1 {
+    margin-top: 2rem;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    justify-content: space-between;
+    gap: 2rem;
+  }
+  
+  .features .card {
+    display: flex;
+    flex: 1;
+    background-color: #27272a;
+    padding: 1rem;
+    border: 2px solid transparent;
+    border-radius: 15px;
+    transition: all 0.3s ease;
+  }
+  
+  
+  
+  .features .card .blue {
+    background: hsl(196, 42%, 33%);
+  }
+  
+  .features .card .white {
+    background: #fefefe;
+  }
+  
+  .features1 .card {
+    width: 552px;
+    display: flex;
+    flex: 1;
+    background-color: #27272a;
+    padding: 1rem;
+    border: 2px solid transparent;
+    border-radius: 15px;
+    transition: all 0.3s ease;
+    justify-self: center;
+  }
+  
+  .features .card:hover,
+  .features1 .card:hover {
+    background-color: #323232;
+    border-color: #fff;
+  }
+  
+  .features .card .content,
+  .features1 .card .content {
+    display: flex;
+    flex-direction: column;
+    max-width: 334px;
+  }
+  
+  .features .card span,
+  .features1 .card span {
+    display: flex;
+    background: rgb(2,0,36);
+    background: linear-gradient(135deg, rgba(2,0,36,1) 0%, rgba(255,255,255,1) 0%, rgba(49,100,119,1) 70%); 
+    padding: 2px;
+    margin: 10px 26px 10px 10px;
+    font-size: 120px;
+    color: #000000;
+    border-radius: 8px;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    height: 150px;
+  }
+  
+  .features .card h4,
+  .features1 .card h4 {
+    margin-bottom: 0.5rem;
+    color: #fff;
+    font-size: 1.2rem;
+    font-weight: 600;
+  }
+  
+  .features .card p,
+  .features1 .card p {
+    color: #ccc;
+    margin-bottom: 1rem;
+    font-size: 0.9rem;
+  }
+  
+  .features1 .card p {
+    font-size: 0.8rem;
+  }
+  
+  .features .card a,
+  .features1 .card a {
+    color: #fff;
+    transition: all 0.3s ease;
+  }
+  
+  .features .card a:hover,
+  .features1 .card a:hover {
+    color: #cfb53b;
+  }
+
+
+
+  
+
