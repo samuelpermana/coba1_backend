@@ -58,17 +58,7 @@
 
     <section class="container">
         <h2 class="header">AKTIVITAS SM FH UNDIP</h2>
-        <div class="ketua">
-            <div class="card_wrapper-0">
-              <div class="card_image-0">
-                <img src="img/avatar-1.png" alt="gambar pengembangan dan keilmuan" class="card_img" />
-              </div>
-              <div class="card_data-0">
-                <h2 class="card_title">Ketua SM FH UNDIP 2024</h2>
-                <h3 class="card_name" style="color: #d4af37">Zamroni Akhmad Affandi<br />FH UNDIP 2021</h3>
-              </div>
-            </div>
-          </div>
+        
         
 
     <section class="container">
