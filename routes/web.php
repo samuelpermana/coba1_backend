@@ -83,4 +83,16 @@ Route::get('/peminjamanruangan.html', function () {
 });
 
 
+Route::get('/transparansisurat3.html', function () {
+    return view('transparansisurat3');
+});
+
+Route::get('/login.html', function () {
+    return view('login');
+});
+
+Route::get('/ajukansurat.html', function () {
+    return view('ajukansurat');
+});
+
 Route::get('/aspirasi',[AspirasiController::class, 'getAspirasi']);

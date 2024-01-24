@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.5.0/remixicon.min.css">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="stylekotakaspirasi.css">
     <title>SENAT FH UNDIP</title>
 </head>
 
@@ -23,14 +23,15 @@
             <li id="link1" class="link"><a href="kotakaspirasi.html">Kotak Aspirasi</a></li>
             <li id="link2" class="link"><a href="faq.html">FAQ</a></li>
             <li id="link3" class="link"><a href="bankaspirasi.html">Bank Aspirasi</a></li>
-            <li id="link3" class="link"><a href="selayangpandang.html">Selayang Pandang</a></li>
-            <li id="link4" class="link"><a href="jdih.html">JDIH</a></li>
-            <li id="link4" class="link"><a href="peminjamanruangan.html">Peminjaman Ruangan</a></li>
+            <li id="link4" class="link"><a href="selayangpandang.html">Selayang Pandang</a></li>
+            <li id="link5" class="link"><a href="jdih.html">JDIH</a></li>
+            <li id="link6" class="link"><a href="peminjamanruangan.html">Peminjaman Ruangan</a></li>
+            <li id="link7" class="link"><a href="transparansisurat3.html">Transparansi Surat</a></li>
         </ul>
         <button class="btn">Ajukan Surat</button>
     </nav>
 
-    <section id="contact">
+<section id="contact">
     <h2>KOTAK ASPIRASI</h2>
     <form action="{{ route('aspirasi.store') }}" method="POST">
 

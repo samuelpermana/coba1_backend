@@ -31,6 +31,7 @@
         <li id="link4" class="link"><a href="selayangpandang.html">Selayang Pandang</a></li>
         <li id="link4" class="link"><a href="jdih.html">JDIH</a></li>
         <li id="link6" class="link"><a href="peminjamanruangan.html">Peminjaman Ruangan</a></li>
+        <li id="link6" class="link"><a href="transparansisurat3.html">Transparansi Surat</a></li>
       </ul>
       <button class="btn">Ajukan Surat</button>
     </nav>
@@ -216,7 +217,7 @@
           </div>
           <div class="card_data-0">
             <div class="card_box">
-              <h2 class="card_title">Sekretaris Jenderal</h2>
+              <h2 class="card_title-SJ">Sekretaris Jenderal</h2>
             </div>
             <h3 class="card_name" style="color: #d4af37">Candra Adrianando S.P<br />FH UNDIP 2021</h3>
           </div>

@@ -24,7 +24,7 @@ body {
 }
 
 nav {
-  width: 1600px;
+  width: 1400px;
   margin: 0 auto; /* Menggunakan auto untuk memastikan navbar berada di tengah */
   padding: 2rem 1rem;
   display: flex;
@@ -107,144 +107,130 @@ nav {
   z-index: -100;
 }
 
-section .header-JD {
-    color: #cfb53b;
-    margin-bottom: 3rem;
-    font-size: 4rem;
-    font-weight: 700;
-    line-height: 5rem;
-    margin-top: 2rem;
-    text-align: center;
-  }
-
-  section .headerJD {
-    color: #cfb53b;
-    margin-bottom: 3rem;
-    font-size: 4rem;
-    font-weight: 700;
-    line-height: 4rem;
-    margin-top: 2rem;
-    text-align: center;
-  }
-
-  .container img {
-    max-width: 450px;
-    display: block;
-  }
-  
-  .container .star-img {
-    width: 80px;
-    margin: 0;
-    
-    
-  }
-  .features-JD {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr); /* 4 kolom */
-    gap: 2rem; /* Jarak antar card */
-  }
-
-  .features-JD .card-JD {
-    display: flex;
-    flex-direction: row;
-    width: 100%; /* Menggunakan lebar 100% agar mengisi seluruh kolom */
-    background-color: #27272a;
-    padding: 0.3rem;
-    border: 1px solid transparent;
+.container-AJ{
+    width: 100%;
+    max-width: 650px;
+    background: rgb(2, 0, 36);
+    background: linear-gradient(135deg, rgba(2, 0, 36, 1) 0%, rgba(207, 181, 59, 1) 0%, rgba(148, 27, 63, 1) 90%);
+    padding: 28px;
+    margin: 0 28px;
     border-radius: 10px;
-    transition: all 0.3s ease;
-    margin: 0; /* Menghapus margin default */
-    
-  }
+    margin-left: auto;
+    margin-right: auto;
+}
 
-  
-  
-  
-  .features-JD .card-JD .blue {
-    background-color: #C0C0C0;
-  }
-  
-  
-  
-  
-  
-  
-  
-  .features-JD .card-JD .content,
-  .features1 .card-JD .content {
-    display: flex;
-    flex-direction: column;
-    align-items: center; /* Menengahkan elemen sepanjang sumbu utama */
-    justify-content: center; /* Menengahkan elemen sepanjang sumbu lintang */
-    max-width: 334px;
-  }
-  
-  .features-JD .card-JD span,
-  .features1 .card-JD span {
-    display: flex;
-    padding: 1px;
-    margin: 10px 10px 10px 26px;
-    font-size: 120px;
-    color: #000000;
-    border-radius: 8px;
-    justify-content: center;
-    align-items: center;
-    width: 130px;
-    height: 100px;
-    transition: all 1 ease;
-    border: 2px solid transparent;
-  }
-
-  .features-JD .card-JD span:hover,
-  .features1 .card-JD span:hover {
-    
-    border-color: #fefefe;
-  }
-  
-  .features-JD .card-JD h4,
-  .features1 .card-JD h4 {
-    
-    color: #fff;
-    font-size: 1.2rem;
+.form-title{
+    font-size: 26px;
     font-weight: 600;
     text-align: center;
-    justify-content: center;
-    margin-top: 0;
-    transition: all 0.3s ease;
-  }
-  .features-JD .card-JD h4:hover{
-    color: #cfb53b;
-  }
-  
-  .features-JD .card-JD p,
-  .features1 .card-JD p {
-    color: #ccc;
-    margin-bottom: 1rem;
-    font-size: 0.9rem;
-  }
-  
-  .features1 .card-JD p {
-    font-size: 0.8rem;
-  }
-  
-  .features-JD .card-JD a,
-  .features1 .card-JD a {
-    color: #fff;
-    font-size: 1.2rem;
-    font-weight: 600;
-    text-align: center;
-    justify-content: center;
-    margin-top: 0;
-    transition: all 0.3s ease;
+    padding-bottom: 6px;
+    color: white;
+    
+    border-bottom: solid 1px white;
+    font-family: "Poppins", sans-serif;
+}
 
+.main-user-info{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 20px 0;
+}
+
+.user-input-box:nth-child(2n){
+    justify-content: end;
+}
+
+.user-input-box{
+    display: flex;
+    flex-wrap: wrap;
+    width: 50%;
+    padding-bottom: 15px;
+}
+
+.user-input-box label{
+    width: 95%;
+    color: white;
+    font-size: 20px;
+    font-weight: 400;
+    margin: 5px 0;
+}
+
+.user-input-box input{
+    height: 40px;
+    width: 95%;
+    border-radius: 7px;
+    outline: none;
+    border: 1px solid grey;
+    padding: 0 10px;
+    font-family: "Poppins", sans-serif;
+}
+
+.mb-3 {
+    margin-bottom: 1.5rem;
+    font-family: "Poppins", sans-serif;
   }
   
-  .features-JD .card-JD a:hover,
-  .features1 .card-JD a:hover {
-    color: #cfb53b;
+  .form-label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+    color: #333;
+    font-family: "Poppins", sans-serif;
+  }
+  
+  .form-control {
+    display: block;
+    width: 100%;
+    padding: 0.375rem 0.75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #18181b;
+    background-color: transparent;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: 0.25rem;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  }
+  
+  /* Warna Khusus untuk Input File */
+  .form-control[type="file"] {
+    cursor: pointer;
+  }
+  
+  /* Efek Hover pada Input File */
+  .form-control[type="file"]:hover {
+    border-color: transparent;
+  }
+  
+  /* Efek Fokus pada Input File */
+  .form-control[type="file"]:focus {
+    border-color: transparent;
+    box-shadow: 0 0 0 0.25rem rgba(91, 192, 222, 0.25);
   }
 
-  footer {
+.form-submit-btn{
+    margin-top: 40px;
+}
+
+.form-submit-btn input{
+    display: block;
+    width: 100%;
+    margin-top: 10px;
+    font-size: 20px;
+    padding: 10px;
+    border:none;
+    border-radius: 10px;
+    color: rgb(255, 255, 255);
+    background: #18181b;
+}
+
+.form-submit-btn input:hover{
+    background: #18181b;
+    color: rgb(255, 255, 255);
+}
+
+footer {
     position: relative;
     display: grid;
     grid-template-columns: 400px repeat(3, 1fr);
@@ -348,4 +334,32 @@ section .header-JD {
     }
   }
 
+@media(max-width: 600px){
+    .container{
+        min-width: 280px;
+    }
 
+    .user-input-box{
+        margin-bottom: 12px;
+        width: 100%;
+    }
+
+    .user-input-box:nth-child(2n){
+        justify-content: space-between;
+    }
+
+    .gender-category{
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    .main-user-info{
+        max-height: 380px;
+        overflow: auto;
+    }
+
+    .main-user-info::-webkit-scrollbar{
+        width: 0;
+    }
+}

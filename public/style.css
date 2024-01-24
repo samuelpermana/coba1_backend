@@ -24,7 +24,7 @@ body {
 }
 
 nav {
-  width: 1400px;
+  width: 1600px;
   margin: 0 auto; /* Menggunakan auto untuk memastikan navbar berada di tengah */
   padding: 2rem 1rem;
   display: flex;
@@ -190,6 +190,7 @@ section .header-BA {
 .container img {
   max-width: 450px;
   display: block;
+  
 }
 
 .container .star-img {
@@ -558,7 +559,7 @@ footer .column > a:hover {
   transition: background-color 0.3s ease;
   display: block; /* Membuat tombol menjadi blok */
   margin: auto; /* Untuk membuat tombol berada di tengah */
-  width: 10%; /* Atur lebar sesuai kebutuhan Anda */
+  min-width: 10%; /* Atur lebar sesuai kebutuhan Anda */
   text-align: center; /* Agar teks di tengah tombol */
   margin-top: 10px;
 }
@@ -714,14 +715,9 @@ section .header1 {
 }
 
 .pricing1 .card1 h5 {
+  color: #ccc;
   margin-bottom: 1rem;
-  color: #fff;
   font-size: 1rem;
-  font-weight: 500;
-  text-align: justify; /* Mengatur teks menjadi rata kanan dan kiri */
-  text-justify: distribute-all-lines; /* Pilihan tambahan untuk penyebaran yang lebih merata */
-  line-height: 1.5; /* Mengatur jarak antar baris agar lebih legible */
-  letter-spacing: 0.5px;
 }
 
 .pricing1 .card1 h3 {
@@ -784,14 +780,9 @@ section .header1 {
 }
 
 .pricing1 .card2 h5 {
+  color: #ccc;
   margin-bottom: 1rem;
-  color: #fff;
   font-size: 1rem;
-  font-weight: 500;
-  text-align: justify; /* Mengatur teks menjadi rata kanan dan kiri */
-
-  line-height: 1.5; /* Mengatur jarak antar baris agar lebih legible */
-  letter-spacing: 0.5px;
 }
 
 .pricing1 .card2 h3 {
@@ -835,7 +826,7 @@ section .header1 {
   display: block; /* Untuk menghilangkan margin bawah default */
   margin: auto; /* Membuat margin kanan otomatis (diatur ke 'auto') */
   margin-left: 320px;
-  margin-top: 40px;
+  margin-top: -4rem;
 }
 
 section .header3 {
@@ -885,13 +876,9 @@ section .header3 {
 }
 
 .pricing1 .card h5 {
+  color: #ccc;
   margin-bottom: 1rem;
-  color: #fff;
   font-size: 1rem;
-  font-weight: 500;
-  text-align: justify;
-  line-height: 1.5; /* Mengatur jarak antar baris agar lebih legible */
-  letter-spacing: 1px;
 }
 
 .card_wrapper {
@@ -1463,6 +1450,7 @@ section .header2 {
   font-weight: bold;
   opacity: 0;
   animation: animate 1s ease-in-out 1 forwards;
+  margin-top: -5rem;
 }
 
 .content .des {
@@ -1806,6 +1794,15 @@ section .header7 {
   color: #cfb53b;
   height: 5vh;
   font-size: calc(1vw + 13px);
+}
+
+.card_title-SJ {
+  margin-bottom: 1rem;
+  color: #cfb53b;
+  height: 5vh;
+  font-size: calc(1vw + 13px);
+  margin-top: -2rem;
+  line-height: -1rem;
 }
 
 .card_name {
@@ -2627,4 +2624,282 @@ thead th.active,tbody td.active {
     width: 280px;
   }
 }
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  outline: none;
+  border: none;
+  box-sizing: border-box;
+}
+
+img {
+  width: 70%;
+  display: flex;
+  margin-left: 50px;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: #18181b;
+}
+
+nav {
+  width: 1600px;
+  margin: 0 auto; /* Menggunakan auto untuk memastikan navbar berada di tengah */
+  padding: 2rem 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.nav-logo {
+  display: inline-flex;
+  align-items: center; /* Mengatur vertikal ke tengah */
+}
+
+.nav-logo img {
+  max-width: 100px;
+}
+
+.nav-title {
+  display: inline-flex;
+  margin-left: 10px;
+  font-size: 1.2rem;
+  color: #cfb53b;
+  font-weight: 600;
+  align-items: center; /* Mengatur vertikal ke tengah */
+}
+.nav-links {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+}
+
+.link a {
+  position: relative;
+  padding-bottom: 0.75rem;
+  color: #fff;
+}
+
+.link a::after {
+  content: "";
+  position: absolute;
+  height: 2px;
+  width: 0;
+  bottom: 0;
+  left: 50%; /* Menengahkan garis bawah */
+  transform: translateX(-50%); /* Menyempurnakan penempatan garis bawah */
+  background-color: #cfb53b;
+  transition: all 0.3s ease;
+}
+
+.link a:hover::after {
+  width: 70%;
+}
+
+.btn {
+  padding: 1rem 2rem;
+  font-size: 1rem;
+  color: #fff;
+  background: rgb(2, 0, 36);
+  background: linear-gradient(135deg, rgba(2, 0, 36, 1) 0%, rgba(207, 181, 59, 1) 0%, rgba(148, 27, 63, 1) 90%);
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #cfb53b;
+}
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 5rem 2rem;
+}
+
+.blur {
+  position: absolute;
+  box-shadow: 0 0 1000px 50px #cfb53b;
+  z-index: -100;
+}
+
+section .header {
+  color: #cfb53b;
+  margin-bottom: 4rem;
+  font-size: 3rem;
+  font-weight: 700;
+  line-height: 4rem;
+  text-align: center;
+  margin-top: -4rem;
+}
+
+.sub-header {
+  max-width: 600px;
+  margin: auto;
+  text-align: center;
+  color: #ccc;
+  margin-top: -2rem;
+  margin-bottom: 3rem;
+}
+
+.tag {
+  display: grid;
+  margin-top: 4rem;
+}
+
+.tag-divide {
+  margin-bottom: 2rem;
+}
+
+.accordion {
+  color: #fff;
+  font-size: 1.2rem;
+  padding: 3rem 2rem;
+  width: 100%;
+  background: rgb(2, 0, 36);
+  background: linear-gradient(135deg, rgba(2, 0, 36, 1) 0%, rgba(207, 181, 59, 1) 0%, rgba(148, 27, 63, 1) 90%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 15px;
+  cursor: pointer;
+  transition: 0.5s;
+  font-family: "Poppins", sans-serif;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Membuat 3 kolom dengan lebar yang sama */
+  gap: 10px; /* Jarak antar elemen dalam grid */
+}
+
+.panel {
+  color: #fff;
+  padding: 0 18px;
+  border-radius: 15px;
+  background-color: #770000;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease-out;
+  margin-top: 10px;
+}
+
+  footer {
+    position: relative;
+    display: grid;
+    grid-template-columns: 400px repeat(3, 1fr);
+    gap: 2rem;
+  }
+  
+  footer .column .logo {
+    max-width: 100px;
+    margin-bottom: 2rem;
+  }
+  
+  footer .column p {
+    color: #ccc;
+    margin-bottom: 2rem;
+  }
+  
+  footer .column .socials {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+  
+  footer .column .socials a {
+    color: #ccc;
+    border: 1px solid #ccc;
+    padding: 5px 10px;
+    font-size: 1.25rem;
+    border-radius: 100%;
+    transition: all 0.3s ease;
+  }
+  
+  footer .column .socials a:hover {
+    color: #fff;
+    background-color: #cfb53b;
+    border-color: #cfb53b;
+  }
+  
+  footer .column h4 {
+    color: #fff;
+    margin-bottom: 2rem;
+    font-size: 1.2rem;
+    font-weight: 500;
+  }
+  
+  footer .column > a {
+    display: block;
+    color: #ccc;
+    margin-bottom: 1rem;
+    transition: all 0.3s ease;
+  }
+  
+  footer .column > a:hover {
+    color: #cfb53b;
+  }
+  
+  .copyright {
+    max-width: 1200px;
+    margin: auto;
+    padding: 1rem;
+    color: #fff;
+    font-size: 0.8rem;
+    text-align: center;
+  }
+  
+  @media (width < 900px) {
+    .nav-links {
+      display: none;
+    }
+    header {
+      grid-template-columns: repeat(1, 1fr);
+    }
+    header .image {
+      grid-area: 1/1/2/2;
+    }
+    .features {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    .pricing {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    footer {
+      grid-template-columns: 1fr 200px;
+    }
+  }
+  
+  @media (width < 600px) {
+    header .image::before {
+      display: none;
+    }
+  
+    .features {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  
+    .pricing {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  
+    footer {
+      grid-template-columns: 1fr 150px;
+    }
+  }
+
+
+
 
