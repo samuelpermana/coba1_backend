@@ -26,6 +26,7 @@
             <li id="link4" class="link"><a href="selayangpandang.html">Selayang Pandang</a></li>
             <li id="link5" class="link"><a href="jdih.html">JDIH</a></li>
             <li id="link6" class="link"><a href="peminjamanruangan.html">Peminjaman Ruangan</a></li>
+            <li id="link6" class="link"><a href="transparansisurat3.html">Transparansi Surat</a></li>
         </ul>
         <button class="btn">Ajukan Surat</button>
     </nav>

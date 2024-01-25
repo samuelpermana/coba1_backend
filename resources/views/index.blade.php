@@ -32,9 +32,10 @@
             <li id="link4" class="link"><a href="selayangpandang.html">Selayang Pandang</a></li>
             <li id="link4" class="link"><a href="jdih.html">JDIH</a></li>
             <li id="link4" class="link"><a href="peminjamanruangan.html">Peminjaman Ruangan</a></li>
+            <li id="link4" class="link"><a href="transparansisurat3.html">Transparansi surat</a></li>
         </ul>
         
-        <button class="btn">Ajukan Surat</button>
+        <a href="login.html"><button type="button" class="btn">Ajukan Surat</button></a>
     </nav>
 
     <header class="container">
