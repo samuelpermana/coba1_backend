@@ -41,11 +41,11 @@
         <label for="email">Email:</label>
         <input type="email" id="email" name="email" required>
 
-        <label for="email">Angkatan:</label>
-        <input type="email" id="email" name="email" required>
+        <label for="angkatan">Angkatan:</label>
+        <input type="text" id="angkatan" name="angkatan" required>
 
-        <label for="email">id line:</label>
-        <input type="email" id="email" name="email" required>
+        <label for="id_line">id line:</label>
+        <input type="text" id="id_line" name="id_line" required>
 
         <div class="message-container">
             <label for="message">Pesan:</label>

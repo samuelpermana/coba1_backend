@@ -12,7 +12,20 @@ class Aspirasi extends Model
     protected $fillable = [
         'name',
         'email',
+        'angkatan',
+        'id_line',
         'message',
+        'tipe_aspirasi_id',
+        'answer',
+        'is_actived',
         'is_deleted',
+        'created_at',
+        'updated_at'
     ];
+
+    public function tipe_aspirasi()
+    {
+        return $this->belongsTo(TipeAspirasi::class);
+    }
+
 }
