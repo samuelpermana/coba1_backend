@@ -25,6 +25,7 @@
         <li id="link4" class="link"><a href="selayangpandang.html">Selayang Pandang</a></li>
         <li id="link4" class="link"><a href="jdih.html">JDIH</a></li>
         <li id="link6" class="link"><a href="peminjamanruangan.html">Peminjaman Ruangan</a></li>
+        <li id="link4" class="link"><a href="transparansisurat3.html">Transparansi surat</a></li>
       </ul>
       <button class="btn">Ajukan Surat</button>
     </nav>
@@ -89,6 +90,17 @@
                   <tr>
                     <td>Bahasa</td>
                     <td>Indonesia</td>
+                    
+                    
+                  </tr>
+                  <tr>
+                    <td>Download File</td>
+                    <td><a href="/img/filetransparan.svg" download>
+                      <span class="blue">
+                        <img class="imageperma" src="/img/filetransparan.svg" alt="" />
+                      </span>
+                    </a>
+                    </td>
                     
                     
                   </tr>

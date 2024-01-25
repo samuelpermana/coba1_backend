@@ -13,8 +13,8 @@
 
     <nav>
         <div class="nav-logo">
-            <a href="#">
-                <img src="/img/coba1.png" alt="Logo">
+            <a href="index.html">
+                <img src="/img/coba23.png" alt="Logo">
             </a>
         </div>
 
@@ -241,7 +241,7 @@
     </div>
 
 
-    <script src="script.js"></script>
+    <script src="scriptpeminjamanruangan.js"></script>
 </body>
 
 </html>

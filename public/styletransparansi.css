@@ -24,7 +24,7 @@ body {
 }
 
 nav {
-  width: 1700px;
+  width: 1500px;
   margin: 0 auto; /* Menggunakan auto untuk memastikan navbar berada di tengah */
   padding: 2rem 1rem;
   display: flex;
@@ -55,7 +55,7 @@ nav {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 3rem;
+  gap: 2rem;
 }
 
 .link a {
@@ -100,7 +100,7 @@ nav {
   border-radius: 5px;
   cursor: pointer;
   transition: all 0.3s ease;
-  margin-left: 30px;
+  margin-left: 90px;
 }
 
 .btn:hover {
@@ -139,7 +139,7 @@ section .header {
   }
 
   main.table {
-    width: 60vw;
+    width: 70vw;
     height: 70vh;
     background-color: #27272a;
   
@@ -166,7 +166,7 @@ section .header {
   
   .table__header .input-group {
     width: 35%;
-    height: 100%;
+    height: 120%;
     background-color: #d5d1defe;
     padding: 0 .8rem;
     border-radius: 2rem;

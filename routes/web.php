@@ -95,4 +95,8 @@ Route::get('/ajukansurat.html', function () {
     return view('ajukansurat');
 });
 
+Route::get('/cobakalender.html', function () {
+    return view('cobakalender');
+});
+
 Route::get('/aspirasi',[AspirasiController::class, 'getAspirasi']);
