@@ -111,3 +111,41 @@ Route::group([
     Route::put('/bankaspirasi/{id}', [AspirasiAdminCtrl::class, 'update'])->name('update');
     Route::delete('/bankaspirasi/{id}', [AspirasiAdminCtrl::class, 'delete'])->name('delete');
 });
+
+Route::group([
+    'prefix' => 'komisi1',
+     'as' => 'komisi1'
+    ], function () {
+    // Route
+});
+Route::group([
+    'prefix' => 'komisi2',
+     'as' => 'komisi2'
+    ], function () {
+    // Route
+});
+Route::group([
+    'prefix' => 'komisi3',
+     'as' => 'komisi3'
+    ], function () { 
+        // Route
+});
+Route::group([
+    'prefix' => 'komisi4',
+     'as' => 'komisi4'
+    ], function () { 
+        // Route
+});
+Route::group([
+    'prefix' => 'ormawa',
+     'as' => 'ormawa'
+    ], function () { 
+        // Route
+});
+
+Route::group([
+    'prefix' => 'badan_anggaran',
+     'as' => 'badan_anggaran'
+    ], function () {
+    // Route
+});

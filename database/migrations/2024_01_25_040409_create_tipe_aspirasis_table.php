@@ -13,7 +13,7 @@ class CreateTipeAspirasisTable extends Migration
     {
         Schema::create('tipe_aspirasis', function (Blueprint $table) {
             $table->id();
-            $table->string('name'); // Menambahkan kolom name untuk menyimpan nilai Sarpras, Birokrasi, Akademik
+            $table->string('name');
             $table->timestamps();
         });
 
