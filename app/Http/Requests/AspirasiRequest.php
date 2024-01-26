@@ -5,7 +5,6 @@ namespace App\Http\Requests;
 use Illuminate\Contracts\Validation\Validator;
 use Illuminate\Foundation\Http\FormRequest;
 use Illuminate\Http\Exceptions\HttpResponseException;
-use Illuminate\Support\Str;
 
 class AspirasiRequest extends FormRequest
 {
@@ -27,10 +26,12 @@ class AspirasiRequest extends FormRequest
         return [
             'name' => 'required|string|max:255',
             'email' => 'required|string|email',
+            'angkatan' => 'required|string', 
+            'id_line' => 'required|string', 
             'message' => 'required|string',
         ];
     }
-    
+
     /**
      * Handle a failed validation attempt.
      *
@@ -47,11 +48,11 @@ class AspirasiRequest extends FormRequest
     public function attributes()
     {
         return [
-            'name' => 'name',
-            'email' => 'email',
-            'message' => 'message',
+            'name' => 'Name',
+            'email' => 'Email',
+            'angkatan' => 'Angkatan',
+            'id_line' => 'ID Line',
+            'message' => 'Message',
         ];
     }
-
 }
-
