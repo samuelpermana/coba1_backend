@@ -3,6 +3,9 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AspirasiController;
 use App\Http\Controllers\Admin\AspirasiAdminCtrl;
+use App\Http\Controllers\Admin\JDIHAdminCtrl;
+use App\Http\Controllers\JDIHController;
+use App\Models\JDIH;
 
 /*
 |--------------------------------------------------------------------------
@@ -19,85 +22,77 @@ Route::get('/', function () {
     return view('index');
 });
 
-Route::get('/index.html', function () {
+Route::get('/index', function () {
     return view('index');
 });
 
-Route::get('/kotakaspirasi.html', function () {
+Route::get('/kotakaspirasi.', function () {
     return view('kotakaspirasi');
 });
 
 Route::post('/aspirasi', [AspirasiController::class, 'createAspirasi'])->name('aspirasi.store');
 
-Route::get('/selayangpandang.html', function () {
+Route::get('/selayangpandang.', function () {
     return view('selayangpandang');
 });
 
-Route::get('/bankaspirasi.html', [AspirasiController::class, 'getAspirasi']);
+Route::get('/bankaspirasi.', [AspirasiController::class, 'getAspirasi']);
 
-Route::get('/faq.html', function () {
+Route::get('/faq.', function () {
     return view('faq');
 });
 
-Route::get('/komisi1.html', function () {
+Route::get('/komisi1.', function () {
     return view('komisi1');
 });
 
-Route::get('/komisi2.html', function () {
+Route::get('/komisi2.', function () {
     return view('komisi2');
 });
 
-Route::get('/komisi3.html', function () {
+Route::get('/komisi3.', function () {
     return view('komisi3');
 });
 
-Route::get('/komisi4.html', function () {
+Route::get('/komisi4.', function () {
     return view('komisi4');
 });
 
-Route::get('/badananggaran.html', function () {
+Route::get('/badananggaran.', function () {
     return view('badananggaran');
 });
 
-Route::get('/badankehormatan.html', function () {
+Route::get('/badankehormatan.', function () {
     return view('badankehormatan');
 });
 
-Route::get('/badanlegislasi.html', function () {
+Route::get('/badanlegislasi.', function () {
     return view('badanlegislasi');
 });
 
-Route::get('/bksap.html', function () {
+Route::get('/bksap.', function () {
     return view('bksap');
 });
 
-Route::get('/jdih.html', function () {
-    return view('jdih');
-});
-
-Route::get('/perma2020.html', function () {
-    return view('perma2020');
-});
-
-Route::get('/peminjamanruangan.html', function () {
+Route::get('/peminjamanruangan.', function () {
     return view('peminjamanruangan');
 });
 
 
-Route::get('/transparansisurat3.html', function () {
+Route::get('/transparansisurat3.', function () {
     return view('transparansisurat3');
 });
 
-Route::get('/login.html', function () {
+Route::get('/login.', function () {
     return view('login');
 });
 
-Route::get('/ajukansurat.html', function () {
+Route::get('/ajukansurat.', function () {
     return view('ajukansurat');
 });
 
 
-Route::get('/cobakalender.html', function () {
+Route::get('/cobakalender.', function () {
     return view('cobakalender');
 });
 
@@ -110,4 +105,14 @@ Route::group([
     Route::get('/bankaspirasi', [AspirasiAdminCtrl::class, 'index'])->name('index');
     Route::put('/bankaspirasi/{id}', [AspirasiAdminCtrl::class, 'update'])->name('update');
     Route::delete('/bankaspirasi/{id}', [AspirasiAdminCtrl::class, 'delete'])->name('delete');
+    Route::get('jdih', [JDIHAdminCtrl::class, 'index'])->name('jdih.index');
+    Route::get('jdih/create', [JDIHAdminCtrl::class, 'create'])->name('jdih.create');
+    Route::post('jdih/store', [JDIHAdminCtrl::class, 'store'])->name('jdih.store');
+    Route::get('jdih/show/{id}', [JDIHAdminCtrl::class, 'show'])->name('jdih.show');
+    Route::get('jdih/update/{id}', [JDIHAdminCtrl::class, 'update'])->name('jdih.update');
+    Route::delete('jdih/delete/{id}', [JDIHAdminCtrl::class, 'delete'])->name('jdih.delete');
 });
+
+Route::get('/jdih', [JDIHController::class, 'getJDIH']);
+
+Route::get('jdih/show/{id}', [JDIHController::class, 'showJDIH'])->name('jdih.show');
