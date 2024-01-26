@@ -24,7 +24,7 @@ body {
 }
 
 nav {
-  width: 1400px;
+  width: 1500px;
   margin: 0 auto; /* Menggunakan auto untuk memastikan navbar berada di tengah */
   padding: 2rem 1rem;
   display: flex;
@@ -55,7 +55,7 @@ nav {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 3rem;
+  gap: 2rem;
 }
 
 .link a {
@@ -223,6 +223,7 @@ nav {
     border-radius: 10px;
     color: rgb(255, 255, 255);
     background: #18181b;
+    cursor: pointer;
 }
 
 .form-submit-btn input:hover{

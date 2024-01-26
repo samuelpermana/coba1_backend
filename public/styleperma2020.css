@@ -24,7 +24,7 @@ body {
 }
 
 nav {
-  width: 1400px;
+  width: 1500px;
   margin: 0 auto; /* Menggunakan auto untuk memastikan navbar berada di tengah */
   padding: 2rem 1rem;
   display: flex;
@@ -55,7 +55,7 @@ nav {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 3rem;
+  gap: 2rem;
 }
 
 .link a {
@@ -115,7 +115,7 @@ nav {
     border: 2px solid transparent;
     border-radius: 15px;
     transition: all 0.3s ease;
-    width: 53%;
+    width: 60%;
     margin-left: auto;
     margin-right: auto;
     box-shadow: 0 30px 70px #8888;
@@ -223,6 +223,24 @@ nav {
     font-size: 0.8rem;
     text-align: center;
   }
+
+  .btn-PM {
+    padding: 1rem 2rem;
+    font-size: 1rem;
+    color: #fff;
+    background: rgb(2, 0, 36);
+    background: linear-gradient(135deg, rgba(2, 0, 36, 1) 0%, rgba(207, 181, 59, 1) 0%, rgba(148, 27, 63, 1) 90%);
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: auto;
+  }
+
+  .imageperma {
+    width: 50px;
+    margin: 0;
+  }
+
   
   @media (width < 900px) {
     .nav-links {

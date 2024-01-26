@@ -19,8 +19,8 @@
 
     <nav>
         <div class="nav-logo">
-            <a href="index.html">
-                <img src="/img/coba23.png" alt="Logo">
+            <a href="#">
+                <img src="/img/coba1.png" alt="Logo">
             </a>
         </div>
 
