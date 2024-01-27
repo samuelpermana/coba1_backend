@@ -85,7 +85,7 @@
             </div>
             <div class="modern-card">
                 <div class="content">
-                    <h4>Melaksanakan Laporan Pertanggungjawaban Terbuka dari mitra kerja</h4>
+                    <h4>Melaksanakan Laporan Pertanggung jawaban Terbuka dari mitra kerja</h4>
                 </div>
             </div>
         </div>

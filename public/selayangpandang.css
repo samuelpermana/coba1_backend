@@ -11,7 +11,6 @@
 img {
   width: 70%;
   display: flex;
-  margin-left: 50px;
 }
 
 a {
@@ -24,7 +23,7 @@ body {
 }
 
 nav {
-  max-width: 1200px;
+  max-width: 1400px;
   margin: 0 auto; /* Menggunakan auto untuk memastikan navbar berada di tengah */
   padding: 2rem 1rem;
   display: flex;
@@ -40,6 +39,7 @@ nav {
 
 .nav-logo img {
   max-width: 100px;
+  min-width: 100px;
 }
 
 .nav-title {
@@ -211,6 +211,7 @@ section .header {
   border: 2px solid transparent;
   border-radius: 15px;
   transition: all 0.3s ease;
+  margin: 0 auto;
 }
 
 .features .card .blue {
@@ -222,7 +223,7 @@ section .header {
 }
 
 .features1 .card {
-  width: 552px;
+  width: inherit;
   display: flex;
   flex: 1;
   background-color: #27272a;
@@ -262,7 +263,7 @@ section .header {
   border-radius: 8px;
   justify-content: center;
   align-items: center;
-  width: 150px;
+  min-width: 150px;
   height: 150px;
 }
 
@@ -586,7 +587,6 @@ footer .column > a:hover {
   max-width: 50%; /* Lebar gambar */
   height: auto; /* Mengatur ketinggian gambar sesuai proporsi aslinya */
   float: left; /* Menggeser gambar ke sisi kiri */
-  margin-left: -500px;
 }
 
 section .header1 {
@@ -753,12 +753,10 @@ section .header1 {
 }
 
 .container .img3 {
-  max-width: 50%; /* Lebar gambar */
   height: auto;
-  display: block; /* Untuk menghilangkan margin bawah default */
-  margin: auto; /* Membuat margin kanan otomatis (diatur ke 'auto') */
-  margin-left: 320px;
-  margin-top: 40px;
+  display: flex; /* Untuk menghilangkan margin bawah default */
+  justify-content: center; /* Membuat margin kanan otomatis (diatur ke 'auto') */
+  align-items: center;
 }
 
 section .header3 {
@@ -826,6 +824,12 @@ section .header3 {
 }
 
 .wakil {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.wakil-wrap{
     margin-top: 4em;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -842,6 +846,7 @@ section .header3 {
 .card_wrapper-0 {
     border-radius: 1.25rem;
     overflow: hidden;
+    width: inherit;
   }
   
 .card_image-0 {
@@ -900,14 +905,13 @@ section .header3 {
 .j-header {
     color: #cfb53b;
     margin-top: -2rem; 
-    font-size: 3rem;
+    font-size: 2rem;
     font-weight: 700;
     line-height: 4rem;
+    display: flex;
     justify-content: center; /* Memposisikan teks di tengah secara horizontal */
     align-items: center;
-    display: flex;
     height: 100%;
-    position: relative;
 }
 
 .container1 {
@@ -915,7 +919,7 @@ section .header3 {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 1000px;
+    width: 100%;
     height: 600px;
     background: #18181b;
     box-shadow: 0 30px 50px #ccc;
@@ -924,7 +928,7 @@ section .header3 {
 }
   
 .container1 .slide .item {
-    width: 200px;
+    width: 15%;
     height: 300px;
     position: absolute;
     top: 50%;
@@ -959,7 +963,7 @@ section .header3 {
   
   /* here n = 0, 1, 2, 3,... */
 .slide .item:nth-child(n + 6) {
-    left: calc(50% + 660px);
+    left: calc(30% + 660px);
     opacity: 0;
 }
   
@@ -1026,6 +1030,12 @@ section .header3 {
     background: #ababab;
     color: #fff;
 }
+
+.img-1{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
   
 @keyframes animate {
     from {
@@ -1041,11 +1051,40 @@ section .header3 {
     }
 }
 
+@media (width < 1200px) {
+  .slide .item:nth-child(5) {
+    left: calc(50%);
+    opacity: 0;
+  }
+  .slide .item:nth-child(n + 6) {
+    left: calc(50%);
+    opacity: 0;
+}
+.features {
+  grid-template-columns: repeat(1, 1fr);
+}
+}
+
 @media (width < 900px) {
+    .img-1{
+      display: none;
+    }
     .nav-links {
       display: none;
     }
     .panel-k{
+      grid-template-columns: repeat(1, 1fr);
+    }
+    .slide .item:nth-child(3) {
+      left: 60%;
+    }
+    .slide .item:nth-child(4) {
+        left: calc(60% + 150px);
+    }
+    .pricing1{
+      grid-template-columns: repeat(1, 1fr);
+    }
+    .wakil-wrap{
       grid-template-columns: repeat(1, 1fr);
     }
     header {
@@ -1054,15 +1093,23 @@ section .header3 {
     header .image {
       grid-area: 1/1/2/2;
     }
-    .features {
-      grid-template-columns: repeat(2, 1fr);
-    }
     .pricing {
       grid-template-columns: repeat(2, 1fr);
     }
     footer {
       grid-template-columns: 1fr 200px;
     }
+}
+
+@media (width < 700px){
+  .slide .item:nth-child(4) {
+    left: calc(60% + 150px);
+    opacity: 0;
+  }
+
+  .item .content{
+    left: 10px;
+  }
 }
   
 @media (width < 600px) {
@@ -1072,6 +1119,11 @@ section .header3 {
   
     .features {
       grid-template-columns: repeat(1, 1fr);
+    }
+
+    .slide .item:nth-child(3) {
+      left: 60%;
+      opacity: 0;
     }
   
     .pricing {

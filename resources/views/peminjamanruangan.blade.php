@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.5.0/remixicon.min.css">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styletransparansi.css">
     <title>SENAT FH UNDIP</title>
 </head>
 
@@ -26,12 +26,13 @@
             <li id="link4" class="link"><a href="selayangpandang.html">Selayang Pandang</a></li>
             <li id="link5" class="link"><a href="jdih.html">JDIH</a></li>
             <li id="link6" class="link"><a href="peminjamanruangan.html">Peminjaman Ruangan</a></li>
+            <li id="link6" class="link"><a href="transparansi.html">Transparansi Surat</a></li>
         </ul>
         <button class="btn">Ajukan Surat</button>
     </nav>
     <section class="container">
-        <h2 class="header">PEMINJAMAN RUANGAN</h2>
-        <p class="sub-header">Berisikan tentang data ruangan yang meminjam tempat di FH</p>
+        <h2 class="header">TRANSPARANSI SURAT</h2>
+        <p class="sub-header">Berisikan tentang data Surat yang sudah diajukan kepada senat </p>
     
     <main class="table" id="customers_table">
         <section class="table__header">
@@ -57,7 +58,8 @@
                         <th> Ormawa <span class="icon-arrow">&UpArrow;</span></th>
                         <th> Ruangan <span class="icon-arrow">&UpArrow;</span></th>
                         <th> Tanggal <span class="icon-arrow">&UpArrow;</span></th>
-                        <th> Status <span class="icon-arrow">&UpArrow;</span></th>
+                        <th> Tracking Surat <span class="icon-arrow">&UpArrow;</span></th>
+                        <th> Surat <span class="icon-arrow">&UpArrow;</span></th>
                         
                     </tr>
                 </thead>
@@ -68,8 +70,29 @@
                         <td> A.305 </td>
                         <td> 17 Dec, 2024 </td>
                         <td>
-                            <p class="status delivered">KOSONG</p>
+                            <section class="step-wizard">
+                                <ul class="step-wizard-list">
+                                    <li class="step-wizard-item">
+                                        <span class="progress-count">1</span>
+                                        <span class="progress-label">Pengajuan</span>
+                                    </li>
+                                    <li class="step-wizard-item current-item">
+                                        <span class="progress-count">2</span>
+                                        <span class="progress-label">Admin</span>
+                                    </li>
+                                    <li class="step-wizard-item">
+                                        <span class="progress-count">3</span>
+                                        <span class="progress-label">komisi 3</span>
+                                    </li>
+                                    <li class="step-wizard-item">
+                                        <span class="progress-count">4</span>
+                                        <span class="progress-label">wakil senat</span>
+                                    </li>
+                                </ul>
+                            </section>
                         </td>
+
+                        <td><span class="blue"><img class="star-img" src="/img/filetransparan.svg" alt="" /></span></td>
                         
                     </tr>
                     <tr>
@@ -77,9 +100,33 @@
                         <td>BASKET</td>
                         <td> A.305 </td>
                         <td> 27 Aug, 2023 </td>
+                        
+
                         <td>
-                            <p class="status cancelled">DIPAKAI</p>
+                            <section class="step-wizard">
+                                <ul class="step-wizard-list">
+                                    <li class="step-wizard-item">
+                                        <span class="progress-count">1</span>
+                                        <span class="progress-label">Pengajuan</span>
+                                    </li>
+                                    <li class="step-wizard-item current-item">
+                                        <span class="progress-count">2</span>
+                                        <span class="progress-label">Admin</span>
+                                    </li>
+                                    <li class="step-wizard-item">
+                                        <span class="progress-count">3</span>
+                                        <span class="progress-label">komisi 3</span>
+                                    </li>
+                                    <li class="step-wizard-item">
+                                        <span class="progress-count">4</span>
+                                        <span class="progress-label">wakil senat</span>
+                                    </li>
+                                </ul>
+                            </section>
                         </td>
+
+                        <td><span class="blue"><img class="star-img" src="/img/filetransparan.svg" alt="" /></span></td>
+
                         
                     </tr>
                     <tr>
@@ -87,9 +134,32 @@
                         <td>BASKET</td>
                         <td> A.305 </td>
                         <td> 14 Mar, 2023 </td>
+                        
+
                         <td>
-                            <p class="status cancelled">DIPAKAI</p>
+                            <section class="step-wizard">
+                                <ul class="step-wizard-list">
+                                    <li class="step-wizard-item">
+                                        <span class="progress-count">1</span>
+                                        <span class="progress-label">Pengajuan</span>
+                                    </li>
+                                    <li class="step-wizard-item current-item">
+                                        <span class="progress-count">2</span>
+                                        <span class="progress-label">Admin</span>
+                                    </li>
+                                    <li class="step-wizard-item">
+                                        <span class="progress-count">3</span>
+                                        <span class="progress-label">komisi 3</span>
+                                    </li>
+                                    <li class="step-wizard-item">
+                                        <span class="progress-count">4</span>
+                                        <span class="progress-label">wakil senat</span>
+                                    </li>
+                                </ul>
+                            </section>
                         </td>
+
+                        <td><span class="blue"><img class="star-img" src="/img/filetransparan.svg" alt="" /></span></td>
                         
                     </tr>
                     <tr>
@@ -97,9 +167,32 @@
                         <td>BASKET</td>
                         <td> A.305 </td>
                         <td> 25 May, 2023 </td>
+                        
+
                         <td>
-                            <p class="status delivered">KOSONG</p>
+                            <section class="step-wizard">
+                                <ul class="step-wizard-list">
+                                    <li class="step-wizard-item">
+                                        <span class="progress-count">1</span>
+                                        <span class="progress-label">Pengajuan</span>
+                                    </li>
+                                    <li class="step-wizard-item current-item">
+                                        <span class="progress-count">2</span>
+                                        <span class="progress-label">Admin</span>
+                                    </li>
+                                    <li class="step-wizard-item">
+                                        <span class="progress-count">3</span>
+                                        <span class="progress-label">komisi 3</span>
+                                    </li>
+                                    <li class="step-wizard-item">
+                                        <span class="progress-count">4</span>
+                                        <span class="progress-label">wakil senat</span>
+                                    </li>
+                                </ul>
+                            </section>
                         </td>
+
+                        <td><span class="blue"><img class="star-img" src="/img/filetransparan.svg" alt="" /></span></td>
                         
                     </tr>
                     <tr>
@@ -107,91 +200,35 @@
                         <td>BASKET</td>
                         <td> A.305 </td>
                         <td> 23 Apr, 2023 </td>
+                       
+
                         <td>
-                            <p class="status delivered">KOSONG</p>
+                            <section class="step-wizard">
+                                <ul class="step-wizard-list">
+                                    <li class="step-wizard-item">
+                                        <span class="progress-count">1</span>
+                                        <span class="progress-label">Pengajuan</span>
+                                    </li>
+                                    <li class="step-wizard-item current-item">
+                                        <span class="progress-count">2</span>
+                                        <span class="progress-label">Admin</span>
+                                    </li>
+                                    <li class="step-wizard-item">
+                                        <span class="progress-count">3</span>
+                                        <span class="progress-label">komisi 3</span>
+                                    </li>
+                                    <li class="step-wizard-item">
+                                        <span class="progress-count">4</span>
+                                        <span class="progress-label">wakil senat</span>
+                                    </li>
+                                </ul>
+                            </section>
                         </td>
+
+                        <td><span class="blue"><img class="star-img" src="/img/filetransparan.svg" alt="" /></span></td>
                         
                     </tr>
-                    <tr>
-                        <td> 6</td>
-                        <td>BASKET</td>
-                        <td> A.305 </td>
-                        <td> 23 Apr, 2023 </td>
-                        <td>
-                            <p class="status cancelled">DIPAKAI</p>
-                        </td>
-                        
-                    </tr>
-                    <tr>
-                        <td> 7</td>
-                        <td>BASKET</td>
-                        <td> A.305 </td>
-                        <td> 20 May, 2023 </td>
-                        <td>
-                            <p class="status delivered">KOSONG</p>
-                        </td>
-                        
-                    </tr>
-                    <tr>
-                        <td> 8</td>
-                        <td>BASKET</td>
-                        <td> A.305 </td>
-                        <td> 30 Feb, 2023 </td>
-                        <td>
-                            <p class="status delivered">KOSONG</p>
-                        </td>
-                        
-                    </tr>
-                    <tr>
-                        <td> 9</td>
-                        <td>BASKET</td>
-                        <td> A.305 </td>
-                        <td> 22 Dec, 2023 </td>
-                        <td>
-                            <p class="status cancelled">DIPAKAI</p>
-                        </td>
-                        
-                    </tr>
-                    <tr>
-                        <td> 9</td>
-                        <td>BASKET</td>
-                        <td> A.305 </td>
-                        <td> 22 Dec, 2023 </td>
-                        <td>
-                            <p class="status cancelled">DIPAKAI</p>
-                        </td>
-                        
-                    </tr>
-                    <tr>
-                        <td> 9</td>
-                        <td>BASKET</td>
-                        <td> A.305 </td>
-                        <td> 22 Dec, 2023 </td>
-                        <td>
-                            <p class="status cancelled">DIPAKAI</p>
-                        </td>
-                        
-                    </tr>
-                    <tr>
-                        <td> 9</td>
-                        <td>BASKET</td>
-                        <td> A.305 </td>
-                        <td> 22 Dec, 2023 </td>
-                        <td>
-                            <p class="status cancelled">DIPAKAI</p>
-                        </td>
-                        
-                    </tr>
-                    <tr>
-                        <td> 9</td>
-                        <td>BASKET</td>
-                        <td> A.305 </td>    
-                        <td> 22 Dec, 2023 </td>
-                        <td>
-                            <p class="status cancelled">DIPAKAI</p>
-                        </td>
-                        
-                    </tr>
+                    
                 </tbody>
             </table>
         </section>
@@ -240,7 +277,7 @@
     </div>
 
 
-    <script src="script.js"></script>
+    <script src="script7.js"></script>
 </body>
 
 </html>
