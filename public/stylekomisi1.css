@@ -11,6 +11,7 @@
 img {
   width: 70%;
   display: flex;
+  margin-left: 50px;
 }
 
 a {
@@ -22,8 +23,14 @@ body {
   background-color: #18181b;
 }
 
+.container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 5rem 2rem;
+  }
+
 nav {
-  max-width: 1400px;
+  max-width: 1200px;
   margin: 0 auto; /* Menggunakan auto untuk memastikan navbar berada di tengah */
   padding: 2rem 1rem;
   display: flex;
@@ -39,7 +46,6 @@ nav {
 
 .nav-logo img {
   max-width: 100px;
-  min-width: 100px;
 }
 
 .nav-title {
@@ -55,7 +61,7 @@ nav {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 2rem;
+  gap: 3rem;
 }
 
 .link a {
@@ -93,12 +99,6 @@ nav {
 
 .btn:hover {
   background-color: #cfb53b;
-}
-
-.container {
-  max-width: 1200px;
-  margin: auto;
-  padding: 5rem 2rem;
 }
 
 .blur {
@@ -177,6 +177,120 @@ section .header {
   margin-top: -4rem;
 }
 
+.card_wrapper {
+    border-radius: 1.25rem;
+    overflow: hidden;
+  }
+  
+  .card_image {
+    position: relative;
+    background-color: #27272a;
+    padding-top: 1.5rem;
+    margin-bottom: -0.75rem;
+    transition: background-color 0.3s ease;
+  }
+  
+  .card_image:hover {
+    background-color: #333;
+  }
+  
+  .card_img {
+    width: 180px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 5;
+  }
+  
+  .card_data {
+    background-color: #27272a;
+    padding: 1.5rem 2rem;
+    border-radius: 1rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    z-index: 10;
+    color: #e0e0e0;
+    transition: background-color 0.3s ease;
+  }
+  
+  .card_data:hover {
+    background-color: #333;
+  }
+
+  .card_wrapper-4-2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 1.25rem;
+    overflow: hidden;
+  }
+  
+  .card_image-4-2 {
+    width: 35%;
+    border-radius: 1.25rem 1.25rem 0 0;
+    position: relative;
+    background-color: #27272a;
+    padding-top: 1.5rem;
+    margin-bottom: -0.75rem;
+  }
+
+  .card_data-4-2 {
+    width: 35%;
+    background-color: #27272a;
+    padding: 1.5rem 2rem;
+    border-radius: 1rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    z-index: 10;
+    color: #e0e0e0;
+  }
+
+  .card_titleA {
+    height: 10vh;
+    color: #cfb53b;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .card_des {
+    height: 5vh;
+    color: #cfb53b;
+  }
+  
+  .card_nameA {
+    color: #cfb53b;
+    height: 12vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+.anggota-4 {
+    margin-top: 4em;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+  
+  .anggota-4-1 {
+    margin-top: 4em;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+  
+  .anggota-4-2 {
+    margin-top: 4em;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 2rem;
+  }
+
 .container img {
   max-width: 450px;
   display: block;
@@ -211,7 +325,6 @@ section .header {
   border: 2px solid transparent;
   border-radius: 15px;
   transition: all 0.3s ease;
-  margin: 0 auto;
 }
 
 .features .card .blue {
@@ -223,7 +336,7 @@ section .header {
 }
 
 .features1 .card {
-  width: inherit;
+  width: 552px;
   display: flex;
   flex: 1;
   background-color: #27272a;
@@ -250,8 +363,12 @@ section .header {
 .features .card span,
 .features1 .card span {
   display: flex;
-  background: rgb(2,0,36);
-  background: linear-gradient(135deg, rgba(2,0,36,1) 0%, rgba(255,255,255,1) 0%, rgba(49,100,119,1) 70%);
+  background: linear-gradient(
+    135deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(207, 181, 59, 1) 0%,
+    rgba(148, 27, 63, 1) 90%
+  );
   padding: 2px;
   margin: 10px 26px 10px 10px;
   font-size: 120px;
@@ -259,7 +376,7 @@ section .header {
   border-radius: 8px;
   justify-content: center;
   align-items: center;
-  min-width: 150px;
+  width: 150px;
   height: 150px;
 }
 
@@ -562,347 +679,10 @@ footer .column > a:hover {
   cursor: pointer;
 }
 
-#name,
-#email,
-#message {
-  background-color: #888;
-  color: white;
-}
-
-.image {
-  text-align: center; /* Untuk memastikan gambar berada di tengah secara horizontal */
-  margin-bottom: 20px; /* Spasi bawah */
-  display: flex;
-  justify-content: center; /* Memposisikan secara horizontal di tengah */
-  align-items: center; /* Memposisikan secara vertikal di tengah */
-  height: 300px; /* Contoh ketinggian, sesuaikan sesuai kebutuhan Anda */
-  margin-top: 100px;
-}
-
-.image img {
-  max-width: 50%; /* Lebar gambar */
-  height: auto; /* Mengatur ketinggian gambar sesuai proporsi aslinya */
-  float: left; /* Menggeser gambar ke sisi kiri */
-}
-
-section .header1 {
-  color: #cfb53b;
-  margin-bottom: 1rem;
-  font-size: 3rem;
-  font-weight: 700;
-  line-height: 4rem;
-  float: right;
-}
-
-.sub1-header {
-  margin-bottom: -3rem;
-  color: #ccc;
-  text-align: justify;
-  font-family: "Poppins", sans-serif;
-  font-size: 16px;
-  float: right;
-}
-
-.pricing1 .card1 {
-  width: 100%;
-  padding: 3rem 2rem;
-  background-color: #27272a;
-  display: flex;
-  flex-direction: column;
-  border: 2px solid transparent;
-  border-radius: 15px;
-  transition: all 0.3s ease;
-}
-
-.pricing1 .card1:hover {
-  background-color: #323232;
-  border-color: #fff;
-}
-
-.pricing1 .card1 .content {
-  flex: 1;
-  margin-bottom: 2rem;
-}
-
-.pricing1 .card1 h4 {
-  margin-bottom: 1rem;
-  color: #fff;
-  font-size: 1.2rem;
-  font-weight: 500;
-  text-align: center;
-  margin-top: 1rem;
-}
-
-.pricing1 .card1 h5 {
-  margin-bottom: 1rem;
-  color: #fff;
-  font-size: 1rem;
-  font-weight: 500;
-  text-align: justify; /* Mengatur teks menjadi rata kanan dan kiri */
-  text-justify: distribute-all-lines; /* Pilihan tambahan untuk penyebaran yang lebih merata */
-  line-height: 1.5; /* Mengatur jarak antar baris agar lebih legible */
-  letter-spacing: 0.5px;
-}
-
-.pricing1 .card1 h3 {
-  color: #fff;
-  padding-bottom: 1rem;
-  margin-bottom: 2rem;
-  font-size: 2rem;
-  font-weight: 600;
-  border-bottom: 2px dashed #fff;
-}
-
-.pricing .card1 p {
-  color: #fff;
-  margin-bottom: 0.75rem;
-}
-
-.pricing .card1 p i {
-  color: #ccc;
-  font-size: 1.2rem;
-  margin-right: 0.3rem;
-}
-
-.pricing1 .card1 .warna1 {
-  padding: 1rem 2rem;
-  font-size: 1rem;
-  color: #fff;
-  background-color: #5c0a0a;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-
-.pricing1 .card2 {
-  padding: 3rem 2rem;
-  background-color: #27272a;
-  display: flex;
-  flex-direction: column;
-  border: 2px solid transparent;
-  border-radius: 15px;
-  transition: all 0.3s ease;
-}
-
-.pricing1 .card2:hover {
-  background-color: #323232;
-  border-color: #fff;
-}
-
-.pricing1 .card2 .content {
-  flex: 1;
-  margin-bottom: 2rem;
-}
-
-.pricing1 .card2 h4 {
-  margin-bottom: 1rem;
-  color: #fff;
-  font-size: 1.2rem;
-  font-weight: 500;
-  margin-top: 1rem;
-  text-align: center;
-}
-
-.pricing1 .card2 h5 {
-  margin-bottom: 1rem;
-  color: #fff;
-  font-size: 1rem;
-  font-weight: 500;
-  text-align: justify; /* Mengatur teks menjadi rata kanan dan kiri */
-
-  line-height: 1.5; /* Mengatur jarak antar baris agar lebih legible */
-  letter-spacing: 0.5px;
-}
-
-.pricing1 .card2 h3 {
-  color: #fff;
-  padding-bottom: 1rem;
-  margin-bottom: 2rem;
-  font-size: 2rem;
-  font-weight: 600;
-  border-bottom: 2px dashed #fff;
-}
-
-.pricing1 .card2 p {
-  color: #fff;
-  margin-bottom: 0.75rem;
-}
-
-.pricing1 .card2 p i {
-  color: #ccc;
-  font-size: 1.2rem;
-  margin-right: 0.3rem;
-}
-
-.pricing1 .card2 .warna2 {
-  padding: 1rem 2rem;
-  font-size: 1rem;
-  color: #fff;
-  background-color: #fff;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-
-.pricing .card2 button:hover {
-  background-color: #cfb53b;
-  border-color: #cfb53b;
-}
-
-.container .img3 {
-  height: auto;
-  display: flex; /* Untuk menghilangkan margin bawah default */
-  justify-content: center; /* Membuat margin kanan otomatis (diatur ke 'auto') */
-  align-items: center;
-}
-
-section .header3 {
-  color: #cfb53b;
-  margin-bottom: 1rem;
-  font-size: 3rem;
-  font-weight: 700;
-  line-height: 4rem;
-  margin-top: 2rem;
-  text-align: center;
-}
-
-.pricing1 {
-  margin-top: -4rem;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 2rem;
-}
-
-.pricing1 .card {
-  padding: 3rem 2rem;
-  background-color: #27272a;
-  display: flex;
-  flex-direction: column;
-  border: 2px solid transparent;
-  border-radius: 15px;
-  transition: all 0.3s ease;
-}
-
-.pricing1 .card:hover {
-  background-color: #323232;
-  border-color: #fff;
-}
-
-.pricing1 .card .content {
-  flex: 1;
-  margin-bottom: 2rem;
-}
-
-.pricing1 .card h4 {
-  margin-bottom: 1rem;
-  color: #fff;
-  font-size: 1.2rem;
-  font-weight: 500;
-  margin-top: 1rem;
-  text-align: center;
-}
-
-.pricing1 .card h5 {
-  margin-bottom: 1rem;
-  color: #fff;
-  font-size: 1rem;
-  font-weight: 500;
-  text-align: justify;
-  line-height: 1.5; /* Mengatur jarak antar baris agar lebih legible */
-  letter-spacing: 1px;
-}
-
-.ketua {
-    margin-top: 4em;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 2rem;
-}
-
-.wakil {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.wakil-wrap{
-    margin-top: 4em;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 2rem;
-}
-
-.card_img {
-    width: 180px;
-    margin: 0 auto;
-    position: relative;
-    z-index: 5;
-}
-
-.card_wrapper-0 {
-    border-radius: 1.25rem;
-    overflow: hidden;
-    width: inherit;
-  }
-  
-.card_image-0 {
-    position: relative;
-    background-color: #27272a;
-    padding-top: 1.5rem;
-    margin-bottom: -0.75rem;
-    transition: all 0.3s ease;
-}
-  
-.card_image-0:hover{
-    background-color: #323232;
-      
-}
-  
-.card_data-0 {
-    background-color: #27272a;
-    padding: 1.5rem 2rem;
-    border-radius: 1rem;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    position: relative;
-    z-index: 10;
-    color: #e0e0e0;
-    transition:all 0.3s ease;
-}
-  
-.card_data-0:hover{
-    background-color: #323232;
-}
-
-.card_box {
+.j-header4 {
     color: #cfb53b;
-    height: 10vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-}
-
-.card_title {
-    margin-bottom: 0.5rem;
-    color: #cfb53b;
-    height: 5vh;
-    font-size: calc(1vw + 13px);
-}
-  
-.card_name {
-    height: 3vh;
-    font-size: var(--h2-font-size);
-    color: var(--second-color);
-    margin-bottom: 0.75rem;
-}
-
-.j-header {
-    color: #cfb53b;
-    margin-top: -2rem; 
-    font-size: 2rem;
+    margin-top: 1rem;
+    font-size: 5rem;
     font-weight: 700;
     line-height: 4rem;
     justify-content: center; /* Memposisikan teks di tengah secara horizontal */
@@ -910,23 +690,24 @@ section .header3 {
     display: flex;
     height: 100%;
     position: relative;
+    margin-bottom: 1rem;
 }
-
-.container1 {
+  
+.container6 {
     position: relative;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 100%;
-    height: 600px;
-    background: #18181b;
-    box-shadow: 0 30px 50px #ccc;
-    margin-top: 350px;
+    width: 80vw;
+    height: 700px;
+    background: #f5f5f5;
+    box-shadow: 0 30px 50px #dbdbdb;
+    margin-top: 400px;
     border-radius: 20px;
 }
   
-.container1 .slide .item {
-    width: 15%;
+.container6 .slide .item {
+    width: 200px;
     height: 300px;
     position: absolute;
     top: 50%;
@@ -961,14 +742,13 @@ section .header3 {
   
   /* here n = 0, 1, 2, 3,... */
 .slide .item:nth-child(n + 6) {
-    left: calc(30% + 660px);
+    left: calc(50% + 660px);
     opacity: 0;
 }
   
 .item .content {
     position: absolute;
     top: 50%;
-    left: 100px;
     width: 300px;
     text-align: left;
     color: #eee;
@@ -989,7 +769,7 @@ section .header3 {
     animation: animate 1s ease-in-out 1 forwards;
 }
   
-  .content .des {
+.content .des {
     margin-top: 10px;
     margin-bottom: 20px;
     opacity: 0;
@@ -1002,39 +782,183 @@ section .header3 {
     cursor: pointer;
     opacity: 0;
     animation: animate 1s ease-in-out 0.6s 1 forwards;
-    border-radius: 10px;
-    background-color: #cfb53b;
 }
-
-.button1 {
-    width: 100%;
+  
+.section-header {
     text-align: center;
-    position: absolute;
-    bottom: 20px;
 }
   
-.button1 button {
-    width: 40px;
-    height: 35px;
+.modern-header {
+    color: #cfb53b;
+    margin-bottom: 3rem;
+    font-size: 3rem;
+    font-weight: 700;
+    line-height: 4rem;
+    text-align: center;
+    margin-top: -15rem;
+}
+  
+.modern-wewenang {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+  
+.modern-card {
+    width: 30%;
+    background: rgb(2, 0, 36);
+    background: linear-gradient(135deg, rgba(2, 0, 36, 1) 0%, rgba(207, 181, 59, 1) 0%, rgba(148, 27, 63, 1) 90%);
     border-radius: 8px;
-    border: none;
-    cursor: pointer;
-    margin: 0 5px;
-    border: 1px solid #000;
-    transition: 0.3s;
+    margin: 15px 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+    border-color: #fff;
 }
   
-.button1 button:hover {
-    background: #ababab;
+.modern-card:hover {
+    transform: scale(1.05);
+    background-color: #323232;
+    border-color: #fff;
+}
+  
+.content {
+    padding: 15px;
+}
+  
+h4 {
     color: #fff;
+    font-size: 1.2em;
 }
 
-.img-1{
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.accordion-k{
+    color: #fff;
+    font-size: 1.2rem;
+    padding: 3rem 2rem;
+    width: 100%;
+    background: rgb(2, 0, 36);
+    background: linear-gradient(135deg, rgba(2, 0, 36, 1) 0%, rgba(207, 181, 59, 1) 0%, rgba(148, 27, 63, 1) 90%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: 0.5s;
+    font-family: "Poppins", sans-serif;
+}
+
+.panel-k{
+    text-align: center;
+    color: #fff;
+    padding: 0 18px;
+    border-radius: 15px;
+    background-color: #770000;
+    max-height: 0;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    overflow: hidden;
+    transition: max-height 0.5s ease-out;
+    margin-top: 10px;
+}
+
+.container-k{
+    max-width: 1200px;
+    margin: auto;
+    padding: 5rem 2rem;
+}
+
+.container-img{
+    padding-top: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.d-btn{
+    color: white;
+    margin-top: 5px;
+    padding: 5px 8px;
+    border-radius: 5px;
+    background: linear-gradient(135deg, rgba(2, 0, 36, 1) 0%, rgba(207, 181, 59, 1) 0%, rgba(148, 27, 63, 1) 90%);
+    cursor: pointer;
+}
+
+.agenda p{
+    height: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container-check {
+    padding: 60px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+    font-size: 22px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
   
+  /* Hide the browser's default checkbox */
+.container-check input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+  
+  /* Create a custom checkbox */
+.checkmark {
+    border-radius: 5px;
+    position: absolute;
+    height: 50px;
+    width: 50px;
+    background-color: #eee;
+
+}
+  
+/* When the checkbox is checked, add a blue background */
+.container-check input:checked ~ .checkmark {
+      background: linear-gradient(135deg, rgba(2, 0, 36, 1) 0%, rgba(207, 181, 59, 1) 0%, rgba(148, 27, 63, 1) 90%);
+}
+  
+  /* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+  
+  /* Show the checkmark when checked */
+.container-check input:checked ~ .checkmark:after {
+    display: block;
+}
+  
+  /* Style the checkmark/indicator */
+.container-check .checkmark:after {
+    left: 20px;
+    top: 12px;
+    width: 8px;
+    height: 20px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+.tag-divide {
+    margin-bottom: 2rem; 
+}
+
 @keyframes animate {
     from {
       opacity: 0;
@@ -1047,42 +971,13 @@ section .header3 {
       transform: translate(0);
       filter: blur(0);
     }
-}
-
-@media (width < 1200px) {
-  .slide .item:nth-child(5) {
-    left: calc(50%);
-    opacity: 0;
   }
-  .slide .item:nth-child(n + 6) {
-    left: calc(50%);
-    opacity: 0;
-}
-.features {
-  grid-template-columns: repeat(1, 1fr);
-}
-}
 
 @media (width < 900px) {
-    .img-1{
-      display: none;
-    }
     .nav-links {
       display: none;
     }
     .panel-k{
-      grid-template-columns: repeat(1, 1fr);
-    }
-    .slide .item:nth-child(3) {
-      left: 60%;
-    }
-    .slide .item:nth-child(4) {
-        left: calc(60% + 150px);
-    }
-    .pricing1{
-      grid-template-columns: repeat(1, 1fr);
-    }
-    .wakil-wrap{
       grid-template-columns: repeat(1, 1fr);
     }
     header {
@@ -1090,6 +985,9 @@ section .header3 {
     }
     header .image {
       grid-area: 1/1/2/2;
+    }
+    .features {
+      grid-template-columns: repeat(2, 1fr);
     }
     .pricing {
       grid-template-columns: repeat(2, 1fr);
@@ -1116,105 +1014,44 @@ section .header3 {
       grid-template-columns: 1fr 150px;
     }
 }
-
-@media only screen and (max-width: 500px) {
-  .image img {
-    max-width: 100%; /* Adjust max-width for smaller screens */
-    float: none; /* Remove float for smaller screens */
+@media only screen and (max-width: 768px) {
+    .slide .item {
+      width: 100%;
+      left: 0 !important; /* Override left values for smaller screens */
+    }
+  
+    .slide .item:nth-child(3),
+    .slide .item:nth-child(4),
+    .slide .item:nth-child(5),
+    .slide .item:nth-child(n + 6) {
+      left: 0 !important; /* Override left values for smaller screens */
+    }
+  }
+  
+  /* Additional Responsive styles for screens with a minimum width of 400px */
+  @media only screen and (min-width: 400px) {
+    .slide .item {
+      width: 100%;
+      left: 0 !important; /* Override left values for smaller screens */
+    }
+  
+    .slide .item:nth-child(3),
+    .slide .item:nth-child(4),
+    .slide .item:nth-child(5),
+    .slide .item:nth-child(n + 6) {
+      left: 0 !important; /* Override left values for smaller screens */
+    }
   }
 
-  section .header1,
-  .sub1-header {
-    float: none; /* Remove float for smaller screens */
-    text-align: center; /* Center-align header and sub-header text for smaller screens */
-  }
+  @media only screen and (max-width: 768px) {
+    .modern-card {
+        width: 45%;
+    }
 
-  .pricing1 .card {
-    width: 100%; /* Set width to 100% for responsiveness */
-  }
-}
-
-@media (width < 1200px) {
-  .slide .item:nth-child(5) {
-    left: calc(50%);
-    opacity: 0;
-  }
-  .slide .item:nth-child(n + 6) {
-    left: calc(50%);
-    opacity: 0;
-}
-.features {
-  grid-template-columns: repeat(1, 1fr);
-}
-}
-
-@media (width < 900px) {
-    .img-1{
-      display: none;
-    }
-    .nav-links {
-      display: none;
-    }
-    .panel-k{
-      grid-template-columns: repeat(1, 1fr);
-    }
-    .slide .item:nth-child(3) {
-      left: 60%;
-    }
-    .slide .item:nth-child(4) {
-        left: calc(60% + 150px);
-    }
-    .pricing1{
-      grid-template-columns: repeat(1, 1fr);
-    }
-    .wakil-wrap{
-      grid-template-columns: repeat(1, 1fr);
-    }
-    header {
-      grid-template-columns: repeat(1, 1fr);
-    }
-    header .image {
-      grid-area: 1/1/2/2;
-    }
-    .pricing {
-      grid-template-columns: repeat(2, 1fr);
-    }
-    footer {
-      grid-template-columns: 1fr 200px;
+    /* Additional media query for screens with a maximum width of 400px */
+    @media only screen and (max-width: 500px) {
+        .modern-card {
+            width: 80%; /* Set the width to 100% for screens with a maximum width of 400px */
+        }
     }
 }
-
-@media (width < 700px){
-  .slide .item:nth-child(4) {
-    left: calc(60% + 150px);
-    opacity: 0;
-  }
-
-  .item .content{
-    left: 10px;
-  }
-}
-
-@media (width < 600px) {
-    header .image::before {
-      display: none;
-    }
-
-    .features {
-      grid-template-columns: repeat(1, 1fr);
-    }
-
-    .slide .item:nth-child(3) {
-      left: 60%;
-      opacity: 0;
-    }
-
-    .pricing {
-      grid-template-columns: repeat(1, 1fr);
-    }
-
-    footer {
-      grid-template-columns: 1fr 150px;
-    }
-}
-
