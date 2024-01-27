@@ -13,7 +13,7 @@
 
     <nav>
       <div class="nav-logo">
-        <a href="#">
+        <a href="index">
           <img src="/img/coba1.png" alt="Logo">
         </a>
       </div>
