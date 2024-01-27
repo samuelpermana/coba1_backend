@@ -24,7 +24,7 @@ body {
 }
 
 nav {
-  width: 1500px;
+  width: 100%;
   margin: 0 auto; /* Menggunakan auto untuk memastikan navbar berada di tengah */
   padding: 2rem 1rem;
   display: flex;
@@ -527,6 +527,28 @@ section .header {
       grid-template-columns: 1fr 150px;
     }
   }
+
+  @media only screen and (max-width: 768px) {
+    .table__header .input-group {
+        max-width: 100%;
+        width: 70%;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+  .table__header .input-group {
+      max-width: 500px;
+      width: 70%;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .table__header .input-group input {
+      width: 100%; 
+      padding: 0.5rem; 
+  }
+}
+
 
 
 

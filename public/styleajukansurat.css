@@ -24,7 +24,7 @@ body {
 }
 
 nav {
-  width: 1500px;
+  width: 100%;
   margin: 0 auto; /* Menggunakan auto untuk memastikan navbar berada di tengah */
   padding: 2rem 1rem;
   display: flex;
@@ -112,7 +112,7 @@ nav {
     max-width: 650px;
     background: rgb(2, 0, 36);
     background: linear-gradient(135deg, rgba(2, 0, 36, 1) 0%, rgba(207, 181, 59, 1) 0%, rgba(148, 27, 63, 1) 90%);
-    padding: 28px;
+    padding: 10px;
     margin: 0 28px;
     border-radius: 10px;
     margin-left: auto;

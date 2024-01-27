@@ -1,13 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
 
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Montserrat', sans-serif;
 }
 
-body{
+body {
     background-color: #18181b;
     background: linear-gradient(to right, #18181b, #18181b);
     display: flex;
@@ -17,37 +17,37 @@ body{
     height: 100vh;
 }
 
-.container{
+.container {
     background-color: #27272a;
     border-radius: 30px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
     position: relative;
     overflow: hidden;
-    width: 768px;
-    max-width: 100%;
+    width: 100%;
+    max-width: 768px;
     min-height: 480px;
 }
 
-.container p{
+.container p {
     font-size: 14px;
     line-height: 20px;
     letter-spacing: 0.3px;
     margin: 20px 0;
 }
 
-.container span{
+.container span {
     font-size: 12px;
     color: #fff;
 }
 
-.container a{
+.container a {
     color: #cfb53b;
     font-size: 13px;
     text-decoration: none;
     margin: 15px 0 10px;
 }
 
-.container button{
+.container button {
     background: rgb(2, 0, 36);
     background: linear-gradient(135deg, rgba(2, 0, 36, 1) 0%, rgba(207, 181, 59, 1) 0%, rgba(148, 27, 63, 1) 90%);
     color: #fff;
@@ -62,12 +62,12 @@ body{
     cursor: pointer;
 }
 
-.container button.hidden{
+.container button.hidden {
     background-color: transparent;
     border-color: #fff;
 }
 
-.container form{
+.container form {
     background-color: #27272a;
     display: flex;
     align-items: center;
@@ -77,7 +77,7 @@ body{
     height: 100%;
 }
 
-.container input{
+.container input {
     background-color: #eee;
     border: none;
     margin: 8px 0;
@@ -89,25 +89,25 @@ body{
     font-family: "Poppins", sans-serif;
 }
 
-.form-container{
+.form-container {
     position: absolute;
     top: 0;
     height: 100%;
     transition: all 0.6s ease-in-out;
 }
 
-.sign-in{
+.sign-in {
     left: 0;
     width: 50%;
     z-index: 2;
     color: #fff;
 }
 
-.container.active .sign-in{
+.container.active .sign-in {
     transform: translateX(100%);
 }
 
-.sign-up{
+.sign-up {
     left: 0;
     width: 50%;
     opacity: 0;
@@ -115,29 +115,29 @@ body{
     color: #fff;
 }
 
-.container.active .sign-up{
+.container.active .sign-up {
     transform: translateX(100%);
     opacity: 1;
     z-index: 5;
     animation: move 0.6s;
 }
 
-@keyframes move{
-    0%, 49.99%{
+@keyframes move {
+    0%, 49.99% {
         opacity: 0;
         z-index: 1;
     }
-    50%, 100%{
+    50%, 100% {
         opacity: 1;
         z-index: 5;
     }
 }
 
-.social-icons{
+.social-icons {
     margin: 20px 0;
 }
 
-.social-icons a{
+.social-icons a {
     border: 1px solid ;
     border-radius: 20%;
     display: inline-flex;
@@ -149,7 +149,7 @@ body{
     background-color: #fff;
 }
 
-.toggle-container{
+.toggle-container {
     position: absolute;
     top: 0;
     left: 50%;
@@ -161,12 +161,12 @@ body{
     z-index: 1000;
 }
 
-.container.active .toggle-container{
+.container.active .toggle-container {
     transform: translateX(-100%);
     border-radius: 0 150px 100px 0;
 }
 
-.toggle{
+.toggle {
     height: 100%;
     background: rgb(2, 0, 36);
     background: linear-gradient(135deg, rgba(2, 0, 36, 1) 0%, rgba(207, 181, 59, 1) 0%, rgba(148, 27, 63, 1) 90%);
@@ -179,11 +179,11 @@ body{
     transition: all 0.6s ease-in-out;
 }
 
-.container.active .toggle{
+.container.active .toggle {
     transform: translateX(50%);
 }
 
-.toggle-panel{
+.toggle-panel {
     position: absolute;
     width: 50%;
     height: 100%;
@@ -198,20 +198,20 @@ body{
     transition: all 0.6s ease-in-out;
 }
 
-.toggle-left{
+.toggle-left {
     transform: translateX(-200%);
 }
 
-.container.active .toggle-left{
+.container.active .toggle-left {
     transform: translateX(0);
 }
 
-.toggle-right{
+.toggle-right {
     right: 0;
     transform: translateX(0);
 }
 
-.container.active .toggle-right{
+.container.active .toggle-right {
     transform: translateX(200%);
 }
 
@@ -220,5 +220,25 @@ body{
     display: block;
     margin-top: -2rem;
     margin-bottom: 1rem;
-    
-  }
+}
+
+/* Responsiveness */
+@media only screen and (max-width: 500px) {
+    .container form {
+        padding: 0 10px;
+    }
+
+    .container button {
+        padding: 10px 20px;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .container form {
+        padding: 0 10px;
+    }
+
+    .container button {
+        padding: 10px 20px;
+    }
+}

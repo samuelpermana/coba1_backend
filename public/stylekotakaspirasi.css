@@ -24,7 +24,7 @@ body {
 }
 
 nav {
-  width: 1500px;
+  width: 100%;
   margin: 0 auto; /* Menggunakan auto untuk memastikan navbar berada di tengah */
   padding: 2rem 1rem;
   display: flex;
@@ -121,6 +121,7 @@ nav {
   background-color: #27272a;
   width: 50%; /* Menyesuaikan lebar elemen dengan textarea */
   margin: auto; /* Menengahkan elemen */
+  
 }
 
 #contact h2 {
@@ -317,5 +318,21 @@ footer .column > a:hover {
 
   footer {
     grid-template-columns: 1fr 150px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  #contact {
+    width: 90%;
+  }
+
+  #contact input[type="text"],
+  #contact input[type="email"],
+  #contact textarea {
+    width: 100%; /* Lebar penuh pada layar kecil */
+  }
+
+  #contact button {
+    min-width: 80%;
   }
 }
