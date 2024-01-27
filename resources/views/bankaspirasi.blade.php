@@ -121,6 +121,6 @@
 
     <div class="copyright">Copyright Â© 2023 SENAT FH UNDIP. All Rights Reserved.</div>
 
-    <script src="script4.js"></script>
+    <script src="js-bankaspirasi.js"></script>
   </body>
 </html>

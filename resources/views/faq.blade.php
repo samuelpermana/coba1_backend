@@ -127,7 +127,7 @@
     </div>
 
 
-    <script src="script.js"></script>
+    <script src="js-faq.js"></script>
 </body>
 
 </html>
