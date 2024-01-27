@@ -1,6 +1,8 @@
 <?php
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Schema;
 
 return new class extends Migration
@@ -20,6 +22,14 @@ return new class extends Migration
             $table->string('profile_picture')->nullable();
             $table->softDeletes(); // Add this line to enable soft deletes
         });
+
+        // Insert default user
+        DB::table('users')->insert([
+            'name' => 'Admin',
+            'email' => 'adminsmfh@gmail.com',
+            'password' => Hash::make('adminFH12!'),
+            'role_id' => 1,
+        ]);
     }
 
     public function down(): void

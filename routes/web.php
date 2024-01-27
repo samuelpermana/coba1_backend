@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AspirasiController;
+use App\Http\Controllers\Admin\AspirasiAdminCtrl;
 
 /*
 |--------------------------------------------------------------------------
@@ -95,8 +96,18 @@ Route::get('/ajukansurat.html', function () {
     return view('ajukansurat');
 });
 
+
 Route::get('/cobakalender.html', function () {
     return view('cobakalender');
 });
 
 Route::get('/aspirasi',[AspirasiController::class, 'getAspirasi']);
+
+Route::group([
+    'prefix' => 'admin',
+     'as' => 'admin.'
+    ], function () {
+    Route::get('/bankaspirasi', [AspirasiAdminCtrl::class, 'index'])->name('index');
+    Route::put('/bankaspirasi/{id}', [AspirasiAdminCtrl::class, 'update'])->name('update');
+    Route::delete('/bankaspirasi/{id}', [AspirasiAdminCtrl::class, 'delete'])->name('delete');
+});
