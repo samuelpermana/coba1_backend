@@ -13,27 +13,28 @@
 
     <nav>
         <div class="nav-logo">
-            <a href="index.html">
-                <img src="/img/coba23.png" alt="Logo">
-            </a>
+          <a href="#">
+            <img src="/img/coba1.png" alt="Logo">
+          </a>
         </div>
-
+  
         <ul class="nav-links">
-            <li class="link"><a href="index.html">Home</a></li>
-            <li id="link1" class="link"><a href="kotakaspirasi.html">Kotak Aspirasi</a></li>
-            <li id="link2" class="link"><a href="faq.html">FAQ</a></li>
-            <li id="link3" class="link"><a href="bankaspirasi.html">Bank Aspirasi</a></li>
-            <li id="link4" class="link"><a href="selayangpandang.html">Selayang Pandang</a></li>
-            <li id="link5" class="link"><a href="jdih.html">JDIH</a></li>
-            <li id="link6" class="link"><a href="peminjamanruangan.html">Peminjaman Ruangan</a></li>
-            <li id="link6" class="link"><a href="transparansisurat3.html">Transparansi Surat</a></li>
+          <li class="link"><a href="index">Home</a></li>
+          <li class="link" id="link1"><a href="kotakaspirasi">Kotak Aspirasi</a></li>
+          <li class="link" id="link2"><a href="faq">FAQ</a></li>
+          <li class="link" id="link3"><a href="bankaspirasi">Bank Aspirasi</a></li>
+          <li class="link" id="link4"><a href="selayangpandang">Selayang Pandang</a></li>
+          <li class="link" id="link4"><a href="jdih">JDIH</a></li>
+          <li class="link" id="link4"><a href="peminjamanruangan">Peminjaman Ruangan</a></li>
+          <li class="link" id="link4"><a href="transparansisurat3">Transparansi surat</a></li>
         </ul>
-        <button class="btn">Ajukan Surat</button>
-    </nav>
+  
+        <a href="login"><button class="btn" type="button">Ajukan Surat</button></a>
+      </nav>
     <section class="container">
         <h2 class="header">TRANSPARANSI SURAT</h2>
         <p class="sub-header">Berisikan tentang data Surat yang sudah diajukan kepada senat </p>
-        <a href="ajukansurat.html"><button type="button" class="trans">Ajukan Surat</button></a>
+        <a href="ajukansurat"><button type="button" class="trans">Ajukan Surat</button></a>
     <main class="table" id="customers_table">
         <section class="table__header">
             <div class="input-group">

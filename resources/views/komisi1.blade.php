@@ -14,20 +14,24 @@
 
     <nav>
         <div class="nav-logo">
-            <a href="#">
-                <img src="img/coba1.png" alt="Logo">
-            </a>
+          <a href="#">
+            <img src="/img/coba1.png" alt="Logo">
+          </a>
         </div>
-
+  
         <ul class="nav-links">
-            <li class="link"><a href="index.html">Home</a></li>
-            <li id="link1" class="link"><a href="kotakaspirasi.html">Kotak Aspirasi</a></li>
-            <li id="link2" class="link"><a href="faq.html">FAQ</a></li>
-            <li id="link3" class="link"><a href="bankaspirasi.html">Bank Aspirasi</a></li>
-            <li id="link4" class="link"><a href="selayangpandang.html">Selayang Pandang</a></li>
+          <li class="link"><a href="index">Home</a></li>
+          <li class="link" id="link1"><a href="kotakaspirasi">Kotak Aspirasi</a></li>
+          <li class="link" id="link2"><a href="faq">FAQ</a></li>
+          <li class="link" id="link3"><a href="bankaspirasi">Bank Aspirasi</a></li>
+          <li class="link" id="link4"><a href="selayangpandang">Selayang Pandang</a></li>
+          <li class="link" id="link4"><a href="jdih">JDIH</a></li>
+          <li class="link" id="link4"><a href="peminjamanruangan">Peminjaman Ruangan</a></li>
+          <li class="link" id="link4"><a href="transparansisurat3">Transparansi surat</a></li>
         </ul>
-        <button class="btn">Ajukan Surat</button>
-    </nav>
+  
+        <a href="login"><button class="btn" type="button">Ajukan Surat</button></a>
+      </nav>
 
     <section class="container">
         <h1 class="j-header4">KOMISI SATU</h1>
@@ -38,7 +42,7 @@
                     <div class="content">
                         <div class="name">KOMISI SATU</div>
                         <div class="des">Komisi 1 adalah komisi yang menaungi terkait dengan Bidang Pengembangan dan Keilmuan</div>
-                        <a href="http://127.0.0.1:8000/komisi1.html" target="_blank">
+                        <a href="http://127.0.0.1:8000/komisi1" target="_blank">
                             <button>Selengkapnya</button>
                         </a>
                     </div>

@@ -26,73 +26,73 @@ Route::get('/index', function () {
     return view('index');
 });
 
-Route::get('/kotakaspirasi.', function () {
+Route::get('/kotakaspirasi', function () {
     return view('kotakaspirasi');
 });
 
 Route::post('/aspirasi', [AspirasiController::class, 'createAspirasi'])->name('aspirasi.store');
 
-Route::get('/selayangpandang.', function () {
+Route::get('/selayangpandang', function () {
     return view('selayangpandang');
 });
 
-Route::get('/bankaspirasi.', [AspirasiController::class, 'getAspirasi']);
+Route::get('/bankaspirasi', [AspirasiController::class, 'getAspirasi']);
 
-Route::get('/faq.', function () {
+Route::get('/faq', function () {
     return view('faq');
 });
 
-Route::get('/komisi1.', function () {
+Route::get('/komisi1', function () {
     return view('komisi1');
 });
 
-Route::get('/komisi2.', function () {
+Route::get('/komisi2', function () {
     return view('komisi2');
 });
 
-Route::get('/komisi3.', function () {
+Route::get('/komisi3', function () {
     return view('komisi3');
 });
 
-Route::get('/komisi4.', function () {
+Route::get('/komisi4', function () {
     return view('komisi4');
 });
 
-Route::get('/badananggaran.', function () {
+Route::get('/badananggaran', function () {
     return view('badananggaran');
 });
 
-Route::get('/badankehormatan.', function () {
+Route::get('/badankehormatan', function () {
     return view('badankehormatan');
 });
 
-Route::get('/badanlegislasi.', function () {
+Route::get('/badanlegislasi', function () {
     return view('badanlegislasi');
 });
 
-Route::get('/bksap.', function () {
+Route::get('/bksap', function () {
     return view('bksap');
 });
 
-Route::get('/peminjamanruangan.', function () {
+Route::get('/peminjamanruangan', function () {
     return view('peminjamanruangan');
 });
 
 
-Route::get('/transparansisurat3.', function () {
+Route::get('/transparansisurat3', function () {
     return view('transparansisurat3');
 });
 
-Route::get('/login.', function () {
+Route::get('/login', function () {
     return view('login');
 });
 
-Route::get('/ajukansurat.', function () {
+Route::get('/ajukansurat', function () {
     return view('ajukansurat');
 });
 
 
-Route::get('/cobakalender.', function () {
+Route::get('/cobakalender', function () {
     return view('cobakalender');
 });
 
