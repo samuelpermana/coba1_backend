@@ -354,6 +354,6 @@
 
     <div class="copyright">Copyright © 2023 SENAT FH UNDIP. All Rights Reserved.</div>
 
-    <script src="script1.js"></script>
+    <script src="js-selayangpandang.js"></script>
   </body>
 </html>

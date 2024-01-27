@@ -1,17 +1,4 @@
-var acc = document.getElementsByClassName("accordion");
-var i;
-
-for (i = 0; i < acc.length; i++) {
-    acc[i].addEventListener("click", function () {
-        this.classList.toggle("active");
-        var panel = this.nextElementSibling;
-        if (panel.style.maxHeight) {
-            panel.style.maxHeight = null;
-        } else {
-            panel.style.maxHeight = panel.scrollHeight + "px";
-        }
-    });
-}
+// JS di bawah ini gua gatau gunanya buat apa tolong jelasin guys... -Raoul
 
 // 2. Validasi Form
 const form = document.querySelector("#contact form");
@@ -31,11 +18,11 @@ const btnAjukanSurat = document.querySelector(".btn");
 const modal = document.createElement("div");
 modal.className = "modal";
 modal.innerHTML = `
-        <div class="modal-content">
-            <span class="close">&times;</span>
-            ${form.outerHTML}
-        </div>
-    `;
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                ${form.outerHTML}
+            </div>
+        `;
 document.body.appendChild(modal);
 
 btnAjukanSurat.addEventListener("click", function () {
@@ -77,30 +64,4 @@ $(document).ready(function () {
         }
         showCard(currentIndex);
     });
-});
-
-let swiperCards = new Swiper(".card__content", {
-    loop: true,
-    spaceBetween: 32,
-    grabCursor: true,
-
-    pagination: {
-        el: ".swiper-pagination",
-        clickable: true,
-        dynamicBullets: true,
-    },
-
-    navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
-    },
-
-    breakpoints: {
-        600: {
-            slidesPerView: 2,
-        },
-        968: {
-            slidesPerView: 3,
-        },
-    },
 });
