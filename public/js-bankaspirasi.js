@@ -1,8 +1,7 @@
-
 var btns = document.querySelectorAll(".btn3");
 
 btns.forEach(function (btn) {
-    btn.addEventListener("click", function() {
+    btn.addEventListener("click", function () {
         var panel = this.nextElementSibling;
         this.classList.toggle("active");
         if (panel.style.maxHeight) {
