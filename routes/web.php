@@ -29,66 +29,67 @@ Route::get('/index.html', function () {
     return view('index');
 });
 
-Route::get('/kotakaspirasi.html', function () {
+Route::get('/kotakaspirasi', function () {
     return view('kotakaspirasi');
 });
 
 Route::post('/aspirasi', [AspirasiController::class, 'createAspirasi'])->name('aspirasi.store');
 
-Route::get('/selayangpandang.html', function () {
+
+
+Route::get('/peminjamanruangan', [RuanganController::class, 'index']);
+
+Route::get('/selayangpandang', function () {
     return view('selayangpandang');
 });
 
-Route::get('/bankaspirasi.html', [AspirasiController::class, 'getAspirasi']);
+Route::get('/bankaspirasi', [AspirasiController::class, 'getAspirasi']);
 
-Route::get('/faq.html', function () {
+Route::get('/faq', function () {
     return view('faq');
 });
 
-Route::get('/komisi1.html', function () {
+Route::get('/komisi1', function () {
     return view('komisi1');
 });
 
-Route::get('/komisi2.html', function () {
+Route::get('/komisi2', function () {
     return view('komisi2');
 });
 
-Route::get('/komisi3.html', function () {
+Route::get('/komisi3', function () {
     return view('komisi3');
 });
 
-Route::get('/komisi4.html', function () {
+Route::get('/komisi4', function () {
     return view('komisi4');
 });
 
-Route::get('/badananggaran.html', function () {
+Route::get('/badananggaran', function () {
     return view('badananggaran');
 });
 
-Route::get('/badankehormatan.html', function () {
+Route::get('/badankehormatan', function () {
     return view('badankehormatan');
 });
 
-Route::get('/badanlegislasi.html', function () {
+Route::get('/badanlegislasi', function () {
     return view('badanlegislasi');
 });
 
-Route::get('/bksap.html', function () {
+Route::get('/bksap', function () {
     return view('bksap');
 });
 
-Route::get('/peminjamanruangan.html', [RuanganController::class, 'index']);
-
-
-Route::get('/transparansisurat3.html', function () {
+Route::get('/transparansisurat3', function () {
     return view('transparansisurat3');
 });
 
-Route::get('/login.html', function () {
+Route::get('/login', function () {
     return view('login');
 });
 
-Route::get('/ajukansurat.html', function () {
+Route::get('/ajukansurat', function () {
     return view('ajukansurat');
 });
 Route::get('/aaa', function () {
@@ -96,7 +97,7 @@ Route::get('/aaa', function () {
 });
 
 
-Route::get('/cobakalender.html', function () {
+Route::get('/cobakalender', function () {
     return view('cobakalender');
 });
 
@@ -160,7 +161,7 @@ Route::group([
     // Route
 });
 
-Route::get('/jdih.html  ', [JDIHController::class, 'getJDIH']);
+Route::get('/jdih  ', [JDIHController::class, 'getJDIH']);
 
 Route::get('jdih/show/{id}', [JDIHController::class, 'showJDIH'])->name('jdih.show');
 

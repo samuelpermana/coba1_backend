@@ -46,7 +46,7 @@ class RoomScheduleAdminController extends Controller
             ->first();
 
         if ($existingSchedule) {
-            return redirect()->back()->with('error', 'Room schedule already exists for the selected room, date, and time.');
+            return redirect()->back()->withInput()->with('error', 'Failed to create room schedule. The room is already booked for the selected date and time.');
         }
 
         RoomSchedule::create($request->all());
@@ -84,7 +84,7 @@ class RoomScheduleAdminController extends Controller
             ->first();
 
         if ($existingSchedule) {
-            return redirect()->back()->with('error', 'Room schedule already exists for the selected room, date, and time.');
+            return redirect()->back()->withInput()->with('error', 'Failed to update room schedule. The room is already booked for the selected date and time.');
         }
 
         $roomSchedule->update($request->all());

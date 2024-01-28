@@ -5,10 +5,11 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.5.0/remixicon.min.css" />
-    <!-- <link rel="stylesheet" href="styleperma2020.css" /> -->
-    <link rel="stylesheet" href="{{ asset('styleperma2020.css') }}">
-    <title>PERMA 2020</title>
-  </head>
+
+    <link rel="stylesheet" href="{{ asset('styledetailjdih.css') }} " />
+    <title>JDIH</title>
+</head>
+
 
   <body>
     <nav>
@@ -97,51 +98,42 @@
               </table>
           </div>
         </div>
-        
-        
       </div>
-
-    
-    
-    
-   
-
     <footer class="container">
-      <span class="blur"></span>
-      <span class="blur"></span>
-      <div class="column">
-        <div class="logo">
-          <img src="/img/coba1.png" />
+        <span class="blur"></span>
+        <span class="blur"></span>
+        <div class="column">
+            <div class="logo">
+                <img src="img/coba1.png">
+            </div>
+            <p>
+                SENAT MAHASISWA FAKULTAS HUKUM UNDIP
+            </p>
+            <div class="socials">
+                <a href="#"><i class="ri-youtube-line"></i></a>
+                <a href="#"><i class="ri-instagram-line"></i></a>
+                <a href="#"><i class="ri-twitter-line"></i></a>
+            </div>
         </div>
-        <p>SENAT MAHASISWA FAKULTAS HUKUM UNDIP</p>
-        <div class="socials">
-          <a href="#"><i class="ri-youtube-line"></i></a>
-          <a href="#"><i class="ri-instagram-line"></i></a>
-          <a href="#"><i class="ri-twitter-line"></i></a>
+        <div class="column">
+            <h4>CONTOH</h4>
+            <a href="#">Template</a>
+            <a href="#">Template</a>
+            <a href="#">Template</a>
         </div>
-      </div>
-      <div class="column">
-        <h4>CONTOH</h4>
-        <a href="#">Template</a>
-        <a href="#">Template</a>
-        <a href="#">Template</a>
-      </div>
-      <div class="column">
-        <h4>About Us</h4>
-        <a href="#">Blogs</a>
-        <a href="#">Channels</a>
-        <a href="#">Sponsors</a>
-      </div>
-      <div class="column">
-        <h4>Contact</h4>
-        <a href="#">Contact Us</a>
-        <a href="#">Privicy Policy</a>
-        <a href="#">Terms & Conditions</a>
-      </div>
+        <div class="column">
+            <h4>About Us</h4>
+            <a href="#">Blogs</a>
+            <a href="#">Channels</a>
+            <a href="#">Sponsors</a>
+        </div>
+        <div class="column">
+            <h4>Contact</h4>
+            <a href="#">Contact Us</a>
+            <a href="#">Privicy Policy</a>
+            <a href="#">Terms & Conditions</a>
+        </div>
     </footer>
 
-    <div class="copyright">Copyright Â© 2023 SENAT FH UNDIP. All Rights Reserved.</div>
-
-    <script src="script.js"></script>
-  </body>
+</body>
 </html>
