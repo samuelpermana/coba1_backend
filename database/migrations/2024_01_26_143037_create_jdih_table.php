@@ -1,11 +1,9 @@
 <?php
-
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateJdihTable extends Migration
-{
+return new class extends Migration{
     /**
      * Run the migrations.
      */
@@ -19,10 +17,9 @@ class CreateJdihTable extends Migration
             $table->date('tanggal_disahkan');
             $table->text('peraturan');
             $table->string('status_peraturan');
-            $table->string('file_peraturan');
+            $table->string('file_peraturan')->nullable();
             $table->string('file_naskah')->nullable();
             $table->string('file_inventarisasi')->nullable();
-            $table->string('file_lainnya')->nullable();
             $table->boolean('is_deleted')->default(false);
             $table->timestamps();
         });
@@ -35,4 +32,4 @@ class CreateJdihTable extends Migration
     {
         Schema::dropIfExists('jdih');
     }
-}
+};

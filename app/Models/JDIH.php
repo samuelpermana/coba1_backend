@@ -19,9 +19,13 @@ class JDIH extends Model
         'file_peraturan',
         'file_naskah',
         'file_inventarisasi',
-        'file_lainnya',
         'is_deleted',
         'created_at',
         'updated_at'
     ];
+
+    public function file_lain()
+    {
+        return $this -> hasMany(FileLainJDIH::class);
+    }
 }

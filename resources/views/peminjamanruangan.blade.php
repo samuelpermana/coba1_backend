@@ -55,144 +55,25 @@
                 <thead>
                     <tr>
                         <th> No <span class="icon-arrow">&UpArrow;</span></th>
-                        <th> Ormawa <span class="icon-arrow">&UpArrow;</span></th>
+                        <th> Digunakan Oleh <span class="icon-arrow">&UpArrow;</span></th>
                         <th> Ruangan <span class="icon-arrow">&UpArrow;</span></th>
                         <th> Tanggal <span class="icon-arrow">&UpArrow;</span></th>
-                        <th> Status <span class="icon-arrow">&UpArrow;</span></th>
+                        <th> Jam <span class="icon-arrow">&UpArrow;</span></th>
                         
                     </tr>
                 </thead>
                 <tbody>
+                    @foreach($roomSchedule as $index => $schedule)
                     <tr>
-                        <td> 1 </td>
-                        <td>BASKET</td>
-                        <td> A.305 </td>
-                        <td> 17 Dec, 2024 </td>
+                        <td>{{ $index + 1 }}</td>
+                        <td>{{ $schedule->booked_by }}</td>
+                        <td>{{ $schedule->room->name }}</td>
+                        <td>{{ \Carbon\Carbon::parse($schedule->date)->format('d M, Y') }}</td>
                         <td>
-                            <p class="status delivered">KOSONG</p>
+                            <p class="status delivered">{{ $schedule->time }}</p>
                         </td>
-                        
                     </tr>
-                    <tr>
-                        <td> 2 </td>
-                        <td>BASKET</td>
-                        <td> A.305 </td>
-                        <td> 27 Aug, 2023 </td>
-                        <td>
-                            <p class="status cancelled">DIPAKAI</p>
-                        </td>
-                        
-                    </tr>
-                    <tr>
-                        <td> 3</td>
-                        <td>BASKET</td>
-                        <td> A.305 </td>
-                        <td> 14 Mar, 2023 </td>
-                        <td>
-                            <p class="status cancelled">DIPAKAI</p>
-                        </td>
-                        
-                    </tr>
-                    <tr>
-                        <td> 4</td>
-                        <td>BASKET</td>
-                        <td> A.305 </td>
-                        <td> 25 May, 2023 </td>
-                        <td>
-                            <p class="status delivered">KOSONG</p>
-                        </td>
-                        
-                    </tr>
-                    <tr>
-                        <td> 5</td>
-                        <td>BASKET</td>
-                        <td> A.305 </td>
-                        <td> 23 Apr, 2023 </td>
-                        <td>
-                            <p class="status delivered">KOSONG</p>
-                        </td>
-                        
-                    </tr>
-                    <tr>
-                        <td> 6</td>
-                        <td>BASKET</td>
-                        <td> A.305 </td>
-                        <td> 23 Apr, 2023 </td>
-                        <td>
-                            <p class="status cancelled">DIPAKAI</p>
-                        </td>
-                        
-                    </tr>
-                    <tr>
-                        <td> 7</td>
-                        <td>BASKET</td>
-                        <td> A.305 </td>
-                        <td> 20 May, 2023 </td>
-                        <td>
-                            <p class="status delivered">KOSONG</p>
-                        </td>
-                        
-                    </tr>
-                    <tr>
-                        <td> 8</td>
-                        <td>BASKET</td>
-                        <td> A.305 </td>
-                        <td> 30 Feb, 2023 </td>
-                        <td>
-                            <p class="status delivered">KOSONG</p>
-                        </td>
-                        
-                    </tr>
-                    <tr>
-                        <td> 9</td>
-                        <td>BASKET</td>
-                        <td> A.305 </td>
-                        <td> 22 Dec, 2023 </td>
-                        <td>
-                            <p class="status cancelled">DIPAKAI</p>
-                        </td>
-                        
-                    </tr>
-                    <tr>
-                        <td> 9</td>
-                        <td>BASKET</td>
-                        <td> A.305 </td>
-                        <td> 22 Dec, 2023 </td>
-                        <td>
-                            <p class="status cancelled">DIPAKAI</p>
-                        </td>
-                        
-                    </tr>
-                    <tr>
-                        <td> 9</td>
-                        <td>BASKET</td>
-                        <td> A.305 </td>
-                        <td> 22 Dec, 2023 </td>
-                        <td>
-                            <p class="status cancelled">DIPAKAI</p>
-                        </td>
-                        
-                    </tr>
-                    <tr>
-                        <td> 9</td>
-                        <td>BASKET</td>
-                        <td> A.305 </td>
-                        <td> 22 Dec, 2023 </td>
-                        <td>
-                            <p class="status cancelled">DIPAKAI</p>
-                        </td>
-                        
-                    </tr>
-                    <tr>
-                        <td> 9</td>
-                        <td>BASKET</td>
-                        <td> A.305 </td>    
-                        <td> 22 Dec, 2023 </td>
-                        <td>
-                            <p class="status cancelled">DIPAKAI</p>
-                        </td>
-                        
-                    </tr>
+                    @endforeach
                 </tbody>
             </table>
         </section>

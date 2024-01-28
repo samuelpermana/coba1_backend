@@ -11,13 +11,10 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('file_jdih', function (Blueprint $table) {
+        Schema::create('rooms', function (Blueprint $table) {
             $table->id();
-            $table->string('nama_file');
-            $table->unsignedBigInteger('j_d_i_h_id');
+            $table->string('name');
             $table->timestamps();
-
-            $table->foreign('j_d_i_h_id')->references('id')->on('jdih')->onDelete('cascade');
         });
     }
 
@@ -26,6 +23,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('file_jdih');
+        Schema::dropIfExists('rooms');
     }
 };

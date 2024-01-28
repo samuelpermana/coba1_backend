@@ -15,8 +15,8 @@
         <div style="color: green;">{{ session('success') }}</div>
     @endif
 
-    <form action="{{ route('admin.jdih.store') }}" method="post">
-        @csrf
+    <form action="{{ route('admin.jdih.store') }}" method="POST" enctype="multipart/form-data">
+    @csrf
 
         <label for="tahun">Tahun:</label>
         <input type="text" id="tahun" name="tahun" required><br>
@@ -37,16 +37,16 @@
         <input type="text" id="status_peraturan" name="status_peraturan" required><br>
 
         <label for="file_peraturan">File Peraturan:</label>
-        <input type="text" id="file_peraturan" name="file_peraturan" required><br>
+        <input type="file" name="file_peraturan">
 
         <label for="file_naskah">File Naskah:</label>
-        <input type="text" id="file_naskah" name="file_naskah"><br>
+        <input type="file" name="file_naskah">
 
         <label for="file_inventarisasi">File Inventarisasi:</label>
-        <input type="text" id="file_inventarisasi" name="file_inventarisasi"><br>
+        <input type="file" name="file_inventarisasi">
 
         <label for="file_lainnya">File Lainnya:</label>
-        <input type="text" id="file_lainnya" name="file_lainnya"><br>
+        <input type="file" name="file_lainnya[]" multiple>
 
   
 
