@@ -62,6 +62,7 @@
                     @foreach ($aktivitasSenats as $aktivitasSenat)
                         <div data-title="{{ $aktivitasSenat->judul }}"
                             data-description="{{ $aktivitasSenat->isi_teks }}">
+                            <p>Image URL: {{ asset('storage/images/' . $aktivitasSenat->gambar) }}</p>
                             <img class="img-aktivitas-sm"
                                 src="{{ asset('storage/app/public/aktivitasSenat/' . $aktivitasSenat->gambar) }}"
                                 alt="Slideshow Image" />
