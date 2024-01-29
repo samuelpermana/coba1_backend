@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AktivitasSenatController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AspirasiController;
 use App\Http\Controllers\Admin\AspirasiAdminCtrl;
@@ -8,6 +9,8 @@ use App\Http\Controllers\Admin\RoomAdminController;
 use App\Http\Controllers\JDIHController;
 use App\Http\Controllers\RuanganController;
 use App\Http\Controllers\Admin\RoomScheduleAdminController;
+use App\Http\Controllers\Admin\AktivitasSenatAdminCtrl;
+use App\Models\AktivitasSenat;
 use App\Models\JDIH;
 
 /*
@@ -24,6 +27,10 @@ use App\Models\JDIH;
 Route::get('/', function () {
     return view('index');
 });
+
+/* Route for Aktivitas Senat*/
+Route::get('/{id}/file', [AktivitasSenatController::class, 'show'])->name('aktivitas-senat.file');
+Route::get('/', [AktivitasSenatController::class, 'index']);
 
 Route::get('/index.html', function () {
     return view('index');
@@ -120,6 +127,23 @@ Route::group([
 
     Route::resource('rooms', RoomAdminController::class);
     Route::resource('room-schedules', RoomScheduleAdminController::class);
+
+    Route::get('/aktivitas', [AktivitasSenatAdminCtrl::class, 'index'])->name('aktivitasSenat.index');
+
+    // Create
+    Route::get('/aktivitas/create', [AktivitasSenatAdminCtrl::class, 'create'])->name('aktivitasSenat.create');
+    Route::post('/aktivitas', [AktivitasSenatAdminCtrl::class, 'store'])->name('aktivitasSenat.store');
+
+    // Show
+    Route::get('/aktivitas/{id}', [AktivitasSenatAdminCtrl::class, 'show'])->name('aktivitasSenat.show');
+
+    // Edit
+    Route::get('/aktivitas/{id}/edit', [AktivitasSenatAdminCtrl::class, 'edit'])->name('aktivitasSenat.edit');
+    Route::put('/aktivitas/{id}', [AktivitasSenatAdminCtrl::class, 'update'])->name('aktivitasSenat.update');
+
+    // Delete
+    Route::delete('/aktivitas/{id}', [AktivitasSenatAdminCtrl::class, 'destroy'])->name('aktivitasSenat.destroy');
+    
 });
 
 
