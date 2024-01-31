@@ -30,7 +30,7 @@ body {
   }
 
 nav {
-  max-width: 1200px;
+  max-width: 100%;
   margin: 0 auto; /* Menggunakan auto untuk memastikan navbar berada di tengah */
   padding: 2rem 1rem;
   display: flex;
@@ -61,7 +61,7 @@ nav {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 3rem;
+  gap: 2rem;
 }
 
 .link a {

@@ -25,7 +25,7 @@ Route::get('/', function () {
     return view('index');
 });
 
-Route::get('/index.html', function () {
+Route::get('/index', function () {
     return view('index');
 });
 

@@ -90,41 +90,84 @@
 
     <section class="container">
       <h2 class="header">AKTIVITAS LEGISLASI</h2>
-      <p class="sub-header">
-        Aktivitas tahapan Legislasi yang dibentuk oleh SM FH Undip sebelum disahkan atau ditetapkan.
-      </p>
-      <div class="container7">
-        <div class="calendar">
-          <div class="header">
-            <div class="month"></div>
-            <div class="btns">
-              <div class="btn today-btn">
-                <i class="fas fa-calendar-day"></i>
+      
+      
+
+  <section class="container">
+      
+      <div class="container-cal">
+          <div class="left">
+            <div class="calendar">
+              <div class="month">
+                <i class="fas fa-angle-left prev"></i>
+                <div class="date">december 2015</div>
+                <i class="fas fa-angle-right next"></i>
               </div>
-              <div class="btn prev-btn">
-                <i class="fas fa-chevron-left"></i>
+              <div class="weekdays">
+                <div>Sun</div>
+                <div>Mon</div>
+                <div>Tue</div>
+                <div>Wed</div>
+                <div>Thu</div>
+                <div>Fri</div>
+                <div>Sat</div>
               </div>
-              <div class="btn next-btn">
-                <i class="fas fa-chevron-right"></i>
+              <div class="days"></div>
+              <div class="goto-today">
+                <div class="goto">
+                  <input type="text" placeholder="mm/yyyy" class="date-input" />
+                  <button class="goto-btn">Go</button>
+                </div>
+                <button class="today-btn">Today</button>
               </div>
             </div>
           </div>
-          <div class="weekdays">
-            <div class="day">Sun</div>
-            <div class="day">Mon</div>
-            <div class="day">Tue</div>
-            <div class="day">Wed</div>
-            <div class="day">Thu</div>
-            <div class="day">Fri</div>
-            <div class="day">Sat</div>
+          <div class="right">
+            <div class="today-date">
+              <div class="event-day">wed</div>
+              <div class="event-date">12th december 2022</div>
+            </div>
+            <div class="events"></div>
+            <div class="add-event-wrapper">
+              <div class="add-event-header">
+                <div class="title">Add Event</div>
+                <i class="fas fa-times close"></i>
+              </div>
+              <div class="add-event-body">
+                <div class="add-event-input">
+                  <input type="text" placeholder="Event Name" class="event-name" />
+                </div>
+                <div class="add-event-input">
+                  <input
+                    type="text"
+                    placeholder="Event Time From"
+                    class="event-time-from"
+                  />
+                </div>
+                <div class="add-event-input">
+                  <input
+                    type="text"
+                    placeholder="Event Time To"
+                    class="event-time-to"
+                  />
+                </div>
+              </div>
+              <div class="add-event-footer">
+                  <input type="color" class="event-color" value="#ff0000" />
+                <button class="add-event-btn">Add Event</button>
+              </div>
+            </div>
           </div>
-          <div class="days">
-            <!-- lets add days using js -->
-          </div>
+          <button class="add-event">
+            <i class="fas fa-plus"></i>
+          </button>
         </div>
-      </div>
+    
+        <div class="credits">
+          
+        </div>
 
-    </section>
+  </section>     
     <footer class="container">
       <span class="blur"></span>
       <span class="blur"></span>

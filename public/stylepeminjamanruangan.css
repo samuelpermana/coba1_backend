@@ -12,59 +12,60 @@ img {
     width: 70%;
     display: flex;
     margin-left: 50px;
-}
-
-a {
+  }
+  
+  a {
     text-decoration: none;
-}
-
-body {
+  }
+  
+  body {
     font-family: "Poppins", sans-serif;
     background-color: #18181b;
-}
-
-nav {
-  width: 100%;
-  margin: 0 auto; /* Menggunakan auto untuk memastikan navbar berada di tengah */
-  padding: 2rem 1rem;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 2rem;
-}
-
-.nav-logo {
+  }
+  
+  nav {
+    max-width: 100%;
+    margin: 0 auto; /* Menggunakan auto untuk memastikan navbar berada di tengah */
+    padding: 2rem 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+  }
+  
+  .nav-logo {
     display: inline-flex;
     align-items: center; /* Mengatur vertikal ke tengah */
-}
-
-.nav-logo img {
+  }
+  
+  .nav-logo img {
     max-width: 100px;
-}
-
-.nav-title {
+    min-width: 100px;
+  }
+  
+  .nav-title {
     display: inline-flex;
     margin-left: 10px;
     font-size: 1.2rem;
-    color: #cfb53b;
+    color: #fff;
     font-weight: 600;
     align-items: center; /* Mengatur vertikal ke tengah */
-}
-.nav-links {
+  }
+  .nav-links {
     list-style: none;
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 3rem;
-}
-
-.link a {
+    gap: 2rem;
+  }
+  
+  .link a {
     position: relative;
     padding-bottom: 0.75rem;
     color: #fff;
-}
-
-.link a::after {
+  }
+  
+  .link a::after {
     content: "";
     position: absolute;
     height: 2px;
@@ -74,31 +75,26 @@ nav {
     transform: translateX(-50%); /* Menyempurnakan penempatan garis bawah */
     background-color: #cfb53b;
     transition: all 0.3s ease;
-}
-
-.link a:hover::after {
+  }
+  
+  .link a:hover::after {
     width: 70%;
-}
-
-.btn {
+  }
+  
+  .btn {
     padding: 1rem 2rem;
     font-size: 1rem;
     color: #fff;
     background: rgb(2, 0, 36);
-    background: linear-gradient(
-        135deg,
-        rgba(2, 0, 36, 1) 0%,
-        rgba(207, 181, 59, 1) 0%,
-        rgba(148, 27, 63, 1) 90%
-    );
+    background: linear-gradient(135deg, rgba(2, 0, 36, 1) 0%, rgba(207, 181, 59, 1) 0%, rgba(148, 27, 63, 1) 90%);
     border-radius: 5px;
     cursor: pointer;
     transition: all 0.3s ease;
-}
-
-.btn:hover {
+  }
+  
+  .btn:hover {
     background-color: #cfb53b;
-}
+  }
 
 .container {
     max-width: 1200px;
