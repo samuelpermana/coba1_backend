@@ -110,16 +110,16 @@ Route::get('/cobakalender', function () {
     return view('cobakalender');
 });
 
-Route::get('/aspirasi',[AspirasiController::class, 'getAspirasi']);
+Route::get('/aspirasi', [AspirasiController::class, 'getAspirasi']);
 
 Route::group([
     'prefix' => 'admin',
-     'as' => 'admin.'
-    ], function () {
+    'as' => 'admin.'
+], function () {
     Route::get('/bankaspirasi', [AspirasiAdminCtrl::class, 'index'])->name('index');
     Route::put('/bankaspirasi/{id}', [AspirasiAdminCtrl::class, 'update'])->name('update');
     Route::delete('/bankaspirasi/{id}', [AspirasiAdminCtrl::class, 'delete'])->name('delete');
-    
+
     Route::get('jdih', [JDIHAdminCtrl::class, 'index'])->name('jdih.index');
     Route::get('jdih/create', [JDIHAdminCtrl::class, 'create'])->name('jdih.create');
     Route::post('jdih/store', [JDIHAdminCtrl::class, 'store'])->name('jdih.store');
@@ -146,54 +146,55 @@ Route::group([
     // Delete
     Route::delete('/aktivitas/{id}', [AktivitasSenatAdminCtrl::class, 'destroy'])->name('aktivitasSenat.destroy');
 
-    
+
     Route::get('events/list', [EventAdminController::class, 'listEvent'])->name('events.list');
     Route::resource('events', EventAdminController::class);
 
-    
+    Route::get('', function () {
+        return view('cms.dashboard');
+    });
 });
 
 
 
 Route::group([
     'prefix' => 'komisi1',
-     'as' => 'komisi1'
-    ], function () {
+    'as' => 'komisi1'
+], function () {
     // Route
 });
 Route::group([
     'prefix' => 'komisi2',
-     'as' => 'komisi2'
-    ], function () {
+    'as' => 'komisi2'
+], function () {
     // Route
 });
 Route::group([
     'prefix' => 'komisi3',
-     'as' => 'komisi3'
-    ], function () { 
-        // Route
+    'as' => 'komisi3'
+], function () {
+    // Route
 });
 Route::group([
     'prefix' => 'komisi4',
-     'as' => 'komisi4'
-    ], function () { 
-        // Route
+    'as' => 'komisi4'
+], function () {
+    // Route
 });
 Route::group([
     'prefix' => 'ormawa',
-     'as' => 'ormawa'
-    ], function () { 
-        // Route
+    'as' => 'ormawa'
+], function () {
+    // Route
 });
 
 Route::group([
     'prefix' => 'badan_anggaran',
-     'as' => 'badan_anggaran'
-    ], function () {
+    'as' => 'badan_anggaran'
+], function () {
     // Route
 });
 
 Route::get('/jdih  ', [JDIHController::class, 'getJDIH']);
 
 Route::get('jdih/show/{id}', [JDIHController::class, 'showJDIH'])->name('jdih.show');
-
