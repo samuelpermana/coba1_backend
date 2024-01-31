@@ -5,81 +5,84 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.5.0/remixicon.min.css" />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="stylebankaspirasi.css" />
     <title>Bank Aspirasi</title>
   </head>
 
   <body>
     <nav>
       <div class="nav-logo">
-        <a href="#">
-          <img src="/img/coba1.png" alt="Logo" />
+        <a href="index">
+          <img src="/img/coba1.png" alt="Logo">
         </a>
       </div>
 
       <ul class="nav-links">
-        <li class="link"><a href="index.html">Home</a></li>
-        <li id="link1" class="link"><a href="kotakaspirasi.html">Kotak Aspirasi</a></li>
-        <li id="link2" class="link"><a href="faq.html">FAQ</a></li>
-        <li id="link3" class="link"><a href="bankaspirasi.html">Bank Aspirasi</a></li>
-        <li id="link4" class="link"><a href="selayangpandang.html">Selayang Pandang</a></li>
-        <li id="link4" class="link"><a href="jdih.html">JDIH</a></li>
-        <li id="link4" class="link"><a href="peminjamanruangan.html">Peminjaman Ruangan</a></li>
+        <li class="link"><a href="index">Home</a></li>
+        <li class="link" id="link1"><a href="kotakaspirasi">Kotak Aspirasi</a></li>
+        <li class="link" id="link2"><a href="faq">FAQ</a></li>
+        <li class="link" id="link3"><a href="bankaspirasi">Bank Aspirasi</a></li>
+        <li class="link" id="link4"><a href="selayangpandang">Selayang Pandang</a></li>
+        <li class="link" id="link4"><a href="jdih">JDIH</a></li>
+        <li class="link" id="link4"><a href="peminjamanruangan">Peminjaman Ruangan</a></li>
+        <li class="link" id="link4"><a href="transparansisurat3">Transparansi surat</a></li>
       </ul>
-      <button class="btn">Ajukan Surat</button>
+
+      <a href="login"><button class="btn" type="button">Ajukan Surat</button></a>
     </nav>
 
     <section class="container">
       <h2 class="header">Bank Aspirasi</h2>
       <p class="sub-header">Berisikan tentang keseluruhan Aspirasi beserta jawabannya dari mahasiswa.</p>
+      
+      <!-- Sarpras Section -->
       <h2 class="header-BA">SARPRAS</h2>
-      <p class="sub-header">Berisikan tentang keseluruhan Aspirasi beserta jawabannya dari mahasiswa.</p>
       <div class="pricing">
+        @foreach($sarpras as $aspirasi)
         <div class="card">
           <div class="content">
-            <h4>Aspirasi 1</h4>
-            
-          </div>
-
-          
-          <button class="btn3">Selengkapnya</button>
-          
-          <div class="panel">
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent ex velit, lobortis et lorem eget, 
-                ultricies facilisis turpis. Cras volutpat augue non lorem gravida, sed viverra dolor vehicula. 
-                Morbi ornare mauris ac ante luctus, at gravida enim vehicula. Aenean consectetur arcu in erat commodo 
-                semper.</p>
-            </div>
-
-        </div>
-        <h2 class="header-BA">BIROKRASI</h2>
-        <div class="card">
-          <div class="content">
-            <h4>Aspirasi 2</h4>
+            <h4>{{ $aspirasi->message }}</h4>
           </div>
           <button class="btn3">Selengkapnya</button>
           <div class="panel">
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent ex velit, lobortis et lorem eget, 
-                ultricies facilisis turpis. Cras volutpat augue non lorem gravida, sed viverra dolor vehicula. 
-                Morbi ornare mauris ac ante luctus, at gravida enim vehicula. Aenean consectetur arcu in erat commodo 
-                semper. </p>
-            </div>
-        </div>
-        <h2 class="header-BA">AKADEMIK</h2>
-        <div class="card">
-          <div class="content">
-            <h4>Aspirasi 2</h4>
+            <p>{{ $aspirasi->answer }}</p>
           </div>
-          <button class="btn3">Selengkapnya</button>
-          <div class="panel">
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent ex velit, lobortis et lorem eget, 
-                ultricies facilisis turpis. Cras volutpat augue non lorem gravida, sed viverra dolor vehicula. 
-                Morbi ornare mauris ac ante luctus, at gravida enim vehicula. Aenean consectetur arcu in erat commodo 
-                semper. </p>
-            </div>
         </div>
-        
+        @endforeach
       </div>
+
+      <!-- Birokrasi Section -->
+      <h2 class="header-BA">BIROKRASI</h2>
+      <div class="pricing">
+        @foreach($birokrasi as $aspirasi)
+        <div class="card">
+          <div class="content">
+            <h4>{{ $aspirasi->message }}</h4>
+          </div>
+          <button class="btn3">Selengkapnya</button>
+          <div class="panel">
+            <p>{{ $aspirasi->answer }}</p>
+          </div>
+        </div>
+        @endforeach
+      </div>
+
+      <!-- Akademik Section -->
+      <h2 class="header-BA">AKADEMIK</h2>
+      <div class="pricing">
+        @foreach($akademik as $aspirasi)
+        <div class="card">
+          <div class="content">
+            <h4>{{ $aspirasi->message }}</h4>
+          </div>
+          <button class="btn3">Selengkapnya</button>
+          <div class="panel">
+            <p>{{ $aspirasi->answer }}</p>
+          </div>
+        </div>
+        @endforeach
+      </div>
+      
     </section>
 
 
@@ -119,6 +122,6 @@
 
     <div class="copyright">Copyright Â© 2023 SENAT FH UNDIP. All Rights Reserved.</div>
 
-    <script src="script4.js"></script>
+    <script src="js-bankaspirasi.js"></script>
   </body>
 </html>

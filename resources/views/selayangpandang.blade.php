@@ -4,7 +4,11 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.5.0/remixicon.min.css" />
+<<<<<<< HEAD
     <link rel="stylesheet" href="selayangpandang.css" />
+=======
+    <link rel="stylesheet" href="styleselayangpandang.css" />
+>>>>>>> 981d35df0dee56e8ebe93c2bf51a409e61dd5be1
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
@@ -18,21 +22,23 @@
   <body>
     <nav>
       <div class="nav-logo">
-        <a href="#">
+        <a href="index">
           <img src="img/coba1.png" alt="Logo" />
         </a>
       </div>
 
       <ul class="nav-links">
-        <li class="link"><a href="index.html">Home</a></li>
-        <li id="link1" class="link"><a href="kotakaspirasi.html">Kotak Aspirasi</a></li>
-        <li id="link2" class="link"><a href="faq.html">FAQ</a></li>
-        <li id="link3" class="link"><a href="bankaspirasi.html">Bank Aspirasi</a></li>
-        <li id="link4" class="link"><a href="selayangpandang.html">Selayang Pandang</a></li>
-        <li id="link4" class="link"><a href="jdih.html">JDIH</a></li>
-        <li id="link6" class="link"><a href="peminjamanruangan.html">Peminjaman Ruangan</a></li>
+        <li class="link"><a href="index">Home</a></li>
+        <li class="link" id="link1"><a href="kotakaspirasi">Kotak Aspirasi</a></li>
+        <li class="link" id="link2"><a href="faq">FAQ</a></li>
+        <li class="link" id="link3"><a href="bankaspirasi">Bank Aspirasi</a></li>
+        <li class="link" id="link4"><a href="selayangpandang">Selayang Pandang</a></li>
+        <li class="link" id="link4"><a href="jdih">JDIH</a></li>
+        <li class="link" id="link4"><a href="peminjamanruangan">Peminjaman Ruangan</a></li>
+        <li class="link" id="link4"><a href="transparansisurat3">Transparansi surat</a></li>
       </ul>
-      <button class="btn">Ajukan Surat</button>
+
+      <a href="login"><button class="btn" type="button">Ajukan Surat</button></a>
     </nav>
 
     <header class="container">
@@ -46,7 +52,7 @@
           Universits Diponegoro sebagai pelaksana cabang kekuasaan legislator mahasiswa yang memiliki fungsi aspirasi, legislasi, anggaran, dan pengawasan.
           Keanggotaan Senat Mahasiswa Fakultas Hukum Universitas Diponegoro terdiri atas unsur senator dan unsur staf ahli. Senator atau fungsionaris organisasi
           ini dipilih melalui upaya demokratis mahasiswa, yakni Pemilihan Raya Fakultas Hukum Universitas Diponegoro yang terdiri atas perwakilan Unit Kegiatan
-          Kemahasiswaan Fakultas Hukum Universitas Diponegoro, perwakilan angkatan, dan perwakilan kampus di luar unit utama (Kampus Jepara).
+          Kemahasiswaan Fakultas Hukum Universitas Diponegoro, perwakilan angkatan, dan perwakilan kampus di luar unit utama (Kampus Jepara).
         </p>
       </div>
       <div class="img-1">
@@ -77,7 +83,7 @@
               <h4>Warna Putih</h4>
               <p>
                 Melambangkan makna kebermanfaatan dan ketulusan dari Senat Mahasiswa Fakultas Hukum Universitas Diponegoro dalam menjalankan fungsi, tugas,
-                dan wewenangnya.
+                dan wewenangnya.
               </p>
             </div>
           </div>
@@ -235,7 +241,7 @@
             <div class="content">
               <div class="name">BKSAP</div>
               <div class="des">Badan Kerja Sama Antar Parlemen terdiri dari Biro media dan Biro Humas</div>
-              <a href="bksap.html">
+              <a href="bksap">
                 <button>Selengkapnya</button>
               </a>
             </div>
@@ -244,7 +250,7 @@
             <div class="content">
               <div class="name">KOMISI SATU</div>
               <div class="des">Komisi 1 adalah komisi yang menaungi terkait dengan Bidang Pengembangan dan Keilmuan</div>
-              <a href="komisi1.html">
+              <a href="komisi1">
                 <button>Selengkapnya</button>
               </a>
             </div>
@@ -253,7 +259,7 @@
             <div class="content">
               <div class="name">KOMISI DUA</div>
               <div class="des">Komisi 2 adalah komisi yang menaungi terkait Bidang Minat, Bakat, Kaderisasi dan Keroharian</div>
-              <a href="komisi2.html">
+              <a href="komisi2">
                 <button>Selengkapnya</button>
               </a>
             </div>
@@ -262,7 +268,7 @@
             <div class="content">
               <div class="name">KOMISI TIGA</div>
               <div class="des">Komisi 3 adalah komisi yang menangui terkait Bidang Hukum dan Hubungan Publik</div>
-              <a href="komisi3.html">
+              <a href="komisi3">
                 <button>Selengkapnya</button>
               </a>
             </div>
@@ -271,7 +277,7 @@
             <div class="content">
               <div class="name">KOMISI EMPAT</div>
               <div class="des">Komisi 4 adalah komisi yang menaungi terkait bidang Advokasi, Akademik, Sarana, dan Prasarana</div>
-              <a href="komisi4.html">
+              <a href="komisi4">
                 <button>Selengkapnya</button>
               </a>
             </div>
@@ -282,7 +288,7 @@
               <div class="des">
                 Badan Legislasi dibentuk untuk menciptakan tata kelola organisasi yang jelas dan mempermudah pembahasan produk hukum sesuai fokus komisi
               </div>
-              <a href="badanlegislasi.html">
+              <a href="badanlegislasi">
                 <button>Selengkapnya</button>
               </a>
             </div>
@@ -293,7 +299,7 @@
               <div class="des">
                 Badan Kehormatan memiliki tugas untuk menegakkan tata tertib, tata beracara, dan kode etik Senat Mahasiswa Fakultas Hukum Universitas Diponegoro
               </div>
-              <a href="badankehormatan.html">
+              <a href="badankehormatan">
                 <button>Selengkapnya</button>
               </a>
             </div>
@@ -305,7 +311,7 @@
                 Badan Anggaran memiliki tugas dan fungsi yang tidak jauh dari fungsi anggaran yang dimiliki oleh Senat Mahasiswa Fakultas Hukum Universitas
                 Diponegoro
               </div>
-              <a href="badananggaran.html">
+              <a href="badananggaran">
                 <button>Selengkapnya</button>
               </a>
             </div>
@@ -355,6 +361,10 @@
 
     <div class="copyright">Copyright © 2023 SENAT FH UNDIP. All Rights Reserved.</div>
 
+<<<<<<< HEAD
     <script src="selayangpandang.js"></script>
+=======
+    <script src="js-selayangpandang.js"></script>
+>>>>>>> 981d35df0dee56e8ebe93c2bf51a409e61dd5be1
   </body>
 </html>

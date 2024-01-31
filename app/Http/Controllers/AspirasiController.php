@@ -7,7 +7,6 @@ use App\Http\Requests\AspirasiRequest;
 use App\Models\Aspirasi;
 use Illuminate\Support\Facades\Redirect;
 
-
 class AspirasiController extends Controller
 {
     public function createAspirasi(AspirasiRequest $request){
@@ -15,26 +14,40 @@ class AspirasiController extends Controller
             $aspirasi = new Aspirasi([
                 'name'=> $request->input('name'),
                 'email'=> $request->input('email'),
+                'angkatan'=> $request->input('angkatan'), 
+                'id_line'=> $request->input('id_line'),
                 'message'=> $request->input('message'),
-
             ]);
+
             $aspirasi->save();
-            return Redirect::to('/kotakaspirasi.html')->with('success', 'Aspiration created successfully');
+            
+            // Jika Anda menggunakan response JSON:
             // return response()->json(['data' => $aspirasi, 'message' => 'Success'], 200);
+            
+            return Redirect::to('/kotakaspirasi.html')->with('success', 'Aspiration created successfully');
         } catch (\Exception $e) {
-            return response()->json(['error' => $e->getMessage()], $e->getCode());
+            return response_error(null, $e->getMessage(), $e->getCode());
         }
     }
 
-    public function getAspirasi(){
-        try {
-            $aspirasis = Aspirasi::orderBy('created_at','DESC')->get();
+    public function getAspirasi()
+{
+    try {
+        $aspirasis = Aspirasi::where('is_deleted', false)
+            ->where('is_actived', true) // Menambahkan kondisi is_active
+            ->whereNotNull('answer') // Menambahkan kondisi answer terisi
+            ->whereNotNull('tipe_aspirasi_id') // Menambahkan kondisi tipe_id terisi
+            ->orderBy('created_at', 'DESC')
+            ->get();
 
-            return view('bankaspirasi', compact('aspirasis'));
-        } catch (\Exception $e) {
-            return response()->json(['error' => $e->getMessage()], $e->get());
+        $sarpras = $aspirasis->where('tipe_aspirasi_id', 1); // Gantilah 1 dengan ID tipe_aspirasi yang sesuai dengan Sarpras
+        $birokrasi = $aspirasis->where('tipe_aspirasi_id', 2); // Gantilah 2 dengan ID tipe_aspirasi yang sesuai dengan Birokrasi
+        $akademik = $aspirasis->where('tipe_aspirasi_id', 3); // Gantilah 3 dengan ID tipe_aspirasi yang sesuai dengan Akademik
+
+        return view('bankaspirasi', compact('sarpras', 'birokrasi', 'akademik'));
+    } catch (\Exception $e) {
+        return response_error(null, $e->getMessage(), $e->getCode());
         }
-    }
-
+}
 
 }

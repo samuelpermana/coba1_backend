@@ -55,11 +55,19 @@ nav {
   display: flex;
   align-items: center;
   justify-content: center;
+<<<<<<< HEAD
   gap: 3rem;
 }
 
 .link a {
   position: relative;
+=======
+  gap: 2rem;
+}
+
+.link a {
+  position: relative;  
+>>>>>>> 981d35df0dee56e8ebe93c2bf51a409e61dd5be1
   padding-bottom: 0.75rem;
   color: #fff;
 }
@@ -110,7 +118,11 @@ nav {
 section .header-JD {
     color: #cfb53b;
     margin-bottom: 3rem;
+<<<<<<< HEAD
     font-size: calc(3vw + 2rem);
+=======
+    font-size: 4rem;
+>>>>>>> 981d35df0dee56e8ebe93c2bf51a409e61dd5be1
     font-weight: 700;
     line-height: 5rem;
     margin-top: 2rem;
@@ -308,6 +320,7 @@ section .header-JD {
     font-size: 0.8rem;
     text-align: center;
   }
+<<<<<<< HEAD
 
   @media (width < 1200px) {
     .nav-links {
@@ -319,6 +332,13 @@ section .header-JD {
   }
   
   @media (width < 900px) {
+=======
+  
+  @media (width < 900px) {
+    .nav-links {
+      display: none;
+    }
+>>>>>>> 981d35df0dee56e8ebe93c2bf51a409e61dd5be1
     header {
       grid-template-columns: repeat(1, 1fr);
     }
@@ -335,12 +355,15 @@ section .header-JD {
       grid-template-columns: 1fr 200px;
     }
   }
+<<<<<<< HEAD
 
   @media (width < 700px) {
     .features-JD{
       grid-template-columns: repeat(1, 1fr);
     }
   }
+=======
+>>>>>>> 981d35df0dee56e8ebe93c2bf51a409e61dd5be1
   
   @media (width < 600px) {
     header .image::before {
@@ -359,3 +382,8 @@ section .header-JD {
       grid-template-columns: 1fr 150px;
     }
   }
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 981d35df0dee56e8ebe93c2bf51a409e61dd5be1
