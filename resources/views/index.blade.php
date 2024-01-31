@@ -9,7 +9,20 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" rel="stylesheet"
         integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous"> -->
+    <link href='https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/izitoast/1.4.0/css/iziToast.min.css" integrity="sha512-O03ntXoVqaGUTAeAmvQ2YSzkCvclZEcPQu1eqloPaHfJ5RuNGiS4l+3duaidD801P50J28EHyonCV06CUlTSag==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.min.css" integrity="sha512-mSYUmp1HYZDFaVKK//63EcZq4iFWFjxSL+Z3T/aCt4IO9Cejm03q3NKKYN6pFQzY0SBOr8h+eCIAZHPXcpZaNw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>SENAT FH UNDIP</title>
+
+    <style>
+        /* CSS untuk mengubah warna teks dan border kalender menjadi putih */
+        .fc th, .fc td {
+            color: white; /* Mengubah warna teks menjadi putih */
+            border-color: white; /* Mengubah warna border menjadi putih */
+        }
+    </style>
 </head>
 
 <body>
@@ -64,7 +77,7 @@
                             data-description="{{ $aktivitasSenat->isi_teks }}">
                             <!-- <p>Image URL: {{ asset('storage/images/' . $aktivitasSenat->gambar) }}</p> -->
                             <img class="img-aktivitas-sm"
-                                src="{{ Storage::url($aktivitasSenat->gambar) }}    "
+                                src="{{Storage::url($aktivitasSenat->gambar)}}"
                                 alt="Slideshow Image" />
                         </div>
                     @endforeach
@@ -88,40 +101,78 @@
 
 
     <section class="container">
-        <h2 class="header">AKTIVITAS LEGISLASI</h2>
-        <p class="sub-header">
-            Aktivitas tahapan Legislasi yang dibentuk oleh SM FH Undip sebelum disahkan atau ditetapkan.
-        </p>
-        <div class="container7">
-            <div class="calendar">
-                <div class="header">
-                    <div class="month"></div>
-                    <div class="btns">
-                        <div class="btn today-btn">
-                            <i class="fas fa-calendar-day"></i>
-                        </div>
-                        <div class="btn prev-btn">
-                            <i class="fas fa-chevron-left"></i>
-                        </div>
-                        <div class="btn next-btn">
-                            <i class="fas fa-chevron-right"></i>
-                        </div>
-                    </div>
-                </div>
-                <div class="weekdays">
-                    <div class="day">Sun</div>
-                    <div class="day">Mon</div>
-                    <div class="day">Tue</div>
-                    <div class="day">Wed</div>
-                    <div class="day">Thu</div>
-                    <div class="day">Fri</div>
-                    <div class="day">Sat</div>
-                </div>
-                <div class="days">
-                    <!-- lets add days using js -->
-                </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-12 mt-3">
+                <div id='calendar'></div>
             </div>
         </div>
+    </div>
+
+    <div id="modal-action" class="modal" tabindex="-1">
+        
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js" integrity="sha512-pumBsjNRGGqkPzKHndZMaAG+bir374sORyzM3uulLV14lN5LyykqNk8eEeUlUkB3U0M4FApyaHraT65ihJhDpQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script src='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.7/index.global.min.js'></script>
+    <script src='https://cdn.jsdelivr.net/npm/@fullcalendar/bootstrap5@6.1.7/index.global.min.js'></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/izitoast/1.4.0/js/iziToast.min.js" integrity="sha512-Zq9o+E00xhhR/7vJ49mxFNJ0KQw1E1TMWkPTxrWcnpfEFDEXgUiwJHIKit93EW/XxE31HSI5GEOW06G6BF1AtA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js" integrity="sha512-T/tUfKSV1bihCnd+MxKD0Hm1uBBroVYBOYSk1knyvQ9VyZJpc/ALb4P0r6ubwVPSGB2GvjeoMAJJImBG12TiaQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script>
+        const modal = $('#modal-action')
+        const csrfToken = $('meta[name=csrf_token]').attr('content')
+
+        document.addEventListener('DOMContentLoaded', function() {
+    var calendarEl = document.getElementById('calendar');
+    var calendar = new FullCalendar.Calendar(calendarEl, {
+        initialView: 'dayGridMonth',
+        themeSystem: 'bootstrap5',
+        events: "{{ route('admin.events.list') }}",
+        editable: false,
+        eventDidMount: function(info) {
+            // Memeriksa kategori dari event
+            var category = info.event.extendedProps.category;
+
+            // Mengatur warna event berdasarkan kategori
+            var backgroundColor;
+            var borderColor;
+
+            switch (category) {
+                case 'success':
+                    backgroundColor = '#A13D3E';
+                    borderColor = '#A13D3E';
+                    break;
+                case 'danger':
+                    backgroundColor = '#D4AF37'; 
+                    borderColor = '#D4AF37'; 
+                    break;
+                case 'warning':
+                    backgroundColor = '#E1D2A2'; 
+                    borderColor = '#E1D2A2'; 
+                    break;
+                case 'info':
+                    backgroundColor = '#A21B1B'; 
+                    borderColor = '#A21B1B'; 
+                    break;
+                default:
+                    backgroundColor = '#CCCCCC'; 
+                    borderColor = '#CCCCCC';
+            }
+
+            // Atur warna background dan border
+            info.el.style.backgroundColor = backgroundColor;
+            info.el.style.borderColor = borderColor;
+        }
+    });
+
+    calendar.render();
+});
+
+
+    </script>
 
     </section>
     <footer class="container">

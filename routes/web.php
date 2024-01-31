@@ -1,10 +1,12 @@
 <?php
 
 use App\Http\Controllers\AktivitasSenatController;
+use App\Http\Controllers\EventController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AspirasiController;
 use App\Http\Controllers\Admin\AspirasiAdminCtrl;
 use App\Http\Controllers\Admin\JDIHAdminCtrl;
+use App\Http\Controllers\Admin\EventAdminController;
 use App\Http\Controllers\Admin\RoomAdminController;
 use App\Http\Controllers\JDIHController;
 use App\Http\Controllers\RuanganController;
@@ -143,8 +145,14 @@ Route::group([
 
     // Delete
     Route::delete('/aktivitas/{id}', [AktivitasSenatAdminCtrl::class, 'destroy'])->name('aktivitasSenat.destroy');
+
+    
+    Route::get('events/list', [EventAdminController::class, 'listEvent'])->name('events.list');
+    Route::resource('events', EventAdminController::class);
+
     
 });
+
 
 
 Route::group([

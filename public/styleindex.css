@@ -539,3 +539,14 @@ footer .column > a:hover {
         grid-template-columns: 1fr 150px;
     }
 }
+/* CSS untuk menyesuaikan tampilan kalender */
+.fc-toolbar h2 {
+    color: #D4AF37; /* Mengubah warna teks bulan */
+}
+
+.fc-daygrid-day-number {
+    color: black; /* Mengubah warna teks tanggal */
+}
+
+
+
