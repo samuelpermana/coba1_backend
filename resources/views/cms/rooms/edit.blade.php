@@ -3,6 +3,8 @@
 @section("content")
   {{-- Content goes here --}}
 
+  <link href="{{ URL::asset("cms/rooms/styleedit.css") }}" rel="stylesheet">
+
   <body>
     <h1>Edit Room</h1>
 
@@ -21,8 +23,9 @@
       @method("PUT")
       <label for="name">Name:</label><br>
       <input id="name" name="name" type="text" value="{{ $room->name }}"><br><br>
-      <button type="submit">Update</button>
+      <button class="btn" type="submit">Update</button>
     </form>
+    <div id="back-btn"><a href= "{{ route("admin.rooms.index") }}"><button class="btn">Back</button></a></div>
   </body>
 
   {{-- Content ends here --}}

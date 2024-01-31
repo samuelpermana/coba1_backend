@@ -1,50 +1,49 @@
 @extends("cms.layouts.layout")
 
 @section("content")
-
   {{-- Content goes here --}}
-  <link href="{{ URL::asset("cms/jdih/stylecreate.css") }}" rel="stylesheet">
+
   <body>
     <h1>Create JDIH Record</h1>
 
     @if (session("success"))
-    <div style="color: green;">{{ session("success") }}</div>
+      <div style="color: green;">{{ session("success") }}</div>
     @endif
 
-    <form class="custom-form" action="{{ route("admin.jdih.store") }}" method="POST" enctype="multipart/form-data">
-        @csrf
+    <form action="{{ route("admin.jdih.store") }}" method="POST" enctype="multipart/form-data">
+      @csrf
 
-        <label for="tahun">Tahun:</label>
-        <input id="tahun" name="tahun" type="text" required><br>
+      <label for="tahun">Tahun:</label>
+      <input id="tahun" name="tahun" type="text" required><br>
 
-        <label for="jenis_peraturan">Jenis Peraturan:</label>
-        <input id="jenis_peraturan" name="jenis_peraturan" type="text" required><br>
+      <label for="jenis_peraturan">Jenis Peraturan:</label>
+      <input id="jenis_peraturan" name="jenis_peraturan" type="text" required><br>
 
-        <label for="nama_peraturan">Nama Peraturan:</label>
-        <input id="nama_peraturan" name="nama_peraturan" type="text" required><br>
+      <label for="nama_peraturan">Nama Peraturan:</label>
+      <input id="nama_peraturan" name="nama_peraturan" type="text" required><br>
 
-        <label for="tanggal_disahkan">Tanggal Disahkan:</label>
-        <input id="tanggal_disahkan" name="tanggal_disahkan" type="date" required><br>
+      <label for="tanggal_disahkan">Tanggal Disahkan:</label>
+      <input id="tanggal_disahkan" name="tanggal_disahkan" type="date" required><br>
 
-        <label for="peraturan">Peraturan:</label>
-        <textarea id="peraturan" name="peraturan" required></textarea><br>
+      <label for="peraturan">Peraturan:</label>
+      <textarea id="peraturan" name="peraturan" required></textarea><br>
 
-        <label for="status_peraturan">Status Peraturan:</label>
-        <input id="status_peraturan" name="status_peraturan" type="text" required><br>
+      <label for="status_peraturan">Status Peraturan:</label>
+      <input id="status_peraturan" name="status_peraturan" type="text" required><br>
 
-        <label for="file_peraturan">File Peraturan:</label>
-        <input name="file_peraturan" type="file">
+      <label for="file_peraturan">File Peraturan:</label>
+      <input name="file_peraturan" type="file">
 
-        <label for="file_naskah">File Naskah:</label>
-        <input name="file_naskah" type="file">
+      <label for="file_naskah">File Naskah:</label>
+      <input name="file_naskah" type="file">
 
-        <label for="file_inventarisasi">File Inventarisasi:</label>
-        <input name="file_inventarisasi" type="file">
+      <label for="file_inventarisasi">File Inventarisasi:</label>
+      <input name="file_inventarisasi" type="file">
 
-        <label for="file_lainnya">File Lainnya:</label>
-        <input name="file_lainnya[]" type="file" multiple>
+      <label for="file_lainnya">File Lainnya:</label>
+      <input name="file_lainnya[]" type="file" multiple>
 
-        <button type="submit" class="btn">Create JDIH Record</button>
+      <button type="submit">Create JDIH Record</button>
     </form>
 
     <a href="{{ route("admin.jdih.index") }}">Back to JDIH Records</a>

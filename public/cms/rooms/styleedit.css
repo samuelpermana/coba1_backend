@@ -1,0 +1,14 @@
+.btn {
+    background-color: #d1e3e2;
+    padding: 4px 12px;
+    border-radius: 25px;
+    margin: 0 30px 20px 0;
+    cursor: pointer;
+    border: solid 1px;
+    transition: 0.15s ease;
+}
+
+#back-btn {
+    translate: 80px -48px;
+    display: inline-block;
+}

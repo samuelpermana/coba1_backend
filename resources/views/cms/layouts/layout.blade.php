@@ -36,7 +36,7 @@
                 </a>
               </li>
               <li>
-                <a href="http://127.0.0.1:8000/admin/jdih">
+                <a href="jdih">
                   <span class="icon"><i class="fas fa-file-alt"></i></span>
                   <span class="text">JDIH</span>
                 </a>
