@@ -8,7 +8,7 @@ use App\Models\Aspirasi;
 
 class AspirasiAdminCtrl extends Controller
 {
-    public function get()
+    public function index()
     {
         $aspirasis = Aspirasi::all();
         return view('cms.aspirasi', compact('aspirasis'));
