@@ -1,5 +1,6 @@
 @extends("cms.layouts.layout")
 
+
 @section("content")
   <link href="{{ URL::asset("cms/jdih/styleindex.css") }}" rel="stylesheet">
 

@@ -101,6 +101,7 @@
 
 
     <section class="container">
+
     <div class="container">
         <div class="row">
             <div class="col-12 mt-3">
@@ -174,7 +175,8 @@
 
     </script>
 
-    </section>
+
+  </section>     
     <footer class="container">
         <span class="blur"></span>
         <span class="blur"></span>

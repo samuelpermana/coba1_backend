@@ -1,13 +1,14 @@
 @extends("cms.layouts.layout")
 
 @section("content")
+
   {{-- Content goes here --}}
   <link href="{{ URL::asset("cms/jdih/stylecreate.css") }}" rel="stylesheet">
-
   <body>
     <h1>Create JDIH Record</h1>
 
     @if (session("success"))
+
       <div style="color: green;">{{ session("success") }}</div>
     @endif
 
@@ -25,6 +26,7 @@
 
       <label for="tanggal_disahkan">Tanggal Disahkan:</label>
       <input id="tanggal_disahkan" name="tanggal_disahkan" type="date" required><br>
+
 
       <label for="peraturan">Peraturan:</label>
       <textarea id="peraturan" name="peraturan" required></textarea><br>
@@ -45,6 +47,7 @@
       <input name="file_lainnya[]" type="file" multiple>
 
       <button class="btn" type="submit">Create JDIH Record</button>
+
     </form>
 
     <a href="{{ route("admin.jdih.index") }}">Back to JDIH Records</a>

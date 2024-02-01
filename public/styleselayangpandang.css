@@ -11,6 +11,7 @@
 img {
   width: 70%;
   display: flex;
+  margin-left: 50px;
 }
 
 a {
@@ -23,7 +24,7 @@ body {
 }
 
 nav {
-  max-width: 1400px;
+  max-width: 100%;
   margin: 0 auto; /* Menggunakan auto untuk memastikan navbar berada di tengah */
   padding: 2rem 1rem;
   display: flex;
@@ -583,6 +584,7 @@ footer .column > a:hover {
   max-width: 50%; /* Lebar gambar */
   height: auto; /* Mengatur ketinggian gambar sesuai proporsi aslinya */
   float: left; /* Menggeser gambar ke sisi kiri */
+  margin-right: auto;
 }
 
 section .header1 {

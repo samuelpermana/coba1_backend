@@ -30,11 +30,13 @@ Route::get('/', function () {
     return view('index');
 });
 
+
 /* Route for Aktivitas Senat*/
 Route::get('/{id}/file', [AktivitasSenatController::class, 'show'])->name('aktivitas-senat.file');
 Route::get('/', [AktivitasSenatController::class, 'index']);
 
-Route::get('/index.html', function () {
+Route::get('/index', function () {
+
     return view('index');
 });
 

@@ -6,6 +6,7 @@
   <body>
     <h2>Aktivitas Senat Details</h2>
 
+
     <div>
       <strong>Judul:</strong> {{ $aktivitasSenat->judul }}
     </div>

@@ -3,8 +3,10 @@
 @section("content")
   {{-- Content goes here --}}
 
+
   <link href="{{ URL::asset("cms/rooms/styleindex.css") }}" rel="stylesheet">
   
+
   <body>
     <h1>Rooms List</h1>
 
@@ -35,6 +37,7 @@
             </table>
           </li>
       </table>
+
       @endforeach
     </ul>
   </body>

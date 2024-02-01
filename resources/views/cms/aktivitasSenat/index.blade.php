@@ -2,6 +2,7 @@
 
 @section("content")
   {{-- Content goes here --}}
+
   <link href="{{ URL::asset("cms/aktivitasSenat/styleindex.css") }}" rel="stylesheet">
 
   <body>
@@ -10,6 +11,7 @@
     <a class="btn btn-primary" href="{{ route("admin.aktivitasSenat.create") }}">Create Aktivitas Senat</a>
 
     <table class="table item" border="1">
+
       <thead>
         <tr>
           <th>ID</th>
@@ -25,12 +27,14 @@
             <td>{{ $aktivitasSenat->judul }}</td>
             <td>{{ $aktivitasSenat->isi_teks }}</td>
             <td>
+
               <a class="btn-info" href="{{ route("admin.aktivitasSenat.show", ["id" => $aktivitasSenat->id]) }}">Show</a>
               <a class="btn-warning" href="{{ route("admin.aktivitasSenat.edit", ["id" => $aktivitasSenat->id]) }}">Edit</a>
               <form style="display:inline" action="{{ route("admin.aktivitasSenat.destroy", ["id" => $aktivitasSenat->id]) }}" method="POST">
                 @csrf
                 @method("DELETE")
                 <button class="btn-danger" type="submit">Delete</button>
+
               </form>
             </td>
           </tr>

@@ -24,13 +24,17 @@
             </div>
             <ul class="menu">
               <li>
+
                 <a href="http://127.0.0.1:8000/admin">
+
                   <span class="icon"><i class="fas fa-home"></i></span>
                   <span class="text">Dashboard</span>
                 </a>
               </li>
               <li>
+
                 <a href="http://127.0.0.1:8000/admin/aktivitas">
+
                   <span class="icon"><i class="fas fa-user"></i></span>
                   <span class="text">Aktivitas Senat</span>
                 </a>
@@ -42,13 +46,17 @@
                 </a>
               </li>
               <li>
+
                 <a href="http://127.0.0.1:8000/admin/rooms">
+
                   <span class="icon"><i class="fas fa-chart-pie"></i></span>
                   <span class="text">Ruangan</span>
                 </a>
               </li>
               <li>
+
                 <a href="http://127.0.0.1:8000/admin/room-schedules">
+
                   <span class="icon"><i class="fas fa-clock"></i></span>
                   <span class="text">Jadwal Ruangan</span>
                 </a>
