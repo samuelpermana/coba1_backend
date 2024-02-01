@@ -4,7 +4,8 @@
   {{-- Content goes here --}}
 
   <body>
-    <h2>AktivitasSenat Details</h2>
+    <h2>Aktivitas Senat Details</h2>
+
 
     <div>
       <strong>Judul:</strong> {{ $aktivitasSenat->judul }}

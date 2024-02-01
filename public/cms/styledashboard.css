@@ -1,8 +1,11 @@
 .main_container .container .item {
   width: 100%;
   background: #e3f2f1;
-  padding: 20px;
-  margin: 25px 0 25px 0;
+  padding: 15px;
+  margin-bottom: 20px;
+  cursor: pointer;
+  border-radius: 15px;
+font-size: 1.75rem;
 }
 
 .container h1 {
@@ -12,7 +15,6 @@
 .container th,
 .container td {
   font-size: 1.3rem;
-  padding: 3px;
 }
 
 .container th {
@@ -44,35 +46,4 @@
   font-size: 1.3rem;
   cursor: pointer;
   background-color: transparent;
-}
-
-.btn {
-  background-color: #d1e3e2;
-  padding: 4px 8px;
-  border-radius: 25px;
-  margin: 20px 0 20px 0;
-  cursor: pointer;
-  border: solid 1px;
-  transition: 0.15s ease;
-}
-
-.btn:hover {
-  opacity: 85%;
-}
-
-.btn:active {
-  opacity: 70%;
-}
-
-.btn-info,
-.btn-warning,
-.btn-danger {
-  margin: 2px;
-}
-
-.btn-danger {
-  border: none;
-  cursor: pointer;
-  background-color: transparent;
-  font-size: 1.3rem;
 }

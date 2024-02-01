@@ -34,7 +34,9 @@ body {
 }
 
 .vertical_bar {
-    width: 250px;
+
+    width: 300px;
+
     background: #3d5654;
     height: 100%;
     border-top-left-radius: 25px;
@@ -77,6 +79,7 @@ body {
     border-bottom-left-radius: 25px;
     margin-bottom: 1px;
     font-size: 15px;
+
 }
 
 .vertical_bar .menu li a .icon {
@@ -150,7 +153,14 @@ body {
 
 .main_container .container {
     padding: 25px;
-    height: calc(100% - 60px);
+
+    overflow: auto;
+}
+
+.main_container {
+
+/*     height: calc(100% - 60px); */
+
     overflow: auto;
 }
 
@@ -182,6 +192,9 @@ body {
     }
     .main_container {
         width: 100%;
+
+        overflow: auto;
+
     }
     .main_container .top_bar {
         border-top-left-radius: 25px;

@@ -2,7 +2,7 @@
     font-size: 1.5rem;
     display: flex;
     flex-direction: column;
-    
+
 }
 
 .custom-form label {
@@ -17,8 +17,7 @@
     margin-bottom: 10px;
     width: 50%;
     margin-top: -2rem;
-    
-    
+
 }
 
 .custom-form button {
@@ -33,9 +32,9 @@
     cursor: pointer;
     border: solid 1px;
     transition: 0.15s ease;
-    width: 50%; 
+
+    width: 50%;
     margin-top: -2rem;
-    
 }
 
 .custom-form .btn:hover {
@@ -53,7 +52,9 @@
     background-color: #d1e3e2;
     border-radius: 25px;
     text-decoration: none;
-    color: #000; 
+
+    color: #000;
+
     font-weight: bold;
     transition: background-color 0.3s ease;
     font-size: 1rem;
@@ -69,7 +70,10 @@
     padding: 5px;
     font-size: 1rem;
     margin-bottom: 10px;
-    width: 50%; 
-    
+    width: 50%;
+}
+
+.main_container .top_bar {
+    border-top-right-radius: 0;
 }
 

@@ -3,8 +3,11 @@
 @section("content")
   {{-- Content goes here --}}
 
+  <link href="{{ URL::asset("cms/aktivitasSenat/styleedit.css") }}" rel="stylesheet">
+
   <body>
-    <h2>Edit AktivitasSenat</h2>
+    <h1>Edit Aktivitas Senat</h1>
+
 
     <form action="{{ route("admin.aktivitasSenat.update", ["id" => $aktivitasSenat->id]) }}" method="POST" enctype="multipart/form-data">
       @csrf
@@ -13,20 +16,25 @@
       <div>
         <label for="judul">Judul:</label>
         <input id="judul" name="judul" type="text" value="{{ $aktivitasSenat->judul }}" required>
-      </div>
+
+      </div><br>
+
 
       <div>
         <label for="isi_teks">Isi Teks:</label>
         <textarea id="isi_teks" name="isi_teks" required>{{ $aktivitasSenat->isi_teks }}</textarea>
-      </div>
+
+      </div><br>
 
       <div>
         <label for="gambar">Gambar:</label>
-        <input id="gambar" name="gambar" type="file">
-      </div>
+        <input class="btn" id="gambar" name="gambar" type="file">
+      </div><br>
 
-      <button type="submit">Update</button>
+      <button class="btn" type="submit">Update</button>
     </form>
+    <div id="back-btn"><a href= "{{ route("admin.aktivitasSenat.index") }}"><button class="btn">Back</button></a></div>
+
 
     <!-- Add your additional HTML content here -->
 

@@ -29,7 +29,9 @@
     cursor: pointer;
     border: solid 1px;
     transition: 0.15s ease;
-    width: 100%;
+
+    width: 50%;
+
 }
 
 .custom-form .btn:hover {
@@ -39,3 +41,9 @@
 .custom-form .btn:active {
     opacity: 0.7;
 }
+
+
+.main_container .top_bar {
+    border-top-right-radius: 0;
+}
+

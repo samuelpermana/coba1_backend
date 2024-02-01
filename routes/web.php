@@ -1,13 +1,18 @@
 <?php
 
+use App\Http\Controllers\AktivitasSenatController;
+use App\Http\Controllers\EventController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AspirasiController;
 use App\Http\Controllers\Admin\AspirasiAdminCtrl;
 use App\Http\Controllers\Admin\JDIHAdminCtrl;
+use App\Http\Controllers\Admin\EventAdminController;
 use App\Http\Controllers\Admin\RoomAdminController;
 use App\Http\Controllers\JDIHController;
 use App\Http\Controllers\RuanganController;
 use App\Http\Controllers\Admin\RoomScheduleAdminController;
+use App\Http\Controllers\Admin\AktivitasSenatAdminCtrl;
+use App\Models\AktivitasSenat;
 use App\Models\JDIH;
 
 /*
@@ -25,7 +30,13 @@ Route::get('/', function () {
     return view('index');
 });
 
+
+/* Route for Aktivitas Senat*/
+Route::get('/{id}/file', [AktivitasSenatController::class, 'show'])->name('aktivitas-senat.file');
+Route::get('/', [AktivitasSenatController::class, 'index']);
+
 Route::get('/index', function () {
+
     return view('index');
 });
 
@@ -101,16 +112,16 @@ Route::get('/cobakalender', function () {
     return view('cobakalender');
 });
 
-Route::get('/aspirasi',[AspirasiController::class, 'getAspirasi']);
+Route::get('/aspirasi', [AspirasiController::class, 'getAspirasi']);
 
 Route::group([
     'prefix' => 'admin',
-     'as' => 'admin.'
-    ], function () {
+    'as' => 'admin.'
+], function () {
     Route::get('/bankaspirasi', [AspirasiAdminCtrl::class, 'index'])->name('index');
     Route::put('/bankaspirasi/{id}', [AspirasiAdminCtrl::class, 'update'])->name('update');
     Route::delete('/bankaspirasi/{id}', [AspirasiAdminCtrl::class, 'delete'])->name('delete');
-    
+
     Route::get('jdih', [JDIHAdminCtrl::class, 'index'])->name('jdih.index');
     Route::get('jdih/create', [JDIHAdminCtrl::class, 'create'])->name('jdih.create');
     Route::post('jdih/store', [JDIHAdminCtrl::class, 'store'])->name('jdih.store');
@@ -120,48 +131,72 @@ Route::group([
 
     Route::resource('rooms', RoomAdminController::class);
     Route::resource('room-schedules', RoomScheduleAdminController::class);
+
+    Route::get('/aktivitas', [AktivitasSenatAdminCtrl::class, 'index'])->name('aktivitasSenat.index');
+
+    // Create
+    Route::get('/aktivitas/create', [AktivitasSenatAdminCtrl::class, 'create'])->name('aktivitasSenat.create');
+    Route::post('/aktivitas', [AktivitasSenatAdminCtrl::class, 'store'])->name('aktivitasSenat.store');
+
+    // Show
+    Route::get('/aktivitas/{id}', [AktivitasSenatAdminCtrl::class, 'show'])->name('aktivitasSenat.show');
+
+    // Edit
+    Route::get('/aktivitas/{id}/edit', [AktivitasSenatAdminCtrl::class, 'edit'])->name('aktivitasSenat.edit');
+    Route::put('/aktivitas/{id}', [AktivitasSenatAdminCtrl::class, 'update'])->name('aktivitasSenat.update');
+
+    // Delete
+    Route::delete('/aktivitas/{id}', [AktivitasSenatAdminCtrl::class, 'destroy'])->name('aktivitasSenat.destroy');
+
+
+    Route::get('events/list', [EventAdminController::class, 'listEvent'])->name('events.list');
+    Route::resource('events', EventAdminController::class);
+
+    Route::get('', function () {
+        return view('cms.dashboard');
+    });
 });
+
 
 
 Route::group([
     'prefix' => 'komisi1',
-     'as' => 'komisi1'
-    ], function () {
+    'as' => 'komisi1'
+], function () {
     // Route
 });
 Route::group([
     'prefix' => 'komisi2',
-     'as' => 'komisi2'
-    ], function () {
+    'as' => 'komisi2'
+], function () {
     // Route
 });
 Route::group([
     'prefix' => 'komisi3',
-     'as' => 'komisi3'
-    ], function () { 
-        // Route
+    'as' => 'komisi3'
+], function () {
+    // Route
 });
 Route::group([
     'prefix' => 'komisi4',
-     'as' => 'komisi4'
-    ], function () { 
-        // Route
+    'as' => 'komisi4'
+], function () {
+    // Route
 });
 Route::group([
     'prefix' => 'ormawa',
-     'as' => 'ormawa'
-    ], function () { 
-        // Route
+    'as' => 'ormawa'
+], function () {
+    // Route
 });
 
 Route::group([
     'prefix' => 'badan_anggaran',
-     'as' => 'badan_anggaran'
-    ], function () {
+    'as' => 'badan_anggaran'
+], function () {
     // Route
 });
 
 Route::get('/jdih  ', [JDIHController::class, 'getJDIH']);
 
 Route::get('jdih/show/{id}', [JDIHController::class, 'showJDIH'])->name('jdih.show');
-
