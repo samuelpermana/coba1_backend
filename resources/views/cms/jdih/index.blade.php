@@ -1,6 +1,5 @@
 @extends("cms.layouts.layout")
 
-
 @section("content")
   <link href="{{ URL::asset("cms/jdih/styleindex.css") }}" rel="stylesheet">
 
@@ -42,7 +41,7 @@
                           <tr>
                             <td>{{ $key + 1 }}</td>
                             <td>{{ $jdih->tahun }}</td>
-                            <td>{{ $jdih->jenis_peraturan }}</td>
+                            <td>{{ $jdih->jenisPeraturan->name }}</td> <!-- Access jenisPeraturan relationship -->
                             <td>{{ $jdih->nama_peraturan }}</td>
                             <td>{{ $jdih->tanggal_disahkan }}</td>
                             <td><a href="{{ Storage::url($jdih->file_peraturan) }}" target="_blank">Download</a></td>
@@ -72,7 +71,7 @@
                               @endif
                             </td>
                             <td>
-                              <a href="{{ route("admin.jdih.update", $jdih->id) }}">Edit</a> |
+                              <a href="{{ route("admin.jdih.edit", $jdih->id) }}">Edit</a> |
                               <a href="{{ route("admin.jdih.delete", $jdih->id) }}">Delete</a>
                             </td>
                           </tr>
@@ -84,10 +83,8 @@
               </div>
             </div>
           </div>
+        </main>
       </div>
-    </div>
-    </div>
-    </div>
     </div>
 
     <script>

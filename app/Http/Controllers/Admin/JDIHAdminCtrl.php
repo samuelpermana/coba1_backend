@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\JDIH;
+use App\Models\JenisJdih;
 use Illuminate\Support\Facades\Storage;
 
 class JDIHAdminCtrl extends Controller
@@ -18,14 +19,15 @@ class JDIHAdminCtrl extends Controller
     }
     public function create()
     {
-        return view('cms.jdih.create');
+        $jenisJDIH = JenisJdih::all(); 
+        return view('cms.jdih.create', compact('jenisJDIH'));
     }
 
     public function store(Request $request)
     {
         $request->validate([
             'tahun' => 'required|integer',
-            'jenis_peraturan' => 'required|string',
+            'jenis_jdih_id' => 'required',
             'nama_peraturan' => 'required|string',
             'tanggal_disahkan' => 'required|date',
             'peraturan' => 'required|string',
@@ -38,7 +40,7 @@ class JDIHAdminCtrl extends Controller
 
         $jdih = JDIH::create([
             'tahun' => $request->input('tahun'),
-            'jenis_peraturan' => $request->input('jenis_peraturan'),
+            'jenis_jdih_id' => $request->input('jenis_jdih_id'),
             'nama_peraturan' => $request->input('nama_peraturan'),
             'tanggal_disahkan' => $request->input('tanggal_disahkan'),
             'peraturan' => $request->input('peraturan'),
@@ -80,11 +82,12 @@ class JDIHAdminCtrl extends Controller
 
     public function edit($id)
 {
+    $jenisJDIH = JenisJdih::all();
     // Mengambil data JDIH berdasarkan ID
     $jdihRecord = JDIH::findOrFail($id);
     
     // Mengembalikan view edit dengan data JDIH yang akan diedit
-    return view('cms.jdih.edit', compact('jdihRecord'));
+    return view('cms.jdih.edit', compact('jdihRecord', 'jenisJDIH'));
 }
 
 public function update(Request $request, $id)
@@ -93,7 +96,7 @@ public function update(Request $request, $id)
 
     $request->validate([
         'tahun' => 'required|integer',
-        'jenis_peraturan' => 'required|string',
+        'jenis_jdih_id' => 'required',
         'nama_peraturan' => 'required|string',
         'tanggal_disahkan' => 'required|date',
         'peraturan' => 'required|string',
@@ -106,7 +109,7 @@ public function update(Request $request, $id)
 
     $data = [
         'tahun' => $request->input('tahun'),
-        'jenis_peraturan' => $request->input('jenis_peraturan'),
+        'jenis_jdih_id' => $request->input('jenis_jdih_id'),
         'nama_peraturan' => $request->input('nama_peraturan'),
         'tanggal_disahkan' => $request->input('tanggal_disahkan'),
         'peraturan' => $request->input('peraturan'),

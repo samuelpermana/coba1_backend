@@ -15,38 +15,20 @@ use App\Http\Controllers\Admin\AktivitasSenatAdminCtrl;
 use App\Models\AktivitasSenat;
 use App\Models\JDIH;
 
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider and all of them will
-| be assigned to the "web" middleware group. Make something great!
-|
-*/
 
+// ======================== WEBSITE ==================================
 Route::get('/', function () {
     return view('index');
 });
 
-
-/* Route for Aktivitas Senat*/
 Route::get('/{id}/file', [AktivitasSenatController::class, 'show'])->name('aktivitas-senat.file');
 Route::get('/', [AktivitasSenatController::class, 'index']);
 
-Route::get('/index', function () {
+// Route::get('/index', function () {return view('index');});
 
-    return view('index');
-});
-
-Route::get('/kotakaspirasi', function () {
-    return view('kotakaspirasi');
-});
+Route::get('/kotakaspirasi', function () {return view('kotakaspirasi');});
 
 Route::post('/aspirasi', [AspirasiController::class, 'createAspirasi'])->name('aspirasi.store');
-
-
 
 Route::get('/peminjamanruangan', [RuanganController::class, 'index']);
 
@@ -114,6 +96,14 @@ Route::get('/cobakalender', function () {
 
 Route::get('/aspirasi', [AspirasiController::class, 'getAspirasi']);
 
+Route::get('/jdih  ', [JDIHController::class, 'getJDIH']);
+Route::get('/jdih/jenis/{id}', [JDIHController::class, 'jenis'])->name('jdih.jenis');
+
+Route::get('jdih/show/{id}', [JDIHController::class, 'showJDIH'])->name('jdih.show');
+
+// ======================== END WEBSITE ==================================
+
+// ======================== CMS ==================================
 Route::group([
     'prefix' => 'admin',
     'as' => 'admin.'
@@ -125,8 +115,8 @@ Route::group([
     Route::get('jdih', [JDIHAdminCtrl::class, 'index'])->name('jdih.index');
     Route::get('jdih/create', [JDIHAdminCtrl::class, 'create'])->name('jdih.create');
     Route::post('jdih/store', [JDIHAdminCtrl::class, 'store'])->name('jdih.store');
-    Route::get('jdih/update/{id}', [JDIHAdminCtrl::class, 'edit'])->name('jdih.edit');
-    Route::post('jdih/update/{id}', [JDIHAdminCtrl::class, 'update'])->name('jdih.update');
+    Route::get('jdih/edit/{id}', [JDIHAdminCtrl::class, 'edit'])->name('jdih.edit');
+    Route::put('jdih/update/{id}', [JDIHAdminCtrl::class, 'update'])->name('jdih.update');
     Route::get('jdih/delete/{id}', [JDIHAdminCtrl::class, 'delete'])->name('jdih.delete');
 
     Route::resource('rooms', RoomAdminController::class);
@@ -157,46 +147,68 @@ Route::group([
     });
 });
 
+// ======================== END CMS ==================================
 
-
+// ======================== KOMISI 1 ==================================
 Route::group([
     'prefix' => 'komisi1',
     'as' => 'komisi1'
 ], function () {
     // Route
 });
+// ======================== END KOMISI 1 ==================================
+
+// ======================== KOMISI 2 ==================================
 Route::group([
     'prefix' => 'komisi2',
     'as' => 'komisi2'
 ], function () {
     // Route
 });
+// ======================== END KOMISI 2 ==================================
+
+// ======================== KOMISI 3 ==================================
 Route::group([
     'prefix' => 'komisi3',
     'as' => 'komisi3'
 ], function () {
     // Route
 });
+// ======================== END KOMISI 3 ==================================
+
+// ======================== KOMISI 4 ==================================
 Route::group([
     'prefix' => 'komisi4',
     'as' => 'komisi4'
 ], function () {
     // Route
 });
+// ======================== END KOMISI 4 ==================================
+
+// ========================  ORMAWA ==================================
 Route::group([
     'prefix' => 'ormawa',
     'as' => 'ormawa'
 ], function () {
     // Route
 });
+// ======================== END ORMAWA ==================================
 
+
+// ======================== BADAN ANGGARAN ==================================
 Route::group([
     'prefix' => 'badan_anggaran',
     'as' => 'badan_anggaran'
 ], function () {
     // Route
 });
+// ======================== END BADAN ANGGARAN ==================================
 
-Route::get('/jdih  ', [JDIHController::class, 'getJDIH']);
-
-Route::get('jdih/show/{id}', [JDIHController::class, 'showJDIH'])->name('jdih.show');
+// ======================== PIMPINAN TINGGI ==================================
+Route::group([
+    'prefix' => 'pimpinan_tinggi',
+    'as' => 'pimpinan_tinggi'
+], function () {
+    // Route
+});
+// ======================== END PIMPINAN TINGGI ==================================

@@ -14,21 +14,32 @@
   <body>
     <nav>
       <div class="nav-logo">
-        <a href="#">
+        <a href="{{ url('/') }}">
           <img src="/img/coba1.png" alt="Logo" />
         </a>
       </div>
 
       <ul class="nav-links">
-        <li class="link"><a href="{{ url('/index.html') }}">Home</a></li>
-        <li id="link1" class="link"><a href="{{ url('/kotakaspirasi.html') }}">Kotak Aspirasi</a></li>
-        <li id="link2" class="link"><a href="{{ url('/faq.html') }}">FAQ</a></li>
-        <li id="link3" class="link"><a href="{{ url('/bankaspirasi.html') }}">Bank Aspirasi</a></li>
-        <li id="link4" class="link"><a href="{{ url('/selayangpandang.html') }}">Selayang Pandang</a></li>
-        <li id="link4" class="link"><a href="{{ url('/jdih.html') }}">JDIH</a></li>
-        <li id="link6" class="link"><a href="{{ url('/peminjamanruangan.html') }}">Peminjaman Ruangan</a></li>
-        <li id="link4" class="link"><a href="{{ url('/transparansisurat3.html') }}">Transparansi surat</a></li>
-    </ul>
+            <li class="link"><a href="{{ url('/') }}">Home</a></li>
+            <li id="link1" class="link"><a href="{{ url('/kotakaspirasi') }}">Kotak Aspirasi</a></li>
+            <li id="link2" class="link"><a href="{{ url('/faq') }}">FAQ</a></li>
+            <li id="link3" class="link"><a href="{{ url('/bankaspirasi') }}">Bank Aspirasi</a></li>
+            <li id="link4" class="link"><a href="{{ url('/selayangpandang') }}">Selayang Pandang</a></li>
+            <li id="link4" class="link">
+                <div class="dropdown">
+                    <button class="dropbtn">JDIH</button>
+                    <div class="dropdown-content">
+                        <a href="{{ route('jdih.jenis', ['id' => 1]) }}">Peraturan Mahasiswa</a>
+                        <a href="{{ route('jdih.jenis', ['id' => 2]) }}">Standart Operating Procedure</a>
+                        <a href="{{ route('jdih.jenis', ['id' => 3]) }}">Peraturan Senat Mahasiswa</a>
+                        <a href="{{ route('jdih.jenis', ['id' => 4]) }}">Keputusan</a>
+                        <a href="{{ route('jdih.jenis', ['id' => 5]) }}">Rancangan Peraturan</a>
+                    </div>
+                </div>
+            </li>
+            <li id="link6" class="link"><a href="{{ url('/peminjamanruangan') }}">Peminjaman Ruangan</a></li>
+            <li id="link4" class="link"><a href="{{ url('/transparansisurat3') }}">Transparansi surat</a></li>
+</ul>
       <button class="btn">Ajukan Surat</button>
     </nav>
 
