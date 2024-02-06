@@ -9,6 +9,24 @@
 }
 
 #back-btn {
-    translate: 80px -48px;
+    translate: 120px -59px;
     display: inline-block;
+}
+
+form {
+    font-size: 1.5rem;
+}
+
+select,
+input {
+    padding: 2px 10px;
+    font-size: 1.1rem;
+}
+
+label {
+    margin-right: 10px;
+}
+
+button {
+    font-size: 1.3rem;
 }

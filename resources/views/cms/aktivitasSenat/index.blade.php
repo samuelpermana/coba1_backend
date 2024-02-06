@@ -3,12 +3,15 @@
 @section("content")
   {{-- Content goes here --}}
 
+  <link href="{{ URL::asset("cms/aktivitasSenat/styleindex.css") }}" rel="stylesheet">
+
   <body>
-    <h1>AktivitasSenat List</h1>
+    <h1>Aktivitas Senat List</h1>
 
-    <a class="btn btn-primary" href="{{ route("admin.aktivitasSenat.create") }}">Create AktivitasSenat</a>
+    <a class="btn btn-primary" href="{{ route("admin.aktivitasSenat.create") }}">Create Aktivitas Senat</a>
 
-    <table class="table">
+    <table class="table item" border="1">
+
       <thead>
         <tr>
           <th>ID</th>
@@ -24,12 +27,14 @@
             <td>{{ $aktivitasSenat->judul }}</td>
             <td>{{ $aktivitasSenat->isi_teks }}</td>
             <td>
-              <a class="btn btn-info" href="{{ route("admin.aktivitasSenat.show", ["id" => $aktivitasSenat->id]) }}">Show</a>
-              <a class="btn btn-warning" href="{{ route("admin.aktivitasSenat.edit", ["id" => $aktivitasSenat->id]) }}">Edit</a>
+
+              <a class="btn-info" href="{{ route("admin.aktivitasSenat.show", ["id" => $aktivitasSenat->id]) }}">Show</a>
+              <a class="btn-warning" href="{{ route("admin.aktivitasSenat.edit", ["id" => $aktivitasSenat->id]) }}">Edit</a>
               <form style="display:inline" action="{{ route("admin.aktivitasSenat.destroy", ["id" => $aktivitasSenat->id]) }}" method="POST">
                 @csrf
                 @method("DELETE")
-                <button class="btn btn-danger" type="submit">Delete</button>
+                <button class="btn-danger" type="submit">Delete</button>
+
               </form>
             </td>
           </tr>

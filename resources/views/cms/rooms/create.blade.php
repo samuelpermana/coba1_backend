@@ -5,6 +5,7 @@
 
   <link href="{{ URL::asset("cms/rooms/stylecreate.css") }}" rel="stylesheet">
 
+
   <body>
     <h1>Create New Room</h1>
 
@@ -22,9 +23,11 @@
       @csrf
       <label for="name">Name:</label><br>
       <input id="name" name="name" type="text"><br><br>
+
       <button class="btn" type="submit">Create</button>
     </form>
     <div id="back-btn"><a href= "{{ route("admin.rooms.index") }}"><button class="btn">Back</button></a></div>
+
   </body>
 
   {{-- Content ends here --}}

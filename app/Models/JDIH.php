@@ -8,10 +8,12 @@ use Illuminate\Database\Eloquent\Model;
 class JDIH extends Model
 {
     use HasFactory;
-    protected $table = 'JDIH';  
+
+    protected $table = 'jdih'; // sesuaikan dengan nama tabel yang benar
+
     protected $fillable = [
         'tahun',
-        'jenis_peraturan',
+        'jenis_jdih_id', 
         'nama_peraturan',
         'tanggal_disahkan',
         'peraturan',
@@ -20,12 +22,15 @@ class JDIH extends Model
         'file_naskah',
         'file_inventarisasi',
         'is_deleted',
-        'created_at',
-        'updated_at'
     ];
+
+    public function jenisPeraturan()
+    {
+        return $this->belongsTo(JenisJdih::class, 'jenis_jdih_id');
+    }
 
     public function file_lain()
     {
-        return $this -> hasMany(FileLainJDIH::class);
+        return $this->hasMany(FileLainJDIH::class);
     }
 }

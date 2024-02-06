@@ -24,7 +24,7 @@ class AspirasiController extends Controller
             // Jika Anda menggunakan response JSON:
             // return response()->json(['data' => $aspirasi, 'message' => 'Success'], 200);
             
-            return Redirect::to('/kotakaspirasi.html')->with('success', 'Aspiration created successfully');
+            return Redirect::to('/kotakaspirasi')->with('success', 'Aspiration created successfully');
         } catch (\Exception $e) {
             return response_error(null, $e->getMessage(), $e->getCode());
         }

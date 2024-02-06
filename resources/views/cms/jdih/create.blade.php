@@ -10,14 +10,19 @@
       <div style="color: green;">{{ session("success") }}</div>
     @endif
 
-    <form action="{{ route("admin.jdih.store") }}" method="POST" enctype="multipart/form-data">
+    <form class="custom-form" action="{{ route("admin.jdih.store") }}" method="POST" enctype="multipart/form-data">
       @csrf
 
       <label for="tahun">Tahun:</label>
       <input id="tahun" name="tahun" type="text" required><br>
 
-      <label for="jenis_peraturan">Jenis Peraturan:</label>
-      <input id="jenis_peraturan" name="jenis_peraturan" type="text" required><br>
+      <label for="jenis_jdih_id">Jenis Peraturan:</label>
+      <select id="jenis_jdih_id" name="jenis_jdih_id" required>
+        <option value="" selected disabled>Select Jenis Peraturan</option>
+        @foreach($jenisJDIH as $jenis)
+          <option value="{{ $jenis->id }}">{{ $jenis->name }}</option>
+        @endforeach
+      </select><br>
 
       <label for="nama_peraturan">Nama Peraturan:</label>
       <input id="nama_peraturan" name="nama_peraturan" type="text" required><br>
@@ -43,13 +48,11 @@
       <label for="file_lainnya">File Lainnya:</label>
       <input name="file_lainnya[]" type="file" multiple>
 
-      <button type="submit">Create JDIH Record</button>
+      <button class="btn" type="submit">Create JDIH Record</button>
     </form>
 
     <a href="{{ route("admin.jdih.index") }}">Back to JDIH Records</a>
-
     <!-- Include your additional content, styles, and scripts as needed -->
   </body>
-
   {{-- Content ends here --}}
 @endsection

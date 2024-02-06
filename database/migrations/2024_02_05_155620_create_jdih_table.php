@@ -7,12 +7,12 @@ return new class extends Migration{
     /**
      * Run the migrations.
      */
-    public function up(): void
+    public function up()
     {
         Schema::create('jdih', function (Blueprint $table) {
             $table->id();
             $table->string('tahun');
-            $table->string('jenis_peraturan');
+            $table->unsignedBigInteger('jenis_jdih_id'); // ubah menjadi jenis_peraturan_id
             $table->string('nama_peraturan');
             $table->date('tanggal_disahkan');
             $table->text('peraturan');
@@ -22,9 +22,11 @@ return new class extends Migration{
             $table->string('file_inventarisasi')->nullable();
             $table->boolean('is_deleted')->default(false);
             $table->timestamps();
+
+            // Menambahkan constraint foreign key
+            $table->foreign('jenis_jdih_id')->references('id')->on('jenis_jdihs');
         });
     }
-
     /**
      * Reverse the migrations.
      */

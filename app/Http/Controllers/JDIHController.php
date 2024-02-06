@@ -21,7 +21,21 @@ class JDIHController extends Controller
             return response_error(null, $e->getMessage(), $e->getCode());
         }
     }
+    public function jenis($id)
+    {
+        try {
+            $jdihByYear = JDIH::where('is_deleted', false)
+                ->where('jenis_jdih_id', $id)
+                ->orderBy('tahun', 'DESC')
+                ->orderBy('created_at', 'DESC')
+                ->get()
+                ->groupBy('tahun');
 
+            return view('jdih', compact('jdihByYear', 'id'));
+        } catch (\Exception $e) {
+            return response_error(null, $e->getMessage(), $e->getCode());
+        }
+    }
    // JDIHAdminCtrl.php
 
 public function showJDIH($id)

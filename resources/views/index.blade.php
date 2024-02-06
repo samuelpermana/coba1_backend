@@ -1,215 +1,235 @@
 <!DOCTYPE html>
 <html lang="en">
 
-  <head>
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.5.0/remixicon.min.css" rel="stylesheet">
     <link href="styleindex.css" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" rel="stylesheet" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous"
-      referrerpolicy="no-referrer" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" rel="stylesheet"
+        integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous"> -->
+    <link href='https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/izitoast/1.4.0/css/iziToast.min.css" integrity="sha512-O03ntXoVqaGUTAeAmvQ2YSzkCvclZEcPQu1eqloPaHfJ5RuNGiS4l+3duaidD801P50J28EHyonCV06CUlTSag==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.min.css" integrity="sha512-mSYUmp1HYZDFaVKK//63EcZq4iFWFjxSL+Z3T/aCt4IO9Cejm03q3NKKYN6pFQzY0SBOr8h+eCIAZHPXcpZaNw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>SENAT FH UNDIP</title>
-  </head>
 
-  <body>
+    <style>
+        /* CSS untuk mengubah warna teks dan border kalender menjadi putih */
+        .fc th, .fc td {
+            color: white; /* Mengubah warna teks menjadi putih */
+            border-color: white; /* Mengubah warna border menjadi putih */
+        }
+    </style>
+</head>
+
+<body>
     <nav>
-      <div class="nav-logo">
-        <a href="index">
-          <img src="/img/coba1.png" alt="Logo">
-        </a>
-      </div>
+        <div class="nav-logo">
+            <a href="{{ url('/') }}">
+                <img src="/img/coba1.png" alt="Logo">
+            </a>
+        </div>
 
-      <ul class="nav-links">
-        <li class="link"><a href="index">Home</a></li>
-        <li class="link" id="link1"><a href="kotakaspirasi">Kotak Aspirasi</a></li>
-        <li class="link" id="link2"><a href="faq">FAQ</a></li>
-        <li class="link" id="link3"><a href="bankaspirasi">Bank Aspirasi</a></li>
-        <li class="link" id="link4"><a href="selayangpandang">Selayang Pandang</a></li>
-        <li class="link" id="link4"><a href="jdih">JDIH</a></li>
-        <li class="link" id="link4"><a href="peminjamanruangan">Peminjaman Ruangan</a></li>
-        <li class="link" id="link4"><a href="transparansisurat3">Transparansi surat</a></li>
-      </ul>
+        <ul class="nav-links">
+    <li class="link"><a href="{{ url('/') }}">Home</a></li>
+    <li id="link1" class="link"><a href="{{ url('/kotakaspirasi') }}">Kotak Aspirasi</a></li>
+    <li id="link2" class="link"><a href="{{ url('/faq') }}">FAQ</a></li>
+    <li id="link3" class="link"><a href="{{ url('/bankaspirasi') }}">Bank Aspirasi</a></li>
+    <li id="link4" class="link"><a href="{{ url('/selayangpandang') }}">Selayang Pandang</a></li>
+    <li id="link4" class="link">
+        <div class="dropdown">
+            <button class="dropbtn">JDIH</button>
+            <div class="dropdown-content">
+                <a href="{{ route('jdih.jenis', ['id' => 1]) }}">Peraturan Mahasiswa</a>
+                <a href="{{ route('jdih.jenis', ['id' => 2]) }}">Standart Operating Procedure</a>
+                <a href="{{ route('jdih.jenis', ['id' => 3]) }}">Peraturan Senat Mahasiswa</a>
+                <a href="{{ route('jdih.jenis', ['id' => 4]) }}">Keputusan</a>
+                <a href="{{ route('jdih.jenis', ['id' => 5]) }}">Rancangan Peraturan</a>
+            </div>
+        </div>
+    </li>
+    <li id="link6" class="link"><a href="{{ url('/peminjamanruangan') }}">Peminjaman Ruangan</a></li>
+    <li id="link4" class="link"><a href="{{ url('/transparansisurat3') }}">Transparansi surat</a></li>
+</ul>
 
-      <a href="login"><button class="btn" type="button">Ajukan Surat</button></a>
+        <a href="login"><button class="btn" type="button">Ajukan Surat</button></a>
     </nav>
 
     <header class="container">
-      <div class="content">
-        <span class="blur"></span>
-        <span class="blur"></span>
-        <h4 style="font-size: 2rem;">SENAT MAHASISWA FAKULTAS HUKUM UNDIP</h4>
-        <h1 style="color: #D4AF37">ARYA WIRARAJA</h1>
+        <div class="content">
+            <span class="blur"></span>
+            <span class="blur"></span>
+            <h4 style="font-size: 2rem;">SENAT MAHASISWA FAKULTAS HUKUM UNDIP</h4>
+            <h1 style="color: #D4AF37">ARYA WIRARAJA</h1>
 
-        <p>
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellendus rem eos aliquid quo rerum
-          temporibus ipsum distinctio numquam ut omnis placeat, nam sint atque quos dolorem laborum? Rerum, esse
-          dolorem.
-        </p>
-        <a class="btn" href="http://127.0.0.1:8000/selayangpandang">Makna Logo</a>
-      </div>
-      <div class="img">
-        <img src="/img/coba12.png">
-      </div>
+            <p>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellendus rem eos aliquid quo rerum
+                temporibus ipsum distinctio numquam ut omnis placeat, nam sint atque quos dolorem laborum? Rerum, esse
+                dolorem.
+            </p>
+            <a class="btn" href="http://127.0.0.1:8000/selayangpandang">Makna Logo</a>
+        </div>
+        <div class="img">
+            <img src="/img/coba12.png">
+        </div>
     </header>
 
     <section class="container">
-      <h2 class="header">AKTIVITAS SM FH UNDIP</h2>
-      <div id="slideshow-grid">
-        <div id="slideshow">
-          <div id="slidewindow">
-            <div data-title="Puan Jelaskan Tiga Ajaran Bung Karno ke Generasi Muda, Apa Saja Itu?"
-              data-description="PARLEMENTARIA, Jakarta - Saat meresmikan Taman Pemuda Soekarno di Ngawi, Jawa Timur, pada Jumat (19/1/2024). Ketua DPR RI Puan Maharani"><img class="img-aktivitas-sm"
-                src="https://img.antaranews.com/cache/1200x800/2012/07/20120720GMNI.jpg.webp" alt="Slideshow Image I" /></div>
-            <div data-title="Ketua DPR Resmikan Taman Pemuda Soekarno di Ngawi" data-description="PARLEMENTARIA, Jakarta - Ketua DPR RI Dr. (H.C) Puan Maharani meresmikan Taman Pemuda Soekarno di Ngawi, Jawa Timur. Dalam kesempatan"><img
-                class="img-aktivitas-sm" src="https://static.republika.co.id/uploads/images/xlarge/_230516100857-108.jpg" alt="Slideshow Image II" />
+        <h2 class="header">AKTIVITAS SM FH UNDIP</h2>
+        <div id="slideshow-grid">
+            <div id="slideshow">
+                <div id="slidewindow">
+                    <!-- Use Blade directives to loop through the data -->
+                    @foreach ($aktivitasSenats as $aktivitasSenat)
+                        <div data-title="{{ $aktivitasSenat->judul }}"
+                            data-description="{{ $aktivitasSenat->isi_teks }}">
+                            <!-- <p>Image URL: {{ asset('storage/images/' . $aktivitasSenat->gambar) }}</p> -->
+                            <img class="img-aktivitas-sm"
+                                src="{{Storage::url($aktivitasSenat->gambar)}}"
+                                alt="Slideshow Image" />
+                        </div>
+                    @endforeach
+                </div>
+                <div id="controls">
+                    <a id="next">
+                        <div></div>
+                    </a>
+                    <ul id="dots"></ul>
+                    <a id="prev">
+                        <div></div>
+                    </a>
+                </div>
             </div>
-            <div data-title="Alokasi untuk IKN Bisa Dialihkan untuk Biayai Riset Daripada Korbankan Anggaran LPDP"
-              data-description="PARLEMENTARIA, Jakarta - Anggota Komisi X DPR RI Fahmi Alaydroes mempertanyakan munculnya wacana dari pemerintah, melalui Kementerian Koordinator Bidang Pembangunan"><img class="img-aktivitas-sm"
-                src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgsixk3choptC7ckWxaqpszHA50pKhEoMgYHmJDv3TckxngCd3xXeN9KdIkH4Ivet8w___ml3KWDB8XvPpT8BeaeRly87SPETtOKDw3mTr8fSj73sNQA7X6MKf6h2c1EpTrPfHfjB865J1I05pnvN_CL6d1foBTvKTlV1TN1eqxrU6Q-uRhmR1D78U7yg/s320/IMG-20230131-WA0056.jpg"
-                alt="Slideshow Image III" /></div>
-            <div data-title="Program Beasiswa LPDP Bisa Tetap Berjalan Tanpa Tambahan Anggaran Baru"
-              data-description="PARLEMENTARIA, Jakarta - Anggota Komisi VII DPR RI Dyah Roro Esti mengungkapkan bahwa wacana penghentian program beasiswa dari Lembaga Pengelola"><img class="img-aktivitas-sm"
-                src="https://media.istockphoto.com/id/500798563/id/foto/city-skyline-at-sunset-jakarta-indonesia.jpg?s=612x612&w=0&k=20&c=dICfiBlbElOeu0UceZMoFpBJ7xJF5bKyriTRZmGXHO4=" alt="Slideshow Image IV" /></div>
-          </div>
-          <div id="controls">
-            <a id="next">
-              <div></div>
-            </a>
-            <ul id="dots"></ul>
-            <a id="prev">
-              <div></div>
-            </a>
-          </div>
+            <div id="description">
+                <h1 class="data-title"></h1>
+                <p class="data-description"></p>
+            </div>
         </div>
-        <div id="description">
-          <h1 class="data-title"></h1>
-          <p class="data-description"></p>
-        </div>
-      </div>
     </section>
 
-    <section class="container">
-      <h2 class="header">AKTIVITAS LEGISLASI</h2>
-      
-      
 
-  <section class="container">
-      
-      <div class="container-cal">
-          <div class="left">
-            <div class="calendar">
-              <div class="month">
-                <i class="fas fa-angle-left prev"></i>
-                <div class="date">december 2015</div>
-                <i class="fas fa-angle-right next"></i>
-              </div>
-              <div class="weekdays">
-                <div>Sun</div>
-                <div>Mon</div>
-                <div>Tue</div>
-                <div>Wed</div>
-                <div>Thu</div>
-                <div>Fri</div>
-                <div>Sat</div>
-              </div>
-              <div class="days"></div>
-              <div class="goto-today">
-                <div class="goto">
-                  <input type="text" placeholder="mm/yyyy" class="date-input" />
-                  <button class="goto-btn">Go</button>
-                </div>
-                <button class="today-btn">Today</button>
-              </div>
+    <section class="container">
+
+    <div class="container">
+        <div class="row">
+            <div class="col-12 mt-3">
+                <div id='calendar'></div>
             </div>
-          </div>
-          <div class="right">
-            <div class="today-date">
-              <div class="event-day">wed</div>
-              <div class="event-date">12th december 2022</div>
-            </div>
-            <div class="events"></div>
-            <div class="add-event-wrapper">
-              <div class="add-event-header">
-                <div class="title">Add Event</div>
-                <i class="fas fa-times close"></i>
-              </div>
-              <div class="add-event-body">
-                <div class="add-event-input">
-                  <input type="text" placeholder="Event Name" class="event-name" />
-                </div>
-                <div class="add-event-input">
-                  <input
-                    type="text"
-                    placeholder="Event Time From"
-                    class="event-time-from"
-                  />
-                </div>
-                <div class="add-event-input">
-                  <input
-                    type="text"
-                    placeholder="Event Time To"
-                    class="event-time-to"
-                  />
-                </div>
-              </div>
-              <div class="add-event-footer">
-                  <input type="color" class="event-color" value="#ff0000" />
-                <button class="add-event-btn">Add Event</button>
-              </div>
-            </div>
-          </div>
-          <button class="add-event">
-            <i class="fas fa-plus"></i>
-          </button>
         </div>
-    
-        <div class="credits">
-          
-        </div>
+    </div>
+
+    <div id="modal-action" class="modal" tabindex="-1">
+        
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js" integrity="sha512-pumBsjNRGGqkPzKHndZMaAG+bir374sORyzM3uulLV14lN5LyykqNk8eEeUlUkB3U0M4FApyaHraT65ihJhDpQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script src='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.7/index.global.min.js'></script>
+    <script src='https://cdn.jsdelivr.net/npm/@fullcalendar/bootstrap5@6.1.7/index.global.min.js'></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/izitoast/1.4.0/js/iziToast.min.js" integrity="sha512-Zq9o+E00xhhR/7vJ49mxFNJ0KQw1E1TMWkPTxrWcnpfEFDEXgUiwJHIKit93EW/XxE31HSI5GEOW06G6BF1AtA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js" integrity="sha512-T/tUfKSV1bihCnd+MxKD0Hm1uBBroVYBOYSk1knyvQ9VyZJpc/ALb4P0r6ubwVPSGB2GvjeoMAJJImBG12TiaQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script>
+        const modal = $('#modal-action')
+        const csrfToken = $('meta[name=csrf_token]').attr('content')
+
+        document.addEventListener('DOMContentLoaded', function() {
+    var calendarEl = document.getElementById('calendar');
+    var calendar = new FullCalendar.Calendar(calendarEl, {
+        initialView: 'dayGridMonth',
+        themeSystem: 'bootstrap5',
+        events: "{{ route('admin.events.list') }}",
+        editable: false,
+        eventDidMount: function(info) {
+            // Memeriksa kategori dari event
+            var category = info.event.extendedProps.category;
+
+            // Mengatur warna event berdasarkan kategori
+            var backgroundColor;
+            var borderColor;
+
+            switch (category) {
+                case 'success':
+                    backgroundColor = '#A13D3E';
+                    borderColor = '#A13D3E';
+                    break;
+                case 'danger':
+                    backgroundColor = '#D4AF37'; 
+                    borderColor = '#D4AF37'; 
+                    break;
+                case 'warning':
+                    backgroundColor = '#E1D2A2'; 
+                    borderColor = '#E1D2A2'; 
+                    break;
+                case 'info':
+                    backgroundColor = '#A21B1B'; 
+                    borderColor = '#A21B1B'; 
+                    break;
+                default:
+                    backgroundColor = '#CCCCCC'; 
+                    borderColor = '#CCCCCC';
+            }
+
+            // Atur warna background dan border
+            info.el.style.backgroundColor = backgroundColor;
+            info.el.style.borderColor = borderColor;
+        }
+    });
+
+    calendar.render();
+});
+
+
+    </script>
+
 
   </section>     
     <footer class="container">
-      <span class="blur"></span>
-      <span class="blur"></span>
-      <div class="column">
-        <div class="logo">
-          <img src="/img/coba1.png">
+        <span class="blur"></span>
+        <span class="blur"></span>
+        <div class="column">
+            <div class="logo">
+                <img src="/img/coba1.png">
+            </div>
+            <p>
+                SENAT MAHASISWA FAKULTAS HUKUM UNDIP
+            </p>
+            <div class="socials">
+                <a href="#"><i class="ri-youtube-line"></i></a>
+                <a href="#"><i class="ri-instagram-line"></i></a>
+                <a href="#"><i class="ri-twitter-line"></i></a>
+            </div>
         </div>
-        <p>
-          SENAT MAHASISWA FAKULTAS HUKUM UNDIP
-        </p>
-        <div class="socials">
-          <a href="#"><i class="ri-youtube-line"></i></a>
-          <a href="#"><i class="ri-instagram-line"></i></a>
-          <a href="#"><i class="ri-twitter-line"></i></a>
+        <div class="column">
+            <h4>CONTOH</h4>
+            <a href="#">Template</a>
+            <a href="#">Template</a>
+            <a href="#">Template</a>
         </div>
-      </div>
-      <div class="column">
-        <h4>CONTOH</h4>
-        <a href="#">Template</a>
-        <a href="#">Template</a>
-        <a href="#">Template</a>
-      </div>
-      <div class="column">
-        <h4>About Us</h4>
-        <a href="#">Blogs</a>
-        <a href="#">Template</a>
-        <a href="#">Template</a>
-      </div>
-      <div class="column">
-        <h4>Contact</h4>
-        <a href="#">Contact Us</a>
-        <a href="#">Privicy Policy</a>
-        <a href="#">Terms & Conditions</a>
-      </div>
+        <div class="column">
+            <h4>About Us</h4>
+            <a href="#">Blogs</a>
+            <a href="#">Template</a>
+            <a href="#">Template</a>
+        </div>
+        <div class="column">
+            <h4>Contact</h4>
+            <a href="#">Contact Us</a>
+            <a href="#">Privicy Policy</a>
+            <a href="#">Terms & Conditions</a>
+        </div>
     </footer>
 
     <div class="copyright">
-      Copyright © 2023 SENAT FH UNDIP. All Rights Reserved.
+        Copyright © 2023 SENAT FH UNDIP. All Rights Reserved.
     </div>
 
     <script src="js-aktivitas-legislasi.js"></script>
     <script src="js-aktivitas-sm-fh.js"></script>
-  </body>
+</body>
 
 </html>
