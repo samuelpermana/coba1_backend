@@ -55,4 +55,6 @@
     </div>
 
   </section>
+
+  <script src="js-bankaspirasi.js"></script>
 @endsection
