@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.5.0/remixicon.min.css" rel="stylesheet">
+    <link href="stylelayout.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" rel="stylesheet" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous"
+      referrerpolicy="no-referrer" />
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous"> -->
+    <link href='https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css' rel='stylesheet'>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/izitoast/1.4.0/css/iziToast.min.css" rel="stylesheet" integrity="sha512-O03ntXoVqaGUTAeAmvQ2YSzkCvclZEcPQu1eqloPaHfJ5RuNGiS4l+3duaidD801P50J28EHyonCV06CUlTSag==" crossorigin="anonymous"
+      referrerpolicy="no-referrer" />
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.min.css" rel="stylesheet" integrity="sha512-mSYUmp1HYZDFaVKK//63EcZq4iFWFjxSL+Z3T/aCt4IO9Cejm03q3NKKYN6pFQzY0SBOr8h+eCIAZHPXcpZaNw=="
+      crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>SENAT FH UNDIP</title>
+  </head>
+
+  <body>
+    <nav>
+      <div class="nav-logo">
+        <a href="{{ url("/") }}">
+          <img src="/img/coba1.png" alt="Logo">
+        </a>
+      </div>
+
+      <ul class="nav-links">
+        <li class="link"><a href="{{ url("/") }}">Home</a></li>
+        <li class="link" id="link1"><a href="{{ url("/kotakaspirasi") }}">Kotak Aspirasi</a></li>
+        <li class="link" id="link2"><a href="{{ url("/faq") }}">FAQ</a></li>
+        <li class="link" id="link3"><a href="{{ url("/bankaspirasi") }}">Bank Aspirasi</a></li>
+        <li class="link" id="link4"><a href="{{ url("/selayangpandang") }}">Selayang Pandang</a></li>
+        <li class="link" id="link4">
+          <div class="dropdown">
+            <button class="dropbtn">JDIH</button>
+            <div class="dropdown-content">
+              <a href="{{ route("jdih.jenis", ["id" => 1]) }}">Peraturan Mahasiswa</a>
+              <a href="{{ route("jdih.jenis", ["id" => 2]) }}">Standart Operating Procedure</a>
+              <a href="{{ route("jdih.jenis", ["id" => 3]) }}">Peraturan Senat Mahasiswa</a>
+              <a href="{{ route("jdih.jenis", ["id" => 4]) }}">Keputusan</a>
+              <a href="{{ route("jdih.jenis", ["id" => 5]) }}">Rancangan Peraturan</a>
+            </div>
+          </div>
+        </li>
+        <li class="link" id="link6"><a href="{{ url("/peminjamanruangan") }}">Peminjaman Ruangan</a></li>
+        <li class="link" id="link4"><a href="{{ url("/transparansisurat") }}">Transparansi surat</a></li>
+      </ul>
+
+      <a href="login"><button class="btn" type="button">Ajukan Surat</button></a>
+    </nav>
+
+    @yield("content")
+
+    <footer class="container">
+      <span class="blur"></span>
+      <span class="blur"></span>
+      <div class="column">
+        <div class="logo">
+          <img src="/img/coba1.png">
+        </div>
+        <p>
+          SENAT MAHASISWA FAKULTAS HUKUM UNDIP
+        </p>
+        <div class="socials">
+          <a href="#"><i class="ri-youtube-line"></i></a>
+          <a href="#"><i class="ri-instagram-line"></i></a>
+          <a href="#"><i class="ri-twitter-line"></i></a>
+        </div>
+      </div>
+      <div class="column">
+        <h4>CONTOH</h4>
+        <a href="#">Template</a>
+        <a href="#">Template</a>
+        <a href="#">Template</a>
+      </div>
+      <div class="column">
+        <h4>About Us</h4>
+        <a href="#">Blogs</a>
+        <a href="#">Template</a>
+        <a href="#">Template</a>
+      </div>
+      <div class="column">
+        <h4>Contact</h4>
+        <a href="#">Contact Us</a>
+        <a href="#">Privicy Policy</a>
+        <a href="#">Terms & Conditions</a>
+      </div>
+    </footer>
+
+    <div class="copyright">
+      Copyright © 2023 SENAT FH UNDIP. All Rights Reserved.
+    </div>
+  </body>
+
+</html>

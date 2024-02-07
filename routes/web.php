@@ -21,12 +21,18 @@ Route::get('/', function () {
     return view('index');
 });
 
+Route::get('/layout', function () {
+    return view('layouts.layout');
+});
+
 Route::get('/{id}/file', [AktivitasSenatController::class, 'show'])->name('aktivitas-senat.file');
 Route::get('/', [AktivitasSenatController::class, 'index']);
 
 // Route::get('/index', function () {return view('index');});
 
-Route::get('/kotakaspirasi', function () {return view('kotakaspirasi');});
+Route::get('/kotakaspirasi', function () {
+    return view('kotakaspirasi');
+});
 
 Route::post('/aspirasi', [AspirasiController::class, 'createAspirasi'])->name('aspirasi.store');
 
@@ -74,8 +80,8 @@ Route::get('/bksap', function () {
     return view('bksap');
 });
 
-Route::get('/transparansisurat3', function () {
-    return view('transparansisurat3');
+Route::get('/transparansisurat', function () {
+    return view('transparansisurat');
 });
 
 Route::get('/login', function () {
