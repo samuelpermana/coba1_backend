@@ -120,4 +120,6 @@
       </div>
     </div>
   </section>
+
+  <script src="script2.js"></script>
 @endsection
