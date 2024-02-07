@@ -121,5 +121,5 @@
     </div>
   </section>
 
-  <script src="script2.js"></script>
+  <script src="js-komisi.js"></script>
 @endsection
