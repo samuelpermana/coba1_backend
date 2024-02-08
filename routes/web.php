@@ -1,20 +1,32 @@
 <?php
 
-use App\Http\Controllers\AktivitasSenatController;
-use App\Http\Controllers\EventController;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\AspirasiController;
+use App\Http\Controllers\Auth\AuthController;
 use App\Http\Controllers\Admin\AspirasiAdminCtrl;
 use App\Http\Controllers\Admin\JDIHAdminCtrl;
 use App\Http\Controllers\Admin\EventAdminController;
 use App\Http\Controllers\Admin\RoomAdminController;
-use App\Http\Controllers\JDIHController;
-use App\Http\Controllers\RuanganController;
 use App\Http\Controllers\Admin\RoomScheduleAdminController;
 use App\Http\Controllers\Admin\AktivitasSenatAdminCtrl;
+use App\Http\Controllers\AktivitasSenatController;
+use App\Http\Controllers\EventController;
+use App\Http\Controllers\AspirasiController;
+use App\Http\Controllers\JDIHController;
+use App\Http\Controllers\RuanganController;
+use App\Http\Controllers\Ormawa\AjukanDokumenController;
+use App\Http\Controllers\Ormawa\TransparansiController;
+use App\Http\Controllers\Komisi\TransparansiKomController;
+use App\Http\Controllers\Komisi\AgendaKerjaController;
+use App\Http\Controllers\Badan\AgendaKerjaBadanController;
+
 use App\Models\AktivitasSenat;
 use App\Models\JDIH;
 
+
+
+Route::get('/login', [AuthController::class, 'index']);
+Route::post('/login', [AuthController::class, 'login'])->name('login');
+Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
 
 // ======================== WEBSITE ==================================
 Route::get('/', function () {
@@ -80,17 +92,6 @@ Route::get('/bksap', function () {
     return view('bksap');
 });
 
-Route::get('/transparansisurat', function () {
-    return view('transparansisurat');
-});
-
-Route::get('/login', function () {
-    return view('login');
-});
-
-Route::get('/ajukansurat', function () {
-    return view('ajukansurat');
-});
 Route::get('/aaa', function () {
     return view('detailJDIH');
 });
@@ -112,7 +113,8 @@ Route::get('jdih/show/{id}', [JDIHController::class, 'showJDIH'])->name('jdih.sh
 // ======================== CMS ==================================
 Route::group([
     'prefix' => 'admin',
-    'as' => 'admin.'
+    'as' => 'admin.',
+    'middleware' => ['auth']
 ], function () {
     Route::get('/bankaspirasi', [AspirasiAdminCtrl::class, 'index'])->name('index');
     Route::put('/bankaspirasi/{id}', [AspirasiAdminCtrl::class, 'update'])->name('update');
@@ -150,70 +152,52 @@ Route::group([
 
     Route::get('', function () {
         return view('cms.dashboard');
-    });
+    })->name('dashboard');
 });
 
 // ======================== END CMS ==================================
 
-// ======================== KOMISI 1 ==================================
+// ======================== KOMISI==================================
 Route::group([
-    'prefix' => 'komisi1',
-    'as' => 'komisi1'
+    'prefix' => 'komisi',
+    'as' => 'komisi',
+    'middleware' => ['auth']
 ], function () {
-    // Route
+    Route::get('/',[AgendaKerjaController::class, 'index'] );
+    Route::get('/agendakerja',[AgendaKerjaController::class, 'index'] );
+    
+    Route::get('/transparansisurat', [TransparansiKomController::class, 'index']);
 });
-// ======================== END KOMISI 1 ==================================
-
-// ======================== KOMISI 2 ==================================
-Route::group([
-    'prefix' => 'komisi2',
-    'as' => 'komisi2'
-], function () {
-    // Route
-});
-// ======================== END KOMISI 2 ==================================
-
-// ======================== KOMISI 3 ==================================
-Route::group([
-    'prefix' => 'komisi3',
-    'as' => 'komisi3'
-], function () {
-    // Route
-});
-// ======================== END KOMISI 3 ==================================
-
-// ======================== KOMISI 4 ==================================
-Route::group([
-    'prefix' => 'komisi4',
-    'as' => 'komisi4'
-], function () {
-    // Route
-});
-// ======================== END KOMISI 4 ==================================
+// ======================== END KOMIS ==================================
 
 // ========================  ORMAWA ==================================
 Route::group([
     'prefix' => 'ormawa',
-    'as' => 'ormawa'
+    'as' => 'ormawa',
+    'middleware' => ['auth']
 ], function () {
-    // Route
+    Route::get('/',[AjukanDokumenController::class, 'index'] );
+    Route::get('/ajukansurat',[AjukanDokumenController::class, 'index'] );
+    
+    Route::get('/transparansisurat', [TransparansiController::class, 'index']);
 });
 // ======================== END ORMAWA ==================================
 
 
 // ======================== BADAN ANGGARAN ==================================
 Route::group([
-    'prefix' => 'badan_anggaran',
-    'as' => 'badan_anggaran'
+    'prefix' => 'badan',
+    'as' => 'badan'
 ], function () {
-    // Route
+    Route::get('/',[AgendaKerjaBadanController::class, 'index'] );
+    Route::get('/agendakerja',[AgendaKerjaBadanController::class, 'index'] );
 });
 // ======================== END BADAN ANGGARAN ==================================
 
 // ======================== PIMPINAN TINGGI ==================================
 Route::group([
-    'prefix' => 'pimpinan_tinggi',
-    'as' => 'pimpinan_tinggi'
+    'prefix' => 'pimpinan-tinggi',
+    'as' => 'pimpinan-tinggi'
 ], function () {
     // Route
 });

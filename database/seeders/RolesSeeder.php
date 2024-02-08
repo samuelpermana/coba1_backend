@@ -19,10 +19,12 @@ class RolesSeeder extends Seeder
             ['id' => 2, 'role_name' => 'Organisasi Mahasiswa FH', 'role_slug' => 'ormawa'],
             ['id' => 3, 'role_name' => 'Pimpinan Tinggi', 'role_slug' => 'pt'],
             ['id' => 4, 'role_name' => 'Komisi', 'role_slug' => 'komisi'],
-            ['id' => 5, 'role_name' => 'Badan Anggaran', 'role_slug' => 'ba'],
+            ['id' => 5, 'role_name' => 'Badan', 'role_slug' => 'ba'],
         ];
 
         // Insert data into roles table
         DB::table('roles')->insert($roles);
+
+        
     }
 }

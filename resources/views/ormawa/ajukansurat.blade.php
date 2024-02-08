@@ -1,6 +1,7 @@
-@extends("layouts.layout")
+@extends("ormawa.layouts.layout")
 @section("content")
-  <link href="styleajukansurat.css" rel="stylesheet">
+  <link href="{{ asset("styleajukansurat.css") }}" rel="stylesheet">
+  
 
   <div class="container-AJ">
     <h1 class="form-title">Ajukan Surat</h1>

@@ -163,6 +163,32 @@ body {
 
     overflow: auto;
 }
+.top_bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px; /* Atur padding agar konten tidak terlalu dekat dengan tepi */
+    background-color: #333; /* Atur warna latar belakang top-bar */
+    color: #fff; /* Atur warna teks */
+}
+
+.logout {
+    margin-right: 10px; /* Jarak dari kanan */
+}
+
+.logout a {
+    color: #fff; /* Warna teks */
+    text-decoration: none; /* Hapus garis bawah */
+    padding: 5px 10px; /* Padding tombol */
+    border-radius: 5px; /* Sudut bulat */
+    background-color: #c99c33; /* Warna latar belakang */
+    transition: background-color 0.3s ease; /* Transisi untuk efek hover */
+}
+
+.logout a:hover {
+    background-color: #f59c33; /* Warna latar belakang saat hover */
+}
+
 
 @media (max-width: 768px) {
     .top_bar .hamburger {
