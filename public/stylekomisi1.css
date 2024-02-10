@@ -277,16 +277,17 @@ section .header {
   }
   
   .card_image-4-2 {
-    width: 35%;
+    width: 100%;
     border-radius: 1.25rem 1.25rem 0 0;
     position: relative;
     background-color: #27272a;
     padding-top: 1.5rem;
     margin-bottom: -0.75rem;
+    max-width: 500px;
   }
 
   .card_data-4-2 {
-    width: 35%;
+    width: 100%;
     background-color: #27272a;
     padding: 1.5rem 2rem;
     border-radius: 1rem;
@@ -296,6 +297,7 @@ section .header {
     position: relative;
     z-index: 10;
     color: #e0e0e0;
+    max-width: 500px;
   }
 
   .card_titleA {
@@ -1041,6 +1043,9 @@ h4 {
     .pricing {
       grid-template-columns: repeat(2, 1fr);
     }
+    .card_image-4-2 , .card_data-4-2{
+      max-width: 350px;
+    }
     footer {
       grid-template-columns: 1fr 200px;
     }
@@ -1050,7 +1055,12 @@ h4 {
     header .image::before {
       display: none;
     }
-  
+    .anggota-4, .anggota-4-1{
+      grid-template-columns: repeat(1, 1fr);
+    }
+    .card_image-4-2 , .card_data-4-2{
+      max-width: 100%;
+    }
     .features {
       grid-template-columns: repeat(1, 1fr);
     }

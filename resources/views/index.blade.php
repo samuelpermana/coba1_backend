@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.5.0/remixicon.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
     <link href="styleindex.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" rel="stylesheet"
         integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
@@ -27,7 +28,7 @@
 
 <body>
     <nav>
-        <div class="nav-logo">
+    <div class="nav-logo">
             <a href="{{ url('/') }}">
                 <img src="/img/coba1.png" alt="Logo">
             </a>
@@ -55,7 +56,7 @@
     <li id="link4" class="link"><a href="{{ url('/transparansisurat3') }}">Transparansi surat</a></li>
 </ul>
 
-        <a href="login"><button class="btn" type="button">Ajukan Surat</button></a>
+        <a href="login"><button class="btn-as" type="button">Ajukan Surat</button></a>
     </nav>
 
     <header class="container">
@@ -70,7 +71,7 @@
                 temporibus ipsum distinctio numquam ut omnis placeat, nam sint atque quos dolorem laborum? Rerum, esse
                 dolorem.
             </p>
-            <a class="btn" href="http://127.0.0.1:8000/selayangpandang">Makna Logo</a>
+            <a class="btn-as" href="http://127.0.0.1:8000/selayangpandang">Makna Logo</a>
         </div>
         <div class="img">
             <img src="/img/coba12.png">
@@ -227,7 +228,33 @@
     <div class="copyright">
         Copyright © 2023 SENAT FH UNDIP. All Rights Reserved.
     </div>
+    <script>
+        const showMenu = (headerToggle, navbarId) =>{
+    const toggleBtn = document.getElementById(headerToggle),
+    nav = document.getElementById(navbarId)
+    
+    // Validate that variables exist
+    if(headerToggle && navbarId){
+        toggleBtn.addEventListener('click', ()=>{
+            // We add the show-menu class to the div tag with the nav__menu class
+            nav.classList.toggle('show-menu')
+            // change icon
+            toggleBtn.classList.toggle('bx-x')
+        })
+    }
+}
+showMenu('header-toggle','navbar')
 
+/*==================== LINK ACTIVE ====================*/
+const linkColor = document.querySelectorAll('.nav-links')
+
+function colorLink(){
+    linkColor.forEach(l => l.classList.remove('active'))
+    this.classList.add('active')
+}
+
+linkColor.forEach(l => l.addEventListener('click', colorLink))
+    </script>
     <script src="js-aktivitas-legislasi.js"></script>
     <script src="js-aktivitas-sm-fh.js"></script>
 </body>
