@@ -5,16 +5,92 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.5.0/remixicon.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+
     <link href="stylekotakaspirasi.css" rel="stylesheet">
     <title>SENAT FH UNDIP</title>
   </head>
 
   <body>
+    <header class="header">
+      <div class="header__container">
+          <div class="header__toggle">
+              <i class='bx bx-menu' id="header-toggle"></i>
 
+          </div>
+      </div>
+  </header>
+  <div class="nav2" id="navbar">
+    <nav class="nav2__container">
+        <div>
+            <a href="#" class="nav2__link nav2__logo">
+              <img src="/img/coba1.png" alt="Logo">
+                
+            </a>
+
+            <div class="nav2__list">
+                <div class="nav2__items">
+                    
+
+                    <a href="{{ url('/') }}" class="nav2__link active">
+                        <i class='bx bx-home nav2__icon' ></i>
+                        <span class="nav2__name">Home</span>
+                    </a>
+                    
+                    <div class="nav2__dropdown">
+                        <a href="{{ url('/kotakaspirasi') }}" class="nav2__link">
+                            <i class='bx bx-user nav2__icon' ></i>
+                            <span class="nav2__name">Kotak Aspirasi</span>
+                            
+                        </a>
+
+                        
+                    </div>
+                    <div class="nav2__items">
+                    <a href="{{ url('/faq') }}" class="nav2__link">
+                        <i class='bx bx-message-rounded nav2__icon' ></i>
+                        <span class="nav2__name">FAQ</span>
+                    </a>
+                </div>
+
+                
+                   
+
+                    <div class="nav2__dropdown">
+                        <a href="{{ url('/bankaspirasi') }}" class="nav2__link">
+                            <i class='bx bx-file nav2__icon' ></i>
+                            <span class="nav2__name">Bank Aspirasi</span>
+                            
+                        </a>
+
+
+                    </div>
+
+                    <a href="{{ url('/selayangpandang') }}" class="nav2__link">
+                        <i class='bx bx bx-user nav2__icon' ></i>
+                        <span class="nav2__name">Selayang Pandang</span>
+                    </a>
+                    <a href="{{ url('/JDIH') }}" class="nav2__link">
+                        <i class='bx bx-file nav2__icon' ></i>
+                        <span class="nav2__name">JDIH</span>
+                    </a>
+                    <a href="{{ url('/peminjamanruangan') }}" class="nav2__link">
+                      <i class='bx bx-time nav2__icon' ></i>
+                      <span class="nav2__name">Peminjaman Ruangan</span>
+                  </a>
+                  <a href="{{ url('/transparansisurat3') }}" class="nav2__link">
+                    <i class='bx bx-file nav2__icon' ></i>
+                    <span class="nav2__name">Transparansi Surat</span>
+                </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+</div>
     <nav>
       <div class="nav-logo">
         <a href="{{ url('/') }}">
-          <img src="/img/coba1.png" alt="Logo">
+          <img src="/img/coba23.png" alt="Logo">
         </a>
       </div>
 
@@ -105,7 +181,7 @@
     <div class="copyright">
       Copyright © 2023 SENAT FH UNDIP. All Rights Reserved.
     </div>
-
+    <script src="script7.js"></script>
   </body>
 
 </html>

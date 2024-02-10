@@ -45,14 +45,14 @@
       </nav>
 
     <section class="container">
-        <h1 class="j-header4">KOMISI SATU</h1>
+        <h1 class="j-header4">KOMISI I</h1>
         <div class="container6">
             <div class="slide">
                 
                 <div class="item" style="background-image: url(https://images6.alphacoders.com/439/439546.jpg);">
                     <div class="content">
-                        <div class="name">KOMISI SATU</div>
-                        <div class="des">Komisi 1 adalah komisi yang menaungi terkait dengan Bidang Pengembangan dan Keilmuan</div>
+                        <div class="name">KOMISI I</div>
+                        <div class="des">Komisi I adalah komisi yang menaungi terkait dengan Bidang Pengembangan dan Keilmuan</div>
                         <a href="http://127.0.0.1:8000/komisi1" target="_blank">
                             <button>Selengkapnya</button>
                         </a>

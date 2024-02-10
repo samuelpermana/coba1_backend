@@ -220,7 +220,7 @@
                 <h2 class="card_title">Wakil 2</h2>
                 <p>Bidang Aspirasi dan Legislasi</p>
               </div>
-              <h3 class="card_name" style="color: #d4af37">Abigael Farel<br />FH UNDIP 2021</h3>
+              <h3 class="card_name" style="color: #d4af37">Abigael Farel Harahap<br />FH UNDIP 2021</h3>
             </div>
           </div>
           <div class="card_wrapper-0">
@@ -254,7 +254,7 @@
           </div>
           <div class="item" style="background-image: url(https://images6.alphacoders.com/439/439546.jpg)">
             <div class="content">
-              <div class="name">KOMISI SATU</div>
+              <div class="name">KOMISI I</div>
               <div class="des">Komisi 1 adalah komisi yang menaungi terkait dengan Bidang Pengembangan dan Keilmuan</div>
               <a href="komisi1">
                 <button>Selengkapnya</button>
@@ -263,7 +263,7 @@
           </div>
           <div class="item" style="background-image: url(https://images6.alphacoders.com/439/439546.jpg)">
             <div class="content">
-              <div class="name">KOMISI DUA</div>
+              <div class="name">KOMISI II</div>
               <div class="des">Komisi 2 adalah komisi yang menaungi terkait Bidang Minat, Bakat, Kaderisasi dan Keroharian</div>
               <a href="komisi2">
                 <button>Selengkapnya</button>
@@ -272,7 +272,7 @@
           </div>
           <div class="item" style="background-image: url(https://images6.alphacoders.com/439/439546.jpg)">
             <div class="content">
-              <div class="name">KOMISI TIGA</div>
+              <div class="name">KOMISI III</div>
               <div class="des">Komisi 3 adalah komisi yang menangui terkait Bidang Hukum dan Hubungan Publik</div>
               <a href="komisi3">
                 <button>Selengkapnya</button>
@@ -281,7 +281,7 @@
           </div>
           <div class="item" style="background-image: url(https://images6.alphacoders.com/439/439546.jpg)">
             <div class="content">
-              <div class="name">KOMISI EMPAT</div>
+              <div class="name">KOMISI IV</div>
               <div class="des">Komisi 4 adalah komisi yang menaungi terkait bidang Advokasi, Akademik, Sarana, dan Prasarana</div>
               <a href="komisi4">
                 <button>Selengkapnya</button>
