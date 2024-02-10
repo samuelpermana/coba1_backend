@@ -220,7 +220,7 @@ header .image img {
 section .header {
   color: #cfb53b;
   margin-bottom: 4rem;
-  font-size: 3rem;
+  font-size: 2.5rem;
   font-weight: 700;
   line-height: 4rem;
   text-align: center;
@@ -1237,7 +1237,7 @@ section .header3 {
 
 @media (width < 700px){
   .slide .item:nth-child(4) {
-    left: calc(60% + 150px);
+    left: calc(10% + 150px);
     opacity: 0;
   }
 

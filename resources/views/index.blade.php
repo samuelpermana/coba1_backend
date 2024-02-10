@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.5.0/remixicon.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
     <link href="styleindex.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" rel="stylesheet"
         integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
@@ -14,7 +15,24 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/izitoast/1.4.0/css/iziToast.min.css" integrity="sha512-O03ntXoVqaGUTAeAmvQ2YSzkCvclZEcPQu1eqloPaHfJ5RuNGiS4l+3duaidD801P50J28EHyonCV06CUlTSag==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.min.css" integrity="sha512-mSYUmp1HYZDFaVKK//63EcZq4iFWFjxSL+Z3T/aCt4IO9Cejm03q3NKKYN6pFQzY0SBOr8h+eCIAZHPXcpZaNw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" rel="stylesheet"
+        integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous"> -->
+    <link href='https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/izitoast/1.4.0/css/iziToast.min.css" integrity="sha512-O03ntXoVqaGUTAeAmvQ2YSzkCvclZEcPQu1eqloPaHfJ5RuNGiS4l+3duaidD801P50J28EHyonCV06CUlTSag==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.min.css" integrity="sha512-mSYUmp1HYZDFaVKK//63EcZq4iFWFjxSL+Z3T/aCt4IO9Cejm03q3NKKYN6pFQzY0SBOr8h+eCIAZHPXcpZaNw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>SENAT FH UNDIP</title>
+
+    <style>
+        /* CSS untuk mengubah warna teks dan border kalender menjadi putih */
+        .fc th, .fc td {
+            color: white; /* Mengubah warna teks menjadi putih */
+            border-color: white; /* Mengubah warna border menjadi putih */
+        }
+    </style>
+</head>
 
     <style>
         /* CSS untuk mengubah warna teks dan border kalender menjadi putih */
@@ -54,27 +72,48 @@
     <li id="link6" class="link"><a href="{{ url('/peminjamanruangan') }}">Peminjaman Ruangan</a></li>
     <li id="link4" class="link"><a href="{{ url('/transparansisurat3') }}">Transparansi surat</a></li>
 </ul>
+        <ul class="nav-links">
+    <li class="link"><a href="{{ url('/') }}">Home</a></li>
+    <li id="link1" class="link"><a href="{{ url('/kotakaspirasi') }}">Kotak Aspirasi</a></li>
+    <li id="link2" class="link"><a href="{{ url('/faq') }}">FAQ</a></li>
+    <li id="link3" class="link"><a href="{{ url('/bankaspirasi') }}">Bank Aspirasi</a></li>
+    <li id="link4" class="link"><a href="{{ url('/selayangpandang') }}">Selayang Pandang</a></li>
+    <li id="link4" class="link">
+        <div class="dropdown">
+            <button class="dropbtn">JDIH</button>
+            <div class="dropdown-content">
+                <a href="{{ route('jdih.jenis', ['id' => 1]) }}">Peraturan Mahasiswa</a>
+                <a href="{{ route('jdih.jenis', ['id' => 2]) }}">Standart Operating Procedure</a>
+                <a href="{{ route('jdih.jenis', ['id' => 3]) }}">Peraturan Senat Mahasiswa</a>
+                <a href="{{ route('jdih.jenis', ['id' => 4]) }}">Keputusan</a>
+                <a href="{{ route('jdih.jenis', ['id' => 5]) }}">Rancangan Peraturan</a>
+            </div>
+        </div>
+    </li>
+    <li id="link6" class="link"><a href="{{ url('/peminjamanruangan') }}">Peminjaman Ruangan</a></li>
+    <li id="link4" class="link"><a href="{{ url('/transparansisurat3') }}">Transparansi surat</a></li>
+</ul>
 
-        <a href="login"><button class="btn" type="button">Ajukan Surat</button></a>
+          <a href="login"><button class="btn-as" type="button">Ajukan Surat</button></a>
     </nav>
 
     <header class="container">
-        <div class="content">
-            <span class="blur"></span>
-            <span class="blur"></span>
-            <h4 style="font-size: 2rem;">SENAT MAHASISWA FAKULTAS HUKUM UNDIP</h4>
-            <h1 style="color: #D4AF37">ARYA WIRARAJA</h1>
+          <div class="content">
+                <span class="blur"></span>
+                <span class="blur"></span>
+                <h4 style="font-size: 2rem;">SENAT MAHASISWA FAKULTAS HUKUM UNDIP</h4>
+                <h1 style="color: #D4AF37">ARYA WIRARAJA</h1>
 
-            <p>
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellendus rem eos aliquid quo rerum
-                temporibus ipsum distinctio numquam ut omnis placeat, nam sint atque quos dolorem laborum? Rerum, esse
-                dolorem.
-            </p>
-            <a class="btn" href="http://127.0.0.1:8000/selayangpandang">Makna Logo</a>
-        </div>
-        <div class="img">
-            <img src="/img/coba12.png">
-        </div>
+                <p>
+                      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellendus rem eos aliquid quo rerum
+                      temporibus ipsum distinctio numquam ut omnis placeat, nam sint atque quos dolorem laborum? Rerum, esse
+                      dolorem.
+                </p>
+                <a class="btn-as" href="http://127.0.0.1:8000/selayangpandang">Makna Logo</a>
+          </div>
+          <div class="img">
+                <img src="/img/coba12.png">
+          </div>
     </header>
 
     <section class="container">
@@ -227,7 +266,33 @@
     <div class="copyright">
         Copyright © 2023 SENAT FH UNDIP. All Rights Reserved.
     </div>
+    <script>
+        const showMenu = (headerToggle, navbarId) =>{
+    const toggleBtn = document.getElementById(headerToggle),
+    nav = document.getElementById(navbarId)
+    
+    // Validate that variables exist
+    if(headerToggle && navbarId){
+        toggleBtn.addEventListener('click', ()=>{
+            // We add the show-menu class to the div tag with the nav__menu class
+            nav.classList.toggle('show-menu')
+            // change icon
+            toggleBtn.classList.toggle('bx-x')
+        })
+    }
+}
+showMenu('header-toggle','navbar')
 
+/*==================== LINK ACTIVE ====================*/
+const linkColor = document.querySelectorAll('.nav-links')
+
+function colorLink(){
+    linkColor.forEach(l => l.classList.remove('active'))
+    this.classList.add('active')
+}
+
+linkColor.forEach(l => l.addEventListener('click', colorLink))
+    </script>
     <script src="js-aktivitas-legislasi.js"></script>
     <script src="js-aktivitas-sm-fh.js"></script>
 </body>

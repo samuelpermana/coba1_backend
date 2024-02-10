@@ -182,7 +182,7 @@ section .header-JD {
   section .headerJD {
     color: #cfb53b;
     margin-bottom: 3rem;
-    font-size: 4rem;
+    font-size: calc(3rem + 5px);
     font-weight: 700;
     line-height: 4rem;
     margin-top: 2rem;
@@ -385,6 +385,9 @@ section .header-JD {
 =======
   
   @media (width < 900px) {
+    .features-JD{
+      grid-template-columns: repeat(2, 1fr);
+    }
     .nav-links {
       display: none;
     }
@@ -419,7 +422,9 @@ section .header-JD {
     header .image::before {
       display: none;
     }
-  
+    .features-JD{
+      grid-template-columns: repeat(1, 1fr);
+    }
     .features {
       grid-template-columns: repeat(1, 1fr);
     }

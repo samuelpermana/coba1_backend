@@ -179,7 +179,7 @@ nav {
     border-collapse: collapse;
     margin: 25px 0;
     font-size: 1.2rem;
-    width: 800px;
+    width: 90%;
     border-radius: 10px 10px 10px 10px;
     overflow: hidden;
     margin-left: auto;
@@ -206,6 +206,7 @@ nav {
     font-family: 'Poppins', sans-serif;
     color: #fff;
     border-bottom: 1px solid #fff;
+    font-size: calc(1vw + 5px);
   }
   
   footer {
