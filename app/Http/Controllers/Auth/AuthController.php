@@ -10,9 +10,13 @@ use App\Http\Requests\CreateAccountRequest;
 use App\Models\User;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Http\RedirectResponse;
 
 class AuthController extends Controller
 {
+    public function index(){
+        return  view('auth.login');
+    }
     // Create Account
     public function createAccount(CreateAccountRequest $request) {
         try {
@@ -41,47 +45,54 @@ class AuthController extends Controller
 
 
 // login
-    public function login(LoginRequest $request)
-    {
-        try {
-            $user = User::where('email', $request->input('email'))->first();
-            if (!$user) {
-                throw new Exception('Akun Tidak Ditemukan!', 400);
-            }
-            if (empty($user) || !Hash::check($request->input('password'), $user->password)) {
-                throw new Exception('Email/Password Salah!', 400);
-            }
-            if (!$token = auth()->attempt(['email' => $request->input('email'), 'password' => $request->input('password')])) {
-                return response()->json(['error' => 'Unauthorized'], 401);
-            }
+public function login(LoginRequest $request)
+{
+    try {
+        $credentials = $request->validate([
+            'email' => ['required', 'email'],
+            'password' => ['required'],
+        ]);
 
-            $data = [
-                'id' => auth()->user()->id,
-                'name' => auth()->user()->name,
-                'email' => auth()->user()->email,
-                'role' => auth()->user()->role->role_slug,
-                'access_token' => $token,
-                'token_type' => 'bearer',
-                'expires_in' => auth('api')->factory()->getTTL() * 60
-            ];
-            return response_success($data, "Login successfully");
-        } catch (\Exception $e) {
-            return response_error(null, $e->getMessage(), $e->getCode());
+        if (Auth::attempt($credentials)) {
+            $request->session()->regenerate();
+
+            $role = Auth::user()->role->role_slug;
+            // Check user role and redirect accordingly
+            if ($role === 'admin') {
+                return redirect()->intended('/admin');
+            } elseif ($role === 'ormawa') {
+                return redirect()->intended('/ormawa/ajukansurat');
+            } elseif ($role === 'komisi') {
+                return redirect()->intended('/komisi/agendakerja');
+            } 
+
+            // If user role is not defined or recognized, you can redirect them to a default page
+            return redirect()->intended('/');
         }
+
+        // If authentication fails, redirect back with error message
+        return back()->withErrors([
+            'email' => 'The provided credentials do not match our records.',
+        ])->withInput($request->only('email'));
+
+    } catch (\Exception $e) {
+        return response_error(null, $e->getMessage(), $e->getCode());
     }
-    /**
-     * Log the user out (Invalidate the token).
-     *
-     * @return \Illuminate\Http\JsonResponse
-     */
-    public function logout()
-    {
-        try {
-            auth()->logout();
-            return response_success(null, 'Successfully logged out');
-        } catch (\Exception $e) {
-            return response_success(null, $e->getMessage(), $e->getCode());
-        }
-    }
+}
+
+/**
+ * Log the user out (Invalidate the token).
+ *
+ * @param  \Illuminate\Http\Request  $request
+ * @return \Illuminate\Http\RedirectResponse
+ */
+public function logout(Request $request): RedirectResponse
+{
+    Auth::logout();
+    $request->session()->invalidate();
+    $request->session()->regenerateToken();
+    return redirect('/');
+}
+
 
 }
