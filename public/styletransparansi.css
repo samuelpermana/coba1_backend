@@ -188,7 +188,7 @@ section .header {
   }
 
   main.table {
-    width: 70vw;
+    width: 100%;
     height: 70vh;
     background-color: #27272a;
   
@@ -215,7 +215,7 @@ section .header {
   
   .table__header .input-group {
     width: 35%;
-    height: 120%;
+    height: 140%;
     background-color: #d5d1defe;
     padding: 0 .8rem;
     border-radius: 2rem;
@@ -250,7 +250,7 @@ section .header {
   }
   
   .table__body {
-    width: 95%;
+    width: 98%;
     max-height: calc(89% - 1.6rem);
     background-color: #fffb;
   
@@ -697,6 +697,14 @@ section .header {
     footer {
       grid-template-columns: 1fr 150px;
     }
+    .table__header .input-group input {
+      width: 100%; 
+      padding: 0.5rem; 
+  }
+  .table__header .input-group:hover {
+    width: 100%; /* Mengisi lebar 100% saat dihover pada ukuran layar kecil */
+}
+
   }
 
 
