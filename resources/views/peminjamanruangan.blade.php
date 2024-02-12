@@ -1,5 +1,7 @@
 
-  <head>
+@extends("layouts.layout")
+@section("content")
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -13,14 +15,7 @@
 
   <body>
 
-    <<nav>
-      <div class="nav-logo">
-        <a href="{{ url('/') }}">
-          <img src="/img/coba1.png" alt="Logo">
-        </a>
-      </div>
 
-    </nav>
 
     <section class="container">
       <h2 class="header">PEMINJAMAN RUANGAN</h2>
