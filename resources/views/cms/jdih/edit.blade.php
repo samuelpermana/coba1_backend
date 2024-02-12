@@ -2,7 +2,7 @@
 
 @section("content")
   {{-- Content goes here --}}
-  <link href="{{ URL::asset("cms/jdih/styleedit.css") }}" rel="stylesheet">
+
   <body>
     <h1>Edit JDIH Record</h1>
 

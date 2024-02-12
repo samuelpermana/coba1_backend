@@ -7,6 +7,10 @@
   <link href="{{ URL::asset("cms/rooms/styleindex.css") }}" rel="stylesheet">
   
 
+
+  <link href="{{ URL::asset("cms/rooms/styleindex.css") }}" rel="stylesheet">
+  
+
   <body>
     <h1>Rooms List</h1>
 
@@ -14,7 +18,7 @@
       <div style="color: green;">{{ session("success") }}</div>
     @endif
 
-    <button class="btn"><a href="{{ route("admin.rooms.create") }}">Create New Room</a></button>
+    <button class="btn"><button class="btn"><a href="{{ route("admin.rooms.create") }}">Create New Room</a></button></button>
 
     <ul>
       @foreach ($rooms as $room)
@@ -37,7 +41,6 @@
             </table>
           </li>
       </table>
-
       @endforeach
     </ul>
   </body>

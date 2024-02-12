@@ -2,9 +2,21 @@
 @section("content")
   <link href="stylekotakaspirasi.css" rel="stylesheet">
 
+
+  <head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.5.0/remixicon.min.css">
+    <link rel="stylesheet" href="styleka.css">
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.5.0/remixicon.min.css" rel="stylesheet">
+    <link href="stylekotakaspirasi.css" rel="stylesheet">
+
+    <title>SENAT FH UNDIP</title>
+  </head>
+
   <section id="contact">
     <h2>KOTAK ASPIRASI</h2>
     <form action="{{ route("aspirasi.store") }}" method="POST">
+
 
       <label for="name">Nama:</label>
       <input id="name" name="name" type="text" required>

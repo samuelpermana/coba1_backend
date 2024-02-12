@@ -757,7 +757,7 @@ section .header {
     width: 70%;
 }
 
-.btn {
+.btn-as {
     padding: 1rem 2rem;
     font-size: 1rem;
     color: #fff;
@@ -773,7 +773,7 @@ section .header {
     transition: all 0.3s ease;
 }
 
-.btn:hover {
+.btn-as:hover {
     background-color: #cfb53b;
 }
 
@@ -824,7 +824,7 @@ section .header {
 
 #slideshow {
     display: block;
-    width: 550px;
+    width: 100%;
     margin: 0;
     /* position: absolute; */
     /* transform: translate(-50%, -50%); */
@@ -1535,7 +1535,80 @@ footer .column > a:hover {
     text-align: center;
 }
 
+/* Ganti latar belakang kalender */
+#calendar {
+  background-color: #323232; /* Ubah warna latar belakang sesuai keinginan Anda */
+  padding: 20px; /* Berikan padding agar konten kalender tidak terlalu dekat dengan tepi */
+  border-radius: 20px;
+}
+
+/* Atur tata letak tombol kalender */
+.fc-toolbar.fc-header-toolbar {
+  margin-bottom: 20px; /* Jarak antara toolbar dan kalender */
+}
+
+/* Atur tampilan tombol navigasi kalender */
+.fc-prev-button,
+.fc-next-button {
+  background-color: #d4af37; /* Warna latar tombol */
+  color: #fff; /* Warna teks tombol */
+  border-color: #d4af37; /* Warna garis batas tombol */
+  border-radius: 5px; /* Ubah sudut tombol */
+  padding: 5px 10px; /* Atur padding tombol */
+  margin: 0 5px; /* Atur margin antara tombol */
+  font-size: 16px; /* Ukuran teks tombol */
+}
+
+/* Efek hover pada tombol navigasi kalender */
+.fc-prev-button:hover,
+.fc-next-button:hover {
+  background-color: #B89930; /* Warna latar hover tombol */
+  border-color: #B89930; /* Warna garis batas hover tombol */
+  cursor: pointer; /* Ubah kursor saat dihover */
+}
+
+/* Atur tampilan bulan dan tahun pada kalender */
+.fc-toolbar-title {
+  font-size: 20px; /* Ukuran teks bulan dan tahun */
+  font-weight: bold; /* Beri teks bulan dan tahun bold */
+  color: #333; /* Warna teks bulan dan tahun */
+}
+
+/* Atur tampilan hari-hari di kalender */
+.fc-daygrid-day {
+  padding: 10px; /* Atur padding untuk day grid */
+  background-color: transparent; /* Warna latar belakang hari */
+  border: 1px solid #ccc; /* Tambahkan garis batas untuk hari */
+}
+
+/* Atur tampilan hari-hari pada saat dihover */
+.fc-day:hover {
+  background-color: #d4af37; /* Warna latar belakang saat dihover */
+  opacity: 0.5;
+  cursor: pointer; /* Ubah kursor saat dihover */
+}
+
+.fc-today-button{
+  background-color: #d4af37;
+  padding: 6px 10px;
+  border-radius: 5px;
+  color: white;
+  font-weight: 500;
+}
+
+.fc-toolbar-chunk{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 @media (width < 900px) {
+    #slideshow-grid{
+      grid-template-columns: repeat(1, 1fr);
+    }
+    .header__toggle{
+      display: block;
+    }
     .nav-links {
         display: none;
     }
@@ -1560,7 +1633,6 @@ footer .column > a:hover {
     header .image::before {
         display: none;
     }
-
     .features {
         grid-template-columns: repeat(1, 1fr);
     }
@@ -1581,3 +1653,4 @@ footer .column > a:hover {
 .fc-daygrid-day-number {
     color: black; /* Mengubah warna teks tanggal */
 }
+

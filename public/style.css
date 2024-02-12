@@ -451,6 +451,8 @@ footer .column > a:hover {
     text-align: center;
 }
 
+<<<<<<< HEAD
+=======
 @media (width < 900px) {
     .nav-links {
         display: none;
@@ -490,6 +492,7 @@ footer .column > a:hover {
     }
 }
 
+>>>>>>> 981d35df0dee56e8ebe93c2bf51a409e61dd5be1
 #contact {
     padding: 40px 20px;
     text-align: center;
@@ -1909,8 +1912,38 @@ section .header7 {
     text-align: center;
     font-size: 16px;
     font-weight: 600;
+<<<<<<< HEAD
+  }
+<<<<<<< HEAD
+  .credits a:hover {
+    text-decoration: underline;
+  }
+
+  .accordion-k{
+    color: #fff;
+    font-size: 1.2rem;
+    padding: 3rem 2rem;
+    width: 100%;
+    background: rgb(2, 0, 36);
+    background: linear-gradient(135deg, rgba(2, 0, 36, 1) 0%, rgba(207, 181, 59, 1) 0%, rgba(148, 27, 63, 1) 90%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: 0.5s;
+    font-family: "Poppins", sans-serif;
+  }
+
+  .panel-k{
+    text-align: center;
+=======
+  .days {
+=======
 }
 .days {
+>>>>>>> 981d35df0dee56e8ebe93c2bf51a409e61dd5be1
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
@@ -1959,6 +1992,24 @@ section .header7 {
 
 .btn3 {
     color: #fff;
+<<<<<<< HEAD
+  font-size: 1rem;
+  padding: 1rem 2rem;
+  width: 100%;
+  background: rgb(2, 0, 36);
+  background: linear-gradient(135deg, rgba(2, 0, 36, 1) 0%, rgba(207, 181, 59, 1) 0%, rgba(148, 27, 63, 1) 90%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.5s;
+  font-family: "Poppins", sans-serif;
+  }
+  .panel {
+>>>>>>> c949427b93d5eeed58f2cd88e13bd28c080b42cb
+=======
     font-size: 1rem;
     padding: 1rem 2rem;
     width: 100%;
@@ -1979,11 +2030,155 @@ section .header7 {
     font-family: "Poppins", sans-serif;
 }
 .panel {
+>>>>>>> 981d35df0dee56e8ebe93c2bf51a409e61dd5be1
     color: #fff;
     padding: 0 18px;
     border-radius: 15px;
     background-color: #770000;
     max-height: 0;
+<<<<<<< HEAD
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    overflow: hidden;
+    transition: max-height 0.5s ease-out;
+    margin-top: 10px;
+  }
+
+  .container-k{
+    max-width: 1200px;
+    margin: auto;
+    padding: 5rem 2rem;
+  }
+
+  .container-img{
+    padding-top: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .d-btn{
+    color: white;
+    margin-top: 5px;
+    padding: 5px 8px;
+    border-radius: 5px;
+    background: linear-gradient(135deg, rgba(2, 0, 36, 1) 0%, rgba(207, 181, 59, 1) 0%, rgba(148, 27, 63, 1) 90%);
+    cursor: pointer;
+  }
+
+  .agenda p{
+    height: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .container-check {
+    padding: 60px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+    font-size: 22px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+  
+  /* Hide the browser's default checkbox */
+  .container-check input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+  }
+  
+  /* Create a custom checkbox */
+  .checkmark {
+    border-radius: 5px;
+    position: absolute;
+    height: 50px;
+    width: 50px;
+    background-color: #eee;
+  }
+  
+  /* When the checkbox is checked, add a blue background */
+    .container-check input:checked ~ .checkmark {
+      background: linear-gradient(135deg, rgba(2, 0, 36, 1) 0%, rgba(207, 181, 59, 1) 0%, rgba(148, 27, 63, 1) 90%);
+    }
+  
+  /* Create the checkmark/indicator (hidden when not checked) */
+  .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+  
+  /* Show the checkmark when checked */
+  .container-check input:checked ~ .checkmark:after {
+    display: block;
+  }
+  
+  /* Style the checkmark/indicator */
+  .container-check .checkmark:after {
+    left: 20px;
+    top: 12px;
+    width: 8px;
+    height: 20px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+
+  @media (width < 900px) {
+    .nav-links {
+      display: none;
+    }
+    .panel-k{
+      grid-template-columns: repeat(1, 1fr);
+    }
+    header {
+      grid-template-columns: repeat(1, 1fr);
+    }
+    header .image {
+      grid-area: 1/1/2/2;
+    }
+    .features {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    .pricing {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    footer {
+      grid-template-columns: 1fr 200px;
+    }
+  }
+  
+  @media (width < 600px) {
+    header .image::before {
+      display: none;
+    }
+  
+    .features {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  
+    .pricing {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  
+    footer {
+      grid-template-columns: 1fr 150px;
+    }
+  }
+=======
     overflow: hidden;
     transition: max-height 0.5s ease-out;
     margin-top: 10px;
@@ -2635,6 +2830,9 @@ tbody td.active {
     }
 }
 
+<<<<<<< HEAD
+>>>>>>> c949427b93d5eeed58f2cd88e13bd28c080b42cb
+=======
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap");
 
 * {
@@ -3067,3 +3265,4 @@ footer .column > a:hover {
         grid-template-columns: 1fr 150px;
     }
 }
+>>>>>>> 981d35df0dee56e8ebe93c2bf51a409e61dd5be1
