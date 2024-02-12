@@ -1,6 +1,17 @@
+
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.5.0/remixicon.min.css"/>
+    <link rel="stylesheet" href="{{ asset('stylejdih.css') }}"/>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.18.0/font/bootstrap-icons.css" rel="stylesheet">
+    <title>JDIH</title>
+</head>
+
 @extends("layouts.layout")
 @section("content")
   <link href="{{ asset("stylejdih.css") }}" rel="stylesheet" />
+
 
   @foreach ($jdihByYear as $year => $jdihRecords)
     <section class="container">
@@ -51,3 +62,4 @@
     </section>
   @endif
 @endsection
+

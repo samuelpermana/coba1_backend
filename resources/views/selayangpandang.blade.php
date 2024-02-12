@@ -1,7 +1,19 @@
+  <head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.5.0/remixicon.min.css" />
+    <link rel="stylesheet" href="selayangpandang.css" />
+    <link rel="stylesheet" href="styleselayangpandang.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>SENAT FH UNDIP</title>
+  </head>
 @extends("layouts.layout")
 @section("content")
   <link href="styleselayangpandang.css" rel="stylesheet">
-
   <header class="container">
     <div class="content">
       <span class="blur"></span>
@@ -286,5 +298,8 @@
     </div>
   </section>
 
+
+  
   <script src="js-selayangpandang.js"></script>
 @endsection
+

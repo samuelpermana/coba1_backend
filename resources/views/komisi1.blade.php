@@ -2,11 +2,23 @@
 @section("content")
   <link href="stylekomisi1.css" rel="stylesheet">
 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.5.0/remixicon.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.5.0/remixicon.css" crossorigin="">
+
+    <link rel="stylesheet" href="komisibadan.css">
+
+    <link rel="stylesheet" href="stylekomisi1.css">
+
+    <title>SENAT FH UNDIP</title>
+</head>
+
   <section class="container">
     <h1 class="j-header4">KOMISI SATU</h1>
     <div class="container6">
       <div class="slide">
-
         <div class="item" style="background-image: url(https://images6.alphacoders.com/439/439546.jpg);">
           <div class="content">
             <div class="name">KOMISI SATU</div>
@@ -220,6 +232,8 @@
       </div>
     </div>
   </section>
+    <script src="komisibadan.js"></script>
+</body>
 
   <section class="container">
     <h2 class="header">Anggota Komisi 1</h2>

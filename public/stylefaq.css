@@ -104,7 +104,11 @@ nav {
   display: flex;
   align-items: center;
   justify-content: center;
+<<<<<<< HEAD
+  gap: 3rem;
+=======
   gap: 2rem;
+>>>>>>> 981d35df0dee56e8ebe93c2bf51a409e61dd5be1
 }
 
 .link a {
@@ -315,5 +319,8 @@ section .header {
       grid-template-columns: 1fr 150px;
     }
   }
+<<<<<<< HEAD
+=======
 
 
+>>>>>>> 981d35df0dee56e8ebe93c2bf51a409e61dd5be1
