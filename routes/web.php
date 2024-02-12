@@ -15,18 +15,19 @@ use App\Http\Controllers\JDIHController;
 use App\Http\Controllers\RuanganController;
 use App\Http\Controllers\Ormawa\AjukanDokumenController;
 use App\Http\Controllers\Ormawa\TransparansiController;
-use App\Http\Controllers\Komisi\TransparansiKomController;
-use App\Http\Controllers\Komisi\AgendaKerjaController;
-use App\Http\Controllers\Badan\AgendaKerjaBadanController;
+
+use App\Http\Controllers\Agenda\AgendaKerjaController;
+use App\Http\Controllers\AgendaWeb\AgendaWebController;
 
 use App\Models\AktivitasSenat;
 use App\Models\JDIH;
 
 
-
+// ======================== Auth ==================================
 Route::get('/login', [AuthController::class, 'index']);
 Route::post('/login', [AuthController::class, 'login'])->name('login');
 Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
+// ======================== Auth ==================================
 
 // ======================== WEBSITE ==================================
 Route::get('/', function () {
@@ -60,35 +61,33 @@ Route::get('/faq', function () {
     return view('faq');
 });
 
-Route::get('/komisi1', function () {
-    return view('komisi1');
-});
+Route::get('/tentang-komisi-i', [AgendaWebController::class, 'komisi1'])->name('tentang.komisi1');
 
-Route::get('/komisi2', function () {
+Route::get('/tentang-komisi-ii', function () {
     return view('komisi2');
 });
 
-Route::get('/komisi3', function () {
+Route::get('/tentang-komisi-iii', function () {
     return view('komisi3');
 });
 
-Route::get('/komisi4', function () {
+Route::get('/tentang-komisi-iv', function () {
     return view('komisi4');
 });
 
-Route::get('/badananggaran', function () {
+Route::get('/tentang-badan-anggaran', function () {
     return view('badananggaran');
 });
 
-Route::get('/badankehormatan', function () {
+Route::get('/tentang-badan-kehormatan', function () {
     return view('badankehormatan');
 });
 
-Route::get('/badanlegislasi', function () {
+Route::get('/tentang-badan-legislasi', function () {
     return view('badanlegislasi');
 });
 
-Route::get('/bksap', function () {
+Route::get('/tentang-bksap', function () {
     return view('bksap');
 });
 
@@ -157,18 +156,118 @@ Route::group([
 
 // ======================== END CMS ==================================
 
-// ======================== KOMISI==================================
+// ========================---------- KOMISI ----------==================================
+// ======================== KOMISI I==================================
 Route::group([
-    'prefix' => 'komisi',
-    'as' => 'komisi',
+    'prefix' => 'komisi-i',
+    'as' => 'komisi-i.',
     'middleware' => ['auth']
 ], function () {
     Route::get('/',[AgendaKerjaController::class, 'index'] );
-    Route::get('/agendakerja',[AgendaKerjaController::class, 'index'] );
+    Route::get('/agendakerja',[AgendaKerjaController::class, 'index'] )->name('agenda.index');
+
+    Route::get('/agendakerja/create', [AgendaKerjaController::class, 'showCreate'])->name('agenda.create');
     
-    Route::get('/transparansisurat', [TransparansiKomController::class, 'index']);
+    Route::post('/agendakerja', [AgendaKerjaController::class, 'store'])->name('agenda.store');
+    
+    Route::get('/agendakerja/{id}/edit', [AgendaKerjaController::class, 'showEdit'])->name('agenda.edit');
+    
+    Route::put('/agendakerja/{id}', [AgendaKerjaController::class, 'update'])->name('agenda.update');
+    
+    Route::delete('/agendakerja/{id}', [AgendaKerjaController::class, 'destroy'])->name('agenda.destroy');
+    Route::get('/transparansisurat', [TransparansiController::class, 'index']);
 });
-// ======================== END KOMIS ==================================
+// ======================== END KOMISi I==================================
+// ======================== KOMISI II==================================
+Route::group([
+    'prefix' => 'komisi-ii',
+    'as' => 'komisi-ii.',
+    'middleware' => ['auth']
+], function () {
+    Route::get('/',[AgendaKerjaController::class, 'index'] );
+    Route::get('/agendakerja',[AgendaKerjaController::class, 'index'] )->name('agenda.index');
+
+    Route::get('/agendakerja/create', [AgendaKerjaController::class, 'showCreate'])->name('agenda.create');
+    
+    Route::post('/agendakerja', [AgendaKerjaController::class, 'store'])->name('agenda.store');
+    
+    Route::get('/agendakerja/{id}/edit', [AgendaKerjaController::class, 'showEdit'])->name('agenda.edit');
+    
+    Route::put('/agendakerja/{id}', [AgendaKerjaController::class, 'update'])->name('agenda.update');
+    
+    Route::delete('/agendakerja/{id}', [AgendaKerjaController::class, 'destroy'])->name('agenda.destroy');
+    
+    Route::get('/transparansisurat', [TransparansiController::class, 'index']);
+});
+// ======================== END KOMISi II==================================
+// ======================== KOMISI III==================================
+Route::group([
+    'prefix' => 'komisi-iii',
+    'as' => 'komisi-iii.',
+    'middleware' => ['auth']
+], function () {
+    Route::get('/',[AgendaKerjaController::class, 'index'] );
+    Route::get('/agendakerja',[AgendaKerjaController::class, 'index'] )->name('agenda.index');
+
+    Route::get('/agendakerja/create', [AgendaKerjaController::class, 'showCreate'])->name('agenda.create');
+    
+    Route::post('/agendakerja', [AgendaKerjaController::class, 'store'])->name('agenda.store');
+    
+    Route::get('/agendakerja/{id}/edit', [AgendaKerjaController::class, 'showEdit'])->name('agenda.edit');
+    
+    Route::put('/agendakerja/{id}', [AgendaKerjaController::class, 'update'])->name('agenda.update');
+    
+    Route::delete('/agendakerja/{id}', [AgendaKerjaController::class, 'destroy'])->name('agenda.destroy');
+    
+    Route::get('/transparansisurat', [TransparansiController::class, 'index']);
+});
+// ======================== END KOMISi III==================================
+// ======================== KOMISI IV==================================
+Route::group([
+    'prefix' => 'komisi-iv',
+    'as' => 'komisi-iv.',
+    'middleware' => ['auth']
+], function () {
+    Route::get('/',[AgendaKerjaController::class, 'index'] );
+    Route::get('/agendakerja',[AgendaKerjaController::class, 'index'] )->name('agenda.index');
+
+    Route::get('/agendakerja/create', [AgendaKerjaController::class, 'showCreate'])->name('agenda.create');
+    
+    Route::post('/agendakerja', [AgendaKerjaController::class, 'store'])->name('agenda.store');
+    
+    Route::get('/agendakerja/{id}/edit', [AgendaKerjaController::class, 'showEdit'])->name('agenda.edit');
+    
+    Route::put('/agendakerja/{id}', [AgendaKerjaController::class, 'update'])->name('agenda.update');
+    
+    Route::delete('/agendakerja/{id}', [AgendaKerjaController::class, 'destroy'])->name('agenda.destroy');
+    
+    Route::get('/transparansisurat', [TransparansiController::class, 'index']);
+});
+// ======================== END KOMISi IV==================================
+// ======================== BADAN ANGGARAN ==================================
+Route::group([
+    'prefix' => 'badan-anggaran',
+    'as' => 'badan-anggaran.',
+    'middleware' => ['auth']
+], function () {
+    Route::get('/',[AgendaKerjaController::class, 'index'] );
+    Route::get('/agendakerja',[AgendaKerjaController::class, 'index'] )->name('agenda.index');
+
+    Route::get('/agendakerja/create', [AgendaKerjaController::class, 'showCreate'])->name('agenda.create');
+    
+    Route::post('/agendakerja', [AgendaKerjaController::class, 'store'])->name('agenda.store');
+    
+    Route::get('/agendakerja/{id}/edit', [AgendaKerjaController::class, 'showEdit'])->name('agenda.edit');
+    
+    Route::put('/agendakerja/{id}', [AgendaKerjaController::class, 'update'])->name('agenda.update');
+    
+    Route::delete('/agendakerja/{id}', [AgendaKerjaController::class, 'destroy'])->name('agenda.destroy');
+    
+    Route::get('/transparansisurat', [TransparansiController::class, 'index']);
+});
+// ======================== END BADAN ANGGARAN ==================================
+// ========================---------- KOMISI ----------==================================
+
 
 // ========================  ORMAWA ==================================
 Route::group([
@@ -183,16 +282,6 @@ Route::group([
 });
 // ======================== END ORMAWA ==================================
 
-
-// ======================== BADAN ANGGARAN ==================================
-Route::group([
-    'prefix' => 'badan',
-    'as' => 'badan'
-], function () {
-    Route::get('/',[AgendaKerjaBadanController::class, 'index'] );
-    Route::get('/agendakerja',[AgendaKerjaBadanController::class, 'index'] );
-});
-// ======================== END BADAN ANGGARAN ==================================
 
 // ======================== PIMPINAN TINGGI ==================================
 Route::group([

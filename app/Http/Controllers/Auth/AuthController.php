@@ -47,7 +47,7 @@ class AuthController extends Controller
 // login
 public function login(LoginRequest $request)
 {
-    try {
+
         $credentials = $request->validate([
             'email' => ['required', 'email'],
             'password' => ['required'],
@@ -58,16 +58,23 @@ public function login(LoginRequest $request)
 
             $role = Auth::user()->role->role_slug;
             // Check user role and redirect accordingly
-            if ($role === 'admin') {
-                return redirect()->intended('/admin');
-            } elseif ($role === 'ormawa') {
-                return redirect()->intended('/ormawa/ajukansurat');
-            } elseif ($role === 'komisi') {
-                return redirect()->intended('/komisi/agendakerja');
-            } 
-
-            // If user role is not defined or recognized, you can redirect them to a default page
-            return redirect()->intended('/');
+            switch ($role) {
+                case 'admin':
+                    return redirect()->intended('/admin');
+                    break;
+                case 'ormawa':
+                    return redirect()->intended('/ormawa/ajukansurat');
+                    break;
+                case 'komisi-i':
+                case 'komisi-ii':
+                case 'komisi-iii':
+                case 'komisi-iv':
+                case 'badan-anggaran':
+                    return redirect()->intended('/' . $role);
+                    break;
+                default:
+                    return redirect()->intended('/');
+            }
         }
 
         // If authentication fails, redirect back with error message
@@ -75,10 +82,9 @@ public function login(LoginRequest $request)
             'email' => 'The provided credentials do not match our records.',
         ])->withInput($request->only('email'));
 
-    } catch (\Exception $e) {
-        return response_error(null, $e->getMessage(), $e->getCode());
-    }
+    
 }
+
 
 /**
  * Log the user out (Invalidate the token).

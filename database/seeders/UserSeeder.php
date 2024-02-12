@@ -28,7 +28,7 @@ class UserSeeder extends Seeder
                 'name' => 'ORMAWA ' . $i,
                 'email' => 'ormawa' . $i . '@example.com',
                 'password' => Hash::make('password'),
-                'role_id' => 2, // Sesuaikan dengan id role Ormawa
+                'role_id' => 2, 
             ]);
         }
 
@@ -40,25 +40,23 @@ class UserSeeder extends Seeder
             'role_id' => 3, // Sesuaikan dengan id role Pimpinan Tinggi
         ]);
 
-        // Seeder untuk membuat 5 akun komisi
-        $komisiNames = ['Komisi 1', 'Komisi 2', 'Komisi 3', 'Komisi 4', 'Badan Anggaran'];
-        foreach ($komisiNames as $komisiName) {
-            User::create([
-                'name' => $komisiName,
-                'email' => strtolower(str_replace(' ', '', $komisiName)) . '@example.com',
-                'password' => Hash::make('password'),
-                'role_id' => 4, // Sesuaikan dengan id role Komisi
-            ]);
-        }
+        $roles = [
+            ['id' => 4, 'role_name' => 'Komisi1', 'role_slug' => 'komisi-i'],
+            ['id' => 5, 'role_name' => 'Komisi2', 'role_slug' => 'komisi-ii'],
+            ['id' => 6, 'role_name' => 'Komisi3', 'role_slug' => 'komisi-iii'],
+            ['id' => 7, 'role_name' => 'Komisi4', 'role_slug' => 'komisi-iv'],
+            ['id' => 8, 'role_name' => 'Badan Anggaran', 'role_slug' => 'badan-anggaran'],
+            ['id' => 9, 'role_name' => 'Badan Kehormatan', 'role_slug' => 'badan-kehormatan'],
+            ['id' => 10, 'role_name' => 'Badan Legislasi', 'role_slug' => 'badan-legislasi'],
+            ['id' => 11, 'role_name' => 'BKSAP', 'role_slug' => 'bksap'],
+        ];
 
-        // Seeder untuk membuat 3 akun badan
-        $badanNames = ['Badan Kehormatan', 'Badan Legislasi', 'BKSAP'];
-        foreach ($badanNames as $badanName) {
+        foreach ($roles as $role) {
             User::create([
-                'name' => $badanName,
-                'email' => strtolower(str_replace(' ', '', $badanName)) . '@example.com',
+                'name' => $role['role_name'],
+                'email' => strtolower($role['role_slug']) . '@example.com',
                 'password' => Hash::make('password'),
-                'role_id' => 5, // Sesuaikan dengan id role Badan
+                'role_id' => $role['id'],
             ]);
         }
     
