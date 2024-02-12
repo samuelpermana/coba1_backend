@@ -1,19 +1,7 @@
-  <head>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.5.0/remixicon.min.css" />
-    <link rel="stylesheet" href="selayangpandang.css" />
-    <link rel="stylesheet" href="styleselayangpandang.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-    <title>SENAT FH UNDIP</title>
-  </head>
 @extends("layouts.layout")
 @section("content")
   <link href="styleselayangpandang.css" rel="stylesheet">
+
   <header class="container">
     <div class="content">
       <span class="blur"></span>
@@ -223,7 +211,7 @@
           <div class="content">
             <div class="name">KOMISI I</div>
             <div class="des">Komisi I adalah komisi yang menaungi terkait dengan Bidang Pengembangan dan Keilmuan</div>
-            <a href="{{ route('tentang.komisi1') }}">
+            <a href="{{ url("/tentang-komisi-i") }}">
               <button>Selengkapnya</button>
             </a>
           </div>
@@ -250,7 +238,7 @@
           <div class="content">
             <div class="name">KOMISI IV</div>
             <div class="des">Komisi IV adalah komisi yang menaungi terkait bidang Advokasi, Akademik, Sarana, dan Prasarana</div>
-            <a href="{{ url("/tentang-komisi-iv") }}">
+            <a href="{{ url("/tentang-iv") }}">
               <button>Selengkapnya</button>
             </a>
           </div>
@@ -261,7 +249,7 @@
             <div class="des">
               Badan Legislasi dibentuk untuk menciptakan tata kelola organisasi yang jelas dan mempermudah pembahasan produk hukum sesuai fokus komisi
             </div>
-            <a href="{{ url("/tentang-badan-legislasi") }}">
+            <a href="{{ url("/tentang-badan-legilasi") }}">
               <button>Selengkapnya</button>
             </a>
           </div>
@@ -298,8 +286,5 @@
     </div>
   </section>
 
-
-  
   <script src="js-selayangpandang.js"></script>
 @endsection
-

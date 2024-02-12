@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 use App\Models\AgendaKerja;
 use Illuminate\Support\Facades\Auth;
 
-class AgendaKerjaController extends Controller
+class AgendaBadanController extends Controller
 {
 
     public function index()
@@ -15,12 +15,12 @@ class AgendaKerjaController extends Controller
         $user_id = auth()->id();
         $agendas = AgendaKerja::where('user_id', $user_id)->get();
 
-        return view('agenda-komisi.agendakerja', compact('agendas'));
+        return view('agenda-badan.agendakerja', compact('agendas'));
     }
 
     public function showCreate()
     {
-        return view('agenda-komisi.create-agenda');
+        return view('agenda-badan.create-agenda');
     }
 
      public function store(Request $request)
@@ -55,7 +55,7 @@ class AgendaKerjaController extends Controller
     public function showEdit($id)
     {
         $agenda = AgendaKerja::findOrFail($id);
-        return view('agenda-komisi.edit-agenda', compact('agenda'));
+        return view('agenda-badan.edit-agenda', compact('agenda'));
     }
 
     public function update(Request $request, $id)
@@ -86,7 +86,6 @@ class AgendaKerjaController extends Controller
 
 }
 
-   
     public function destroy($id)
     {
         $agenda = AgendaKerja::findOrFail($id);

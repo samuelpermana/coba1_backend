@@ -1,4 +1,4 @@
-@extends("agenda.layouts.layout")
+@extends("agenda-badan.layouts.layout")
 @section("content")
 <link href="{{ asset("styletransparansi.css") }}" rel="stylesheet">
     <section class="container">

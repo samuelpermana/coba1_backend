@@ -1,4 +1,4 @@
-@extends('agenda.layouts.layout')
+@extends('agenda-badan.layouts.layout')
 
 @section('content')
     <section class="container">

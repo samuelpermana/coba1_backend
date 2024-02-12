@@ -66,11 +66,28 @@ public function login(LoginRequest $request)
                     return redirect()->intended('/ormawa/ajukansurat');
                     break;
                 case 'komisi-i':
+                    return redirect()->intended('/komisi-i');
+                    break;
                 case 'komisi-ii':
+                    return redirect()->intended('/komisi-ii');
+                    break;
                 case 'komisi-iii':
+                    return redirect()->intended('/komisi-iii');
+                    break;
                 case 'komisi-iv':
+                    return redirect()->intended('/komisi-iii');
+                    break;
                 case 'badan-anggaran':
-                    return redirect()->intended('/' . $role);
+                    return redirect()->intended('/badan-anggaran' . $role);
+                    break;
+                case 'badan-legislasi':
+                    return redirect()->intended('/badan-legislasi' . $role);
+                    break;
+                case 'badan-kehormatan':
+                    return redirect()->intended('/badan-kehormatan' . $role);
+                    break;
+                case 'bksap':
+                    return redirect()->intended('/bksap' . $role);
                     break;
                 default:
                     return redirect()->intended('/');
