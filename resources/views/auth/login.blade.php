@@ -13,18 +13,18 @@
 
     <div class="container" id="container">
         
-    <div class="form-container sign-in">
-    <form method="POST" action="{{ route('login') }}">
-        @csrf
-        <h1>Sign In</h1>
-        <div class="social-icons"></div>
-        <span>or use your email password</span>
-        <input type="email" name="email" placeholder="Email" value="adminsmfh@gmail.com" required />
-        <input type="password" name="password" placeholder="Password" value="adminFH12!" required >
-        <a href="#">Forget Your Password?</a>
-        <button type="submit">Sign In</button>
-    </form>
-</div>
+        <div class="form-container sign-in">
+            <form method="POST" action="{{ route('login') }}">
+                @csrf
+                <h1>Sign In</h1>
+                <div class="social-icons"></div>
+                <span>or use your email password</span>
+                <input type="email" name="email" placeholder="Email" value="adminsmfh@gmail.com" required />
+                <input type="password" name="password" placeholder="Password" value="adminFH12!" required >
+                <a href="#">Forget Your Password?</a>
+                <button type="submit">Sign In</button>
+            </form>
+        </div>
 
         <div class="toggle-container">
             <div class="toggle">
@@ -35,13 +35,18 @@
                     </div>
                     <h1>Welcome Admin</h1>
                     <p>Enter your personal details to use all of site features</p>
-                    
                 </div>
             </div>
         </div>
     </div>
 
-    <script src="js-login.js"></script>
+    <script>
+        window.onload = function() {
+            @if(session('error'))
+                alert("{{ session('error') }}");
+            @endif
+        }
+    </script>
 </body>
 
 </html>
