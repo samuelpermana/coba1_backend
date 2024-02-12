@@ -34,7 +34,6 @@ body {
 }
 
 .vertical_bar {
-
     width: 300px;
 
     background: #3d5654;
@@ -79,7 +78,6 @@ body {
     border-bottom-left-radius: 25px;
     margin-bottom: 1px;
     font-size: 15px;
-
 }
 
 .vertical_bar .menu li a .icon {
@@ -158,8 +156,7 @@ body {
 }
 
 .main_container {
-
-/*     height: calc(100% - 60px); */
+    /*     height: calc(100% - 60px); */
 
     overflow: auto;
 }
@@ -220,7 +217,6 @@ body {
         width: 100%;
 
         overflow: auto;
-
     }
     .main_container .top_bar {
         border-top-left-radius: 25px;

@@ -46,32 +46,22 @@
                 </a>
               </li>
               <li>
-
                 <a href="http://127.0.0.1:8000/admin/rooms">
-
                   <span class="icon"><i class="fas fa-chart-pie"></i></span>
                   <span class="text">Ruangan</span>
                 </a>
               </li>
               <li>
-
                 <a href="http://127.0.0.1:8000/admin/room-schedules">
-
                   <span class="icon"><i class="fas fa-clock"></i></span>
                   <span class="text">Jadwal Ruangan</span>
                 </a>
               </li>
-            </ul>
-
-            <ul class="social">
               <li>
-                <a href="#"><i class="fab fa-facebook-f"></i></a>
-              </li>
-              <li>
-                <a href="#"><i class="fab fa-twitter"></i></a>
-              </li>
-              <li>
-                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="http://127.0.0.1:8000/admin/bankaspirasi">
+                  <span class="icon"><i class="fas fa-university"></i></span>
+                  <span class="text">Bank Aspirasi</span>
+                </a>
               </li>
             </ul>
           </div>
