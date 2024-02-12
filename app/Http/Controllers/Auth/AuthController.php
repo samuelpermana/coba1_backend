@@ -48,51 +48,75 @@ class AuthController extends Controller
     }
 
 
-    // login
-    public function login(LoginRequest $request)
-    {
-        try {
-            $credentials = $request->validate([
-                'email' => ['required', 'email'],
-                'password' => ['required'],
-            ]);
+// login
+public function login(LoginRequest $request)
+{
+
+        $credentials = $request->validate([
+            'email' => ['required', 'email'],
+            'password' => ['required'],
+        ]);
 
             if (Auth::attempt($credentials)) {
                 $request->session()->regenerate();
 
-                $role = Auth::user()->role->role_slug;
-                // Check user role and redirect accordingly
-                if ($role === 'admin') {
+            $role = Auth::user()->role->role_slug;
+            // Check user role and redirect accordingly
+            switch ($role) {
+                case 'admin':
                     return redirect()->intended('/admin');
-                } elseif ($role === 'ormawa') {
+                    break;
+                case 'ormawa':
                     return redirect()->intended('/ormawa/ajukansurat');
-                } elseif ($role === 'komisi') {
-                    return redirect()->intended('/komisi/agendakerja');
-                }
-
-                // If user role is not defined or recognized, you can redirect them to a default page
-                return redirect()->intended('/');
+                    break;
+                case 'komisi-i':
+                    return redirect()->intended('/komisi-i');
+                    break;
+                case 'komisi-ii':
+                    return redirect()->intended('/komisi-ii');
+                    break;
+                case 'komisi-iii':
+                    return redirect()->intended('/komisi-iii');
+                    break;
+                case 'komisi-iv':
+                    return redirect()->intended('/komisi-iii');
+                    break;
+                case 'badan-anggaran':
+                    return redirect()->intended('/badan-anggaran' . $role);
+                    break;
+                case 'badan-legislasi':
+                    return redirect()->intended('/badan-legislasi' . $role);
+                    break;
+                case 'badan-kehormatan':
+                    return redirect()->intended('/badan-kehormatan' . $role);
+                    break;
+                case 'bksap':
+                    return redirect()->intended('/bksap' . $role);
+                    break;
+                default:
+                    return redirect()->intended('/');
             }
-
-            // If authentication fails, redirect back with error message
-            return redirect()->route('login')->with('error', 'The provided credentials do not match our records.');
-        } catch (\Exception $e) {
-            return response_error(null, $e->getMessage(), $e->getCode());
         }
     }
 
 
-    /**
-     * Log the user out (Invalidate the token).
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\RedirectResponse
-     */
-    public function logout(Request $request): RedirectResponse
-    {
-        Auth::logout();
-        $request->session()->invalidate();
-        $request->session()->regenerateToken();
-        return redirect('/');
-    }
+    
+}
+
+
+/**
+ * Log the user out (Invalidate the token).
+ *
+ * @param  \Illuminate\Http\Request  $request
+ * @return \Illuminate\Http\RedirectResponse
+ */
+public function logout(Request $request): RedirectResponse
+{
+    Auth::logout();
+    $request->session()->invalidate();
+    $request->session()->regenerateToken();
+    return redirect('/');
+}
+
+
 }

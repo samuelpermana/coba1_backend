@@ -6,8 +6,10 @@ btns.forEach(function (btn) {
         this.classList.toggle("active");
         if (panel.style.maxHeight) {
             panel.style.maxHeight = null;
+            panel.style.padding = 0;
         } else {
-            panel.style.maxHeight = panel.scrollHeight + "px";
+            panel.style.padding = "10px 18px";
+            panel.style.maxHeight = panel.scrollHeight + 17 + "px";
         }
     });
 });

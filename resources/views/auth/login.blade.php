@@ -40,13 +40,7 @@
         </div>
     </div>
 
-    <script>
-        window.onload = function() {
-            @if(session('error'))
-                alert("{{ session('error') }}");
-            @endif
-        }
-    </script>
+    
 </body>
 
 </html>

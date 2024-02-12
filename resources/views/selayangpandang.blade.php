@@ -202,43 +202,43 @@
           <div class="content">
             <div class="name">BKSAP</div>
             <div class="des">Badan Kerja Sama Antar Parlemen terdiri dari Biro media dan Biro Humas</div>
-            <a href="bksap">
+            <a href="{{ url("/tentang-bksap") }}">
               <button>Selengkapnya</button>
             </a>
           </div>
         </div>
         <div class="item" style="background-image: url(https://images6.alphacoders.com/439/439546.jpg)">
           <div class="content">
-            <div class="name">KOMISI SATU</div>
-            <div class="des">Komisi 1 adalah komisi yang menaungi terkait dengan Bidang Pengembangan dan Keilmuan</div>
-            <a href="komisi1">
+            <div class="name">KOMISI I</div>
+            <div class="des">Komisi I adalah komisi yang menaungi terkait dengan Bidang Pengembangan dan Keilmuan</div>
+            <a href="{{ url("/tentang-komisi-i") }}">
               <button>Selengkapnya</button>
             </a>
           </div>
         </div>
         <div class="item" style="background-image: url(https://images6.alphacoders.com/439/439546.jpg)">
           <div class="content">
-            <div class="name">KOMISI DUA</div>
-            <div class="des">Komisi 2 adalah komisi yang menaungi terkait Bidang Minat, Bakat, Kaderisasi dan Keroharian</div>
-            <a href="komisi2">
+            <div class="name">KOMISI II</div>
+            <div class="des">Komisi II adalah komisi yang menaungi terkait Bidang Minat, Bakat, Kaderisasi dan Keroharian</div>
+            <a href="{{ url("/tentang-komisi-ii") }}">
               <button>Selengkapnya</button>
             </a>
           </div>
         </div>
         <div class="item" style="background-image: url(https://images6.alphacoders.com/439/439546.jpg)">
           <div class="content">
-            <div class="name">KOMISI TIGA</div>
-            <div class="des">Komisi 3 adalah komisi yang menangui terkait Bidang Hukum dan Hubungan Publik</div>
-            <a href="komisi3">
+            <div class="name">KOMISI III</div>
+            <div class="des">Komisi III adalah komisi yang menangui terkait Bidang Hukum dan Hubungan Publik</div>
+            <a href="{{ url("/tentang-komisi-iii") }}">
               <button>Selengkapnya</button>
             </a>
           </div>
         </div>
         <div class="item" style="background-image: url(https://images6.alphacoders.com/439/439546.jpg)">
           <div class="content">
-            <div class="name">KOMISI EMPAT</div>
-            <div class="des">Komisi 4 adalah komisi yang menaungi terkait bidang Advokasi, Akademik, Sarana, dan Prasarana</div>
-            <a href="komisi4">
+            <div class="name">KOMISI IV</div>
+            <div class="des">Komisi IV adalah komisi yang menaungi terkait bidang Advokasi, Akademik, Sarana, dan Prasarana</div>
+            <a href="{{ url("/tentang-iv") }}">
               <button>Selengkapnya</button>
             </a>
           </div>
@@ -249,7 +249,7 @@
             <div class="des">
               Badan Legislasi dibentuk untuk menciptakan tata kelola organisasi yang jelas dan mempermudah pembahasan produk hukum sesuai fokus komisi
             </div>
-            <a href="badanlegislasi">
+            <a href="{{ url("/tentang-badan-legilasi") }}">
               <button>Selengkapnya</button>
             </a>
           </div>
@@ -260,7 +260,7 @@
             <div class="des">
               Badan Kehormatan memiliki tugas untuk menegakkan tata tertib, tata beracara, dan kode etik Senat Mahasiswa Fakultas Hukum Universitas Diponegoro
             </div>
-            <a href="badankehormatan">
+            <a href="{{ url("/tentang-badan-kehormatan") }}">
               <button>Selengkapnya</button>
             </a>
           </div>
@@ -272,7 +272,7 @@
               Badan Anggaran memiliki tugas dan fungsi yang tidak jauh dari fungsi anggaran yang dimiliki oleh Senat Mahasiswa Fakultas Hukum Universitas
               Diponegoro
             </div>
-            <a href="badananggaran">
+            <a href="{{ url("/tentang-badan-anggaran") }}">
               <button>Selengkapnya</button>
             </a>
           </div>

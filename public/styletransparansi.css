@@ -73,6 +73,8 @@ body {
 }
 
 nav {
+
+/*   width: 1600px; */
   width: 100%;
   margin: 0 auto; /* Menggunakan auto untuk memastikan navbar berada di tengah */
   padding: 2rem 1rem;
@@ -104,7 +106,9 @@ nav {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 2rem;
+
+  gap: 3rem;
+
 }
 
 .link a {
@@ -140,6 +144,7 @@ nav {
   transition: all 0.3s ease;
 }
 
+
 .trans {
   padding: 1rem 2rem;
   font-size: 1rem;
@@ -151,6 +156,7 @@ nav {
   transition: all 0.3s ease;
   margin-left: 90px;
 }
+
 
 .btn:hover {
   background-color: #cfb53b;
@@ -188,7 +194,11 @@ section .header {
   }
 
   main.table {
-    width: 70vw;
+
+/*     width: 60vw; */
+
+    width: 100%;
+
     height: 70vh;
     background-color: #27272a;
   
@@ -197,7 +207,9 @@ section .header {
     border-radius: .8rem;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 1rem;
+    margin-top: 3rem;
+/*     margin-top: 1rem; */
+
   
     overflow: hidden;
   }
@@ -215,7 +227,12 @@ section .header {
   
   .table__header .input-group {
     width: 35%;
-    height: 120%;
+
+    height: 100%;
+/*     height: 120%; */
+
+/*     height: 140%; */
+
     background-color: #d5d1defe;
     padding: 0 .8rem;
     border-radius: 2rem;
@@ -250,7 +267,7 @@ section .header {
   }
   
   .table__body {
-    width: 95%;
+    width: 98%;
     max-height: calc(89% - 1.6rem);
     background-color: #fffb;
   
@@ -305,7 +322,9 @@ section .header {
     cursor: pointer;
     text-transform: capitalize;
     text-align: center;
+
     z-index: 100;
+
     
   }
   
@@ -345,7 +364,7 @@ section .header {
     height: 0;
     transition: .2s ease-in-out .5s;
   }
-  
+
   .status {
     padding: .4rem 0;
     border-radius: 2rem;
@@ -375,9 +394,21 @@ section .header {
     margin: 0;
   }
 
- 
+
   
 .step-wizard-list{
+    
+    color: #333;
+    display: flex;
+    padding: 10px 5px;
+    position: relative;
+    z-index: 10;
+    height: 10%;
+    top: 0;
+    overflow-y: hidden;
+} 
+  
+/* .step-wizard-list{
   
   
   color: #333;
@@ -388,7 +419,7 @@ section .header {
   position: relative;
   transition: opacity 0.5s ease-in-out; 
   z-index: 1;
-}
+} */
 
 
 .step-wizard-item{
@@ -403,7 +434,6 @@ section .header {
     text-align: center;
     position: relative;
 }
-
 
 .step-wizard-item + .step-wizard-item:after{
     content: "";
@@ -431,8 +461,10 @@ section .header {
 }
 .progress-count:after{
     content: "";
-    height: 37px;
-    width: 37px;
+
+    height: 35px;
+    width: 35px;
+
     background: #cfb53b;
     position: absolute;
     left: 50%;
@@ -697,7 +729,12 @@ section .header {
     footer {
       grid-template-columns: 1fr 150px;
     }
+    .table__header .input-group input {
+      width: 100%; 
+      padding: 0.5rem; 
   }
+  .table__header .input-group:hover {
+    width: 100%; /* Mengisi lebar 100% saat dihover pada ukuran layar kecil */
+}
 
-
-
+  }

@@ -53,6 +53,9 @@
         </div>
       @endforeach
     </div>
-
+    <script src="js-bankaspirasi.js"></script>
+    
   </section>
+
+  <script src="js-bankaspirasi.js"></script>
 @endsection

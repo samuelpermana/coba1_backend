@@ -197,6 +197,6 @@
             </table>
         </section>
     </main>
-    <script src="script5.js"></script>
+    <script src="js-peminjamanruangan.js"></script>
 
     @endsection
