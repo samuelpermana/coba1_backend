@@ -397,8 +397,9 @@ footer .column > a:hover {
 }
 
 @media (max-width: 600px) {
-    .container {
-        min-width: 280px;
+
+    .container-AJ {
+        width: 90%;
     }
 
     .user-input-box {

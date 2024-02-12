@@ -77,12 +77,22 @@
           </div>
         </div>
         <div class="main_container">
-          <div class="top_bar">
-            <div class="hamburger">
-              <i class="fas fa-bars"></i>
-            </div>
-            <div class="logo">Senat FH <span>UNDIP</span></div>
-          </div>
+        <div class="top_bar">
+                    <div class="hamburger">
+                        <i class="fas fa-bars"></i>
+                    </div>
+                    <div class="logo">Senat FH <span>UNDIP</span></div>
+                    <!-- Tombol Logout -->
+                    <div class="logout">
+                        <a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+                            Logout
+                        </a>
+                        <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                            @csrf
+                        </form>
+                    </div>
+                </div>
+
 
           <div class="container">
             <div class="content"></div>

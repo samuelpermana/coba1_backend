@@ -73,11 +73,9 @@ body {
 }
 
 nav {
-<<<<<<< HEAD
-  width: 1600px;
-=======
+
+/*   width: 1600px; */
   width: 100%;
->>>>>>> 981d35df0dee56e8ebe93c2bf51a409e61dd5be1
   margin: 0 auto; /* Menggunakan auto untuk memastikan navbar berada di tengah */
   padding: 2rem 1rem;
   display: flex;
@@ -108,11 +106,9 @@ nav {
   display: flex;
   align-items: center;
   justify-content: center;
-<<<<<<< HEAD
+
   gap: 3rem;
-=======
-  gap: 2rem;
->>>>>>> 981d35df0dee56e8ebe93c2bf51a409e61dd5be1
+
 }
 
 .link a {
@@ -148,8 +144,7 @@ nav {
   transition: all 0.3s ease;
 }
 
-<<<<<<< HEAD
-=======
+
 .trans {
   padding: 1rem 2rem;
   font-size: 1rem;
@@ -162,7 +157,7 @@ nav {
   margin-left: 90px;
 }
 
->>>>>>> 981d35df0dee56e8ebe93c2bf51a409e61dd5be1
+
 .btn:hover {
   background-color: #cfb53b;
 }
@@ -199,11 +194,11 @@ section .header {
   }
 
   main.table {
-<<<<<<< HEAD
-    width: 60vw;
-=======
-    width: 70vw;
->>>>>>> 981d35df0dee56e8ebe93c2bf51a409e61dd5be1
+
+/*     width: 60vw; */
+
+    width: 100%;
+
     height: 70vh;
     background-color: #27272a;
   
@@ -212,11 +207,9 @@ section .header {
     border-radius: .8rem;
     margin-left: auto;
     margin-right: auto;
-<<<<<<< HEAD
     margin-top: 3rem;
-=======
-    margin-top: 1rem;
->>>>>>> 981d35df0dee56e8ebe93c2bf51a409e61dd5be1
+/*     margin-top: 1rem; */
+
   
     overflow: hidden;
   }
@@ -234,11 +227,12 @@ section .header {
   
   .table__header .input-group {
     width: 35%;
-<<<<<<< HEAD
+
     height: 100%;
-=======
-    height: 120%;
->>>>>>> 981d35df0dee56e8ebe93c2bf51a409e61dd5be1
+/*     height: 120%; */
+
+/*     height: 140%; */
+
     background-color: #d5d1defe;
     padding: 0 .8rem;
     border-radius: 2rem;
@@ -273,7 +267,7 @@ section .header {
   }
   
   .table__body {
-    width: 95%;
+    width: 98%;
     max-height: calc(89% - 1.6rem);
     background-color: #fffb;
   
@@ -328,10 +322,9 @@ section .header {
     cursor: pointer;
     text-transform: capitalize;
     text-align: center;
-<<<<<<< HEAD
-=======
+
     z-index: 100;
->>>>>>> 981d35df0dee56e8ebe93c2bf51a409e61dd5be1
+
     
   }
   
@@ -371,11 +364,7 @@ section .header {
     height: 0;
     transition: .2s ease-in-out .5s;
   }
-<<<<<<< HEAD
 
-=======
-  
->>>>>>> 981d35df0dee56e8ebe93c2bf51a409e61dd5be1
   .status {
     padding: .4rem 0;
     border-radius: 2rem;
@@ -405,7 +394,7 @@ section .header {
     margin: 0;
   }
 
-<<<<<<< HEAD
+
   
 .step-wizard-list{
     
@@ -417,12 +406,9 @@ section .header {
     height: 10%;
     top: 0;
     overflow-y: hidden;
-}
-
-=======
- 
+} 
   
-.step-wizard-list{
+/* .step-wizard-list{
   
   
   color: #333;
@@ -433,10 +419,9 @@ section .header {
   position: relative;
   transition: opacity 0.5s ease-in-out; 
   z-index: 1;
-}
+} */
 
 
->>>>>>> 981d35df0dee56e8ebe93c2bf51a409e61dd5be1
 .step-wizard-item{
     padding: 0 20px;
     flex-basis: 0;
@@ -449,11 +434,7 @@ section .header {
     text-align: center;
     position: relative;
 }
-<<<<<<< HEAD
-=======
 
-
->>>>>>> 981d35df0dee56e8ebe93c2bf51a409e61dd5be1
 .step-wizard-item + .step-wizard-item:after{
     content: "";
     position: absolute;
@@ -480,13 +461,10 @@ section .header {
 }
 .progress-count:after{
     content: "";
-<<<<<<< HEAD
+
     height: 35px;
     width: 35px;
-=======
-    height: 37px;
-    width: 37px;
->>>>>>> 981d35df0dee56e8ebe93c2bf51a409e61dd5be1
+
     background: #cfb53b;
     position: absolute;
     left: 50%;
@@ -751,10 +729,12 @@ section .header {
     footer {
       grid-template-columns: 1fr 150px;
     }
+    .table__header .input-group input {
+      width: 100%; 
+      padding: 0.5rem; 
   }
-<<<<<<< HEAD
-=======
+  .table__header .input-group:hover {
+    width: 100%; /* Mengisi lebar 100% saat dihover pada ukuran layar kecil */
+}
 
-
-
->>>>>>> 981d35df0dee56e8ebe93c2bf51a409e61dd5be1
+  }

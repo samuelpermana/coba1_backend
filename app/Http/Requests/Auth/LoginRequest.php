@@ -35,10 +35,7 @@ class LoginRequest extends FormRequest
         throw new HttpResponseException(response_error(null, $validator->errors(), 422));
     }
 
-    public function validationData()
-    {
-        return $this->json()->all();
-    }
+
 
     /**
      * Get the rate limiting throttle key for the request.
