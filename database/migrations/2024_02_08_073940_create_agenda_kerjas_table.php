@@ -15,6 +15,7 @@ class CreateAgendaKerjasTable extends Migration
             $table->id();
             $table->unsignedBigInteger('user_id');
             $table->string('nama');
+            $table->string('deskripsi');
             $table->boolean('status')->default(false);
             $table->string('file'); 
             $table->date('tanggal_pelaksanaan');

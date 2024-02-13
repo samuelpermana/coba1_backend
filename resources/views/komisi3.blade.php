@@ -63,11 +63,11 @@
     <h2 class="header">Agenda Kerja</h2>
     @foreach ($agendas['Komisi3'] as $agenda)
     <div class="tag-divide">
-        <button class="accordion-k">Agenda 1</button>
+        <button class="accordion-k">{{ $agenda->nama }}</button>
         <div class="panel-k">
             <div class="agenda">
                 <h2 class="title-k">Agenda</h2>
-                <p>{{ $agenda->nama }}</p>
+                <p>{{ $agenda->deskripsi }}</p>
             </div>
             <div class="check">
                 <div class="title-k">

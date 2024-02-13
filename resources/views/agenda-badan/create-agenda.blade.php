@@ -10,6 +10,10 @@
                 <input type="text" name="nama" class="form-control" id="nama" required>
             </div>
             <div class="form-group">
+                <label for="deskripsi">Deskripsi:</label>
+                <textarea name="deskripsi" class="form-control" id="deskripsi" rows="5" required></textarea>
+            </div>
+            <div class="form-group">
                 <label for="status">Status:</label>
                 <div class="form-check">
                     <input class="form-check-input" type="checkbox" value="1" name="status" id="status">

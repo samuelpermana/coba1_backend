@@ -11,8 +11,12 @@
                 <input type="text" name="nama" class="form-control" id="nama" value="{{ $agenda->nama }}" required>
             </div>
             <div class="form-group">
+                <label for="deskripsi">Deskripsi:</label>
+                <textarea name="deskripsi" class="form-control" id="deskripsi" rows="5" required>{{ $agenda->deskripsi }}</textarea>
+            </div>
+            <div class="form-group">
                 <label for="status">Status:</label>
-                <<input class="form-check-input" type="checkbox" value="1" name="status" id="status">
+                <input class="form-check-input" type="checkbox" value="1" name="status" id="status" {{ $agenda->status == 1 ? 'checked' : '' }}>
             </div>
             <div class="form-group">
                 <label for="file">Dokumen:</label>

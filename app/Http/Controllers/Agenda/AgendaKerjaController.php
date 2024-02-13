@@ -27,7 +27,8 @@ class AgendaKerjaController extends Controller
      {
          $validatedData = $request->validate([
              'nama' => 'required|string|max:255',
-             'status' => 'nullable|boolean', 
+             'status' => 'nullable|boolean',
+             'deskripsi'=>'required|string',
              'file' => 'required|file',
              'tanggal_pelaksanaan' => 'required|date',
          ]);
@@ -40,6 +41,7 @@ class AgendaKerjaController extends Controller
          AgendaKerja::create([
              'user_id' => $user_id,
              'nama' => $validatedData['nama'],
+             'deskripsi' => $validatedData['deskripsi'],
              'status' => $validatedData['status'],
              'file' => $validatedData['file']->store('files', 'public'),
              'tanggal_pelaksanaan' => $validatedData['tanggal_pelaksanaan'],
@@ -64,6 +66,7 @@ class AgendaKerjaController extends Controller
     
         $validatedData = $request->validate([
             'nama' => 'required|string|max:255',
+            'deskripsi'=>'required|string',
             'status' => 'nullable|boolean', 
             'file' => 'nullable|file',
             'tanggal_pelaksanaan' => 'required|date',
@@ -73,6 +76,7 @@ class AgendaKerjaController extends Controller
         }
     
         $agenda->nama = $validatedData['nama'];
+        $agenda->deskripsi = $validatedData['deskripsi'];
         $agenda->status = $validatedData['status'];
         $agenda->tanggal_pelaksanaan = $validatedData['tanggal_pelaksanaan'];
    

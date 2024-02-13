@@ -12,6 +12,7 @@ class AgendaKerja extends Model
     protected $fillable = [
         'user_id',
         'nama',
+        'deskripsi',
         'status',
         'file',
         'tanggal_pelaksanaan',
