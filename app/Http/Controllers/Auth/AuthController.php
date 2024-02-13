@@ -11,7 +11,7 @@ use App\Models\User;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\RedirectResponse;
-use Illuminate\Validation\ValidationException; // Import ValidationException class
+// use Illuminate\Validation\ValidationException; 
 
 class AuthController extends Controller
 {
@@ -51,72 +51,65 @@ class AuthController extends Controller
 // login
 public function login(LoginRequest $request)
 {
+    $credentials = $request->validate([
+        'email' => ['required', 'email'],
+        'password' => ['required'],
+    ]);
 
-        $credentials = $request->validate([
-            'email' => ['required', 'email'],
-            'password' => ['required'],
-        ]);
+    if (Auth::attempt($credentials)) {
+        $request->session()->regenerate();
 
-            if (Auth::attempt($credentials)) {
-                $request->session()->regenerate();
+        $role = Auth::user()->role->role_slug;
 
-            $role = Auth::user()->role->role_slug;
-            // Check user role and redirect accordingly
-            switch ($role) {
-                case 'admin':
-                    return redirect()->intended('/admin');
-                    break;
-                case 'ormawa':
-                    return redirect()->intended('/ormawa/ajukansurat');
-                    break;
-                case 'komisi-i':
-                    return redirect()->intended('/komisi-i');
-                    break;
-                case 'komisi-ii':
-                    return redirect()->intended('/komisi-ii');
-                    break;
-                case 'komisi-iii':
-                    return redirect()->intended('/komisi-iii');
-                    break;
-                case 'komisi-iv':
-                    return redirect()->intended('/komisi-iii');
-                    break;
-                case 'badan-anggaran':
-                    return redirect()->intended('/badan-anggaran' . $role);
-                    break;
-                case 'badan-legislasi':
-                    return redirect()->intended('/badan-legislasi' . $role);
-                    break;
-                case 'badan-kehormatan':
-                    return redirect()->intended('/badan-kehormatan' . $role);
-                    break;
-                case 'bksap':
-                    return redirect()->intended('/bksap' . $role);
-                    break;
-                default:
-                    return redirect()->intended('/');
-            }
+        switch ($role) {
+            case 'admin':
+                return redirect()->route('admin.dashboard');
+                break;
+            case 'ormawa':
+                return redirect()->route('ormawa.ajukansurat');
+                break;
+            case 'komisi-i':
+                return redirect()->route('komisi-i.agenda.index');
+                break;
+            case 'komisi-ii':
+                return redirect()->route('komisi-ii.agenda.index');
+                break;
+            case 'komisi-iii':
+                return redirect()->route('komisi-iii.agenda.index');
+                break;
+            case 'komisi-iv':
+                return redirect()->route('komisi-iv.agenda.index');
+                break;
+            case 'badan-anggaran':
+                return redirect()->route('badan-anggaran.agenda.index');
+                break;
+            case 'badan-legislasi':
+                return redirect()->route('badan-legislasi.agenda.index');
+                break;
+            case 'badan-kehormatan':
+                return redirect()->route('badan-kehormatan.agenda.index');
+                break;
+            case 'bksap':
+                return redirect()->route('bksap.agenda.index');
+                break;
+            default:
+                return redirect()->route('index'); // Ganti dengan nama rute yang sesuai
         }
     }
-
-
-    
 }
+    /**
+     * Log the user out (Invalidate the token).
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @return \Illuminate\Http\RedirectResponse
+     */
+    public function logout(Request $request): RedirectResponse
+    {
+        Auth::logout();
+        $request->session()->invalidate();
+        $request->session()->regenerateToken();
+        return redirect('/');
+    }    
+}    
 
 
-/**
- * Log the user out (Invalidate the token).
- *
- * @param  \Illuminate\Http\Request  $request
- * @return \Illuminate\Http\RedirectResponse
- */
-public function logout(Request $request): RedirectResponse
-{
-    Auth::logout();
-    $request->session()->invalidate();
-    $request->session()->regenerateToken();
-    return redirect('/');
-}
-
-
-}
