@@ -19,6 +19,7 @@
   </head>
 
   <body>
+    
     <nav>
       <div class="nav-logo">
         <a href="{{ url("/") }}">

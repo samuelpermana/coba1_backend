@@ -1,6 +1,6 @@
 @extends("agenda-badan.layouts.layout")
 @section("content")
-<link href="{{ asset("styletransparansi.css") }}" rel="stylesheet">
+<link href="{{ asset("styleagenda.css") }}" rel="stylesheet">
     <section class="container">
         <h2 class="header">Agenda Kerja</h2>
         <p class="sub-header">Transparansi Agenda Kerja Komisi </p>
@@ -36,7 +36,7 @@
                         <td>{{ $agenda->status }}</td>
                         <td><a href="{{ Storage::url($agenda->file) }}" target="_blank">Download</a></td>
                         <td>
-                            <a href="{{ route(auth()->user()->role->role_slug . '.agenda.edit', $agenda->id) }}" class="btn btn-primary">Edit</a>
+                            <a href="{{ route(auth()->user()->role->role_slug . '.agenda.edit', $agenda->id) }}" class="btn btn-primary1">Edit</a>
                             <form action="{{ route(auth()->user()->role->role_slug . '.agenda.destroy', $agenda->id) }}" method="POST" style="display: inline-block;">
                                 @csrf
                                 @method('DELETE')
