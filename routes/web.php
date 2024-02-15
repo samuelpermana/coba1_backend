@@ -26,7 +26,7 @@ use App\Models\JDIH;
 
 // ======================== Auth ==================================
 Route::get('/login', [AuthController::class, 'index']);
-Route::post('/login', [AuthController::class, 'login'])->name('login');
+Route::post('/login-user', [AuthController::class, 'login'])->name('login');
 Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
 // ======================== Auth ==================================
 
@@ -118,7 +118,7 @@ Route::group([
     Route::put('/aktivitas/{id}', [AktivitasSenatAdminCtrl::class, 'update'])->name('aktivitasSenat.update');
     Route::delete('/aktivitas/{id}', [AktivitasSenatAdminCtrl::class, 'destroy'])->name('aktivitasSenat.destroy');
 
-    Route::get('events/list', [EventAdminController::class, 'listEvent'])->name('events.list');
+    Route::get('events/list', [EventAdminController::class, 'listEvent'])->name('legislasi.list');
     Route::resource('events', EventAdminController::class);
 
     Route::get('', function () {

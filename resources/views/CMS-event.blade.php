@@ -42,7 +42,7 @@
             var calendar = new FullCalendar.Calendar(calendarEl, {
             initialView: 'dayGridMonth',
             themeSystem: 'bootstrap5',
-            events: `{{ route('admin.events.list') }}`,
+            events: `{{ route('admin.legislasi.list') }}`,
             editable: true,
             dateClick: function (info) {
                 $.ajax({

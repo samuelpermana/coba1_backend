@@ -22,18 +22,20 @@
                         <th> Nama Agenda <span class="icon-arrow">&UpArrow;</span></th>
                         <th> Tanggal Pelaksanaan <span class="icon-arrow">&UpArrow;</span></th>
                         <th> Status <span class="icon-arrow">&UpArrow;</span></th>
+                        <th> Deskripsi <span class="icon-arrow">&UpArrow;</span></th>
                         <th> Dokumen <span class="icon-arrow">&UpArrow;</span></th>
                         <th> Action <span class="icon-arrow">&UpArrow;</span></th>
                         
                     </tr>
                 </thead>
                 <tbody>
-                    @foreach($agendas as $agenda)
+                @foreach($agendas as $agenda)
                     <tr>
                         <td>{{ $loop->iteration }}</td>
                         <td>{{ $agenda->nama }}</td>
                         <td>{{ $agenda->tanggal_pelaksanaan }}</td>
                         <td>{{ $agenda->status }}</td>
+                        <td>{{ $agenda->deskripsi }}</td> <!-- Tambahkan kolom deskripsi di sini -->
                         <td><a href="{{ Storage::url($agenda->file) }}" target="_blank">Download</a></td>
                         <td>
                             <a href="{{ route(auth()->user()->role->role_slug . '.agenda.edit', $agenda->id) }}" class="btn btn-primary1">Edit</a>
@@ -44,7 +46,7 @@
                             </form>
                         </td>
                     </tr>
-                    @endforeach
+                @endforeach
                 </tbody>
             </table>
         </section>
