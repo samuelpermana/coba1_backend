@@ -30,7 +30,7 @@
             border-color: white; /* Mengubah warna border menjadi putih */
         }
     </style>
-  <div class="container-bg">
+<div class="container-bg">
     <div class="blob-bg">
     </div>
   </div>
