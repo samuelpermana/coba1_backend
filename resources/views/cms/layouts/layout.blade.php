@@ -25,7 +25,7 @@
             <ul class="menu">
               <li>
 
-                <a href="http://127.0.0.1:8000/admin">
+                <a href="{{ url("/admin") }}">
 
                   <span class="icon"><i class="fas fa-home"></i></span>
                   <span class="text">Dashboard</span>
@@ -33,32 +33,32 @@
               </li>
               <li>
 
-                <a href="http://127.0.0.1:8000/admin/aktivitas">
+                <a href="{{ url("/admin/aktivitas") }}">
 
                   <span class="icon"><i class="fas fa-user"></i></span>
                   <span class="text">Aktivitas Senat</span>
                 </a>
               </li>
               <li>
-                <a href="jdih">
+                <a href="{{ url("/admin/jdih") }}">
                   <span class="icon"><i class="fas fa-file-alt"></i></span>
                   <span class="text">JDIH</span>
                 </a>
               </li>
               <li>
-                <a href="http://127.0.0.1:8000/admin/rooms">
+                <a href="{{ url("/admin/rooms") }}">
                   <span class="icon"><i class="fas fa-chart-pie"></i></span>
                   <span class="text">Ruangan</span>
                 </a>
               </li>
               <li>
-                <a href="http://127.0.0.1:8000/admin/room-schedules">
+                <a href="{{ url("/admin/room-schedules") }}">
                   <span class="icon"><i class="fas fa-clock"></i></span>
                   <span class="text">Jadwal Ruangan</span>
                 </a>
               </li>
               <li>
-                <a href="http://127.0.0.1:8000/admin/bankaspirasi">
+                <a href="{{ url("/admin/bankaspirasi") }}">
                   <span class="icon"><i class="fas fa-university"></i></span>
                   <span class="text">Bank Aspirasi</span>
                 </a>

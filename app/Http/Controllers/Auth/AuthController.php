@@ -92,6 +92,9 @@ public function login(LoginRequest $request)
             case 'bksap':
                 return redirect()->route('bksap.agenda.index');
                 break;
+            case 'pimpinan':
+                return redirect()->route('pimpinan.proposal.belum-diperiksa');
+                break;
             default:
                 return redirect()->route('index'); // Ganti dengan nama rute yang sesuai
         }

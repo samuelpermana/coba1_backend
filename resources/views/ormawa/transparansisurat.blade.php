@@ -18,180 +18,65 @@
             <table>
                 <thead>
                     <tr>
-                        <th> No <span class="icon-arrow">&UpArrow;</span></th>
-                        <th> Ormawa <span class="icon-arrow">&UpArrow;</span></th>
-                        <th> Ruangan <span class="icon-arrow">&UpArrow;</span></th>
-                        <th> Tanggal <span class="icon-arrow">&UpArrow;</span></th>
-                        <th> Tracking Surat <span class="icon-arrow">&UpArrow;</span></th>
-                        <th> Surat <span class="icon-arrow">&UpArrow;</span></th>
+                        <th> No </th>
+                        <th> Judul Proposal </th>
+                        <th> Deskripsi </th>
+                        <th> Tanggal </th>
+                        <th> Tracking Surat </th>
+                        <th> Status </th>
+                        <th> Surat </th>
+                        <th> Lama Proses </th>
                         
                     </tr>
                 </thead>
                 <tbody>
+                @forelse ($proposalData as $proposal)
                     <tr>
                         <td> 1 </td>
-                        <td>BASKET</td>
-                        <td> A.305 </td>
-                        <td> 17 Dec, 2024 </td>
+                        <td>{{ $proposal['judul'] }}</td>
+                        <td>{{ $proposal['deskripsi'] }}</td>
+                        <td>{{ $proposal['created_at'] }} </td>
                         <td>
-                            <section class="step-wizard">
-                                <ul class="step-wizard-list">
-                                    <li class="step-wizard-item">
-                                        <span class="progress-count">1</span>
-                                        <span class="progress-label">Pengajuan</span>
-                                    </li>
-                                    <li class="step-wizard-item current-item">
-                                        <span class="progress-count">2</span>
-                                        <span class="progress-label">Admin</span>
-                                    </li>
-                                    <li class="step-wizard-item">
-                                        <span class="progress-count">3</span>
-                                        <span class="progress-label">komisi 3</span>
-                                    </li>
-                                    <li class="step-wizard-item">
-                                        <span class="progress-count">4</span>
-                                        <span class="progress-label">wakil senat</span>
-                                    </li>
-                                </ul>
-                            </section>
-                        </td>
+                        <section class="step-wizard">
+                            <ul class="step-wizard-list">
+                                <li class="step-wizard-item @if($proposal['status'] == 'admin') current-item @endif">
+                                    <span class="progress-count">1</span>
+                                    <span class="progress-label">Admin</span>
+                                </li>
+                                <li class="step-wizard-item @if($proposal['status'] == 'komisi') current-item @endif">
+                                    <span class="progress-count">2</span>
+                                    <span class="progress-label">Komisi</span>
+                                </li>
+                                <li class="step-wizard-item @if($proposal['status'] == 'badan anggaran') current-item @endif">
+                                    <span class="progress-count">3</span>
+                                    <span class="progress-label">Badan Anggaran</span>
+                                </li>
+                                <li class="step-wizard-item @if($proposal['status'] == 'sekjen') current-item @endif">
+                                    <span class="progress-count">4</span>
+                                    <span class="progress-label">SekJen</span>
+                                </li>
 
-                        <td><span class="blue"><img class="star-img" src="/img/filetransparan.svg" alt="" /></span></td>
-                        
+                            </ul>
+                        </section>
+                    </td>
+                    <td>{{ $proposal['status_persetujuan'] }}
+                        @if ($proposal['status_persetujuan'] == 'revised')
+                            <br>
+                            <a href="{{ route('ormawa.proposal.revisi', $proposal['id']) }}" target="_blank">Lihat Detail Revisi dan Kirimkan Revisi Proposal</a>
+                        @endif
+                    </td>
+
+                        <td>
+                        <a href="{{ Storage::url($proposal['file_proposal']) }}"target="_blank>
+                            <span class="blue"><img class="star-img" src="/img/filetransparan.svg" alt="" /></span>
+                        </a>
+                        </td>  
                     </tr>
+                    @empty
                     <tr>
-                        <td> 2 </td>
-                        <td>BASKET</td>
-                        <td> A.305 </td>
-                        <td> 27 Aug, 2023 </td>
-                        
-
-                        <td>
-                            <section class="step-wizard">
-                                <ul class="step-wizard-list">
-                                    <li class="step-wizard-item">
-                                        <span class="progress-count">1</span>
-                                        <span class="progress-label">Pengajuan</span>
-                                    </li>
-                                    <li class="step-wizard-item current-item">
-                                        <span class="progress-count">2</span>
-                                        <span class="progress-label">Admin</span>
-                                    </li>
-                                    <li class="step-wizard-item">
-                                        <span class="progress-count">3</span>
-                                        <span class="progress-label">komisi 3</span>
-                                    </li>
-                                    <li class="step-wizard-item">
-                                        <span class="progress-count">4</span>
-                                        <span class="progress-label">wakil senat</span>
-                                    </li>
-                                </ul>
-                            </section>
-                        </td>
-
-                        <td><span class="blue"><img class="star-img" src="/img/filetransparan.svg" alt="" /></span></td>
-
-                        
+                        <td colspan="6">Tidak ada data proposal.</td>
                     </tr>
-                    <tr>
-                        <td> 3</td>
-                        <td>BASKET</td>
-                        <td> A.305 </td>
-                        <td> 14 Mar, 2023 </td>
-                        
-
-                        <td>
-                            <section class="step-wizard">
-                                <ul class="step-wizard-list">
-                                    <li class="step-wizard-item">
-                                        <span class="progress-count">1</span>
-                                        <span class="progress-label">Pengajuan</span>
-                                    </li>
-                                    <li class="step-wizard-item current-item">
-                                        <span class="progress-count">2</span>
-                                        <span class="progress-label">Admin</span>
-                                    </li>
-                                    <li class="step-wizard-item">
-                                        <span class="progress-count">3</span>
-                                        <span class="progress-label">komisi 3</span>
-                                    </li>
-                                    <li class="step-wizard-item">
-                                        <span class="progress-count">4</span>
-                                        <span class="progress-label">wakil senat</span>
-                                    </li>
-                                </ul>
-                            </section>
-                        </td>
-
-                        <td><span class="blue"><img class="star-img" src="/img/filetransparan.svg" alt="" /></span></td>
-                        
-                    </tr>
-                    <tr>
-                        <td> 4</td>
-                        <td>BASKET</td>
-                        <td> A.305 </td>
-                        <td> 25 May, 2023 </td>
-                        
-
-                        <td>
-                            <section class="step-wizard">
-                                <ul class="step-wizard-list">
-                                    <li class="step-wizard-item">
-                                        <span class="progress-count">1</span>
-                                        <span class="progress-label">Pengajuan</span>
-                                    </li>
-                                    <li class="step-wizard-item current-item">
-                                        <span class="progress-count">2</span>
-                                        <span class="progress-label">Admin</span>
-                                    </li>
-                                    <li class="step-wizard-item">
-                                        <span class="progress-count">3</span>
-                                        <span class="progress-label">komisi 3</span>
-                                    </li>
-                                    <li class="step-wizard-item">
-                                        <span class="progress-count">4</span>
-                                        <span class="progress-label">wakil senat</span>
-                                    </li>
-                                </ul>
-                            </section>
-                        </td>
-
-                        <td><span class="blue"><img class="star-img" src="/img/filetransparan.svg" alt="" /></span></td>
-                        
-                    </tr>
-                    <tr>
-                        <td> 5</td>
-                        <td>BASKET</td>
-                        <td> A.305 </td>
-                        <td> 23 Apr, 2023 </td>
-                       
-
-                        <td>
-                            <section class="step-wizard">
-                                <ul class="step-wizard-list">
-                                    <li class="step-wizard-item">
-                                        <span class="progress-count">1</span>
-                                        <span class="progress-label">Pengajuan</span>
-                                    </li>
-                                    <li class="step-wizard-item current-item">
-                                        <span class="progress-count">2</span>
-                                        <span class="progress-label">Admin</span>
-                                    </li>
-                                    <li class="step-wizard-item">
-                                        <span class="progress-count">3</span>
-                                        <span class="progress-label">komisi 3</span>
-                                    </li>
-                                    <li class="step-wizard-item">
-                                        <span class="progress-count">4</span>
-                                        <span class="progress-label">wakil senat</span>
-                                    </li>
-                                </ul>
-                            </section>
-                        </td>
-
-                        <td><span class="blue"><img class="star-img" src="/img/filetransparan.svg" alt="" /></span></td>
-                        
-                    </tr>
+                @endforelse
                     
                 </tbody>
             </table>

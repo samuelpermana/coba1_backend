@@ -15,49 +15,54 @@ class AgendaKerjaController extends Controller
         $user_id = auth()->id();
         $agendas = AgendaKerja::where('user_id', $user_id)->get();
 
-        return view('agenda-komisi.agendakerja', compact('agendas'));
+        return view('komisi.agenda-komisi.agendakerja', compact('agendas'));
     }
 
     public function showCreate()
     {
-        return view('agenda-komisi.create-agenda');
+        return view('komisi.agenda-komisi.create-agenda');
     }
 
      public function store(Request $request)
      {
-         $validatedData = $request->validate([
-             'nama' => 'required|string|max:255',
-             'status' => 'nullable|boolean',
-             'deskripsi'=>'required|string',
-             'file' => 'required|file',
-             'tanggal_pelaksanaan' => 'required|date',
-         ]);
-         if (!isset($validatedData['status'])) {
-             $validatedData['status'] = false;
-         }
-     
-         $user_id = Auth::id();
-     
-         AgendaKerja::create([
-             'user_id' => $user_id,
-             'nama' => $validatedData['nama'],
-             'deskripsi' => $validatedData['deskripsi'],
-             'status' => $validatedData['status'],
-             'file' => $validatedData['file']->store('files', 'public'),
-             'tanggal_pelaksanaan' => $validatedData['tanggal_pelaksanaan'],
+        try {
+        $validatedData = $request->validate([
+            'nama' => 'required|string|max:255',
+            'status' => 'nullable|boolean',
+            'deskripsi'=>'required|string',
+            'file' => 'required|file',
+            'tanggal_pelaksanaan' => 'required|date',
+        ]);
+        if (!isset($validatedData['status'])) {
+            $validatedData['status'] = false;
+        }
+    
+        $user_id = Auth::id();
+    
+        AgendaKerja::create([
+            'user_id' => $user_id,
+            'nama' => $validatedData['nama'],
+            'deskripsi' => $validatedData['deskripsi'],
+            'status' => $validatedData['status'],
+            'file' => $validatedData['file']->store('files', 'public'),
+            'tanggal_pelaksanaan' => $validatedData['tanggal_pelaksanaan'],
 
-         ]);
-         
+        ]);
         
-         $user_role_slug = auth()->user()->role->role_slug;
-     
-         return redirect()->route($user_role_slug . '.agenda.index')->with('success', 'Agenda kerja berhasil dibuat!');
+       
+        $user_role_slug = auth()->user()->role->role_slug;
+    
+        return redirect()->route($user_role_slug . '.agenda.index')->with('success', 'Agenda kerja berhasil dibuat!');
+     } catch (\Exception $e) {
+        return response_error(null, $e->getMessage(), $e->getCode());
+    }
+         
      }
      
     public function showEdit($id)
     {
         $agenda = AgendaKerja::findOrFail($id);
-        return view('agenda-komisi.edit-agenda', compact('agenda'));
+        return view('komisi.agenda-komisi.edit-agenda', compact('agenda'));
     }
 
     public function update(Request $request, $id)
