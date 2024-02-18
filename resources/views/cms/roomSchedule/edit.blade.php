@@ -2,6 +2,7 @@
 
 @section("content")
   {{-- Content goes here --}}
+  <link href="{{ URL::asset("cms/roomSchedule/styleedit.css") }}" rel="stylesheet">
 
   <body>
     <h1>Edit Room Schedule</h1>
@@ -39,6 +40,5 @@
       <button type="submit">Submit</button>
     </form>
   </body>
-
   {{-- Content ends here --}}
 @endsection

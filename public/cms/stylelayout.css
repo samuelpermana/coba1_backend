@@ -45,7 +45,7 @@ body {
 
 .vertical_bar .profile_info {
     text-align: center;
-    padding: 50px 25px;
+    padding: 50px 25px 20px 25px;
 }
 
 .vertical_bar .profile_info img {
@@ -185,7 +185,6 @@ body {
 .logout a:hover {
     background-color: #f59c33; /* Warna latar belakang saat hover */
 }
-
 
 @media (max-width: 768px) {
     .top_bar .hamburger {
