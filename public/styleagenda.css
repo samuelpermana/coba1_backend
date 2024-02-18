@@ -773,6 +773,49 @@ label {
     background-color: #0056b3;
 }
 
+.container-revisi{
+    padding: 10px 20px;
+    border-bottom: 2px solid #aeaaaa;
+    height: 100%;
+    color: rgb(201, 193, 193);
+    border: 5px solid #27272a;
+    border-radius: 15px;
+    transition: all 0.3s ease;
+    background-color: #27272a;
+    width: 50%;
+    margin: auto
+}
+
+.form-group-revisi{
+  margin-top: 10px;
+}
+
+.form-control-file-revisi{
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+.form-control-revisi{
+  max-width: 100%;
+  width: 100%;
+  padding: 5px;
+}
+
+.header-revisi{
+  color: #b5afaf;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+.form-control-revisijudul{
+  padding: 5px;
+  width: 200px;
+  max-width: 100%;
+}
+
 @media (max-width: 768px) {
     .container {
         width: 90%;
