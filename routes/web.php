@@ -98,7 +98,7 @@ Route::get('jdih/show/{id}', [JDIHController::class, 'showJDIH'])->name('jdih.sh
 Route::group([
     'prefix' => 'admin',
     'as' => 'admin.',
-    'middleware' => ['auth']
+    'middleware' => ['auth', 'role.auth:admin']
 ], function () {
     Route::get('/bankaspirasi', [AspirasiAdminCtrl::class, 'index'])->name('index');
     Route::put('/bankaspirasi/{id}', [AspirasiAdminCtrl::class, 'update'])->name('update');
@@ -141,7 +141,7 @@ Route::group([
 Route::group([
     'prefix' => 'komisi-i',
     'as' => 'komisi-i.',
-    'middleware' => ['auth']
+    'middleware' => ['auth', 'role.auth:komisi-i']
 ], function () {
     Route::get('/',[AgendaKerjaController::class, 'index'] );
     Route::get('/agendakerja',[AgendaKerjaController::class, 'index'] )->name('agenda.index');
@@ -166,7 +166,7 @@ Route::group([
 Route::group([
     'prefix' => 'komisi-ii',
     'as' => 'komisi-ii.',
-    'middleware' => ['auth']
+    'middleware' => ['auth', 'role.auth:komisi-ii']
 ], function () {
     Route::get('/',[AgendaKerjaController::class, 'index'] );
     Route::get('/agendakerja',[AgendaKerjaController::class, 'index'] )->name('agenda.index');
@@ -192,7 +192,7 @@ Route::group([
 Route::group([
     'prefix' => 'komisi-iii',
     'as' => 'komisi-iii.',
-    'middleware' => ['auth']
+    'middleware' => ['auth', 'role.auth:komisi-iii']
 ], function () {
     Route::get('/',[AgendaKerjaController::class, 'index'] );
     Route::get('/agendakerja',[AgendaKerjaController::class, 'index'] )->name('agenda.index');
@@ -217,7 +217,7 @@ Route::group([
 Route::group([
     'prefix' => 'komisi-iv',
     'as' => 'komisi-iv.',
-    'middleware' => ['auth']
+    'middleware' => ['auth', 'role.auth:komisi-iv']
 ], function () {
     Route::get('/',[AgendaKerjaController::class, 'index'] );
     Route::get('/agendakerja',[AgendaKerjaController::class, 'index'] )->name('agenda.index');
@@ -242,7 +242,7 @@ Route::group([
 Route::group([
     'prefix' => 'badan-anggaran',
     'as' => 'badan-anggaran.',
-    'middleware' => ['auth']
+    'middleware' => ['auth', 'role.auth:badan-anggaran']
 ], function () {
     Route::get('/',[AgendaKerjaController::class, 'index'] );
     Route::get('/agendakerja',[AgendaKerjaController::class, 'index'] )->name('agenda.index');
@@ -267,7 +267,7 @@ Route::group([
 Route::group([
     'prefix' => 'badan-kehormatan',
     'as' => 'badan-kehormatan.',
-    'middleware' => ['auth']
+    'middleware' => ['auth', 'role.auth:badan-kehormatan']
 ], function () {
     Route::get('/',[AgendaBadanController::class, 'index'] );
     Route::get('/agendakerja',[AgendaBadanController::class, 'index'] )->name('agenda.index');
@@ -276,13 +276,13 @@ Route::group([
     Route::get('/agendakerja/{id}/edit', [AgendaBadanController::class, 'showEdit'])->name('agenda.edit');
     Route::put('/agendakerja/{id}', [AgendaBadanController::class, 'update'])->name('agenda.update');
     Route::delete('/agendakerja/{id}', [AgendaBadanController::class, 'destroy'])->name('agenda.destroy');
-    Route::get('/transparansisurat', [TransparansiController::class, 'index']);
+
 });
 // ======================== END BADAN Kehormatan ==================================
 Route::group([
     'prefix' => 'badan-legislasi',
     'as' => 'badan-legislasi.',
-    'middleware' => ['auth']
+    'middleware' => ['auth', 'role.auth:badan-legislasi']
 ], function () {
     Route::get('/',[AgendaBadanController::class, 'index'] );
     Route::get('/agendakerja',[AgendaBadanController::class, 'index'] )->name('agenda.index');
@@ -291,13 +291,12 @@ Route::group([
     Route::get('/agendakerja/{id}/edit', [AgendaBadanController::class, 'showEdit'])->name('agenda.edit');
     Route::put('/agendakerja/{id}', [AgendaBadanController::class, 'update'])->name('agenda.update');
     Route::delete('/agendakerja/{id}', [AgendaBadanController::class, 'destroy'])->name('agenda.destroy');
-    Route::get('/transparansisurat', [TransparansiController::class, 'index']);
 });
 // ======================== END BADAN legislasi ==================================
 Route::group([
     'prefix' => 'bksap',
     'as' => 'bksap.',
-    'middleware' => ['auth']
+    'middleware' => ['auth', 'role.auth:bksap']
 ], function () {
     Route::get('/',[AgendaBadanController::class, 'index'] );
     Route::get('/agendakerja',[AgendaBadanController::class, 'index'] )->name('agenda.index');
@@ -306,7 +305,6 @@ Route::group([
     Route::get('/agendakerja/{id}/edit', [AgendaBadanController::class, 'showEdit'])->name('agenda.edit');
     Route::put('/agendakerja/{id}', [AgendaBadanController::class, 'update'])->name('agenda.update');
     Route::delete('/agendakerja/{id}', [AgendaBadanController::class, 'destroy'])->name('agenda.destroy');
-    Route::get('/transparansisurat', [TransparansiController::class, 'index']);
 });
 // ======================== END BADAN legislasi ==================================
 
@@ -315,7 +313,7 @@ Route::group([
 Route::group([
     'prefix' => 'ormawa',
     'as' => 'ormawa.',
-    'middleware' => ['auth']
+    'middleware' => ['auth', 'role.auth:ormawa']
 ], function () {
     Route::get('/',[AjukanDokumenController::class, 'index'] );
     Route::get('/ajukansurat',[AjukanDokumenController::class, 'index'] )->name('ajukansurat');
@@ -333,7 +331,7 @@ Route::group([
 Route::group([
     'prefix' => 'pimpinan',
     'as' => 'pimpinan.',
-    'middleware' => ['auth']
+    'middleware' => ['auth', 'role.auth:pimpinan']
 ], function () {
     Route::get('/transparansisurat', [SekjenController::class, 'belumDiperiksa'])->name('proposal.belum-diperiksa');
     Route::get('/transparansisurat/revisi', [SekjenController::class, 'direvisi'])->name('proposal.direvisi');
