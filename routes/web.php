@@ -1,6 +1,8 @@
 <?php
 
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Password;
 use App\Http\Controllers\Auth\AuthController;
 use App\Http\Controllers\Admin\AspirasiAdminCtrl;
 use App\Http\Controllers\Admin\JDIHAdminCtrl;
@@ -28,7 +30,28 @@ use App\Models\JDIH;
 Route::get('/login', [AuthController::class, 'index']);
 Route::post('/login-user', [AuthController::class, 'login'])->name('login');
 Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
-// ======================== Auth ==================================
+Route::get('/forgot-password', function () {
+    return view('auth.forgot-password');
+})->middleware('guest')->name('password.request');
+Route::post('/forgot-password', function (Request $request) {
+
+    $request->validate(['email' => 'required|email']);
+
+    $status = Password::sendResetLink(
+        $request->only('email')
+    );
+
+    return $status === Password::RESET_LINK_SENT
+                ? back()->with(['status' => __($status)])
+                : back()->withErrors(['email' => __($status)]);
+
+})->middleware('guest')->name('password.email');
+
+Route::get('/reset-password/{token}', function (string $token) {
+    //return view('auth.reset-password', ['token' => $token]);
+    return 'berhasil kirim email notifikasi';
+})->middleware('guest')->name('password.reset');
+// ======================== END Auth ==================================
 
 // ======================== WEBSITE ==================================
 Route::get('/', function () {
