@@ -451,8 +451,6 @@ footer .column > a:hover {
     text-align: center;
 }
 
-<<<<<<< HEAD
-=======
 @media (width < 900px) {
     .nav-links {
         display: none;
@@ -492,7 +490,6 @@ footer .column > a:hover {
     }
 }
 
->>>>>>> 981d35df0dee56e8ebe93c2bf51a409e61dd5be1
 #contact {
     padding: 40px 20px;
     text-align: center;
@@ -1912,9 +1909,8 @@ section .header7 {
     text-align: center;
     font-size: 16px;
     font-weight: 600;
-<<<<<<< HEAD
+
   }
-<<<<<<< HEAD
   .credits a:hover {
     text-decoration: underline;
   }
@@ -1938,12 +1934,9 @@ section .header7 {
 
   .panel-k{
     text-align: center;
-=======
-  .days {
-=======
+
 }
 .days {
->>>>>>> 981d35df0dee56e8ebe93c2bf51a409e61dd5be1
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
@@ -1992,7 +1985,7 @@ section .header7 {
 
 .btn3 {
     color: #fff;
-<<<<<<< HEAD
+
   font-size: 1rem;
   padding: 1rem 2rem;
   width: 100%;
@@ -2008,8 +2001,6 @@ section .header7 {
   font-family: "Poppins", sans-serif;
   }
   .panel {
->>>>>>> c949427b93d5eeed58f2cd88e13bd28c080b42cb
-=======
     font-size: 1rem;
     padding: 1rem 2rem;
     width: 100%;
@@ -2030,13 +2021,12 @@ section .header7 {
     font-family: "Poppins", sans-serif;
 }
 .panel {
->>>>>>> 981d35df0dee56e8ebe93c2bf51a409e61dd5be1
+
     color: #fff;
     padding: 0 18px;
     border-radius: 15px;
     background-color: #770000;
     max-height: 0;
-<<<<<<< HEAD
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     overflow: hidden;
@@ -2178,12 +2168,8 @@ section .header7 {
       grid-template-columns: 1fr 150px;
     }
   }
-=======
-    overflow: hidden;
-    transition: max-height 0.5s ease-out;
-    margin-top: 10px;
-    text-align: justify;
-}
+
+
 
 section .header-JD {
     color: #cfb53b;
@@ -2830,9 +2816,6 @@ tbody td.active {
     }
 }
 
-<<<<<<< HEAD
->>>>>>> c949427b93d5eeed58f2cd88e13bd28c080b42cb
-=======
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap");
 
 * {
@@ -3265,4 +3248,3 @@ footer .column > a:hover {
         grid-template-columns: 1fr 150px;
     }
 }
->>>>>>> 981d35df0dee56e8ebe93c2bf51a409e61dd5be1

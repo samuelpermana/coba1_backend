@@ -14,13 +14,13 @@
     <div class="container" id="container">
         
         <div class="form-container sign-in">
-            <form method="POST" action="{{ route('login') }}">
+            <form method="POST" action="{{ route('login-users') }}">
                 @csrf
                 <h1>Sign In</h1>
                 <div class="social-icons"></div>
                 <span>or use your email password</span>
                 <input type="email" name="email" placeholder="Email" value="adminsmfh@gmail.com" required />
-                <input type="password" name="password" placeholder="Password" value="adminFH12!" required >
+                <input type="password" name="password" placeholder="Password" value="password" required >
                 <a href="#">Forget Your Password?</a>
                 <button type="submit">Sign In</button>
             </form>

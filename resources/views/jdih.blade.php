@@ -44,22 +44,5 @@
     </section>
   @endforeach
 
-  <!-- The following section is for the detailed view of a JDIH file by ID -->
-  @if (isset($jdihRecord))
-    <section class="container">
-      <h2 class="headerJD">{{ $jdihRecord->nama_peraturan }}</h2>
-      <div class="detailed-JD">
-        <!-- Display other details based on your JDIH model -->
-        <p>Tipe Dokumen: {{ $jdihRecord->jenis_peraturan }}</p>
-        <p>Nomor Panggil: {{ $jdihRecord->file_inventarisasi }}</p>
-        <!-- Add more details as needed -->
-        <p>Download File: <a href="{{ url("/path/to/your/download/file") }}" download>
-            <span class="blue">
-              <img class="imageperma" src="/img/filetransparan.svg" alt="" />
-            </span>
-          </a></p>
-      </div>
-    </section>
-  @endif
 @endsection
 

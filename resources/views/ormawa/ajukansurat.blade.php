@@ -5,38 +5,24 @@
 
   <div class="container-AJ">
     <h1 class="form-title">Ajukan Surat</h1>
-    <form action="#">
+    <form method="POST" action="{{ route('ormawa.pengajuan_proposal') }}" enctype="multipart/form-data">
+     @csrf
       <div class="main-user-info">
         <div class="user-input-box">
-          <label for="fullName">Nama Panjang</label>
-          <input id="fullName" name="fullName" type="text" placeholder="Nama" />
+          <label for="judul">Judul Proposal</label>
+          <input id="fullName" name="judul" type="text" placeholder="Judul Proposal" />
         </div>
         <div class="user-input-box">
-          <label for="username">Ormawa</label>
-          <input id="username" name="username" type="text" placeholder="Ormawa" />
+          <label for="deskripsi">Deskripsi</label>
+          <input id="username" name="deskripsi" type="text" placeholder="Deskripsi" />
         </div>
-        <div class="user-input-box">
-          <label for="email">Email</label>
-          <input id="email" name="email" type="email" placeholder="Email" />
-        </div>
-        <div class="user-input-box">
-          <label for="phoneNumber">id line</label>
-          <input id="phoneNumber" name="phoneNumber" type="text" placeholder="id ine" />
-        </div>
-        <div class="user-input-box">
-          <label for="username">Angkatan</label>
-          <input id="username" name="username" type="text" placeholder="Angkatan" />
-        </div>
-        <div class="user-input-box">
-          <label for="username">Alamat</label>
-          <input id="username" name="username" type="text" placeholder="Alamat" />
-        </div>
+
       </div>
       <div class="gender-details-box">
         <span class="gender-title">File</span>
         <div class="mb-3">
-          <label class="form-label" for="formFileMultiple">Multiple files input example</label>
-          <input class="form-control" id="formFileMultiple" type="file" multiple>
+        <label for="file_proposal"class="form-label">File Proposal</label>
+          <input class="form-control" id="formFileMultiple" type="file" class="form-control-file" name="file_proposal" required>
         </div>
       </div>
       <div class="form-submit-btn">

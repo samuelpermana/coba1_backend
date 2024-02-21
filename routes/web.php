@@ -10,25 +10,29 @@ use App\Http\Controllers\Admin\EventAdminController;
 use App\Http\Controllers\Admin\RoomAdminController;
 use App\Http\Controllers\Admin\RoomScheduleAdminController;
 use App\Http\Controllers\Admin\AktivitasSenatAdminCtrl;
+use App\Http\Controllers\Admin\ProposalController;
 use App\Http\Controllers\AktivitasSenatController;
 use App\Http\Controllers\EventController;
 use App\Http\Controllers\AspirasiController;
 use App\Http\Controllers\JDIHController;
 use App\Http\Controllers\RuanganController;
 use App\Http\Controllers\Ormawa\AjukanDokumenController;
-use App\Http\Controllers\Ormawa\TransparansiController;
 
 use App\Http\Controllers\Agenda\AgendaKerjaController;
 use App\Http\Controllers\Agenda\AgendaBadanController;
 use App\Http\Controllers\AgendaWeb\AgendaWebController;
+
+use App\Http\Controllers\PersetujuanProposal\KomisiController;
+use App\Http\Controllers\PersetujuanProposal\BadanAnggaranController;
+use App\Http\Controllers\PersetujuanProposal\SekjenController;
 
 use App\Models\AktivitasSenat;
 use App\Models\JDIH;
 
 
 // ======================== Auth ==================================
-Route::get('/login', [AuthController::class, 'index']);
-Route::post('/login-user', [AuthController::class, 'login'])->name('login');
+Route::get('/login', [AuthController::class, 'index'])->name('login');
+Route::post('/login-user', [AuthController::class, 'login'])->name('login-users');
 Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
 Route::get('/forgot-password', function () {
     return view('auth.forgot-password');
@@ -117,7 +121,7 @@ Route::get('jdih/show/{id}', [JDIHController::class, 'showJDIH'])->name('jdih.sh
 Route::group([
     'prefix' => 'admin',
     'as' => 'admin.',
-    'middleware' => ['auth']
+    'middleware' => ['auth', 'role.auth:admin']
 ], function () {
     Route::get('/bankaspirasi', [AspirasiAdminCtrl::class, 'index'])->name('index');
     Route::put('/bankaspirasi/{id}', [AspirasiAdminCtrl::class, 'update'])->name('update');
@@ -140,10 +144,14 @@ Route::group([
     Route::get('/aktivitas/{id}/edit', [AktivitasSenatAdminCtrl::class, 'edit'])->name('aktivitasSenat.edit');
     Route::put('/aktivitas/{id}', [AktivitasSenatAdminCtrl::class, 'update'])->name('aktivitasSenat.update');
     Route::delete('/aktivitas/{id}', [AktivitasSenatAdminCtrl::class, 'destroy'])->name('aktivitasSenat.destroy');
-
+    
     Route::get('events/list', [EventAdminController::class, 'listEvent'])->name('legislasi.list');
     Route::resource('events', EventAdminController::class);
-
+    
+    Route::get('/persetujuan-proposal', [ProposalController::class, 'index']);
+    Route::put('/update-komisi/{proposalId}', [ProposalController::class, 'updateKomisiCheckedBy'])->name('proposal.update-komisi');
+    Route::put('/proposal/{proposal}/admin-reject', [ProposalController::class, 'adminReject'])->name('proposal.admin-reject');
+    
     Route::get('', function () {
         return view('cms.dashboard');
     })->name('dashboard');
@@ -156,7 +164,7 @@ Route::group([
 Route::group([
     'prefix' => 'komisi-i',
     'as' => 'komisi-i.',
-    'middleware' => ['auth']
+    'middleware' => ['auth', 'role.auth:komisi-i']
 ], function () {
     Route::get('/',[AgendaKerjaController::class, 'index'] );
     Route::get('/agendakerja',[AgendaKerjaController::class, 'index'] )->name('agenda.index');
@@ -165,14 +173,23 @@ Route::group([
     Route::get('/agendakerja/{id}/edit', [AgendaKerjaController::class, 'showEdit'])->name('agenda.edit');
     Route::put('/agendakerja/{id}', [AgendaKerjaController::class, 'update'])->name('agenda.update');
     Route::delete('/agendakerja/{id}', [AgendaKerjaController::class, 'destroy'])->name('agenda.destroy');
-    Route::get('/transparansisurat', [TransparansiController::class, 'index']);
+    
+    Route::get('/transparansisurat', [KomisiController::class, 'belumDiperiksa'])->name('proposal.belum-diperiksa');
+    Route::get('/transparansisurat/revisi', [KomisiController::class, 'direvisi'])->name('proposal.direvisi');
+    Route::get('/transparansisurat/disetujui', [KomisiController::class, 'disetujui'])->name('proposal.disetujui');
+    Route::get('/transparansisurat/ditolak', [KomisiController::class, 'ditolak'])->name('proposal.ditolak');
+    Route::put('/proposal/{proposal}/komisi-reject', [KomisiController::class, 'adminReject'])->name('proposal.komisi-reject');
+    Route::put('/proposal/{proposalId}/komisi-approve', [KomisiController::class, 'adminApprove'])->name('proposal.komisi-approve');
+    Route::get('/list-revisi/{proposalId}', [KomisiController::class, 'listRevisi'])->name('proposal.revisi');
+    Route::get('/revisi/create/{proposalId}', [KomisiController::class, 'viewCreateRevisi'])->name('revisi.create');
+    Route::post('/revisi/store/{proposalId}', [KomisiController::class, 'createRevisi'])->name('revisi.store');
 });
 // ======================== END KOMISi I==================================
 // ======================== KOMISI II==================================
 Route::group([
     'prefix' => 'komisi-ii',
     'as' => 'komisi-ii.',
-    'middleware' => ['auth']
+    'middleware' => ['auth', 'role.auth:komisi-ii']
 ], function () {
     Route::get('/',[AgendaKerjaController::class, 'index'] );
     Route::get('/agendakerja',[AgendaKerjaController::class, 'index'] )->name('agenda.index');
@@ -181,14 +198,24 @@ Route::group([
     Route::get('/agendakerja/{id}/edit', [AgendaKerjaController::class, 'showEdit'])->name('agenda.edit');
     Route::put('/agendakerja/{id}', [AgendaKerjaController::class, 'update'])->name('agenda.update');
     Route::delete('/agendakerja/{id}', [AgendaKerjaController::class, 'destroy'])->name('agenda.destroy');
-    Route::get('/transparansisurat', [TransparansiController::class, 'index']);
+
+    Route::get('/transparansisurat', [KomisiController::class, 'belumDiperiksa'])->name('proposal.belum-diperiksa');
+    Route::get('/transparansisurat/revisi', [KomisiController::class, 'direvisi'])->name('proposal.direvisi');
+    Route::get('/transparansisurat/disetujui', [KomisiController::class, 'disetujui'])->name('proposal.disetujui');
+    Route::get('/transparansisurat/ditolak', [KomisiController::class, 'ditolak'])->name('proposal.ditolak');
+    Route::put('/proposal/{proposal}/komisi-reject', [KomisiController::class, 'adminReject'])->name('proposal.komisi-reject');
+    Route::put('/proposal/{proposalId}/komisi-approve', [KomisiController::class, 'adminApprove'])->name('proposal.komisi-approve');
+    Route::get('/list-revisi/{proposalId}', [KomisiController::class, 'listRevisi'])->name('proposal.revisi');
+    Route::get('/revisi/create/{proposalId}', [KomisiController::class, 'viewCreateRevisi'])->name('revisi.create');
+    Route::post('/revisi/store/{proposalId}', [KomisiController::class, 'createRevisi'])->name('revisi.store');
+    
 });
 // ======================== END KOMISi II==================================
 // ======================== KOMISI III==================================
 Route::group([
     'prefix' => 'komisi-iii',
     'as' => 'komisi-iii.',
-    'middleware' => ['auth']
+    'middleware' => ['auth', 'role.auth:komisi-iii']
 ], function () {
     Route::get('/',[AgendaKerjaController::class, 'index'] );
     Route::get('/agendakerja',[AgendaKerjaController::class, 'index'] )->name('agenda.index');
@@ -197,14 +224,23 @@ Route::group([
     Route::get('/agendakerja/{id}/edit', [AgendaKerjaController::class, 'showEdit'])->name('agenda.edit');
     Route::put('/agendakerja/{id}', [AgendaKerjaController::class, 'update'])->name('agenda.update');
     Route::delete('/agendakerja/{id}', [AgendaKerjaController::class, 'destroy'])->name('agenda.destroy');
-    Route::get('/transparansisurat', [TransparansiController::class, 'index']);
+
+    Route::get('/transparansisurat', [KomisiController::class, 'belumDiperiksa'])->name('proposal.belum-diperiksa');
+    Route::get('/transparansisurat/revisi', [KomisiController::class, 'direvisi'])->name('proposal.direvisi');
+    Route::get('/transparansisurat/disetujui', [KomisiController::class, 'disetujui'])->name('proposal.disetujui');
+    Route::get('/transparansisurat/ditolak', [KomisiController::class, 'ditolak'])->name('proposal.ditolak');
+    Route::put('/proposal/{proposal}/komisi-reject', [KomisiController::class, 'adminReject'])->name('proposal.komisi-reject');
+    Route::put('/proposal/{proposalId}/komisi-approve', [KomisiController::class, 'adminApprove'])->name('proposal.komisi-approve');
+    Route::get('/list-revisi/{proposalId}', [KomisiController::class, 'listRevisi'])->name('proposal.revisi');
+    Route::get('/revisi/create/{proposalId}', [KomisiController::class, 'viewCreateRevisi'])->name('revisi.create');
+    Route::post('/revisi/store/{proposalId}', [KomisiController::class, 'createRevisi'])->name('revisi.store');
 });
 // ======================== END KOMISi III==================================
 // ======================== KOMISI IV==================================
 Route::group([
     'prefix' => 'komisi-iv',
     'as' => 'komisi-iv.',
-    'middleware' => ['auth']
+    'middleware' => ['auth', 'role.auth:komisi-iv']
 ], function () {
     Route::get('/',[AgendaKerjaController::class, 'index'] );
     Route::get('/agendakerja',[AgendaKerjaController::class, 'index'] )->name('agenda.index');
@@ -213,14 +249,23 @@ Route::group([
     Route::get('/agendakerja/{id}/edit', [AgendaKerjaController::class, 'showEdit'])->name('agenda.edit');
     Route::put('/agendakerja/{id}', [AgendaKerjaController::class, 'update'])->name('agenda.update');
     Route::delete('/agendakerja/{id}', [AgendaKerjaController::class, 'destroy'])->name('agenda.destroy');
-    Route::get('/transparansisurat', [TransparansiController::class, 'index']);
+
+    Route::get('/transparansisurat', [KomisiController::class, 'belumDiperiksa'])->name('proposal.belum-diperiksa');
+    Route::get('/transparansisurat/revisi', [KomisiController::class, 'direvisi'])->name('proposal.direvisi');
+    Route::get('/transparansisurat/disetujui', [KomisiController::class, 'disetujui'])->name('proposal.disetujui');
+    Route::get('/transparansisurat/ditolak', [KomisiController::class, 'ditolak'])->name('proposal.ditolak');
+    Route::put('/proposal/{proposal}/komisi-reject', [KomisiController::class, 'adminReject'])->name('proposal.komisi-reject');
+    Route::put('/proposal/{proposalId}/komisi-approve', [KomisiController::class, 'adminApprove'])->name('proposal.komisi-approve');
+    Route::get('/list-revisi/{proposalId}', [KomisiController::class, 'listRevisi'])->name('proposal.revisi');
+    Route::get('/revisi/create/{proposalId}', [KomisiController::class, 'viewCreateRevisi'])->name('revisi.create');
+    Route::post('/revisi/store/{proposalId}', [KomisiController::class, 'createRevisi'])->name('revisi.store');
 });
 // ======================== END KOMISi IV==================================
 // ======================== BADAN ANGGARAN ==================================
 Route::group([
     'prefix' => 'badan-anggaran',
     'as' => 'badan-anggaran.',
-    'middleware' => ['auth']
+    'middleware' => ['auth', 'role.auth:badan-anggaran']
 ], function () {
     Route::get('/',[AgendaKerjaController::class, 'index'] );
     Route::get('/agendakerja',[AgendaKerjaController::class, 'index'] )->name('agenda.index');
@@ -229,14 +274,23 @@ Route::group([
     Route::get('/agendakerja/{id}/edit', [AgendaKerjaController::class, 'showEdit'])->name('agenda.edit');
     Route::put('/agendakerja/{id}', [AgendaKerjaController::class, 'update'])->name('agenda.update');
     Route::delete('/agendakerja/{id}', [AgendaKerjaController::class, 'destroy'])->name('agenda.destroy');
-    Route::get('/transparansisurat', [TransparansiController::class, 'index']);
+
+    Route::get('/transparansisurat', [BadanAnggaranController::class, 'belumDiperiksa'])->name('proposal.belum-diperiksa');
+    Route::get('/transparansisurat/revisi', [BadanAnggaranController::class, 'direvisi'])->name('proposal.direvisi');
+    Route::get('/transparansisurat/disetujui', [BadanAnggaranController::class, 'disetujui'])->name('proposal.disetujui');
+    Route::get('/transparansisurat/ditolak', [BadanAnggaranController::class, 'ditolak'])->name('proposal.ditolak');
+    Route::put('/proposal/{proposal}/komisi-reject', [BadanAnggaranController::class, 'adminReject'])->name('proposal.komisi-reject');
+    Route::put('/proposal/{proposalId}/komisi-approve', [BadanAnggaranController::class, 'adminApprove'])->name('proposal.komisi-approve');
+    Route::get('/list-revisi/{proposalId}', [BadanAnggaranController::class, 'listRevisi'])->name('proposal.revisi');
+    Route::get('/revisi/create/{proposalId}', [BadanAnggaranController::class, 'viewCreateRevisi'])->name('revisi.create');
+    Route::post('/revisi/store/{proposalId}', [BadanAnggaranController::class, 'createRevisi'])->name('revisi.store');
 });
 // ======================== END BADAN ANGGARAN ==================================
 // ========================---------- KOMISI ----------==================================
 Route::group([
     'prefix' => 'badan-kehormatan',
     'as' => 'badan-kehormatan.',
-    'middleware' => ['auth']
+    'middleware' => ['auth', 'role.auth:badan-kehormatan']
 ], function () {
     Route::get('/',[AgendaBadanController::class, 'index'] );
     Route::get('/agendakerja',[AgendaBadanController::class, 'index'] )->name('agenda.index');
@@ -245,13 +299,13 @@ Route::group([
     Route::get('/agendakerja/{id}/edit', [AgendaBadanController::class, 'showEdit'])->name('agenda.edit');
     Route::put('/agendakerja/{id}', [AgendaBadanController::class, 'update'])->name('agenda.update');
     Route::delete('/agendakerja/{id}', [AgendaBadanController::class, 'destroy'])->name('agenda.destroy');
-    Route::get('/transparansisurat', [TransparansiController::class, 'index']);
+
 });
 // ======================== END BADAN Kehormatan ==================================
 Route::group([
     'prefix' => 'badan-legislasi',
     'as' => 'badan-legislasi.',
-    'middleware' => ['auth']
+    'middleware' => ['auth', 'role.auth:badan-legislasi']
 ], function () {
     Route::get('/',[AgendaBadanController::class, 'index'] );
     Route::get('/agendakerja',[AgendaBadanController::class, 'index'] )->name('agenda.index');
@@ -260,13 +314,12 @@ Route::group([
     Route::get('/agendakerja/{id}/edit', [AgendaBadanController::class, 'showEdit'])->name('agenda.edit');
     Route::put('/agendakerja/{id}', [AgendaBadanController::class, 'update'])->name('agenda.update');
     Route::delete('/agendakerja/{id}', [AgendaBadanController::class, 'destroy'])->name('agenda.destroy');
-    Route::get('/transparansisurat', [TransparansiController::class, 'index']);
 });
 // ======================== END BADAN legislasi ==================================
 Route::group([
     'prefix' => 'bksap',
     'as' => 'bksap.',
-    'middleware' => ['auth']
+    'middleware' => ['auth', 'role.auth:bksap']
 ], function () {
     Route::get('/',[AgendaBadanController::class, 'index'] );
     Route::get('/agendakerja',[AgendaBadanController::class, 'index'] )->name('agenda.index');
@@ -275,7 +328,6 @@ Route::group([
     Route::get('/agendakerja/{id}/edit', [AgendaBadanController::class, 'showEdit'])->name('agenda.edit');
     Route::put('/agendakerja/{id}', [AgendaBadanController::class, 'update'])->name('agenda.update');
     Route::delete('/agendakerja/{id}', [AgendaBadanController::class, 'destroy'])->name('agenda.destroy');
-    Route::get('/transparansisurat', [TransparansiController::class, 'index']);
 });
 // ======================== END BADAN legislasi ==================================
 
@@ -283,22 +335,35 @@ Route::group([
 // ========================  ORMAWA ==================================
 Route::group([
     'prefix' => 'ormawa',
-    'as' => 'ormawa',
-    'middleware' => ['auth']
+    'as' => 'ormawa.',
+    'middleware' => ['auth', 'role.auth:ormawa']
 ], function () {
     Route::get('/',[AjukanDokumenController::class, 'index'] );
-    Route::get('/ajukansurat',[AjukanDokumenController::class, 'index'] );
+    Route::get('/ajukansurat',[AjukanDokumenController::class, 'index'] )->name('ajukansurat');
+    Route::post('/ajukan-proposal', [AjukanDokumenController::class, 'ajukanProposal'])->name('pengajuan_proposal');
     
-    Route::get('/transparansisurat', [TransparansiController::class, 'index']);
+    Route::get('/transparansisurat', [AjukanDokumenController::class, 'cek_progress'])->name('cek_progress');
+    Route::get('/list-revisi/{proposalId}', [AjukanDokumenController::class, 'listRevisi'])->name('proposal.revisi');
+    Route::get('/proposal/{proposalId}/revisi/{revisiId}/list', [AjukanDokumenController::class, 'showCreateRevisi'])->name('create_revisi');
+    Route::post('/ormawa/proposal/{proposalId}/revisi/{revisiId}/kirim', [AjukanDokumenController::class, 'kirimRevisi'])->name('kirim_revisi');
 });
 // ======================== END ORMAWA ==================================
 
 
 // ======================== PIMPINAN TINGGI ==================================
 Route::group([
-    'prefix' => 'pimpinan-tinggi',
-    'as' => 'pimpinan-tinggi'
+    'prefix' => 'pimpinan',
+    'as' => 'pimpinan.',
+    'middleware' => ['auth', 'role.auth:pimpinan']
 ], function () {
-    // Route
+    Route::get('/transparansisurat', [SekjenController::class, 'belumDiperiksa'])->name('proposal.belum-diperiksa');
+    Route::get('/transparansisurat/revisi', [SekjenController::class, 'direvisi'])->name('proposal.direvisi');
+    Route::get('/transparansisurat/disetujui', [SekjenController::class, 'disetujui'])->name('proposal.disetujui');
+    Route::get('/transparansisurat/ditolak', [SekjenController::class, 'ditolak'])->name('proposal.ditolak');
+    Route::put('/proposal/{proposal}/komisi-reject', [SekjenController::class, 'adminReject'])->name('proposal.komisi-reject');
+    Route::put('/proposal/{proposalId}/komisi-approve', [SekjenController::class, 'adminApprove'])->name('proposal.komisi-approve');
+    Route::get('/list-revisi/{proposalId}', [SekjenController::class, 'listRevisi'])->name('proposal.revisi');
+    Route::get('/revisi/create/{proposalId}', [SekjenController::class, 'viewCreateRevisi'])->name('revisi.create');
+    Route::post('/revisi/store/{proposalId}', [SekjenController::class, 'createRevisi'])->name('revisi.store');
 });
 // ======================== END PIMPINAN TINGGI ==================================
