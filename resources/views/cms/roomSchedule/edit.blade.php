@@ -30,9 +30,12 @@
       <label for="date">Date:</label><br>
       <input id="date" name="date" type="date" value="{{ $roomSchedule->date }}"><br><br>
 
-      <label for="time">Time:</label><br>
-      <input id="time" name="time" type="time" value="{{ $roomSchedule->time }}"><br><br>
-
+      <label for="start_time">Time:</label><br>
+      <input id="start_time" name="start_time" type="time" value="{{ $roomSchedule->start_time }}"><br><br>
+      
+      <label for="end_time">Time:</label><br>
+      <input id="end_time" name="end_time" type="time" value="{{ $roomSchedule->end_time }}"><br><br>
+      
       <label for="booked_by">Booked By:</label><br>
       <input id="booked_by" name="booked_by" type="text" value="{{ $roomSchedule->booked_by }}"><br><br>
 

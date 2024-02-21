@@ -45,7 +45,8 @@
                         <th> Digunakan Oleh <span class="icon-arrow">&UpArrow;</span></th>
                         <th> Ruangan <span class="icon-arrow">&UpArrow;</span></th>
                         <th> Tanggal <span class="icon-arrow">&UpArrow;</span></th>
-                        <th> Jam <span class="icon-arrow">&UpArrow;</span></th>
+                        <th> Jam Mulai <span class="icon-arrow">&UpArrow;</span></th>
+                        <th> Jam Selesai <span class="icon-arrow">&UpArrow;</span></th>
                     </tr>
                 </thead>
                 <tbody>
@@ -56,8 +57,10 @@
                         <td>{{ $schedule->room->name }}</td>
                         <td>{{ \Carbon\Carbon::parse($schedule->date)->format('d M, Y') }}</td>
                         <td>
-
-                            <p class="status delivered">{{ $schedule->time }}</p>
+                            <p class="status delivered">{{ $schedule->start_time }}</p>
+                        </td>
+                        <td>
+                            <p class="status delivered">{{ $schedule->end_time }}</p>
                         </td>
                     </tr>
                     @endforeach

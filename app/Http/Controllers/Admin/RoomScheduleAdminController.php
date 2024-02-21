@@ -35,14 +35,16 @@ class RoomScheduleAdminController extends Controller
         $request->validate([
             'room_id' => 'required|exists:rooms,id',
             'date' => 'required|date',
-            'time' => 'required|date_format:H:i',
+            'start_time' => 'required|date_format:H:i',
+            'end_time' => 'required|date_format:H:i',
             'booked_by' => 'required|string',
         ]);
 
         // Check if room schedule with the same room, date, and time exists
         $existingSchedule = RoomSchedule::where('room_id', $request->room_id)
             ->where('date', $request->date)
-            ->where('time', $request->time)
+            ->where('start_time', $request->start_time)
+            ->where('end_time', $request->end_time)
             ->first();
 
         if ($existingSchedule) {
@@ -72,15 +74,17 @@ class RoomScheduleAdminController extends Controller
         $request->validate([
             'room_id' => 'required|exists:rooms,id',
             'date' => 'required|date',
-            'time' => 'required|date_format:H:i',
+            'start_time' => 'required|date_format:H:i',
+            'end_time' => 'required|date_format:H:i',
             'booked_by' => 'required|string',
         ]);
 
         // Check if room schedule with the same room, date, and time exists
         $existingSchedule = RoomSchedule::where('room_id', $request->room_id)
             ->where('date', $request->date)
-            ->where('time', $request->time)
-            ->where('id', '!=', $roomSchedule->id) // Exclude the current schedule being updated
+            ->where('start_time', $request->start_time)
+            ->where('end_time', $request->end_time)
+            ->where('id', '!=', $roomSchedule->id) 
             ->first();
 
         if ($existingSchedule) {
