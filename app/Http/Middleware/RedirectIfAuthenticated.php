@@ -21,7 +21,46 @@ class RedirectIfAuthenticated
 
         foreach ($guards as $guard) {
             if (Auth::guard($guard)->check()) {
-                return redirect(RouteServiceProvider::HOME);
+                // Jika pengguna sudah terautentikasi, arahkan sesuai peran (role)
+                $role = Auth::user()->role->role_slug;
+
+                switch ($role) {
+                    case 'admin':
+                        return redirect()->route('admin.dashboard');
+                        break;
+                    case 'ormawa':
+                        return redirect()->route('ormawa.ajukansurat');
+                        break;
+                    case 'komisi-i':
+                        return redirect()->route('komisi-i.agenda.index');
+                        break;
+                    case 'komisi-ii':
+                        return redirect()->route('komisi-ii.agenda.index');
+                        break;
+                    case 'komisi-iii':
+                        return redirect()->route('komisi-iii.agenda.index');
+                        break;
+                    case 'komisi-iv':
+                        return redirect()->route('komisi-iv.agenda.index');
+                        break;
+                    case 'badan-anggaran':
+                        return redirect()->route('badan-anggaran.agenda.index');
+                        break;
+                    case 'badan-legislasi':
+                        return redirect()->route('badan-legislasi.agenda.index');
+                        break;
+                    case 'badan-kehormatan':
+                        return redirect()->route('badan-kehormatan.agenda.index');
+                        break;
+                    case 'bksap':
+                        return redirect()->route('bksap.agenda.index');
+                        break;
+                    case 'pimpinan':
+                        return redirect()->route('pimpinan.proposal.belum-diperiksa');
+                        break;
+                    default:
+                        return redirect()->route('index'); // Ganti dengan nama rute yang sesuai
+                }
             }
         }
 

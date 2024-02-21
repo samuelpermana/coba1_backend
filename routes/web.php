@@ -4,6 +4,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Password;
 use App\Http\Controllers\Auth\AuthController;
+use App\Http\Controllers\Auth\ForgetPasswordCtrl;
 use App\Http\Controllers\Admin\AspirasiAdminCtrl;
 use App\Http\Controllers\Admin\JDIHAdminCtrl;
 use App\Http\Controllers\Admin\EventAdminController;
@@ -31,30 +32,14 @@ use App\Models\JDIH;
 
 
 // ======================== Auth ==================================
-Route::get('/login', [AuthController::class, 'index'])->name('login');
-Route::post('/login-user', [AuthController::class, 'login'])->name('login-users');
+Route::get('/login', [AuthController::class, 'index'])->middleware('guest')->name('login');
+Route::post('/login-user', [AuthController::class, 'login'])->middleware('guest')->name('login-users');
 Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
-Route::get('/forgot-password', function () {
-    return view('auth.forgot-password');
-})->middleware('guest')->name('password.request');
-Route::post('/forgot-password', function (Request $request) {
+Route::get('/forgot-password',[ForgetPasswordCtrl::class, 'forgetPassword'])->middleware('guest')->name('password.request');
+Route::post('/forgot-password',[ForgetPasswordCtrl::class, 'forgetPasswordPost'])->middleware('guest')->name('passwordPost.request');
+Route::get('/reset-password/{token}',[ForgetPasswordCtrl::class, 'resetPassword'])->middleware('guest')->name('passwordReset.request');
+Route::post('/reset-password/{token}',[ForgetPasswordCtrl::class, 'resetPasswordPost'])->middleware('guest')->name('passwordResetPost.request');
 
-    $request->validate(['email' => 'required|email']);
-
-    $status = Password::sendResetLink(
-        $request->only('email')
-    );
-
-    return $status === Password::RESET_LINK_SENT
-                ? back()->with(['status' => __($status)])
-                : back()->withErrors(['email' => __($status)]);
-
-})->middleware('guest')->name('password.email');
-
-Route::get('/reset-password/{token}', function (string $token) {
-    //return view('auth.reset-password', ['token' => $token]);
-    return 'berhasil kirim email notifikasi';
-})->middleware('guest')->name('password.reset');
 // ======================== END Auth ==================================
 
 // ======================== WEBSITE ==================================

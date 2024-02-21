@@ -29,12 +29,16 @@
             </div>
         @endif
 
-        <h2>Forgot Your Password ? </h2>
-        <p>Enter email to request password reset</p>
-        <form action ="{{ route('passwordPost.request') }}" method="post">
+        <h2>Reset Your Password </h2>
+        <form action ="{{ route('passwordResetPost.request', ['token' => $token]) }}" method="post">
             @csrf
+            <input type="text" hidden value="{{$token}}">
             <label for="email" class="form-label">Email</label>
             <input type="email" class="form-control" name="email">
+            <label for="new_password" class="form-label">New Password</label>
+            <input type="password" class="form-control" name="new_password">
+            <!-- <label for="confirm_password" class="form-label">Confirm New Password</label>
+            <input type="password" class="form-control" name="confirm_password"> -->
             <input type="submit" value="Request Password Reset" class="btn btn-primary w-100 mt-3">
         </form>
     </div>
