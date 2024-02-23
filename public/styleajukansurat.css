@@ -164,13 +164,7 @@ nav {
 .container-AJ {
     width: 100%;
     max-width: 650px;
-    background: rgb(2, 0, 36);
-    background: linear-gradient(
-        135deg,
-        rgba(2, 0, 36, 1) 0%,
-        rgba(207, 181, 59, 1) 0%,
-        rgba(148, 27, 63, 1) 90%
-    );
+    background-color: #27272a;
     padding: 10px;
     margin: 0 28px;
     border-radius: 10px;
@@ -183,7 +177,7 @@ nav {
     font-weight: 600;
     text-align: center;
     padding-bottom: 6px;
-    color: white;
+    color: #888;
 
     border-bottom: solid 1px white;
     font-family: "Poppins", sans-serif;
@@ -219,6 +213,8 @@ nav {
     height: 40px;
     width: 95%;
     border-radius: 7px;
+    background-color: #888;
+    color: white;
     outline: none;
     border: 1px solid grey;
     padding: 0 10px;
@@ -234,7 +230,7 @@ nav {
     display: block;
     margin-bottom: 0.5rem;
     font-size: 1rem;
-    color: #333;
+    color: #888;
     font-family: "Poppins", sans-serif;
 }
 
@@ -255,6 +251,7 @@ nav {
 /* Warna Khusus untuk Input File */
 .form-control[type="file"] {
     cursor: pointer;
+    color: white;
 }
 
 /* Efek Hover pada Input File */
@@ -274,15 +271,21 @@ nav {
 
 .form-submit-btn input {
     display: block;
-    width: 100%;
-    margin-top: 10px;
+    width: 50%;
+    margin: 0 auto;
     font-size: 20px;
     padding: 10px;
     border: none;
     border-radius: 10px;
     cursor: pointer;
     color: rgb(255, 255, 255);
-    background: #18181b;
+    background: rgb(2, 0, 36);
+    background: linear-gradient(
+        135deg,
+        rgba(2, 0, 36, 1) 0%,
+        rgba(207, 181, 59, 1) 0%,
+        rgba(148, 27, 63, 1) 90%
+    );
     transition: 0.3s ease;
 }
 
