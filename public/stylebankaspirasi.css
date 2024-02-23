@@ -5,7 +5,7 @@
     font-size: 16px;
     border: none;
     outline: none;
-    color: white;
+    color: #18181b;
     padding: 14px 16px;
     background-color: inherit;
     font-family: inherit;
@@ -74,7 +74,7 @@ a {
 
 body {
     font-family: "Poppins", sans-serif;
-    background-color: #18181b;
+    background-color: #fff6ea;
 }
 
 nav {
@@ -115,7 +115,7 @@ nav {
 .link a {
     position: relative;
     padding-bottom: 0.75rem;
-    color: #fff;
+    color: #18181b;
 }
 
 .link a::after {
@@ -138,13 +138,7 @@ nav {
     padding: 1rem 2rem;
     font-size: 1rem;
     color: #fff;
-    background: rgb(2, 0, 36);
-    background: linear-gradient(
-        135deg,
-        rgba(2, 0, 36, 1) 0%,
-        rgba(207, 181, 59, 1) 0%,
-        rgba(148, 27, 63, 1) 90%
-    );
+    background: #800000;
     border-radius: 5px;
     cursor: pointer;
     transition: all 0.3s ease;
@@ -180,7 +174,7 @@ section .header {
     max-width: 600px;
     margin: auto;
     text-align: center;
-    color: #ccc;
+    color: #18181b;
     margin-top: -2rem;
     margin-bottom: 3rem;
 }
@@ -203,7 +197,7 @@ section .header-BA {
 }
 
 .pricing .card .content {
-    background-color: #27272a;
+    background-color: #cbb989;
     padding: 10px;
     border-radius: 10px;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
@@ -212,7 +206,7 @@ section .header-BA {
 
 .pricing .card h4 {
     margin-bottom: 1rem;
-    color: #fff;
+    color: #18181b;
     font-size: 1.2rem;
     font-weight: 500;
     margin-top: 1rem;
@@ -224,13 +218,7 @@ section .header-BA {
     font-size: 1rem;
     padding: 1rem 2rem;
     width: 100%;
-    background: rgb(2, 0, 36);
-    background: linear-gradient(
-        135deg,
-        rgba(2, 0, 36, 1) 0%,
-        rgba(207, 181, 59, 1) 0%,
-        rgba(148, 27, 63, 1) 90%
-    );
+    background: #cfb53b;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -242,9 +230,9 @@ section .header-BA {
 }
 
 .panel {
-    color: #fff;
+    color: #18181b;
     border-radius: 15px;
-    background-color: #600000;
+    background-color: #F1DDA8;
     max-height: 0;
     overflow: hidden;
     transition: 0.5s ease-out;
