@@ -343,6 +343,7 @@ footer .column > a:hover {
   
     .nav2{
         display: block;
+        z-index: 9999;
     }
     .btn{
         display: none;

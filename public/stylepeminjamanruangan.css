@@ -5,7 +5,7 @@
     font-size: 16px;  
     border: none;
     outline: none;
-    color: white;
+    color: #18181b;
     padding: 14px 16px;
     background-color: inherit;
     font-family: inherit;
@@ -69,7 +69,7 @@ img {
   
   body {
     font-family: "Poppins", sans-serif;
-    background-color: #18181b;
+    background-color: #fff6ea;
   }
   
   nav {
@@ -111,7 +111,7 @@ img {
   .link a {
     position: relative;
     padding-bottom: 0.75rem;
-    color: #fff;
+    color: #18181b;
   }
   
   .link a::after {
@@ -171,7 +171,7 @@ section .header {
     max-width: 600px;
     margin: auto;
     text-align: center;
-    color: #ccc;
+    color: #18181b;
     margin-top: -2rem;
     margin-bottom: 3rem;
 }
@@ -179,7 +179,7 @@ section .header {
 main.table {
     width: 60vw;
     height: 70vh;
-    background-color: #27272a;
+    background-color: #cbb989;
 
     backdrop-filter: blur(7px);
     box-shadow: 0 0.4rem 0.8rem #0005;
@@ -187,6 +187,23 @@ main.table {
     margin-left: auto;
     margin-right: auto;
     margin-top: 3rem;
+    margin-bottom: 2rem;
+
+    overflow: hidden;
+}
+
+main.table4 {
+    width: 60vw;
+    height: 7vh;
+    background-color: #cbb989;
+
+    backdrop-filter: blur(7px);
+    box-shadow: 0 0.4rem 0.8rem #0005;
+    border-radius: 0.8rem;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 3rem;
+    margin-bottom: 2rem;
 
     overflow: hidden;
 }
@@ -194,7 +211,7 @@ main.table {
 .table__header {
     width: 100%;
     height: 10%;
-    background-color: #27272a;
+    background-color: #cbb989;
     padding: 0.8rem 1rem;
 
     display: flex;
@@ -205,7 +222,7 @@ main.table {
 .table__header .input-group {
     width: 35%;
     height: 120%;
-    background-color: #d5d1defe;
+    background-color: #F5F5DC;
     padding: 0 0.8rem;
     border-radius: 2rem;
     margin-left: auto;
@@ -220,7 +237,7 @@ main.table {
 
 .table__header .input-group:hover {
     width: 45%;
-    background-color: #d5d1defe;
+    background-color: #F5F5DC;
     box-shadow: 0 0.1rem 0.4rem #0002;
 }
 
@@ -283,16 +300,17 @@ th,
 td {
     border-collapse: collapse;
     padding: 1rem;
-    text-align: left;
+    text-align: center;
 }
 
 thead th {
     position: sticky;
     top: 0;
     left: 0;
-    background-color: #d5d1defe;
+    background-color: #F5F5DC;
     cursor: pointer;
     text-transform: capitalize;
+    text-align: center;
 }
 
 tbody tr:nth-child(even) {
@@ -402,16 +420,16 @@ tbody td.active {
     position: relative;
 }
 
-.export__file .export__file-btn {
+.export_file .export_file-btn {
     display: inline-block;
     width: 2rem;
     height: 2rem;
-    background: #d5d1defe url(img/export.png) center / 80% no-repeat;
+    background: #F5F5DC url(img/export.png) center / 80% no-repeat;
     border-radius: 50%;
     transition: 0.2s ease-in-out;
 }
 
-.export__file .export__file-btn:hover {
+.export_file .export_file-btn:hover {
     background-color: #fff;
     transform: scale(1.15);
     cursor: pointer;
@@ -421,7 +439,7 @@ tbody td.active {
     display: none;
 }
 
-.export__file .export__file-options {
+.export_file .export_file-options {
     position: absolute;
     right: 0;
 
@@ -439,13 +457,13 @@ tbody td.active {
     transition: 0.2s;
 }
 
-.export__file input:checked + .export__file-options {
+.export_file input:checked + .export_file-options {
     opacity: 1;
     transform: scale(1);
     z-index: 100;
 }
 
-.export__file .export__file-options label {
+.export_file .export_file-options label {
     display: block;
     width: 100%;
     padding: 0.6rem 0;
@@ -458,18 +476,18 @@ tbody td.active {
     transition: 0.2s ease-in-out;
 }
 
-.export__file .export__file-options label:first-of-type {
+.export_file .export_file-options label:first-of-type {
     padding: 1rem 0;
     background-color: #86e49d !important;
 }
 
-.export__file .export__file-options label:hover {
+.export_file .export_file-options label:hover {
     transform: scale(1.05);
     background-color: #fff;
     cursor: pointer;
 }
 
-.export__file .export__file-options img {
+.export_file .export_file-options img {
     width: 2rem;
     height: auto;
 }
@@ -487,7 +505,7 @@ footer .column .logo {
 }
 
 footer .column p {
-    color: #ccc;
+    color: #18181b;
     margin-bottom: 2rem;
 }
 
@@ -498,8 +516,8 @@ footer .column .socials {
 }
 
 footer .column .socials a {
-    color: #ccc;
-    border: 1px solid #ccc;
+    color: #18181b;
+    border: 1px solid #18181b;
     padding: 5px 10px;
     font-size: 1.25rem;
     border-radius: 100%;
@@ -507,13 +525,13 @@ footer .column .socials a {
 }
 
 footer .column .socials a:hover {
-    color: #fff;
-    background-color: #cfb53b;
-    border-color: #cfb53b;
+    color: #18181b;
+    background-color: #18181b;
+    border-color: #18181b;
 }
 
 footer .column h4 {
-    color: #fff;
+    color: #18181b;
     margin-bottom: 2rem;
     font-size: 1.2rem;
     font-weight: 500;
@@ -521,7 +539,7 @@ footer .column h4 {
 
 footer .column > a {
     display: block;
-    color: #ccc;
+    color: #18181b;
     margin-bottom: 1rem;
     transition: all 0.3s ease;
 }
@@ -534,9 +552,24 @@ footer .column > a:hover {
     max-width: 1200px;
     margin: auto;
     padding: 1rem;
-    color: #fff;
+    color: #18181b;
     font-size: 0.8rem;
     text-align: center;
+}
+
+.table4 a {
+    color: #18181b; /* Warna teks tautan */
+    font-size: 20px;
+    margin-top: 0.5rem;
+    display: block; /* Mengubah elemen menjadi block-level */
+    text-align: center; /* Pusatkan teks */
+    margin-left: auto;
+    margin-right: auto;
+    font-family: "Poppins", sans-serif;
+}
+
+.table4 a:hover {
+    color: #cfb53b;
 }
 
 @media (width < 900px) {
@@ -605,11 +638,11 @@ footer .column > a:hover {
   .table__header .input-group:hover {
     width: 100%; /* Mengisi lebar 100% saat dihover pada ukuran layar kecil */
 }
-.export__file .export__file-btn {
+.export_file .export_file-btn {
     margin-top: 1rem;
     width: 2rem; /* Mengubah lebar tombol pada layar kecil */
     height: 2rem; /* Mengubah tinggi tombol pada layar kecil */
-    margin-bottom: 1rem;
+    margin-bottom: 3rem;
 }
 .table__header {
     flex-direction: column; /* Mengubah tata letak menjadi vertikal */
@@ -626,10 +659,7 @@ thead th span.icon-arrow {
     margin-left: 0.7rem; /* Mengubah margin kiri pada layar kecil */
 }
 
+.table__body{
+    margin-top: 3rem;
 }
-
-
-
-
-
-
+}

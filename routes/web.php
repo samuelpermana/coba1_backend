@@ -12,6 +12,7 @@ use App\Http\Controllers\Admin\RoomAdminController;
 use App\Http\Controllers\Admin\RoomScheduleAdminController;
 use App\Http\Controllers\Admin\AktivitasSenatAdminCtrl;
 use App\Http\Controllers\Admin\ProposalController;
+use App\Http\Controllers\Admin\FaqController;
 use App\Http\Controllers\AktivitasSenatController;
 use App\Http\Controllers\EventController;
 use App\Http\Controllers\AspirasiController;
@@ -140,6 +141,15 @@ Route::group([
     Route::get('', function () {
         return view('cms.dashboard');
     })->name('dashboard');
+
+        
+    Route::get('/faq', [FaqController::class, 'index'])->name('faq.index');
+    Route::get('/faq/create', [FaqController::class, 'create'])->name('faq.create');
+    Route::post('/faq', [FaqController::class, 'store'])->name('faq.store');
+    Route::get('/faq/{faq}', [FaqController::class, 'show'])->name('faq.show');
+    Route::get('/faq/{faq}/edit', [FaqController::class, 'edit'])->name('faq.edit');
+    Route::put('/faq/{faq}', [FaqController::class, 'update'])->name('faq.update');
+    Route::delete('/faq/{faq}', [FaqController::class, 'destroy'])->name('faq.destroy');
 });
 
 // ======================== END CMS ==================================
