@@ -48,17 +48,18 @@
           <td>{{ $proposal['status'] }}</td>
           <td>{{ $proposal['status_persetujuan'] }}</td>
           <td>
-              <form action="{{ route(auth()->user()->role->role_slug . '.proposal.komisi-approve', $proposal['id']) }}" class="btn btn-warning"method="POST">
+              <form action="{{ route(auth()->user()->role->role_slug . '.proposal.komisi-approve', $proposal['id']) }}" method="POST">
                     @csrf
                     @method('PUT')
-                    <button type="submit">Setujui</button>
+                    <button class="btn btn-warning" type="submit">Setujui</button>
                 </form>
-              <form action="{{ route( auth()->user()->role->role_slug .'.proposal.komisi-reject', $proposal['id']) }}"class="btn btn-warning" method="POST">
+              <form action="{{ route( auth()->user()->role->role_slug .'.proposal.komisi-reject', $proposal['id']) }}" method="POST">
                   @csrf
                   @method('PUT')
-                  <button type="submit">Tolak</button>
+                  <button class="btn-warning1" type="submit">Tolak</button>
               </form>
-              <a href="{{ route(auth()->user()->role->role_slug . '.proposal.revisi', $proposal['id']) }}" class="btn btn-warning">Revisi</a>
+              <a href="{{ route(auth()->user()->role->role_slug . '.proposal.revisi', $proposal['id']) }}" class="btn-warning2 ">Revisi</a>
+              
 
           </td>
 

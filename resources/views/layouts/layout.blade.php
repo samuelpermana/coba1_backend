@@ -12,13 +12,92 @@
     <link href='https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css' rel='stylesheet'>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/izitoast/1.4.0/css/iziToast.min.css" rel="stylesheet" integrity="sha512-O03ntXoVqaGUTAeAmvQ2YSzkCvclZEcPQu1eqloPaHfJ5RuNGiS4l+3duaidD801P50J28EHyonCV06CUlTSag==" crossorigin="anonymous"
       referrerpolicy="no-referrer" />
-
+      <link href='https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/izitoast/1.4.0/css/iziToast.min.css" integrity="sha512-O03ntXoVqaGUTAeAmvQ2YSzkCvclZEcPQu1eqloPaHfJ5RuNGiS4l+3duaidD801P50J28EHyonCV06CUlTSag==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.min.css" integrity="sha512-mSYUmp1HYZDFaVKK//63EcZq4iFWFjxSL+Z3T/aCt4IO9Cejm03q3NKKYN6pFQzY0SBOr8h+eCIAZHPXcpZaNw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.min.css" rel="stylesheet" integrity="sha512-mSYUmp1HYZDFaVKK//63EcZq4iFWFjxSL+Z3T/aCt4IO9Cejm03q3NKKYN6pFQzY0SBOr8h+eCIAZHPXcpZaNw=="
       crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>SENAT FH UNDIP</title>
   </head>
 
   <body>
+
+    <header class="header4">
+      <div class="header__container">
+          <div class="header__toggle">
+              <i class='bx bx-menu' id="header-toggle"></i>
+
+          </div>
+      </div>
+  </header>
+  <div class="nav2" id="navbar">
+    <nav class="nav2__container">
+        <div>
+            <a href="#" class="nav2__link nav2__logo">
+              <img src="/img/coba1.png" alt="Logo">
+                
+            </a>
+
+            <div class="nav2__list">
+                <div class="nav2__items">
+                    
+
+                    <a href="{{ url('/') }}" class="nav2__link active">
+                        <i class='bx bx-home nav2__icon' ></i>
+                        <span class="nav2__name">Home</span>
+                    </a>
+                    
+                    <div class="nav2__dropdown">
+                        <a href="{{ url('/kotakaspirasi') }}" class="nav2__link">
+                            <i class='bx bx-user nav2__icon' ></i>
+                            <span class="nav2__name">Kotak Aspirasi</span>
+                            
+                        </a>
+
+                        
+                    </div>
+                    <div class="nav2__items">
+                    <a href="{{ url('/faq') }}" class="nav2__link">
+                        <i class='bx bx-message-rounded nav2__icon' ></i>
+                        <span class="nav2__name">FAQ</span>
+                    </a>
+                </div>
+
+                
+                   
+
+                    <div class="nav2__dropdown">
+                        <a href="{{ url('/bankaspirasi') }}" class="nav2__link">
+                            <i class='bx bx-file nav2__icon' ></i>
+                            <span class="nav2__name">Bank Aspirasi</span>
+                            
+                        </a>
+
+
+                    </div>
+
+                    <a href="{{ url('/selayangpandang') }}" class="nav2__link">
+                        <i class='bx bx bx-user nav2__icon' ></i>
+                        <span class="nav2__name">Selayang Pandang</span>
+                    </a>
+                    <a href="{{ url('/JDIH') }}" class="nav2__link">
+                        <i class='bx bx-file nav2__icon' ></i>
+                        <span class="nav2__name">JDIH</span>
+                    </a>
+                    <a href="{{ url('/peminjamanruangan') }}" class="nav2__link">
+                      <i class='bx bx-time nav2__icon' ></i>
+                      <span class="nav2__name">Peminjaman Ruangan</span>
+                  </a>
+                  <a href="{{ url('/transparansisurat3') }}" class="nav2__link">
+                    <i class='bx bx-file nav2__icon' ></i>
+                    <span class="nav2__name">Transparansi Surat</span>
+                </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+</div>
     
     <nav>
       <div class="nav-logo">
@@ -96,5 +175,5 @@
       Copyright © 2023 SENAT FH UNDIP. All Rights Reserved.
     </div>
   </body>
-
+  <script src="script7.js"></script>
 </html>

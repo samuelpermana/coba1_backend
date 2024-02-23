@@ -134,15 +134,47 @@ nav {
 }
 
 .btn {
-  padding: 1rem 2rem;
+  padding: 1rem 1.5rem;
   font-size: 1rem;
   color: #fff;
   background-color: #800000;
   border-radius: 5px;
   cursor: pointer;
   transition: all 0.3s ease;
+  width: 100%;
+  
 }
 
+.btn-warning1 {
+  padding: 1rem 1.5rem;
+  font-size: 1rem;
+  color: #fff;
+  background: rgb(2, 0, 36);
+  background: linear-gradient(135deg, rgba(2, 0, 36, 1) 0%, rgba(207, 181, 59, 1) 0%, rgba(148, 27, 63, 1) 90%);
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-bottom: 2rem;
+  margin-top: 1rem;
+  width: 100%;
+  
+}
+
+.btn-warning2 {
+  padding: 1rem 1.5rem;
+  font-size: 1rem;
+  color: #fff;
+  background: rgb(2, 0, 36);
+  background: linear-gradient(135deg, rgba(2, 0, 36, 1) 0%, rgba(207, 181, 59, 1) 0%, rgba(148, 27, 63, 1) 90%);
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-bottom: 3px;
+  margin-top: 1rem;
+  width: 100%;
+
+  
+}
 
 .trans {
   padding: 1rem 2rem;
@@ -762,6 +794,11 @@ section .header {
   }
   .table__header .input-group:hover {
     width: 100%; /* Mengisi lebar 100% saat dihover pada ukuran layar kecil */
+}
+.trans {
+  margin-left: 0; /* Reset margin for smaller screens */
+  width: 100%; /* Make the element full width */
+  margin-top: 1rem;
 }
 
   }
