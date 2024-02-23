@@ -10,6 +10,7 @@ use App\Models\User;
 use App\Models\RevisiProposal;
 use App\Models\RiwayatRevisiOrmawa;
 use Illuminate\Support\Facades\Auth;
+use Carbon\Carbon;
 
 class SekjenController extends Controller
 {
@@ -115,6 +116,7 @@ class SekjenController extends Controller
             'status'=> 'sekjen',
             'status_persetujuan'=> 'rejected',
             'is_checked'=> true,
+            'approved_at' => now(),
         ]);
         $namaKomisi = User::where('id', Auth::id())->value('name');
 
@@ -134,7 +136,8 @@ class SekjenController extends Controller
         $proposal->update([
             'status'=> 'sekjen',
             'status_persetujuan'=> 'approved',
-            'is_checked'=> true
+            'is_checked'=> true,
+            'approved_at' => Carbon::now(),
         ]);
         $namaKomisi = User::where('id', Auth::id())->value('name');
         $log = new LogProposal();

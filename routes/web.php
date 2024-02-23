@@ -331,6 +331,7 @@ Route::group([
     Route::get('/list-revisi/{proposalId}', [AjukanDokumenController::class, 'listRevisi'])->name('proposal.revisi');
     Route::get('/proposal/{proposalId}/revisi/{revisiId}/list', [AjukanDokumenController::class, 'showCreateRevisi'])->name('create_revisi');
     Route::post('/ormawa/proposal/{proposalId}/revisi/{revisiId}/kirim', [AjukanDokumenController::class, 'kirimRevisi'])->name('kirim_revisi');
+    Route::post('/proposal-final/{proposalId}/upload', [AjukanDokumenController::class, 'uploadFileFinal'])->name('upload.file.final');
 });
 // ======================== END ORMAWA ==================================
 

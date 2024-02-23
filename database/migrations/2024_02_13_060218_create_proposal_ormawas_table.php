@@ -19,10 +19,12 @@ return new class extends Migration
             $table->enum('status_persetujuan', ['pending', 'revised', 'rejected', 'approved'])->default('pending');
             $table->unsignedBigInteger('created_by');
             $table->unsignedBigInteger('komisi_checked_by')->nullable();
+            $table->timestamp('approved_at')->nullable();
             $table->timestamps();
-
+            $table->string('file_final')->nullable();
             $table->foreign('created_by')->references('id')->on('users');
             $table->foreign('komisi_checked_by')->references('id')->on('users');
+            
 
         });
     }
