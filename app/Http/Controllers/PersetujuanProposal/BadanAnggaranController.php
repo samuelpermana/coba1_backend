@@ -77,7 +77,8 @@ class BadanAnggaranController extends Controller
                  'status_persetujuan' => $proposal->status_persetujuan,
                  'file_proposal' => $proposal->file_proposal,
                  'created_at' => $proposal->created_at,
-                 'nama_pengaju' => $proposal->user->name
+                 'nama_pengaju' => $proposal->user->name,
+                 'file_final' => $proposal->file_final,
              ];
          }
         return view('komisi.transparansi.transparansisurat', compact('proposalData'));
