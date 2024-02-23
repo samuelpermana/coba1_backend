@@ -238,7 +238,7 @@
           <div class="content">
             <div class="name">KOMISI IV</div>
             <div class="des">Komisi IV adalah komisi yang menaungi terkait bidang Advokasi, Akademik, Sarana, dan Prasarana</div>
-            <a href="{{ url("/tentang-iv") }}">
+            <a href="{{ url("/tentang-komisi-iv") }}">
               <button>Selengkapnya</button>
             </a>
           </div>
@@ -249,7 +249,7 @@
             <div class="des">
               Badan Legislasi dibentuk untuk menciptakan tata kelola organisasi yang jelas dan mempermudah pembahasan produk hukum sesuai fokus komisi
             </div>
-            <a href="{{ url("/tentang-badan-legilasi") }}">
+            <a href="{{ url("/tentang-badan-legislasi") }}">
               <button>Selengkapnya</button>
             </a>
           </div>
