@@ -13,7 +13,7 @@
         <section class="table__header">
             <div class="input-group">
                 <input type="search" placeholder="Search Data...">
-                <img src="img/search.png" alt="">
+                <img src="/img/search.png" alt="">
             </div>
             
         </section>

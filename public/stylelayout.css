@@ -79,13 +79,7 @@ nav {
     padding: 1rem 2rem;
     font-size: 1rem;
     color: #fff;
-    background: rgb(2, 0, 36);
-    background: linear-gradient(
-        135deg,
-        rgba(2, 0, 36, 1) 0%,
-        rgba(207, 181, 59, 1) 0%,
-        rgba(148, 27, 63, 1) 90%
-    );
+    background-color: #800000;
     border-radius: 5px;
     cursor: pointer;
     transition: all 0.3s ease;
@@ -175,6 +169,13 @@ footer .column > a:hover {
     font-size: 0.8rem;
     text-align: center;
 }
+.address {
+    font-family: "Poppins", sans-serif;
+    font-size: 13px;
+    color: #18181b; /* warna teks */
+    line-height: 1.5; /* spasi antar baris */
+    margin-top: -30px; /* jarak atas */
+  }
 
 @media (width < 900px) {
     .nav-links {
