@@ -12,6 +12,7 @@ use App\Http\Controllers\Admin\RoomAdminController;
 use App\Http\Controllers\Admin\RoomScheduleAdminController;
 use App\Http\Controllers\Admin\AktivitasSenatAdminCtrl;
 use App\Http\Controllers\Admin\ProposalController;
+use App\Http\Controllers\Admin\FaqController;
 use App\Http\Controllers\AktivitasSenatController;
 use App\Http\Controllers\EventController;
 use App\Http\Controllers\AspirasiController;
@@ -99,6 +100,7 @@ Route::get('/jdih  ', [JDIHController::class, 'getJDIH']);
 Route::get('/jdih/jenis/{id}', [JDIHController::class, 'jenis'])->name('jdih.jenis');
 
 Route::get('jdih/show/{id}', [JDIHController::class, 'showJDIH'])->name('jdih.show');
+Route::get('events/list', [EventAdminController::class, 'listEvent'])->name('legislasi.list');
 
 // ======================== END WEBSITE ==================================
 
@@ -129,17 +131,26 @@ Route::group([
     Route::get('/aktivitas/{id}/edit', [AktivitasSenatAdminCtrl::class, 'edit'])->name('aktivitasSenat.edit');
     Route::put('/aktivitas/{id}', [AktivitasSenatAdminCtrl::class, 'update'])->name('aktivitasSenat.update');
     Route::delete('/aktivitas/{id}', [AktivitasSenatAdminCtrl::class, 'destroy'])->name('aktivitasSenat.destroy');
-    
+
     Route::get('events/list', [EventAdminController::class, 'listEvent'])->name('legislasi.list');
     Route::resource('events', EventAdminController::class);
-    
+
     Route::get('/persetujuan-proposal', [ProposalController::class, 'index']);
     Route::put('/update-komisi/{proposalId}', [ProposalController::class, 'updateKomisiCheckedBy'])->name('proposal.update-komisi');
     Route::put('/proposal/{proposal}/admin-reject', [ProposalController::class, 'adminReject'])->name('proposal.admin-reject');
-    
+
     Route::get('', function () {
         return view('cms.dashboard');
     })->name('dashboard');
+
+        
+    Route::get('/faq', [FaqController::class, 'index'])->name('faq.index');
+    Route::get('/faq/create', [FaqController::class, 'create'])->name('faq.create');
+    Route::post('/faq', [FaqController::class, 'store'])->name('faq.store');
+    Route::get('/faq/{faq}', [FaqController::class, 'show'])->name('faq.show');
+    Route::get('/faq/{faq}/edit', [FaqController::class, 'edit'])->name('faq.edit');
+    Route::put('/faq/{faq}', [FaqController::class, 'update'])->name('faq.update');
+    Route::delete('/faq/{faq}', [FaqController::class, 'destroy'])->name('faq.destroy');
 });
 
 // ======================== END CMS ==================================
@@ -151,14 +162,14 @@ Route::group([
     'as' => 'komisi-i.',
     'middleware' => ['auth', 'role.auth:komisi-i']
 ], function () {
-    Route::get('/',[AgendaKerjaController::class, 'index'] );
-    Route::get('/agendakerja',[AgendaKerjaController::class, 'index'] )->name('agenda.index');
+    Route::get('/', [AgendaKerjaController::class, 'index']);
+    Route::get('/agendakerja', [AgendaKerjaController::class, 'index'])->name('agenda.index');
     Route::get('/agendakerja/create', [AgendaKerjaController::class, 'showCreate'])->name('agenda.create');
     Route::post('/agendakerja', [AgendaKerjaController::class, 'store'])->name('agenda.store');
     Route::get('/agendakerja/{id}/edit', [AgendaKerjaController::class, 'showEdit'])->name('agenda.edit');
     Route::put('/agendakerja/{id}', [AgendaKerjaController::class, 'update'])->name('agenda.update');
     Route::delete('/agendakerja/{id}', [AgendaKerjaController::class, 'destroy'])->name('agenda.destroy');
-    
+
     Route::get('/transparansisurat', [KomisiController::class, 'belumDiperiksa'])->name('proposal.belum-diperiksa');
     Route::get('/transparansisurat/revisi', [KomisiController::class, 'direvisi'])->name('proposal.direvisi');
     Route::get('/transparansisurat/disetujui', [KomisiController::class, 'disetujui'])->name('proposal.disetujui');
@@ -176,8 +187,8 @@ Route::group([
     'as' => 'komisi-ii.',
     'middleware' => ['auth', 'role.auth:komisi-ii']
 ], function () {
-    Route::get('/',[AgendaKerjaController::class, 'index'] );
-    Route::get('/agendakerja',[AgendaKerjaController::class, 'index'] )->name('agenda.index');
+    Route::get('/', [AgendaKerjaController::class, 'index']);
+    Route::get('/agendakerja', [AgendaKerjaController::class, 'index'])->name('agenda.index');
     Route::get('/agendakerja/create', [AgendaKerjaController::class, 'showCreate'])->name('agenda.create');
     Route::post('/agendakerja', [AgendaKerjaController::class, 'store'])->name('agenda.store');
     Route::get('/agendakerja/{id}/edit', [AgendaKerjaController::class, 'showEdit'])->name('agenda.edit');
@@ -193,7 +204,6 @@ Route::group([
     Route::get('/list-revisi/{proposalId}', [KomisiController::class, 'listRevisi'])->name('proposal.revisi');
     Route::get('/revisi/create/{proposalId}', [KomisiController::class, 'viewCreateRevisi'])->name('revisi.create');
     Route::post('/revisi/store/{proposalId}', [KomisiController::class, 'createRevisi'])->name('revisi.store');
-    
 });
 // ======================== END KOMISi II==================================
 // ======================== KOMISI III==================================
@@ -202,8 +212,8 @@ Route::group([
     'as' => 'komisi-iii.',
     'middleware' => ['auth', 'role.auth:komisi-iii']
 ], function () {
-    Route::get('/',[AgendaKerjaController::class, 'index'] );
-    Route::get('/agendakerja',[AgendaKerjaController::class, 'index'] )->name('agenda.index');
+    Route::get('/', [AgendaKerjaController::class, 'index']);
+    Route::get('/agendakerja', [AgendaKerjaController::class, 'index'])->name('agenda.index');
     Route::get('/agendakerja/create', [AgendaKerjaController::class, 'showCreate'])->name('agenda.create');
     Route::post('/agendakerja', [AgendaKerjaController::class, 'store'])->name('agenda.store');
     Route::get('/agendakerja/{id}/edit', [AgendaKerjaController::class, 'showEdit'])->name('agenda.edit');
@@ -227,8 +237,8 @@ Route::group([
     'as' => 'komisi-iv.',
     'middleware' => ['auth', 'role.auth:komisi-iv']
 ], function () {
-    Route::get('/',[AgendaKerjaController::class, 'index'] );
-    Route::get('/agendakerja',[AgendaKerjaController::class, 'index'] )->name('agenda.index');
+    Route::get('/', [AgendaKerjaController::class, 'index']);
+    Route::get('/agendakerja', [AgendaKerjaController::class, 'index'])->name('agenda.index');
     Route::get('/agendakerja/create', [AgendaKerjaController::class, 'showCreate'])->name('agenda.create');
     Route::post('/agendakerja', [AgendaKerjaController::class, 'store'])->name('agenda.store');
     Route::get('/agendakerja/{id}/edit', [AgendaKerjaController::class, 'showEdit'])->name('agenda.edit');
@@ -252,8 +262,8 @@ Route::group([
     'as' => 'badan-anggaran.',
     'middleware' => ['auth', 'role.auth:badan-anggaran']
 ], function () {
-    Route::get('/',[AgendaKerjaController::class, 'index'] );
-    Route::get('/agendakerja',[AgendaKerjaController::class, 'index'] )->name('agenda.index');
+    Route::get('/', [AgendaKerjaController::class, 'index']);
+    Route::get('/agendakerja', [AgendaKerjaController::class, 'index'])->name('agenda.index');
     Route::get('/agendakerja/create', [AgendaKerjaController::class, 'showCreate'])->name('agenda.create');
     Route::post('/agendakerja', [AgendaKerjaController::class, 'store'])->name('agenda.store');
     Route::get('/agendakerja/{id}/edit', [AgendaKerjaController::class, 'showEdit'])->name('agenda.edit');
@@ -277,14 +287,13 @@ Route::group([
     'as' => 'badan-kehormatan.',
     'middleware' => ['auth', 'role.auth:badan-kehormatan']
 ], function () {
-    Route::get('/',[AgendaBadanController::class, 'index'] );
-    Route::get('/agendakerja',[AgendaBadanController::class, 'index'] )->name('agenda.index');
+    Route::get('/', [AgendaBadanController::class, 'index']);
+    Route::get('/agendakerja', [AgendaBadanController::class, 'index'])->name('agenda.index');
     Route::get('/agendakerja/create', [AgendaBadanController::class, 'showCreate'])->name('agenda.create');
     Route::post('/agendakerja', [AgendaBadanController::class, 'store'])->name('agenda.store');
     Route::get('/agendakerja/{id}/edit', [AgendaBadanController::class, 'showEdit'])->name('agenda.edit');
     Route::put('/agendakerja/{id}', [AgendaBadanController::class, 'update'])->name('agenda.update');
     Route::delete('/agendakerja/{id}', [AgendaBadanController::class, 'destroy'])->name('agenda.destroy');
-
 });
 // ======================== END BADAN Kehormatan ==================================
 Route::group([
@@ -292,8 +301,8 @@ Route::group([
     'as' => 'badan-legislasi.',
     'middleware' => ['auth', 'role.auth:badan-legislasi']
 ], function () {
-    Route::get('/',[AgendaBadanController::class, 'index'] );
-    Route::get('/agendakerja',[AgendaBadanController::class, 'index'] )->name('agenda.index');
+    Route::get('/', [AgendaBadanController::class, 'index']);
+    Route::get('/agendakerja', [AgendaBadanController::class, 'index'])->name('agenda.index');
     Route::get('/agendakerja/create', [AgendaBadanController::class, 'showCreate'])->name('agenda.create');
     Route::post('/agendakerja', [AgendaBadanController::class, 'store'])->name('agenda.store');
     Route::get('/agendakerja/{id}/edit', [AgendaBadanController::class, 'showEdit'])->name('agenda.edit');
@@ -306,8 +315,8 @@ Route::group([
     'as' => 'bksap.',
     'middleware' => ['auth', 'role.auth:bksap']
 ], function () {
-    Route::get('/',[AgendaBadanController::class, 'index'] );
-    Route::get('/agendakerja',[AgendaBadanController::class, 'index'] )->name('agenda.index');
+    Route::get('/', [AgendaBadanController::class, 'index']);
+    Route::get('/agendakerja', [AgendaBadanController::class, 'index'])->name('agenda.index');
     Route::get('/agendakerja/create', [AgendaBadanController::class, 'showCreate'])->name('agenda.create');
     Route::post('/agendakerja', [AgendaBadanController::class, 'store'])->name('agenda.store');
     Route::get('/agendakerja/{id}/edit', [AgendaBadanController::class, 'showEdit'])->name('agenda.edit');
@@ -323,10 +332,10 @@ Route::group([
     'as' => 'ormawa.',
     'middleware' => ['auth', 'role.auth:ormawa']
 ], function () {
-    Route::get('/',[AjukanDokumenController::class, 'index'] );
-    Route::get('/ajukansurat',[AjukanDokumenController::class, 'index'] )->name('ajukansurat');
+    Route::get('/', [AjukanDokumenController::class, 'index']);
+    Route::get('/ajukansurat', [AjukanDokumenController::class, 'index'])->name('ajukansurat');
     Route::post('/ajukan-proposal', [AjukanDokumenController::class, 'ajukanProposal'])->name('pengajuan_proposal');
-    
+
     Route::get('/transparansisurat', [AjukanDokumenController::class, 'cek_progress'])->name('cek_progress');
     Route::get('/list-revisi/{proposalId}', [AjukanDokumenController::class, 'listRevisi'])->name('proposal.revisi');
     Route::get('/proposal/{proposalId}/revisi/{revisiId}/list', [AjukanDokumenController::class, 'showCreateRevisi'])->name('create_revisi');

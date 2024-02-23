@@ -181,6 +181,7 @@ main.table {
     height: 70vh;
     background-color: #cbb989;
 
+
     backdrop-filter: blur(7px);
     box-shadow: 0 0.4rem 0.8rem #0005;
     border-radius: 0.8rem;
@@ -197,6 +198,7 @@ main.table4 {
     height: 7vh;
     background-color: #cbb989;
 
+
     backdrop-filter: blur(7px);
     box-shadow: 0 0.4rem 0.8rem #0005;
     border-radius: 0.8rem;
@@ -204,7 +206,6 @@ main.table4 {
     margin-right: auto;
     margin-top: 3rem;
     margin-bottom: 2rem;
-
     overflow: hidden;
 }
 
@@ -420,7 +421,7 @@ tbody td.active {
     position: relative;
 }
 
-.export__file .export__file-btn {
+.export_file .export_file-btn {
     display: inline-block;
     width: 2rem;
     height: 2rem;
@@ -429,7 +430,7 @@ tbody td.active {
     transition: 0.2s ease-in-out;
 }
 
-.export__file .export__file-btn:hover {
+.export_file .export_file-btn:hover {
     background-color: #fff;
     transform: scale(1.15);
     cursor: pointer;
@@ -439,7 +440,7 @@ tbody td.active {
     display: none;
 }
 
-.export__file .export__file-options {
+.export_file .export_file-options {
     position: absolute;
     right: 0;
 
@@ -457,13 +458,13 @@ tbody td.active {
     transition: 0.2s;
 }
 
-.export__file input:checked + .export__file-options {
+.export_file input:checked + .export_file-options {
     opacity: 1;
     transform: scale(1);
     z-index: 100;
 }
 
-.export__file .export__file-options label {
+.export_file .export_file-options label {
     display: block;
     width: 100%;
     padding: 0.6rem 0;
@@ -476,18 +477,18 @@ tbody td.active {
     transition: 0.2s ease-in-out;
 }
 
-.export__file .export__file-options label:first-of-type {
+.export_file .export_file-options label:first-of-type {
     padding: 1rem 0;
     background-color: #86e49d !important;
 }
 
-.export__file .export__file-options label:hover {
+.export_file .export_file-options label:hover {
     transform: scale(1.05);
     background-color: #fff;
     cursor: pointer;
 }
 
-.export__file .export__file-options img {
+.export_file .export_file-options img {
     width: 2rem;
     height: auto;
 }
@@ -638,7 +639,7 @@ footer .column > a:hover {
   .table__header .input-group:hover {
     width: 100%; /* Mengisi lebar 100% saat dihover pada ukuran layar kecil */
 }
-.export__file .export__file-btn {
+.export_file .export_file-btn {
     margin-top: 1rem;
     width: 2rem; /* Mengubah lebar tombol pada layar kecil */
     height: 2rem; /* Mengubah tinggi tombol pada layar kecil */
@@ -662,10 +663,6 @@ thead th span.icon-arrow {
 .table__body{
     margin-top: 3rem;
 }
+
 }
-
-
-
-
-
-
+}

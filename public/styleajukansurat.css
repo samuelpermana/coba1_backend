@@ -209,6 +209,8 @@ nav {
     height: 40px;
     width: 95%;
     border-radius: 7px;
+    background-color: #888;
+    color: white;
     outline: none;
     padding: 0 10px;
     font-family: "Poppins", sans-serif;
@@ -223,7 +225,7 @@ nav {
     display: block;
     margin-bottom: 0.5rem;
     font-size: 1rem;
-    color: #333;
+    color: #888;
     font-family: "Poppins", sans-serif;
 }
 
@@ -244,6 +246,7 @@ nav {
 /* Warna Khusus untuk Input File */
 .form-control[type="file"] {
     cursor: pointer;
+    color: white;
 }
 
 /* Efek Hover pada Input File */
@@ -271,7 +274,13 @@ nav {
     border-radius: 10px;
     cursor: pointer;
     color: rgb(255, 255, 255);
-    background: #18181b;
+    background: rgb(2, 0, 36);
+    background: linear-gradient(
+        135deg,
+        rgba(2, 0, 36, 1) 0%,
+        rgba(207, 181, 59, 1) 0%,
+        rgba(148, 27, 63, 1) 90%
+    );
     transition: 0.3s ease;
     margin: 0 auto;
 }

@@ -3,8 +3,10 @@
 @section("content")
 <link href="{{ asset("styletransparansi.css") }}" rel="stylesheet">
     <div class="container">
-        <h1>Daftar Revisi Proposal</h1>
-        <h2>{{ $proposal->judul }}</h2>
+        <div class="header-revisi">
+            <h1>Daftar Revisi Proposal</h1>
+            <h2>{{ $proposal->judul }}</h2>
+        </div>
 
         <section class="table__body">
             <table>
