@@ -48,28 +48,29 @@ class JDIHAdminCtrl extends Controller
         ]);
 
         // Store file_peraturan
-        $filePeraturanPath = $request->file('file_peraturan')->store('jdih', 'public');
+        $filePeraturanPath = $request->file('file_peraturan')->storeAs('jdih', $request->file('file_peraturan')->getClientOriginalName(), 'public');
         $jdih->update(['file_peraturan' => $filePeraturanPath]);
 
         // Store file_naskah
         if ($request->hasFile('file_naskah')) {
-            $fileNaskahPath = $request->file('file_naskah')->store('jdih', 'public');
+            $fileNaskahPath = $request->file('file_naskah')->storeAs('jdih', $request->file('file_naskah')->getClientOriginalName(), 'public');
             $jdih->update(['file_naskah' => $fileNaskahPath]);
         }
 
         // Store file_inventarisasi
         if ($request->hasFile('file_inventarisasi')) {
-            $fileInventarisasiPath = $request->file('file_inventarisasi')->store('jdih', 'public');
+            $fileInventarisasiPath = $request->file('file_inventarisasi')->storeAs('jdih', $request->file('file_inventarisasi')->getClientOriginalName(), 'public');
             $jdih->update(['file_inventarisasi' => $fileInventarisasiPath]);
         }
 
         // Store file_lainnya
         if ($request->hasFile('file_lainnya')) {
             foreach ($request->file('file_lainnya') as $file) {
-                $filePath = $file->store('jdih', 'public');
+                $filePath = $file->storeAs('jdih', $file->getClientOriginalName(), 'public');
                 $jdih->file_lain()->create(['nama_file' => $filePath]);
             }
         }
+
 
         return redirect()->route('admin.jdih.index')->with('success', 'JDIH record created successfully');
     }
@@ -89,7 +90,6 @@ class JDIHAdminCtrl extends Controller
     // Mengembalikan view edit dengan data JDIH yang akan diedit
     return view('cms.jdih.edit', compact('jdihRecord', 'jenisJDIH'));
 }
-
 public function update(Request $request, $id)
 {
     $jdihRecord = JDIH::findOrFail($id);
@@ -119,21 +119,21 @@ public function update(Request $request, $id)
     // Update file_peraturan
     if ($request->hasFile('file_peraturan')) {
         Storage::disk('public')->delete($jdihRecord->file_peraturan);
-        $filePeraturanPath = $request->file('file_peraturan')->store('jdih', 'public');
+        $filePeraturanPath = $request->file('file_peraturan')->storeAs('jdih', $request->file('file_peraturan')->getClientOriginalName(), 'public');
         $data['file_peraturan'] = $filePeraturanPath;
     }
 
     // Update file_naskah
     if ($request->hasFile('file_naskah')) {
         Storage::disk('public')->delete($jdihRecord->file_naskah);
-        $fileNaskahPath = $request->file('file_naskah')->store('jdih', 'public');
+        $fileNaskahPath = $request->file('file_naskah')->storeAs('jdih', $request->file('file_naskah')->getClientOriginalName(), 'public');
         $data['file_naskah'] = $fileNaskahPath;
     }
 
     // Update file_inventarisasi
     if ($request->hasFile('file_inventarisasi')) {
         Storage::disk('public')->delete($jdihRecord->file_inventarisasi);
-        $fileInventarisasiPath = $request->file('file_inventarisasi')->store('jdih', 'public');
+        $fileInventarisasiPath = $request->file('file_inventarisasi')->storeAs('jdih', $request->file('file_inventarisasi')->getClientOriginalName(), 'public');
         $data['file_inventarisasi'] = $fileInventarisasiPath;
     }
 
@@ -145,7 +145,7 @@ public function update(Request $request, $id)
         }
 
         foreach ($request->file('file_lainnya') as $file) {
-            $filePath = $file->store('jdih', 'public');
+            $filePath = $file->storeAs('jdih', $file->getClientOriginalName(), 'public');
             $jdihRecord->file_lain()->create(['nama_file' => $filePath]);
         }
     }
