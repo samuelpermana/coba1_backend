@@ -101,14 +101,19 @@
   <section class="container">
     <h2 class="header">Anggota Komisi 1</h2>
     <div class="anggota-4">
-      <div class="card_wrapper">
-        <div class="card_image">
-          <img class="card_img" src="https://cdn-icons-png.flaticon.com/512/5556/5556468.png" alt="gambar pengembangan dan keilmuan">
+      <div class="card-coba">
+        <div class="imgbox">
+          <img class="img-coba"
+            src="https://images.pexels.com/photos/1815257/pexels-photo-1815257.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+          />
         </div>
-        <div class="card_data">
-          <h2 class="card_titleA">Ketua Komisi</h2>
-          <h3 class="card_nameA">Fakhrunnisa Arvia Alderia</h3>
-          <p class="card_des">FH UNDIP 2021</p>
+  
+        <div class="content1">
+          <h2>keep Smiling</h2>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat
+            doloribus vitae fugit enim repudiandae
+          </p>
         </div>
       </div>
       <div class="card_wrapper">

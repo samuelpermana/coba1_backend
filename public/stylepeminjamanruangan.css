@@ -181,6 +181,7 @@ main.table {
     height: 70vh;
     background-color: #cbb989;
 
+
     backdrop-filter: blur(7px);
     box-shadow: 0 0.4rem 0.8rem #0005;
     border-radius: 0.8rem;
@@ -197,6 +198,7 @@ main.table4 {
     height: 7vh;
     background-color: #cbb989;
 
+
     backdrop-filter: blur(7px);
     box-shadow: 0 0.4rem 0.8rem #0005;
     border-radius: 0.8rem;
@@ -204,7 +206,6 @@ main.table4 {
     margin-right: auto;
     margin-top: 3rem;
     margin-bottom: 2rem;
-
     overflow: hidden;
 }
 
@@ -661,5 +662,7 @@ thead th span.icon-arrow {
 
 .table__body{
     margin-top: 3rem;
+}
+
 }
 }
