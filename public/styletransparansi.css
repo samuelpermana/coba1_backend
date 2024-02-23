@@ -380,6 +380,7 @@ section .header {
   tbody tr td p,
   tbody tr td img {
     transition: .2s ease-in-out;
+    background-color: #F5F5DC;
   }
   
   tbody tr.hide td,
@@ -609,7 +610,7 @@ section .header {
     display: inline-block;
     width: 2rem;
     height: 2rem;
-    background: #d5d1defe url(img/export.png) center / 80% no-repeat;
+    background: #F5F5DC url(img/export.png) center / 80% no-repeat;
     border-radius: 50%;
     transition: .2s ease-in-out;
   }
@@ -710,10 +711,10 @@ section .header {
   }
   
   footer .column .socials a:hover {
-    color: #18181b;
-    background-color: #18181b;
-    border-color: #18181b;
-  }
+    color: #fff;
+    background-color: #cfb53b;
+    border-color: #cfb53b;
+}
   
   footer .column h4 {
     color: #18181b;
@@ -740,6 +741,14 @@ section .header {
     color: #18181b;
     font-size: 0.8rem;
     text-align: center;
+  }
+
+  .address {
+    font-family: "Poppins", sans-serif;
+    font-size: 13px;
+    color: #18181b; /* warna teks */
+    line-height: 1.5; /* spasi antar baris */
+    margin-top: -30px; /* jarak atas */
   }
 
   .final{

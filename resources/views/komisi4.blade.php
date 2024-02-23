@@ -16,7 +16,7 @@
             </a>
           </div>
         </div>
-        <div class="item" style="background-image: url(https://images6.alphacoders.com/439/439546.jpg);">
+        <div class="item"  style="background-image: url(/img/KOMISI4.jpg);">
           <div class="content">
             <div class="name">KOMISI IV</div>
             <div class="des">Komisi IV adalah komisi yang menaungi terkait Bidang Advokasi, Akademik, Sarana, dan Prasarana. Komisi empat berkoordinasi dan bertanggung jawab kepada mitra kerjanya, yaitu : BEM Bidang KAPRO dan ADVOKESMA</div>

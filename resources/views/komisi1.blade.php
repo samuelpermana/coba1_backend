@@ -7,7 +7,7 @@
     <div class="container6">
       <div class="slide">
 
-        <div class="item" style="background-image: url(https://images6.alphacoders.com/439/439546.jpg);">
+      <div class="item"  style="background-image: url(/img/KOMISI1.jpg);">
           <div class="content">
             <div class="name">KOMISI I</div>
             <div class="des">Komisi I adalah komisi yang menaungi terkait dengan Bidang Pengembangan dan Keilmuan</div>
@@ -16,7 +16,7 @@
             </a>
           </div>
         </div>
-        <div class="item" style="background-image: url(https://images6.alphacoders.com/439/439546.jpg);">
+        <div class="item"  style="background-image: url(/img/KOMISI1.jpg);">
           <div class="content">
             <div class="name">KOMISI I</div>
             <div class="des">Komisi I adalah adalah komisi yang menaungi terkait dengan Bidang Pengembangan dan Keilmuan</div>

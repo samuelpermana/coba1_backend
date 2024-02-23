@@ -16,7 +16,7 @@
             </a>
           </div>
         </div>
-        <div class="item" style="background-image: url(https://images6.alphacoders.com/439/439546.jpg);">
+        <div class="item"  style="background-image: url(/img/KOMISI2.jpg);">
           <div class="content">
             <div class="name">KOMISI II</div>
             <div class="des">Komisi II adalah komisi yang menaungi terkait Bidang Minat, Bakat, Kaderisasi dan Kerohanian</div>

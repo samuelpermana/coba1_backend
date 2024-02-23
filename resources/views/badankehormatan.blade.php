@@ -16,7 +16,7 @@
             </a>
           </div>
         </div>
-        <div class="item" style="background-image: url(https://images6.alphacoders.com/439/439546.jpg);">
+        <div class="item"  style="background-image: url(/img/BADANKEHORMATAN.jpg);">
           <div class="content">
             <div class="name">Badan Kehormatan</div>
             <div class="des">Badan Kehormatan adalah badan yang dibentuk SM FH Undip dan merupakan alat kelengkapan SM FH Undip yang bersifat tetap serta memiliki tugas untuk menegakkan tata tertib, tata beracara, dan kode etik</div>

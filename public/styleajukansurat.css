@@ -16,7 +16,7 @@
   .dropdown-content {
     display: none;
     position: absolute;
-    background-color: rgba(0, 0, 0, 0.3); /* Warna hitam dengan transparansi 30% */
+    background-color: rgba(0, 0, 0, 0.3); 
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
@@ -209,8 +209,8 @@ nav {
     height: 40px;
     width: 95%;
     border-radius: 7px;
-    background-color: #888;
-    color: white;
+    background-color: #F5F5DC;
+    color: #18181b;
     outline: none;
     padding: 0 10px;
     font-family: "Poppins", sans-serif;
@@ -267,20 +267,14 @@ nav {
 .form-submit-btn input {
     display: block;
     width: 50%;
-    margin: 0 auto;
+    margin-top: 10px;
     font-size: 20px;
     padding: 10px;
     border: none;
     border-radius: 10px;
     cursor: pointer;
     color: rgb(255, 255, 255);
-    background: rgb(2, 0, 36);
-    background: linear-gradient(
-        135deg,
-        rgba(2, 0, 36, 1) 0%,
-        rgba(207, 181, 59, 1) 0%,
-        rgba(148, 27, 63, 1) 90%
-    );
+    background-color: #18181b;
     transition: 0.3s ease;
     margin: 0 auto;
 }
