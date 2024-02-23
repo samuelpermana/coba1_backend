@@ -10,9 +10,10 @@
 </head>
 
 <body>
-
+    
     <div class="container" id="container">
-        
+        <span class="blur"></span>
+        <span class="blur"></span>
         <div class="form-container sign-in">
             <form method="POST" action="{{ route('login-users') }}">
                 @csrf

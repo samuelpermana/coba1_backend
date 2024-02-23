@@ -30,9 +30,9 @@
                     <button class="dropbtn">JDIH</button>
                     <div class="dropdown-content">
                         <a href="{{ route('jdih.jenis', ['id' => 1]) }}">Peraturan Mahasiswa</a>
-                        <a href="{{ route('jdih.jenis', ['id' => 2]) }}">Standart Operating Procedure</a>
-                        <a href="{{ route('jdih.jenis', ['id' => 3]) }}">Peraturan Senat Mahasiswa</a>
-                        <a href="{{ route('jdih.jenis', ['id' => 4]) }}">Keputusan</a>
+                        <a href="{{ route('jdih.jenis', ['id' => 2]) }}">Peraturan Senat Mahasiswa</a>
+                        <a href="{{ route('jdih.jenis', ['id' => 3]) }}">Keputusan</a>
+                        <a href="{{ route('jdih.jenis', ['id' => 4]) }}">Standart Operating Procedure </a>
                         <a href="{{ route('jdih.jenis', ['id' => 5]) }}">Rancangan Peraturan</a>
                     </div>
                 </div>
