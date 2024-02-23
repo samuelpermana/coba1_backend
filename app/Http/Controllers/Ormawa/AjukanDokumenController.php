@@ -26,7 +26,8 @@ class AjukanDokumenController extends Controller
                 'deskripsi' => 'required|string',
                 'file_proposal' => 'required|file|mimes:doc,docx',
             ]);
-            $file_path = $request->file('file_proposal')->store('proposal_files', 'public');
+            $file_proposal = $request->file('file_proposal');
+            $file_path = $file_proposal->storeAs('proposal_files', $file_proposal->getClientOriginalName(), 'public');
     
             $proposal = new ProposalOrmawa();
             $proposal->judul = $request->input('judul');
@@ -45,7 +46,7 @@ class AjukanDokumenController extends Controller
             $log->user_id = Auth::id();
             $log->save();
     
-            return redirect()->back()->with('success', 'Proposal berhasil diajukan');
+            return redirect()->route('ormawa.cek_progress')->with('success', 'Agenda kerja berhasil dibuat!');
         } catch (\Exception $e) {
             return response_error(null, $e->getMessage(), $e->getCode());
         }
@@ -53,13 +54,15 @@ class AjukanDokumenController extends Controller
 
     public function cek_progress()
     {
-        $proposals = ProposalOrmawa::where('created_by', Auth::id())->get();
+        $proposals = ProposalOrmawa::where('created_by', Auth::id())
+        ->orderBy('updated_at', 'desc') 
+        ->get();
 
         $proposalData = [];
         foreach ($proposals as $proposal) {
             $latestLog = LogProposal::where('proposal_id', $proposal->id)
-                ->orderBy('created_at', 'desc')
-                ->first();
+            ->orderBy('created_at', 'desc') 
+            ->first();
 
         $lamaProses = null;
         if ($proposal->approved_at) {
@@ -122,7 +125,7 @@ class AjukanDokumenController extends Controller
         $proposal->tipe = "revisi";
         $proposal->is_checked = false;
         $proposal->deskripsi = $request->deskripsi;
-        $proposal->file_proposal = $request->file_proposal->store('proposal_files', 'public');
+        $proposal->file_proposal = $request->file_proposal->storeAs('proposal_files', $request->file_proposal->getClientOriginalName(), 'public');
         $proposal->save();
 
         $revisiProposal->is_revision_done_by_ormawa = 1;
@@ -142,11 +145,13 @@ class AjukanDokumenController extends Controller
         $log->proposal_id = $proposal->id;
         $log->user_id = Auth::id();
         $log->save();
-        return redirect()->back()->with('success', 'Revisi Proposal berhasil dikirim');
+        return redirect()->route('ormawa.proposal.revisi', ['proposalId' => $proposalId])->with('success', 'Agenda kerja berhasil dibuat!');
+        
     } catch (\Exception $e) {
         return response_error(null, $e->getMessage(), $e->getCode());
     }
 }
+    
 public function uploadFileFinal(Request $request, $proposalId)
 {
     $request->validate([
@@ -157,7 +162,7 @@ public function uploadFileFinal(Request $request, $proposalId)
 
     if ($request->hasFile('file_final')) {
         $file = $request->file('file_final');
-        $file_path = $file->store('file_finals', 'public');
+        $file_path = $file->storeAs('file_finals', $file->getClientOriginalName(), 'public');
         $proposal->file_final = $file_path;
         $proposal->save();
 
