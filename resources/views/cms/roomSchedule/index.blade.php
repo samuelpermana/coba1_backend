@@ -19,7 +19,8 @@
         {{-- <th>ID</th> --}}
         <th>Room</th>
         <th>Date</th>
-        <th>Time</th>
+        <th>Start Time</th>
+        <th>End Time</th>
         <th>Booked By</th>
         <th>Actions</th>
       </tr>
@@ -31,7 +32,8 @@
           {{-- <td>{{ $schedule->id }}</td> --}}
           <td>{{ $schedule->room->name }}</td>
           <td>{{ $schedule->date }}</td>
-          <td>{{ $schedule->time }}</td>
+          <td>{{ $schedule->start_time }}</td>
+          <td>{{ $schedule->end_time }}</td>
           <td>{{ $schedule->booked_by }}</td>
           <td>
             <a href="{{ route("admin.room-schedules.edit", $schedule->id) }}">Edit</a> |

@@ -18,7 +18,9 @@ class ProposalOrmawa extends Model
         'created_by',
         'komisi_checked_by',
         'tipe',
+        'approved_at',
         'is_checked',
+        'file_final'
     ];
 
     protected $casts = [

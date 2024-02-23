@@ -1,7 +1,10 @@
 <?php
 
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Password;
 use App\Http\Controllers\Auth\AuthController;
+use App\Http\Controllers\Auth\ForgetPasswordCtrl;
 use App\Http\Controllers\Admin\AspirasiAdminCtrl;
 use App\Http\Controllers\Admin\JDIHAdminCtrl;
 use App\Http\Controllers\Admin\EventAdminController;
@@ -29,10 +32,15 @@ use App\Models\JDIH;
 
 
 // ======================== Auth ==================================
-Route::get('/login', [AuthController::class, 'index'])->name('login');
-Route::post('/login-user', [AuthController::class, 'login'])->name('login-users');
+Route::get('/login', [AuthController::class, 'index'])->middleware('guest')->name('login');
+Route::post('/login-user', [AuthController::class, 'login'])->middleware('guest')->name('login-users');
 Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
-// ======================== Auth ==================================
+Route::get('/forgot-password',[ForgetPasswordCtrl::class, 'forgetPassword'])->middleware('guest')->name('password.request');
+Route::post('/forgot-password',[ForgetPasswordCtrl::class, 'forgetPasswordPost'])->middleware('guest')->name('passwordPost.request');
+Route::get('/reset-password/{token}',[ForgetPasswordCtrl::class, 'resetPassword'])->middleware('guest')->name('passwordReset.request');
+Route::post('/reset-password/{token}',[ForgetPasswordCtrl::class, 'resetPasswordPost'])->middleware('guest')->name('passwordResetPost.request');
+
+// ======================== END Auth ==================================
 
 // ======================== WEBSITE ==================================
 Route::get('/', function () {
@@ -98,7 +106,7 @@ Route::get('jdih/show/{id}', [JDIHController::class, 'showJDIH'])->name('jdih.sh
 Route::group([
     'prefix' => 'admin',
     'as' => 'admin.',
-    'middleware' => ['auth']
+    'middleware' => ['auth', 'role.auth:admin']
 ], function () {
     Route::get('/bankaspirasi', [AspirasiAdminCtrl::class, 'index'])->name('index');
     Route::put('/bankaspirasi/{id}', [AspirasiAdminCtrl::class, 'update'])->name('update');
@@ -141,7 +149,7 @@ Route::group([
 Route::group([
     'prefix' => 'komisi-i',
     'as' => 'komisi-i.',
-    'middleware' => ['auth']
+    'middleware' => ['auth', 'role.auth:komisi-i']
 ], function () {
     Route::get('/', [AgendaKerjaController::class, 'index']);
     Route::get('/agendakerja', [AgendaKerjaController::class, 'index'])->name('agenda.index');
@@ -166,7 +174,7 @@ Route::group([
 Route::group([
     'prefix' => 'komisi-ii',
     'as' => 'komisi-ii.',
-    'middleware' => ['auth']
+    'middleware' => ['auth', 'role.auth:komisi-ii']
 ], function () {
     Route::get('/', [AgendaKerjaController::class, 'index']);
     Route::get('/agendakerja', [AgendaKerjaController::class, 'index'])->name('agenda.index');
@@ -191,7 +199,7 @@ Route::group([
 Route::group([
     'prefix' => 'komisi-iii',
     'as' => 'komisi-iii.',
-    'middleware' => ['auth']
+    'middleware' => ['auth', 'role.auth:komisi-iii']
 ], function () {
     Route::get('/', [AgendaKerjaController::class, 'index']);
     Route::get('/agendakerja', [AgendaKerjaController::class, 'index'])->name('agenda.index');
@@ -216,7 +224,7 @@ Route::group([
 Route::group([
     'prefix' => 'komisi-iv',
     'as' => 'komisi-iv.',
-    'middleware' => ['auth']
+    'middleware' => ['auth', 'role.auth:komisi-iv']
 ], function () {
     Route::get('/', [AgendaKerjaController::class, 'index']);
     Route::get('/agendakerja', [AgendaKerjaController::class, 'index'])->name('agenda.index');
@@ -241,7 +249,7 @@ Route::group([
 Route::group([
     'prefix' => 'badan-anggaran',
     'as' => 'badan-anggaran.',
-    'middleware' => ['auth']
+    'middleware' => ['auth', 'role.auth:badan-anggaran']
 ], function () {
     Route::get('/', [AgendaKerjaController::class, 'index']);
     Route::get('/agendakerja', [AgendaKerjaController::class, 'index'])->name('agenda.index');
@@ -266,7 +274,7 @@ Route::group([
 Route::group([
     'prefix' => 'badan-kehormatan',
     'as' => 'badan-kehormatan.',
-    'middleware' => ['auth']
+    'middleware' => ['auth', 'role.auth:badan-kehormatan']
 ], function () {
     Route::get('/', [AgendaBadanController::class, 'index']);
     Route::get('/agendakerja', [AgendaBadanController::class, 'index'])->name('agenda.index');
@@ -280,7 +288,7 @@ Route::group([
 Route::group([
     'prefix' => 'badan-legislasi',
     'as' => 'badan-legislasi.',
-    'middleware' => ['auth']
+    'middleware' => ['auth', 'role.auth:badan-legislasi']
 ], function () {
     Route::get('/', [AgendaBadanController::class, 'index']);
     Route::get('/agendakerja', [AgendaBadanController::class, 'index'])->name('agenda.index');
@@ -294,7 +302,7 @@ Route::group([
 Route::group([
     'prefix' => 'bksap',
     'as' => 'bksap.',
-    'middleware' => ['auth']
+    'middleware' => ['auth', 'role.auth:bksap']
 ], function () {
     Route::get('/', [AgendaBadanController::class, 'index']);
     Route::get('/agendakerja', [AgendaBadanController::class, 'index'])->name('agenda.index');
@@ -311,7 +319,7 @@ Route::group([
 Route::group([
     'prefix' => 'ormawa',
     'as' => 'ormawa.',
-    'middleware' => ['auth']
+    'middleware' => ['auth', 'role.auth:ormawa']
 ], function () {
     Route::get('/', [AjukanDokumenController::class, 'index']);
     Route::get('/ajukansurat', [AjukanDokumenController::class, 'index'])->name('ajukansurat');
@@ -321,6 +329,7 @@ Route::group([
     Route::get('/list-revisi/{proposalId}', [AjukanDokumenController::class, 'listRevisi'])->name('proposal.revisi');
     Route::get('/proposal/{proposalId}/revisi/{revisiId}/list', [AjukanDokumenController::class, 'showCreateRevisi'])->name('create_revisi');
     Route::post('/ormawa/proposal/{proposalId}/revisi/{revisiId}/kirim', [AjukanDokumenController::class, 'kirimRevisi'])->name('kirim_revisi');
+    Route::post('/proposal-final/{proposalId}/upload', [AjukanDokumenController::class, 'uploadFileFinal'])->name('upload.file.final');
 });
 // ======================== END ORMAWA ==================================
 
@@ -329,7 +338,7 @@ Route::group([
 Route::group([
     'prefix' => 'pimpinan',
     'as' => 'pimpinan.',
-    'middleware' => ['auth']
+    'middleware' => ['auth', 'role.auth:pimpinan']
 ], function () {
     Route::get('/transparansisurat', [SekjenController::class, 'belumDiperiksa'])->name('proposal.belum-diperiksa');
     Route::get('/transparansisurat/revisi', [SekjenController::class, 'direvisi'])->name('proposal.direvisi');
