@@ -100,6 +100,7 @@ Route::get('/jdih  ', [JDIHController::class, 'getJDIH']);
 Route::get('/jdih/jenis/{id}', [JDIHController::class, 'jenis'])->name('jdih.jenis');
 
 Route::get('jdih/show/{id}', [JDIHController::class, 'showJDIH'])->name('jdih.show');
+Route::get('events/list', [EventAdminController::class, 'listEvent'])->name('legislasi.list');
 
 // ======================== END WEBSITE ==================================
 
