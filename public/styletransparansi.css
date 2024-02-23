@@ -5,7 +5,7 @@
   font-size: 16px;  
   border: none;
   outline: none;
-  color: white;
+  color: #18181b;
   padding: 14px 16px;
   background-color: inherit;
   font-family: inherit;
@@ -69,7 +69,7 @@ a {
 
 body {
   font-family: "Poppins", sans-serif;
-  background-color: #18181b;
+  background-color: #fff6ea;
 }
 
 nav {
@@ -114,7 +114,7 @@ nav {
 .link a {
   position: relative;
   padding-bottom: 0.75rem;
-  color: #fff;
+  color: #18181b;
 }
 
 .link a::after {
@@ -134,7 +134,19 @@ nav {
 }
 
 .btn {
-  padding: 1rem 2rem;
+  padding: 1rem 1.5rem;
+  font-size: 1rem;
+  color: #fff;
+  background-color: #800000;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: 100%;
+  
+}
+
+.btn-warning1 {
+  padding: 1rem 1.5rem;
   font-size: 1rem;
   color: #fff;
   background: rgb(2, 0, 36);
@@ -142,15 +154,33 @@ nav {
   border-radius: 5px;
   cursor: pointer;
   transition: all 0.3s ease;
+  margin-bottom: 2rem;
+  margin-top: 1rem;
+  width: 100%;
+  
 }
 
+.btn-warning2 {
+  padding: 1rem 1.5rem;
+  font-size: 1rem;
+  color: #fff;
+  background: rgb(2, 0, 36);
+  background: linear-gradient(135deg, rgba(2, 0, 36, 1) 0%, rgba(207, 181, 59, 1) 0%, rgba(148, 27, 63, 1) 90%);
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-bottom: 3px;
+  margin-top: 1rem;
+  width: 100%;
+
+  
+}
 
 .trans {
   padding: 1rem 2rem;
   font-size: 1rem;
   color: #fff;
-  background: rgb(2, 0, 36);
-  background: linear-gradient(135deg, rgba(2, 0, 36, 1) 0%, rgba(207, 181, 59, 1) 0%, rgba(148, 27, 63, 1) 90%);
+  background-color: #800000;
   border-radius: 5px;
   cursor: pointer;
   transition: all 0.3s ease;
@@ -188,7 +218,7 @@ section .header {
     max-width: 600px;
     margin: auto;
     text-align: center;
-    color: #ccc;
+    color: #18181b;
     margin-top: -2rem;
     margin-bottom: 3rem;
   }
@@ -200,7 +230,7 @@ section .header {
     width: 100%;
 
     height: 70vh;
-    background-color: #27272a;
+    background-color: #cbb989;
   
     backdrop-filter: blur(7px);
     box-shadow: 0 .4rem .8rem #0005;
@@ -217,7 +247,7 @@ section .header {
   .table__header {
     width: 100%;
     height: 10%;
-    background-color: #27272a;
+    background-color: #cbb989;
     padding: .8rem 1rem;
   
     display: flex;
@@ -228,12 +258,12 @@ section .header {
   .table__header .input-group {
     width: 35%;
 
-    height: 100%;
+    height: 125%;
 /*     height: 120%; */
 
 /*     height: 140%; */
 
-    background-color: #d5d1defe;
+    background-color: #F5F5DC;
     padding: 0 .8rem;
     border-radius: 2rem;
     margin-left: auto;
@@ -311,14 +341,14 @@ section .header {
   table, th, td {
     border-collapse: collapse;
     padding: 1rem;
-    text-align: left;
+    text-align: center;
   }
   
   thead th {
     position: sticky;
     top: 0;
     left: 0;
-    background-color: #d5d1defe;
+    background-color: #F5F5DC;
     cursor: pointer;
     text-transform: capitalize;
     text-align: center;
@@ -660,7 +690,7 @@ section .header {
   }
   
   footer .column p {
-    color: #ccc;
+    color: #18181b;
     margin-bottom: 2rem;
   }
   
@@ -671,7 +701,7 @@ section .header {
   }
   
   footer .column .socials a {
-    color: #ccc;
+    color: #18181b;
     border: 1px solid #ccc;
     padding: 5px 10px;
     font-size: 1.25rem;
@@ -680,13 +710,13 @@ section .header {
   }
   
   footer .column .socials a:hover {
-    color: #fff;
-    background-color: #cfb53b;
-    border-color: #cfb53b;
+    color: #18181b;
+    background-color: #18181b;
+    border-color: #18181b;
   }
   
   footer .column h4 {
-    color: #fff;
+    color: #18181b;
     margin-bottom: 2rem;
     font-size: 1.2rem;
     font-weight: 500;
@@ -694,7 +724,7 @@ section .header {
   
   footer .column > a {
     display: block;
-    color: #ccc;
+    color: #18181b;
     margin-bottom: 1rem;
     transition: all 0.3s ease;
   }
@@ -707,10 +737,39 @@ section .header {
     max-width: 1200px;
     margin: auto;
     padding: 1rem;
-    color: #fff;
+    color: #18181b;
     font-size: 0.8rem;
     text-align: center;
   }
+
+  .final{
+    text-align: center;
+    min-width: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Poppins", sans-serif;
+   
+    line-height: 1.5;
+
+  }
+  .final-upload{
+    margin-top: 0.5rem;
+    text-align: center;
+    display: block;
+    font-family: "Poppins", sans-serif;
+  }
+
+  .finalis{
+    text-align: center;
+    margin-left: 100px;
+  }
+  .container .star-imgfinal {
+    width: 80px;
+    margin: 0;
+    margin-left: 150px;
+    margin-bottom: 0.5rem;
+}
   
   @media (width < 900px) {
     .nav-links {
@@ -755,6 +814,11 @@ section .header {
   }
   .table__header .input-group:hover {
     width: 100%; /* Mengisi lebar 100% saat dihover pada ukuran layar kecil */
+}
+.trans {
+  margin-left: 0; /* Reset margin for smaller screens */
+  width: 100%; /* Make the element full width */
+  margin-top: 1rem;
 }
 
   }

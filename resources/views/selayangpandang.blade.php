@@ -148,7 +148,7 @@
         </div>
         <div class="card_data-0">
           <h2 class="card_title">Ketua SM FH UNDIP 2024</h2>
-          <h3 class="card_name" style="color: #d4af37">Zamroni Akhmad Affandi<br />FH UNDIP 2021</h3>
+          <h3 class="card_name" style="color: #18181b">Zamroni Akhmad Affandi<br />FH UNDIP 2021</h3>
         </div>
       </div>
     </div>
@@ -163,7 +163,7 @@
               <h2 class="card_title">Wakil 1</h2>
               <p>Bidang Pengawasan dan Anggaran</p>
             </div>
-            <h3 class="card_name" style="color: #d4af37">Rafif Majid Hidayatullah<br />FH UNDIP 2021</h3>
+            <h3 class="card_name" style="color: #18181b">Rafif Majid Hidayatullah<br />FH UNDIP 2021</h3>
           </div>
         </div>
         <div class="card_wrapper-0">
@@ -175,7 +175,7 @@
               <h2 class="card_title">Wakil 2</h2>
               <p>Bidang Aspirasi dan Legislasi</p>
             </div>
-            <h3 class="card_name" style="color: #d4af37">Abigael Farel<br />FH UNDIP 2021</h3>
+            <h3 class="card_name" style="color: #18181b">Abigael Farel Harahap<br />FH UNDIP 2021</h3>
           </div>
         </div>
         <div class="card_wrapper-0">
@@ -186,7 +186,7 @@
             <div class="card_box">
               <h2 class="card_title">Sekretaris Jenderal</h2>
             </div>
-            <h3 class="card_name" style="color: #d4af37">Candra Adrianando S.P<br />FH UNDIP 2021</h3>
+            <h3 class="card_name" style="color: #18181b">Candra Adrianando S.P<br />FH UNDIP 2021</h3>
           </div>
         </div>
       </div>
@@ -194,11 +194,11 @@
   </section>
 
   <section class="container">
-    <h1 class="header">JAJARAN ANGGOTA</h1>
+    <h1 class="header">Fungsionaris Senat Mahasiswa Fakultas Hukum </h1>
     <h1 class="j-header">KOMISI & BADAN</h1>
     <div class="container1">
       <div class="slide">
-        <div class="item" style="background-image: url(https://images6.alphacoders.com/439/439546.jpg)">
+        <div class="item"  style="background-image: url(/img/BKSAP.jpg);">
           <div class="content">
             <div class="name">BKSAP</div>
             <div class="des">Badan Kerja Sama Antar Parlemen terdiri dari Biro media dan Biro Humas</div>
@@ -207,7 +207,7 @@
             </a>
           </div>
         </div>
-        <div class="item" style="background-image: url(https://images6.alphacoders.com/439/439546.jpg)">
+        <div class="item"  style="background-image: url(/img/KOMISI1.jpg);">
           <div class="content">
             <div class="name">KOMISI I</div>
             <div class="des">Komisi I adalah komisi yang menaungi terkait dengan Bidang Pengembangan dan Keilmuan</div>
@@ -216,7 +216,7 @@
             </a>
           </div>
         </div>
-        <div class="item" style="background-image: url(https://images6.alphacoders.com/439/439546.jpg)">
+        <div class="item"  style="background-image: url(/img/KOMISI2.jpg);">
           <div class="content">
             <div class="name">KOMISI II</div>
             <div class="des">Komisi II adalah komisi yang menaungi terkait Bidang Minat, Bakat, Kaderisasi dan Keroharian</div>
@@ -225,7 +225,7 @@
             </a>
           </div>
         </div>
-        <div class="item" style="background-image: url(https://images6.alphacoders.com/439/439546.jpg)">
+        <div class="item"  style="background-image: url(/img/KOMISI3.jpg);">
           <div class="content">
             <div class="name">KOMISI III</div>
             <div class="des">Komisi III adalah komisi yang menangui terkait Bidang Hukum dan Hubungan Publik</div>
@@ -234,7 +234,7 @@
             </a>
           </div>
         </div>
-        <div class="item" style="background-image: url(https://images6.alphacoders.com/439/439546.jpg)">
+        <div class="item"  style="background-image: url(/img/KOMISI4.jpg);">
           <div class="content">
             <div class="name">KOMISI IV</div>
             <div class="des">Komisi IV adalah komisi yang menaungi terkait bidang Advokasi, Akademik, Sarana, dan Prasarana</div>
@@ -243,7 +243,7 @@
             </a>
           </div>
         </div>
-        <div class="item" style="background-image: url(https://images6.alphacoders.com/439/439546.jpg)">
+        <div class="item"  style="background-image: url(/img/BADANLEGISLASI.jpg);">
           <div class="content">
             <div class="name">BADAN LEGISLASI</div>
             <div class="des">
@@ -254,7 +254,7 @@
             </a>
           </div>
         </div>
-        <div class="item" style="background-image: url(https://images6.alphacoders.com/439/439546.jpg)">
+        <div class="item"  style="background-image: url(/img/BADANKEHORMATAN.jpg);">
           <div class="content">
             <div class="name">BADAN KEHORMATAN</div>
             <div class="des">
@@ -265,7 +265,7 @@
             </a>
           </div>
         </div>
-        <div class="item" style="background-image: url(https://images6.alphacoders.com/439/439546.jpg)">
+        <div class="item"  style="background-image: url(/img/BadanAnggaran.jpg);">
           <div class="content">
             <div class="name">BADAN ANGGARAN</div>
             <div class="des">

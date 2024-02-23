@@ -1,4 +1,3 @@
-
 @extends("layouts.layout")
 @section("content")
 <head>
@@ -14,8 +13,6 @@
   </head>
 
   <body>
-
-
 
     <section class="container">
       <h2 class="header">PEMINJAMAN RUANGAN</h2>
@@ -72,4 +69,3 @@
 
     <script src="js-peminjamanruangan.js"></script>
   @endsection
-

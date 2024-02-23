@@ -5,7 +5,7 @@
     font-size: 16px;  
     border: none;
     outline: none;
-    color: white;
+    color: #18181b;
     padding: 14px 16px;
     background-color: inherit;
     font-family: inherit;
@@ -69,7 +69,7 @@ a {
 
 body {
     font-family: "Poppins", sans-serif;
-    background-color: #18181b;
+    background-color: #fff6ea;
 }
 
 nav {
@@ -110,7 +110,8 @@ nav {
 .link a {
     position: relative;
     padding-bottom: 0.75rem;
-    color: #fff;
+    color: #18181b;
+    font-family: "Poppins", sans-serif;
 }
 
 .link a::after {
@@ -133,13 +134,7 @@ nav {
     padding: 1rem 2rem;
     font-size: 1rem;
     color: #fff;
-    background: rgb(2, 0, 36);
-    background: linear-gradient(
-        135deg,
-        rgba(2, 0, 36, 1) 0%,
-        rgba(207, 181, 59, 1) 0%,
-        rgba(148, 27, 63, 1) 90%
-    );
+    background-color: #800000;
     border-radius: 5px;
     cursor: pointer;
     transition: all 0.3s ease;
@@ -164,7 +159,7 @@ nav {
 .container-AJ {
     width: 100%;
     max-width: 650px;
-    background-color: #27272a;
+    background-color: #cbb989;
     padding: 10px;
     margin: 0 28px;
     border-radius: 10px;
@@ -177,9 +172,9 @@ nav {
     font-weight: 600;
     text-align: center;
     padding-bottom: 6px;
-    color: #888;
+    color: #18181b;
 
-    border-bottom: solid 1px white;
+    
     font-family: "Poppins", sans-serif;
 }
 
@@ -203,10 +198,11 @@ nav {
 
 .user-input-box label {
     width: 95%;
-    color: white;
+    color: #18181b;
     font-size: 20px;
     font-weight: 400;
     margin: 5px 0;
+    font-family: "Poppins", sans-serif
 }
 
 .user-input-box input {
@@ -216,7 +212,6 @@ nav {
     background-color: #888;
     color: white;
     outline: none;
-    border: 1px solid grey;
     padding: 0 10px;
     font-family: "Poppins", sans-serif;
 }
@@ -243,7 +238,7 @@ nav {
     color: #18181b;
     background-color: transparent;
     background-clip: padding-box;
-    border: 1px solid #ced4da;
+    border: 1px solid #18181b;
     border-radius: 0.25rem;
     transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
@@ -287,6 +282,7 @@ nav {
         rgba(148, 27, 63, 1) 90%
     );
     transition: 0.3s ease;
+    margin: 0 auto;
 }
 
 .form-submit-btn input:hover {
@@ -308,7 +304,7 @@ footer .column .logo {
 }
 
 footer .column p {
-    color: #ccc;
+    color: #18181b;
     margin-bottom: 2rem;
 }
 
@@ -319,8 +315,8 @@ footer .column .socials {
 }
 
 footer .column .socials a {
-    color: #ccc;
-    border: 1px solid #ccc;
+    color: #18181b;
+    border: 1px solid #18181b;
     padding: 5px 10px;
     font-size: 1.25rem;
     border-radius: 100%;
@@ -328,13 +324,13 @@ footer .column .socials a {
 }
 
 footer .column .socials a:hover {
-    color: #fff;
+    color: #18181b;
     background-color: #cfb53b;
     border-color: #cfb53b;
 }
 
 footer .column h4 {
-    color: #fff;
+    color: #18181b;
     margin-bottom: 2rem;
     font-size: 1.2rem;
     font-weight: 500;
@@ -342,7 +338,7 @@ footer .column h4 {
 
 footer .column > a {
     display: block;
-    color: #ccc;
+    color: #18181b;
     margin-bottom: 1rem;
     transition: all 0.3s ease;
 }
@@ -355,7 +351,7 @@ footer .column > a:hover {
     max-width: 1200px;
     margin: auto;
     padding: 1rem;
-    color: #fff;
+    color: #18181b;
     font-size: 0.8rem;
     text-align: center;
 }

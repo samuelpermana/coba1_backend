@@ -1135,8 +1135,37 @@ footer .column > a:hover {
     color: black; /* Mengubah warna teks tanggal */
 }
 
+
 .fc, .fc *, .fc :after, .fc :before {
     box-sizing: border-box;
     color: #18181b;
 }
-
+@media screen and (max-width: 768px) {
+    #calendar {
+      padding: 10px;
+      border-radius: 10px;
+    }
+  
+    .fc-prev-button,
+    .fc-next-button {
+      font-size: 14px;
+      padding: 4px 8px;
+    }
+  
+    .fc-toolbar-title {
+      font-size: 18px;
+    }
+  
+    .fc-daygrid-day {
+      padding: 8px;
+    }
+  
+    .fc-today-button {
+      padding: 4px 8px;
+      font-size: 14px;
+    }
+    .fc .fc-col-header-cell-cushion {
+        padding: 1px 2px;
+        font-size: 13px;
+    }
+  }
