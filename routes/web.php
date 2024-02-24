@@ -17,18 +17,18 @@ use App\Http\Controllers\AspirasiController;
 use App\Http\Controllers\JDIHController;
 use App\Http\Controllers\RuanganController;
 use App\Http\Controllers\Ormawa\AjukanDokumenController;
-
+use App\Mail\TestMail;
 use App\Http\Controllers\Agenda\AgendaKerjaController;
 use App\Http\Controllers\Agenda\AgendaBadanController;
 use App\Http\Controllers\AgendaWeb\AgendaWebController;
-
+use App\Http\Controllers\MailController;
 use App\Http\Controllers\PersetujuanProposal\KomisiController;
 use App\Http\Controllers\PersetujuanProposal\BadanAnggaranController;
 use App\Http\Controllers\PersetujuanProposal\SekjenController;
 
 use App\Models\AktivitasSenat;
 use App\Models\JDIH;
-
+use Illuminate\Support\Facades\Mail;
 
 // ======================== Auth ==================================
 Route::get('/login', [AuthController::class, 'index'])->name('login');
@@ -367,3 +367,6 @@ Route::group([
     Route::post('/revisi/store/{proposalId}', [SekjenController::class, 'createRevisi'])->name('revisi.store');
 });
 // ======================== END PIMPINAN TINGGI ==================================
+
+// ======================== MAILING SYSTEM ==================================
+Route::get('/mailtest', [MailController::class, 'index']);
