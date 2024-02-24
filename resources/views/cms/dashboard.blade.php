@@ -13,7 +13,7 @@
       <a href="{{ url('/admin/bankaspirasi') }}"><button class="btn item">Bank Aspirasi</button></a>
       <a href="{{ url('/admin/events') }}"><button class="btn item">Events</button></a>
       <a href="{{ url('/admin/persetujuan-proposal') }}"><button class="btn item">Persetujuan Proposal</button></a>
-      <a href="{{ url('/admin/faq') }}"><button class="btn item">faq</button></a>
+      <a href="{{ url('/admin/faq') }}"><button class="btn item">FAQ</button></a>
     </div>
 
   </body>

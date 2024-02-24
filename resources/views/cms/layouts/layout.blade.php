@@ -73,7 +73,7 @@
               </li>
               <li>
                 <a href="{{ url("/admin/faq") }}">
-                  <span class="icon"><i class="fas fa-handshake"></i></span>
+                  <span class="icon"><i class="fas fa-question"></i></span>
                   <span class="text">Faq</span>
                 </a>
               </li>
