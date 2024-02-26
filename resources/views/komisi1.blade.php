@@ -16,7 +16,7 @@
             </a>
           </div>
         </div>
-        <div class="item"  style="background-image: url(/img/KOMISI1.jpg);">
+        <div class="item"  style="background-image: url(/img/KOMISI1-COBA.jpg);">
           <div class="content">
             <div class="name">KOMISI I</div>
             <div class="des">Komisi I adalah adalah komisi yang menaungi terkait dengan Bidang Pengembangan dan Keilmuan</div>
