@@ -76,7 +76,7 @@
                         </td>  
                         <td>
                             @if ($proposal['approved_at'])
-                                {{ $proposal['approved_at'] }} ({{ $proposal['lama_proses'] }})
+                               {{ $proposal['lama_proses'] }}
                             @else
                                 Belum disetujui
                             @endif

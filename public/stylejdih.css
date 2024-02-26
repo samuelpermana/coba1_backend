@@ -198,7 +198,7 @@ section .header-JD {
     display: flex;
     flex-direction: row;
     width: 100%; /* Menggunakan lebar 100% agar mengisi seluruh kolom */
-    background-color: #27272a;
+    background-color: #cbb989;
     padding: 0.3rem;
     border: 1px solid transparent;
     border-radius: 10px;
@@ -211,7 +211,7 @@ section .header-JD {
   
   
   .features-JD .card-JD .blue {
-    background-color: #C0C0C0;
+    background-color: #F5F5DC;
   }
   
   
@@ -510,6 +510,12 @@ section .header-JD {
   .show-menu {
     left: 0;
   }
+
+  .container-f{
+    max-width: 1200px;
+    margin: auto;
+    padding: 2rem 2rem;   
+}
   
 
 @media (width < 900px) {

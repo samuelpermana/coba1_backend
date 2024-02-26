@@ -687,7 +687,7 @@ nav {
     max-width: 600px;
     margin: 0 auto;
     padding: 20px;
-    background-color: #27272a;
+    background-color: #cbb989;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     margin-top: 2rem;
@@ -695,7 +695,7 @@ nav {
 }
 
 .header{
-    color: #cfb53b;
+    color: #18181b;
    text-align: center;
    font-size: 40px;
    margin-bottom: 2rem;
@@ -710,7 +710,7 @@ label {
     display: block;
     margin-bottom: 8px;
     font-weight: bold;
-    color: #b5afaf;
+    color: #18181b;
 }
 
 .input-form {
@@ -720,8 +720,8 @@ label {
     border: none;
     border-radius: 5px;
     font-size: 1.1em;
-    background-color: #888;
-    color: #fff;
+    background-color: #F5F5DC;
+    color: #18181b;
 }
 
 .input-form:focus {
@@ -744,7 +744,7 @@ label {
     display: block;
     width: 50%;
     padding: 10px;
-    background-color: #007bff;
+    background-color: #18181b;
     border: none;
     border-radius: 5px;
     color: #fff;
@@ -767,9 +767,7 @@ label {
    margin-right: auto;
 }
 
-.btn-primary:hover {
-    background-color: #0056b3;
-}
+
 
 .container-revisi{
     padding: 10px 20px;

@@ -18,6 +18,12 @@ class FaqController extends Controller
         return view('cms.faq.index', compact('faqs'));
     }
 
+    public function indexWeb()
+    {
+        $faqs = Faq::all();
+        return view('faq', compact('faqs'));
+    }
+
     /**
      * Show the form for creating a new resource.
      */

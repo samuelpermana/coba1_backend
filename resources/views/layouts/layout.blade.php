@@ -133,7 +133,7 @@
 
     @yield("content")
 
-    <footer class="container">
+    <footer class="container-f">
       <span class="blur"></span>
       <span class="blur"></span>
       <div class="column">
@@ -152,21 +152,26 @@
       </div>
        
       <div class="column">
-        <h4>ALAT KELENGKAPAN</h4>
-        <a href="http://127.0.0.1:8000/tentang-komisi-i">KOMISI I</a>
-        <a href="http://127.0.0.1:8000/tentang-komisi-ii">KOMISI II</a>
-        <a href="http://127.0.0.1:8000/tentang-komisi-iii">KOMISI III</a>
-        <a href="http://127.0.0.1:8000/tentang-komisi-iv">KOMISI IV</a>
-        <a href="http://127.0.0.1:8000/tentang-badan-legislasi">BADAN LEGISLASI</a>
-        <a href="http://127.0.0.1:8000/tentang-badan-kehormatan">BADAN KEHORMATAN</a>
-        <a href="http://127.0.0.1:8000/tentang-badan-anggaran">BADAN ANGGARAN</a>
-        <a href="http://127.0.0.1:8000/tentang-bksap">BKSAP</a>
+        <h4>Komisi</h4>
+        <a href="{{ url("/tentang-komisi-i") }}">Komisi I</a>
+        <a href="{{ url("/tentang-komisi-ii") }}">Komisi II</a>
+        <a href="{{ url("/tentang-komisi-iii") }}">Komisi III</a>
+        <a href="{{ url("/tentang-komisi-iv") }}">Komisi IV</a>
       </div>
       <div class="column">
-        <h4>Contact</h4>
-        <a href="#">Contact Us</a>
-        <a href="#">Privicy Policy</a>
-        <a href="#">Terms & Conditions</a>
+        <h4>Badan</h4>
+        <a href="{{ url("/tentang-badan-anggaran") }}">Badan Anggaran</a>
+        <a href="{{ url("/tentang-badan-kehormatan") }}">Badan Kehormatan</a>
+        <a href="{{ url("/tentang-badan-legislasi") }}">Badan Legislasi</a>
+        <a href="{{ url("/tentang-bksap") }}">BKSAP</a>
+      </div>
+      <div class="column">
+        <h4>JDIH</h4>
+        <a href="#">Peraturan Mahasiswa</a>
+        <a href="#">Standard Operating Procedure</a>
+        <a href="#">Peraturan Senat Mahasiswa</a>
+        <a href="#">Keputusan</a>
+        <a href="#">Rancangan Peraturan</a>
       </div>
     </footer>
 

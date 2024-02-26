@@ -42,41 +42,48 @@
 
     @yield("content")
 
-    <footer class="container">
+    <footer class="container-f">
       <span class="blur"></span>
       <span class="blur"></span>
       <div class="column">
         <div class="logo">
           <img src="/img/coba1.png">
         </div>
-        <p>
-          SENAT MAHASISWA FAKULTAS HUKUM UNDIP
+        <p>SENAT MAHASISWA FAKULTAS HUKUM UNDIP</p>
+        <p class="address"> 
+          Jl. Prof. Soedarto, Tembalang, Kec. Tembalang, Kota Semarang, Jawa Tengah 50275
         </p>
         <div class="socials">
           <a href="#"><i class="ri-youtube-line"></i></a>
           <a href="#"><i class="ri-instagram-line"></i></a>
-          <a href="#"><i class="ri-twitter-line"></i></a>
+          <a href="https://lin.ee/VJdJQ9z"><i class="ri-line-line"></i></a>
         </div>
       </div>
+       
       <div class="column">
-        <h4>CONTOH</h4>
-        <a href="#">Template</a>
-        <a href="#">Template</a>
-        <a href="#">Template</a>
+        <h4>Komisi</h4>
+        <a href="{{ url("/tentang-komisi-i") }}">Komisi I</a>
+        <a href="{{ url("/tentang-komisi-ii") }}">Komisi II</a>
+        <a href="{{ url("/tentang-komisi-iii") }}">Komisi III</a>
+        <a href="{{ url("/tentang-komisi-iv") }}">Komisi IV</a>
       </div>
       <div class="column">
-        <h4>About Us</h4>
-        <a href="#">Blogs</a>
-        <a href="#">Template</a>
-        <a href="#">Template</a>
+        <h4>Badan</h4>
+        <a href="{{ url("/tentang-badan-anggaran") }}">Badan Anggaran</a>
+        <a href="{{ url("/tentang-badan-kehormatan") }}">Badan Kehormatan</a>
+        <a href="{{ url("/tentang-badan-legislasi") }}">Badan Legislasi</a>
+        <a href="{{ url("/tentang-bksap") }}">BKSAP</a>
       </div>
       <div class="column">
-        <h4>Contact</h4>
-        <a href="#">Contact Us</a>
-        <a href="#">Privicy Policy</a>
-        <a href="#">Terms & Conditions</a>
+        <h4>JDIH</h4>
+        <a href="#">Peraturan Mahasiswa</a>
+        <a href="#">Standard Operating Procedure</a>
+        <a href="#">Peraturan Senat Mahasiswa</a>
+        <a href="#">Keputusan</a>
+        <a href="#">Rancangan Peraturan</a>
       </div>
     </footer>
+
 
     <div class="copyright">
       Copyright © 2023 SENAT FH UNDIP. All Rights Reserved.
