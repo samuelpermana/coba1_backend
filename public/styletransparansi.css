@@ -186,7 +186,7 @@ nav {
 
 
 .btn:hover {
-  background-color: #cfb53b;
+  opacity: 0.8;
 }
 
 .container {

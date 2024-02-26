@@ -141,7 +141,7 @@ img {
 }
   
   .btn:hover {
-    background-color: #cfb53b;
+    opacity: 80%;
   }
 
 .container {
@@ -573,7 +573,7 @@ footer .column > a:hover {
 }
 
 .table4 a:hover {
-    color: #cfb53b;
+    color: #f5f5dc;
 }
 
 .container-f{
@@ -636,6 +636,7 @@ footer .column > a:hover {
 @media only screen and (max-width: 500px) {
   .table__header .input-group {
       width: 100%;
+      margin-bottom: 1rem;
       
   }
 }
@@ -672,4 +673,5 @@ thead th span.icon-arrow {
 .table__body{
     margin-top: 3rem;
 }
+
 }

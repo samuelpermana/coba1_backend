@@ -63,9 +63,16 @@
                     @endforeach
                 </tbody>
             </table>
-
+            
         </section>
       </main>
+      <section class="container">
+        <h2 class="header">TAMPILAN EXEL</h2>
+        <p class="sub-header">Berisikan tentang data ruangan yang meminjam tempat di FH dalam bentuk exel</p>
+        <main class="table4" id="customers_table">
+          <a href="https://search.yahoo.com/search?fr=mcafee&type=E211US885G0&p=link+exel">https://search.yahoo.com/search?fr=mcafee&type=E211US885G0&p=link+exel</a>
+        </main>
+      </section>
 
     <script src="js-peminjamanruangan.js"></script>
   @endsection
