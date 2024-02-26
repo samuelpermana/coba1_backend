@@ -79,7 +79,7 @@ nav {
     padding: 1rem 2rem;
     font-size: 1rem;
     color: #fff;
-    background-color: #800000;
+    background: #800000;
     border-radius: 5px;
     cursor: pointer;
     transition: all 0.3s ease;
@@ -333,6 +333,11 @@ footer .column > a:hover {
     left: 0;
   }
   
+  .container-f{
+    max-width: 1200px;
+    margin: auto;
+    padding: 2rem 2rem;   
+}
 
 @media (width < 900px) {
   .header__container {

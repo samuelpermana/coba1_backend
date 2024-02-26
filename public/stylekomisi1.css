@@ -1,11 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap");
+@import url(https://fonts.googleapis.com/css?family=Raleway:400,500,800);
 /* ================= INI STYLE DROPDOWN MENU =================*/
 /* Style the dropdown button */
 .dropbtn {
   font-size: 16px;  
   border: none;
   outline: none;
-  color: white;
+  color: #18181b;
   padding: 14px 16px;
   background-color: inherit;
   font-family: inherit;
@@ -69,7 +70,7 @@ a {
 
 body {
   font-family: "Poppins", sans-serif;
-  background-color: #18181b;
+  background-color: #fff6ea;
 }
 
 .container {
@@ -116,7 +117,7 @@ nav {
 .link a {
   position: relative;
   padding-bottom: 0.75rem;
-  color: #fff;
+  color: #18181b;
 }
 
 .link a::after {
@@ -139,8 +140,7 @@ nav {
   padding: 1rem 2rem;
   font-size: 1rem;
   color: #fff;
-  background: rgb(2, 0, 36);
-  background: linear-gradient(135deg, rgba(2, 0, 36, 1) 0%, rgba(207, 181, 59, 1) 0%, rgba(148, 27, 63, 1) 90%);
+  background: #800000;
   border-radius: 5px;
   cursor: pointer;
   transition: all 0.3s ease;
@@ -218,7 +218,7 @@ header .image img {
 
 section .header {
   color: #cfb53b;
-  margin-bottom: 4rem;
+  margin-bottom: 6rem;
   font-size: 3rem;
   font-weight: 700;
   line-height: 4rem;
@@ -233,14 +233,14 @@ section .header {
   
   .card_image {
     position: relative;
-    background-color: #27272a;
+    background-color: #F1DDA8;
     padding-top: 1.5rem;
     margin-bottom: -0.75rem;
     transition: background-color 0.3s ease;
   }
   
   .card_image:hover {
-    background-color: #333;
+    background-color: #cbb989;
   }
   
   .card_img {
@@ -251,7 +251,7 @@ section .header {
   }
   
   .card_data {
-    background-color: #27272a;
+    background-color: #cbb989;
     padding: 1.5rem 2rem;
     border-radius: 1rem;
     text-align: center;
@@ -264,7 +264,7 @@ section .header {
   }
   
   .card_data:hover {
-    background-color: #333;
+    background-color: #cbb989;
   }
 
   .card_wrapper-4-2 {
@@ -280,7 +280,7 @@ section .header {
     width: 100%;
     border-radius: 1.25rem 1.25rem 0 0;
     position: relative;
-    background-color: #27272a;
+    background-color: #cbb989;
     padding-top: 1.5rem;
     margin-bottom: -0.75rem;
     max-width: 500px;
@@ -288,7 +288,7 @@ section .header {
 
   .card_data-4-2 {
     width: 100%;
-    background-color: #27272a;
+    background-color: #cbb989;
     padding: 1.5rem 2rem;
     border-radius: 1rem;
     text-align: center;
@@ -302,7 +302,7 @@ section .header {
 
   .card_titleA {
     height: 10vh;
-    color: #cfb53b;
+    color: #18181b;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -310,11 +310,11 @@ section .header {
 
   .card_des {
     height: 5vh;
-    color: #cfb53b;
+    color: #18181b;
   }
   
   .card_nameA {
-    color: #cfb53b;
+    color: #18181b;
     height: 12vh;
     display: flex;
     justify-content: center;
@@ -326,24 +326,27 @@ section .header {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 2rem;
+    place-items: center;
   }
   
   .anggota-4-1 {
-    margin-top: 4em;
+    margin-top: 6em;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 2rem;
+    place-items: center;
   }
   
   .anggota-4-2 {
-    margin-top: 4em;
+    margin-top: 6em;
     display: grid;
     grid-template-columns: repeat(1, 1fr);
     gap: 2rem;
+    place-items: center;
   }
 
 .container img {
-  max-width: 450px;
+  max-width: 171px;
   display: block;
   margin: 0 auto;
 }
@@ -561,7 +564,7 @@ footer .column .logo {
 }
 
 footer .column p {
-  color: #ccc;
+  color: #18181b;
   margin-bottom: 2rem;
 }
 
@@ -572,8 +575,8 @@ footer .column .socials {
 }
 
 footer .column .socials a {
-  color: #ccc;
-  border: 1px solid #ccc;
+  color: #18181b;
+  border: 1px solid #18181b;
   padding: 5px 10px;
   font-size: 1.25rem;
   border-radius: 100%;
@@ -587,7 +590,7 @@ footer .column .socials a:hover {
 }
 
 footer .column h4 {
-  color: #fff;
+  color: #18181b;
   margin-bottom: 2rem;
   font-size: 1.2rem;
   font-weight: 500;
@@ -595,7 +598,7 @@ footer .column h4 {
 
 footer .column > a {
   display: block;
-  color: #ccc;
+  color: #18181b;
   margin-bottom: 1rem;
   transition: all 0.3s ease;
 }
@@ -608,7 +611,7 @@ footer .column > a:hover {
   max-width: 1200px;
   margin: auto;
   padding: 1rem;
-  color: #fff;
+  color: #18181b;
   font-size: 0.8rem;
   text-align: center;
 }
@@ -857,9 +860,9 @@ footer .column > a:hover {
 }
   
 .modern-card {
+  color: #18181b;
     width: 30%;
-    background: rgb(2, 0, 36);
-    background: linear-gradient(135deg, rgba(2, 0, 36, 1) 0%, rgba(207, 181, 59, 1) 0%, rgba(148, 27, 63, 1) 90%);
+    background: #cbb989;
     border-radius: 8px;
     margin: 15px 0;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -888,8 +891,7 @@ h4 {
     font-size: 1.2rem;
     padding: 3rem 2rem;
     width: 100%;
-    background: rgb(2, 0, 36);
-    background: linear-gradient(135deg, rgba(2, 0, 36, 1) 0%, rgba(207, 181, 59, 1) 0%, rgba(148, 27, 63, 1) 90%);
+    background: #cbb989;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -902,10 +904,10 @@ h4 {
 
 .panel-k{
     text-align: center;
-    color: #fff;
+    color: #18181b;
     padding: 0 18px;
     border-radius: 15px;
-    background-color: #770000;
+    background-color: #F1DDA8;
     max-height: 0;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -933,7 +935,7 @@ h4 {
     margin-top: 5px;
     padding: 5px 8px;
     border-radius: 5px;
-    background: linear-gradient(135deg, rgba(2, 0, 36, 1) 0%, rgba(207, 181, 59, 1) 0%, rgba(148, 27, 63, 1) 90%);
+    background: #800000;
     cursor: pointer;
 }
 
@@ -980,7 +982,7 @@ h4 {
   
 /* When the checkbox is checked, add a blue background */
 .container-check input:checked ~ .checkmark {
-      background: linear-gradient(135deg, rgba(2, 0, 36, 1) 0%, rgba(207, 181, 59, 1) 0%, rgba(148, 27, 63, 1) 90%);
+      background: #800000;
 }
   
   /* Create the checkmark/indicator (hidden when not checked) */
@@ -1014,19 +1016,19 @@ h4 {
 
 .card-coba {
   position: relative;
+  margin-top: 3em;
   width: 300px;
-  height: 200px;
+  height: 250px;
   border-radius: 10px;
   box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.5);
   transition: 0.3s;
   padding: 30px 50px;
-  background: #fff;
+  background: #F1DDA8;
   cursor: pointer;
-  margin-right: 30px;
 }
 
 .card-coba:hover {
-  height: 320px;
+  height: 400px;
 }
 
 .imgbox {
@@ -1057,7 +1059,13 @@ h4 {
 }
 
 .content1 h2 {
-  color: #7f9ead;
+  color: #CFB53B;
+}
+
+.container-f{
+  max-width: 1200px;
+  margin: auto;
+  padding: 2rem 2rem;   
 }
 
 @keyframes animate {

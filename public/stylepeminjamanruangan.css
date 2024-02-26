@@ -138,7 +138,7 @@ img {
     border-radius: 5px;
     cursor: pointer;
     transition: all 0.3s ease;
-  }
+}
   
   .btn:hover {
     opacity: 80%;
@@ -573,7 +573,13 @@ footer .column > a:hover {
 }
 
 .table4 a:hover {
-    color: #F5F5DC;
+    color: #f5f5dc;
+}
+
+.container-f{
+    max-width: 1200px;
+    margin: auto;
+    padding: 2rem 2rem;   
 }
 
 @media (width < 900px) {

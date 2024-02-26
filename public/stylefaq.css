@@ -5,7 +5,7 @@
   font-size: 16px;  
   border: none;
   outline: none;
-  color: white;
+  color: #18181b;
   padding: 14px 16px;
   background-color: inherit;
   font-family: inherit;
@@ -69,7 +69,7 @@ a {
 
 body {
   font-family: "Poppins", sans-serif;
-  background-color: #18181b;
+  background-color: #fff6ea;
 }
 
 nav {
@@ -104,17 +104,13 @@ nav {
   display: flex;
   align-items: center;
   justify-content: center;
-<<<<<<< HEAD
-  gap: 3rem;
-=======
   gap: 2rem;
->>>>>>> 981d35df0dee56e8ebe93c2bf51a409e61dd5be1
 }
 
 .link a {
   position: relative;
   padding-bottom: 0.75rem;
-  color: #fff;
+  color: #18181b;
 }
 
 .link a::after {
@@ -137,8 +133,7 @@ nav {
   padding: 1rem 2rem;
   font-size: 1rem;
   color: #fff;
-  background: rgb(2, 0, 36);
-  background: linear-gradient(135deg, rgba(2, 0, 36, 1) 0%, rgba(207, 181, 59, 1) 0%, rgba(148, 27, 63, 1) 90%);
+  background: #800000;
   border-radius: 5px;
   cursor: pointer;
   transition: all 0.3s ease;
@@ -174,7 +169,7 @@ section .header {
   max-width: 600px;
   margin: auto;
   text-align: center;
-  color: #ccc;
+  color: #18181b;
   margin-top: -2rem;
   margin-bottom: 3rem;
 }
@@ -189,12 +184,11 @@ section .header {
 }
 
 .accordion {
-  color: #fff;
+  color: #18181b;
   font-size: 1.2rem;
   padding: 3rem 2rem;
   width: 100%;
-  background: rgb(2, 0, 36);
-  background: linear-gradient(135deg, rgba(2, 0, 36, 1) 0%, rgba(207, 181, 59, 1) 0%, rgba(148, 27, 63, 1) 90%);
+  background: #cbb989;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -206,10 +200,10 @@ section .header {
 }
 
 .panel {
-  color: #fff;
+  color: #18181b;
   padding: 0 18px;
   border-radius: 15px;
-  background-color: #770000;
+  background-color: #F1DDA8;
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.5s ease-out;
@@ -229,7 +223,7 @@ section .header {
   }
   
   footer .column p {
-    color: #ccc;
+    color: #18181b;
     margin-bottom: 2rem;
   }
   
@@ -240,8 +234,8 @@ section .header {
   }
   
   footer .column .socials a {
-    color: #ccc;
-    border: 1px solid #ccc;
+    color: #18181b;
+    border: 1px solid #18181b;
     padding: 5px 10px;
     font-size: 1.25rem;
     border-radius: 100%;
@@ -255,7 +249,7 @@ section .header {
   }
   
   footer .column h4 {
-    color: #fff;
+    color: #18181b;
     margin-bottom: 2rem;
     font-size: 1.2rem;
     font-weight: 500;
@@ -263,7 +257,7 @@ section .header {
   
   footer .column > a {
     display: block;
-    color: #ccc;
+    color: #18181b;
     margin-bottom: 1rem;
     transition: all 0.3s ease;
   }
@@ -280,6 +274,12 @@ section .header {
     font-size: 0.8rem;
     text-align: center;
   }
+
+  .container-f{
+    max-width: 1200px;
+    margin: auto;
+    padding: 2rem 2rem;   
+}
   
   @media (width < 900px) {
     .nav-links {
@@ -319,8 +319,5 @@ section .header {
       grid-template-columns: 1fr 150px;
     }
   }
-<<<<<<< HEAD
-=======
 
 
->>>>>>> 981d35df0dee56e8ebe93c2bf51a409e61dd5be1
