@@ -53,7 +53,7 @@ nav {
 .link a {
     position: relative;
     padding-bottom: 0.75rem;
-    color: #fff;
+    color: #18181b;
 }
 
 .link a::after {

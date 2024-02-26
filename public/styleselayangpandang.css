@@ -113,28 +113,6 @@ nav {
   gap: 2rem;
 }
 
-.link a {
-  position: relative;
-  padding-bottom: 0.75rem;
-  color: #18181b;
-}
-
-.link a::after {
-  content: "";
-  position: absolute;
-  height: 2px;
-  width: 0;
-  bottom: 0;
-  left: 50%; /* Menengahkan garis bawah */
-  transform: translateX(-50%); /* Menyempurnakan penempatan garis bawah */
-  background-color: #cfb53b;
-  transition: all 0.3s ease;
-}
-
-.link a:hover::after {
-  width: 70%;
-}
-
 .btn {
   padding: 1rem 2rem;
   font-size: 1rem;
@@ -658,7 +636,7 @@ section .header1 {
     float: right;
 }
 
-.sub1-header 
+.sub1-header {
   margin-bottom: -3rem;
   color: #18181b;
   text-align: justify;
