@@ -71,9 +71,7 @@ Route::get('/selayangpandang', function () {
 
 Route::get('/bankaspirasi', [AspirasiController::class, 'getAspirasi']);
 
-Route::get('/faq', function () {
-    return view('faq');
-});
+Route::get('/faq', [FaqController::class, 'indexWeb']);
 
 Route::get('/tentang-komisi-i', [AgendaWebController::class, 'komisi1'])->name('tentang.komisi1');
 Route::get('/tentang-komisi-ii', [AgendaWebController::class, 'komisi2'])->name('tentang.komisi2');
