@@ -253,7 +253,7 @@ footer .column .logo {
 }
 
 footer .column p {
-    color: #ccc;
+    color: #18181b;
     margin-bottom: 2rem;
 }
 
@@ -264,8 +264,8 @@ footer .column .socials {
 }
 
 footer .column .socials a {
-    color: #ccc;
-    border: 1px solid #ccc;
+    color: #18181b;
+    border: 1px solid #18181b;
     padding: 5px 10px;
     font-size: 1.25rem;
     border-radius: 100%;
@@ -279,7 +279,7 @@ footer .column .socials a:hover {
 }
 
 footer .column h4 {
-    color: #fff;
+    color: #18181b;
     margin-bottom: 2rem;
     font-size: 1.2rem;
     font-weight: 500;
@@ -287,7 +287,7 @@ footer .column h4 {
 
 footer .column > a {
     display: block;
-    color: #ccc;
+    color: #18181b;
     margin-bottom: 1rem;
     transition: all 0.3s ease;
 }
@@ -303,6 +303,12 @@ footer .column > a:hover {
     color: #fff;
     font-size: 0.8rem;
     text-align: center;
+}
+
+.container-f{
+    max-width: 1200px;
+    margin: auto;
+    padding: 2rem 2rem;   
 }
 
 @media (width < 900px) {

@@ -142,52 +142,64 @@
     <h1 class="header">Struktur Kepengurusan</h1>
     <h2 class="header">Senat Mahasiswa Fakultas Hukum 2024</h2>
     <div class="ketua">
-      <div class="card_wrapper-0">
-        <div class="card_image-0">
-          <img class="card_img" src="https://cdn-icons-png.flaticon.com/512/5556/5556468.png" alt="gambar pengembangan dan keilmuan" />
-        </div>
-        <div class="card_data-0">
-          <h2 class="card_title">Ketua SM FH UNDIP 2024</h2>
-          <h3 class="card_name" style="color: #18181b">Zamroni Akhmad Affandi<br />FH UNDIP 2021</h3>
-        </div>
+      <div class="card-coba">
+            <div class="imgbox">
+              <img class="img-coba"
+                src="/img/zamroni-kuning.png"
+              />
+            </div>
+      
+            <div class="content1">
+              <h2>Zamroni Akhmad Affandi</h2>
+                <p>
+                  Ketua Senat Mahasiswa FH</br>FH UNDIP 2021
+                </p>
+            </div>
       </div>
     </div>
     <div class="wakil">
       <div class="wakil-wrap">
-        <div class="card_wrapper-0">
-          <div class="card_image-0">
-            <img class="card_img" src="https://cdn-icons-png.flaticon.com/512/5556/5556468.png" alt="gambar pengembangan dan keilmuan" />
-          </div>
-          <div class="card_data-0">
-            <div class="card_box">
-              <h2 class="card_title">Wakil 1</h2>
-              <p>Bidang Pengawasan dan Anggaran</p>
+        <div class="card-coba">
+            <div class="imgbox">
+              <img class="img-coba"
+                src="/img/rafif-kuning.png"
+              />
             </div>
-            <h3 class="card_name" style="color: #18181b">Rafif Majid Hidayatullah<br />FH UNDIP 2021</h3>
-          </div>
+      
+            <div class="content1">
+              <h2>Rafif Majid Hidayatullah</h2>
+                <p>
+                  Wakil I Bidang Pengawasan dan Anggaran</br>FH UNDIP 2021
+                </p>
+            </div>
         </div>
-        <div class="card_wrapper-0">
-          <div class="card_image-0">
-            <img class="card_img" src="https://cdn-icons-png.flaticon.com/512/5556/5556468.png" alt="gambar pengembangan dan keilmuan" />
-          </div>
-          <div class="card_data-0">
-            <div class="card_box">
-              <h2 class="card_title">Wakil 2</h2>
-              <p>Bidang Aspirasi dan Legislasi</p>
+        <div class="card-coba">
+            <div class="imgbox">
+              <img class="img-coba"
+                src="/img/abigael-kuning.png"
+              />
             </div>
-            <h3 class="card_name" style="color: #18181b">Abigael Farel Harahap<br />FH UNDIP 2021</h3>
-          </div>
+      
+            <div class="content1">
+              <h2>Abigael Farel</h2>
+                <p>
+                  Wakil II Bidang Aspirasi dan Legislasi</br>FH UNDIP 2021
+                </p>
+            </div>
         </div>
-        <div class="card_wrapper-0">
-          <div class="card_image-0">
-            <img class="card_img" src="https://cdn-icons-png.flaticon.com/512/5556/5556468.png" alt="gambar pengembangan dan keilmuan" />
-          </div>
-          <div class="card_data-0">
-            <div class="card_box">
-              <h2 class="card_title">Sekretaris Jenderal</h2>
+        <div class="card-coba">
+            <div class="imgbox">
+              <img class="img-coba"
+                src="/img/candra-kuning.png"
+              />
             </div>
-            <h3 class="card_name" style="color: #18181b">Candra Adrianando S.P<br />FH UNDIP 2021</h3>
-          </div>
+      
+            <div class="content1">
+              <h2>Candra Adrianando Satrio Priambodo</h2>
+                <p>
+                  Sekretaris Jenderal</br>FH UNDIP 2021
+                </p>
+            </div>
         </div>
       </div>
     </div>

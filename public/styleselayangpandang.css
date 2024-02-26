@@ -1084,6 +1084,67 @@ section .header3 {
   align-items: center;
 }
 
+.card-coba {
+  position: relative;
+  margin-top: 3em;
+  width: 300px;
+  height: 250px;
+  border-radius: 10px;
+  box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.5);
+  transition: 0.3s;
+  padding: 30px 50px;
+  background: #F1DDA8;
+  cursor: pointer;
+}
+
+.card-coba:hover {
+  height: 400px;
+}
+
+.imgbox {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform: translateY(-80px);
+  z-index: 99;
+}
+
+.img-coba {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.5);
+}
+
+.content1 {
+  padding: 10px 20px;
+  text-align: center;
+  transform: translateY(-450px);
+  opacity: 0;
+  transition: 0.3s;
+}
+
+.card-coba:hover > .content1 {
+  opacity: 1;
+  transform: translateY(-180px);
+}
+
+.content1 h2 {
+  color: #CFB53B;
+}
+
+.container-f{
+  max-width: 1200px;
+  margin: auto;
+  padding: 2rem 2rem;   
+}
+
+.imgbox img {
+  max-width: 171px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
   
 @keyframes animate {
     from {
