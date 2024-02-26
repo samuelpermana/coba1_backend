@@ -141,7 +141,7 @@ nav {
   border-radius: 5px;
   cursor: pointer;
   transition: all 0.3s ease;
-  width: 100%;
+  /* width: 100%; */
   
 }
 
@@ -189,7 +189,7 @@ nav {
 
 
 .btn:hover {
-  background-color: #cfb53b;
+  opacity: 0.8;
 }
 
 .container {

@@ -89,10 +89,7 @@
                       <i class='bx bx-time nav2__icon' ></i>
                       <span class="nav2__name">Peminjaman Ruangan</span>
                   </a>
-                  <a href="{{ url('/transparansisurat3') }}" class="nav2__link">
-                    <i class='bx bx-file nav2__icon' ></i>
-                    <span class="nav2__name">Transparansi Surat</span>
-                </a>
+                  
                 </div>
             </div>
         </div>

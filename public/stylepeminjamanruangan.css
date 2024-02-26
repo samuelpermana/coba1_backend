@@ -134,15 +134,14 @@ img {
     padding: 1rem 2rem;
     font-size: 1rem;
     color: #fff;
-    background: rgb(2, 0, 36);
-    background: linear-gradient(135deg, rgba(2, 0, 36, 1) 0%, rgba(207, 181, 59, 1) 0%, rgba(148, 27, 63, 1) 90%);
+    background-color: #800000;
     border-radius: 5px;
     cursor: pointer;
     transition: all 0.3s ease;
   }
   
   .btn:hover {
-    background-color: #cfb53b;
+    opacity: 80%;
   }
 
 .container {
@@ -574,7 +573,7 @@ footer .column > a:hover {
 }
 
 .table4 a:hover {
-    color: #cfb53b;
+    color: #F5F5DC;
 }
 
 @media (width < 900px) {
@@ -631,6 +630,7 @@ footer .column > a:hover {
 @media only screen and (max-width: 500px) {
   .table__header .input-group {
       width: 100%;
+      margin-bottom: 1rem;
       
   }
 }
@@ -668,5 +668,4 @@ thead th span.icon-arrow {
     margin-top: 3rem;
 }
 
-}
 }
