@@ -152,16 +152,15 @@
       </div>
        
       <div class="column">
-        <h4>CONTOH</h4>
-        <a href="#">Template</a>
-        <a href="#">Template</a>
-        <a href="#">Template</a>
-      </div>
-      <div class="column">
-        <h4>About Us</h4>
-        <a href="#">Blogs</a>
-        <a href="#">Template</a>
-        <a href="#">Template</a>
+        <h4>ALAT KELENGKAPAN</h4>
+        <a href="http://127.0.0.1:8000/tentang-komisi-i">KOMISI I</a>
+        <a href="http://127.0.0.1:8000/tentang-komisi-ii">KOMISI II</a>
+        <a href="http://127.0.0.1:8000/tentang-komisi-iii">KOMISI III</a>
+        <a href="http://127.0.0.1:8000/tentang-komisi-iv">KOMISI IV</a>
+        <a href="http://127.0.0.1:8000/tentang-badan-legislasi">BADAN LEGISLASI</a>
+        <a href="http://127.0.0.1:8000/tentang-badan-kehormatan">BADAN KEHORMATAN</a>
+        <a href="http://127.0.0.1:8000/tentang-badan-anggaran">BADAN ANGGARAN</a>
+        <a href="http://127.0.0.1:8000/tentang-bksap">BKSAP</a>
       </div>
       <div class="column">
         <h4>Contact</h4>

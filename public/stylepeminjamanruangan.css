@@ -301,6 +301,7 @@ td {
     border-collapse: collapse;
     padding: 1rem;
     text-align: center;
+    z-index: -1;
 }
 
 thead th {
@@ -418,6 +419,7 @@ tbody td.active {
 
 .export__file {
     position: relative;
+    z-index: 9999;
 }
 
 .export__file .export__file-btn {
@@ -467,7 +469,8 @@ tbody td.active {
     display: block;
     width: 100%;
     padding: 0.6rem 0;
-    background-color: #f2f2f2;
+    background-color: #F5F5DC;
+    z-index: 999;
 
     display: flex;
     justify-content: space-around;
@@ -478,12 +481,13 @@ tbody td.active {
 
 .export__file .export__file-options label:first-of-type {
     padding: 1rem 0;
-    background-color: #86e49d !important;
+    background-color: #cfb53b !important;
+    z-index: 999;
 }
 
 .export__file .export__file-options label:hover {
     transform: scale(1.05);
-    background-color: #fff;
+    background-color: #F5F5DC;
     cursor: pointer;
 }
 
