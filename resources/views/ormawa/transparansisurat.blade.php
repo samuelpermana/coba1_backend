@@ -9,7 +9,7 @@
         <section class="table__header">
             <div class="input-group">
                 <input type="search" placeholder="Search Data...">
-                <img src="img/search.png" alt="">
+                <img src="/img/search.png" alt="">
             </div>
             
         </section>
@@ -25,7 +25,7 @@
                         <th> Tracking Surat </th>
                         <th> Status </th>
                         <th> Surat </th>
-                        <th> Tanggal disetujui (lama proses)</th>
+                        <th> Lama Proses</th>
                         <th> Upload File Final</th>
                         
                     </tr>
@@ -76,7 +76,7 @@
                         </td>  
                         <td>
                             @if ($proposal['approved_at'])
-                                {{ $proposal['approved_at'] }} ({{ $proposal['lama_proses'] }})
+                               {{ $proposal['lama_proses'] }}
                             @else
                                 Belum disetujui
                             @endif
@@ -90,10 +90,11 @@
                                     </a>
                                 @else
                                     {{-- Tampilkan form untuk mengunggah file final PDF --}}
-                                    <form action="{{ route('ormawa.upload.file.final', $proposal['id']) }}" method="post" enctype="multipart/form-data">
+                                    <img class="star-imgfinal" src="/img/filetransparan.svg" alt="" />
+                                    <form class="finalis"{{ route('ormawa.upload.file.final', $proposal['id']) }}" method="post" enctype="multipart/form-data">
                                         @csrf
-                                        <input type="file" name="file_final" accept="application/pdf">
-                                        <button type="submit">Upload File Final</button>
+                                        <input class="final" type="file" name="file_final" accept="application/pdf">
+                                        <button class="final-upload" type="submit">Upload File Final</button>
                                     </form>
                                 @endif
                             @else

@@ -117,21 +117,16 @@ nav {
     padding: 1rem 2rem;
     font-size: 1rem;
     color: #fff;
-    background: rgb(2, 0, 36);
-    background: linear-gradient(
-        135deg,
-        rgba(2, 0, 36, 1) 0%,
-        rgba(207, 181, 59, 1) 0%,
-        rgba(148, 27, 63, 1) 90%
-    );
+    background-color: #800000;
     border-radius: 5px;
     cursor: pointer;
     transition: all 0.3s ease;
 }
 
-.btn:hover {
-    background-color: #cfb53b;
-}
+  .btn:hover {
+    opacity: 80%;
+  }
+
 
 .container {
     max-width: 1200px;
@@ -169,6 +164,7 @@ main.table {
     height: 70vh;
     background-color: #cbb989;
 
+
     backdrop-filter: blur(7px);
     box-shadow: 0 0.4rem 0.8rem #0005;
     border-radius: 0.8rem;
@@ -185,6 +181,7 @@ main.table4 {
     height: 7vh;
     background-color: #cbb989;
 
+
     backdrop-filter: blur(7px);
     box-shadow: 0 0.4rem 0.8rem #0005;
     border-radius: 0.8rem;
@@ -192,7 +189,6 @@ main.table4 {
     margin-right: auto;
     margin-top: 3rem;
     margin-bottom: 2rem;
-
     overflow: hidden;
 }
 
@@ -289,6 +285,7 @@ td {
     border-collapse: collapse;
     padding: 1rem;
     text-align: center;
+    z-index: -1;
 }
 
 thead th {
@@ -406,6 +403,7 @@ tbody td.active {
 
 .export__file {
     position: relative;
+    z-index: 9999;
 }
 
 .export_file .export_file-btn {
@@ -455,7 +453,8 @@ tbody td.active {
     display: block;
     width: 100%;
     padding: 0.6rem 0;
-    background-color: #f2f2f2;
+    background-color: #F5F5DC;
+    z-index: 999;
 
     display: flex;
     justify-content: space-around;
@@ -466,12 +465,13 @@ tbody td.active {
 
 .export_file .export_file-options label:first-of-type {
     padding: 1rem 0;
-    background-color: #86e49d !important;
+    background-color: #cfb53b !important;
+    z-index: 999;
 }
 
 .export_file .export_file-options label:hover {
     transform: scale(1.05);
-    background-color: #fff;
+    background-color: #F5F5DC;
     cursor: pointer;
 }
 
@@ -557,7 +557,13 @@ footer .column > a:hover {
 }
 
 .table4 a:hover {
-    color: #cfb53b;
+    color: #f5f5dc;
+}
+
+.container-f{
+    max-width: 1200px;
+    margin: auto;
+    padding: 2rem 2rem;   
 }
 
 @media (width < 900px) {
@@ -612,9 +618,12 @@ footer .column > a:hover {
 }
 
 @media only screen and (max-width: 500px) {
-    .table__header .input-group {
-        width: 100%;
-    }
+
+  .table__header .input-group {
+      width: 100%;
+      margin-bottom: 1rem;
+      
+  }
 }
 
 @media only screen and (max-width: 500px) {
@@ -650,3 +659,4 @@ footer .column > a:hover {
         margin-top: 3rem;
     }
 }
+

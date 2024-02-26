@@ -71,9 +71,7 @@ Route::get('/selayangpandang', function () {
 
 Route::get('/bankaspirasi', [AspirasiController::class, 'getAspirasi']);
 
-Route::get('/faq', function () {
-    return view('faq');
-});
+Route::get('/faq', [FaqController::class, 'indexWeb']);
 
 Route::get('/tentang-komisi-i', [AgendaWebController::class, 'komisi1'])->name('tentang.komisi1');
 Route::get('/tentang-komisi-ii', [AgendaWebController::class, 'komisi2'])->name('tentang.komisi2');
@@ -100,6 +98,7 @@ Route::get('/jdih  ', [JDIHController::class, 'getJDIH']);
 Route::get('/jdih/jenis/{id}', [JDIHController::class, 'jenis'])->name('jdih.jenis');
 
 Route::get('jdih/show/{id}', [JDIHController::class, 'showJDIH'])->name('jdih.show');
+Route::get('events/list', [EventAdminController::class, 'listEvent'])->name('legislasi.list');
 
 // ======================== END WEBSITE ==================================
 

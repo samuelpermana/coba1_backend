@@ -29,6 +29,7 @@
                     <th>Dokumen</th>
                     <th>Progress Tahap Persetujuan </th>
                     <th>Status Persetujuan </th>
+                    <th>File Final </th>
                     <th>Actions</th>
                         
                     </tr>
@@ -47,6 +48,18 @@
           </td>
           <td>{{ $proposal['status'] }}</td>
           <td>{{ $proposal['status_persetujuan'] }}</td>
+          <td>@if ($proposal['status'] == 'sekjen' && $proposal['status_persetujuan'] == 'approved')
+                                {{-- Cek apakah file final sudah diunggah --}}
+                                @if ($proposal['file_final'])
+                                    <a href="{{ Storage::url($proposal['file_final']) }}" target="_blank" class="blue">
+                                        <img class="star-img" src="/img/filetransparan.svg" alt="" />
+                                    </a>
+                                @else
+                                    belum diupload
+                                @endif
+                            @else
+                                Belum disetujui
+                            @endif</td>
           <td>
               <form action="{{ route(auth()->user()->role->role_slug . '.proposal.komisi-approve', $proposal['id']) }}" method="POST">
                     @csrf

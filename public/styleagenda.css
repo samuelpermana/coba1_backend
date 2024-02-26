@@ -5,7 +5,7 @@
   font-size: 16px;  
   border: none;
   outline: none;
-  color: white;
+  color: #18181b;
   padding: 14px 16px;
   background-color: inherit;
   font-family: inherit;
@@ -69,7 +69,7 @@ a {
 
 body {
   font-family: "Poppins", sans-serif;
-  background-color: #18181b;
+  background-color: #fff6ea;
 }
 
 nav {
@@ -114,7 +114,7 @@ nav {
 .link a {
   position: relative;
   padding-bottom: 0.75rem;
-  color: #fff;
+  color: #18181b;
 }
 
 .link a::after {
@@ -137,8 +137,7 @@ nav {
   padding: 1rem 2rem;
   font-size: 1rem;
   color: #fff;
-  background: rgb(2, 0, 36);
-  background: linear-gradient(135deg, rgba(2, 0, 36, 1) 0%, rgba(207, 181, 59, 1) 0%, rgba(148, 27, 63, 1) 90%);
+  background-color: #800000;
   border-radius: 5px;
   cursor: pointer;
   transition: all 0.3s ease;
@@ -149,8 +148,7 @@ nav {
   padding: 1rem 2rem;
   font-size: 1rem;
   color: #fff;
-  background: rgb(2, 0, 36);
-  background: linear-gradient(135deg, rgba(2, 0, 36, 1) 0%, rgba(207, 181, 59, 1) 0%, rgba(148, 27, 63, 1) 90%);
+ background-color: #800000;
   border-radius: 5px;
   cursor: pointer;
   transition: all 0.3s ease;
@@ -180,7 +178,7 @@ nav {
     max-width: 600px;
     margin: auto;
     text-align: center;
-    color: #ccc;
+    color: #18181b;
     margin-top: -2rem;
     margin-bottom: 3rem;
   }
@@ -192,7 +190,7 @@ nav {
     width: 100%;
 
     height: 70vh;
-    background-color: #27272a;
+    background-color: #cbb989;
   
     backdrop-filter: blur(7px);
     box-shadow: 0 .4rem .8rem #0005;
@@ -209,7 +207,7 @@ nav {
   .table__header {
     width: 100%;
     height: 10%;
-    background-color: #27272a;
+    background-color: #cbb989;
     padding: .8rem 1rem;
   
     display: flex;
@@ -225,7 +223,7 @@ nav {
 
 /*     height: 140%; */
 
-    background-color: #d5d1defe;
+    background-color: #F5F5DC;
     padding: 0 .8rem;
     border-radius: 2rem;
     margin-left: auto;
@@ -310,7 +308,7 @@ nav {
     position: sticky;
     top: 0;
     left: 0;
-    background-color: #d5d1defe;
+    background-color: #F5F5DC;
     cursor: pointer;
     text-transform: capitalize;
     text-align: center;
@@ -633,7 +631,7 @@ nav {
   }
   
   footer .column p {
-    color: #ccc;
+    color: #18181b;
     margin-bottom: 2rem;
   }
   
@@ -644,8 +642,8 @@ nav {
   }
   
   footer .column .socials a {
-    color: #ccc;
-    border: 1px solid #ccc;
+    color: #18181b;
+    border: 1px solid #18181b;
     padding: 5px 10px;
     font-size: 1.25rem;
     border-radius: 100%;
@@ -653,13 +651,13 @@ nav {
   }
   
   footer .column .socials a:hover {
-    color: #fff;
-    background-color: #cfb53b;
-    border-color: #cfb53b;
+    color: #18181b;
+    background-color: #18181b;
+    border-color: #18181b;
   }
   
   footer .column h4 {
-    color: #fff;
+    color: #18181b;
     margin-bottom: 2rem;
     font-size: 1.2rem;
     font-weight: 500;
@@ -667,7 +665,7 @@ nav {
   
   footer .column > a {
     display: block;
-    color: #ccc;
+    color: #18181b;
     margin-bottom: 1rem;
     transition: all 0.3s ease;
   }
@@ -680,7 +678,7 @@ nav {
     max-width: 1200px;
     margin: auto;
     padding: 1rem;
-    color: #fff;
+    color: #18181b;
     font-size: 0.8rem;
     text-align: center;
   }
@@ -689,7 +687,7 @@ nav {
     max-width: 600px;
     margin: 0 auto;
     padding: 20px;
-    background-color: #27272a;
+    background-color: #cbb989;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     margin-top: 2rem;
@@ -697,7 +695,7 @@ nav {
 }
 
 .header{
-    color: #cfb53b;
+    color: #18181b;
    text-align: center;
    font-size: 40px;
    margin-bottom: 2rem;
@@ -712,7 +710,7 @@ label {
     display: block;
     margin-bottom: 8px;
     font-weight: bold;
-    color: #b5afaf;
+    color: #18181b;
 }
 
 .input-form {
@@ -722,8 +720,8 @@ label {
     border: none;
     border-radius: 5px;
     font-size: 1.1em;
-    background-color: #888;
-    color: #fff;
+    background-color: #F5F5DC;
+    color: #18181b;
 }
 
 .input-form:focus {
@@ -746,7 +744,7 @@ label {
     display: block;
     width: 50%;
     padding: 10px;
-    background-color: #007bff;
+    background-color: #18181b;
     border: none;
     border-radius: 5px;
     color: #fff;
@@ -769,9 +767,7 @@ label {
    margin-right: auto;
 }
 
-.btn-primary:hover {
-    background-color: #0056b3;
-}
+
 
 .container-revisi{
     padding: 10px 20px;
