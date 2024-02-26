@@ -2,6 +2,7 @@
 
 @section("content")
   {{-- Content goes here --}}
+  <link href="{{ URL::asset("cms/jdih/stylecreate.css") }}" rel="stylesheet">
 
   <body>
     <h1>Create JDIH Record</h1>
@@ -19,7 +20,7 @@
       <label for="jenis_jdih_id">Jenis Peraturan:</label>
       <select id="jenis_jdih_id" name="jenis_jdih_id" required>
         <option value="" selected disabled>Select Jenis Peraturan</option>
-        @foreach($jenisJDIH as $jenis)
+        @foreach ($jenisJDIH as $jenis)
           <option value="{{ $jenis->id }}">{{ $jenis->name }}</option>
         @endforeach
       </select><br>
