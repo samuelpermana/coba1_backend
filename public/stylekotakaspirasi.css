@@ -484,6 +484,12 @@ footer .column > a:hover {
   .show-menu {
     left: 0;
   }
+
+  .container-f{
+    max-width: 1200px;
+    margin: auto;
+    padding: 2rem 2rem;   
+}
   
 
 @media (width < 900px) {
