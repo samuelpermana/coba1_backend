@@ -178,7 +178,6 @@
         var link = li.querySelector('a');
         if (link && link.href === currentLocation) {
           li.classList.add('active');
-           
         }
       });
     });

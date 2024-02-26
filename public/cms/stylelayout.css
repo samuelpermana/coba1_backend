@@ -186,6 +186,14 @@ body {
     background-color: #f59c33; /* Warna latar belakang saat hover */
 }
 
+.logout {
+    transition: 0.3s ease;
+}
+
+.logout:active {
+    translate: 1px 1px;
+}
+
 @media (max-width: 768px) {
     .top_bar .hamburger {
         display: inline-block;

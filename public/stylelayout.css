@@ -78,8 +78,8 @@ nav {
     height: 2px;
     width: 70%;
     bottom: 0;
-    left: 50%; /* Menengahkan garis bawah */
-    transform: translateX(-50%); /* Menyempurnakan penempatan garis bawah */
+    left: 50%;
+    transform: translateX(-50%);
     background-color: #cfb53b;
     z-index: 9999;
 }

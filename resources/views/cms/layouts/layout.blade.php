@@ -120,6 +120,23 @@
         wrapper.classList.remove("active");
       });
     </script>
+    <script>
+      // Mendapatkan URL saat ini
+      var currentUrl = window.location.href;
+
+      // Mendapatkan semua tautan di dalam menu
+      var menuLinks = document.querySelectorAll(".menu a");
+
+      // Meloop melalui setiap tautan menu
+      menuLinks.forEach(function(link) {
+        // Memeriksa apakah URL saat ini cocok dengan URL tautan menu
+        if (link.href === currentUrl) {
+          // Menambahkan kelas active ke tautan menu
+          link.classList.add("active");
+        }
+      });
+    </script>
+
   </body>
 
 </html>
