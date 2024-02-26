@@ -55,3 +55,7 @@
     place-self: center stretch;
     align-items: center;
 }
+
+.btn:hover {
+    opacity: 80%;
+}

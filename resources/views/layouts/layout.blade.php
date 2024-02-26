@@ -12,10 +12,12 @@
     <link href='https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css' rel='stylesheet'>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/izitoast/1.4.0/css/iziToast.min.css" rel="stylesheet" integrity="sha512-O03ntXoVqaGUTAeAmvQ2YSzkCvclZEcPQu1eqloPaHfJ5RuNGiS4l+3duaidD801P50J28EHyonCV06CUlTSag==" crossorigin="anonymous"
       referrerpolicy="no-referrer" />
-      <link href='https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css' rel='stylesheet'>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/izitoast/1.4.0/css/iziToast.min.css" integrity="sha512-O03ntXoVqaGUTAeAmvQ2YSzkCvclZEcPQu1eqloPaHfJ5RuNGiS4l+3duaidD801P50J28EHyonCV06CUlTSag==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.min.css" integrity="sha512-mSYUmp1HYZDFaVKK//63EcZq4iFWFjxSL+Z3T/aCt4IO9Cejm03q3NKKYN6pFQzY0SBOr8h+eCIAZHPXcpZaNw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href='https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css' rel='stylesheet'>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/izitoast/1.4.0/css/iziToast.min.css" rel="stylesheet" integrity="sha512-O03ntXoVqaGUTAeAmvQ2YSzkCvclZEcPQu1eqloPaHfJ5RuNGiS4l+3duaidD801P50J28EHyonCV06CUlTSag==" crossorigin="anonymous"
+      referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.min.css" rel="stylesheet" integrity="sha512-mSYUmp1HYZDFaVKK//63EcZq4iFWFjxSL+Z3T/aCt4IO9Cejm03q3NKKYN6pFQzY0SBOr8h+eCIAZHPXcpZaNw=="
+      crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.min.css" rel="stylesheet" integrity="sha512-mSYUmp1HYZDFaVKK//63EcZq4iFWFjxSL+Z3T/aCt4IO9Cejm03q3NKKYN6pFQzY0SBOr8h+eCIAZHPXcpZaNw=="
       crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>SENAT FH UNDIP</title>
@@ -25,14 +27,14 @@
 
     <header class="header4">
       <div class="header__container">
-          <div class="header__toggle">
-              <i class='bx bx-menu' id="header-toggle"></i>
+        <div class="header__toggle">
+          <i class='bx bx-menu' id="header-toggle"></i>
 
-          </div>
+        </div>
       </div>
-  </header>
-  <div class="nav2" id="navbar">
-    <nav class="nav2__container">
+    </header>
+    <div class="nav2" id="navbar">
+      <nav class="nav2__container">
         <div>
             <a href="#" class="nav2__link nav2__logo">
               <img src="/img/coba1.png" alt="Logo">
@@ -92,10 +94,11 @@
                   
                 </div>
             </div>
+          </div>
         </div>
-    </nav>
-</div>
-    
+      </nav>
+    </div>
+
     <nav>
       <div class="nav-logo">
         <a href="{{ url("/") }}">
@@ -177,4 +180,18 @@
     </div>
   </body>
   <script src="script7.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      var currentLocation = window.location.href;
+      var navLinks = document.querySelectorAll('.nav-links li');
+
+      navLinks.forEach(function(li) {
+        var link = li.querySelector('a');
+        if (link && link.href === currentLocation) {
+          li.classList.add('active');
+        }
+      });
+    });
+  </script>
+
 </html>
