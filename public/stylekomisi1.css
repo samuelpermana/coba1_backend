@@ -1062,6 +1062,12 @@ h4 {
   color: #CFB53B;
 }
 
+.container-f{
+  max-width: 1200px;
+  margin: auto;
+  padding: 2rem 2rem;   
+}
+
 @keyframes animate {
     from {
       opacity: 0;

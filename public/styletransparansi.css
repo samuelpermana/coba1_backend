@@ -73,8 +73,6 @@ body {
 }
 
 nav {
-
-/*   width: 1600px; */
   width: 100%;
   margin: 0 auto; /* Menggunakan auto untuk memastikan navbar berada di tengah */
   padding: 2rem 1rem;
@@ -141,7 +139,6 @@ nav {
   border-radius: 5px;
   cursor: pointer;
   transition: all 0.3s ease;
-  width: 100%;
   
 }
 
@@ -189,7 +186,7 @@ nav {
 
 
 .btn:hover {
-  background-color: #cfb53b;
+  opacity: 0.8;
 }
 
 .container {

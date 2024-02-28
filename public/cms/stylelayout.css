@@ -70,7 +70,7 @@ body {
 
 .vertical_bar .menu li a {
     display: block;
-    padding: 15px;
+    padding: 12px;
     text-transform: uppercase;
     color: #fff;
     letter-spacing: 2px;
@@ -184,6 +184,14 @@ body {
 
 .logout a:hover {
     background-color: #f59c33; /* Warna latar belakang saat hover */
+}
+
+.logout {
+    transition: 0.3s ease;
+}
+
+.logout:active {
+    translate: 1px 1px;
 }
 
 @media (max-width: 768px) {

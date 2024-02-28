@@ -107,28 +107,6 @@ nav {
   gap: 2rem;
 }
 
-.link a {
-  position: relative;
-  padding-bottom: 0.75rem;
-  color: #18181b;
-}
-
-.link a::after {
-  content: "";
-  position: absolute;
-  height: 2px;
-  width: 0;
-  bottom: 0;
-  left: 50%; /* Menengahkan garis bawah */
-  transform: translateX(-50%); /* Menyempurnakan penempatan garis bawah */
-  background-color: #cfb53b;
-  transition: all 0.3s ease;
-}
-
-.link a:hover::after {
-  width: 70%;
-}
-
 .btn {
   padding: 1rem 2rem;
   font-size: 1rem;
@@ -274,6 +252,12 @@ section .header {
     font-size: 0.8rem;
     text-align: center;
   }
+
+  .container-f{
+    max-width: 1200px;
+    margin: auto;
+    padding: 2rem 2rem;   
+}
   
   @media (width < 900px) {
     .nav-links {

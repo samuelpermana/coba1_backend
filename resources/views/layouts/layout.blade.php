@@ -12,10 +12,12 @@
     <link href='https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css' rel='stylesheet'>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/izitoast/1.4.0/css/iziToast.min.css" rel="stylesheet" integrity="sha512-O03ntXoVqaGUTAeAmvQ2YSzkCvclZEcPQu1eqloPaHfJ5RuNGiS4l+3duaidD801P50J28EHyonCV06CUlTSag==" crossorigin="anonymous"
       referrerpolicy="no-referrer" />
-      <link href='https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css' rel='stylesheet'>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/izitoast/1.4.0/css/iziToast.min.css" integrity="sha512-O03ntXoVqaGUTAeAmvQ2YSzkCvclZEcPQu1eqloPaHfJ5RuNGiS4l+3duaidD801P50J28EHyonCV06CUlTSag==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.min.css" integrity="sha512-mSYUmp1HYZDFaVKK//63EcZq4iFWFjxSL+Z3T/aCt4IO9Cejm03q3NKKYN6pFQzY0SBOr8h+eCIAZHPXcpZaNw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href='https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css' rel='stylesheet'>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/izitoast/1.4.0/css/iziToast.min.css" rel="stylesheet" integrity="sha512-O03ntXoVqaGUTAeAmvQ2YSzkCvclZEcPQu1eqloPaHfJ5RuNGiS4l+3duaidD801P50J28EHyonCV06CUlTSag==" crossorigin="anonymous"
+      referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.min.css" rel="stylesheet" integrity="sha512-mSYUmp1HYZDFaVKK//63EcZq4iFWFjxSL+Z3T/aCt4IO9Cejm03q3NKKYN6pFQzY0SBOr8h+eCIAZHPXcpZaNw=="
+      crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.min.css" rel="stylesheet" integrity="sha512-mSYUmp1HYZDFaVKK//63EcZq4iFWFjxSL+Z3T/aCt4IO9Cejm03q3NKKYN6pFQzY0SBOr8h+eCIAZHPXcpZaNw=="
       crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>SENAT FH UNDIP</title>
@@ -25,14 +27,14 @@
 
     <header class="header4">
       <div class="header__container">
-          <div class="header__toggle">
-              <i class='bx bx-menu' id="header-toggle"></i>
+        <div class="header__toggle">
+          <i class='bx bx-menu' id="header-toggle"></i>
 
-          </div>
+        </div>
       </div>
-  </header>
-  <div class="nav2" id="navbar">
-    <nav class="nav2__container">
+    </header>
+    <div class="nav2" id="navbar">
+      <nav class="nav2__container">
         <div>
             <a href="#" class="nav2__link nav2__logo">
               <img src="/img/coba1.png" alt="Logo">
@@ -89,16 +91,14 @@
                       <i class='bx bx-time nav2__icon' ></i>
                       <span class="nav2__name">Peminjaman Ruangan</span>
                   </a>
-                  <a href="{{ url('/transparansisurat3') }}" class="nav2__link">
-                    <i class='bx bx-file nav2__icon' ></i>
-                    <span class="nav2__name">Transparansi Surat</span>
-                </a>
+                  
                 </div>
             </div>
+          </div>
         </div>
-    </nav>
-</div>
-    
+      </nav>
+    </div>
+
     <nav>
       <div class="nav-logo">
         <a href="{{ url("/") }}">
@@ -133,7 +133,7 @@
 
     @yield("content")
 
-    <footer class="container">
+    <footer class="container-f">
       <span class="blur"></span>
       <span class="blur"></span>
       <div class="column">
@@ -152,22 +152,26 @@
       </div>
        
       <div class="column">
-        <h4>CONTOH</h4>
-        <a href="#">Template</a>
-        <a href="#">Template</a>
-        <a href="#">Template</a>
+        <h4>Komisi</h4>
+        <a href="{{ url("/tentang-komisi-i") }}">Komisi I</a>
+        <a href="{{ url("/tentang-komisi-ii") }}">Komisi II</a>
+        <a href="{{ url("/tentang-komisi-iii") }}">Komisi III</a>
+        <a href="{{ url("/tentang-komisi-iv") }}">Komisi IV</a>
       </div>
       <div class="column">
-        <h4>About Us</h4>
-        <a href="#">Blogs</a>
-        <a href="#">Template</a>
-        <a href="#">Template</a>
+        <h4>Badan</h4>
+        <a href="{{ url("/tentang-badan-anggaran") }}">Badan Anggaran</a>
+        <a href="{{ url("/tentang-badan-kehormatan") }}">Badan Kehormatan</a>
+        <a href="{{ url("/tentang-badan-legislasi") }}">Badan Legislasi</a>
+        <a href="{{ url("/tentang-bksap") }}">BKSAP</a>
       </div>
       <div class="column">
-        <h4>Contact</h4>
-        <a href="#">Contact Us</a>
-        <a href="#">Privicy Policy</a>
-        <a href="#">Terms & Conditions</a>
+        <h4>JDIH</h4>
+        <a href="#">Peraturan Mahasiswa</a>
+        <a href="#">Standard Operating Procedure</a>
+        <a href="#">Peraturan Senat Mahasiswa</a>
+        <a href="#">Keputusan</a>
+        <a href="#">Rancangan Peraturan</a>
       </div>
     </footer>
 
@@ -176,4 +180,18 @@
     </div>
   </body>
   <script src="script7.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      var currentLocation = window.location.href;
+      var navLinks = document.querySelectorAll('.nav-links li');
+
+      navLinks.forEach(function(li) {
+        var link = li.querySelector('a');
+        if (link && link.href === currentLocation) {
+          li.classList.add('active');
+        }
+      });
+    });
+  </script>
+
 </html>

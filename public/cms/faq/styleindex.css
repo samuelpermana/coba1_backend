@@ -1,0 +1,100 @@
+.main_container .container .item {
+    width: 100%;
+    background: #e3f2f1;
+    padding: 20px;
+    margin: 25px 0 25px 0;
+}
+
+.container h1 {
+    font-size: 2.5rem;
+}
+
+.container th,
+.container td {
+    font-size: 1.3rem;
+    padding: 3px;
+}
+
+.container th {
+    cursor: pointer;
+}
+
+.container a,
+.container button {
+    font-size: 1.3rem;
+    color: black;
+}
+
+.container #inv td,
+.container #inv tr {
+    height: 0;
+    width: 0;
+    border: 0;
+}
+
+.container table tr td {
+    text-align: center;
+}
+
+.container form {
+    display: inline;
+}
+
+.container .delete-btn {
+    border: none;
+    font-size: 1.3rem;
+    cursor: pointer;
+    background-color: transparent;
+}
+
+.btn {
+    color: black;
+    background-color: #d1e3e2;
+    padding: 4px 12px;
+    border-radius: 25px;
+    margin: 20px 30px 20px 0;
+    cursor: pointer;
+    border: solid 1px;
+    transition: 0.15s ease;
+}
+
+button {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+button a {
+    color: black;
+}
+
+.btn a {
+    color: black;
+}
+
+.list-title {
+    background-color: #d1e3e2;
+    border-radius: 10px;
+    padding: 20px;
+    display: block;
+}
+
+.list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    border: 1px solid;
+    box-shadow: 2px 2px;
+    padding: 10px;
+    width: 100%;
+    max-width: 350px;
+    background-color: #d1e3e2;
+    margin-bottom: 10px;
+}
+
+.list table tr td {
+    border: 1px solid;
+    min-width: 100px;
+    text-align: center;
+}

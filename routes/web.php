@@ -19,18 +19,18 @@ use App\Http\Controllers\AspirasiController;
 use App\Http\Controllers\JDIHController;
 use App\Http\Controllers\RuanganController;
 use App\Http\Controllers\Ormawa\AjukanDokumenController;
-use App\Http\Controllers\TestController;
+use App\Mail\TestMail;
 use App\Http\Controllers\Agenda\AgendaKerjaController;
 use App\Http\Controllers\Agenda\AgendaBadanController;
 use App\Http\Controllers\AgendaWeb\AgendaWebController;
-
+use App\Http\Controllers\MailController;
 use App\Http\Controllers\PersetujuanProposal\KomisiController;
 use App\Http\Controllers\PersetujuanProposal\BadanAnggaranController;
 use App\Http\Controllers\PersetujuanProposal\SekjenController;
 
 use App\Models\AktivitasSenat;
 use App\Models\JDIH;
-
+use Illuminate\Support\Facades\Mail;
 
 // ======================== Auth ==================================
 Route::get('/login', [AuthController::class, 'index'])->middleware('guest')->name('login');
@@ -71,9 +71,7 @@ Route::get('/selayangpandang', function () {
 
 Route::get('/bankaspirasi', [AspirasiController::class, 'getAspirasi']);
 
-Route::get('/faq', function () {
-    return view('faq');
-});
+Route::get('/faq', [FaqController::class, 'indexWeb']);
 
 Route::get('/tentang-komisi-i', [AgendaWebController::class, 'komisi1'])->name('tentang.komisi1');
 Route::get('/tentang-komisi-ii', [AgendaWebController::class, 'komisi2'])->name('tentang.komisi2');
@@ -364,4 +362,4 @@ Route::group([
 // ======================== END PIMPINAN TINGGI ==================================
 
 // ======================== MAILING SYSTEM ==================================
-Route::get('/mailtest',[TestController::class, 'index'] );
+Route::get('/mailtest', [MailController::class, 'index']);
