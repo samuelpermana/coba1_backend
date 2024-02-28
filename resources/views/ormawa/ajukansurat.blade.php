@@ -19,7 +19,7 @@
 
       </div>
       <div class="gender-details-box">
-        <span class="gender-title">File</span>
+        <span class="gender-title" style="color: #18181b">File</span>
         <div class="mb-3">
         <label for="file_proposal"class="form-label">File Proposal</label>
           <input class="form-control" id="formFileMultiple" type="file" class="form-control-file" name="file_proposal" required>

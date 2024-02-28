@@ -1,0 +1,65 @@
+a {
+    text-decoration: none;
+}
+
+p {
+    margin-bottom: 0;
+}
+
+.main_container .container .item {
+    width: 100%;
+    height: 100%;
+    background: #e3f2f1;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 15px;
+    font-size: 1.75rem;
+}
+
+.container h1 {
+    font-size: 2.5rem;
+}
+
+.container th,
+.container td {
+    font-size: 1.3rem;
+}
+
+.container th {
+    cursor: pointer;
+}
+
+.container a {
+    font-size: 1.3rem;
+    color: black;
+}
+
+.container #inv td,
+.container #inv tr {
+    height: 0;
+    width: 0;
+    border: 0;
+}
+
+.container table tr td {
+    text-align: center;
+}
+
+.container form {
+    display: inline;
+}
+
+.container .delete-btn {
+    border: none;
+    font-size: 1.3rem;
+    cursor: pointer;
+    background-color: transparent;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 45% 45%;
+    gap: 15px;
+    place-self: center stretch;
+    align-items: center;
+}

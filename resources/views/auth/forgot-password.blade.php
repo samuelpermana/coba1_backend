@@ -31,7 +31,7 @@
 
         <h2>Forgot Your Password ? </h2>
         <p>Enter email to request password reset</p>
-        <form action ="{{ route('password.email') }}" method="post">
+        <form action ="{{ route('passwordPost.request') }}" method="post">
             @csrf
             <label for="email" class="form-label">Email</label>
             <input type="email" class="form-control" name="email">

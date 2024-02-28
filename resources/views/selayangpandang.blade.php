@@ -142,63 +142,75 @@
     <h1 class="header">Struktur Kepengurusan</h1>
     <h2 class="header">Senat Mahasiswa Fakultas Hukum 2024</h2>
     <div class="ketua">
-      <div class="card_wrapper-0">
-        <div class="card_image-0">
-          <img class="card_img" src="https://cdn-icons-png.flaticon.com/512/5556/5556468.png" alt="gambar pengembangan dan keilmuan" />
-        </div>
-        <div class="card_data-0">
-          <h2 class="card_title">Ketua SM FH UNDIP 2024</h2>
-          <h3 class="card_name" style="color: #d4af37">Zamroni Akhmad Affandi<br />FH UNDIP 2021</h3>
-        </div>
+      <div class="card-coba">
+            <div class="imgbox">
+              <img class="img-coba"
+                src="/img/zamroni-kuning.png"
+              />
+            </div>
+      
+            <div class="content1">
+              <h2>Zamroni Akhmad Affandi</h2>
+                <p>
+                  Ketua Senat Mahasiswa FH</br>FH UNDIP 2021
+                </p>
+            </div>
       </div>
     </div>
     <div class="wakil">
       <div class="wakil-wrap">
-        <div class="card_wrapper-0">
-          <div class="card_image-0">
-            <img class="card_img" src="https://cdn-icons-png.flaticon.com/512/5556/5556468.png" alt="gambar pengembangan dan keilmuan" />
-          </div>
-          <div class="card_data-0">
-            <div class="card_box">
-              <h2 class="card_title">Wakil 1</h2>
-              <p>Bidang Pengawasan dan Anggaran</p>
+        <div class="card-coba">
+            <div class="imgbox">
+              <img class="img-coba"
+                src="/img/rafif-kuning.png"
+              />
             </div>
-            <h3 class="card_name" style="color: #d4af37">Rafif Majid Hidayatullah<br />FH UNDIP 2021</h3>
-          </div>
+      
+            <div class="content1">
+              <h2>Rafif Majid Hidayatullah</h2>
+                <p>
+                  Wakil I Bidang Pengawasan dan Anggaran</br>FH UNDIP 2021
+                </p>
+            </div>
         </div>
-        <div class="card_wrapper-0">
-          <div class="card_image-0">
-            <img class="card_img" src="https://cdn-icons-png.flaticon.com/512/5556/5556468.png" alt="gambar pengembangan dan keilmuan" />
-          </div>
-          <div class="card_data-0">
-            <div class="card_box">
-              <h2 class="card_title">Wakil 2</h2>
-              <p>Bidang Aspirasi dan Legislasi</p>
+        <div class="card-coba">
+            <div class="imgbox">
+              <img class="img-coba"
+                src="/img/abigael-kuning.png"
+              />
             </div>
-            <h3 class="card_name" style="color: #d4af37">Abigael Farel<br />FH UNDIP 2021</h3>
-          </div>
+      
+            <div class="content1">
+              <h2>Abigael Farel</h2>
+                <p>
+                  Wakil II Bidang Aspirasi dan Legislasi</br>FH UNDIP 2021
+                </p>
+            </div>
         </div>
-        <div class="card_wrapper-0">
-          <div class="card_image-0">
-            <img class="card_img" src="https://cdn-icons-png.flaticon.com/512/5556/5556468.png" alt="gambar pengembangan dan keilmuan" />
-          </div>
-          <div class="card_data-0">
-            <div class="card_box">
-              <h2 class="card_title">Sekretaris Jenderal</h2>
+        <div class="card-coba">
+            <div class="imgbox">
+              <img class="img-coba"
+                src="/img/candra-kuning.png"
+              />
             </div>
-            <h3 class="card_name" style="color: #d4af37">Candra Adrianando S.P<br />FH UNDIP 2021</h3>
-          </div>
+      
+            <div class="content1">
+              <h2>Candra Adrianando Satrio Priambodo</h2>
+                <p>
+                  Sekretaris Jenderal</br>FH UNDIP 2021
+                </p>
+            </div>
         </div>
       </div>
     </div>
   </section>
 
   <section class="container">
-    <h1 class="header">JAJARAN ANGGOTA</h1>
+    <h1 class="header">Fungsionaris Senat Mahasiswa Fakultas Hukum </h1>
     <h1 class="j-header">KOMISI & BADAN</h1>
     <div class="container1">
       <div class="slide">
-        <div class="item" style="background-image: url(https://images6.alphacoders.com/439/439546.jpg)">
+        <div class="item"  style="background-image: url(/img/BKSAP-COBA.jpg);">
           <div class="content">
             <div class="name">BKSAP</div>
             <div class="des">Badan Kerja Sama Antar Parlemen terdiri dari Biro media dan Biro Humas</div>
@@ -207,7 +219,7 @@
             </a>
           </div>
         </div>
-        <div class="item" style="background-image: url(https://images6.alphacoders.com/439/439546.jpg)">
+        <div class="item"  style="background-image: url(/img/KOMISI1-COBA.jpg);">
           <div class="content">
             <div class="name">KOMISI I</div>
             <div class="des">Komisi I adalah komisi yang menaungi terkait dengan Bidang Pengembangan dan Keilmuan</div>
@@ -216,7 +228,7 @@
             </a>
           </div>
         </div>
-        <div class="item" style="background-image: url(https://images6.alphacoders.com/439/439546.jpg)">
+        <div class="item"  style="background-image: url(/img/KOMISI2-COBA.jpg);">
           <div class="content">
             <div class="name">KOMISI II</div>
             <div class="des">Komisi II adalah komisi yang menaungi terkait Bidang Minat, Bakat, Kaderisasi dan Keroharian</div>
@@ -225,7 +237,7 @@
             </a>
           </div>
         </div>
-        <div class="item" style="background-image: url(https://images6.alphacoders.com/439/439546.jpg)">
+        <div class="item"  style="background-image: url(/img/KOMISI3-COBA.png);">
           <div class="content">
             <div class="name">KOMISI III</div>
             <div class="des">Komisi III adalah komisi yang menangui terkait Bidang Hukum dan Hubungan Publik</div>
@@ -234,27 +246,27 @@
             </a>
           </div>
         </div>
-        <div class="item" style="background-image: url(https://images6.alphacoders.com/439/439546.jpg)">
+        <div class="item"  style="background-image: url(/img/KOMISI4-COBA.png);">
           <div class="content">
             <div class="name">KOMISI IV</div>
             <div class="des">Komisi IV adalah komisi yang menaungi terkait bidang Advokasi, Akademik, Sarana, dan Prasarana</div>
-            <a href="{{ url("/tentang-iv") }}">
+            <a href="{{ url("/tentang-komisi-iv") }}">
               <button>Selengkapnya</button>
             </a>
           </div>
         </div>
-        <div class="item" style="background-image: url(https://images6.alphacoders.com/439/439546.jpg)">
+        <div class="item"  style="background-image: url(/img/BADANLEGISLASI-COBA1.jpg);">
           <div class="content">
             <div class="name">BADAN LEGISLASI</div>
             <div class="des">
               Badan Legislasi dibentuk untuk menciptakan tata kelola organisasi yang jelas dan mempermudah pembahasan produk hukum sesuai fokus komisi
             </div>
-            <a href="{{ url("/tentang-badan-legilasi") }}">
+            <a href="{{ url("/tentang-badan-legislasi") }}">
               <button>Selengkapnya</button>
             </a>
           </div>
         </div>
-        <div class="item" style="background-image: url(https://images6.alphacoders.com/439/439546.jpg)">
+        <div class="item"  style="background-image: url(/img/BADANKEHORMATAN-COBA.jpg);">
           <div class="content">
             <div class="name">BADAN KEHORMATAN</div>
             <div class="des">
@@ -265,7 +277,7 @@
             </a>
           </div>
         </div>
-        <div class="item" style="background-image: url(https://images6.alphacoders.com/439/439546.jpg)">
+        <div class="item"  style="background-image: url(/img/BADANANGGARAN-COBA.jpg);">
           <div class="content">
             <div class="name">BADAN ANGGARAN</div>
             <div class="des">

@@ -24,17 +24,13 @@
             </div>
             <ul class="menu">
               <li>
-
                 <a href="{{ url("/admin") }}">
-
                   <span class="icon"><i class="fas fa-home"></i></span>
                   <span class="text">Dashboard</span>
                 </a>
               </li>
               <li>
-
                 <a href="{{ url("/admin/aktivitas") }}">
-
                   <span class="icon"><i class="fas fa-user"></i></span>
                   <span class="text">Aktivitas Senat</span>
                 </a>
@@ -63,26 +59,43 @@
                   <span class="text">Bank Aspirasi</span>
                 </a>
               </li>
+              <li>
+                <a href="{{ url("/admin/events") }}">
+                  <span class="icon"><i class="far fa-calendar"></i></span>
+                  <span class="text">Events</span>
+                </a>
+              </li>
+              <li>
+                <a href="{{ url("/admin/persetujuan-proposal") }}">
+                  <span class="icon"><i class="fas fa-handshake"></i></span>
+                  <span class="text">Persetujuan Proposal</span>
+                </a>
+              </li>
+              <li>
+                <a href="{{ url("/admin/faq") }}">
+                  <span class="icon"><i class="fas fa-question"></i></span>
+                  <span class="text">Faq</span>
+                </a>
+              </li>
             </ul>
           </div>
         </div>
         <div class="main_container">
-        <div class="top_bar">
-                    <div class="hamburger">
-                        <i class="fas fa-bars"></i>
-                    </div>
-                    <div class="logo">Senat FH <span>UNDIP</span></div>
-                    <!-- Tombol Logout -->
-                    <div class="logout">
-                        <a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
-                            Logout
-                        </a>
-                        <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                            @csrf
-                        </form>
-                    </div>
-                </div>
-
+          <div class="top_bar">
+            <div class="hamburger">
+              <i class="fas fa-bars"></i>
+            </div>
+            <div class="logo">Senat FH <span>UNDIP</span></div>
+            <!-- Tombol Logout -->
+            <div class="logout">
+              <a href="{{ route("logout") }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+                Logout
+              </a>
+              <form id="logout-form" style="display: none;" action="{{ route("logout") }}" method="POST">
+                @csrf
+              </form>
+            </div>
+          </div>
 
           <div class="container">
             <div class="content"></div>
@@ -107,6 +120,23 @@
         wrapper.classList.remove("active");
       });
     </script>
+    <script>
+      // Mendapatkan URL saat ini
+      var currentUrl = window.location.href;
+
+      // Mendapatkan semua tautan di dalam menu
+      var menuLinks = document.querySelectorAll(".menu a");
+
+      // Meloop melalui setiap tautan menu
+      menuLinks.forEach(function(link) {
+        // Memeriksa apakah URL saat ini cocok dengan URL tautan menu
+        if (link.href === currentUrl) {
+          // Menambahkan kelas active ke tautan menu
+          link.classList.add("active");
+        }
+      });
+    </script>
+
   </body>
 
 </html>

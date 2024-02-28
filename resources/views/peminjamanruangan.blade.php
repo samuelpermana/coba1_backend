@@ -1,4 +1,3 @@
-
 @extends("layouts.layout")
 @section("content")
 <head>
@@ -14,8 +13,6 @@
   </head>
 
   <body>
-
-
 
     <section class="container">
       <h2 class="header">PEMINJAMAN RUANGAN</h2>
@@ -45,7 +42,8 @@
                         <th> Digunakan Oleh <span class="icon-arrow">&UpArrow;</span></th>
                         <th> Ruangan <span class="icon-arrow">&UpArrow;</span></th>
                         <th> Tanggal <span class="icon-arrow">&UpArrow;</span></th>
-                        <th> Jam <span class="icon-arrow">&UpArrow;</span></th>
+                        <th> Jam Mulai <span class="icon-arrow">&UpArrow;</span></th>
+                        <th> Jam Selesai <span class="icon-arrow">&UpArrow;</span></th>
                     </tr>
                 </thead>
                 <tbody>
@@ -56,17 +54,25 @@
                         <td>{{ $schedule->room->name }}</td>
                         <td>{{ \Carbon\Carbon::parse($schedule->date)->format('d M, Y') }}</td>
                         <td>
-
-                            <p class="status delivered">{{ $schedule->time }}</p>
+                            <p class="status delivered">{{ $schedule->start_time }}</p>
+                        </td>
+                        <td>
+                            <p class="status delivered">{{ $schedule->end_time }}</p>
                         </td>
                     </tr>
                     @endforeach
                 </tbody>
             </table>
-
+            
         </section>
       </main>
+      <section class="container">
+        <h2 class="header">TAMPILAN EXEL</h2>
+        <p class="sub-header">Berisikan tentang data ruangan yang meminjam tempat di FH dalam bentuk exel</p>
+        <main class="table4" id="customers_table">
+          <a href="https://search.yahoo.com/search?fr=mcafee&type=E211US885G0&p=link+exel">https://search.yahoo.com/search?fr=mcafee&type=E211US885G0&p=link+exel</a>
+        </main>
+      </section>
 
     <script src="js-peminjamanruangan.js"></script>
   @endsection
-

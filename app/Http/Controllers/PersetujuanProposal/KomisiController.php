@@ -31,7 +31,8 @@ class KomisiController extends Controller
                  'status_persetujuan' => $proposal->status_persetujuan,
                  'file_proposal' => $proposal->file_proposal,
                  'created_at' => $proposal->created_at,
-                 'nama_pengaju' => $proposal->user->name
+                 'nama_pengaju' => $proposal->user->name,
+                 'file_final' => $proposal->file_final,
              ];
          }
         return view('komisi.transparansi.transparansisurat', compact('proposalData'));
@@ -56,7 +57,8 @@ class KomisiController extends Controller
                  'status_persetujuan' => $proposal->status_persetujuan,
                  'file_proposal' => $proposal->file_proposal,
                  'created_at' => $proposal->created_at,
-                 'nama_pengaju' => $proposal->user->name
+                 'nama_pengaju' => $proposal->user->name,
+                 'file_final' => $proposal->file_final,
              ];
          }
         return view('komisi.transparansi.transparansisurat', compact('proposalData'));
@@ -81,7 +83,8 @@ class KomisiController extends Controller
                  'status_persetujuan' => $proposal->status_persetujuan,
                  'file_proposal' => $proposal->file_proposal,
                  'created_at' => $proposal->created_at,
-                 'nama_pengaju' => $proposal->user->name
+                 'nama_pengaju' => $proposal->user->name,
+                 'file_final' => $proposal->file_final,
              ];
          }
         return view('komisi.transparansi.transparansisurat', compact('proposalData'));
@@ -105,7 +108,8 @@ class KomisiController extends Controller
                  'status_persetujuan' => $proposal->status_persetujuan,
                  'file_proposal' => $proposal->file_proposal,
                  'created_at' => $proposal->created_at,
-                 'nama_pengaju' => $proposal->user->name
+                 'nama_pengaju' => $proposal->user->name,
+                 'file_final' => $proposal->file_final,
              ];
          }
         return view('komisi.transparansi.transparansisurat', compact('proposalData'));
@@ -165,49 +169,51 @@ class KomisiController extends Controller
     }
 
     public function createRevisi(Request $request, $proposalId)
-    {
-        $request->validate([
-            'komentar' => 'required|string',
-            'file_revisi' => 'required|file|mimes:doc,docx',
-        ]);
-    
-        $user_id = Auth::id();
-    
-        $file_revisi_path = $request->file('file_revisi')->store('revisi_files', 'public');
-    
-        // Buat entri baru untuk RevisiProposal
-        $revisiProposal = new RevisiProposal();
-        $revisiProposal->proposal_id = $proposalId;
-        $revisiProposal->komentar = $request->komentar;
-        $revisiProposal->revised_by = $user_id;
-        $revisiProposal->is_revision_done_by_ormawa = false;
-        $revisiProposal->file_revisi = $file_revisi_path;
-        $revisiProposal->save();
-    
-        $proposal = ProposalOrmawa::findOrFail($proposalId);
-        $proposal->update([
-            'status' => 'komisi',
-            'status_persetujuan' => 'revised',
-            'is_checked'=> true
-        ]);
-    
-        RiwayatRevisiOrmawa::create([
-            'proposal_id' => $proposalId,
-            'revisi_id' => $revisiProposal->id,
-            'judul_lama' => $proposal->judul,
-            'deskripsi_lama' => $proposal->deskripsi,
-            'file_lama' => $proposal->file_proposal,
-        ]);
-    
-        $namaKomisi = User::where('id', Auth::id())->value('name');
-    
-        $log = new LogProposal();
-        $log->action = 'Proposal direvisi oleh Komisi';
-        $log->keterangan = 'Proposal direvisi oleh Komisi ' . $namaKomisi;
-        $log->proposal_id = $proposalId;
-        $log->user_id = $user_id;
-        $log->save();
-        return redirect()->back()->with('success', 'Proposal direvisi berhasil disimpan.');
-    }
+{
+    $request->validate([
+        'komentar' => 'required|string',
+        'file_revisi' => 'required|file|mimes:doc,docx',
+    ]);
+
+    $user_id = Auth::id();
+
+    $file_revisi_path = $request->file('file_revisi')->storeAs('revisi_files', 'RevisiKomisi_' . $request->file('file_revisi')->getClientOriginalName(), 'public');
+
+    // Buat entri baru untuk RevisiProposal
+    $revisiProposal = new RevisiProposal();
+    $revisiProposal->proposal_id = $proposalId;
+    $revisiProposal->komentar = $request->komentar;
+    $revisiProposal->revised_by = $user_id;
+    $revisiProposal->is_revision_done_by_ormawa = false;
+    $revisiProposal->file_revisi = $file_revisi_path;
+    $revisiProposal->save();
+
+    $proposal = ProposalOrmawa::findOrFail($proposalId);
+    $proposal->update([
+        'status' => 'komisi',
+        'status_persetujuan' => 'revised',
+        'is_checked'=> true
+    ]);
+
+    RiwayatRevisiOrmawa::create([
+        'proposal_id' => $proposalId,
+        'revisi_id' => $revisiProposal->id,
+        'judul_lama' => $proposal->judul,
+        'deskripsi_lama' => $proposal->deskripsi,
+        'file_lama' => $proposal->file_proposal,
+    ]);
+
+    $namaKomisi = User::where('id', Auth::id())->value('name');
+
+    $log = new LogProposal();
+    $log->action = 'Proposal direvisi oleh Komisi';
+    $log->keterangan = 'Proposal direvisi oleh Komisi ' . $namaKomisi;
+    $log->proposal_id = $proposalId;
+    $log->user_id = $user_id;
+    $log->save();
+    $user_role_slug = auth()->user()->role->role_slug;
+    return redirect()->route($user_role_slug . '.proposal.revisi', $proposalId)->with('success', 'Agenda kerja berhasil dibuat!');
+}
+
     
 }

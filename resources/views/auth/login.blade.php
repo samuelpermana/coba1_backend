@@ -10,9 +10,10 @@
 </head>
 
 <body>
-
+    
     <div class="container" id="container">
-        
+        <span class="blur"></span>
+        <span class="blur"></span>
         <div class="form-container sign-in">
             <form method="POST" action="{{ route('login-users') }}">
                 @csrf
@@ -21,7 +22,7 @@
                 <span>or use your email password</span>
                 <input type="email" name="email" placeholder="Email" value="adminsmfh@gmail.com" required />
                 <input type="password" name="password" placeholder="Password" value="password" required >
-                <a href="#">Forget Your Password?</a>
+                <a href="{{ route('password.request') }}">Forget Your Password?</a>
                 <button type="submit">Sign In</button>
             </form>
         </div>

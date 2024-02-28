@@ -6,7 +6,7 @@
     font-size: 16px;
     border: none;
     outline: none;
-    color: white;
+    color: #18181b;
     padding: 14px 16px;
     background-color: inherit;
     font-family: inherit;
@@ -75,64 +75,64 @@ a {
 
 body {
   font-family: "Poppins", sans-serif;
-  background-color: #18181b;
-  
+  background-color: #fff6ea;
 }
 
 .container-bg {
-  width: 100%;
-  height: 100%;
-  position: relative;
-  display: grid;
-  place-items: center;
-  isolation: isolate;
-  overflow: hidden;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    display: grid;
+    place-items: center;
+    isolation: isolate;
+    overflow: hidden;
 }
 
+.container-f{
+    max-width: 1200px;
+    margin: auto;
+    padding: 2rem 2rem;   
+}
 
 .blob {
-  position: absolute;
-  opacity: 0.5;
-  width: 400px;
-  aspect-ratio: 1/1;
-  animation: animate 10s cubic-bezier(0.68, -0.55, 0.27, 1.55) infinite
-    alternate forwards;
-  filter: blur(40px);
-  z-index: -1;
-  background: linear-gradient(
-    47deg,
-    rgba(255, 88, 139, 1) 21%,
-    rgb(0 164 173) 67%,
-    rgba(118, 74, 166, 1) 81%
-  );
+    position: absolute;
+    opacity: 0.5;
+    width: 400px;
+    aspect-ratio: 1/1;
+    animation: animate 10s cubic-bezier(0.68, -0.55, 0.27, 1.55) infinite
+        alternate forwards;
+    filter: blur(40px);
+    z-index: -1;
+    background: linear-gradient(
+        47deg,
+        rgba(255, 88, 139, 1) 21%,
+        rgb(0 164 173) 67%,
+        rgba(118, 74, 166, 1) 81%
+    );
 
-  /*  Optional  */
-  /*   box-shadow: inset 50px 50px 17px 0px #ff588b,
+    /*  Optional  */
+    /*   box-shadow: inset 50px 50px 17px 0px #ff588b,
     inset 100px 100px 17px 0px #66319f; */
 }
 
 @keyframes animate {
-  0% {
-    translate: 40% -25%;
-    border-radius: 60% 40% 30% 70% / 100% 85% 92% 74%;
-  }
-  50% {
-    translate: 0% 13%;
-    border-radius: 20% 71% 47% 70% / 81% 15% 22% 54%;
-    rotate: 41deg;
-    scale: 1.15;
-  }
-  100% {
-    translate: -45% 39%;
-    border-radius: 100% 75% 92% 74% / 60% 80% 30% 70%;
-    rotate: -60deg;
-    scale: 1.05;
-  }
+    0% {
+        translate: 40% -25%;
+        border-radius: 60% 40% 30% 70% / 100% 85% 92% 74%;
+    }
+    50% {
+        translate: 0% 13%;
+        border-radius: 20% 71% 47% 70% / 81% 15% 22% 54%;
+        rotate: 41deg;
+        scale: 1.15;
+    }
+    100% {
+        translate: -45% 39%;
+        border-radius: 100% 75% 92% 74% / 60% 80% 30% 70%;
+        rotate: -60deg;
+        scale: 1.05;
+    }
 }
-
-
-
-
 
 nav {
     width: 100%;
@@ -155,7 +155,7 @@ header {
 
 header .content h4 {
     margin-bottom: 1rem;
-    color: #ccc;
+    color: #18181b;
     font-size: 1rem;
     font-weight: 600;
 }
@@ -175,7 +175,7 @@ header .content h1 span {
 
 header .content p {
     margin-bottom: 3rem;
-    color: #ccc;
+    color: #18181b;
     text-align: justify;
     font-family: "Poppins", sans-serif;
     font-size: 16px;
@@ -216,27 +216,6 @@ section .header {
     gap: 2rem;
 }
 
-.link a {
-    position: relative;
-    padding-bottom: 0.75rem;
-    color: #fff;
-}
-
-.link a::after {
-    content: "";
-    position: absolute;
-    height: 2px;
-    width: 0;
-    bottom: 0;
-    left: 50%; /* Menengahkan garis bawah */
-    transform: translateX(-50%); /* Menyempurnakan penempatan garis bawah */
-    background-color: #cfb53b;
-    transition: all 0.3s ease;
-}
-
-.link a:hover::after {
-    width: 70%;
-}
 
 .btn-as {
     padding: 1rem 2rem;
@@ -418,7 +397,7 @@ section .header {
 #description {
     font-size: 1.3rem;
     color: white;
-    background-color: #18181b;
+    background-color: #cbb989;
     padding: 5px 20px;
     border-radius: 10px;
     box-shadow: 0 0 20px rgba(255, 255, 255, 15%);
@@ -964,7 +943,7 @@ footer .column .logo {
 }
 
 footer .column p {
-    color: #ccc;
+    color: #18181b;
     margin-bottom: 2rem;
 }
 
@@ -975,8 +954,8 @@ footer .column .socials {
 }
 
 footer .column .socials a {
-    color: #ccc;
-    border: 1px solid #ccc;
+    color: #18181b;
+    border: 1px solid #18181b;
     padding: 5px 10px;
     font-size: 1.25rem;
     border-radius: 100%;
@@ -990,7 +969,7 @@ footer .column .socials a:hover {
 }
 
 footer .column h4 {
-    color: #fff;
+    color: #18181b;
     margin-bottom: 2rem;
     font-size: 1.2rem;
     font-weight: 500;
@@ -998,7 +977,7 @@ footer .column h4 {
 
 footer .column > a {
     display: block;
-    color: #ccc;
+    color: #18181b;
     margin-bottom: 1rem;
     transition: all 0.3s ease;
 }
@@ -1011,84 +990,84 @@ footer .column > a:hover {
     max-width: 1200px;
     margin: auto;
     padding: 1rem;
-    color: #fff;
+    color: #18181b;
     font-size: 0.8rem;
     text-align: center;
 }
 
 /* Ganti latar belakang kalender */
 #calendar {
-  background-color: #323232; /* Ubah warna latar belakang sesuai keinginan Anda */
+  background-color: #cbb989; /* Ubah warna latar belakang sesuai keinginan Anda */
   padding: 20px; /* Berikan padding agar konten kalender tidak terlalu dekat dengan tepi */
   border-radius: 20px;
 }
 
 /* Atur tata letak tombol kalender */
 .fc-toolbar.fc-header-toolbar {
-  margin-bottom: 20px; /* Jarak antara toolbar dan kalender */
+    margin-bottom: 20px; /* Jarak antara toolbar dan kalender */
 }
 
 /* Atur tampilan tombol navigasi kalender */
 .fc-prev-button,
 .fc-next-button {
-  background-color: #d4af37; /* Warna latar tombol */
-  color: #fff; /* Warna teks tombol */
-  border-color: #d4af37; /* Warna garis batas tombol */
-  border-radius: 5px; /* Ubah sudut tombol */
-  padding: 5px 10px; /* Atur padding tombol */
-  margin: 0 5px; /* Atur margin antara tombol */
-  font-size: 16px; /* Ukuran teks tombol */
+    background-color: #d4af37; /* Warna latar tombol */
+    color: #fff; /* Warna teks tombol */
+    border-color: #d4af37; /* Warna garis batas tombol */
+    border-radius: 5px; /* Ubah sudut tombol */
+    padding: 5px 10px; /* Atur padding tombol */
+    margin: 0 5px; /* Atur margin antara tombol */
+    font-size: 16px; /* Ukuran teks tombol */
 }
 
 /* Efek hover pada tombol navigasi kalender */
 .fc-prev-button:hover,
 .fc-next-button:hover {
-  background-color: #B89930; /* Warna latar hover tombol */
-  border-color: #B89930; /* Warna garis batas hover tombol */
+  background-color: #800000; /* Warna latar hover tombol */
+  border-color: #800000; /* Warna garis batas hover tombol */
   cursor: pointer; /* Ubah kursor saat dihover */
 }
 
 /* Atur tampilan bulan dan tahun pada kalender */
 .fc-toolbar-title {
-  font-size: 20px; /* Ukuran teks bulan dan tahun */
-  font-weight: bold; /* Beri teks bulan dan tahun bold */
-  color: #333; /* Warna teks bulan dan tahun */
+    font-size: 20px; /* Ukuran teks bulan dan tahun */
+    font-weight: bold; /* Beri teks bulan dan tahun bold */
+    color: #333; /* Warna teks bulan dan tahun */
 }
 
 /* Atur tampilan hari-hari di kalender */
 .fc-daygrid-day {
-  padding: 10px; /* Atur padding untuk day grid */
-  background-color: transparent; /* Warna latar belakang hari */
-  border: 1px solid #ccc; /* Tambahkan garis batas untuk hari */
+    padding: 10px; /* Atur padding untuk day grid */
+    background-color: transparent; /* Warna latar belakang hari */
+    border: 1px solid #ccc; /* Tambahkan garis batas untuk hari */
 }
 
 /* Atur tampilan hari-hari pada saat dihover */
 .fc-day:hover {
-  background-color: #d4af37; /* Warna latar belakang saat dihover */
+  background-color: #800000; /* Warna latar belakang saat dihover */
   opacity: 0.5;
   cursor: pointer; /* Ubah kursor saat dihover */
 }
 
-.fc-today-button{
-  background-color: #d4af37;
-  padding: 6px 10px;
-  border-radius: 5px;
-  color: white;
-  font-weight: 500;
+.fc-today-button {
+    background-color: #d4af37;
+    padding: 6px 10px;
+    border-radius: 5px;
+    color: white;
+    font-weight: 500;
 }
 
-.fc-toolbar-chunk{
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.fc-toolbar-chunk {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 @media (width < 900px) {
-    #slideshow-grid{
-      grid-template-columns: repeat(1, 1fr);
+    #slideshow-grid {
+        grid-template-columns: repeat(1, 1fr);
     }
-    .header__toggle{
-      display: block;
+    .header__toggle {
+        display: block;
     }
     .nav-links {
         display: none;
@@ -1128,10 +1107,44 @@ footer .column > a:hover {
 }
 /* CSS untuk menyesuaikan tampilan kalender */
 .fc-toolbar h2 {
-    color: #d4af37; /* Mengubah warna teks bulan */
+    color: #18181b; /* Mengubah warna teks bulan */
 }
 
 .fc-daygrid-day-number {
     color: black; /* Mengubah warna teks tanggal */
 }
 
+
+.fc, .fc *, .fc :after, .fc :before {
+    box-sizing: border-box;
+    color: #18181b;
+}
+@media screen and (max-width: 768px) {
+    #calendar {
+        padding: 10px;
+        border-radius: 10px;
+    }
+
+    .fc-prev-button,
+    .fc-next-button {
+        font-size: 14px;
+        padding: 4px 8px;
+    }
+
+    .fc-toolbar-title {
+        font-size: 18px;
+    }
+
+    .fc-daygrid-day {
+        padding: 8px;
+    }
+
+    .fc-today-button {
+        padding: 4px 8px;
+        font-size: 14px;
+    }
+    .fc .fc-col-header-cell-cushion {
+        padding: 1px 2px;
+        font-size: 13px;
+    }
+}

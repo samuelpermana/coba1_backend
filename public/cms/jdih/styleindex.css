@@ -1,0 +1,83 @@
+.main_container .container .item {
+    width: 100%;
+    background: #e3f2f1;
+    padding: 20px;
+    margin: 25px 0 25px 0;
+}
+
+.container h1 {
+    font-size: 2.5rem;
+}
+
+.container th,
+.container td {
+    font-size: 1.3rem;
+    padding: 3px;
+}
+
+.container th {
+    cursor: pointer;
+}
+
+.container a {
+    font-size: 1.3rem;
+    color: black;
+}
+
+.container #inv td,
+.container #inv tr {
+    height: 0;
+    width: 0;
+    border: 0;
+}
+
+.container table tr td {
+    text-align: center;
+}
+
+.container form {
+    display: inline;
+}
+
+.container .delete-btn {
+    border: none;
+    font-size: 1.3rem;
+    cursor: pointer;
+    background-color: transparent;
+}
+
+.btn {
+    background-color: #d1e3e2;
+    padding: 4px 8px;
+    border-radius: 25px;
+    margin: 20px 0 20px 0;
+    cursor: pointer;
+    border: solid 1px;
+    transition: 0.15s ease;
+}
+
+.btn:hover {
+    opacity: 85%;
+}
+
+.btn:active {
+    opacity: 70%;
+}
+
+.btn-info,
+.btn-warning,
+.btn-danger {
+    margin: 2px;
+}
+
+.btn-danger {
+    border: none;
+    cursor: pointer;
+    background-color: transparent;
+    font-size: 1.3rem;
+}
+
+.card-header {
+    font-size: 2rem;
+    font-weight: bold;
+}

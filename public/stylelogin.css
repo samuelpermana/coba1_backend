@@ -8,8 +8,7 @@
 }
 
 body {
-    background-color: #18181b;
-    background: linear-gradient(to right, #18181b, #18181b);
+    background-color: #fff6ea;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -26,6 +25,11 @@ body {
     width: 100%;
     max-width: 768px;
     min-height: 480px;
+}
+.container .blur {
+    position: absolute;
+    box-shadow: 0 0 1000px 50px #cfb53b;
+    z-index: -100;
 }
 
 .container p {

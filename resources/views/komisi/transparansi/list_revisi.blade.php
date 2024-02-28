@@ -3,10 +3,12 @@
 @section('content')
 <link href="{{ asset("styletransparansi.css") }}" rel="stylesheet">
     <div class="container">
-        <h1>Daftar Revisi Proposal</h1>
-        <h2>{{ $proposal->judul }}</h2>
+        <div class="header-revisi">
+            <h1>Daftar Revisi Proposal</h1>
+            <h2>{{ $proposal->judul }}</h2>
+        </div>
 
-        <a href="{{ route(auth()->user()->role->role_slug . '.revisi.create', $proposal->id) }}" class="btn btn-primary">Buat Revisi</a>
+        <a href="{{ route(auth()->user()->role->role_slug . '.revisi.create', $proposal->id) }}" class="btn-revisi">Buat Revisi</a>
 
         <section class="table__body">
         <table class="table__body">
