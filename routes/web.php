@@ -19,7 +19,7 @@ use App\Http\Controllers\AspirasiController;
 use App\Http\Controllers\JDIHController;
 use App\Http\Controllers\RuanganController;
 use App\Http\Controllers\Ormawa\AjukanDokumenController;
-
+use App\Http\Controllers\TestController;
 use App\Http\Controllers\Agenda\AgendaKerjaController;
 use App\Http\Controllers\Agenda\AgendaBadanController;
 use App\Http\Controllers\AgendaWeb\AgendaWebController;
@@ -362,3 +362,6 @@ Route::group([
     Route::post('/revisi/store/{proposalId}', [SekjenController::class, 'createRevisi'])->name('revisi.store');
 });
 // ======================== END PIMPINAN TINGGI ==================================
+
+// ======================== MAILING SYSTEM ==================================
+Route::get('/mailtest',[TestController::class, 'index'] );
