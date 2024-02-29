@@ -112,20 +112,6 @@ nav {
     gap: 2rem;
 }
 
-.btn {
-    padding: 1rem 2rem;
-    font-size: 1rem;
-    color: #fff;
-    background: #800000;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-}
-
-.btn:hover {
-    background-color: #cfb53b;
-}
-
 .container {
     max-width: 1200px;
     margin: auto;
@@ -222,7 +208,7 @@ nav {
 #angkatan,
 #id_line,
 #message {
-    background-color: #F5F5DC;
+    background-color: #f5f5dc;
     color: #18181b;
 }
 
@@ -464,15 +450,55 @@ footer .column > a:hover {
 /*===== Show menu =====*/
 .show-menu {
     left: 0;
+}
 
-  }
-
-  .container-f{
+.container-f {
     max-width: 1200px;
     margin: auto;
-    padding: 2rem 2rem;   
+    padding: 2rem 2rem;
 }
- 
+
+@media (width < 1300px) {
+    .header__container {
+        display: flex;
+        align-items: center;
+        height: 100px;
+        justify-content: space-between;
+        z-index: -2rem;
+    }
+
+    .nav2 {
+        display: block;
+    }
+    .btn {
+        display: none;
+    }
+    .header__toggle {
+        display: block;
+    }
+
+    .nav-links {
+        display: none;
+    }
+    header {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    header .image {
+        grid-area: 1/1/2/2;
+    }
+    .features {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .pricing {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    footer {
+        grid-template-columns: 1fr 200px;
+    }
+    footer {
+        z-index: -1;
+    }
+}
 
 @media (width < 900px) {
     .header__container {
@@ -547,47 +573,5 @@ footer .column > a:hover {
 
     #contact button {
         min-width: 80%;
-    }
-}
-
-@media (width < 1300px) {
-    .header__container {
-        display: flex;
-        align-items: center;
-        height: 100px;
-        justify-content: space-between;
-        z-index: -2rem;
-    }
-
-    .nav2 {
-        display: block;
-    }
-    .btn {
-        display: none;
-    }
-    .header__toggle {
-        display: block;
-    }
-
-    .nav-links {
-        display: none;
-    }
-    header {
-        grid-template-columns: repeat(1, 1fr);
-    }
-    header .image {
-        grid-area: 1/1/2/2;
-    }
-    .features {
-        grid-template-columns: repeat(2, 1fr);
-    }
-    .pricing {
-        grid-template-columns: repeat(2, 1fr);
-    }
-    footer {
-        grid-template-columns: 1fr 200px;
-    }
-    footer {
-        z-index: -1;
     }
 }
