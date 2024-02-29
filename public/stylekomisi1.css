@@ -872,7 +872,7 @@ footer .column > a:hover {
   
 .modern-card:hover {
     transform: scale(1.05);
-    background-color: #323232;
+    background-color: #bead80;
     border-color: #fff;
 }
   
@@ -1058,8 +1058,21 @@ h4 {
   transform: translateY(-180px);
 }
 
+.content1{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
 .content1 h2 {
-  color: #CFB53B;
+line-height: 30px;
+color: #CFB53B;
+width: 250px;
+}
+
+.content1 p{
+  margin-top: 10px;
 }
 
 .container-f{

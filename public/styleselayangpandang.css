@@ -1122,8 +1122,20 @@ section .header3 {
   transform: translateY(-180px);
 }
 
+.content1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
 .content1 h2 {
   color: #CFB53B;
+  width: 250px;
+}
+
+.content1 p{
+    margin-top: 10px;
 }
 
 .container-f{
