@@ -181,7 +181,7 @@
             </div>
       
             <div class="content1">
-              <h2>Abigael Farel</h2>
+              <h2>Abigael Farel Harahap</h2>
                 <p>
                   Wakil II Bidang Aspirasi dan Legislasi</br>FH UNDIP 2021
                 </p>
