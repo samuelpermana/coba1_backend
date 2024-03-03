@@ -161,10 +161,10 @@
       <div class="column">
         <h4>JDIH</h4>
         <a href="{{ route("jdih.jenis", ["id" => 1]) }}">Peraturan Mahasiswa</a>
-        <a href="#">Standard Operating Procedure</a>
-        <a href="#">Peraturan Senat Mahasiswa</a>
-        <a href="#">Keputusan</a>
-        <a href="#">Rancangan Peraturan</a>
+        <a href="{{ route("jdih.jenis", ["id" => 3]) }}">Peraturan Senat Mahasiswa</a>
+        <a href="{{ route("jdih.jenis", ["id" => 4]) }}">Keputusan</a>
+        <a href="{{ route("jdih.jenis", ["id" => 2]) }}">Standard Operating Procedure</a>
+        <a href="{{ route("jdih.jenis", ["id" => 5]) }}">Rancangan Peraturan</a>
       </div>
     </footer>
 
