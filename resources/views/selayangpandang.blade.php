@@ -125,7 +125,7 @@
       <div class="card1">
         <div class="warna1"></div>
         <div class="content">
-          <h4>MERAH MAROON</h4>
+          <h4>MERAH MARUN</h4>
           <h5>Melambangkan arti Humanisme yang digaungkan oleh SM FH Undip Tahun 2024</h5>
         </div>
       </div>

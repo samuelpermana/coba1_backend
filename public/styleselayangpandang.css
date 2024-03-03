@@ -721,6 +721,7 @@ section .header1 {
   border: 2px solid transparent;
   border-radius: 15px;
   transition: all 0.3s ease;
+  margin: 0;
 }
 
 .pricing1 .card2 .content {
@@ -744,9 +745,11 @@ section .header1 {
   font-size: 1rem;
   font-weight: 500;
   text-align: justify; /* Mengatur teks menjadi rata kanan dan kiri */
-  font-family: "Poppins", sans-serif;
+  text-justify: distribute-all-lines; /* Pilihan tambahan untuk penyebaran yang lebih merata */
   line-height: 1.5; /* Mengatur jarak antar baris agar lebih legible */
   letter-spacing: 0.5px;
+  font-family: "Poppins", sans-serif;
+  word-spacing: 1px;
 }
 
 .pricing1 .card2 h3 {
@@ -835,14 +838,15 @@ section .header3 {
 }
 
 .pricing1 .card h5 {
-  margin-bottom: 1rem;
-  color: #18181b;
-  font-size: 1rem;
-  font-weight: 500;
-  text-align: justify;
-  line-height: 1.5; /* Mengatur jarak antar baris agar lebih legible */
-  letter-spacing: 1px;
-  font-family: "Poppins", sans-serif;
+    margin-bottom: 1rem;
+    color: #18181b;
+    font-size: 1rem;
+    font-weight: 500;
+    text-align: justify; /* Mengatur teks menjadi rata kanan dan kiri */
+    text-justify: distribute-all-lines; /* Pilihan tambahan untuk penyebaran yang lebih merata */
+    line-height: 1.5; /* Mengatur jarak antar baris agar lebih legible */
+    letter-spacing: 0.5px;
+    font-family: "Poppins", sans-serif;
 }
 
 .ketua {

@@ -313,13 +313,12 @@ footer .column > a:hover {
     position: relative;
 }
 /*========== HEADER ==========*/
-.header {
+.header4 {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     background-color: var(--container-color);
-    box-shadow: 0 1px 0 rgba(22, 8, 43, 0.1);
     padding: 0 1rem;
     z-index: -2rem;
     margin-top: 2rem;
@@ -470,7 +469,7 @@ footer .column > a:hover {
   .container-f{
     max-width: 1200px;
     margin: auto;
-    padding: 2rem 2rem;   
+    padding: 10rem 2rem;   
 }
  
 
@@ -509,11 +508,66 @@ footer .column > a:hover {
         grid-template-columns: repeat(2, 1fr);
     }
     footer {
-        grid-template-columns: 1fr 200px;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        gap: 1rem;
+        padding: 1rem;
     }
-    footer {
-        z-index: -1;
+
+    footer .column {
+        text-align: center;
+        margin-bottom: 2rem;
     }
+}
+
+footer .column .logo {
+    max-width: 100px;
+    margin-bottom: 2rem;
+}
+
+footer .column p {
+    color: #18181b;
+    margin-bottom: 2rem;
+}
+
+footer .column .socials {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+footer .column .socials a {
+    color: #18181b;
+    border: 1px solid #18181b;
+    padding: 5px 10px;
+    font-size: 1.25rem;
+    border-radius: 100%;
+    transition: all 0.3s ease;
+}
+
+footer .column .socials a:hover {
+    color: #fff;
+    background-color: #cfb53b;
+    border-color: #cfb53b;
+}
+
+footer .column h4 {
+    color: #18181b;
+    margin-bottom: 2rem;
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+footer .column > a {
+    display: block;
+    color: #18181b;
+    margin-bottom: 1rem;
+    transition: all 0.3s ease;
+}
+
+footer .column > a:hover {
+    color: #cfb53b;
+
 }
 
 @media (width < 600px) {
@@ -530,8 +584,66 @@ footer .column > a:hover {
     }
 
     footer {
-        grid-template-columns: 1fr 150px;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        gap: 1rem;
+        padding: 1rem;
     }
+
+    footer .column {
+        text-align: center;
+        margin-bottom: 2rem;
+    }
+}
+
+footer .column .logo {
+    max-width: 100px;
+    margin-bottom: 2rem;
+}
+
+footer .column p {
+    color: #18181b;
+    margin-bottom: 2rem;
+}
+
+footer .column .socials {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+footer .column .socials a {
+    color: #18181b;
+    border: 1px solid #18181b;
+    padding: 5px 10px;
+    font-size: 1.25rem;
+    border-radius: 100%;
+    transition: all 0.3s ease;
+}
+
+footer .column .socials a:hover {
+    color: #fff;
+    background-color: #cfb53b;
+    border-color: #cfb53b;
+}
+
+footer .column h4 {
+    color: #18181b;
+    margin-bottom: 2rem;
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+footer .column > a {
+    display: block;
+    color: #18181b;
+    margin-bottom: 1rem;
+    transition: all 0.3s ease;
+}
+
+footer .column > a:hover {
+    color: #cfb53b;
+
 }
 
 @media only screen and (max-width: 600px) {
@@ -590,4 +702,5 @@ footer .column > a:hover {
     footer {
         z-index: -1;
     }
+    
 }

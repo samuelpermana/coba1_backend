@@ -16,7 +16,7 @@
 
     <section class="container">
       <h2 class="header">PEMINJAMAN RUANGAN</h2>
-      <p class="sub-header">Berisikan tentang data ruangan yang meminjam tempat di FH</p>
+      <p class="sub-header">Berisikan tentang data peminjaman ruangan</p>
 
       <main class="table" id="customers_table">
         <section class="table__header">
@@ -30,7 +30,6 @@
             <div class="export__file-options">
               <label>Export As &nbsp; &#10140;</label>
               <label id="toPDF" for="export-file">PDF <img src="img/pdf.png" alt=""></label>
-              <label id="toEXCEL" for="export-file">EXCEL <img src="img/excel.png" alt=""></label>
             </div>
           </div>
         </section>
