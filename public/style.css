@@ -2842,7 +2842,7 @@ body {
 }
 
 nav {
-    width: 1600px;
+    width: 1500px;
     margin: 0 auto; /* Menggunakan auto untuk memastikan navbar berada di tengah */
     padding: 2rem 1rem;
     display: flex;

@@ -59,10 +59,65 @@
             </div>
           @endforeach
         </div>
-      </div>
-    </section>
-    
-  @endforeach
-  <script src="{{ asset("script7.js") }}"></script>
-@endsection
+    </div>
+</section>
+@endforeach
 
+<!-- The following section is for the detailed view of a JDIH file by ID -->
+@if(isset($jdihRecord))
+<section class="container">
+    <h2 class="headerJD">{{ $jdihRecord->nama_peraturan }}</h2>
+    <div class="detailed-JD">
+        <!-- Display other details based on your JDIH model -->
+        <p>Tipe Dokumen: {{ $jdihRecord->jenis_peraturan }}</p>
+        <p>Nomor Panggil: {{ $jdihRecord->file_inventarisasi }}</p>
+        <!-- Add more details as needed -->
+        <p>Download File: <a href="{{ url('/path/to/your/download/file') }}" download>
+            <span class="blue">
+                <img class="imageperma" src="/img/filetransparan.svg" alt="" />
+            </span>
+        </a></p>
+    </div>
+</section>
+@endif
+
+<footer class="container">
+  <span class="blur"></span>
+  <span class="blur"></span>
+  <div class="column">
+      <div class="logo">
+          <img src="img/coba1.png">
+      </div>
+      <p>
+          SENAT MAHASISWA FAKULTAS HUKUM UNDIP
+      </p>
+      <div class="socials">
+          <a href="#"><i class="ri-youtube-line"></i></a>
+          <a href="#"><i class="ri-instagram-line"></i></a>
+          <a href="#"><i class="ri-twitter-line"></i></a>
+      </div>
+  </div>
+  <div class="column">
+      <h4>CONTOH</h4>
+      <a href="#">Template</a>
+      <a href="#">Template</a>
+      <a href="#">Template</a>
+  </div>
+  <div class="column">
+      <h4>About Us</h4>
+      <a href="#">Blogs</a>
+      <a href="#">Channels</a>
+      <a href="#">Sponsors</a>
+  </div>
+  <div class="column">
+      <h4>Contact</h4>
+      <a href="#">Contact Us</a>
+      <a href="#">Privicy Policy</a>
+      <a href="#">Terms & Conditions</a>
+  </div>
+</footer>
+
+
+    <div class="copyright">Copyright Â© 2023 SENAT FH UNDIP. All Rights Reserved.</div>
+  </body>
+</html>

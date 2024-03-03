@@ -78,7 +78,7 @@ body {
 }
 
 nav {
-    max-width: 100%;
+    width: 1600px;
     margin: 0 auto; /* Menggunakan auto untuk memastikan navbar berada di tengah */
     padding: 2rem 1rem;
     display: flex;
@@ -110,7 +110,29 @@ nav {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 2rem;
+    gap: 3rem;
+}
+
+.link a {
+    position: relative;
+    padding-bottom: 0.75rem;
+    color: #fff;
+}
+
+.link a::after {
+    content: "";
+    position: absolute;
+    height: 2px;
+    width: 0;
+    bottom: 0;
+    left: 50%; /* Menengahkan garis bawah */
+    transform: translateX(-50%); /* Menyempurnakan penempatan garis bawah */
+    background-color: #cfb53b;
+    transition: all 0.3s ease;
+}
+
+.link a:hover::after {
+    width: 70%;
 }
 
 .btn {
