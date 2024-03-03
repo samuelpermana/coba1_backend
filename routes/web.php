@@ -36,10 +36,10 @@ use Illuminate\Support\Facades\Mail;
 Route::get('/login', [AuthController::class, 'index'])->middleware('guest')->name('login');
 Route::post('/login-user', [AuthController::class, 'login'])->middleware('guest')->name('login-users');
 Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
-Route::get('/forgot-password',[ForgetPasswordCtrl::class, 'forgetPassword'])->middleware('guest')->name('password.request');
-Route::post('/forgot-password',[ForgetPasswordCtrl::class, 'forgetPasswordPost'])->middleware('guest')->name('passwordPost.request');
-Route::get('/reset-password/{token}',[ForgetPasswordCtrl::class, 'resetPassword'])->middleware('guest')->name('passwordReset.request');
-Route::post('/reset-password/{token}',[ForgetPasswordCtrl::class, 'resetPasswordPost'])->middleware('guest')->name('passwordResetPost.request');
+Route::get('/forgot-password', [ForgetPasswordCtrl::class, 'forgetPassword'])->middleware('guest')->name('password.request');
+Route::post('/forgot-password', [ForgetPasswordCtrl::class, 'forgetPasswordPost'])->middleware('guest')->name('passwordPost.request');
+Route::get('/reset-password/{token}', [ForgetPasswordCtrl::class, 'resetPassword'])->middleware('guest')->name('passwordReset.request');
+Route::post('/reset-password/{token}', [ForgetPasswordCtrl::class, 'resetPasswordPost'])->middleware('guest')->name('passwordResetPost.request');
 
 // ======================== END Auth ==================================
 
@@ -141,7 +141,7 @@ Route::group([
         return view('cms.dashboard');
     })->name('dashboard');
 
-        
+
     Route::get('/faq', [FaqController::class, 'index'])->name('faq.index');
     Route::get('/faq/create', [FaqController::class, 'create'])->name('faq.create');
     Route::post('/faq', [FaqController::class, 'store'])->name('faq.store');

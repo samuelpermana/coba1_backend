@@ -63,7 +63,29 @@ class ProposalController extends Controller
         $log->user_id = Auth::id();
         $log->save();
 
+        $assignedUser = User::where('id', $request->komisi_checked_by);
+        $email = $assignedUser->email();
+        return response_success($email, "Successfully get list post DPP");
+        // Send notification with dynamic recipient
+        if ($assignedUser) {
+            $this->sendAssignmentNotification($assignedUser, $proposal);
+        } else {
+            logger('No user found for commission: ' . $request->komisi_checked_by);
+        }
+
         return redirect()->back()->with('success', 'Komisi checked by berhasil diperbarui.');
+    }
+
+    private function sendAssignmentNotification($assignedUser, $proposal)
+    {
+        try {
+            $subject = 'New Proposal Assigned to Your Commission';
+            $body = 'A new proposal titled "' . $proposal->judul . '" has been assigned to your commission for review.';
+    
+            Mail::to($assignedUser->email)->send(new ProposalAssignmentMail($subject, $body));
+        } catch (\Exception $e) {
+            logger('Error sending email: ' . $e->getMessage());
+        }
     }
 
     public function adminReject(Request $request, $proposalId)

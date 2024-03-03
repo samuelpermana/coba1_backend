@@ -9,6 +9,7 @@ use Illuminate\Mail\Mailables\Content;
 use Illuminate\Mail\Mailables\Envelope;
 use Illuminate\Queue\SerializesModels;
 
+
 class TestMail extends Mailable
 {
     use Queueable, SerializesModels;
@@ -17,7 +18,8 @@ class TestMail extends Mailable
      * Create a new message instance.
      */
 
-     public $subject, $body;
+    public $subject, $body;
+
     public function __construct($subject, $body)
     {
         $this->subject = $subject;

@@ -10,6 +10,9 @@ use App\Models\RevisiProposal;
 use App\Models\RiwayatRevisiOrmawa;
 use Auth;
 use Carbon\Carbon;
+use App\Models\User;
+use Mail;
+use App\Mail\TestMail;
 
 class AjukanDokumenController extends Controller
 {
@@ -39,12 +42,15 @@ class AjukanDokumenController extends Controller
             $proposal->created_by = Auth::id(); 
             $proposal->save();
     
+            
             $log = new LogProposal();
             $log->action = 'Pengajuan Proposal';
             $log->keterangan = 'Proposal diajukan oleh ' . Auth::user()->name;
             $log->proposal_id = $proposal->id;
             $log->user_id = Auth::id();
             $log->save();
+
+            $this->sendProposalNotification($proposal);
     
             return redirect()->route('ormawa.cek_progress')->with('success', 'Agenda kerja berhasil dibuat!');
         } catch (\Exception $e) {
@@ -52,8 +58,18 @@ class AjukanDokumenController extends Controller
         }
     }
 
-    public function cek_progress()
+    private function sendProposalNotification($proposal)
     {
+        $user = User::find(Auth::id()); // Fetch user information
+        $subject = 'New Proposal Created by ' . $user->name;
+        $body = $user->name . ' has created a new proposal titled "' . $proposal->judul . '"';
+
+        Mail::to('slobe@gmail.com')->send(new TestMail($subject, $body));
+    }
+
+
+    public function cek_progress(){
+    
         $proposals = ProposalOrmawa::where('created_by', Auth::id())
         ->orderBy('updated_at', 'desc') 
         ->get();
