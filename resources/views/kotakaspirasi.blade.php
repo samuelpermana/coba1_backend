@@ -12,9 +12,7 @@
     <title>SENAT FH UNDIP</title>
   </head>
 
-  <section id="contact">
-    <h2>KOTAK ASPIRASI</h2>
-    <form action="{{ route("aspirasi.store") }}" method="POST">
+  <body>
 
 
       <label for="name">Nama:</label>
