@@ -16,7 +16,7 @@
             </a>
           </div>
         </div>
-        <div class="item"  style="background-image: url(/img/KOMISI3.jpg);">
+        <div class="item"  style="background-image: url(img/KOMISI3-COBA.png);">
           <div class="content">
             <div class="name">KOMISI III</div>
             <div class="des">Komisi III adalah komisi yang menangui terkait Bidang Hukum dan Hubungan Publik</div>
@@ -109,7 +109,7 @@
           <div class="content1">
             <h2>Muhammad Habib Zaid El Hakim</h2>
             <p>
-              Ketua Komisi</br>FH UNDIP 2022
+              Ketua Komisi II</br>FH UNDIP 2022
             </p>
           </div>
       </div>

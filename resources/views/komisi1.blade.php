@@ -111,7 +111,7 @@
           <div class="content1">
             <h2>Muhammad Gibran Widiyanto</h2>
             <p>
-              Ketua Senator</br>FH UNDIP 2022
+              Ketua Komisi I</br>FH UNDIP 2022
             </p>
           </div>
       </div>
