@@ -396,7 +396,7 @@ footer .column > a:hover {
     left: 0;
     width: 100%;
     background-color: var(--container-color);
-    box-shadow: 0 1px 0 rgba(22, 8, 43, 0.1);
+
     padding: 0 1rem;
     z-index: -2rem;
     margin-top: 2rem;
