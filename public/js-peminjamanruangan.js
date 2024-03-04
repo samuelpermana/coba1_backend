@@ -2,9 +2,9 @@
 Responsive HTML Table With Pure CSS - Web Design/UI Design
 
 Code written by:
-👨🏻‍⚕️ @Coding Design (Jeet Saru)
+👨🏻‍⚕ @Coding Design (Jeet Saru)
 
-> You can do whatever you want with the code. However if you love my content, you can **SUBSCRIBED** my YouTube Channel.
+> You can do whatever you want with the code. However if you love my content, you can *SUBSCRIBED* my YouTube Channel.
 
 🌎link: www.youtube.com/codingdesign 
 */

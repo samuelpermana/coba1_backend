@@ -627,6 +627,7 @@ section .header {
     border-radius: .5rem;
     overflow: hidden;
     text-align: center;
+  
     opacity: 0;
     transform: scale(.8);
     transform-origin: top right;

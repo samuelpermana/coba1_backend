@@ -1,11 +1,12 @@
 @extends("layouts.layout")
 @section("content")
-<head>
+
+  <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.5.0/remixicon.min.css">
-    <link rel="stylesheet" href="styletransparansi.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.5.0/remixicon.min.css" rel="stylesheet">
+    <link href="styletransparansi.css" rel="stylesheet">
 
     <link href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.5.0/remixicon.min.css" rel="stylesheet">
     <link href="stylepeminjamanruangan.css" rel="stylesheet">
@@ -34,46 +35,44 @@
           </div>
         </section>
         <section class="table__body">
-            <table>
-                <thead>
-                    <tr>
-                        <th> No <span class="icon-arrow">&UpArrow;</span></th>
-                        <th> Digunakan Oleh <span class="icon-arrow">&UpArrow;</span></th>
-                        <th> Ruangan <span class="icon-arrow">&UpArrow;</span></th>
-                        <th> Tanggal <span class="icon-arrow">&UpArrow;</span></th>
-                        <th> Jam Mulai <span class="icon-arrow">&UpArrow;</span></th>
-                        <th> Jam Selesai <span class="icon-arrow">&UpArrow;</span></th>
-                    </tr>
-                </thead>
-                <tbody>
-                    @foreach($roomSchedule as $index => $schedule)
-                    <tr>
-                        <td>{{ $index + 1 }}</td>
-                        <td>{{ $schedule->booked_by }}</td>
-                        <td>{{ $schedule->room->name }}</td>
-                        <td>{{ \Carbon\Carbon::parse($schedule->date)->format('d M, Y') }}</td>
-                        <td>
-                            <p class="status delivered">{{ $schedule->start_time }}</p>
-                        </td>
-                        <td>
-                            <p class="status delivered">{{ $schedule->end_time }}</p>
-                        </td>
-                    </tr>
-                    @endforeach
-                </tbody>
-            </table>
-            
+          <table>
+            <thead>
+              <tr>
+                <th> No <span class="icon-arrow">&UpArrow;</span></th>
+                <th> Digunakan Oleh <span class="icon-arrow">&UpArrow;</span></th>
+                <th> Ruangan <span class="icon-arrow">&UpArrow;</span></th>
+                <th> Tanggal <span class="icon-arrow">&UpArrow;</span></th>
+                <th> Jam Mulai <span class="icon-arrow">&UpArrow;</span></th>
+                <th> Jam Selesai <span class="icon-arrow">&UpArrow;</span></th>
+              </tr>
+            </thead>
+            <tbody>
+              @foreach ($roomSchedule as $index => $schedule)
+                <tr>
+                  <td>{{ $index + 1 }}</td>
+                  <td>{{ $schedule->booked_by }}</td>
+                  <td>{{ $schedule->room->name }}</td>
+                  <td>{{ \Carbon\Carbon::parse($schedule->date)->format("d M, Y") }}</td>
+                  <td>
+                    <p class="status delivered">{{ $schedule->start_time }}</p>
+                  </td>
+                  <td>
+                    <p class="status delivered">{{ $schedule->end_time }}</p>
+                  </td>
+                </tr>
+              @endforeach
+            </tbody>
+          </table>
+
         </section>
       </main>
       <section class="container">
         <h2 class="header">TAMPILAN EXCEL</h2>
         <p class="sub-header">Berisikan tentang data ruangan yang meminjam tempat di FH dalam bentuk exel</p>
         <main class="table4" id="customers_table">
-          <a href="https://search.yahoo.com/search?fr=mcafee&type=E211US885G0&p=link+exel">Link</a>
+          <a href="https://search.yahoo.com/search?fr=mcafee&type=E211US885G0&p=link+exel">https://search.yahoo.com/search?fr=mcafee&type=E211US885G0&p=link+exel</a>
         </main>
       </section>
-      </section>
-      </section>
 
-    <script src="js-peminjamanruangan.js"></script>
-  @endsection
+      <script src="js-peminjamanruangan.js"></script>
+    @endsection

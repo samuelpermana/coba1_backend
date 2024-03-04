@@ -190,6 +190,14 @@ section .headerJD {
     width: 80px;
     margin: 0;
 }
+
+.belum-ada {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
 .features-JD {
     display: grid;
     grid-template-columns: repeat(3, 1fr); /* 4 kolom */

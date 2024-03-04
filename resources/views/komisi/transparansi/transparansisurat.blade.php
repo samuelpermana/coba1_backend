@@ -5,8 +5,8 @@
         <h2 class="header">Persetujuan Proposal dan LPPK</h2>
         <p class="sub-header">Berisikan tentang data Surat yang sudah diajukan kepada senat </p>
         <a href="{{ route(auth()->user()->role->role_slug . '.proposal.belum-diperiksa') }}"><button type="button" class="trans">Belum diperiksa</button></a>
-        <a href="{{ route(auth()->user()->role->role_slug . '.proposal.direvisi') }}"><button type="button" class="trans">Proposal di revisi</button></a>
-        <a href="{{ route(auth()->user()->role->role_slug . '.proposal.disetujui') }}"><button type="button" class="trans">Proposal di setujui</button></a>
+        <a href="{{ route(auth()->user()->role->role_slug . '.proposal.direvisi') }}"><button type="button" class="trans">Proposal direvisi</button></a>
+        <a href="{{ route(auth()->user()->role->role_slug . '.proposal.disetujui') }}"><button type="button" class="trans">Proposal disetujui</button></a>
         <a href="{{ route(auth()->user()->role->role_slug . '.proposal.ditolak') }}"><button type="button" class="trans">Proposal ditolak</button></a>
 
     <main class="table" id="customers_table">
