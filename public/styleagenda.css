@@ -157,7 +157,7 @@ nav {
 
 
 .btn:hover {
-  background-color: #cfb53b;
+  
 }
 
 .container {
@@ -546,7 +546,7 @@ nav {
     position: relative;
   }
   
-  .export__file .export__file-btn {
+  .export_file .export_file-btn {
     display: inline-block;
     width: 2rem;
     height: 2rem;
@@ -555,7 +555,7 @@ nav {
     transition: .2s ease-in-out;
   }
   
-  .export__file .export__file-btn:hover { 
+  .export_file .export_file-btn:hover { 
     background-color: #fff;
     transform: scale(1.15);
     cursor: pointer;
@@ -565,7 +565,7 @@ nav {
     display: none;
   }
   
-  .export__file .export__file-options {
+  .export_file .export_file-options {
     position: absolute;
     right: 0;
     
@@ -583,13 +583,13 @@ nav {
     transition: .2s;
   }
   
-  .export__file input:checked + .export__file-options {
+  .export_file input:checked + .export_file-options {
     opacity: 1;
     transform: scale(1);
     z-index: 100;
   }
   
-  .export__file .export__file-options label{
+  .export_file .export_file-options label{
     display: block;
     width: 100%;
     padding: .6rem 0;
@@ -602,18 +602,18 @@ nav {
     transition: .2s ease-in-out;
   }
   
-  .export__file .export__file-options label:first-of-type{
+  .export_file .export_file-options label:first-of-type{
     padding: 1rem 0;
     background-color: #86e49d !important;
   }
   
-  .export__file .export__file-options label:hover{
+  .export_file .export_file-options label:hover{
     transform: scale(1.05);
     background-color: #fff;
     cursor: pointer;
   }
   
-  .export__file .export__file-options img{
+  .export_file .export_file-options img{
     width: 2rem;
     height: auto;
   }
@@ -774,10 +774,10 @@ label {
     border-bottom: 2px solid #aeaaaa;
     height: 100%;
     color: rgb(201, 193, 193);
-    border: 5px solid #27272a;
+    border: 5px solid #cbb989;
     border-radius: 15px;
     transition: all 0.3s ease;
-    background-color: #27272a;
+    background-color: #cbb989;
     width: 50%;
     margin: auto
 }
@@ -789,6 +789,7 @@ label {
 .form-control-file-revisi{
   margin-bottom: 20px;
   width: 100%;
+  color: #18181b;
 }
 
 .form-control-revisi{
@@ -798,7 +799,7 @@ label {
 }
 
 .header-revisi{
-  color: #b5afaf;
+  color: #18181b;
   display: flex;
   justify-content: center;
   align-items: center;
