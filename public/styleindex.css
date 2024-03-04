@@ -1000,6 +1000,7 @@ footer .column > a:hover {
   background-color: #cbb989; /* Ubah warna latar belakang sesuai keinginan Anda */
   padding: 20px; /* Berikan padding agar konten kalender tidak terlalu dekat dengan tepi */
   border-radius: 20px;
+  margin-top: -5rem;
 }
 
 /* Atur tata letak tombol kalender */
@@ -1043,7 +1044,7 @@ footer .column > a:hover {
 
 /* Atur tampilan hari-hari pada saat dihover */
 .fc-day:hover {
-  background-color: #800000; /* Warna latar belakang saat dihover */
+  background-color: #d4af37; /* Warna latar belakang saat dihover */
   opacity: 0.5;
   cursor: pointer; /* Ubah kursor saat dihover */
 }
@@ -1060,6 +1061,25 @@ footer .column > a:hover {
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.fc-h-event .fc-event-title-container {
+    flex-grow: 1;
+    flex-shrink: 1;
+    min-width: 0;
+    padding-top: 5px;
+    border-radius: 20px;
+}
+.fc-h-event .fc-event-title {
+    display: inline-block;
+    left: 0;
+    max-width: 100%;
+    overflow: hidden;
+    right: 0;
+    vertical-align: top;
+    font-family: "Poppins", sans-serif;
+    font-size: 18px;
+    margin-left: 1rem;
 }
 
 @media (width < 900px) {

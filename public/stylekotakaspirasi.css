@@ -299,13 +299,12 @@ footer .column > a:hover {
     position: relative;
 }
 /*========== HEADER ==========*/
-.header {
+.header4 {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     background-color: var(--container-color);
-    box-shadow: 0 1px 0 rgba(22, 8, 43, 0.1);
     padding: 0 1rem;
     z-index: -2rem;
     margin-top: 2rem;
@@ -493,14 +492,20 @@ footer .column > a:hover {
         grid-template-columns: repeat(2, 1fr);
     }
     footer {
-        grid-template-columns: 1fr 200px;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        gap: 1rem;
+        padding: 1rem;
     }
-    footer {
-        z-index: -1;
+
+    footer .column {
+        text-align: center;
+        margin-bottom: 2rem;
     }
 }
 
 @media (width < 900px) {
+
     .header__container {
         display: flex;
         align-items: center;
@@ -540,6 +545,7 @@ footer .column > a:hover {
     footer {
         z-index: -1;
     }
+    
 }
 
 @media (width < 600px) {

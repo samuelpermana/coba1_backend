@@ -52,13 +52,7 @@ body {
 }
 
 .container button {
-    background: rgb(2, 0, 36);
-    background: linear-gradient(
-        135deg,
-        rgba(2, 0, 36, 1) 0%,
-        rgba(207, 181, 59, 1) 0%,
-        rgba(148, 27, 63, 1) 90%
-    );
+    background-color: #D4AF37;
     color: #fff;
     font-size: 12px;
     padding: 10px 45px;
@@ -77,13 +71,15 @@ body {
 }
 
 .container form {
-    background-color: #27272a;
+    background: rgb(128,0,0);
+    background: linear-gradient(90deg, rgba(96,0,0,1) 0%, rgba(128,0,0,1) 55%);
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
     padding: 0 40px;
     height: 100%;
+    
 }
 
 .container input {
@@ -166,8 +162,10 @@ body {
     height: 100%;
     overflow: hidden;
     transition: all 0.6s ease-in-out;
-    border-radius: 150px 0 0 100px;
+    border-radius: 0px 0 0 0px;
     z-index: 1000;
+    background: rgb(128,0,0);
+    background: linear-gradient(90deg, rgba(128,0,0,1) 55%, rgba(96,0,0,1) 100%);
 }
 
 .container.active .toggle-container {
@@ -177,13 +175,7 @@ body {
 
 .toggle {
     height: 100%;
-    background: rgb(2, 0, 36);
-    background: linear-gradient(
-        135deg,
-        rgba(2, 0, 36, 1) 0%,
-        rgba(207, 181, 59, 1) 0%,
-        rgba(148, 27, 63, 1) 90%
-    );
+    
     color: #fff;
     position: relative;
     left: -100%;
@@ -221,6 +213,7 @@ body {
 
 .toggle-right {
     right: 0;
+    
     
 }
 

@@ -822,6 +822,7 @@ footer .column > a:hover {
     font-weight: bold;
     opacity: 0;
     animation: animate 1s ease-in-out 1 forwards;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5), /* Bayangan utama */ 2px 2px 6px rgba(0, 0, 0, 0.5), /* Bayangan yang sedikit lebih tebal */ 2px 2px 8px rgba(0, 0, 0, 0.5);
 }
   
 .content .des {
@@ -829,6 +830,7 @@ footer .column > a:hover {
     margin-bottom: 20px;
     opacity: 0;
     animation: animate 1s ease-in-out 0.3s 1 forwards;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5), /* Bayangan utama */ 2px 2px 6px rgba(0, 0, 0, 0.5), /* Bayangan yang sedikit lebih tebal */ 2px 2px 8px rgba(0, 0, 0, 0.5);
 }
   
 .content button {
@@ -861,7 +863,7 @@ footer .column > a:hover {
   
 .modern-card {
   color: #18181b;
-    width: 30%;
+    width: 35%;
     background: #cbb989;
     border-radius: 8px;
     margin: 15px 0;
@@ -870,11 +872,6 @@ footer .column > a:hover {
     border-color: #fff;
 }
   
-.modern-card:hover {
-    transform: scale(1.05);
-    background-color: #323232;
-    border-color: #fff;
-}
   
 .content {
     padding: 15px;
@@ -882,8 +879,10 @@ footer .column > a:hover {
   
 h4 {
     color: #fff;
-    font-size: 1.2em;
+    font-size: 1.05em;
     text-align: justify;
+    letter-spacing: 0.3px;
+    margin: 0;
 }
 
 .accordion-k{
@@ -1058,8 +1057,27 @@ h4 {
   transform: translateY(-180px);
 }
 
+.content1{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
 .content1 h2 {
-  color: #CFB53B;
+line-height: 30px;
+color: #CFB53B;
+width: 250px;
+}
+
+.content1 p{
+  margin-top: 10px;
+}
+
+.container-f{
+  max-width: 1200px;
+  margin: auto;
+  padding: 2rem 2rem;   
 }
 
 .container-f{
