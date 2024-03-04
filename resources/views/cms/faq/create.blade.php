@@ -21,9 +21,9 @@
       <textarea class="form-control" id="question" name="question" type="text"></textarea>
     </div>
     <div class="form-group">
-      <label for="answer">Answer</label>
+      <label class="answer" for="answer">Answer</label>
       <textarea class="form-control" id="answer" name="answer" rows="3"></textarea>
     </div>
-    <button class="btn btn-primary" type="submit">Submit</button>
+    <br><button class="btn btn-primary" type="submit">Submit</button>
   </form>
 @endsection

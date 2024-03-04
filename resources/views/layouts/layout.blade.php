@@ -36,67 +36,61 @@
     <div class="nav2" id="navbar">
       <nav class="nav2__container">
         <div>
-            <a href="#" class="nav2__link nav2__logo">
-              <img src="/img/coba1.png" alt="Logo">
-                
-            </a>
+          <a class="nav2__link nav2__logo" href="#">
+            <img src="/img/coba1.png" alt="Logo">
 
-            <div class="nav2__list">
-                <div class="nav2__items">
-                    
+          </a>
 
-                    <a href="{{ url('/') }}" class="nav2__link active">
-                        <i class='bx bx-home nav2__icon' ></i>
-                        <span class="nav2__name">Home</span>
-                    </a>
-                    
-                    <div class="nav2__dropdown">
-                        <a href="{{ url('/kotakaspirasi') }}" class="nav2__link">
-                            <i class='bx bx-user nav2__icon' ></i>
-                            <span class="nav2__name">Kotak Aspirasi</span>
-                            
-                        </a>
+          <div class="nav2__list">
+            <div class="nav2__items">
 
-                        
-                    </div>
-                    <div class="nav2__items">
-                    <a href="{{ url('/faq') }}" class="nav2__link">
-                        <i class='bx bx-message-rounded nav2__icon' ></i>
-                        <span class="nav2__name">FAQ</span>
-                    </a>
-                </div>
+              <a class="nav2__link active" href="{{ url("/") }}">
+                <i class='bx bx-home nav2__icon'></i>
+                <span class="nav2__name">Home</span>
+              </a>
 
-                
-                   
+              <div class="nav2__dropdown">
+                <a class="nav2__link" href="{{ url("/kotakaspirasi") }}">
+                  <i class='bx bx-user nav2__icon'></i>
+                  <span class="nav2__name">Kotak Aspirasi</span>
 
-                    <div class="nav2__dropdown">
-                        <a href="{{ url('/bankaspirasi') }}" class="nav2__link">
-                            <i class='bx bx-file nav2__icon' ></i>
-                            <span class="nav2__name">Bank Aspirasi</span>
-                            
-                        </a>
+                </a>
 
+              </div>
+              <div class="nav2__items">
+                <a class="nav2__link" href="{{ url("/faq") }}">
+                  <i class='bx bx-message-rounded nav2__icon'></i>
+                  <span class="nav2__name">FAQ</span>
+                </a>
+              </div>
 
-                    </div>
+              <div class="nav2__dropdown">
+                <a class="nav2__link" href="{{ url("/bankaspirasi") }}">
+                  <i class='bx bx-file nav2__icon'></i>
+                  <span class="nav2__name">Bank Aspirasi</span>
 
-                    <a href="{{ url('/selayangpandang') }}" class="nav2__link">
-                        <i class='bx bx bx-user nav2__icon' ></i>
-                        <span class="nav2__name">Selayang Pandang</span>
-                    </a>
-                    <a href="{{ url('/JDIH') }}" class="nav2__link">
-                        <i class='bx bx-file nav2__icon' ></i>
-                        <span class="nav2__name">JDIH</span>
-                    </a>
-                    <a href="{{ url('/peminjamanruangan') }}" class="nav2__link">
-                      <i class='bx bx-time nav2__icon' ></i>
-                      <span class="nav2__name">Peminjaman Ruangan</span>
-                  </a>
-                  
-                </div>
+                </a>
+
+              </div>
+
+              <a class="nav2__link" href="{{ url("/selayangpandang") }}">
+                <i class='bx bx bx-user nav2__icon'></i>
+                <span class="nav2__name">Selayang Pandang</span>
+              </a>
+              <a class="nav2__link" href="{{ url("/JDIH") }}">
+                <i class='bx bx-file nav2__icon'></i>
+                <span class="nav2__name">JDIH</span>
+              </a>
+              <a class="nav2__link" href="{{ url("/peminjamanruangan") }}">
+                <i class='bx bx-time nav2__icon'></i>
+                <span class="nav2__name">Peminjaman Ruangan</span>
+              </a>
+
             </div>
           </div>
         </div>
-      </nav>
+    </div>
+    </nav>
     </div>
 
     <nav>
@@ -125,10 +119,9 @@
           </div>
         </li>
         <li class="link" id="link6"><a href="{{ url("/peminjamanruangan") }}">Peminjaman Ruangan</a></li>
-        <!-- <li class="link" id="link4"><a href="{{ url("/transparansisurat") }}">Transparansi surat</a></li> -->
       </ul>
 
-      <a href="login"><button class="btn btn-ajukansurat" type="button">Ajukan Surat</button></a>
+      <a href="{{ url("/login") }}"><button class="btn btn-ajukansurat" type="button">Ajukan Surat</button></a>
     </nav>
 
     @yield("content")
@@ -141,7 +134,7 @@
           <img src="/img/coba1.png">
         </div>
         <p>SENAT MAHASISWA FAKULTAS HUKUM UNDIP</p>
-        <p class="address"> 
+        <p class="address">
           Jl. Prof. Soedarto, Tembalang, Kec. Tembalang, Kota Semarang, Jawa Tengah 50275
         </p>
         <div class="socials">
@@ -150,7 +143,7 @@
           <a href="https://lin.ee/VJdJQ9z"><i class="ri-line-line"></i></a>
         </div>
       </div>
-       
+
       <div class="column">
         <h4>Komisi</h4>
         <a href="{{ url("/tentang-komisi-i") }}">Komisi I</a>
@@ -168,9 +161,9 @@
       <div class="column">
         <h4>JDIH</h4>
         <a href="{{ route("jdih.jenis", ["id" => 1]) }}">Peraturan Mahasiswa</a>
+        <a href="{{ route("jdih.jenis", ["id" => 2]) }}">Standard Operating Procedure</a>
         <a href="{{ route("jdih.jenis", ["id" => 3]) }}">Peraturan Senat Mahasiswa</a>
         <a href="{{ route("jdih.jenis", ["id" => 4]) }}">Keputusan</a>
-        <a href="{{ route("jdih.jenis", ["id" => 2]) }}">Standard Operating Procedure</a>
         <a href="{{ route("jdih.jenis", ["id" => 5]) }}">Rancangan Peraturan</a>
       </div>
     </footer>
@@ -187,8 +180,9 @@
 
       navLinks.forEach(function(li) {
         var link = li.querySelector('a');
+        // Check if the link exists and its href attribute matches the current location
         if (link && link.href === currentLocation) {
-          li.classList.add('active');
+          li.classList.add('activated');
         }
       });
     });

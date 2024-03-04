@@ -2,14 +2,14 @@
 /* ================= INI STYLE DROPDOWN MENU =================*/
 /* Style the dropdown button */
 .dropbtn {
-  font-size: 16px;  
-  border: none;
-  outline: none;
-  color: #18181b;
-  padding: 14px 16px;
-  background-color: inherit;
-  font-family: inherit;
-  margin: 0;
+    font-size: 16px;
+    border: none;
+    outline: none;
+    color: #18181b;
+    padding: 14px 16px;
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0;
 }
 
 /* Style the dropdown content */
@@ -73,8 +73,8 @@ a {
 }
 
 body {
-  font-family: "Poppins", sans-serif;
-  background-color: #fff6ea;
+    font-family: "Poppins", sans-serif;
+    background-color: #fff6ea;
 }
 
 nav {
@@ -106,25 +106,11 @@ nav {
     align-items: center; /* Mengatur vertikal ke tengah */
 }
 .nav-links {
-  list-style: none;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 2rem;
-}
-
-.btn {
-  padding: 1rem 2rem;
-  font-size: 1rem;
-  color: #fff;
-  background-color: #800000;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-
-.btn:hover {
-    background-color: #cfb53b;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
 }
 
 .container {
@@ -169,11 +155,11 @@ header .content h1 span {
 }
 
 header .content p {
-  margin-bottom: 3rem;
-  color: #18181b;
-  text-align: justify;
-  font-family: "Poppins", sans-serif;
-  font-size: 16px;
+    margin-bottom: 3rem;
+    color: #18181b;
+    text-align: justify;
+    font-family: "Poppins", sans-serif;
+    font-size: 16px;
 }
 
 header .image {
@@ -238,14 +224,14 @@ section .header {
 }
 
 .features .card {
-  display: flex;
-  flex: 1;
-  background-color: #cbb989;
-  padding: 1rem;
-  border: 2px solid transparent;
-  border-radius: 15px;
-  transition: all 0.3s ease;
-  margin: 0 auto;
+    display: flex;
+    flex: 1;
+    background-color: #cbb989;
+    padding: 1rem;
+    border: 2px solid transparent;
+    border-radius: 15px;
+    transition: all 0.3s ease;
+    margin: 0 auto;
 }
 
 .features .card .blue {
@@ -257,15 +243,15 @@ section .header {
 }
 
 .features1 .card {
-  width: inherit;
-  display: flex;
-  flex: 1;
-  background-color: #cbb989;
-  padding: 1rem;
-  border: 2px solid transparent;
-  border-radius: 15px;
-  transition: all 0.3s ease;
-  justify-self: center;
+    width: inherit;
+    display: flex;
+    flex: 1;
+    background-color: #cbb989;
+    padding: 1rem;
+    border: 2px solid transparent;
+    border-radius: 15px;
+    transition: all 0.3s ease;
+    justify-self: center;
 }
 
 .features .card .content,
@@ -298,20 +284,20 @@ section .header {
 
 .features .card h4,
 .features1 .card h4 {
-  margin-bottom: 0.5rem;
-  color: #18181b;
-  font-size: 1.2rem;
-  font-weight: 600;
-  font-family: "Poppins", sans-serif;
+    margin-bottom: 0.5rem;
+    color: #18181b;
+    font-size: 1.2rem;
+    font-weight: 600;
+    font-family: "Poppins", sans-serif;
 }
 
 .features .card p,
 .features1 .card p {
-  color: #18181b;
-  margin-bottom: 1rem;
-  font-size: 0.9rem;
-  text-align: justify;
-  font-family: "Poppins", sans-serif;
+    color: #18181b;
+    margin-bottom: 1rem;
+    font-size: 0.9rem;
+    text-align: justify;
+    font-family: "Poppins", sans-serif;
 }
 
 .features1 .card p {
@@ -428,8 +414,8 @@ footer .column .logo {
 }
 
 footer .column p {
-  color: #18181b;
-  margin-bottom: 2rem;
+    color: #18181b;
+    margin-bottom: 2rem;
 }
 
 footer .column .socials {
@@ -439,12 +425,12 @@ footer .column .socials {
 }
 
 footer .column .socials a {
-  color: #18181b;
-  border: 1px solid #18181b;
-  padding: 5px 10px;
-  font-size: 1.25rem;
-  border-radius: 100%;
-  transition: all 0.3s ease;
+    color: #18181b;
+    border: 1px solid #18181b;
+    padding: 5px 10px;
+    font-size: 1.25rem;
+    border-radius: 100%;
+    transition: all 0.3s ease;
 }
 
 footer .column .socials a:hover {
@@ -454,17 +440,17 @@ footer .column .socials a:hover {
 }
 
 footer .column h4 {
-  color: #18181b;
-  margin-bottom: 2rem;
-  font-size: 1.2rem;
-  font-weight: 500;
+    color: #18181b;
+    margin-bottom: 2rem;
+    font-size: 1.2rem;
+    font-weight: 500;
 }
 
 footer .column > a {
-  display: block;
-  color: #18181b;
-  margin-bottom: 1rem;
-  transition: all 0.3s ease;
+    display: block;
+    color: #18181b;
+    margin-bottom: 1rem;
+    transition: all 0.3s ease;
 }
 
 footer .column > a:hover {
@@ -472,12 +458,12 @@ footer .column > a:hover {
 }
 
 .copyright {
-  max-width: 1200px;
-  margin: auto;
-  padding: 1rem;
-  color: #18181b;
-  font-size: 0.8rem;
-  text-align: center;
+    max-width: 1200px;
+    margin: auto;
+    padding: 1rem;
+    color: #18181b;
+    font-size: 0.8rem;
+    text-align: center;
 }
 
 #contact {
@@ -637,23 +623,23 @@ section .header1 {
 }
 
 .sub1-header {
-  margin-bottom: -3rem;
-  color: #18181b;
-  text-align: justify;
-  font-family: "Poppins", sans-serif;
-  font-size: 16px;
-  float: right;
+    margin-bottom: -3rem;
+    color: #18181b;
+    text-align: justify;
+    font-family: "Poppins", sans-serif;
+    font-size: 16px;
+    float: right;
 }
 
 .pricing1 .card1 {
-  width: 100%;
-  padding: 3rem 2rem;
-  background-color: #cbb989;
-  display: flex;
-  flex-direction: column;
-  border: 2px solid transparent;
-  border-radius: 15px;
-  transition: all 0.3s ease;
+    width: 100%;
+    padding: 3rem 2rem;
+    background-color: #cbb989;
+    display: flex;
+    flex-direction: column;
+    border: 2px solid transparent;
+    border-radius: 15px;
+    transition: all 0.3s ease;
 }
 
 .pricing1 .card1 .content {
@@ -662,25 +648,25 @@ section .header1 {
 }
 
 .pricing1 .card1 h4 {
-  margin-bottom: 1rem;
-  color: #18181b;
-  font-size: 1.2rem;
-  font-weight: 500;
-  text-align: center;
-  margin-top: 1rem;
-  font-family: "Poppins", sans-serif;
+    margin-bottom: 1rem;
+    color: #18181b;
+    font-size: 1.2rem;
+    font-weight: 500;
+    text-align: center;
+    margin-top: 1rem;
+    font-family: "Poppins", sans-serif;
 }
 
 .pricing1 .card1 h5 {
-  margin-bottom: 1rem;
-  color: #18181b;
-  font-size: 1rem;
-  font-weight: 500;
-  text-align: justify; /* Mengatur teks menjadi rata kanan dan kiri */
-  text-justify: distribute-all-lines; /* Pilihan tambahan untuk penyebaran yang lebih merata */
-  line-height: 1.5; /* Mengatur jarak antar baris agar lebih legible */
-  letter-spacing: 0.5px;
-  font-family: "Poppins", sans-serif;
+    margin-bottom: 1rem;
+    color: #18181b;
+    font-size: 1rem;
+    font-weight: 500;
+    text-align: justify; /* Mengatur teks menjadi rata kanan dan kiri */
+    text-justify: distribute-all-lines; /* Pilihan tambahan untuk penyebaran yang lebih merata */
+    line-height: 1.5; /* Mengatur jarak antar baris agar lebih legible */
+    letter-spacing: 0.5px;
+    font-family: "Poppins", sans-serif;
 }
 
 .pricing1 .card1 h3 {
@@ -730,16 +716,24 @@ section .header1 {
 }
 
 .pricing1 .card2 h4 {
-  margin-bottom: 1rem;
-  color: #18181b;
-  font-size: 1.2rem;
-  font-weight: 500;
-  margin-top: 1rem;
-  text-align: center;
-  font-family: "Poppins", sans-serif;
+    margin-bottom: 1rem;
+    color: #18181b;
+    font-size: 1.2rem;
+    font-weight: 500;
+    margin-top: 1rem;
+    text-align: center;
+    font-family: "Poppins", sans-serif;
 }
 
 .pricing1 .card2 h5 {
+/*     margin-bottom: 1rem;
+    color: #18181b;
+    font-size: 1rem;
+    font-weight: 500;
+    text-align: justify; 
+    font-family: "Poppins", sans-serif;
+    line-height: 1.5;
+    letter-spacing: 0.5px; */
   margin-bottom: 1rem;
   color: #18181b;
   font-size: 1rem;
@@ -750,6 +744,7 @@ section .header1 {
   letter-spacing: 0.5px;
   font-family: "Poppins", sans-serif;
   word-spacing: 1px;
+
 }
 
 .pricing1 .card2 h3 {
@@ -812,13 +807,13 @@ section .header3 {
 }
 
 .pricing1 .card {
-  padding: 3rem 2rem;
-  background-color: #cbb989;
-  display: flex;
-  flex-direction: column;
-  border: 2px solid transparent;
-  border-radius: 15px;
-  transition: all 0.3s ease;
+    padding: 3rem 2rem;
+    background-color: #cbb989;
+    display: flex;
+    flex-direction: column;
+    border: 2px solid transparent;
+    border-radius: 15px;
+    transition: all 0.3s ease;
 }
 
 .pricing1 .card .content {
@@ -827,14 +822,13 @@ section .header3 {
 }
 
 .pricing1 .card h4 {
-  margin-bottom: 1rem;
-  color: #18181b;
-  font-size: 1.2rem;
-  font-weight: 500;
-  margin-top: 1rem;
-  text-align: center;
-  font-family: "Poppins", sans-serif;
-
+    margin-bottom: 1rem;
+    color: #18181b;
+    font-size: 1.2rem;
+    font-weight: 500;
+    margin-top: 1rem;
+    text-align: center;
+    font-family: "Poppins", sans-serif;
 }
 
 .pricing1 .card h5 {
@@ -937,7 +931,7 @@ section .header3 {
 
 .j-header {
     color: #cfb53b;
-    margin-top: -2rem; 
+    margin-top: -2rem;
     font-size: 2.5rem;
     font-weight: 700;
     line-height: 4rem;
@@ -1023,10 +1017,9 @@ section .header3 {
     font-weight: bold;
     opacity: 0;
     animation: animate 1s ease-in-out 1 forwards;
-    text-shadow: 
-        2px 2px 4px rgba(0, 0, 0, 0.5), /* Bayangan utama */
-        2px 2px 6px rgba(0, 0, 0, 0.5), /* Bayangan yang sedikit lebih tebal */
-        2px 2px 8px rgba(0, 0, 0, 0.5);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5),
+        /* Bayangan utama */ 2px 2px 6px rgba(0, 0, 0, 0.5),
+        /* Bayangan yang sedikit lebih tebal */ 2px 2px 8px rgba(0, 0, 0, 0.5);
 }
 
 .content .des {
@@ -1035,12 +1028,10 @@ section .header3 {
     opacity: 0;
     animation: animate 1s ease-in-out 0.3s 1 forwards;
     color: #fefefe;
-    text-shadow: 
-        2px 2px 4px rgba(0, 0, 0, 0.5), /* Bayangan utama */
-        2px 2px 6px rgba(0, 0, 0, 0.5), /* Bayangan yang sedikit lebih tebal */
-        2px 2px 8px rgba(0, 0, 0, 0.5);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5),
+        /* Bayangan utama */ 2px 2px 6px rgba(0, 0, 0, 0.5),
+        /* Bayangan yang sedikit lebih tebal */ 2px 2px 8px rgba(0, 0, 0, 0.5);
     text-align: justify;
-    
 }
 
 .content button {
@@ -1083,47 +1074,47 @@ section .header3 {
 }
 
 .card-coba {
-  position: relative;
-  margin-top: 3em;
-  width: 300px;
-  height: 250px;
-  border-radius: 10px;
-  box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.5);
-  transition: 0.3s;
-  padding: 30px 50px;
-  background: #F1DDA8;
-  cursor: pointer;
+    position: relative;
+    margin-top: 3em;
+    width: 300px;
+    height: 250px;
+    border-radius: 10px;
+    box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.5);
+    transition: 0.3s;
+    padding: 30px 50px;
+    background: #f1dda8;
+    cursor: pointer;
 }
 
 .card-coba:hover {
-  height: 400px;
+    height: 400px;
 }
 
 .imgbox {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  transform: translateY(-80px);
-  z-index: 99;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transform: translateY(-80px);
+    z-index: 99;
 }
 
 .img-coba {
-  width: 100%;
-  border-radius: 10px;
-  box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.5);
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.5);
 }
 
 .content1 {
-  padding: 10px 20px;
-  text-align: center;
-  transform: translateY(-450px);
-  opacity: 0;
-  transition: 0.3s;
+    padding: 10px 20px;
+    text-align: center;
+    transform: translateY(-450px);
+    opacity: 0;
+    transition: 0.3s;
 }
 
 .card-coba:hover > .content1 {
-  opacity: 1;
-  transform: translateY(-180px);
+    opacity: 1;
+    transform: translateY(-180px);
 }
 
 .content1{
@@ -1134,25 +1125,27 @@ section .header3 {
 }
 
 .content1 h2 {
+
   color: #CFB53B;
   width: 250px;
 }
 
 .content1 p{
     margin-top: 10px;
+
 }
 
-.container-f{
-  max-width: 1200px;
-  margin: auto;
-  padding: 2rem 2rem;   
+.container-f {
+    max-width: 1200px;
+    margin: auto;
+    padding: 2rem 2rem;
 }
 
 .imgbox img {
-  max-width: 171px;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
+    max-width: 171px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 @keyframes animate {
@@ -1218,9 +1211,9 @@ section .header3 {
         grid-template-columns: 1fr 200px;
     }
     .j-header {
-      font-size: 2rem; /* Mengurangi ukuran font */
-      line-height: 3rem; /* Mengurangi ketinggian baris */
-  }
+        font-size: 2rem; /* Mengurangi ukuran font */
+        line-height: 3rem; /* Mengurangi ketinggian baris */
+    }
 }
 
 @media (width < 600px) {
@@ -1240,9 +1233,9 @@ section .header3 {
         grid-template-columns: 1fr 150px;
     }
     .j-header {
-      font-size: 1.5rem; /* Mengurangi ukuran font lebih jauh */
-      line-height: 2.5rem; /* Mengurangi ketinggian baris lebih jauh */
-  }
+        font-size: 1.5rem; /* Mengurangi ukuran font lebih jauh */
+        line-height: 2.5rem; /* Mengurangi ketinggian baris lebih jauh */
+    }
 }
 
 @media only screen and (max-width: 500px) {
@@ -1257,13 +1250,13 @@ section .header3 {
         text-align: center; /* Center-align header and sub-header text for smaller screens */
     }
 
-  .pricing1 .card {
-    width: 100%; /* Set width to 100% for responsiveness */
-  }
-  .j-header {
-    font-size: 1.5rem; /* Mengurangi ukuran font lebih jauh */
-    line-height: 2.5rem; /* Mengurangi ketinggian baris lebih jauh */
-  }
+    .pricing1 .card {
+        width: 100%; /* Set width to 100% for responsiveness */
+    }
+    .j-header {
+        font-size: 1.5rem; /* Mengurangi ukuran font lebih jauh */
+        line-height: 2.5rem; /* Mengurangi ketinggian baris lebih jauh */
+    }
 }
 
 @media (width < 1200px) {
