@@ -12,7 +12,9 @@
     <title>SENAT FH UNDIP</title>
   </head>
 
-  <body>
+  <section id="contact">
+    <h2>KOTAK ASPIRASI</h2>
+    <form action="{{ route("aspirasi.store") }}" method="POST">
 
 
       <label for="name">Nama:</label>
@@ -22,7 +24,7 @@
       <input id="email" name="email" type="email" required>
 
       <label for="angkatan">Angkatan:</label>
-      <input id="angkatan" name="angkatan" type="text" required>
+      <input id="angkatan" name="angkatan" type="text" pattern="[0-9]+" title="Masukkan angka" required>
 
       <label for="id_line">ID Line:</label>
       <input id="id_line" name="id_line" type="text" required>
