@@ -5,7 +5,7 @@
   <section class="container">
     <h2 class="header">FAQ</h2>
     <p class="sub-header">
-      Jawaban dari pertanyaan yang sering ditanyakan.
+      Berisikan tentang pertanyaan yang sering diajukan beserta jawaban secara umum.
     </p>
     @if ($faqs->isEmpty())
       <p class="sub-header">Belum ada data.</p>

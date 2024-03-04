@@ -16,6 +16,10 @@ button {
     font-size: 1.3rem;
 }
 
+.answer {
+    margin-right: 27px;
+}
+
 .btn {
     background-color: #d1e3e2;
     padding: 4px 12px;
@@ -32,6 +36,6 @@ button {
 }
 
 .form-control {
-  padding: 5px;
-  font-size: 1.2rem;
+    padding: 5px;
+    font-size: 1.2rem;
 }

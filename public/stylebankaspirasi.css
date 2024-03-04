@@ -112,20 +112,6 @@ nav {
     gap: 2rem;
 }
 
-.btn {
-    padding: 1rem 2rem;
-    font-size: 1rem;
-    color: #fff;
-    background: #800000;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-}
-
-.btn:hover {
-    background-color: #cfb53b;
-}
-
 .container {
     max-width: 1200px;
     margin: auto;
@@ -210,7 +196,7 @@ section .header-BA {
 .panel {
     color: #18181b;
     border-radius: 15px;
-    background-color: #F1DDA8;
+    background-color: #f1dda8;
     max-height: 0;
     overflow: hidden;
     transition: 0.5s ease-out;
@@ -283,10 +269,10 @@ footer .column > a:hover {
     text-align: center;
 }
 
-.container-f{
+.container-f {
     max-width: 1200px;
     margin: auto;
-    padding: 2rem 2rem;   
+    padding: 2rem 2rem;
 }
 
 @media (width < 900px) {

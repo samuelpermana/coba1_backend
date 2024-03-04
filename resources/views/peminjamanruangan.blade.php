@@ -16,7 +16,7 @@
 
     <section class="container">
       <h2 class="header">PEMINJAMAN RUANGAN</h2>
-      <p class="sub-header">Berisikan tentang data ruangan yang meminjam tempat di FH</p>
+      <p class="sub-header">Berisikan tentang data peminjaman ruangan</p>
 
       <main class="table" id="customers_table">
         <section class="table__header">
@@ -30,7 +30,6 @@
             <div class="export__file-options">
               <label>Export As &nbsp; &#10140;</label>
               <label id="toPDF" for="export-file">PDF <img src="img/pdf.png" alt=""></label>
-              <label id="toEXCEL" for="export-file">EXCEL <img src="img/excel.png" alt=""></label>
             </div>
           </div>
         </section>
@@ -67,11 +66,13 @@
         </section>
       </main>
       <section class="container">
-        <h2 class="header">TAMPILAN EXEL</h2>
+        <h2 class="header">TAMPILAN EXCEL</h2>
         <p class="sub-header">Berisikan tentang data ruangan yang meminjam tempat di FH dalam bentuk exel</p>
         <main class="table4" id="customers_table">
-          <a href="https://search.yahoo.com/search?fr=mcafee&type=E211US885G0&p=link+exel">https://search.yahoo.com/search?fr=mcafee&type=E211US885G0&p=link+exel</a>
+          <a href="https://search.yahoo.com/search?fr=mcafee&type=E211US885G0&p=link+exel">Link</a>
         </main>
+      </section>
+      </section>
       </section>
 
     <script src="js-peminjamanruangan.js"></script>

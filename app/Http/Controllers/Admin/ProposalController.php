@@ -77,10 +77,10 @@ class ProposalController extends Controller
                 'Silakan unduh file proposal di sini: <a href="' . asset('storage/' . $proposal->file_proposal) . '">Download Proposal</a>';
     
         $mailController->sendEmail($to, $subject, $body);
-    
+
         return redirect()->back()->with('success', 'Komisi checked by berhasil diperbarui.');
     }
-    
+
 
     public function adminReject(Request $request, $proposalId)
     {

@@ -73,13 +73,13 @@ body {
 }
 
 nav {
-  width: 100%;
-  margin: 0 auto; /* Menggunakan auto untuk memastikan navbar berada di tengah */
-  padding: 2rem 1rem;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 2rem;
+    width: 1400px;
+    margin: 0 auto; /* Menggunakan auto untuk memastikan navbar berada di tengah */
+    padding: 2rem 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
 }
 
 .nav-logo {
@@ -104,7 +104,7 @@ nav {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 2rem;
+    gap: 3rem;
 }
 
 .link a {
@@ -274,9 +274,8 @@ nav {
     border-radius: 10px;
     cursor: pointer;
     color: rgb(255, 255, 255);
-    background-color: #18181b;
+    background: #18181b;
     transition: 0.3s ease;
-    margin: 0 auto;
 }
 
 .form-submit-btn input:hover {

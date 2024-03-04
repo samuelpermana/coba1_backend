@@ -4,10 +4,10 @@
 
   <section class="container">
     <h2 class="header">Bank Aspirasi</h2>
-    <p class="sub-header">Berisikan tentang keseluruhan Aspirasi beserta jawabannya dari mahasiswa.</p>
+    <p class="sub-header">Berisikan tentang kumpulan aspirasi dari mahasiswa beserta jawaban.</p>
 
     <!-- Sarpras Section -->
-    <h2 class="header-BA">SARPRAS</h2>
+    <h2 class="header-BA">Sarana dan Prasarana</h2>
     <div class="pricing">
       @if ($sarpras->isEmpty())
         <p>Belum ada data untuk kategori SARPRAS.</p>
@@ -27,7 +27,7 @@
     </div>
 
     <!-- Birokrasi Section -->
-    <h2 class="header-BA">BIROKRASI</h2>
+    <h2 class="header-BA">Birokrasi</h2>
     <div class="pricing">
       @if ($birokrasi->isEmpty())
         <p>Belum ada data untuk kategori BIROKRASI.</p>
@@ -47,7 +47,7 @@
     </div>
 
     <!-- Akademik Section -->
-    <h2 class="header-BA">AKADEMIK</h2>
+    <h2 class="header-BA">Akademik</h2>
     <div class="pricing">
       @if ($akademik->isEmpty())
         <p>Belum ada data untuk kategori AKADEMIK.</p>

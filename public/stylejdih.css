@@ -3,157 +3,162 @@
 /* ================= INI STYLE DROPDOWN MENU =================*/
 /* Style the dropdown button */
 .dropbtn {
-  font-size: 16px;  
-  border: none;
-  outline: none;
-  color: #18181b;
-  padding: 14px 16px;
-  background-color: inherit;
-  font-family: inherit;
-  margin: 0;
+    font-size: 16px;
+    border: none;
+    outline: none;
+    color: #18181b;
+    padding: 14px 16px;
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0;
 }
 
 /* Style the dropdown content */
 .dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: rgba(0, 0, 0, 0.3); /* Warna hitam dengan transparansi 30% */
-  min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: 1;
+    display: none;
+    position: absolute;
+    background-color: rgba(
+        0,
+        0,
+        0,
+        0.3
+    ); /* Warna hitam dengan transparansi 30% */
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
 }
 
 /* Show the dropdown menu on hover */
 .dropdown:hover .dropdown-content {
-  display: block;
+    display: block;
 }
 
 /* Style the dropdown links */
 .dropdown-content a {
-  float: none;
-  color: black;
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
-  text-align: left;
+    float: none;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
 }
 
 /* Add a background color to the dropdown links on hover */
 .dropdown-content a:hover {
-  background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.5);
 }
 
 /* Style the dropdown button on hover */
 .dropdown:hover .dropbtn {
-  background-color: #ddd;
-  color: black;
+    background-color: #ddd;
+    color: black;
 }
 
 /* ================= INI STYLE DROPDOWN MENU =================*/
 * {
-  padding: 0;
-  margin: 0;
-  outline: none;
-  border: none;
-  box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    outline: none;
+    border: none;
+    box-sizing: border-box;
 }
 
 img {
-  width: 70%;
-  display: flex;
-  margin-left: 50px;
+    width: 70%;
+    display: flex;
+    margin-left: 50px;
 }
 
 a {
-  text-decoration: none;
+    text-decoration: none;
 }
 
 body {
-  font-family: "Poppins", sans-serif;
-  background-color: #fff6ea;
+    font-family: "Poppins", sans-serif;
+    background-color: #fff6ea;
 }
 
 nav {
-  width: 100%;
-  margin: 0 auto; /* Menggunakan auto untuk memastikan navbar berada di tengah */
-  padding: 2rem 1rem;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 2rem;
+    width: 100%;
+    margin: 0 auto; /* Menggunakan auto untuk memastikan navbar berada di tengah */
+    padding: 2rem 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
 }
 
 .nav-logo {
-  display: inline-flex;
-  align-items: center; /* Mengatur vertikal ke tengah */
+    display: inline-flex;
+    align-items: center; /* Mengatur vertikal ke tengah */
 }
 
 .nav-logo img {
-  max-width: 100px;
+    max-width: 100px;
 }
 
 .nav-title {
-  display: inline-flex;
-  margin-left: 10px;
-  font-size: 1.2rem;
-  color: #cfb53b;
-  font-weight: 600;
-  align-items: center; /* Mengatur vertikal ke tengah */
+    display: inline-flex;
+    margin-left: 10px;
+    font-size: 1.2rem;
+    color: #cfb53b;
+    font-weight: 600;
+    align-items: center; /* Mengatur vertikal ke tengah */
 }
 .nav-links {
-  list-style: none;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 3rem;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
 }
 
 .link a {
-  position: relative;
-  padding-bottom: 0.75rem;
-  color: #18181b;
+    position: relative;
+    padding-bottom: 0.75rem;
+    color: #18181b;
 }
 
 .link a::after {
-  content: "";
-  position: absolute;
-  height: 2px;
-  width: 0;
-  bottom: 0;
-  left: 50%; /* Menengahkan garis bawah */
-  transform: translateX(-50%); /* Menyempurnakan penempatan garis bawah */
-  background-color: #cfb53b;
-  transition: all 0.3s ease;
+    content: "";
+    position: absolute;
+    height: 2px;
+    width: 0;
+    bottom: 0;
+    left: 50%; /* Menengahkan garis bawah */
+    transform: translateX(-50%); /* Menyempurnakan penempatan garis bawah */
+    background-color: #cfb53b;
+    transition: all 0.3s ease;
 }
 
 .link a:hover::after {
-  width: 70%;
+    width: 70%;
 }
 
 .btn {
-  padding: 1rem 2rem;
-  font-size: 1rem;
-  color: #fff;
-  background-color: #800000;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: all 0.3s ease;
+    padding: 1rem 2rem;
+    font-size: 1rem;
+    color: #fff;
+    background-color: #800000;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
 }
 
 .btn:hover {
-  background-color: #cfb53b;
+    opacity: 80%;
 }
 
 .container {
-  max-width: 1200px;
-  margin: auto;
-  padding: 5rem 2rem;
+    max-width: 1200px;
+    margin: auto;
+    padding: 5rem 2rem;
 }
 
 .blur {
-  position: absolute;
-  box-shadow: 0 0 1000px 50px #cfb53b;
-  z-index: -100;
+    position: absolute;
+    box-shadow: 0 0 1000px 50px #cfb53b;
+    z-index: -100;
 }
 
 section .header-JD {
@@ -164,9 +169,9 @@ section .header-JD {
     line-height: 5rem;
     margin-top: 2rem;
     text-align: center;
-  }
+}
 
-  section .headerJD {
+section .headerJD {
     color: #cfb53b;
     margin-bottom: 3rem;
     font-size: calc(3rem + 5px);
@@ -174,26 +179,24 @@ section .header-JD {
     line-height: 4rem;
     margin-top: 2rem;
     text-align: center;
-  }
+}
 
-  .container img {
+.container img {
     max-width: 450px;
     display: block;
-  }
-  
-  .container .star-img {
+}
+
+.container .star-img {
     width: 80px;
     margin: 0;
-    
-    
-  }
-  .features-JD {
+}
+.features-JD {
     display: grid;
     grid-template-columns: repeat(3, 1fr); /* 4 kolom */
     gap: 2rem; /* Jarak antar card */
-  }
+}
 
-  .features-JD .card-JD {
+.features-JD .card-JD {
     display: flex;
     flex-direction: row;
     width: 100%; /* Menggunakan lebar 100% agar mengisi seluruh kolom */
@@ -203,33 +206,23 @@ section .header-JD {
     border-radius: 10px;
     transition: all 0.3s ease;
     margin: 0; /* Menghapus margin default */
-    
-  }
+}
 
-  
-  
-  
-  .features-JD .card-JD .blue {
-    background-color: #F5F5DC;
-  }
-  
-  
-  
-  
-  
-  
-  
-  .features-JD .card-JD .content,
-  .features1 .card-JD .content {
+.features-JD .card-JD .blue {
+    background-color: #f5f5dc;
+}
+
+.features-JD .card-JD .content,
+.features1 .card-JD .content {
     display: flex;
     flex-direction: column;
     align-items: center; /* Menengahkan elemen sepanjang sumbu utama */
     justify-content: center; /* Menengahkan elemen sepanjang sumbu lintang */
     max-width: 334px;
-  }
-  
-  .features-JD .card-JD span,
-  .features1 .card-JD span {
+}
+
+.features-JD .card-JD span,
+.features1 .card-JD span {
     display: flex;
     padding: 1px;
     margin: 10px 10px 10px 26px;
@@ -242,17 +235,15 @@ section .header-JD {
     height: 100px;
     transition: all 1 ease;
     border: 2px solid transparent;
-  }
+}
 
-  .features-JD .card-JD span:hover,
-  .features1 .card-JD span:hover {
-    
+.features-JD .card-JD span:hover,
+.features1 .card-JD span:hover {
     border-color: #fefefe;
-  }
-  
-  .features-JD .card-JD h4,
-  .features1 .card-JD h4 {
-    
+}
+
+.features-JD .card-JD h4,
+.features1 .card-JD h4 {
     color: #fff;
     font-size: 1.2rem;
     font-weight: 600;
@@ -260,24 +251,24 @@ section .header-JD {
     justify-content: center;
     margin-top: 0;
     transition: all 0.3s ease;
-  }
-  .features-JD .card-JD h4:hover{
+}
+.features-JD .card-JD h4:hover {
     color: #cfb53b;
-  }
-  
-  .features-JD .card-JD p,
-  .features1 .card-JD p {
+}
+
+.features-JD .card-JD p,
+.features1 .card-JD p {
     color: #ccc;
     margin-bottom: 1rem;
     font-size: 0.9rem;
-  }
-  
-  .features1 .card-JD p {
+}
+
+.features1 .card-JD p {
     font-size: 0.8rem;
-  }
-  
-  .features-JD .card-JD a,
-  .features1 .card-JD a {
+}
+
+.features-JD .card-JD a,
+.features1 .card-JD a {
     color: #fff;
     font-size: 1.2rem;
     font-weight: 600;
@@ -285,79 +276,78 @@ section .header-JD {
     justify-content: center;
     margin-top: 0;
     transition: all 0.3s ease;
+}
 
-  }
-  
-  .features-JD .card-JD a:hover,
-  .features1 .card-JD a:hover {
+.features-JD .card-JD a:hover,
+.features1 .card-JD a:hover {
     color: #cfb53b;
-  }
+}
 
-  footer {
+footer {
     position: relative;
     display: grid;
     grid-template-columns: 400px repeat(3, 1fr);
     gap: 2rem;
-  }
-  
-  footer .column .logo {
+}
+
+footer .column .logo {
     max-width: 100px;
     margin-bottom: 2rem;
-  }
-  
-  footer .column p {
+}
+
+footer .column p {
     color: #18181b;
     margin-bottom: 2rem;
-  }
-  
-  footer .column .socials {
+}
+
+footer .column .socials {
     display: flex;
     align-items: center;
     gap: 1rem;
-  }
-  
-  footer .column .socials a {
+}
+
+footer .column .socials a {
     color: #18181b;
     border: 1px solid #18181b;
     padding: 5px 10px;
     font-size: 1.25rem;
     border-radius: 100%;
     transition: all 0.3s ease;
-  }
-  
-  footer .column .socials a:hover {
+}
+
+footer .column .socials a:hover {
     color: #18181b;
     background-color: #cfb53b;
     border-color: #cfb53b;
-  }
-  
-  footer .column h4 {
+}
+
+footer .column h4 {
     color: #18181b;
     margin-bottom: 2rem;
     font-size: 1.2rem;
     font-weight: 500;
-  }
-  
-  footer .column > a {
+}
+
+footer .column > a {
     display: block;
     color: #18181b;
     margin-bottom: 1rem;
     transition: all 0.3s ease;
-  }
-  
-  footer .column > a:hover {
+}
+
+footer .column > a:hover {
     color: #cfb53b;
-  }
-  
-  .copyright {
+}
+
+.copyright {
     max-width: 1200px;
     margin: auto;
     padding: 1rem;
     color: #18181b;
     font-size: 0.8rem;
     text-align: center;
-  }
-  .header4 {
+}
+.header4 {
     position: absolute;
     top: 0;
     left: 0;
@@ -367,21 +357,20 @@ section .header-JD {
     padding: 0 1rem;
     z-index: -2rem;
     margin-top: 2rem;
-    
-  }
-  
-  .header__icon, 
-  .header__toggle {
-    font-size: 4rem; 
+}
+
+.header__icon,
+.header__toggle {
+    font-size: 4rem;
     margin-left: auto;
     display: none;
-  }
-  
-  .header__toggle {
+}
+
+.header__toggle {
     color: #aeaaaa;
     cursor: pointer;
-  }
-  .nav2 {
+}
+.nav2 {
     position: fixed;
     top: 0;
     left: -100%;
@@ -390,11 +379,11 @@ section .header-JD {
     background-color: #aeaaaa;
     box-shadow: 1px 0 0 rgba(22, 8, 43, 0.1);
     z-index: 2rem;
-    transition: .4s;
+    transition: 0.4s;
     display: none;
-  }
-  
-  .nav2__container {
+}
+
+.nav2__container {
     height: 100%;
     display: flex;
     flex-direction: column;
@@ -402,139 +391,137 @@ section .header-JD {
     padding-bottom: 3rem;
     overflow: auto;
     scrollbar-width: none; /* For mozilla */
-  }
-  
-  /* For Google Chrome and others */
-  .nav2__container::-webkit-scrollbar {
+}
+
+/* For Google Chrome and others */
+.nav2__container::-webkit-scrollbar {
     display: none;
-  }
-  
-  .nav2__logo {
+}
+
+.nav2__logo {
     width: 125px;
     margin-bottom: 2rem;
     margin-right: auto;
     margin-left: -5px;
-  }
-  
-  .nav2__list, 
-  .nav2__items {
+}
+
+.nav2__list,
+.nav2__items {
     display: grid;
-  }
-  
-  .nav2__list {
+}
+
+.nav2__list {
     row-gap: 2.5rem;
-  }
-  
-  .nav2__items {
+}
+
+.nav2__items {
     row-gap: 1.5rem;
-  }
-  
-  .nav2__subtitle {
+}
+
+.nav2__subtitle {
     font-size: var(--normal-font-size);
     text-transform: uppercase;
-    letter-spacing: .1rem;
+    letter-spacing: 0.1rem;
     color: var(--text-color-light);
-  }
-  
-  .nav2__link {
+}
+
+.nav2__link {
     display: flex;
     align-items: center;
     color: #fff;
-  }
-  
-  .nav2__link:hover {
+}
+
+.nav2__link:hover {
     color: #fff;
-  }
-  
-  .nav2__icon {
+}
+
+.nav2__icon {
     font-size: 1.2rem;
-    margin-right: .5rem;
-  }
-  
-  .nav2__name {
+    margin-right: 0.5rem;
+}
+
+.nav2__name {
     font-size: var(--small-font-size);
     font-weight: var(--font-medium);
     white-space: nowrap;
-  }
-  
-  .nav2__logout {
+}
+
+.nav2__logout {
     margin-top: 5rem;
-  }
-  
-  /* Dropdown */
-  .nav2__dropdown {
+}
+
+/* Dropdown */
+.nav2__dropdown {
     overflow: hidden;
     max-height: 21px;
-    transition: .4s ease-in-out;
-  }
-  
-  .nav2__dropdown-collapse {
+    transition: 0.4s ease-in-out;
+}
+
+.nav2__dropdown-collapse {
     background-color: #fff;
-    border-radius: .25rem;
+    border-radius: 0.25rem;
     margin-top: 1rem;
-  }
-  
-  .nav2__dropdown-content {
+}
+
+.nav2__dropdown-content {
     display: grid;
-    row-gap: .5rem;
-    padding: .75rem 2.5rem .75rem 1.8rem;
-  }
-  
-  .nav2__dropdown-item {
+    row-gap: 0.5rem;
+    padding: 0.75rem 2.5rem 0.75rem 1.8rem;
+}
+
+.nav2__dropdown-item {
     font-size: var(--smaller-font-size);
     font-weight: var(--font-medium);
     color: var(--text-color);
-  }
-  
-  .nav2__dropdown-item:hover {
-    color: var(--first-color);
-  }
-  
-  .nav2__dropdown-icon {
-    margin-left: auto;
-    transition: .4s;
-  }
-  
-  /* Show dropdown collapse */
-  .nav2__dropdown:hover {
-    max-height: 100rem;
-  }
-  
-  /* Rotate icon arrow */
-  .nav2__dropdown:hover .nav2__dropdown-icon {
-    transform: rotate(180deg);
-  }
-  
-  /*===== Show menu =====*/
-  .show-menu {
-    left: 0;
-  }
+}
 
-  .container-f{
+.nav2__dropdown-item:hover {
+    color: var(--first-color);
+}
+
+.nav2__dropdown-icon {
+    margin-left: auto;
+    transition: 0.4s;
+}
+
+/* Show dropdown collapse */
+.nav2__dropdown:hover {
+    max-height: 100rem;
+}
+
+/* Rotate icon arrow */
+.nav2__dropdown:hover .nav2__dropdown-icon {
+    transform: rotate(180deg);
+}
+
+/*===== Show menu =====*/
+.show-menu {
+    left: 0;
+}
+
+.container-f {
     max-width: 1200px;
     margin: auto;
-    padding: 2rem 2rem;   
+    padding: 2rem 2rem;
 }
-  
 
 @media (width < 900px) {
-  .header__container {
-    display: flex;
-    align-items: center;
-    height: 100px;
-    justify-content: space-between;
-    z-index: -2rem;
-    
-  }
-  
-    .nav2{
+    .header__container {
+        display: flex;
+        align-items: center;
+        height: 100px;
+        justify-content: space-between;
+        z-index: -2rem;
+    }
+
+    .nav2 {
         display: block;
         z-index: 9999;
     }
-    .btn{
+    .btn {
         display: none;
     }
-    .header__toggle{
+    .header__toggle {
         display: block;
     }
 
@@ -557,62 +544,62 @@ section .header-JD {
         grid-template-columns: 1fr 200px;
     }
     footer {
-      z-index: -1;
+        z-index: -1;
     }
-    .nav2__container{
+    .nav2__container {
         z-index: 4;
     }
 }
 
-  @media (width < 1200px) {
+@media (width < 1200px) {
     .nav-links {
-      display: none;
+        display: none;
     }
-    .features-JD{
-      grid-template-columns: repeat(2, 1fr);
+    .features-JD {
+        grid-template-columns: repeat(2, 1fr);
     }
-  }
-  
-  @media (width < 900px) {
+}
+
+@media (width < 900px) {
     header {
-      grid-template-columns: repeat(1, 1fr);
+        grid-template-columns: repeat(1, 1fr);
     }
     header .image {
-      grid-area: 1/1/2/2;
+        grid-area: 1/1/2/2;
     }
     .features {
-      grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(2, 1fr);
     }
     .pricing {
-      grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(2, 1fr);
     }
     footer {
-      grid-template-columns: 1fr 200px;
+        grid-template-columns: 1fr 200px;
     }
-  }
+}
 
-  @media (width < 700px) {
-    .features-JD{
-      grid-template-columns: repeat(1, 1fr);
+@media (width < 700px) {
+    .features-JD {
+        grid-template-columns: repeat(1, 1fr);
     }
-  }
-  
-  @media (width < 600px) {
+}
+
+@media (width < 600px) {
     header .image::before {
-      display: none;
+        display: none;
     }
-    .features-JD{
-      grid-template-columns: repeat(1, 1fr);
+    .features-JD {
+        grid-template-columns: repeat(1, 1fr);
     }
     .features {
-      grid-template-columns: repeat(1, 1fr);
+        grid-template-columns: repeat(1, 1fr);
     }
-  
+
     .pricing {
-      grid-template-columns: repeat(1, 1fr);
+        grid-template-columns: repeat(1, 1fr);
     }
-  
+
     footer {
-      grid-template-columns: 1fr 150px;
+        grid-template-columns: 1fr 150px;
     }
-  }
+}

@@ -7,7 +7,7 @@
   @if (session("success"))
     <div class="alert alert-success">
       {{ session("success") }}
-    </div>
+    </div><br>
   @endif
 
   <a class="btn btn-primary mb-2" href="{{ route("admin.faq.create") }}">Add FAQ</a><br><br>
