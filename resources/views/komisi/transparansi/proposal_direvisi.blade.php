@@ -60,25 +60,7 @@
                             @else
                                 Belum disetujui
                             @endif</td>
-                            <td>
-              @if ($proposal['status_persetujuan'] != 'rejected')
-              <form action="{{ route(auth()->user()->role->role_slug . '.proposal.komisi-approve', $proposal['id']) }}" method="POST">
-                    @csrf
-                    @method('PUT')
-                    <button class="btn btn-warning" type="submit">Setujui</button>
-                </form>
-              <form action="{{ route( auth()->user()->role->role_slug .'.proposal.komisi-reject', $proposal['id']) }}" method="POST">
-                  @csrf
-                  @method('PUT')
-                  <button class="btn-warning1" type="submit">Tolak</button>
-              </form>
-              <a href="{{ route(auth()->user()->role->role_slug . '.proposal.revisi', $proposal['id']) }}" class="btn-warning2 ">Revisi</a>
-              @else
-              sudah ditolak
-              @endif
-              
-
-          </td>
+          <td><a href="{{ route(auth()->user()->role->role_slug . '.proposal.revisi', $proposal['id']) }}" class="btn-warning2 ">Revisi</a></td>
 
         </tr>
       @endforeach

@@ -8,6 +8,8 @@ use App\Models\LogProposal;
 use App\Models\ProposalOrmawa;
 use App\Models\RevisiProposal;
 use App\Models\RiwayatRevisiOrmawa;
+use App\Models\User;
+use App\Http\Controllers\MailController;
 use Auth;
 use Carbon\Carbon;
 
@@ -18,7 +20,7 @@ class AjukanDokumenController extends Controller
         return view('ormawa.ajukansurat');
     }
 
-    public function ajukanProposal(Request $request)
+        public function ajukanProposal(Request $request)
     {
         try {
             $request->validate([
@@ -27,8 +29,15 @@ class AjukanDokumenController extends Controller
                 'file_proposal' => 'required|file|mimes:doc,docx',
             ]);
             $file_proposal = $request->file('file_proposal');
-            $file_path = $file_proposal->storeAs('proposal_files', $file_proposal->getClientOriginalName(), 'public');
-    
+
+            $nomor_proposal = ProposalOrmawa::where('created_by', Auth::id())->count() + 1;
+            $nama_ormawa = Auth::user()->name;
+            $tanggal_pengajuan = now()->format('Ymd');
+
+            $nama_file = "Proposal{$nomor_proposal}-{$nama_ormawa}-{$tanggal_pengajuan}.".$file_proposal->getClientOriginalExtension();
+
+            $file_path = $file_proposal->storeAs('proposal_files', $nama_file, 'public');
+
             $proposal = new ProposalOrmawa();
             $proposal->judul = $request->input('judul');
             $proposal->deskripsi = $request->input('deskripsi');
@@ -38,19 +47,30 @@ class AjukanDokumenController extends Controller
             $proposal->file_proposal = $file_path;
             $proposal->created_by = Auth::id(); 
             $proposal->save();
-    
+
             $log = new LogProposal();
             $log->action = 'Pengajuan Proposal';
             $log->keterangan = 'Proposal diajukan oleh ' . Auth::user()->name;
             $log->proposal_id = $proposal->id;
             $log->user_id = Auth::id();
             $log->save();
-    
+
+            $mailController = new MailController();
+            $to = 'smfh@gmail.com';
+            $subject = 'Pengajuan Proposal oleh ' . Auth::user()->name;
+            $body = 'Judul Proposal: ' . $proposal->judul . '<br>' .
+                    'Deskripsi Proposal: ' . $proposal->deskripsi . '<br>' .
+                    'Tanggal Diajukan: ' . $proposal->created_at . '<br>' .
+                    'Nama Ormawa: ' . Auth::user()->nama . '<br>'.
+                    'Silakan unduh file proposal di sini: <a href="' . asset('storage/' . $file_path) . '">Download Proposal</a>';
+            $mailController->sendEmail($to, $subject, $body);
+
             return redirect()->route('ormawa.cek_progress')->with('success', 'Agenda kerja berhasil dibuat!');
         } catch (\Exception $e) {
             return response_error(null, $e->getMessage(), $e->getCode());
         }
     }
+
 
     public function cek_progress()
     {
@@ -108,49 +128,81 @@ class AjukanDokumenController extends Controller
         return view('ormawa.create_revisi', compact('proposal', 'revisiProposal'));
     }
     
+    
     public function kirimRevisi(Request $request, $proposalId, $revisiId)
-{
-    try {
-        $request->validate([
-            'judul' => 'required|string',
-            'deskripsi' => 'required|string',
-            'file_proposal' => 'required|file|mimes:doc,docx',
-        ]);
-
-        $proposal = ProposalOrmawa::findOrFail($proposalId);
-
-        $revisiProposal = RevisiProposal::findOrFail($revisiId);
-
-        $proposal->judul = $request->judul;
-        $proposal->tipe = "revisi";
-        $proposal->is_checked = false;
-        $proposal->deskripsi = $request->deskripsi;
-        $proposal->file_proposal = $request->file_proposal->storeAs('proposal_files', $request->file_proposal->getClientOriginalName(), 'public');
-        $proposal->save();
-
-        $revisiProposal->is_revision_done_by_ormawa = 1;
-        $revisiProposal->save();
-
-        $riwayatRevisi = RiwayatRevisiOrmawa::where('revisi_id', $revisiId)->first();
-
-        if ($riwayatRevisi) {
-            $riwayatRevisi->judul_hasil_revisi = $request->judul;
-            $riwayatRevisi->deskripsi_hasil_revisi = $request->deskripsi;
-            $riwayatRevisi->file_hasil_revisi = $request->file_proposal->store('proposal_files', 'public');
-            $riwayatRevisi->save();
+    {
+        try {
+            $request->validate([
+                'judul' => 'required|string',
+                'deskripsi' => 'required|string',
+                'file_proposal' => 'required|file|mimes:doc,docx',
+            ]);
+    
+            $proposal = ProposalOrmawa::findOrFail($proposalId);
+            $revisiProposal = RevisiProposal::findOrFail($revisiId);
+    
+            // Mendapatkan informasi proposal
+            $ormawaUser = User::findOrFail($proposal->created_by);
+            $nama_ormawa = $ormawaUser->name;
+            $nama_komisi = Auth::user()->name;
+            $tanggal_revisi = now()->format('Ymd');
+    
+            // Menghitung nomor revisi
+            $nomor_revisi = $revisiProposal->id;
+    
+            // Membuat nama file revisi sesuai format yang diinginkan
+            $nama_file_revisi = "Proposal{$proposalId}-{$nama_ormawa}-RevisiOrmawa{$nomor_revisi}_{$nama_komisi}-{$tanggal_revisi}.".$request->file('file_proposal')->getClientOriginalExtension();
+    
+            // Simpan perubahan proposal
+            $proposal->judul = $request->judul;
+            $proposal->tipe = "revisi";
+            $proposal->is_checked = false;
+            $proposal->deskripsi = $request->deskripsi;
+            $proposal->file_proposal = $request->file('file_proposal')->storeAs('proposal_files', $nama_file_revisi, 'public');
+            $proposal->save();
+    
+            // Tandai revisi sebagai selesai oleh ormawa
+            $revisiProposal->is_revision_done_by_ormawa = 1;
+            $revisiProposal->save();
+    
+            // Simpan riwayat revisi jika ada
+            $riwayatRevisi = RiwayatRevisiOrmawa::where('revisi_id', $revisiId)->first();
+            if ($riwayatRevisi) {
+                $riwayatRevisi->judul_hasil_revisi = $request->judul;
+                $riwayatRevisi->deskripsi_hasil_revisi = $request->deskripsi;
+                $riwayatRevisi->file_hasil_revisi = $proposal->file_proposal;
+                $riwayatRevisi->save();
+            }
+    
+            // Buat log untuk tindakan kirim revisi
+            $log = new LogProposal();
+            $log->action = 'Kirim Revisi Proposal';
+            $log->keterangan = 'Revisi Proposal #' . $revisiProposal->id . ' dikirim oleh ' . Auth::user()->name;
+            $log->proposal_id = $proposal->id;
+            $log->user_id = Auth::id();
+            $log->save();
+    
+            // Kirim email ke pemberi revisi
+            $pemberiRevisi = User::findOrFail($revisiProposal->revised_by);
+            $pemberiRevisiEmail = $pemberiRevisi->email;
+    
+            $mailController = new MailController();
+            $to = $pemberiRevisiEmail;
+            $subject = 'Proposal Direvisi oleh Ormawa';
+            $body = 'Proposal yang Anda revisi telah diperbarui oleh ormawa. Berikut ini detail perubahannya:' . '<br>' .
+                    'Judul Proposal: ' . $proposal->judul . '<br>' .
+                    'Deskripsi Proposal: ' . $proposal->deskripsi . '<br>' .
+                    'Silakan unduh file proposal di sini: <a href="' . Storage::url($proposal->file_proposal) . '">Download Proposal</a>';
+            $mailController->sendEmail($to, $subject, $body);
+    
+            // Redirect dengan pesan sukses
+            return redirect()->route('ormawa.proposal.revisi', ['proposalId' => $proposalId])->with('success', 'Agenda kerja berhasil dibuat!');
+            
+        } catch (\Exception $e) {
+            return response_error(null, $e->getMessage(), $e->getCode());
         }
-        $log = new LogProposal();
-        $log->action = 'Kirim Revisi Proposal';
-        $log->keterangan = 'Revisi Proposal #' . $revisiProposal->id . ' dikirim oleh ' . Auth::user()->name;
-        $log->proposal_id = $proposal->id;
-        $log->user_id = Auth::id();
-        $log->save();
-        return redirect()->route('ormawa.proposal.revisi', ['proposalId' => $proposalId])->with('success', 'Agenda kerja berhasil dibuat!');
-        
-    } catch (\Exception $e) {
-        return response_error(null, $e->getMessage(), $e->getCode());
     }
-}
+    
     
 public function uploadFileFinal(Request $request, $proposalId)
 {

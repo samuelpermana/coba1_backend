@@ -21,7 +21,8 @@
       @csrf
       <label for="room_id">Room:</label><br>
       <select id="room_id" name="room_id">
-        @foreach ($rooms as $room)
+      <option value="" selected disabled>Pilih Ruangan</option>
+      @foreach ($rooms as $room)
           <option value="{{ $room->id }}">{{ $room->name }}</option>
         @endforeach
       </select><br><br>

@@ -47,59 +47,62 @@ class AuthController extends Controller
         }
     }
 
-
-// login
-public function login(LoginRequest $request)
-{
-    $credentials = $request->validate([
-        'email' => ['required', 'email'],
-        'password' => ['required'],
-    ]);
-
-    if (Auth::attempt($credentials)) {
-        $request->session()->regenerate();
-
-        $role = Auth::user()->role->role_slug;
-
-        switch ($role) {
-            case 'admin':
-                return redirect()->route('admin.dashboard');
-                break;
-            case 'ormawa':
-                return redirect()->route('ormawa.ajukansurat');
-                break;
-            case 'komisi-i':
-                return redirect()->route('komisi-i.agenda.index');
-                break;
-            case 'komisi-ii':
-                return redirect()->route('komisi-ii.agenda.index');
-                break;
-            case 'komisi-iii':
-                return redirect()->route('komisi-iii.agenda.index');
-                break;
-            case 'komisi-iv':
-                return redirect()->route('komisi-iv.agenda.index');
-                break;
-            case 'badan-anggaran':
-                return redirect()->route('badan-anggaran.agenda.index');
-                break;
-            case 'badan-legislasi':
-                return redirect()->route('badan-legislasi.agenda.index');
-                break;
-            case 'badan-kehormatan':
-                return redirect()->route('badan-kehormatan.agenda.index');
-                break;
-            case 'bksap':
-                return redirect()->route('bksap.agenda.index');
-                break;
-            case 'pimpinan':
-                return redirect()->route('pimpinan.proposal.belum-diperiksa');
-                break;
-            default:
-                return redirect()->route('index'); // Ganti dengan nama rute yang sesuai
+    public function login(LoginRequest $request)
+    {
+        $credentials = $request->validate([
+            'email' => ['required', 'email'],
+            'password' => ['required'],
+        ]);
+    
+        if (Auth::attempt($credentials)) {
+            $request->session()->regenerate();
+    
+            $role = Auth::user()->role->role_slug;
+    
+            switch ($role) {
+                case 'admin':
+                    return redirect()->route('admin.dashboard');
+                    break;
+                case 'ormawa':
+                    return redirect()->route('ormawa.ajukansurat');
+                    break;
+                case 'komisi-i':
+                    return redirect()->route('komisi-i.agenda.index');
+                    break;
+                case 'komisi-ii':
+                    return redirect()->route('komisi-ii.agenda.index');
+                    break;
+                case 'komisi-iii':
+                    return redirect()->route('komisi-iii.agenda.index');
+                    break;
+                case 'komisi-iv':
+                    return redirect()->route('komisi-iv.agenda.index');
+                    break;
+                case 'badan-anggaran':
+                    return redirect()->route('badan-anggaran.agenda.index');
+                    break;
+                case 'badan-legislasi':
+                    return redirect()->route('badan-legislasi.agenda.index');
+                    break;
+                case 'badan-kehormatan':
+                    return redirect()->route('badan-kehormatan.agenda.index');
+                    break;
+                case 'bksap':
+                    return redirect()->route('bksap.agenda.index');
+                    break;
+                case 'pimpinan':
+                    return redirect()->route('pimpinan.proposal.belum-diperiksa');
+                    break;
+                default:
+                    return redirect()->route('index'); // Ganti dengan nama rute yang sesuai
+            }
+        } else {
+            return back()->withInput()->withErrors([
+                'email' => 'email/password salah',
+            ]);
         }
     }
-}
+    
     /**
      * Log the user out (Invalidate the token).
      *

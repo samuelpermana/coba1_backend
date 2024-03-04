@@ -40,28 +40,38 @@
           <td>{{ $proposal["status"] }}</td>
           <td>{{ $proposal["status_persetujuan"] }}</td>
           <td>
-            <form action="{{ route("admin.proposal.update-komisi", $proposal["id"]) }}" method="POST">
-              @csrf
-              @method("PUT")
-              <select class="select" name="komisi_checked_by">
+    @if ($proposal["status_persetujuan"] != 'rejected')
+        <form action="{{ route("admin.proposal.update-komisi", $proposal["id"]) }}" method="POST">
+            @csrf
+            @method("PUT")
+            <select class="select" name="komisi_checked_by" {{ $proposal["komisi_checked_by"] ? 'disabled' : '' }}>
                 @if ($proposal["komisi_checked_by"] == null)
-                  <option value="" disabled selected>pilih</option>
+                    <option value="" disabled selected>pilih</option>
                 @endif
                 @foreach ($komisiUsers as $user)
-                  <option value="{{ $user->id }}" {{ $proposal["komisi_checked_by"] == $user->id ? "selected" : "" }}>
-                    {{ $user->name }}
-                  </option>
+                    <option value="{{ $user->id }}" {{ $proposal["komisi_checked_by"] == $user->id ? "selected" : "" }}>
+                        {{ $user->name }}
+                    </option>
                 @endforeach
-              </select>
-              <button class="btn" type="submit">Submit</button>
-            </form>
-            <form action="{{ route("admin.proposal.admin-reject", $proposal["id"]) }}" method="POST">
-              @csrf
-              @method("PUT")
-              <button class="btn" type="submit">Reject</button>
-            </form>
-          </td>
+            </select>
+            @if (!$proposal["komisi_checked_by"])
+                <button class="btn" type="submit">Submit</button>
+            @endif
+        </form>
+    @endif
 
+    @if ($proposal["status"] == 'admin' && $proposal["status_persetujuan"] == 'rejected')
+        Sudah di reject
+    @else
+        @if ($proposal["status_persetujuan"] != 'rejected' && !$proposal["komisi_checked_by"])
+            <form action="{{ route("admin.proposal.admin-reject", $proposal["id"]) }}" method="POST">
+                @csrf
+                @method("PUT")
+                <button class="btn" type="submit">Reject</button>
+            </form>
+        @endif
+    @endif
+</td>
         </tr>
       @endforeach
     </tbody>

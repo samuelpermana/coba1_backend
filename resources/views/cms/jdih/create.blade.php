@@ -15,7 +15,7 @@
       @csrf
 
       <label for="tahun">Tahun:</label>
-      <input id="tahun" name="tahun" type="text" required><br>
+      <input id="tahun" name="tahun" type="text" pattern="[0-9]*" required><br>
 
       <label for="jenis_jdih_id">Jenis Peraturan:</label>
       <select id="jenis_jdih_id" name="jenis_jdih_id" required>
@@ -38,16 +38,16 @@
       <input id="status_peraturan" name="status_peraturan" type="text" required><br>
 
       <label for="file_peraturan">File Peraturan:</label>
-      <input name="file_peraturan" type="file">
+      <input name="file_peraturan" type="file"accept="application/pdf">
 
       <label for="file_naskah">File Naskah:</label>
-      <input name="file_naskah" type="file">
+      <input name="file_naskah" type="file" accept="application/pdf">
 
       <label for="file_inventarisasi">File Inventarisasi:</label>
-      <input name="file_inventarisasi" type="file">
+      <input name="file_inventarisasi" type="file" accept="application/pdf">
 
       <label for="file_lainnya">File Lainnya:</label>
-      <input name="file_lainnya[]" type="file" multiple>
+      <input name="file_lainnya[]" type="file" multiple accept="application/pdf">
 
       <button class="btn" type="submit">Create JDIH Record</button>
     </form>

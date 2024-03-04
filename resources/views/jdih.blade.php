@@ -26,43 +26,44 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.min.css" integrity="sha512-mSYUmp1HYZDFaVKK//63EcZq4iFWFjxSL+Z3T/aCt4IO9Cejm03q3NKKYN6pFQzY0SBOr8h+eCIAZHPXcpZaNw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>JDIH</title>
 </head>
-
 @extends("layouts.layout")
 @section("content")
   <link href="{{ asset("stylejdih.css") }}" rel="stylesheet" />
 
-
-  @foreach ($jdihByYear as $year => $jdihRecords)
-    <section class="container">
-      <h2 class="headerJD">
-        @if ($id == 1)
-          JDIH - Peraturan Mahasiswa
-        @elseif ($id == 2)
-          JDIH - Procedure Peraturan Senat Mahasiswa
-        @elseif ($id == 3)
-          JDIH - Keputusan
-        @elseif ($id == 4)
-          JDIH - Standart Operating 
-        @elseif ($id == 5)
-          JDIH - Rancangan Peraturan
-        @endif
-      </h2>
-      <h2 class="headerJD">{{ $year }}</h2>
-      <div class="makna-senat">
-        <div class="features-JD">
-          @foreach ($jdihRecords as $jdih)
-            <div class="card-JD">
-              <span class="blue"><img class="star-img" src="/img/stack.svg" alt="" /></span>
-              <div class="content">
-                <a class=".features-JD .card-JD h4" href="{{ route("jdih.show", ["id" => $jdih->id]) }}">{{ $jdih->nama_peraturan }}</a>
+  @if ($jdihByYear->isEmpty())
+    <p>Belum ada data JDIH yang tersedia.</p>
+  @else
+    @foreach ($jdihByYear as $year => $jdihRecords)
+      <section class="container">
+        <h2 class="headerJD">
+          @if ($id == 1)
+            JDIH - Peraturan Mahasiswa
+          @elseif ($id == 2)
+            JDIH - Procedure Peraturan Senat Mahasiswa
+          @elseif ($id == 3)
+            JDIH - Keputusan
+          @elseif ($id == 4)
+            JDIH - Standart Operating 
+          @elseif ($id == 5)
+            JDIH - Rancangan Peraturan
+          @endif
+        </h2>
+        <h2 class="headerJD">{{ $year }}</h2>
+        <div class="makna-senat">
+          <div class="features-JD">
+            @foreach ($jdihRecords as $jdih)
+              <div class="card-JD">
+                <span class="blue"><img class="star-img" src="/img/stack.svg" alt="" /></span>
+                <div class="content">
+                  <a class=".features-JD .card-JD h4" href="{{ route("jdih.show", ["id" => $jdih->id]) }}">{{ $jdih->nama_peraturan }}</a>
+                </div>
               </div>
-            </div>
-          @endforeach
+            @endforeach
+          </div>
         </div>
-      </div>
-    </section>
-    
-  @endforeach
+      </section>
+    @endforeach
+  @endif
+
   <script src="{{ asset("script7.js") }}"></script>
 @endsection
-

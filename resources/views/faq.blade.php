@@ -7,6 +7,9 @@
     <p class="sub-header">
       Jawaban dari pertanyaan yang sering ditanyakan.
     </p>
+    @if ($faqs->isEmpty())
+      <p class="sub-header">Belum ada data.</p>
+    @else
     @foreach ($faqs as $faq)
     <div class="tag">
       <div class="tag-divide">
@@ -17,6 +20,7 @@
       </div>
     </div>
     @endforeach
+    @endif
   </section>
 
   <script src="js-faq.js"></script>

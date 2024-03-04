@@ -20,10 +20,19 @@
                 <h1>Sign In</h1>
                 <div class="social-icons"></div>
                 <span>or use your email password</span>
-                <input type="email" name="email" placeholder="Email" value="adminsmfh@gmail.com" required />
-                <input type="password" name="password" placeholder="Password" value="password" required >
+                <input type="email" name="email" placeholder="Email" value="{{ old('email') }}" required />
+                <input type="password" name="password" placeholder="Password" minlength="8" required >
+                @error('email')
+                    <span class="error">{{ $message }}</span>
+                @enderror
+                @error('password')
+                    <span class="error">{{ $message }}</span>
+                @enderror
                 <a href="{{ route('password.request') }}">Forget Your Password?</a>
                 <button type="submit">Sign In</button>
+                @if (session('status'))
+                    <span class="error">{{ session('status') }}</span>
+                @endif
             </form>
         </div>
 

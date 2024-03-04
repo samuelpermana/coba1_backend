@@ -9,25 +9,18 @@ use Illuminate\Support\Facades\Redirect;
 
 class AspirasiController extends Controller
 {
-    public function createAspirasi(AspirasiRequest $request){
-        try {
+    
+    public function createAspirasi(AspirasiRequest  $request)
+    {
             $aspirasi = new Aspirasi([
-                'name'=> $request->input('name'),
-                'email'=> $request->input('email'),
-                'angkatan'=> $request->input('angkatan'), 
-                'id_line'=> $request->input('id_line'),
-                'message'=> $request->input('message'),
+                'name' => $request->input('name'),
+                'email' => $request->input('email'),
+                'angkatan' => $request->input('angkatan'), 
+                'id_line' => $request->input('id_line'),
+                'message' => $request->input('message'),
             ]);
-
             $aspirasi->save();
-            
-            // Jika Anda menggunakan response JSON:
-            // return response()->json(['data' => $aspirasi, 'message' => 'Success'], 200);
-            
-            return Redirect::to('/kotakaspirasi')->with('success', 'Aspiration created successfully');
-        } catch (\Exception $e) {
-            return response_error(null, $e->getMessage(), $e->getCode());
-        }
+            return Redirect::back()->with('success', 'Aspirasi berhasil dibuat');
     }
 
     public function getAspirasi()

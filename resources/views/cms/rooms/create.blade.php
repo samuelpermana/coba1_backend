@@ -22,7 +22,7 @@
     <form action="{{ route("admin.rooms.store") }}" method="POST">
       @csrf
       <label for="name">Name:</label><br>
-      <input id="name" name="name" type="text"><br><br>
+      <input id="name" name="name" type="text" required><br><br>
 
       <button class="btn" type="submit">Create</button>
     </form>

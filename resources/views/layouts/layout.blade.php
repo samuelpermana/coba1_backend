@@ -128,7 +128,7 @@
         <!-- <li class="link" id="link4"><a href="{{ url("/transparansisurat") }}">Transparansi surat</a></li> -->
       </ul>
 
-      <a href="login"><button class="btn btn-ajukansurat" type="button">Ajukan Surat</button></a>
+      <a href="{{ url('/login') }}"><button class="btn btn-ajukansurat" type="button">Ajukan Surat</button></a>
     </nav>
 
     @yield("content")

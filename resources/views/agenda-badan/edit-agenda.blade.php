@@ -26,7 +26,7 @@
             </div>
             <div class="form-group">
                 <label for="tanggal_pelaksanaan">Tanggal Pelaksanaan:</label>
-                <input type="date" name="tanggal_pelaksanaan" class="form-control input-form" id="tanggal_pelaksanaan" value="{{ $agenda->tanggal_pelaksanaan }}" required>
+                <input type="date" name="tanggal_pelaksanaan" class="form-control input-form" id="tanggal_pelaksanaan" value="{{ $agenda->tanggal_pelaksanaan }}" >
             </div>
             <button type="submit" class="btn btn-primary">Simpan Perubahan</button>
         </form>

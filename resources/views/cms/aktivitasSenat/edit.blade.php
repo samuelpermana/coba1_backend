@@ -28,7 +28,7 @@
 
       <div>
         <label for="gambar">Gambar:</label>
-        <input class="btn" id="gambar" name="gambar" type="file">
+        <input class="btn" id="gambar" name="gambar" type="file" accept="image/*">
       </div><br>
 
       <button class="btn" type="submit">Update</button>

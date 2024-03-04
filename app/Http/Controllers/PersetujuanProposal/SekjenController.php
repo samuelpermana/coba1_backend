@@ -11,6 +11,8 @@ use App\Models\RevisiProposal;
 use App\Models\RiwayatRevisiOrmawa;
 use Illuminate\Support\Facades\Auth;
 use Carbon\Carbon;
+use App\Http\Controllers\MailController;
+use Illuminate\Support\Facades\Storage;
 
 class SekjenController extends Controller
 {
@@ -61,7 +63,7 @@ class SekjenController extends Controller
                  
              ];
          }
-        return view('komisi.transparansi.transparansisurat', compact('proposalData'));
+        return view('komisi.transparansi.proposal_direvisi', compact('proposalData'));
     }
     public function disetujui()
     {
@@ -86,7 +88,7 @@ class SekjenController extends Controller
                  'file_final' => $proposal->file_final,
              ];
          }
-        return view('komisi.transparansi.transparansisurat', compact('proposalData'));
+        return view('komisi.transparansi.proposal_disetujui', compact('proposalData'));
     }
     public function ditolak()
     {
@@ -117,6 +119,8 @@ class SekjenController extends Controller
     {
 
         $proposal = ProposalOrmawa::findOrFail($proposalId);
+        $ormawaName = User::findOrFail($proposal->created_by)->name;
+        $ormawaemail = User::findOrFail($proposal->created_by)->email;
         $proposal->update([
             'status'=> 'sekjen',
             'status_persetujuan'=> 'rejected',
@@ -131,6 +135,16 @@ class SekjenController extends Controller
         $log->proposal_id = $proposal->id;
         $log->user_id = Auth::id();
         $log->save();
+        $mailController = new MailController();
+        $to = $ormawaemail;
+        $subject = 'Pengajuan Proposal Ditolak oleh ' . Auth::user()->name;
+        $body = 'Pengajuan anda ditolak. <br>' .
+        'Judul Proposal: ' . $proposal->judul . '<br>' .
+        'Deskripsi Proposal: ' . $proposal->deskripsi . '<br>' .
+        'Tanggal Diajukan: ' . $proposal->created_at . '<br>' .
+        'Nama Ormawa: ' . $ormawaName . '<br>'.
+        'Silakan unduh file proposal di sini: <a href="' . asset('storage/' . $proposal->file_proposal) . '">Download Proposal</a>';
+        $mailController->sendEmail($to, $subject, $body);
         return redirect()->back()->with('success', 'Komisi checked by berhasil diperbarui.');
     }
 
@@ -138,6 +152,8 @@ class SekjenController extends Controller
     {
 
         $proposal = ProposalOrmawa::findOrFail($proposalId);
+        $ormawaName = User::findOrFail($proposal->created_by)->name;
+        $ormawaemail = User::findOrFail($proposal->created_by)->email;
         $proposal->update([
             'status'=> 'sekjen',
             'status_persetujuan'=> 'approved',
@@ -151,7 +167,17 @@ class SekjenController extends Controller
         $log->proposal_id = $proposal->id;
         $log->user_id = Auth::id();
         $log->save();
-    
+
+        $mailController = new MailController();
+        $to = $ormawaemail;
+        $subject = 'Pengajuan Proposal Disetujui oleh ' . Auth::user()->name;
+        $body = 'Pengajuan anda disetujui, selanjutnya upload file final proposal anda yang sudah ditandatangani. <br>' .
+        'Judul Proposal: ' . $proposal->judul . '<br>' .
+        'Deskripsi Proposal: ' . $proposal->deskripsi . '<br>' .
+        'Tanggal Diajukan: ' . $proposal->created_at . '<br>' .
+        'Nama Ormawa: ' . $ormawaName . '<br>'.
+        'Silakan unduh file proposal di sini: <a href="' . asset('storage/' . $proposal->file_proposal) . '">Download Proposal</a>';
+        $mailController->sendEmail($to, $subject, $body);
         return redirect()->back()->with('success', 'Komisi checked by berhasil diperbarui.');
     }
 
@@ -177,9 +203,21 @@ class SekjenController extends Controller
         ]);
     
         $user_id = Auth::id();
-    
-        $file_revisi_path = $request->file('file_revisi')->store('revisi_files', 'public');
-    
+
+        $proposal = ProposalOrmawa::findOrFail($proposalId);
+        $ormawaUser = User::findOrFail($proposal->created_by);
+        $nama_ormawa = $ormawaUser->name;
+        $nama_komisi = Auth::user()->name; // Asumsi nama komisi diambil dari user yang sedang login
+        $tanggal_revisi = now()->format('Ymd');
+        
+        $nomor_revisi = RevisiProposal::where('proposal_id', $proposalId)->count() + 1;
+
+        // Membuat nama file revisi sesuai format yang diinginkan
+        $nama_file_revisi = "Proposal{$proposalId}-{$nama_ormawa}-Revisi{$nomor_revisi}_{$nama_komisi}-{$tanggal_revisi}.".$request->file('file_revisi')->getClientOriginalExtension();
+
+        // Menyimpan file revisi
+        $file_revisi_path = $request->file('file_revisi')->storeAs('revisi_files', $nama_file_revisi, 'public');
+        
         // Buat entri baru untuk RevisiProposal
         $revisiProposal = new RevisiProposal();
         $revisiProposal->proposal_id = $proposalId;
@@ -212,6 +250,23 @@ class SekjenController extends Controller
         $log->proposal_id = $proposalId;
         $log->user_id = $user_id;
         $log->save();
+        
+    $ormawa = $proposal->ormawa;
+    $ormawaemail = User::findOrFail($proposal->created_by)->email;
+    $file_proposal_path = $proposal->file_proposal;
+    $file_proposal_name = basename($file_proposal_path);
+    $file_revisi_name = $request->file('file_revisi')->getClientOriginalName();
+    $mailController = new MailController();
+    $to = $ormawaemail;
+    $subject = 'Proposal Direvisi oleh '. $namaKomisi;
+    $body = 'Proposal Anda telah direvisi oleh Komisi. Silakan unduh file revisi dan file proposal lama untuk informasi lebih lanjut.' . '<br>' .
+            'Judul Proposal: ' . $proposal->judul . '<br>' .
+            'Deskripsi Proposal: ' . $proposal->deskripsi . '<br>' .
+            'Komentar Komisi: ' . $request->komentar . '<br>' .
+            'File Proposal Lama: <a href="' . Storage::url($file_proposal_path) . '">' . $file_proposal_name . '</a>' . '<br>' .
+            'File Revisi: <a href="' . Storage::url($file_revisi_path) . '">' . $file_revisi_name . '</a>';
+    $mailController->sendEmail($to, $subject, $body);
+
         return redirect()->back()->with('success', 'Proposal direvisi berhasil disimpan.');
     }
     

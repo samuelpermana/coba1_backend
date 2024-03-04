@@ -24,7 +24,7 @@
       @csrf
       @method("PUT")
       <label for="name">Name:</label><br>
-      <input id="name" name="name" type="text" value="{{ $room->name }}"><br><br>
+      <input id="name" name="name" type="text" value="{{ $room->name }}" required><br><br>
 
       <button class="btn" type="submit">Update</button>
     </form>
