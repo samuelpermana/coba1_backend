@@ -17,7 +17,8 @@ body {
 }
 
 .container {
-    background-color: #27272a;
+    background: rgb(128,0,0);
+    background: linear-gradient(90deg, rgba(96,0,0,1) 0%, rgba(128,0,0,1) 55%);  
     border-radius: 30px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
     position: relative;
@@ -37,6 +38,7 @@ body {
     line-height: 20px;
     letter-spacing: 0.3px;
     margin: 20px 0;
+    text-align: center;
 }
 
 .container span {
@@ -228,6 +230,32 @@ body {
     margin-bottom: 1rem;
 }
 
+.forgot{
+    color: #cfb53b;
+    font-size: 1.5rem;
+    text-align: center;
+    margin-top: 1rem;
+}
+.enter{
+    color: #fff;
+    font-size: 1rem;
+    text-align: center;
+    
+}
+
+.container .form-1 {
+    background-color: #800000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 40px;
+    height: 100%;
+}
+
+.email{
+    color: white;
+}
 
 @media only screen and (max-width: 768px) {
     .container.active .sign-in,
@@ -320,9 +348,3 @@ body {
         width: 100%;
     }
 }
-
-
-
-
-
-

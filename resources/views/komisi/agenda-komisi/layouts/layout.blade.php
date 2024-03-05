@@ -89,5 +89,6 @@
       Copyright © 2023 SENAT FH UNDIP. All Rights Reserved.
     </div>
   </body>
+  <script src="{{ asset("script7.js") }} "></script>
 
 </html>

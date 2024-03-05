@@ -11,7 +11,7 @@
 
 <body>
 
-    <div class="container" id="container">
+    <div class="container-reset" id="container">
         
         <div class="form">
             @if ($errors->any()) 

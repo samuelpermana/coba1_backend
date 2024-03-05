@@ -29,11 +29,11 @@
             </div>
         @endif
 
-        <h2>Forgot Your Password ? </h2>
-        <p>Enter email to request password reset</p>
+        <h2 class="forgot">Forgot Your Password ? </h2>
+        <p class="enter">Enter email to request password reset</p>
         <form action ="{{ route('passwordPost.request') }}" method="post">
             @csrf
-            <label for="email" class="form-label">Email</label>
+            <label class="email" for="email" class="form-label">Email</label>
             <input type="email" class="form-control" name="email">
             <input type="submit" value="Request Password Reset" class="btn btn-primary w-100 mt-3">
         </form>
