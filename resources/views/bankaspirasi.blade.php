@@ -10,7 +10,7 @@
     <h2 class="header-BA">Sarana dan Prasarana</h2>
     <div class="pricing">
       @if ($sarpras->isEmpty())
-        <p>Belum ada data untuk kategori SARPRAS.</p>
+        <p class="slobeh">Belum ada data untuk kategori SARPRAS.</p>
       @else
         @foreach ($sarpras as $aspirasi)
           <div class="card">
@@ -30,7 +30,7 @@
     <h2 class="header-BA">Birokrasi</h2>
     <div class="pricing">
       @if ($birokrasi->isEmpty())
-        <p>Belum ada data untuk kategori BIROKRASI.</p>
+        <p class="slobeh">Belum ada data untuk kategori BIROKRASI.</p>
       @else
         @foreach ($birokrasi as $aspirasi)
           <div class="card">
@@ -50,7 +50,7 @@
     <h2 class="header-BA">Akademik</h2>
     <div class="pricing">
       @if ($akademik->isEmpty())
-        <p>Belum ada data untuk kategori AKADEMIK.</p>
+        <p class="slobeh">Belum ada data untuk kategori AKADEMIK.</p>
       @else
         @foreach ($akademik as $aspirasi)
           <div class="card">
