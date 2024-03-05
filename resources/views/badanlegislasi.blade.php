@@ -17,7 +17,7 @@
             </a>
           </div>
         </div>
-        <div class="item"  style="background-image: url(/img/BADANLEGISLASI.jpg);">
+        <div class="item"  style="background-image: url(/img/BADANLEGISLASI-COBA.png);">
           <div class="content">
             <div class="name">Badan Legislasi</div>
             <div class="des">Badan legislasi merupakan salah satu alat kelengkapan dari 4 badan yang berada dalam SM FH Undip 2022. Senator anggota badan legislasi mewakili masing-masing komisi terkait guna menciptakan tata kelola
