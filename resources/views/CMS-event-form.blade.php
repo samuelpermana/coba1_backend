@@ -36,6 +36,10 @@
           <input class="form-check-input" id="category-info" name="category" type="radio" value="info" {{ $data->category == "info" ? "checked" : null }}>
           <label class="form-check-label" for="category-info">Rapat D</label>
         </div>
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" id="category-info" name="category" type="radio" value="disabled" {{ $data->category == "info" ? "checked" : null }}>
+          <label class="form-check-label" for="category-info">Rapat E</label>
+        </div>
       </div>
     </div>
     <div class="col-12">

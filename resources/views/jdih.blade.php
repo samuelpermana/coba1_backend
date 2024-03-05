@@ -40,11 +40,11 @@
           @if ($id == 1)
             JDIH - Peraturan Mahasiswa
           @elseif ($id == 2)
-            JDIH - Procedure Peraturan Senat Mahasiswa
-          @elseif ($id == 3)
-            JDIH - Keputusan
-          @elseif ($id == 4)
             JDIH - Standart Operating
+          @elseif ($id == 3)
+            JDIH - Peratusan Senat Mahasiswa
+          @elseif ($id == 4)
+            JDIH - Keputusan
           @elseif ($id == 5)
             JDIH - Rancangan Peraturan
           @endif
