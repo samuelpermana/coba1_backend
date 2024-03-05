@@ -40,10 +40,6 @@
     text-align: left;
 }
 
-/* Add a background color to the dropdown links on hover */
-.dropdown-content a:hover {
-    
-}
 
 /* Style the dropdown button on hover */
 .dropdown:hover .dropbtn {
