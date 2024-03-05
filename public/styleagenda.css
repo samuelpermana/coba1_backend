@@ -681,7 +681,7 @@ footer .column > a:hover {
 }
 
 .header {
-    color: #000000;
+    color: #cfb53b;
     text-align: center;
     font-size: 40px;
     margin-bottom: 2rem;
@@ -833,7 +833,14 @@ label {
     }
 }
 
+
+
 @media (width < 600px) {
+    .table {
+        width:120%; 
+        margin-top: 1rem; 
+        margin-left: 20px;
+    }
     header .image::before {
         display: none;
     }
@@ -855,5 +862,43 @@ label {
     }
     .table__header .input-group:hover {
         width: 100%; /* Mengisi lebar 100% saat dihover pada ukuran layar kecil */
+    }
+    .trans {
+        margin-left: 5%; /* Mengurangi margin saat ukuran layar lebih kecil */
+        font-size: 0.8rem; /* Mengurangi ukuran font saat ukuran layar lebih kecil */
+        padding: 0.8rem 1.5rem; /* Mengurangi padding saat ukuran layar lebih kecil */
+        justify-content: center;
+         /* Membuat margin atas dan bawah 0 dan posisikan di tengah secara horizontal */
+    display: block; /* Pastikan elemen dianggap sebagai blok */
+    width: fit-content; /* Agar lebar elemen disesuaikan dengan konten */
+    text-align: center; 
+    margin-left: 10px;
+    }
+    main.table {
+        width: 100%;
+    margin-top: 1rem;
+    margin-left: auto;
+    margin-right: auto;
+        
+    }
+    .header {
+        color: #cfb53b;
+        text-align: center;
+        font-size: 40px;
+        margin-bottom: 2rem;
+        margin-left: 50px;
+        margin-top: -2rem;
+    }
+    .sub-header {
+        max-width: 600px;
+        margin: auto;
+        text-align: center;
+        color: #18181b;
+        margin-top: -2rem;
+        margin-bottom: 3rem;
+        margin-left: 50px;
+    }
+    footer {
+        grid-template-columns: 1fr 100px;
     }
 }

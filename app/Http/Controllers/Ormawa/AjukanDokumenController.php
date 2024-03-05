@@ -12,7 +12,7 @@ use App\Models\User;
 use App\Http\Controllers\MailController;
 use Auth;
 use Carbon\Carbon;
-
+use Illuminate\Support\Facades\Storage;
 class AjukanDokumenController extends Controller
 {
     public function index()

@@ -17,7 +17,7 @@
             </a>
           </div>
         </div>
-        <div class="item"  style="background-image: url(/img/BADANANGGARAN.jpg);">
+        <div class="item"  style="background-image: url(/img/BADANANGGARAN-COBA.jpg);">
           <div class="content">
             <div class="name">Badan Anggaran</div>
             <div class="des">Badan anggaran adalah badan yang dibentuk oleh SM FH Undip dan merupakan alat kelengkapan SM FH Undip yang bersifat tetap, badan ini memiliki tugas serta fungsi yang tidak jauh daripada fungsi anggaran yang
