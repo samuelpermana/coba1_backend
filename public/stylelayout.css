@@ -449,7 +449,6 @@ footer .column > a:hover {
     left: 0;
     width: 100%;
     background-color: var(--container-color);
-    
     padding: 0 1rem;
     z-index: -2rem;
     margin-top: 2rem;
