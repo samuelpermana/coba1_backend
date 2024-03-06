@@ -681,7 +681,7 @@ footer .column > a:hover {
 }
 
 .header {
-    color: #cfb53b;
+    color: #18181b;
     text-align: center;
     font-size: 40px;
     margin-bottom: 2rem;
@@ -882,12 +882,10 @@ label {
         
     }
     .header {
-        color: #cfb53b;
+        color: #18181b;
         text-align: center;
         font-size: 40px;
         margin-bottom: 2rem;
-        margin-left: 50px;
-        margin-top: -2rem;
     }
     .sub-header {
         max-width: 600px;

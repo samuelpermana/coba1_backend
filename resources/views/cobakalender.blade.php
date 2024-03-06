@@ -20,7 +20,7 @@
   <nav>
     <div class="nav-logo">
       <a href="{{ url('/') }}">
-        <img src="/img/coba1.png" alt="Logo">
+        <img src="img/coba1.png" alt="Logo">
       </a>
     </div>
 
@@ -64,7 +64,7 @@
             <a href="http://127.0.0.1:8000/selayangpandang" class="btn">Makna Logo</a>
         </div>
         <div class="img">
-            <img src="/img/coba12.png">
+            <img src="img/coba12.png">
         </div>
     </header>
 
@@ -153,7 +153,7 @@
         <span class="blur"></span>
         <div class="column">
             <div class="logo">
-                <img src="/img/coba1.png">
+                <img src="img/coba1.png">
             </div>
             <p>
                 SENAT MAHASISWA FAKULTAS HUKUM UNDIP

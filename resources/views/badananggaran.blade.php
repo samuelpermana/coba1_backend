@@ -17,7 +17,7 @@
             </a>
           </div>
         </div>
-        <div class="item"  style="background-image: url(/img/BADANANGGARAN-COBA.jpg);">
+        <div class="item"  style="background-image: url(img/BADANANGGARAN-COBA.jpg);">
           <div class="content">
             <div class="name">Badan Anggaran</div>
             <div class="des">Badan anggaran adalah badan yang dibentuk oleh SM FH Undip dan merupakan alat kelengkapan SM FH Undip yang bersifat tetap, badan ini memiliki tugas serta fungsi yang tidak jauh daripada fungsi anggaran yang
@@ -92,7 +92,7 @@
       <div class="card-coba">
           <div class="imgbox">
             <img class="img-coba"
-              src="/img/putri-kuning.png"
+              src="img/putri-kuning.png"
             />
           </div>
     
@@ -106,7 +106,7 @@
       <div class="card-coba">
           <div class="imgbox">
             <img class="img-coba"
-              src="/img/felicia-kuning.png"
+              src="img/felicia-kuning.png"
             />
           </div>
     
@@ -122,7 +122,7 @@
       <div class="card-coba">
             <div class="imgbox">
               <img class="img-coba"
-                src="/img/gibran-kuning.png"
+                src="img/gibran-kuning.png"
               />
             </div>
       
@@ -136,7 +136,7 @@
         <div class="card-coba">
             <div class="imgbox">
               <img class="img-coba"
-                src="/img/dhiyaa-kuning.png"
+                src="img/dhiyaa-kuning.png"
               />
             </div>
       
@@ -152,7 +152,7 @@
       <div class="card-coba">
               <div class="imgbox">
                 <img class="img-coba"
-                  src="/img/yosef-kuning.png"
+                  src="img/yosef-kuning.png"
                 />
               </div>
         

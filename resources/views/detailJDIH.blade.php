@@ -68,9 +68,9 @@
               </tr>
               <!-- <tr>
                       <td>Download File</td>
-                      <td><a href="/img/filetransparan.svg" download>
+                      <td><a href="img/filetransparan.svg" download>
                         <span class="blue">
-                          <img class="imageperma" src="/img/filetransparan.svg" alt=""/>
+                          <img class="imageperma" src="img/filetransparan.svg" alt=""/>
                         </span>
                       </a>
                       </td>

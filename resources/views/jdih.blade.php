@@ -54,7 +54,7 @@
           <div class="features-JD">
             @foreach ($jdihRecords as $jdih)
               <div class="card-JD">
-                <span class="blue"><img class="star-img" src="/img/stack.svg" alt="" /></span>
+                <span class="blue"><img class="star-img" src="img/stack.svg" alt="" /></span>
                 <div class="content">
                   <a class=".features-JD .card-JD h4" href="{{ route("jdih.show", ["id" => $jdih->id]) }}">{{ $jdih->nama_peraturan }}</a>
                 </div>

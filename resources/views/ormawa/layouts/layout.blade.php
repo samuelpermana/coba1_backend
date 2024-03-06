@@ -33,7 +33,7 @@
       <nav class="nav2__container">
         <div>
           <a class="nav2_link nav2_logo" href="#">
-            <img src="/img/coba1.png" alt="Logo">
+            <img src="img/coba1.png" alt="Logo">
 
           </a>
 
@@ -91,7 +91,7 @@
     <nav>
       <div class="nav-logo">
         <a href="{{ url("/ormawa/ajukansurat") }}">
-          <img src="/img/coba1.png" alt="Logo">
+          <img src="img/coba1.png" alt="Logo">
         </a>
       </div>
 
@@ -121,7 +121,7 @@
       <span class="blur"></span>
       <div class="column">
         <div class="logo">
-          <img src="/img/coba1.png">
+          <img src="img/coba1.png">
         </div>
         <p>SENAT MAHASISWA FAKULTAS HUKUM UNDIP</p>
         <p class="address"> 

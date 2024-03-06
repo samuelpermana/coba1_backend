@@ -17,7 +17,7 @@
             </a>
           </div>
         </div>
-        <div class="item"  style="background-image: url(/img/BADANLEGISLASI-COBA.png);">
+        <div class="item"  style="background-image: url(img/BADANLEGISLASI-COBA.png);">
           <div class="content">
             <div class="name">Badan Legislasi</div>
             <div class="des">Badan legislasi merupakan salah satu alat kelengkapan dari 4 badan yang berada dalam SM FH Undip 2022. Senator anggota badan legislasi mewakili masing-masing komisi terkait guna menciptakan tata kelola
@@ -106,7 +106,7 @@
       <div class="card-coba">
           <div class="imgbox">
             <img class="img-coba"
-              src="/img/maharani-kuning.png"
+              src="img/maharani-kuning.png"
             />
           </div>
     
@@ -120,7 +120,7 @@
       <div class="card-coba">
           <div class="imgbox">
             <img class="img-coba"
-              src="/img/yolanda-kuning.png"
+              src="img/yolanda-kuning.png"
             />
           </div>
     
@@ -136,7 +136,7 @@
       <div class="card-coba">
             <div class="imgbox">
               <img class="img-coba"
-                src="/img/sami-kuning.png"
+                src="img/sami-kuning.png"
               />
             </div>
       
@@ -150,7 +150,7 @@
         <div class="card-coba">
             <div class="imgbox">
               <img class="img-coba"
-                src="/img/habib-kuning.png"
+                src="img/habib-kuning.png"
               />
             </div>
       

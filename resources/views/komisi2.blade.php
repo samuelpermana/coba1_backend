@@ -16,7 +16,7 @@
             </a>
           </div>
         </div>
-        <div class="item"  style="background-image: url(/img/KOMISI2-COBA.jpg);">
+        <div class="item"  style="background-image: url(img/KOMISI2-COBA.jpg);">
           <div class="content">
             <div class="name">KOMISI II</div>
             <div class="des">Komisi II adalah komisi yang menaungi terkait Bidang Minat, Bakat, Kaderisasi dan Kerohanian</div>
@@ -101,7 +101,7 @@
     <div class="anggota-4">
       <div class="card-coba">
         <div class="imgbox">
-          <img class="img-coba" src="/img/felicia-kuning.png" />
+          <img class="img-coba" src="img/felicia-kuning.png" />
         </div>
 
         <div class="content1">
@@ -113,7 +113,7 @@
       </div>
       <div class="card-coba">
         <div class="imgbox">
-          <img class="img-coba" src="/img/zaneta-kuning.png" />
+          <img class="img-coba" src="img/zaneta-kuning.png" />
         </div>
 
         <div class="content1">
@@ -127,7 +127,7 @@
     <div class="anggota-4-1">
       <div class="card-coba">
         <div class="imgbox">
-          <img class="img-coba" src="/img/zalfaritsa-kuning.png" />
+          <img class="img-coba" src="img/zalfaritsa-kuning.png" />
         </div>
 
         <div class="content1">
@@ -139,7 +139,7 @@
       </div>
       <div class="card-coba">
         <div class="imgbox">
-          <img class="img-coba" src="/img/yosef-kuning.png" />
+          <img class="img-coba" src="img/yosef-kuning.png" />
         </div>
 
         <div class="content1">

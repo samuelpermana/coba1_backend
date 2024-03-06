@@ -9,7 +9,7 @@
         <section class="table__header">
             <div class="input-group">
                 <input type="search" placeholder="Search Data...">
-                <img src="/img/search.png" alt="">
+                <img src="img/search.png" alt="">
             </div>
             
         </section>
@@ -31,7 +31,7 @@
                     </tr>
                 </thead>
                 <tbody>
-                @forelse ($proposalData as $proposal)
+                @foreach ($proposalData as $proposal)
                     <tr>
                         <td> 1 </td>
                         <td>{{ $proposal['judul'] }}</td>
@@ -71,7 +71,7 @@
 
                         <td>
                         <a href="{{ Storage::url($proposal['file_proposal']) }}"target="_blank>
-                            <span class="blue"><img class="star-img" src="/img/filetransparan.svg" alt="" /></span>
+                            <span class="blue"><img class="star-img" src="img/filetransparan.svg" alt="" /></span>
                         </a>
                         </td>  
                         <td>
@@ -86,11 +86,11 @@
                                 {{-- Cek apakah file final sudah diunggah --}}
                                 @if ($proposal['file_final'])
                                     <a href="{{ Storage::url($proposal['file_final']) }}" target="_blank" class="blue">
-                                        <img class="star-img" src="/img/filetransparan.svg" alt="" />
+                                        <img class="star-img" src="img/filetransparan.svg" alt="" />
                                     </a>
                                 @else
                                     {{-- Tampilkan form untuk mengunggah file final PDF --}}
-                                    <img class="star-imgfinal" src="/img/filetransparan.svg" alt="" />
+                                    <img class="star-imgfinal" src="img/filetransparan.svg" alt="" />
                                     <form class="finalis"{{ route('ormawa.upload.file.final', $proposal['id']) }}" method="post" enctype="multipart/form-data">
                                         @csrf
                                         <input class="final" type="file" name="file_final" accept="application/pdf">
@@ -105,11 +105,8 @@
 
 
                     </tr>
-                    @empty
-                    <tr>
-                        <td colspan="6">Tidak ada data proposal.</td>
-                    </tr>
-                @endforelse
+
+                @endforeach
                     
                 </tbody>
             </table>

@@ -16,7 +16,7 @@
             </a>
           </div>
         </div>
-        <div class="item"  style="background-image: url(/img/BADANKEHORMATAN-COBA.jpg);">
+        <div class="item"  style="background-image: url(img/BADANKEHORMATAN-COBA.jpg);">
           <div class="content">
             <div class="name">Badan Kehormatan</div>
             <div class="des">Badan Kehormatan adalah badan yang dibentuk SM FH Undip dan merupakan alat kelengkapan SM FH Undip yang bersifat tetap serta memiliki tugas untuk menegakkan tata tertib, tata beracara, dan kode etik</div>
@@ -90,7 +90,7 @@
       <div class="card-coba">
           <div class="imgbox">
             <img class="img-coba"
-              src="/img/ridho-kuning.png"
+              src="img/ridho-kuning.png"
             />
           </div>
     
@@ -104,7 +104,7 @@
       <div class="card-coba">
           <div class="imgbox">
             <img class="img-coba"
-              src="/img/carmel-kuning.png"
+              src="img/carmel-kuning.png"
             />
           </div>
     
@@ -120,7 +120,7 @@
       <div class="card-coba">
             <div class="imgbox">
               <img class="img-coba"
-                src="/img/fakhru-kuning.png"
+                src="img/fakhru-kuning.png"
               />
             </div>
       
@@ -134,7 +134,7 @@
         <div class="card-coba">
             <div class="imgbox">
               <img class="img-coba"
-                src="/img/fakhri-kuning.png"
+                src="img/fakhri-kuning.png"
               />
             </div>
       

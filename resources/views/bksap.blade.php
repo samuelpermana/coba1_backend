@@ -16,7 +16,7 @@
             </a>
           </div>
         </div>
-        <div class="item"  style="background-image: url(/img/BKSAP-COBA.jpg);">
+        <div class="item"  style="background-image: url(img/BKSAP-COBA.jpg);">
           <div class="content">
             <div class="name">BKSAP</div>
             <div class="des">Badan Kerja Sama Antar Parlemen terdiri dari Biro media dan Biro Humas</div>
@@ -101,7 +101,7 @@
       <div class="card-coba">
           <div class="imgbox">
             <img class="img-coba"
-              src="/img/zalfaritsa-kuning.png"
+              src="img/zalfaritsa-kuning.png"
             />
           </div>
     
@@ -115,7 +115,7 @@
       <div class="card-coba">
           <div class="imgbox">
             <img class="img-coba"
-              src="/img/zaneta-kuning.png"
+              src="img/zaneta-kuning.png"
             />
           </div>
     
@@ -131,7 +131,7 @@
       <div class="card-coba">
             <div class="imgbox">
               <img class="img-coba"
-                src="/img/arjuna-kuning.png"
+                src="img/arjuna-kuning.png"
               />
             </div>
       
@@ -145,7 +145,7 @@
         <div class="card-coba">
             <div class="imgbox">
               <img class="img-coba"
-                src="/img/alzena-kuning.png"
+                src="img/alzena-kuning.png"
               />
             </div>
       

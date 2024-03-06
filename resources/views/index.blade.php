@@ -53,7 +53,7 @@
       <a class="btn" href="http://127.0.0.1:8000/selayangpandang">Makna Logo</a>
     </div>
     <div class="img">
-      <img src="/img/coba12.png">
+      <img src="img/coba12.png">
     </div>
   </header>
 
@@ -91,7 +91,7 @@
   </section>
 
   <section class="container">
-    <h2 class="header">AKTIVITAS LEGISLASI</h2>
+    <h2 class="header">AKTIVITAS LEGISLATIF</h2>
     <div class="container">
       <div class="row">
         <div class="col-12 mt-3">

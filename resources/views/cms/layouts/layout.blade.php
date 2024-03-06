@@ -17,7 +17,7 @@
           <div class="vertical_bar">
             <div class="profile_info">
               <div class="img_holder">
-                <img src="/img/coba23.png" alt="Logo Senat" style="margin-bottom: 10px">
+                <img src="img/coba23.png" alt="Logo Senat" style="margin-bottom: 10px">
               </div>
               <p class="title">CMS SENAT FH</p>
               <p class="sub_title">senatfhundip@gmail.com</p>
