@@ -113,6 +113,7 @@ Route::group([
     Route::get('jdih/edit/{id}', [JDIHAdminCtrl::class, 'edit'])->name('jdih.edit');
     Route::put('jdih/update/{id}', [JDIHAdminCtrl::class, 'update'])->name('jdih.update');
     Route::get('jdih/delete/{id}', [JDIHAdminCtrl::class, 'delete'])->name('jdih.delete');
+    Route::delete('jdih/delete-file/{id}', 'JDIHController@deleteFile')->name('jdih.delete_file');
 
     Route::resource('rooms', RoomAdminController::class);
     Route::resource('room-schedules', RoomScheduleAdminController::class);

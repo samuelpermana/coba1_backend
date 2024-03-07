@@ -45,11 +45,11 @@
                 </td>
               </tr>
               <tr>
-                <td>File Naskah</td>
+                <td>File Naskah Akademik</td>
                 <td><a href="{{ Storage::url($jdihRecord->file_naskah) }}" target="_blank">Download</a></td>
               </tr>
               <tr>
-                <td>File Inventarisasi</td>
+                <td>File DIM</td>
                 <td><a href="{{ Storage::url($jdihRecord->file_inventarisasi) }}" target="_blank">Download</a></td>
               </tr>
               <tr>

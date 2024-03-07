@@ -44,24 +44,25 @@
       @endif
       <input accept="application/pdf" class="custom-bae" id="file_peraturan" name="file_peraturan" type="file"><br>
 
-      <label for="file_naskah">File Naskah:</label><br>
+      <label for="file_naskah">File Naskah Akademik:</label><br>
       @if ($jdihRecord->file_naskah)
         <p><a href="{{ Storage::url($jdihRecord->file_naskah) }}" target="_blank" class="custom-link">Download File Naskah Lama</a></p>
       @endif
       <input accept="application/pdf" class="custom-bae" id="file_naskah" name="file_naskah" type="file"><br>
 
-      <label for="file_inventarisasi">File Inventarisasi:</label><br>
+      <label for="file_inventarisasi">File DIM:</label><br>
       @if ($jdihRecord->file_inventarisasi)
         <p><a href="{{ Storage::url($jdihRecord->file_inventarisasi) }}" target="_blank" class="custom-link">Download File Inventarisasi Lama</a></p>
       @endif
       <input accept="application/pdf" class="custom-bae" id="file_inventarisasi" name="file_inventarisasi" type="file"><br>
 
-      <label for="file_lainnya">File Lainnya:</label><br>
+      <label for="file_lainnya">File Lainnya <small style="font-size: 0.8em;">(centang jika ingin menghapus file)</small>:</label><br>
       @if ($jdihRecord->file_lain->isNotEmpty())
         <ul>
           @foreach ($jdihRecord->file_lain as $file)
             <li>
               <a href="{{ Storage::url($file->nama_file) }}" target="_blank" class="custom-link">Download File Lainnya {{ $loop->iteration }}</a>
+              <input  class="custom-link" type="checkbox" name="file_to_delete[]" value="{{ $file->id }}"> <br>
             </li>
           @endforeach
         </ul>

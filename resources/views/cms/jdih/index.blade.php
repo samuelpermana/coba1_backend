@@ -30,8 +30,8 @@
                           <th>Nama Peraturan</th>
                           <th>Tanggal Disahkan</th>
                           <th>File Peraturan</th>
-                          <th>File Naskah</th>
-                          <th>File Inventarisasi</th>
+                          <th>File Naskah Akademik</th>
+                          <th>File DIM</th>
                           <th>File Lainnya</th>
                           <th>Action</th> <!-- New column for actions -->
                         </tr>

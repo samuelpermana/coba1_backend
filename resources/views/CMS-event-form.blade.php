@@ -22,23 +22,23 @@
       <div class="mb-3">
         <div class="form-check form-check-inline">
           <input class="form-check-input" id="category-success" name="category" type="radio" value="success" {{ $data->category == "success" ? "checked" : null }}>
-          <label class="form-check-label" for="category-success">Rapat A</label>
+          <label class="form-check-label" for="category-success">Rapat Komisi</label>
         </div>
         <div class="form-check form-check-inline">
           <input class="form-check-input" id="category-danger" name="category" type="radio" value="danger" {{ $data->category == "danger" ? "checked" : null }}>
-          <label class="form-check-label" for="category-danger">Rapat B</label>
+          <label class="form-check-label" for="category-danger">Rapat Badan</label>
         </div>
         <div class="form-check form-check-inline">
           <input class="form-check-input" id="category-warning" name="category" type="radio" value="warning" {{ $data->category == "warning" ? "checked" : null }}>
-          <label class="form-check-label" for="category-warning">Rapat C</label>
+          <label class="form-check-label" for="category-warning">Rapat Senator</label>
         </div>
         <div class="form-check form-check-inline">
           <input class="form-check-input" id="category-info" name="category" type="radio" value="info" {{ $data->category == "info" ? "checked" : null }}>
-          <label class="form-check-label" for="category-info">Rapat D</label>
+          <label class="form-check-label" for="category-info">Sidang Pleno</label>
         </div>
         <div class="form-check form-check-inline">
           <input class="form-check-input" id="category-info" name="category" type="radio" value="disabled" {{ $data->category == "info" ? "checked" : null }}>
-          <label class="form-check-label" for="category-info">Rapat E</label>
+          <label class="form-check-label" for="category-info">Sidang Paripurna</label>
         </div>
       </div>
     </div>
