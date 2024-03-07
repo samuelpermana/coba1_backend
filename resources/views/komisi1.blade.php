@@ -7,7 +7,7 @@
     <div class="container6">
       <div class="slide">
 
-      <div class="item"  style="background-image: url(/img/KOMISI1.jpg);">
+      <div class="item"  style="background-image: url(img/KOMISI1.jpg);">
           <div class="content">
             <div class="name">KOMISI I</div>
             <div class="des">Komisi I adalah komisi yang menaungi terkait dengan Bidang Pengembangan dan Keilmuan</div>
@@ -16,7 +16,7 @@
             </a>
           </div>
         </div>
-        <div class="item"  style="background-image: url(/img/KOMISI1-COBA.jpg);">
+        <div class="item"  style="background-image: url(img/KOMISI1-COBA.jpg);">
           <div class="content">
             <div class="name">KOMISI I</div>
             <div class="des">Komisi I adalah adalah komisi yang menaungi terkait dengan Bidang Pengembangan dan Keilmuan</div>
@@ -104,7 +104,7 @@
       <div class="card-coba">
           <div class="imgbox">
             <img class="img-coba"
-              src="/img/gibran-kuning.png"
+              src="img/gibran-kuning.png"
             />
           </div>
     
@@ -118,7 +118,7 @@
       <div class="card-coba">
           <div class="imgbox">
             <img class="img-coba"
-              src="/img/maharani-kuning.png"
+              src="img/maharani-kuning.png"
             />
           </div>
     
@@ -134,7 +134,7 @@
       <div class="card-coba">
             <div class="imgbox">
               <img class="img-coba"
-                src="/img/sami-kuning.png"
+                src="img/sami-kuning.png"
               />
             </div>
       
@@ -148,7 +148,7 @@
         <div class="card-coba">
             <div class="imgbox">
               <img class="img-coba"
-                src="/img/ridho-kuning.png"
+                src="img/ridho-kuning.png"
               />
             </div>
       
