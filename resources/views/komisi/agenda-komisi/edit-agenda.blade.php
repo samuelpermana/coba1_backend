@@ -21,8 +21,17 @@
             </div>
             <div class="form-group">
                 <label for="file">Dokumen:</label>
+                @if($agenda->file)
+                    <p>File saat ini: <a href="{{ Storage::url($agenda->file) }}" target="_blank">Download</a></p>
+                    <input type="checkbox" name="hapus_file" id="hapus_file"> Hapus File
+                @else
+                    <p>Tidak ada file yang diunggah.</p>
+                @endif
                 <input type="file" name="file" class="form-control-file input-form" id="file">
-                <p>File saat ini: <a href="{{ Storage::url($agenda->file) }}">Cek file</a></p>
+            </div>
+            <div class="form-group">
+                <label for="link">Link:</label>
+                <textarea name="link" class="form-control" id="link" rows="5">{{ $agenda->link }}</textarea>
             </div>
             <div class="form-group">
                 <label for="tanggal_pelaksanaan">Tanggal Pelaksanaan:</label>

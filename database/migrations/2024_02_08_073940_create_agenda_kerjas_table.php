@@ -18,6 +18,7 @@ class CreateAgendaKerjasTable extends Migration
             $table->string('deskripsi');
             $table->boolean('status')->default(false);
             $table->string('file')->nullable(); 
+            $table->string('link')->nullable(); 
             $table->date('tanggal_pelaksanaan')->nullable();
             $table->timestamps();
 

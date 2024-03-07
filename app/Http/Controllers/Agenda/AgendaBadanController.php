@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\AgendaKerja;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Storage;
 
 class AgendaBadanController extends Controller
 {
@@ -30,6 +31,7 @@ class AgendaBadanController extends Controller
              'status' => 'nullable|boolean',
              'deskripsi'=>'required|string',
              'file' => 'nullable|file',
+             'link' => 'nullable|string',
              'tanggal_pelaksanaan' => 'nullable|date',
          ]);
          if (!isset($validatedData['status'])) {
@@ -49,6 +51,7 @@ class AgendaBadanController extends Controller
              'deskripsi' => $validatedData['deskripsi'],
              'status' => $validatedData['status'],
              'file' =>  $file_path,
+             'link' => $validatedData['link'],
              'tanggal_pelaksanaan' => $validatedData['tanggal_pelaksanaan'],
 
          ]);
@@ -64,32 +67,45 @@ class AgendaBadanController extends Controller
         $agenda = AgendaKerja::findOrFail($id);
         return view('agenda-badan.edit-agenda', compact('agenda'));
     }
+    
     public function update(Request $request, $id)
 {
-        $agenda = AgendaKerja::findOrFail($id);
-    
-        $validatedData = $request->validate([
-            'nama' => 'required|string|max:255',
-            'deskripsi' => 'required|string',
-            'status' => 'nullable|boolean',
-            'file' => 'nullable|file',
-            'tanggal_pelaksanaan' => 'date',
-        ]);
-        if (!isset($validatedData['status'])) {
-            $validatedData['status'] = false;
+    try {
+        $agenda = AgendaKerja::findOrFail($id);  
+            $validatedData = $request->validate([
+                'nama' => 'required|string|max:255',
+                'deskripsi' => 'required|string',
+                'status' => 'nullable|boolean',
+                'file' => 'nullable|file',
+                'link' => 'nullable|string',
+                'tanggal_pelaksanaan' => 'nullable|date',
+            ]);
+            
+            if (!isset($validatedData['status'])) {
+                $validatedData['status'] = false;
+            }
+        
+            $agenda->nama = $validatedData['nama'];
+            $agenda->deskripsi = $validatedData['deskripsi'];
+            $agenda->status = $validatedData['status'];
+            $agenda->tanggal_pelaksanaan = $validatedData['tanggal_pelaksanaan'];
+            $agenda->link = $validatedData['link'];
+            
+            if ($request->has('hapus_file')) {
+                if ($agenda->file) {
+                    Storage::delete($agenda->file);
+                    $agenda->file = null;
+                }
+            } elseif ($request->hasFile('file')) {
+                $agenda->file = $validatedData['file']->store('files', 'public');
+            }
+        
+            $agenda->save();
+            $user_role_slug = auth()->user()->role->role_slug;
+            return redirect()->route($user_role_slug . '.agenda.index')->with('success', 'Agenda kerja berhasil diperbarui!');
+        } catch (\Exception $e) {
+            return response_error(null, $e->getMessage(), $e->getCode());
         }
-    
-        $agenda->nama = $validatedData['nama'];
-        $agenda->deskripsi = $validatedData['deskripsi'];
-        $agenda->status = $validatedData['status'];
-        $agenda->tanggal_pelaksanaan = $validatedData['tanggal_pelaksanaan'];
-        if ($request->hasFile('file')) {
-            $agenda->file = $validatedData['file']->store('files', 'public');
-        }
-    
-        $agenda->save();
-        $user_role_slug = auth()->user()->role->role_slug;
-        return redirect()->route($user_role_slug . '.agenda.index')->with('success', 'Agenda kerja berhasil diperbarui!');
     }
 
     public function destroy($id)

@@ -7,14 +7,14 @@
     <form action="{{ route( auth()->user()->role->role_slug .'.agenda.store') }}" method="POST" enctype="multipart/form-data">
         @csrf
         <div class="form-group">
-            <label for="nama">Nama Agenda:</label>
+            <label for="nama">Nama Agenda <span class="required">*</span>:</label>
             <input type="text" name="nama" class="form-control input-form" id="nama" required>
         </div>
         <div class="form-group">
-            <label for="deskripsi">Deskripsi:</label>
+            <label for="deskripsi">Deskripsi <span class="required">*</span>:</label>
             <input type="text" name="deskripsi" class="form-control input-form" id="deskripsi" required>
         </div>
-        <div class="form-group">
+                <div class="form-group">
             <label for="status">Status:</label>
             <div class="form-check">
                 <input class="form-check-input" type="checkbox" value="1" name="status" id="status">
@@ -25,7 +25,11 @@
         </div>
         <div class="form-group">
             <label for="file">Dokumen:</label>
-            <input type="file" name="file" class="form-control-file input-form" id="file">
+            <input type="file" name="file" class="form-control-file input-form" id="file" >
+        </div>
+        <div class="form-group">
+            <label for="link">Link:</label>
+            <input type="text" name="link" class="form-control input-form" id="link">
         </div>
         <div class="form-group">
             <label for="tanggal_pelaksanaan">Tanggal Pelaksanaan:</label>
