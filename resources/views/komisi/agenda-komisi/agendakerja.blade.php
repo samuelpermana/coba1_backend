@@ -25,6 +25,7 @@
                         <th> Status <span class="icon-arrow">&UpArrow;</span></th>
                         <th> Deskripsi <span class="icon-arrow">&UpArrow;</span></th>
                         <th> Dokumen <span class="icon-arrow">&UpArrow;</span></th>
+                        <th> link <span class="icon-arrow">&UpArrow;</span></th>
                         <th> Action <span class="icon-arrow">&UpArrow;</span></th>
                         
                     </tr>
@@ -37,7 +38,21 @@
                         <td>{{ $agenda->tanggal_pelaksanaan }}</td>
                         <td>{{ $agenda->status }}</td>
                         <td>{{ $agenda->deskripsi }}</td> <!-- Tambahkan kolom deskripsi di sini -->
-                        <td><a href="{{ Storage::url($agenda->file) }}" target="_blank">Download</a></td>
+                        <td>
+                            @if($agenda->file)
+                                <a href="{{ Storage::url($agenda->file) }}" target="_blank">Download</a>
+                            @else
+                                -
+                            @endif
+                        </td>
+                        <td>
+                            @if($agenda->link)
+                                <a href="{{ $agenda->link }}" target="_blank">Link</a>
+                            @else
+                                -
+                            @endif
+                        </td>
+
                         <td>
                         <a href="{{ route(auth()->user()->role->role_slug . '.agenda.edit', $agenda->id) }}" class="btn btn-primary">Edit</a>
                         <form action="{{ route(auth()->user()->role->role_slug . '.agenda.destroy', $agenda->id) }}" method="POST" style="display: inline-block;">
@@ -45,7 +60,6 @@
                             @method('DELETE')
                             <button type="submit" class="btn btn-danger">Hapus</button>
                         </form>
-                       
                     </td>
 
                     </tr>

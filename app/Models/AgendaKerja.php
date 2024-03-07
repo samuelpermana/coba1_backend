@@ -15,6 +15,7 @@ class AgendaKerja extends Model
         'deskripsi',
         'status',
         'file',
+        'link',
         'tanggal_pelaksanaan',
     ];
 }
