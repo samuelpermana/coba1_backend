@@ -40,10 +40,10 @@
       <label for="file_peraturan">File Peraturan:</label>
       <input name="file_peraturan" type="file"accept="application/pdf">
 
-      <label for="file_naskah">File Naskah:</label>
+      <label for="file_naskah">File Naskah Akademik:</label>
       <input name="file_naskah" type="file" accept="application/pdf">
 
-      <label for="file_inventarisasi">File Inventarisasi:</label>
+      <label for="file_inventarisasi">File DIM:</label>
       <input name="file_inventarisasi" type="file" accept="application/pdf">
 
       <label for="file_lainnya">File Lainnya:</label>
