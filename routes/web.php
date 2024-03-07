@@ -83,10 +83,6 @@ Route::get('/tentang-badan-legislasi', [AgendaWebController::class, 'badanLegisl
 Route::get('/tentang-bksap', [AgendaWebController::class, 'Bksap'])->name('tentang.bksap');
 
 
-Route::get('/aaa', function () {
-    return view('detailJDIH');
-});
-
 
 Route::get('/cobakalender', function () {
     return view('cobakalender');
@@ -94,7 +90,6 @@ Route::get('/cobakalender', function () {
 
 Route::get('/aspirasi', [AspirasiController::class, 'getAspirasi']);
 
-Route::get('/jdih  ', [JDIHController::class, 'getJDIH']);
 Route::get('/jdih/jenis/{id}', [JDIHController::class, 'jenis'])->name('jdih.jenis');
 
 Route::get('jdih/show/{id}', [JDIHController::class, 'showJDIH'])->name('jdih.show');
