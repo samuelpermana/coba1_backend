@@ -14,51 +14,269 @@ class UserSeeder extends Seeder
      */
     public function run(): void
     {
-        // User::create([
-        //     'name' => 'Admin',
-        //     'email' => 'adminsmfh@gmail.com',
-        //     'password' => Hash::make('adminFH12!'),
-        //     'role_id' => 1,
-        // ]);
-
-
-        // Seeder untuk membuat 18 akun ormawa
-        for ($i = 1; $i <= 18; $i++) {
-            User::create([
-                'name' => 'ORMAWA ' . $i,
-                'email' => 'ormawa' . $i . '@example.com',
-                'password' => Hash::make('password'),
-                'role_id' => 2, 
-            ]);
-        }
-
-        // Seeder untuk membuat 1 akun Pimpinan Tinggi
         User::create([
-            'name' => 'Pimpinan Tinggi',
-            'email' => 'pimpinantinggi@example.com',
+            'name' => 'Admin SM FH Undip',
+            'email' => 'bksapsmfhundip24@gmail.com ',
             'password' => Hash::make('password'),
-            'role_id' => 3, // Sesuaikan dengan id role Pimpinan Tinggi
+            'role_id' => 1,
+        ]);
+        User::create([
+            'name' => 'Pimpinan Tinggi SMFH',
+            'email' => 'senatmahasiswa.fhundip@gmail.com',
+            'password' => Hash::make('password'),
+            'role_id' => 3,
+        ]);
+        User::create([
+            'name' => 'Komisi I SM FH Undip',
+            'email' => 'komisi1aryawiraraja2024@gmail.com',
+            'password' => Hash::make('password'),
+            'role_id' => 4,
+        ]);
+        User::create([
+            'name' => 'Komisi II SM FH Undip',
+            'email' => 'komisi2smfhundip24@gmail.com',
+            'password' => Hash::make('password'),
+            'role_id' => 5,
+        ]);
+        User::create([
+            'name' => 'Komisi III SM FH Undip',
+            'email' => 'komisi3senatfh@gmail.com',
+            'password' => Hash::make('password'),
+            'role_id' => 6,
+        ]);
+        User::create([
+            'name' => 'Komisi IV SM FH Undip',
+            'email' => 'komisi4smfhundip@gmail.com',
+            'password' => Hash::make('password'),
+            'role_id' => 7,
+        ]);
+        User::create([
+            'name' => 'Badan Anggaran',
+            'email' => 'badananggaransenatfh@gmail.com',
+            'password' => Hash::make('password'),
+            'role_id' => 8,
         ]);
 
-        $roles = [
-            ['id' => 4, 'role_name' => 'Komisi1', 'role_slug' => 'komisi-i'],
-            ['id' => 5, 'role_name' => 'Komisi2', 'role_slug' => 'komisi-ii'],
-            ['id' => 6, 'role_name' => 'Komisi3', 'role_slug' => 'komisi-iii'],
-            ['id' => 7, 'role_name' => 'Komisi4', 'role_slug' => 'komisi-iv'],
-            ['id' => 8, 'role_name' => 'Badan Anggaran', 'role_slug' => 'badan-anggaran'],
-            ['id' => 9, 'role_name' => 'Badan Kehormatan', 'role_slug' => 'badan-kehormatan'],
-            ['id' => 10, 'role_name' => 'Badan Legislasi', 'role_slug' => 'badan-legislasi'],
-            ['id' => 11, 'role_name' => 'BKSAP', 'role_slug' => 'bksap'],
-        ];
-
-        foreach ($roles as $role) {
-            User::create([
-                'name' => $role['role_name'],
-                'email' => strtolower($role['role_slug']) . '@example.com',
-                'password' => Hash::make('password'),
-                'role_id' => $role['id'],
-            ]);
-        }
+        User::create([
+            'name' => 'Badan Kehormatan',
+            'email' => 'bksmfhundip@gmail.com',
+            'password' => Hash::make('password'),
+            'role_id' => 9,
+        ]);
+        User::create([
+            'name' => 'Badan Legislasi',
+            'email' => 'smfhundipbadanlegislasi@gmail.com',
+            'password' => Hash::make('password'),
+            'role_id' => 10,
+        ]);
+        User::create([
+            'name' => 'BKSAP',
+            'email' => 'bksapadmin@gmail.com ',
+            'password' => Hash::make('password'),
+            'role_id' => 11,
+        ]);
+        User::create([
+            'name' => 'Badan Eksekutif Mahasiswa FH Undip Tahun 2024',
+            'email' => 'bemfhundip2024@gmail.com',
+            'password' => Hash::make('password'),
+            'role_id' => 2,
+        ]);
+        
+        User::create([
+            'name' => 'Minat dan Bakat BEM FH',
+            'email' => 'mikatbemfhundip2024@gmail.com',
+            'password' => Hash::make('password'),
+            'role_id' => 2,
+        ]);
+        
+        User::create([
+            'name' => 'Karir dan Profesi BEM FH',
+            'email' => 'kaprobemfhundip2024@gmail.com',
+            'password' => Hash::make('password'),
+            'role_id' => 2,
+        ]);
+        
+        User::create([
+            'name' => 'Pemberdayaan Perempuan BEM FH',
+            'email' => 'ppbemfhundip2024@gmail.com',
+            'password' => Hash::make('password'),
+            'role_id' => 2,
+        ]);
+        
+        User::create([
+            'name' => 'Hubungan antar Lembaga dan Masyarakat BEM FH Undip',
+            'email' => 'halmasbemfhundip2024@gmail.com',
+            'password' => Hash::make('password'),
+            'role_id' => 2,
+        ]);
+        
+        User::create([
+            'name' => 'Riset dan Keilmuan BEM FH Undip',
+            'email' => 'riskelbemfhundip@gmail.com',
+            'password' => Hash::make('password'),
+            'role_id' => 2,
+        ]);
+        
+        User::create([
+            'name' => 'Advokesma BEM FH Undip',
+            'email' => 'Advokesmabemfhundip2024@gmail.com',
+            'password' => Hash::make('password'),
+            'role_id' => 2,
+        ]);
+        
+        User::create([
+            'name' => 'Ekonomi dan Kreatif BEM FH Undip',
+            'email' => 'ekotifbemfhundip2024@gmail.com',
+            'password' => Hash::make('password'),
+            'role_id' => 2,
+        ]);
+        
+        User::create([
+            'name' => 'Tim Penjamin Mutu Organisasi BEM FH Undip',
+            'email' => 'tpmobemfhundip@gmail.com',
+            'password' => Hash::make('password'),
+            'role_id' => 2,
+        ]);
+        
+        User::create([
+            'name' => 'Pengembangan Sumber Daya Mahasiswa BEM FH Undip',
+            'email' => 'psdmbemfhundip2024@gmail.com',
+            'password' => Hash::make('password'),
+            'role_id' => 2,
+        ]);
+        
+        User::create([
+            'name' => 'Hubungan Sosial dan Politik BEM FH Undip',
+            'email' => 'hspbemfhundip@gmail.com',
+            'password' => Hash::make('password'),
+            'role_id' => 2,
+        ]);
+        
+        User::create([
+            'name' => 'Kantor Media dan Informasi BEM FH Undip',
+            'email' => 'kmibemfhundip2024@gmail.com',
+            'password' => Hash::make('password'),
+            'role_id' => 2,
+        ]);
+        
+        User::create([
+            'name' => 'Pengabdian Masyarakat BEM FH Undip',
+            'email' => 'dimasbemfhundip@gmail.com',
+            'password' => Hash::make('password'),
+            'role_id' => 2,
+        ]);
+        
+        User::create([
+            'name' => 'UKM-F Kelompok Riset dan Debat FH Undip Tahun 2024',
+            'email' => 'krd.undip@gmail.com',
+            'password' => Hash::make('password'),
+            'role_id' => 2,
+        ]);
+        
+        User::create([
+            'name' => 'UKM-F Pseudorechtspraak FH Undip Tahun 2024',
+            'email' => 'pseudofhundip@gmail.com',
+            'password' => Hash::make('password'),
+            'role_id' => 2,
+        ]);
+        
+        User::create([
+            'name' => 'UKM-F Asian Law Students Association Local Chapter Undip Tahun 2024',
+            'email' => 'alsaundip@gmail.com',
+            'password' => Hash::make('password'),
+            'role_id' => 2,
+        ]);
+        
+        User::create([
+            'name' => 'UKM-F Kelompok Studi Hukum Islam FH Undip Tahun 2024',
+            'email' => 'kshiundip@gmail.com',
+            'password' => Hash::make('password'),
+            'role_id' => 2,
+        ]);
+        
+        User::create([
+            'name' => 'UKM-F Kelompok Studi Bahasa Asing FH Undip Tahun 2024',
+            'email' => 'ksbafhundipofficial@gmail.com',
+            'password' => Hash::make('password'),
+            'role_id' => 2,
+        ]);
+        
+        User::create([
+            'name' => 'UKM-F Paduan Suara Mahasiswa Satya Dharma Gita FH Undip Tahun 2024',
+            'email' => 'sdg.choir2002@gmail.com',
+            'password' => Hash::make('password'),
+            'role_id' => 2,
+        ]);
+        
+        User::create([
+            'name' => 'UKM-F Bola FH Undip Tahun 2024',
+            'email' => 'bolafhundip@gmail.com',
+            'password' => Hash::make('password'),
+            'role_id' => 2,
+        ]);
+        
+        User::create([
+            'name' => 'UKM-F Basket FH Undip Tahun 2024',
+            'email' => 'basketfhundip01@gmail.com',
+            'password' => Hash::make('password'),
+            'role_id' => 2,
+        ]);
+        
+        User::create([
+            'name' => 'UKM-F Bela Diri FH Undip Tahun 2024',
+            'email' => 'beladirifhundip@gmail.com',
+            'password' => Hash::make('password'),
+            'role_id' => 2,
+        ]);
+        
+        User::create([
+            'name' => 'UKM-F Persekutuan Mahasiswa Kristen FH Undip Tahun 2024',
+            'email' => 'fhpmkundip@gmail.com',
+            'password' => Hash::make('password'),
+            'role_id' => 2,
+        ]);
+        
+        User::create([
+            'name' => 'UKM-F Pelayanan Rohani Mahasiswa Katolik FH Undip Tahun 2024',
+            'email' => 'prmkfhundip@gmail.com',
+            'password' => Hash::make('password'),
+            'role_id' => 2,
+        ]);
+        
+        User::create([
+            'name' => 'UKM-F Nebula Indonesia FH Undip Tahun 2024',
+            'email' => 'nebulaindonesia.2024@gmail.com',
+            'password' => Hash::make('password'),
+            'role_id' => 2,
+        ]);
+        
+        User::create([
+            'name' => 'UKM-F Teater Themis FH Undip Tahun 2024',
+            'email' => 'kesekretariatanteaterthemis@gmail.com',
+            'password' => Hash::make('password'),
+            'role_id' => 2,
+        ]);
+        
+        User::create([
+            'name' => 'UKM-F Koordinator Kegiatan Islam FH Undip Tahun 2024',
+            'email' => 'kki.fh.unfip@gmail.com',
+            'password' => Hash::make('password'),
+            'role_id' => 2,
+        ]);
+        
+        User::create([
+            'name' => 'UKM-F Kelompok Diskusi Kelas Sosial FH Undip Tahun 2024',
+            'email' => 'official.kdksfhundip@gmail.com',
+            'password' => Hash::make('password'),
+            'role_id' => 2,
+        ]);
+        
+        User::create([
+            'name' => 'UKM-F LPM Gema Keadilan FH Undip Tahun 2024',
+            'email' => 'lpmgemakeadilan2024@gmail.com',
+            'password' => Hash::make('password'),
+            'role_id' => 2,
+        ]);
     
     }
 }
