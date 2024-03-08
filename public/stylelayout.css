@@ -303,7 +303,7 @@ footer .column > a:hover {
 }
 
 .nav2__items {
-    row-gap: 1.5rem;
+    row-gap: 1.2rem;
 }
 
 .nav2__subtitle {
@@ -503,10 +503,6 @@ footer .column > a:hover {
 
 .nav2__list {
     row-gap: 2.5rem;
-}
-
-.nav2__items {
-    row-gap: 1.5rem;
 }
 
 .nav2__subtitle {
