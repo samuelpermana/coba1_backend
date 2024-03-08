@@ -111,6 +111,9 @@
       orang yang lebih terhormat/tua. b. Dalam Buddhisme, Arya yang berarti "MULIA" atau "DITINGGIKAN" sering digunakan dalam teks-teks Buddhis untuk menunjuk
       seorang pejuang spiritual atau pahlawan. WIRARAJA memiliki arti bahwa yang maknanya “RAJA YANG GAGAH PERWIRA”.
     </p>
+    <div class="image">
+      <img src="KudaSenat.png" />
+    </div>
     <div class="pricing1">
       <div class="card">
         <div class="warna"></div>
@@ -142,13 +145,13 @@
       <div class="card-coba">
             <div class="imgbox">
               <img class="img-coba"
-                src="img/zamroni-kuning.png"
+                src="/img/zamroni-kuning.png"
               />
             </div>
       
             <div class="content1">
               <h2>Zamroni Akhmad Affandi</h2>
-                <p class="deskripsi">
+                <p>
                   Ketua Senat Mahasiswa FH</br>FH UNDIP 2021
                 </p>
             </div>
@@ -159,13 +162,13 @@
         <div class="card-coba">
             <div class="imgbox">
               <img class="img-coba"
-                src="img/rafif-kuning.png"
+                src="/img/rafif-kuning.png"
               />
             </div>
       
             <div class="content1">
               <h2>Rafif Majid Hidayatullah</h2>
-                <p class="deskripsi">
+                <p>
                   Wakil I Bidang Pengawasan dan Anggaran</br>FH UNDIP 2021
                 </p>
             </div>
@@ -173,13 +176,13 @@
         <div class="card-coba">
             <div class="imgbox">
               <img class="img-coba"
-                src="img/abigael-kuning.png"
+                src="/img/abigael-kuning.png"
               />
             </div>
       
             <div class="content1">
               <h2>Abigael Farel Harahap</h2>
-                <p class="deskripsi">
+                <p>
                   Wakil II Bidang Aspirasi dan Legislasi</br>FH UNDIP 2021
                 </p>
             </div>
@@ -187,13 +190,13 @@
         <div class="card-coba">
             <div class="imgbox">
               <img class="img-coba"
-                src="img/candra-kuning.png"
+                src="/img/candra-kuning.png"
               />
             </div>
       
             <div class="content1">
               <h2>Candra Adrianando Satrio Priambodo</h2>
-                <p class="deskripsi">
+                <p>
                   Sekretaris Jenderal</br>FH UNDIP 2021
                 </p>
             </div>
@@ -207,7 +210,7 @@
     <h1 class="j-header">KOMISI & BADAN</h1>
     <div class="container1">
       <div class="slide">
-        <div class="item"  style="background-image: url(img/BKSAP-COBA.jpg);">
+        <div class="item"  style="background-image: url(/img/BKSAP-COBA.jpg);">
           <div class="content">
             <div class="name">BKSAP</div>
             <div class="des">Badan Kerja Sama Antar Parlemen terdiri dari Biro media dan Biro Humas</div>
@@ -216,7 +219,7 @@
             </a>
           </div>
         </div>
-        <div class="item"  style="background-image: url(img/KOMISI1-COBA.jpg);">
+        <div class="item"  style="background-image: url(/img/KOMISI1-COBA.jpg);">
           <div class="content">
             <div class="name">KOMISI I</div>
             <div class="des">Komisi I adalah komisi yang menaungi terkait dengan Bidang Pengembangan dan Keilmuan</div>
@@ -225,7 +228,7 @@
             </a>
           </div>
         </div>
-        <div class="item"  style="background-image: url(img/KOMISI2-COBA.jpg);">
+        <div class="item"  style="background-image: url(/img/KOMISI2-COBA.jpg);">
           <div class="content">
             <div class="name">KOMISI II</div>
             <div class="des">Komisi II adalah komisi yang menaungi terkait Bidang Minat, Bakat, Kaderisasi dan Keroharian</div>
@@ -234,7 +237,7 @@
             </a>
           </div>
         </div>
-        <div class="item"  style="background-image: url(img/KOMISI3-COBA.png);">
+        <div class="item"  style="background-image: url(/img/KOMISI3-COBA.png);">
           <div class="content">
             <div class="name">KOMISI III</div>
             <div class="des">Komisi III adalah komisi yang menangui terkait Bidang Hukum dan Hubungan Publik</div>
@@ -243,7 +246,7 @@
             </a>
           </div>
         </div>
-        <div class="item"  style="background-image: url(img/KOMISI4-COBA.png);">
+        <div class="item"  style="background-image: url(/img/KOMISI4-COBA.png);">
           <div class="content">
             <div class="name">KOMISI IV</div>
             <div class="des">Komisi IV adalah komisi yang menaungi terkait bidang Advokasi, Akademik, Sarana, dan Prasarana</div>
@@ -252,7 +255,7 @@
             </a>
           </div>
         </div>
-        <div class="item"  style="background-image: url(img/BADANLEGISLASI-COBA1.jpg);">
+        <div class="item"  style="background-image: url(/img/BADANLEGISLASI-COBA1.jpg);">
           <div class="content">
             <div class="name">BADAN LEGISLASI</div>
             <div class="des">
@@ -263,7 +266,7 @@
             </a>
           </div>
         </div>
-        <div class="item"  style="background-image: url(img/BADANKEHORMATAN-COBA.jpg);">
+        <div class="item"  style="background-image: url(/img/BADANKEHORMATAN-COBA.jpg);">
           <div class="content">
             <div class="name">BADAN KEHORMATAN</div>
             <div class="des">
@@ -274,7 +277,7 @@
             </a>
           </div>
         </div>
-        <div class="item"  style="background-image: url(img/BADANANGGARAN-COBA.jpg);">
+        <div class="item"  style="background-image: url(/img/BADANANGGARAN-COBA.jpg);">
           <div class="content">
             <div class="name">BADAN ANGGARAN</div>
             <div class="des">
