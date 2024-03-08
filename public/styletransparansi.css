@@ -10,8 +10,9 @@
 
 img {
   width: 70%;
+  min-width: 100px;
   display: flex;
-  margin-left: 50px;
+  margin-left: 10px;
 }
 
 a {
@@ -56,30 +57,6 @@ nav {
   align-items: center;
   justify-content: center;
 
-  gap: 3rem;
-
-}
-
-.link a {
-  position: relative;
-  padding-bottom: 0.75rem;
-  color: #18181b;
-}
-
-.link a::after {
-  content: "";
-  position: absolute;
-  height: 2px;
-  width: 0;
-  bottom: 0;
-  left: 50%; /* Menengahkan garis bawah */
-  transform: translateX(-50%); /* Menyempurnakan penempatan garis bawah */
-  background-color: #cfb53b;
-  transition: all 0.3s ease;
-}
-
-.link a:hover::after {
-  width: 70%;
 }
 
 .btn {
@@ -726,8 +703,8 @@ section .header {
 }
   
   @media (width < 900px) {
-    .nav-links {
-      display: none;
+    .btn{
+      display: block;
     }
     header {
       grid-template-columns: repeat(1, 1fr);

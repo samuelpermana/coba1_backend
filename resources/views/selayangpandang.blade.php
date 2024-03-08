@@ -111,9 +111,6 @@
       orang yang lebih terhormat/tua. b. Dalam Buddhisme, Arya yang berarti "MULIA" atau "DITINGGIKAN" sering digunakan dalam teks-teks Buddhis untuk menunjuk
       seorang pejuang spiritual atau pahlawan. WIRARAJA memiliki arti bahwa yang maknanya “RAJA YANG GAGAH PERWIRA”.
     </p>
-    <div class="image">
-      <img src="KudaSenat.png" />
-    </div>
     <div class="pricing1">
       <div class="card">
         <div class="warna"></div>
