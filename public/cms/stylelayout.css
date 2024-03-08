@@ -35,7 +35,7 @@ body {
 
 .vertical_bar {
     width: 300px;
-
+    z-index: 9999;
     background: #3d5654;
     height: 100%;
     border-top-left-radius: 25px;
@@ -139,7 +139,7 @@ body {
 }
 
 .top_bar .logo {
-    font-size: 24px;
+    font-size: 1em;
     font-weight: 700;
     text-transform: uppercase;
     color: #c99c33;
