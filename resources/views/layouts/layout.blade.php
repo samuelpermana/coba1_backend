@@ -5,9 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.5.0/remixicon.min.css" rel="stylesheet">
-    <link href="{{ asset("stylelayout.css") }} " rel="stylesheet">
-    
-    
+    <link href="{{ asset("stylelayout.css") }}" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" rel="stylesheet" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous"
       referrerpolicy="no-referrer" />
     <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous"> -->
@@ -39,7 +37,7 @@
       <nav class="nav2__container">
         <div>
           <a class="nav2__link nav2__logo" href="#">
-            <img src="img/coba1.png" alt="Logo">
+            <img src="/img/coba1.png" alt="Logo">
 
           </a>
 
@@ -79,13 +77,26 @@
                 <i class='bx bx bx-user nav2__icon'></i>
                 <span class="nav2__name">Selayang Pandang</span>
               </a>
-              <a class="nav2__link" href="{{ url("/JDIH") }}">
-                <i class='bx bx-file nav2__icon'></i>
-                <span class="nav2__name">JDIH</span>
-              </a>
+              <!-- <div class="nav2__dropdown"> -->
+              <div class="nav2__dropdown-content">
+                <a class="nav2__link" href="#">
+                  <i class='bx bx-file nav2__icon'></i>
+                  <span class="nav2__name">JDIH</span>
+                </a>
+                <a href="{{ route("jdih.jenis", ["id" => 1]) }}">Peraturan Mahasiswa</a>
+                <a href="{{ route("jdih.jenis", ["id" => 2]) }}">Standard Operating Procedure</a>
+                <a href="{{ route("jdih.jenis", ["id" => 3]) }}">Peraturan Senat Mahasiswa</a>
+                <a href="{{ route("jdih.jenis", ["id" => 4]) }}">Keputusan</a>
+                <a href="{{ route("jdih.jenis", ["id" => 5]) }}">Rancangan Peraturan</a>
+              </div>
+              <!-- </div> -->
               <a class="nav2__link" href="{{ url("/peminjamanruangan") }}">
                 <i class='bx bx-time nav2__icon'></i>
                 <span class="nav2__name">Peminjaman Ruangan</span>
+              </a>
+              <a class="nav2__link" href="{{ url("/login") }}">
+                <i class='bx bx-time nav2__icon'></i>
+                <span class="nav2__name">Ajukan Surat</span>
               </a>
 
             </div>
@@ -123,7 +134,7 @@
         <li class="link" id="link6"><a href="{{ url("/peminjamanruangan") }}">Peminjaman Ruangan</a></li>
       </ul>
 
-      <a href="{{ url('/login') }}"><button class="btn btn-ajukansurat" type="button">Ajukan Surat</button></a>
+      <a href="{{ url("/login") }}"><button class="btn btn-ajukansurat" type="button">Ajukan Surat</button></a>
     </nav>
 
     @yield("content")

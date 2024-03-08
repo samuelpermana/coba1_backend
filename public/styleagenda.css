@@ -65,7 +65,8 @@
 img {
     width: 70%;
     display: flex;
-    margin-left: 50px;
+    min-width: 50px;
+    margin-left: 10px;
 }
 
 a {
@@ -229,6 +230,10 @@ main.table {
     align-items: center;
 
     transition: 0.2s;
+}
+
+.input-group img {
+    min-width: 0;
 }
 
 .table__header .input-group:hover {
@@ -815,8 +820,8 @@ label {
 }
 
 @media (width < 900px) {
-    .nav-links {
-        display: none;
+    .btn{
+        display: block;
     }
     header {
         grid-template-columns: repeat(1, 1fr);

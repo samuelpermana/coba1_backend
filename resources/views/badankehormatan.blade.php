@@ -3,7 +3,7 @@
   <link href="stylekomisi1.css" rel="stylesheet">
 
   <section class="container">
-    <h1 class="j-header4">BADAN KEHORMATAN</h1>
+    <h1 class="j-header4">Badan Kehormatan</h1>
     <div class="container6">
       <div class="slide">
 

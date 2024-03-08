@@ -22,7 +22,7 @@
   <nav>
   <div class="nav-logo">
     <a href="{{ url("/" . auth()->user()->role->role_slug . "/agendakerja") }}">
-      <img src="img/coba1.png" alt="Logo">
+      <img src="/img/coba1.png" alt="Logo">
     </a>
   </div>
 
