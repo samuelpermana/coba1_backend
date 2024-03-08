@@ -333,6 +333,7 @@ section .header {
 #slideshow #controls #next:hover,
 #slideshow #controls #prev:hover {
     transform: scale(1.2);
+    
 }
 
 #slideshow #controls #dots li:active,
@@ -344,7 +345,8 @@ section .header {
 #description {
     font-size: 1.3rem;
     color: white;
-    background-color: #cbb989;
+    background: rgb(208,172,77);
+    background: linear-gradient(90deg, rgba(208,172,77,1) 10%, rgba(226,204,142,1) 40%, rgba(226,204,142,1) 60%, rgba(208,172,77,1) 90%);
     padding: 5px 20px;
     border-radius: 10px;
     box-shadow: 0 0 20px rgba(255, 255, 255, 15%);
@@ -944,7 +946,8 @@ footer .column > a:hover {
 
 /* Ganti latar belakang kalender */
 #calendar {
-  background-color: #cbb989; /* Ubah warna latar belakang sesuai keinginan Anda */
+    background: rgb(208,172,77);
+    background: linear-gradient(90deg, rgba(208,172,77,1) 10%, rgba(226,204,142,1) 40%, rgba(226,204,142,1) 60%, rgba(208,172,77,1) 90%); /* Ubah warna latar belakang sesuai keinginan Anda */
   padding: 20px; /* Berikan padding agar konten kalender tidak terlalu dekat dengan tepi */
   border-radius: 20px;
   margin-top: -5rem;

@@ -109,7 +109,7 @@
     
           <div class="content1">
             <h2>Putri Shafira Ramadhania</h2>
-            <p>
+            <p class="deskripsi">
               Ketua Badan Anggaran</br>FH UNDIP 2022
             </p>
           </div>
@@ -123,7 +123,7 @@
     
           <div class="content1">
             <h2>Felicia Adeline Rustani</h2>
-            <p>
+            <p class="deskripsi">
               Senator Anggota</br>FH UNDIP 2022
             </p>
           </div>
@@ -139,7 +139,7 @@
       
             <div class="content1">
               <h2>Muhammad Gibran Widiharyanto</h2>
-              <p>
+              <p class="deskripsi">
                 Senator Anggota</br>FH UNDIP 2022
               </p>
             </div>
@@ -153,7 +153,7 @@
       
             <div class="content1">
               <h2>Dhiyaa Ulhaq Musyaffa Kartika</h2>
-              <p>
+              <p class="deskripsi">
                 Senator Anggota</br>FH UNDIP 2022
               </p>
             </div>
@@ -169,7 +169,7 @@
         
               <div class="content1">
                  <h2>Yosef Galih Wiharto</h2>
-                <p>
+                <p class="deskripsi">
                   Senator Anggota</br>FH UNDIP 2023
                 </p>
               </div>

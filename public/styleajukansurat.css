@@ -110,7 +110,8 @@ nav {
 .container-AJ {
     width: 100%;
     max-width: 650px;
-    background-color: #cbb989;
+    background: rgb(208,172,77);
+    background: linear-gradient(90deg, rgba(208,172,77,1) 10%, rgba(226,204,142,1) 40%, rgba(226,204,142,1) 60%, rgba(208,172,77,1) 90%);
     padding: 10px;
     margin: 0 28px;
     border-radius: 10px;

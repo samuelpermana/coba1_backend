@@ -98,7 +98,7 @@
     <nav>
       <div class="nav-logo">
         <a href="{{ url("/") }}">
-          <img src="img/coba1.png" alt="Logo">
+          <img src="/img/coba1.png" alt="Logo">
         </a>
       </div>
 
@@ -133,15 +133,15 @@
       <span class="blur"></span>
       <div class="column">
         <div class="logo">
-          <img src="img/coba1.png">
+          <img src="/img/coba1.png">
         </div>
         <p>SENAT MAHASISWA FAKULTAS HUKUM UNDIP</p>
         <p class="address">
           Jl. Prof. Soedarto, Tembalang, Kec. Tembalang, Kota Semarang, Jawa Tengah 50275
         </p>
         <div class="socials">
-          <a href="#"><i class="ri-youtube-line"></i></a>
-          <a href="#"><i class="ri-instagram-line"></i></a>
+          <a href="https://www.youtube.com/@SenatMahasiswaFakultasHukumUnd"><i class="ri-youtube-line"></i></a>
+          <a href="https://www.instagram.com/senatfhundip/"><i class="ri-instagram-line"></i></a> 
           <a href="https://lin.ee/VJdJQ9z"><i class="ri-line-line"></i></a>
         </div>
       </div>

@@ -118,7 +118,7 @@
     
           <div class="content1">
             <h2>Zalfariza Adelia Sukmadevi</h2>
-            <p>
+            <p class="deskripsi">
               Ketua BKSAP</br>FH UNDIP 2022
             </p>
           </div>
@@ -132,7 +132,7 @@
     
           <div class="content1">
             <h2>Zaneta Budinska</h2>
-            <p>
+            <p class="deskripsi">
               Senator Anggota</br>FH UNDIP 2022
             </p>
           </div>
@@ -148,7 +148,7 @@
       
             <div class="content1">
               <h2>Arjuna Rinaldi Hartono</h2>
-              <p>
+              <p class="deskripsi">
                 Senator Anggota</br>FH UNDIP 2022
               </p>
             </div>
@@ -162,7 +162,7 @@
       
             <div class="content1">
               <h2>Alzena Raisha Daniva</h2>
-              <p>
+              <p class="deskripsi">
                 Senator Anggota</br>FH UNDIP 2023
               </p>
             </div>

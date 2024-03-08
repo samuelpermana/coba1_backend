@@ -121,7 +121,7 @@
     
           <div class="content1">
             <h2>Muhammad Gibran Widiyanto</h2>
-            <p>
+            <p class="deskripsi">
               Ketua Komisi I</br>FH UNDIP 2022
             </p>
           </div>
@@ -135,7 +135,7 @@
     
           <div class="content1">
             <h2>Maharani Ali Putri</h2>
-            <p>
+            <p class="deskripsi">
               Senator Anggota</br>FH UNDIP 2022
             </p>
           </div>
@@ -151,7 +151,7 @@
       
             <div class="content1">
               <h2>Sami Makarim</h2>
-              <p>
+              <p class="deskripsi">
                 Senator Anggota</br>FH UNDIP 2022
               </p>
             </div>
@@ -165,7 +165,7 @@
       
             <div class="content1">
               <h2>Muhammad Ridho Putra Pratama</h2>
-              <p>
+              <p class="deskripsi">
                 Senator Anggota</br>FH UNDIP 2023
               </p>
             </div>

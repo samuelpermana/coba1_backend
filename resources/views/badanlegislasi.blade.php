@@ -123,7 +123,7 @@
     
           <div class="content1">
             <h2>Maharani Ali Putri</h2>
-            <p>
+            <p class="deskripsi">
               Ketua Badan Legislasi</br>FH UNDIP 2022
             </p>
           </div>
@@ -137,7 +137,7 @@
     
           <div class="content1">
             <h2>Yolanda Sinaga</h2>
-            <p>
+            <p class="deskripsi">
               Senator Anggota</br>FH UNDIP 2023
             </p>
           </div>
@@ -153,7 +153,7 @@
       
             <div class="content1">
               <h2>Sami Makarim</h2>
-              <p>
+              <p class="deskripsi">
                 Senator Anggota</br>FH UNDIP 2022
               </p>
             </div>
@@ -167,7 +167,7 @@
       
             <div class="content1">
               <h2>Muhammad Habib Zaid El Hakim</h2>
-              <p>
+              <p class="deskripsi">
                 Senator Anggota</br>FH UNDIP 2022
               </p>
             </div>

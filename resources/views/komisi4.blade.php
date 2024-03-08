@@ -119,7 +119,7 @@
     
           <div class="content1">
             <h2>Fakhrunnisa Arvia Alderia</h2>
-            <p>
+            <p class="deskripsi">
               Ketua Komisi IV</br>FH UNDIP 2022
             </p>
           </div>
@@ -133,7 +133,7 @@
     
           <div class="content1">
             <h2>Yolanda Sinaga</h2>
-            <p>
+            <p class="deskripsi">
               Senator Anggota</br>FH UNDIP 2023
             </p>
           </div>
@@ -149,7 +149,7 @@
       
             <div class="content1">
               <h2>Arjuna Rinaldi Hartono</h2>
-              <p>
+              <p class="deskripsi">
                 Senator Anggota</br>FH UNDIP 2022
               </p>
             </div>
@@ -163,7 +163,7 @@
       
             <div class="content1">
               <h2>Carmel Betaresh A.Foeh</h2>
-              <p>
+              <p class="deskripsi">
                 Senator Anggota</br>FH UNDIP 2022
               </p>
             </div>
@@ -179,7 +179,7 @@
         
               <div class="content1">
                  <h2>Dhiyaa Ulhaq Nusyaffa Kartika</h2>
-                <p>
+                <p class="deskripsi">
                   Senator Anggota</br>FH UNDIP 2022
                 </p>
               </div>

@@ -107,7 +107,7 @@
     
           <div class="content1">
             <h2>Muhammad Ridho Putra Pratama</h2>
-            <p>
+            <p class="deskripsi">
               Ketua Badan Kehormatan</br>FH UNDIP 2023
             </p>
           </div>
@@ -121,7 +121,7 @@
     
           <div class="content1">
             <h2>Carmel Betaresh A.Foeh</h2>
-            <p>
+            <p class="deskripsi">
               Senator Anggota</br>FH UNDIP 2022
             </p>
           </div>
@@ -137,7 +137,7 @@
       
             <div class="content1">
               <h2>Fakhrunnisa Arvia Aldeira</h2>
-              <p>
+              <p class="deskripsi">
                 Senator Anggota</br>FH UNDIP 2022
               </p>
             </div>
@@ -151,7 +151,7 @@
       
             <div class="content1">
               <h2>Muhammad Fakhrizy Viermanz Putra</h2>
-              <p>
+              <p class="deskripsi">
                 Senator Anggota</br>FH UNDIP 2022
               </p>
             </div>

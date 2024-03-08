@@ -119,7 +119,7 @@
     
           <div class="content1">
             <h2>Muhammad Habib Zaid El Hakim</h2>
-            <p>
+            <p class="deskripsi">
               Ketua Komisi II</br>FH UNDIP 2022
             </p>
           </div>
@@ -133,7 +133,7 @@
     
           <div class="content1">
             <h2>Putri Shafirah Rahmadhania</h2>
-            <p>
+            <p class="deskripsi">
               Senator Anggota</br>FH UNDIP 2022
             </p>
           </div>
@@ -149,7 +149,7 @@
       
             <div class="content1">
               <h2>Alzena Raisha Davina</h2>
-              <p>
+              <p class="deskripsi">
                 Senator Anggota</br>FH UNDIP 2022
               </p>
             </div>
@@ -163,7 +163,7 @@
       
             <div class="content1">
               <h2>Muhammad Fakhrizy Viermanz Putra</h2>
-              <p>
+              <p class="deskripsi">
                 Senator Anggota</br>FH UNDIP 2023
               </p>
             </div>

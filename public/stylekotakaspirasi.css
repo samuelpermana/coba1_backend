@@ -73,15 +73,16 @@ nav {
 #contact {
     padding: 40px 20px;
     text-align: center;
-    border-bottom: 2px solid #aeaaaa;
+   
     align-items: center; /* Menengahkan konten secara horizontal */
     justify-content: center; /* Menengahkan konten secara vertikal */
     height: 100%;
     color: rgb(201, 193, 193);
-    border: 5px solid #cbb989; /* Menyesuaikan lebar border */
+     /* Menyesuaikan lebar border */
     border-radius: 15px; /* Menambahkan radius sudut untuk border */
     transition: all 0.3s ease; /* Efek transisi untuk perubahan hover */
-    background-color: #cbb989;
+    background: rgb(208,172,77);
+    background: linear-gradient(90deg, rgba(208,172,77,1) 10%, rgba(226,204,142,1) 40%, rgba(226,204,142,1) 60%, rgba(208,172,77,1) 90%);
     width: 50%; /* Menyesuaikan lebar elemen dengan textarea */
     margin: auto; /* Menengahkan elemen */
 }
@@ -146,7 +147,7 @@ nav {
 }
 
 #contact button:hover {
-    background-color: #cfb53b;
+    opacity: 0.8;
 }
 
 #name,

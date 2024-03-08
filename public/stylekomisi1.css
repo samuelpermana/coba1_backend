@@ -995,8 +995,16 @@ h4 {
     box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.5);
     transition: 0.3s;
     padding: 30px 50px;
-    background: #f1dda8;
+    background: rgb(208,172,77);
+    background: linear-gradient(90deg, rgba(208,172,77,1) 10%, rgba(226,204,142,1) 40%, rgba(226,204,142,1) 60%, rgba(208,172,77,1) 90%);
     cursor: pointer;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5), /* Bayangan utama */ 1px 1px 5px rgba(0, 0, 0, 0.5), /* Bayangan yang sedikit lebih tebal */ 1px 1px 7px rgba(0, 0, 0, 0.5);
+}
+.deskripsi{
+    text-shadow: none;
+    font-weight: 30px;
+    font-family: "Poppins", sans-serif;
+
 }
 
 .card-coba:hover {
