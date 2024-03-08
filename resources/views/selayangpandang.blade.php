@@ -151,7 +151,7 @@
       
             <div class="content1">
               <h2>Zamroni Akhmad Affandi</h2>
-                <p>
+                <p class ="deskripsi">
                   Ketua Senat Mahasiswa FH</br>FH UNDIP 2021
                 </p>
             </div>
@@ -168,7 +168,7 @@
       
             <div class="content1">
               <h2>Rafif Majid Hidayatullah</h2>
-                <p>
+                <p class ="deskripsi">
                   Wakil I Bidang Pengawasan dan Anggaran</br>FH UNDIP 2021
                 </p>
             </div>
@@ -182,7 +182,7 @@
       
             <div class="content1">
               <h2>Abigael Farel Harahap</h2>
-                <p>
+                <p class ="deskripsi">
                   Wakil II Bidang Aspirasi dan Legislasi</br>FH UNDIP 2021
                 </p>
             </div>
@@ -196,7 +196,7 @@
       
             <div class="content1">
               <h2>Candra Adrianando Satrio Priambodo</h2>
-                <p>
+                <p class ="deskripsi">
                   Sekretaris Jenderal</br>FH UNDIP 2021
                 </p>
             </div>
