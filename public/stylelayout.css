@@ -584,7 +584,7 @@ footer .column > a:hover {
     left: 0;
 }
 
-@media (width < 900px) {
+@media (width < 1000px) {
     .header__container {
         display: flex;
         align-items: center;
@@ -626,7 +626,7 @@ footer .column > a:hover {
     }
 }
 
-@media (width < 900px) {
+@media (width < 1000px) {
     header {
         grid-template-columns: repeat(1, 1fr);
     }
@@ -640,6 +640,9 @@ footer .column > a:hover {
 
 @media (width < 600px) {
     header .image::before {
+        display: none;
+    }
+    .btn {
         display: none;
     }
     footer {

@@ -202,6 +202,7 @@ main.table {
 .table__header .input-group img {
     width: 1.2rem;
     height: 1.2rem;
+    min-width: 0;
 }
 
 .table__header .input-group input {

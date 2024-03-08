@@ -706,7 +706,7 @@ section .header {
   
   @media (width < 900px) {
     .btn{
-      display: block;
+      display: none;
     }
     header {
       grid-template-columns: repeat(1, 1fr);
