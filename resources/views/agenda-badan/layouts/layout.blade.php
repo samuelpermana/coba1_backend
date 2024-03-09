@@ -46,7 +46,7 @@
       <span class="blur"></span>
       <div class="column">
         <div class="logo">
-          <img src="img/coba1.png">
+          <img src="/img/coba1.png">
         </div>
         <p>SENAT MAHASISWA FAKULTAS HUKUM UNDIP</p>
         <p class="address"> 

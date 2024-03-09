@@ -34,7 +34,7 @@
           <td>{{ $proposal["judul"] }}</td>
           <td>{{ $proposal["deskripsi"] }}</td>
           <td><a href="{{ Storage::url($proposal["file_proposal"]) }}"target="_blank">
-              <span class="blue"><img class="star-img" src="img/filetransparan.svg" alt="" /></span>
+              <span class="blue"><img class="star-img" src="/img/filetransparan.svg" alt="" /></span>
             </a></td>
 
           <td>{{ $proposal["status"] }}</td>

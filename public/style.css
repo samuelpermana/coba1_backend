@@ -1351,7 +1351,7 @@ section .header2 {
     padding: 15px;
     border: 1px solid #ccc;
     border-radius: 8px;
-    background: url("img/coba1.png") center/cover no-repeat;
+    background: url("/img/coba1.png") center/cover no-repeat;
 }
 
 .content3 {

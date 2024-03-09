@@ -23,14 +23,14 @@
         <section class="table__header">
           <div class="input-group">
             <input type="search" placeholder="Search Data...">
-            <img src="img/search.png" alt="">
+            <img src="/img/search.png" alt="">
           </div>
           <div class="export__file">
             <label class="export__file-btn" for="export-file" title="Export File"></label>
             <input id="export-file" type="checkbox">
             <div class="export__file-options">
               <label>Export As &nbsp; &#10140;</label>
-              <label id="toPDF" for="export-file">PDF <img src="img/pdf.png" alt=""></label>
+              <label id="toPDF" for="export-file">PDF <img src="/img/pdf.png" alt=""></label>
             </div>
           </div>
         </section>
