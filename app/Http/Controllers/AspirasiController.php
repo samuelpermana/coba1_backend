@@ -10,8 +10,9 @@ use Illuminate\Support\Facades\Redirect;
 class AspirasiController extends Controller
 {
     
-    public function createAspirasi(AspirasiRequest  $request)
+    public function createAspirasi(AspirasiRequest $request)
     {
+        try {
             $aspirasi = new Aspirasi([
                 'name' => $request->input('name'),
                 'email' => $request->input('email'),
@@ -19,8 +20,13 @@ class AspirasiController extends Controller
                 'id_line' => $request->input('id_line'),
                 'message' => $request->input('message'),
             ]);
+            
             $aspirasi->save();
+            
             return Redirect::back()->with('success', 'Aspirasi berhasil dibuat');
+        } catch (Exception $e) {
+            return Redirect::back()->with('error', 'Terjadi kesalahan saat membuat aspirasi: ' . $e->getMessage());
+        }
     }
 
     public function getAspirasi()

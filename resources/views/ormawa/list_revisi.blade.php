@@ -2,13 +2,20 @@
 
 @section("content")
 <link href="{{ asset("styletransparansi.css") }}" rel="stylesheet">
-    <div class="container">
+    <div class="container"> 
         <div class="header-revisi">
             <h1>Daftar Revisi Proposal</h1>
             <h2>{{ $proposal->judul }}</h2>
         </div>
-
-        <section class="table__body">
+    <main class="table" id="customers_table">
+            <section class="table__header">
+                <div class="input-group">
+                    <input type="search" placeholder="Search Data...">
+                    <img src="/img/search.png" alt="">
+                </div>
+                
+            </section>
+            <section class="table__body">
             <table>
                 <thead>
                     <tr>
@@ -63,4 +70,26 @@
             </table>
         </section>
     </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/izitoast/1.4.0/js/iziToast.min.js" integrity="sha512-Zq9o+E00xhhR/7vJ49mxFNJ0KQw1E1TMWkPTxrWcnpfEFDEXgUiwJHIKit93EW/XxE31HSI5GEOW06G6BF1AtA==" crossorigin="anonymous"
+        referrerpolicy="no-referrer"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      @if(session('success'))
+        iziToast.success({
+          title: 'Success',
+          message: '{{ session('success') }}',
+          position: 'topRight'
+        });
+      @endif
+
+      @if(session('error'))
+        iziToast.error({
+          title: 'Error',
+          message: '{{ session('error') }}',
+          position: 'topRight'
+        });
+      @endif
+    });
+  </script>
+  
 @endsection

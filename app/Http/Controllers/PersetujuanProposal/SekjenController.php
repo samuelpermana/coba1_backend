@@ -45,7 +45,7 @@ class SekjenController extends Controller
     {
         $userId = Auth::id();
         $proposals = ProposalOrmawa::where('status', 'sekjen')
-        ->where('status_persetujuan', 'revised')
+        ->where('status_persetujuan', 'direvisi')
         ->where('is_checked', 1)
         ->get();
          $proposalData = [];
@@ -216,7 +216,7 @@ class SekjenController extends Controller
     {
         $request->validate([
             'komentar' => 'required|string',
-            'file_revisi' => 'required|file|mimes:doc,docx',
+            'file_revisi' => 'nullable|file|mimes:doc,docx',
         ]);
     
         $user_id = Auth::id();
@@ -247,7 +247,7 @@ class SekjenController extends Controller
         $proposal = ProposalOrmawa::findOrFail($proposalId);
         $proposal->update([
             'status' => 'sekjen',
-            'status_persetujuan' => 'revised',
+            'status_persetujuan' => 'direvisi',
             'is_checked'=> true
         ]);
     
