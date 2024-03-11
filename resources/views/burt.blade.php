@@ -105,9 +105,9 @@
     </div>
     @endforeach
 </section>
-<!-- 
+
 <section class="container">
-    <h2 class="header">Anggota BKSAP</h2>
+    <h2 class="header">Anggota BURT</h2>
     <div class="anggota-4">
       <div class="card-coba">
           <div class="imgbox">
@@ -117,9 +117,9 @@
           </div>
     
           <div class="content1">
-            <h2>Zalfaritza Adelia Sukmadevi</h2>
+            <h2>Aida Khansa Nabila</h2>
             <p class="deskripsi">
-              Ketua BKSAP</br>FH UNDIP 2022
+              Staff Ahli</br>FH UNDIP 2022
             </p>
           </div>
       </div>
@@ -131,9 +131,9 @@
           </div>
     
           <div class="content1">
-            <h2>Zaneta Budinska</h2>
+            <h2>Muhammad Ridho Dwi Saputra</h2>
             <p class="deskripsi">
-              Senator Anggota</br>FH UNDIP 2022
+            Staff Ahli</br>FH UNDIP 2022
             </p>
           </div>
       </div>
@@ -147,9 +147,9 @@
             </div>
       
             <div class="content1">
-              <h2>Arjuna Rinaldi Hartono</h2>
+              <h2>Alya Safira</h2>
               <p class="deskripsi">
-                Senator Anggota</br>FH UNDIP 2022
+              Staff Ahli</br>FH UNDIP 2022
               </p>
             </div>
         </div>
@@ -161,14 +161,14 @@
             </div>
       
             <div class="content1">
-              <h2>Alzena Raisha Daniva</h2>
+              <h2>Laksita Satyaning Kuncoro</h2>
               <p class="deskripsi">
-                Senator Anggota</br>FH UNDIP 2023
+              Staff Ahli</br>FH UNDIP 2023
               </p>
             </div>
         </div>
     </div>
-  </section> -->
+  </section>
 
   <script src="js-komisi.js"></script>
 @endsection

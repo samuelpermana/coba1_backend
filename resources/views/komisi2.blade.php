@@ -161,6 +161,110 @@
         </div>
       </div>
     </div>
+    <div class="anggota-4-1">
+      <div class="card-coba">
+        <div class="imgbox">
+          <img class="img-coba" src="/img/zalfaritsa-kuning.png" />
+        </div>
+
+        <div class="content1">
+          <h2>Muhammad Abrar Naufal</h2>
+          <p class="deskripsi">
+            Staff Ahli</br>FH UNDIP 2022
+          </p>
+        </div>
+      </div>
+      <div class="card-coba">
+        <div class="imgbox">
+          <img class="img-coba" src="/img/yosef-kuning.png" />
+        </div>
+
+        <div class="content1">
+          <h2>Naila Dwi Nur Aisyah Kamila</h2>
+          <p class="deskripsi">
+          Staff Ahli</br>FH UNDIP 2023
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="anggota-4-1">
+      <div class="card-coba">
+        <div class="imgbox">
+          <img class="img-coba" src="/img/zalfaritsa-kuning.png" />
+        </div>
+
+        <div class="content1">
+          <h2>Benedictus Adrian Wijanarko</h2>
+          <p class="deskripsi">
+          Staff Ahli</br>FH UNDIP 2022
+          </p>
+        </div>
+      </div>
+      <div class="card-coba">
+        <div class="imgbox">
+          <img class="img-coba" src="/img/yosef-kuning.png" />
+        </div>
+
+        <div class="content1">
+          <h2>Chelsi Natasya Dimasandra</h2>
+          <p class="deskripsi">
+          Staff Ahli</br>FH UNDIP 2023
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="anggota-4-1">
+      <div class="card-coba">
+        <div class="imgbox">
+          <img class="img-coba" src="/img/zalfaritsa-kuning.png" />
+        </div>
+
+        <div class="content1">
+          <h2>Franklin Fernando</h2>
+          <p class="deskripsi">
+          Staff Ahli</br>FH UNDIP 2022
+          </p>
+        </div>
+      </div>
+      <div class="card-coba">
+        <div class="imgbox">
+          <img class="img-coba" src="/img/yosef-kuning.png" />
+        </div>
+
+        <div class="content1">
+          <h2>Ferdi Prasetiyo</h2>
+          <p class="deskripsi">
+          Staff Ahli</br>FH UNDIP 2023
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="anggota-4-1">
+      <div class="card-coba">
+        <div class="imgbox">
+          <img class="img-coba" src="/img/zalfaritsa-kuning.png" />
+        </div>
+
+        <div class="content1">
+          <h2>Diandra Karenina</h2>
+          <p class="deskripsi">
+          Staff Ahli</br>FH UNDIP 2022
+          </p>
+        </div>
+      </div>
+      <div class="card-coba">
+        <div class="imgbox">
+          <img class="img-coba" src="/img/yosef-kuning.png" />
+        </div>
+
+        <div class="content1">
+          <h2>Firman Maulana Kurniawan</h2>
+          <p class="deskripsi">
+          Staff Ahli</br>FH UNDIP 2023
+          </p>
+        </div>
+      </div>
+    </div>
   </section>
   <script src="js-komisi.js"></script>
 @endsection

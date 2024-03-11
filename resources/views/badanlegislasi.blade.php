@@ -173,6 +173,112 @@
             </div>
         </div>
     </div>
+    <div class="anggota-4-1">
+      <div class="card-coba">
+            <div class="imgbox">
+              <img class="img-coba"
+                src="/img/sami-kuning.png"
+              />
+            </div>
+      
+            <div class="content1">
+              <h2>Sutan Rafli Tanjung</h2>
+              <p class="deskripsi">
+                Staff Ahli</br>FH UNDIP 2022
+              </p>
+            </div>
+        </div>
+        <div class="card-coba">
+            <div class="imgbox">
+              <img class="img-coba"
+                src="/img/habib-kuning.png"
+              />
+            </div>
+      
+            <div class="content1">
+              <h2>Nadya Nindita Putri</h2>
+              <p class="deskripsi">
+              Staff Ahli</br>FH UNDIP 2022
+              </p>
+            </div>
+        </div>
+    </div>
+    <div class="anggota-4-1">
+      <div class="card-coba">
+            <div class="imgbox">
+              <img class="img-coba"
+                src="/img/sami-kuning.png"
+              />
+            </div>
+      
+            <div class="content1">
+              <h2>Danang Randy Galaska</h2>
+              <p class="deskripsi">
+              Staff Ahli</br>FH UNDIP 2022
+              </p>
+            </div>
+        </div>
+        <div class="card-coba">
+            <div class="imgbox">
+              <img class="img-coba"
+                src="/img/habib-kuning.png"
+              />
+            </div>
+      
+            <div class="content1">
+              <h2>Amanda Nahdhiyatus Shalikhah</h2>
+              <p class="deskripsi">
+              Staff Ahli</br>FH UNDIP 2022
+              </p>
+            </div>
+        </div>
+    </div>
+    <div class="anggota-4-1">
+      <div class="card-coba">
+            <div class="imgbox">
+              <img class="img-coba"
+                src="/img/sami-kuning.png"
+              />
+            </div>
+      
+            <div class="content1">
+              <h2>Christofer Natanael</h2>
+              <p class="deskripsi">
+              Staff Ahli</br>FH UNDIP 2022
+              </p>
+            </div>
+        </div>
+        <div class="card-coba">
+            <div class="imgbox">
+              <img class="img-coba"
+                src="/img/habib-kuning.png"
+              />
+            </div>
+      
+            <div class="content1">
+              <h2>Vania Reva Amadita</h2>
+              <p class="deskripsi">
+              Staff Ahli</br>FH UNDIP 2022
+              </p>
+            </div>
+        </div>
+    </div>
+    <div class="anggota-4-2">
+      <div class="card-coba">
+              <div class="imgbox">
+                <img class="img-coba"
+                  src="/img/dhiyaa-kuning.png"
+                />
+              </div>
+        
+              <div class="content1">
+                 <h2>Keysa Fitri Sabrina Alycia</h2>
+                <p class="deskripsi">
+                Staff Ahli</br>FH UNDIP 2022
+                </p>
+              </div>
+          </div>
+    </div>
   </section>
 
   <script src="js-komisi.js"></script>

@@ -168,6 +168,142 @@
             </div>
         </div>
     </div>
+    <div class="anggota-4-1">
+      <div class="card-coba">
+            <div class="imgbox">
+              <img class="img-coba"
+                src="/img/arjuna-kuning.png"
+              />
+            </div>
+      
+            <div class="content1">
+              <h2>Muhammad Arif Budi Winova</h2>
+              <p class="deskripsi">
+                Staff Ahli</br>FH UNDIP 2022
+              </p>
+            </div>
+        </div>
+        <div class="card-coba">
+            <div class="imgbox">
+              <img class="img-coba"
+                src="/img/alzena-kuning.png"
+              />
+            </div>
+      
+            <div class="content1">
+              <h2>Hijar Raziqin Susanto</h2>
+              <p class="deskripsi">
+              Staff Ahli</br>FH UNDIP 2023
+              </p>
+            </div>
+        </div>
+    </div>
+    <div class="anggota-4-1">
+      <div class="card-coba">
+            <div class="imgbox">
+              <img class="img-coba"
+                src="/img/arjuna-kuning.png"
+              />
+            </div>
+      
+            <div class="content1">
+              <h2>Dhanu Prawiro Negoro</h2>
+              <p class="deskripsi">
+              Staff Ahli</br>FH UNDIP 2022
+              </p>
+            </div>
+        </div>
+        <div class="card-coba">
+            <div class="imgbox">
+              <img class="img-coba"
+                src="/img/alzena-kuning.png"
+              />
+            </div>
+      
+            <div class="content1">
+              <h2>Frija Agustina</h2>
+              <p class="deskripsi">
+              Staff Ahli</br>FH UNDIP 2023
+              </p>
+            </div>
+        </div>
+    </div>
+    <div class="anggota-4-1">
+      <div class="card-coba">
+            <div class="imgbox">
+              <img class="img-coba"
+                src="/img/arjuna-kuning.png"
+              />
+            </div>
+      
+            <div class="content1">
+              <h2>Jihan Naila Husna</h2>
+              <p class="deskripsi">
+              Staff Ahli</br>FH UNDIP 2022
+              </p>
+            </div>
+        </div>
+        <div class="card-coba">
+            <div class="imgbox">
+              <img class="img-coba"
+                src="/img/alzena-kuning.png"
+              />
+            </div>
+      
+            <div class="content1">
+              <h2>Amanda Eka</h2>
+              <p class="deskripsi">
+              Staff Ahli</br>FH UNDIP 2023
+              </p>
+            </div>
+        </div>
+    </div>
+    <div class="anggota-4-1">
+      <div class="card-coba">
+            <div class="imgbox">
+              <img class="img-coba"
+                src="/img/arjuna-kuning.png"
+              />
+            </div>
+      
+            <div class="content1">
+              <h2>Michelle Rebecca Sembiring</h2>
+              <p class="deskripsi">
+              Staff Ahli</br>FH UNDIP 2022
+              </p>
+            </div>
+        </div>
+        <div class="card-coba">
+            <div class="imgbox">
+              <img class="img-coba"
+                src="/img/alzena-kuning.png"
+              />
+            </div>
+      
+            <div class="content1">
+              <h2>Faradina Nur Hanifa</h2>
+              <p class="deskripsi">
+              Staff Ahli</br>FH UNDIP 2023
+              </p>
+            </div>
+        </div>
+    </div>
+    <div class="anggota-4-2">
+      <div class="card-coba">
+              <div class="imgbox">
+                <img class="img-coba"
+                  src="/img/dhiyaa-kuning.png"
+                />
+              </div>
+        
+              <div class="content1">
+                 <h2>Dita Amanda Kusumawardani</h2>
+                <p class="deskripsi">
+                Staff Ahli</br>FH UNDIP 2022
+                </p>
+              </div>
+          </div>
+    </div>
   </section>
 
   <script src="js-komisi.js"></script>

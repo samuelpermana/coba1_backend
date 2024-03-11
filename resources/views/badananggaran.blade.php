@@ -159,7 +159,7 @@
             </div>
         </div>
     </div>
-    <div class="anggota-4-2">
+    <div class="anggota-4-1">
       <div class="card-coba">
               <div class="imgbox">
                 <img class="img-coba"
@@ -171,6 +171,140 @@
                  <h2>Yosef Galih Wiharto</h2>
                 <p class="deskripsi">
                   Senator Anggota</br>FH UNDIP 2023
+                </p>
+              </div>
+          </div>
+          <div class="card-coba">
+              <div class="imgbox">
+                <img class="img-coba"
+                  src="/img/yosef-kuning.png"
+                />
+              </div>
+        
+              <div class="content1">
+                 <h2>Zafira Anggraini Wibowo</h2>
+                <p class="deskripsi">
+                  Staff Ahli</br>FH UNDIP 2023
+                </p>
+              </div>
+          </div>
+    </div>
+    <div class="anggota-4-1">
+      <div class="card-coba">
+              <div class="imgbox">
+                <img class="img-coba"
+                  src="/img/yosef-kuning.png"
+                />
+              </div>
+        
+              <div class="content1">
+                 <h2>Nurhaliza Hasan Djawas</h2>
+                <p class="deskripsi">
+                Staff Ahli</br>FH UNDIP 2023
+                </p>
+              </div>
+          </div>
+          <div class="card-coba">
+              <div class="imgbox">
+                <img class="img-coba"
+                  src="/img/yosef-kuning.png"
+                />
+              </div>
+        
+              <div class="content1">
+                 <h2>Suci Cahaya Murniasari</h2>
+                <p class="deskripsi">
+                  Staff Ahli</br>FH UNDIP 2023
+                </p>
+              </div>
+          </div>
+    </div>
+    <div class="anggota-4-1">
+      <div class="card-coba">
+              <div class="imgbox">
+                <img class="img-coba"
+                  src="/img/yosef-kuning.png"
+                />
+              </div>
+        
+              <div class="content1">
+                 <h2>Tegar Fachrezi Majid</h2>
+                <p class="deskripsi">
+                Staff Ahli</br>FH UNDIP 2023
+                </p>
+              </div>
+          </div>
+          <div class="card-coba">
+              <div class="imgbox">
+                <img class="img-coba"
+                  src="/img/yosef-kuning.png"
+                />
+              </div>
+        
+              <div class="content1">
+                 <h2>Muhammad Erlangga Pratama</h2>
+                <p class="deskripsi">
+                  Staff Ahli</br>FH UNDIP 2023
+                </p>
+              </div>
+          </div>
+    </div>
+    <div class="anggota-4-1">
+      <div class="card-coba">
+              <div class="imgbox">
+                <img class="img-coba"
+                  src="/img/yosef-kuning.png"
+                />
+              </div>
+        
+              <div class="content1">
+                 <h2>Ananda Irwina Putri</h2>
+                <p class="deskripsi">
+                Staff Ahli</br>FH UNDIP 2023
+                </p>
+              </div>
+          </div>
+          <div class="card-coba">
+              <div class="imgbox">
+                <img class="img-coba"
+                  src="/img/yosef-kuning.png"
+                />
+              </div>
+        
+              <div class="content1">
+                 <h2>Daniel Yafet Silalahi</h2>
+                <p class="deskripsi">
+                  Staff Ahli</br>FH UNDIP 2023
+                </p>
+              </div>
+          </div>
+    </div>
+    <div class="anggota-4-1">
+      <div class="card-coba">
+              <div class="imgbox">
+                <img class="img-coba"
+                  src="/img/yosef-kuning.png"
+                />
+              </div>
+        
+              <div class="content1">
+                 <h2>Poetty Salsabilla Harison</h2>
+                <p class="deskripsi">
+                Staff Ahli</br>FH UNDIP 2023
+                </p>
+              </div>
+          </div>
+          <div class="card-coba">
+              <div class="imgbox">
+                <img class="img-coba"
+                  src="/img/yosef-kuning.png"
+                />
+              </div>
+        
+              <div class="content1">
+                 <h2>Natasya Putri Syawalina</h2>
+                <p class="deskripsi">
+                  Staff Ahli</br>FH UNDIP 2023
                 </p>
               </div>
           </div>

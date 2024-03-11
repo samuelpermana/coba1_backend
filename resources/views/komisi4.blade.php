@@ -169,7 +169,7 @@
             </div>
         </div>
     </div>
-    <div class="anggota-4-2">
+    <div class="anggota-4-1">
       <div class="card-coba">
               <div class="imgbox">
                 <img class="img-coba"
@@ -181,6 +181,156 @@
                  <h2>Dhiyaa Ulhaq Musyaffa Kartika</h2>
                 <p class="deskripsi">
                   Senator Anggota</br>FH UNDIP 2022
+                </p>
+              </div>
+          </div>
+          <div class="card-coba">
+              <div class="imgbox">
+                <img class="img-coba"
+                  src="/img/dhiyaa-kuning.png"
+                />
+              </div>
+        
+              <div class="content1">
+                 <h2>Muhammad Zaidon Rizqon Adinata</h2>
+                <p class="deskripsi">
+                  Staff Ahli</br>FH UNDIP 2022
+                </p>
+              </div>
+          </div>
+    </div>
+    <div class="anggota-4-1">
+      <div class="card-coba">
+              <div class="imgbox">
+                <img class="img-coba"
+                  src="/img/dhiyaa-kuning.png"
+                />
+              </div>
+        
+              <div class="content1">
+                 <h2>Muhammad Faheem Aulia</h2>
+                <p class="deskripsi">
+                Staff Ahli</br>FH UNDIP 2022
+                </p>
+              </div>
+          </div>
+          <div class="card-coba">
+              <div class="imgbox">
+                <img class="img-coba"
+                  src="/img/dhiyaa-kuning.png"
+                />
+              </div>
+        
+              <div class="content1">
+                 <h2>Ni Putu Elsa Sukraseni</h2>
+                <p class="deskripsi">
+                Staff Ahli</br>FH UNDIP 2022
+                </p>
+              </div>
+          </div>
+    </div>
+    <div class="anggota-4-1">
+      <div class="card-coba">
+              <div class="imgbox">
+                <img class="img-coba"
+                  src="/img/dhiyaa-kuning.png"
+                />
+              </div>
+        
+              <div class="content1">
+                 <h2>Akhsana Fitra Suyono</h2>
+                <p class="deskripsi">
+                Staff Ahli</br>FH UNDIP 2022
+                </p>
+              </div>
+          </div>
+          <div class="card-coba">
+              <div class="imgbox">
+                <img class="img-coba"
+                  src="/img/dhiyaa-kuning.png"
+                />
+              </div>
+        
+              <div class="content1">
+                 <h2>Aaliyah Davalyn Setiawan</h2>
+                <p class="deskripsi">
+                Staff Ahli</br>FH UNDIP 2022
+                </p>
+              </div>
+          </div>
+    </div>
+    <div class="anggota-4-1">
+      <div class="card-coba">
+              <div class="imgbox">
+                <img class="img-coba"
+                  src="/img/dhiyaa-kuning.png"
+                />
+              </div>
+        
+              <div class="content1">
+                 <h2>Valentina Natalia Sirait</h2>
+                <p class="deskripsi">
+                Staff Ahli</br>FH UNDIP 2022
+                </p>
+              </div>
+          </div>
+          <div class="card-coba">
+              <div class="imgbox">
+                <img class="img-coba"
+                  src="/img/dhiyaa-kuning.png"
+                />
+              </div>
+        
+              <div class="content1">
+                 <h2>Rizki Sakinah Rahmayani Sinaga</h2>
+                <p class="deskripsi">
+                Staff Ahli</br>FH UNDIP 2022
+                </p>
+              </div>
+          </div>
+    </div>
+    <div class="anggota-4-1">
+      <div class="card-coba">
+              <div class="imgbox">
+                <img class="img-coba"
+                  src="/img/dhiyaa-kuning.png"
+                />
+              </div>
+        
+              <div class="content1">
+                 <h2>Tiara Raudhatul Jannah</h2>
+                <p class="deskripsi">
+                Staff Ahli</br>FH UNDIP 2022
+                </p>
+              </div>
+          </div>
+          <div class="card-coba">
+              <div class="imgbox">
+                <img class="img-coba"
+                  src="/img/dhiyaa-kuning.png"
+                />
+              </div>
+        
+              <div class="content1">
+                 <h2>Faranisa Syifa Aulia Wibowo</h2>
+                <p class="deskripsi">
+                Staff Ahli</br>FH UNDIP 2022
+                </p>
+              </div>
+          </div>
+    </div>
+    <div class="anggota-4-2">
+      <div class="card-coba">
+              <div class="imgbox">
+                <img class="img-coba"
+                  src="/img/dhiyaa-kuning.png"
+                />
+              </div>
+        
+              <div class="content1">
+                 <h2>Dzaky Al Jabar</h2>
+                <p class="deskripsi">
+                Staff Ahli</br>FH UNDIP 2022
                 </p>
               </div>
           </div>
