@@ -23,10 +23,32 @@
             
             <div class="form-group-revisi">
                 <label for="file_proposal">Upload File Revisi:</label>
-                <input type="file" class="form-control-file-revisi" id="file_proposal" name="file_proposal">
+                <input type="file" class="form-control-file-revisi" id="file_proposal" name="file_proposal" accept=".doc, .docx, application/pdf" >
             </div>
 
             <button type="submit" class="btn btn-primary">Kirim Revisi</button>
         </form>
     </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/izitoast/1.4.0/js/iziToast.min.js" integrity="sha512-Zq9o+E00xhhR/7vJ49mxFNJ0KQw1E1TMWkPTxrWcnpfEFDEXgUiwJHIKit93EW/XxE31HSI5GEOW06G6BF1AtA==" crossorigin="anonymous"
+        referrerpolicy="no-referrer"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      @if(session('success'))
+        iziToast.success({
+          title: 'Success',
+          message: '{{ session('success') }}',
+          position: 'topRight'
+        });
+      @endif
+
+      @if(session('error'))
+        iziToast.error({
+          title: 'Error',
+          message: '{{ session('error') }}',
+          position: 'topRight'
+        });
+      @endif
+    });
+  </script>
+  
 @endsection

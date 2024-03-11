@@ -16,7 +16,7 @@ return new class extends Migration
             $table->boolean('is_checked')->default(false);
             $table->enum('tipe', ['pengajuan', 'revisi'])->default('pengajuan');
             $table->enum('status', ['admin', 'komisi', 'badan anggaran', 'sekjen'])->default('admin');
-            $table->enum('status_persetujuan', ['pending', 'revised', 'rejected', 'approved'])->default('pending');
+            $table->enum('status_persetujuan', ['pending', 'direvisi', 'rejected', 'approved'])->default('pending');
             $table->unsignedBigInteger('created_by');
             $table->unsignedBigInteger('komisi_checked_by')->nullable();
             $table->timestamp('approved_at')->nullable();

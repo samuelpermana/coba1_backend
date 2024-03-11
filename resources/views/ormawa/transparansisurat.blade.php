@@ -64,7 +64,7 @@
                         </section>
                     </td>
                     <td>{{ $proposal['status_persetujuan'] }}
-                        @if ($proposal['status_persetujuan'] == 'revised')
+                        @if ($proposal['status_persetujuan'] == 'direvisi')
                             <br>
                             <a href="{{ route('ormawa.proposal.revisi', $proposal['id']) }}" target="_blank">Lihat Detail Revisi dan Kirimkan Revisi Proposal</a>
                         @endif
@@ -106,7 +106,7 @@
                                 @else
                                 <form class="finalis" action="{{ route('ormawa.upload.file.final', $proposal['id']) }}" method="post" enctype="multipart/form-data">
                                     @csrf
-                                    <input class="final" type="file" name="file_final" accept="application/pdf">
+                                    <input class="final" type="file" name="file_final" accept=".doc, .docx, application/pdf">
                                     <button class="final-upload" type="submit">Upload File Final</button>
                                 </form>
                                 @endif

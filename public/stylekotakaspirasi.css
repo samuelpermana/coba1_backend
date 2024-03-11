@@ -289,6 +289,19 @@ footer .column > a:hover {
     margin: auto;
     padding: 2rem 2rem;
 }
+.error-popup {
+    position: fixed;
+    top: 150px; /* adjust the top value as needed */
+    right: 5px; /* adjust the right value as needed */
+    background-color: #cfb53b;
+    color: #ffffff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    z-index: 1000;
+    display: none;
+    transition: all 0.1s ease;
+  }
+  
 
 @media (width < 1300px) {
     .header__container {

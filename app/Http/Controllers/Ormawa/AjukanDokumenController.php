@@ -67,7 +67,7 @@ class AjukanDokumenController extends Controller
 
             return redirect()->route('ormawa.cek_progress')->with('success', 'Agenda kerja berhasil dibuat!');
         } catch (\Exception $e) {
-            return response_error(null, $e->getMessage(), $e->getCode());
+            return redirect()->back()->with('error', 'Gagal mengupload file final.');
         }
     }
 

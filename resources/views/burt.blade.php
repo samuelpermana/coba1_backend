@@ -19,7 +19,7 @@
         <div class="item"  style="background-image: url(img/BKSAP-COBA.jpg);">
           <div class="content">
             <div class="name">BURT</div>
-            <div class="des">Badan Kerja Sama Antar Parlemen terdiri dari Biro media dan Biro Humas</div>
+            <div class="des">Badan Urusan Rumah Tangga</div>
 
           </div>
         </div>
