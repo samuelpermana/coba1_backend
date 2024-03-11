@@ -16,7 +16,7 @@ class UserSeeder extends Seeder
     {
         User::create([
             'name' => 'Admin SM FH Undip',
-            'email' => 'bksapsmfhundip24@gmail.com ',
+            'email' => 'bksap24cmswebsite@gmail.com',
             'password' => Hash::make('password'),
             'role_id' => 1,
         ]);
@@ -71,10 +71,17 @@ class UserSeeder extends Seeder
         ]);
         User::create([
             'name' => 'BKSAP',
-            'email' => 'bksapadmin@gmail.com ',
+            'email' => 'bksapsmfhundip24@gmail.com',
             'password' => Hash::make('password'),
             'role_id' => 11,
         ]);
+        User::create([
+            'name' => 'BURT',
+            'email' => 'burtsmfh24@gmail.com',
+            'password' => Hash::make('password'),
+            'role_id' => 12,
+        ]);
+
         User::create([
             'name' => 'Badan Eksekutif Mahasiswa FH Undip Tahun 2024',
             'email' => 'bemfhundip2024@gmail.com',

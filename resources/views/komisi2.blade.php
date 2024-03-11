@@ -61,7 +61,7 @@
 
   <section class="container-k">
     <h2 class="header">Agenda Kerja</h2>
-    @foreach ($agendas["Komisi2"] as $agenda)
+    @foreach ($agendas["Komisi II SM FH Undip"] as $agenda)
       <div class="tag-divide">
         <button class="accordion-k">{{ $agenda->nama }}</button>
         <div class="panel-k">
@@ -142,7 +142,7 @@
         </div>
 
         <div class="content1">
-          <h2>Zalfariza Sukmadevi</h2>
+          <h2>Zalfaritza Adelia Sukmadevi</h2>
           <p class="deskripsi">
             Senator Anggota</br>FH UNDIP 2022
           </p>

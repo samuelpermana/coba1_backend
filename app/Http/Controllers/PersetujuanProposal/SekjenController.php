@@ -35,9 +35,10 @@ class SekjenController extends Controller
                  'created_at' => $proposal->created_at,
                  'nama_pengaju' => $proposal->user->name,
                  'file_final' => $proposal->file_final,
+                 'file_final_sekjen' => $proposal->file_final_sekjen,
              ];
          }
-        return view('komisi.transparansi.transparansisurat', compact('proposalData'));
+        return view('pimpinan.transparansi.transparansisurat', compact('proposalData'));
     }
 
     public function direvisi()
@@ -60,10 +61,11 @@ class SekjenController extends Controller
                  'created_at' => $proposal->created_at,
                  'nama_pengaju' => $proposal->user->name,
                  'file_final' => $proposal->file_final,
+                 'file_final_sekjen' => $proposal->file_final_sekjen,
                  
              ];
          }
-        return view('komisi.transparansi.proposal_direvisi', compact('proposalData'));
+        return view('pimpinan.transparansi.proposal_direvisi', compact('proposalData'));
     }
     public function disetujui()
     {
@@ -86,9 +88,10 @@ class SekjenController extends Controller
                  'created_at' => $proposal->created_at,
                  'nama_pengaju' => $proposal->user->name,
                  'file_final' => $proposal->file_final,
+                 'file_final_sekjen' => $proposal->file_final_sekjen,
              ];
          }
-        return view('komisi.transparansi.proposal_disetujui', compact('proposalData'));
+        return view('pimpinan.transparansi.proposal_disetujui', compact('proposalData'));
     }
     public function ditolak()
     {
@@ -110,9 +113,10 @@ class SekjenController extends Controller
                  'created_at' => $proposal->created_at,
                  'nama_pengaju' => $proposal->user->name,
                  'file_final' => $proposal->file_final,
+                 'file_final_sekjen' => $proposal->file_final_sekjen,
              ];
          }
-        return view('komisi.transparansi.transparansisurat', compact('proposalData'));
+        return view('pimpinan.transparansi.transparansisurat', compact('proposalData'));
     }
 
     public function adminReject(Request $request, $proposalId)
@@ -150,24 +154,35 @@ class SekjenController extends Controller
 
     public function adminApprove(Request $request, $proposalId)
     {
-
+        $request->validate([
+            'file_final_sekjen' => 'required|file|mimes:doc,docx,pdf',
+        ]);
+    
         $proposal = ProposalOrmawa::findOrFail($proposalId);
         $ormawaName = User::findOrFail($proposal->created_by)->name;
         $ormawaemail = User::findOrFail($proposal->created_by)->email;
+    
+        // Simpan file final dengan penamaan yang diinginkan
+        $nama_file = "FileFinalProposal{$proposal->id}_{$proposal->judul}_Ormawa.".$request->file('file_final_sekjen')->getClientOriginalExtension();
+        $file_path = $request->file('file_final_sekjen')->storeAs('proposal_files', $nama_file, 'public');
+    
         $proposal->update([
-            'status'=> 'sekjen',
-            'status_persetujuan'=> 'approved',
-            'is_checked'=> true,
+            'status' => 'sekjen',
+            'status_persetujuan' => 'approved',
+            'is_checked' => true,
             'approved_at' => Carbon::now(),
+            'file_final_sekjen' => $file_path, 
         ]);
+    
         $namaKomisi = User::where('id', Auth::id())->value('name');
+    
         $log = new LogProposal();
         $log->action = 'Pengajuan disetujui oleh ' . $namaKomisi;
         $log->keterangan = 'Pengajuan disetujui oleh Sekjen';
         $log->proposal_id = $proposal->id;
         $log->user_id = Auth::id();
         $log->save();
-
+    
         $mailController = new MailController();
         $to = $ormawaemail;
         $subject = 'Pengajuan Proposal Disetujui oleh ' . Auth::user()->name;
@@ -178,8 +193,10 @@ class SekjenController extends Controller
         'Nama Ormawa: ' . $ormawaName . '<br>'.
         'Silakan unduh file proposal di sini: <a href="' . asset('storage/' . $proposal->file_proposal) . '">Download Proposal</a>';
         $mailController->sendEmail($to, $subject, $body);
+    
         return redirect()->back()->with('success', 'Komisi checked by berhasil diperbarui.');
     }
+    
 
     public function listRevisi(Request $request, $proposalId)
     {

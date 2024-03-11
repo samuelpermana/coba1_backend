@@ -81,6 +81,7 @@ Route::get('/tentang-badan-anggaran', [AgendaWebController::class, 'badanAnggara
 Route::get('/tentang-badan-kehormatan', [AgendaWebController::class, 'badanKehormatan'])->name('tentang.badanKehormatan');
 Route::get('/tentang-badan-legislasi', [AgendaWebController::class, 'badanLegislasi'])->name('tentang.badanLegislasi');
 Route::get('/tentang-bksap', [AgendaWebController::class, 'Bksap'])->name('tentang.bksap');
+Route::get('/tentang-burt', [AgendaWebController::class, 'burt'])->name('tentang.burt');
 
 
 
@@ -308,6 +309,20 @@ Route::group([
     'prefix' => 'bksap',
     'as' => 'bksap.',
     'middleware' => ['auth', 'role.auth:bksap']
+], function () {
+    Route::get('/', [AgendaBadanController::class, 'index']);
+    Route::get('/agendakerja', [AgendaBadanController::class, 'index'])->name('agenda.index');
+    Route::get('/agendakerja/create', [AgendaBadanController::class, 'showCreate'])->name('agenda.create');
+    Route::post('/agendakerja', [AgendaBadanController::class, 'store'])->name('agenda.store');
+    Route::get('/agendakerja/{id}/edit', [AgendaBadanController::class, 'showEdit'])->name('agenda.edit');
+    Route::put('/agendakerja/{id}', [AgendaBadanController::class, 'update'])->name('agenda.update');
+    Route::delete('/agendakerja/{id}', [AgendaBadanController::class, 'destroy'])->name('agenda.destroy');
+});
+// ======================== END BADAN legislasi ==================================
+Route::group([
+    'prefix' => 'burt',
+    'as' => 'burt.',
+    'middleware' => ['auth', 'role.auth:burt']
 ], function () {
     Route::get('/', [AgendaBadanController::class, 'index']);
     Route::get('/agendakerja', [AgendaBadanController::class, 'index'])->name('agenda.index');

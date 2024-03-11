@@ -122,7 +122,7 @@
           </div>
     
           <div class="content1">
-            <h2>Felicia Adeline Rustani</h2>
+            <h2>Felicia Adelyne Rustani</h2>
             <p class="deskripsi">
               Senator Anggota</br>FH UNDIP 2022
             </p>

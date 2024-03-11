@@ -61,7 +61,7 @@
 
   <section class="container-k">
     <h2 class="header">Agenda Kerja</h2>
-    @foreach ($agendas['Komisi3'] as $agenda)
+    @foreach ($agendas['Komisi III SM FH Undip'] as $agenda)
     <div class="tag-divide">
         <button class="accordion-k">{{ $agenda->nama }}</button>
         <div class="panel-k">
@@ -120,7 +120,7 @@
           <div class="content1">
             <h2>Muhammad Habib Zaid El Hakim</h2>
             <p class="deskripsi">
-              Ketua Komisi II</br>FH UNDIP 2022
+              Ketua Komisi III</br>FH UNDIP 2022
             </p>
           </div>
       </div>
@@ -132,7 +132,7 @@
           </div>
     
           <div class="content1">
-            <h2>Putri Shafirah Rahmadhania</h2>
+            <h2>Putri Shafira Ramadhania</h2>
             <p class="deskripsi">
               Senator Anggota</br>FH UNDIP 2022
             </p>
@@ -150,7 +150,7 @@
             <div class="content1">
               <h2>Alzena Raisha Davina</h2>
               <p class="deskripsi">
-                Senator Anggota</br>FH UNDIP 2022
+                Senator Anggota</br>FH UNDIP 2023
               </p>
             </div>
         </div>

@@ -29,7 +29,9 @@ class ProposalController extends Controller
                 'status_persetujuan' => $proposal->status_persetujuan,
                 'file_proposal' => $proposal->file_proposal,
                 'created_at' => $proposal->created_at,
-                'nama_pengaju' => $proposal->user->name
+                'nama_pengaju' => $proposal->user->name,
+                'file_final' => $proposal->file_final,
+                'file_final_sekjen' => $proposal->file_final_sekjen,
             ];
         }
 
@@ -45,10 +47,10 @@ class ProposalController extends Controller
         $proposal = ProposalOrmawa::findOrFail($proposalId);
     
         $komisiActions = [
-            21 => 1,
-            22 => 2,
-            23 => 3,
-            24 => 4,
+            3 => 1,
+            4 => 2,
+            5 => 3,
+            6 => 4,
         ];
     
         $proposal->update([

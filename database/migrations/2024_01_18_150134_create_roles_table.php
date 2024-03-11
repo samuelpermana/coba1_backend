@@ -27,6 +27,7 @@ return new class extends Migration
             ['id' => 9, 'role_name' => 'Badan Kehormatan', 'role_slug' => 'badan-kehormatan'],
             ['id' => 10, 'role_name' => 'Badan Legislasi', 'role_slug' => 'badan-legislasi'],
             ['id' => 11, 'role_name' => 'BKSAP', 'role_slug' => 'bksap'],
+            ['id' => 12, 'role_name' => 'BURT', 'role_slug' => 'burt'],
         ]);
     }
 

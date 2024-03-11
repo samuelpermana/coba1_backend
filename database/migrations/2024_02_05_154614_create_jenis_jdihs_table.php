@@ -19,6 +19,7 @@ return new class extends Migration
 
         // Insert data
         DB::table('jenis_jdihs')->insert([
+            ['name' => 'Konstitusi'],
             ['name' => 'Peraturan Mahasiswa'],
             ['name' => 'Standart Operating Procedure'],
             ['name' => 'Peraturan Senat Mahasiswa'],

@@ -122,4 +122,18 @@ class AgendaWebController extends Controller
         // return response()->json(['agendas' => $agendas]);
         return view('bksap', compact('agendas'));
     }
+    public function burt()
+    {   
+        $users = User::whereHas('role', function ($query) {
+            $query->where('role_slug', 'burt');
+        })->get();
+
+        $agendas = [];
+        foreach ($users as $user) {
+            $agendas[$user->name] = AgendaKerja::where('user_id', $user->id)->get();
+        }
+
+        // return response()->json(['agendas' => $agendas]);
+        return view('burt', compact('agendas'));
+    }
 }

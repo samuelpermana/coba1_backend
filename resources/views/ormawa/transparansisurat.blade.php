@@ -26,6 +26,7 @@
                         <th> Status </th>
                         <th> Surat </th>
                         <th> Lama Proses</th>
+                        <th> File Final SM FH</th>
                         <th> Upload File Final</th>
                         
                     </tr>
@@ -82,6 +83,20 @@
                             @endif
                         </td>
                         <td>
+                        @if ($proposal['status'] == 'sekjen' && $proposal['status_persetujuan'] == 'approved')
+                                                {{-- Cek apakah file final sudah diunggah --}}
+                                                @if ($proposal['file_final_sekjen'])
+                                                    <a href="{{ Storage::url($proposal['file_final_sekjen']) }}" target="_blank" class="blue">
+                                                        <img class="star-img" src="/img/filetransparan.svg" alt="" />
+                                                    </a>
+                                                @else
+                                                    belum diupload
+                                                @endif
+                                            @else
+                                                Belum disetujui
+                                            @endif
+                        </td>
+                        <td>
                             @if ($proposal['status'] == 'sekjen' && $proposal['status_persetujuan'] == 'approved')
                                 {{-- Cek apakah file final sudah diunggah --}}
                                 @if ($proposal['file_final'])
@@ -89,13 +104,11 @@
                                         <img class="star-img" src="/img/filetransparan.svg" alt="" />
                                     </a>
                                 @else
-                                    {{-- Tampilkan form untuk mengunggah file final PDF --}}
-                                    <img class="star-imgfinal" src="/img/filetransparan.svg" alt="" />
-                                    <form class="finalis"{{ route('ormawa.upload.file.final', $proposal['id']) }}" method="post" enctype="multipart/form-data">
-                                        @csrf
-                                        <input class="final" type="file" name="file_final" accept="application/pdf">
-                                        <button class="final-upload" type="submit">Upload File Final</button>
-                                    </form>
+                                <form class="finalis" action="{{ route('ormawa.upload.file.final', $proposal['id']) }}" method="post" enctype="multipart/form-data">
+                                    @csrf
+                                    <input class="final" type="file" name="file_final" accept="application/pdf">
+                                    <button class="final-upload" type="submit">Upload File Final</button>
+                                </form>
                                 @endif
                             @else
                                 Belum disetujui

@@ -152,7 +152,7 @@
             <div class="content1">
               <h2>Muhammad Fakhrizy Viermanz Putra</h2>
               <p class="deskripsi">
-                Senator Anggota</br>FH UNDIP 2022
+                Senator Anggota</br>FH UNDIP 2023
               </p>
             </div>
         </div>

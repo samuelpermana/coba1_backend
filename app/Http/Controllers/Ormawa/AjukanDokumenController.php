@@ -56,7 +56,7 @@ class AjukanDokumenController extends Controller
             $log->save();
 
             $mailController = new MailController();
-            $to = 'smfh@gmail.com';
+            $to = 'bksap24cmswebsite@gmail.com';
             $subject = 'Pengajuan Proposal oleh ' . Auth::user()->name;
             $body = 'Judul Proposal: ' . $proposal->judul . '<br>' .
                     'Deskripsi Proposal: ' . $proposal->deskripsi . '<br>' .
@@ -104,6 +104,7 @@ class AjukanDokumenController extends Controller
             'approved_at' => $proposal->approved_at,
             'lama_proses' => $lamaProses,
             'file_final' => $proposal->file_final,
+            'file_final_sekjen' => $proposal->file_final_sekjen,
         ];
         }
 
@@ -140,20 +141,14 @@ class AjukanDokumenController extends Controller
     
             $proposal = ProposalOrmawa::findOrFail($proposalId);
             $revisiProposal = RevisiProposal::findOrFail($revisiId);
-    
-            // Mendapatkan informasi proposal
             $ormawaUser = User::findOrFail($proposal->created_by);
             $nama_ormawa = $ormawaUser->name;
             $nama_komisi = Auth::user()->name;
             $tanggal_revisi = now()->format('Ymd');
-    
-            // Menghitung nomor revisi
             $nomor_revisi = $revisiProposal->id;
     
-            // Membuat nama file revisi sesuai format yang diinginkan
             $nama_file_revisi = "Proposal{$proposalId}-{$nama_ormawa}-RevisiOrmawa{$nomor_revisi}_{$nama_komisi}-{$tanggal_revisi}.".$request->file('file_proposal')->getClientOriginalExtension();
     
-            // Simpan perubahan proposal
             $proposal->judul = $request->judul;
             $proposal->tipe = "revisi";
             $proposal->is_checked = false;
@@ -204,23 +199,28 @@ class AjukanDokumenController extends Controller
     }
     
     
-public function uploadFileFinal(Request $request, $proposalId)
-{
-    $request->validate([
-        'file_final' => 'required|file|mimes:pdf', 
-    ]);
+    public function uploadFileFinal(Request $request, $proposalId)
+    {
+        $request->validate([
+            'file_final' => 'required|file|mimes:pdf', 
+        ]);
+    
+        $proposal = ProposalOrmawa::findOrFail($proposalId);
+    
+        if ($request->hasFile('file_final')) {
+            $file = $request->file('file_final');
 
-    $proposal = ProposalOrmawa::findOrFail($proposalId);
+            $file_name = "File Final Proposal ({$proposalId})_{$proposal->judul}_Ormawa.".$file->getClientOriginalExtension();
 
-    if ($request->hasFile('file_final')) {
-        $file = $request->file('file_final');
-        $file_path = $file->storeAs('file_finals', $file->getClientOriginalName(), 'public');
-        $proposal->file_final = $file_path;
-        $proposal->save();
-
-        return redirect()->back()->with('success', 'File final berhasil diupload.');
+            $file_path = $file->storeAs('file_finals', $file_name, 'public');
+    
+            $proposal->file_final = $file_path;
+            $proposal->save();
+    
+            return redirect()->back()->with('success', 'File final berhasil diupload.');
+        }
+    
+        return redirect()->back()->with('error', 'Gagal mengupload file final.');
     }
-
-    return redirect()->back()->with('error', 'Gagal mengupload file final.');
-}
+    
 }

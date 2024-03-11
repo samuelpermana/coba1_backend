@@ -90,6 +90,9 @@ class AuthController extends Controller
                 case 'bksap':
                     return redirect()->route('bksap.agenda.index');
                     break;
+                case 'burt':
+                    return redirect()->route('burt.agenda.index');
+                    break;
                 case 'pimpinan':
                     return redirect()->route('pimpinan.proposal.belum-diperiksa');
                     break;

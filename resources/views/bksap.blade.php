@@ -117,7 +117,7 @@
           </div>
     
           <div class="content1">
-            <h2>Zalfariza Adelia Sukmadevi</h2>
+            <h2>Zalfaritza Adelia Sukmadevi</h2>
             <p class="deskripsi">
               Ketua BKSAP</br>FH UNDIP 2022
             </p>
