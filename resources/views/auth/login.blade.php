@@ -40,7 +40,7 @@
             <div class="toggle">
                 <div class="toggle-panel toggle-right">
                     <div class="img">
-                        <img src="img/coba12.png">
+                        <img src="/img/coba12.png">
                     </div>
                     <h1>Welcome Admin</h1>
                     <p>Enter your personal details to use all of site features</p>

@@ -289,6 +289,15 @@
             </a>
           </div>
         </div>
+        <div class="item"  style="background-image: url(/img/BKSAP-COBA.jpg);">
+          <div class="content">
+            <div class="name">BURT</div>
+            <div class="des">Badan Urusan Rumah Tangga</div>
+            <a href="{{ url("/tentang-burt") }}">
+              <button>Selengkapnya</button>
+            </a>
+          </div>
+        </div>
       </div>
 
       <div class="button1">

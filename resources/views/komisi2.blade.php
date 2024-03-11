@@ -61,7 +61,7 @@
 
   <section class="container-k">
     <h2 class="header">Agenda Kerja</h2>
-    @foreach ($agendas["Komisi2"] as $agenda)
+    @foreach ($agendas["Komisi II SM FH Undip"] as $agenda)
       <div class="tag-divide">
         <button class="accordion-k">{{ $agenda->nama }}</button>
         <div class="panel-k">
@@ -112,7 +112,7 @@
     <div class="anggota-4">
       <div class="card-coba">
         <div class="imgbox">
-          <img class="img-coba" src="img/felicia-kuning.png" />
+          <img class="img-coba" src="/img/felicia-kuning.png" />
         </div>
 
         <div class="content1">
@@ -124,7 +124,7 @@
       </div>
       <div class="card-coba">
         <div class="imgbox">
-          <img class="img-coba" src="img/zaneta-kuning.png" />
+          <img class="img-coba" src="/img/zaneta-kuning.png" />
         </div>
 
         <div class="content1">
@@ -138,11 +138,11 @@
     <div class="anggota-4-1">
       <div class="card-coba">
         <div class="imgbox">
-          <img class="img-coba" src="img/zalfaritsa-kuning.png" />
+          <img class="img-coba" src="/img/zalfaritsa-kuning.png" />
         </div>
 
         <div class="content1">
-          <h2>Zalfariza Sukmadevi</h2>
+          <h2>Zalfaritza Adelia Sukmadevi</h2>
           <p class="deskripsi">
             Senator Anggota</br>FH UNDIP 2022
           </p>
@@ -150,7 +150,7 @@
       </div>
       <div class="card-coba">
         <div class="imgbox">
-          <img class="img-coba" src="img/yosef-kuning.png" />
+          <img class="img-coba" src="/img/yosef-kuning.png" />
         </div>
 
         <div class="content1">

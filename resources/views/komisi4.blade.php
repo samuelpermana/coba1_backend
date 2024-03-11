@@ -61,7 +61,7 @@
 
   <section class="container-k">
     <h2 class="header">Agenda Kerja</h2>
-    @foreach ($agendas['Komisi4'] as $agenda)
+    @foreach ($agendas['Komisi IV SM FH Undip'] as $agenda)
     <div class="tag-divide">
         <button class="accordion-k">{{ $agenda->nama }}</button>
         <div class="panel-k">
@@ -113,12 +113,12 @@
       <div class="card-coba">
           <div class="imgbox">
             <img class="img-coba"
-              src="img/fakhru-kuning.png"
+              src="/img/fakhru-kuning.png"
             />
           </div>
     
           <div class="content1">
-            <h2>Fakhrunnisa Arvia Alderia</h2>
+            <h2>Fakhrunnisa Arvia Aldeira</h2>
             <p class="deskripsi">
               Ketua Komisi IV</br>FH UNDIP 2022
             </p>
@@ -127,7 +127,7 @@
       <div class="card-coba">
           <div class="imgbox">
             <img class="img-coba"
-              src="img/yolanda-kuning.png"
+              src="/img/yolanda-kuning.png"
             />
           </div>
     
@@ -143,7 +143,7 @@
       <div class="card-coba">
             <div class="imgbox">
               <img class="img-coba"
-                src="img/arjuna-kuning.png"
+                src="/img/arjuna-kuning.png"
               />
             </div>
       
@@ -157,7 +157,7 @@
         <div class="card-coba">
             <div class="imgbox">
               <img class="img-coba"
-                src="img/carmel-kuning.png"
+                src="/img/carmel-kuning.png"
               />
             </div>
       
@@ -173,12 +173,12 @@
       <div class="card-coba">
               <div class="imgbox">
                 <img class="img-coba"
-                  src="img/dhiyaa-kuning.png"
+                  src="/img/dhiyaa-kuning.png"
                 />
               </div>
         
               <div class="content1">
-                 <h2>Dhiyaa Ulhaq Nusyaffa Kartika</h2>
+                 <h2>Dhiyaa Ulhaq Musyaffa Kartika</h2>
                 <p class="deskripsi">
                   Senator Anggota</br>FH UNDIP 2022
                 </p>

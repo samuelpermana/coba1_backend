@@ -63,7 +63,7 @@
   </section>
   <section class="container-k">
     <h2 class="header">Agenda Kerja</h2>
-    @foreach ($agendas['Komisi1'] as $agenda)
+    @foreach ($agendas['Komisi I SM FH Undip'] as $agenda)
     <div class="tag-divide">
         <button class="accordion-k">{{ $agenda->nama }}</button>
         <div class="panel-k">
@@ -115,12 +115,12 @@
       <div class="card-coba">
           <div class="imgbox">
             <img class="img-coba"
-              src="img/gibran-kuning.png"
+              src="/img/gibran-kuning.png"
             />
           </div>
     
           <div class="content1">
-            <h2>Muhammad Gibran Widiyanto</h2>
+            <h2>Muhammad Gibran Widiharyanto</h2>
             <p class="deskripsi">
               Ketua Komisi I</br>FH UNDIP 2022
             </p>
@@ -129,7 +129,7 @@
       <div class="card-coba">
           <div class="imgbox">
             <img class="img-coba"
-              src="img/maharani-kuning.png"
+              src="/img/maharani-kuning.png"
             />
           </div>
     
@@ -145,7 +145,7 @@
       <div class="card-coba">
             <div class="imgbox">
               <img class="img-coba"
-                src="img/sami-kuning.png"
+                src="/img/sami-kuning.png"
               />
             </div>
       
@@ -159,7 +159,7 @@
         <div class="card-coba">
             <div class="imgbox">
               <img class="img-coba"
-                src="img/ridho-kuning.png"
+                src="/img/ridho-kuning.png"
               />
             </div>
       

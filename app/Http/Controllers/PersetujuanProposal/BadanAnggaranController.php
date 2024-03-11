@@ -34,6 +34,7 @@ class BadanAnggaranController extends Controller
                  'created_at' => $proposal->created_at,
                  'nama_pengaju' => $proposal->user->name,
                  'file_final' => $proposal->file_final,
+                 'file_final_sekjen' => $proposal->file_final_sekjen,
              ];
          }
         return view('komisi.transparansi.transparansisurat', compact('proposalData'));
@@ -59,6 +60,7 @@ class BadanAnggaranController extends Controller
                  'created_at' => $proposal->created_at,
                  'nama_pengaju' => $proposal->user->name,
                  'file_final' => $proposal->file_final,
+                 'file_final_sekjen' => $proposal->file_final_sekjen,
              ];
          }
         return view('komisi.transparansi.proposal_direvisi', compact('proposalData'));
@@ -83,6 +85,7 @@ class BadanAnggaranController extends Controller
                  'created_at' => $proposal->created_at,
                  'nama_pengaju' => $proposal->user->name,
                  'file_final' => $proposal->file_final,
+                 'file_final_sekjen' => $proposal->file_final_sekjen,
              ];
          }
         return view('komisi.transparansi.proposal_disetujui', compact('proposalData'));
@@ -107,6 +110,7 @@ class BadanAnggaranController extends Controller
                  'created_at' => $proposal->created_at,
                  'nama_pengaju' => $proposal->user->name,
                  'file_final' => $proposal->file_final,
+                 'file_final_sekjen' => $proposal->file_final_sekjen,
              ];
          }
         return view('komisi.transparansi.transparansisurat', compact('proposalData'));

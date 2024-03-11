@@ -23,13 +23,6 @@ return new class extends Migration
             $table->softDeletes(); // Add this line to enable soft deletes
         });
 
-        // Insert default user
-        DB::table('users')->insert([
-            'name' => 'Admin',
-            'email' => 'adminsmfh@gmail.com',
-            'password' => Hash::make('password'),
-            'role_id' => 1,
-        ]);
     }
 
     public function down(): void

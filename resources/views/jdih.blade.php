@@ -37,14 +37,16 @@
       <section class="container">
         <h2 class="headerJD">
           @if ($id == 1)
-            JDIH - Peraturan Mahasiswa
+            JDIH - Konstitusi
           @elseif ($id == 2)
-            JDIH - Standart Operating
+            JDIH - Peraturan Mahasiswa
           @elseif ($id == 3)
-            JDIH - Peratusan Senat Mahasiswa
+            JDIH - Standart Operating
           @elseif ($id == 4)
-            JDIH - Keputusan
+            JDIH - Peratusan Senat Mahasiswa
           @elseif ($id == 5)
+            JDIH - Keputusan
+          @elseif ($id == 6)
             JDIH - Rancangan Peraturan
           @endif
         </h2>

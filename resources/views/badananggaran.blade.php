@@ -103,7 +103,7 @@
       <div class="card-coba">
           <div class="imgbox">
             <img class="img-coba"
-              src="img/putri-kuning.png"
+              src="/img/putri-kuning.png"
             />
           </div>
     
@@ -117,12 +117,12 @@
       <div class="card-coba">
           <div class="imgbox">
             <img class="img-coba"
-              src="img/felicia-kuning.png"
+              src="/img/felicia-kuning.png"
             />
           </div>
     
           <div class="content1">
-            <h2>Felicia Adeline Rustani</h2>
+            <h2>Felicia Adelyne Rustani</h2>
             <p class="deskripsi">
               Senator Anggota</br>FH UNDIP 2022
             </p>
@@ -133,7 +133,7 @@
       <div class="card-coba">
             <div class="imgbox">
               <img class="img-coba"
-                src="img/gibran-kuning.png"
+                src="/img/gibran-kuning.png"
               />
             </div>
       
@@ -147,7 +147,7 @@
         <div class="card-coba">
             <div class="imgbox">
               <img class="img-coba"
-                src="img/dhiyaa-kuning.png"
+                src="/img/dhiyaa-kuning.png"
               />
             </div>
       
@@ -163,7 +163,7 @@
       <div class="card-coba">
               <div class="imgbox">
                 <img class="img-coba"
-                  src="img/yosef-kuning.png"
+                  src="/img/yosef-kuning.png"
                 />
               </div>
         

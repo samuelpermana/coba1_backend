@@ -53,7 +53,7 @@
       <a class="btn" href="http://127.0.0.1:8000/selayangpandang">Makna Logo</a>
     </div>
     <div class="img">
-      <img src="img/coba12.png">
+      <img src="/img/coba12.png">
     </div>
   </header>
 
