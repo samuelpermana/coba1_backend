@@ -106,7 +106,7 @@
                                 @else
                                 <form class="finalis" action="{{ route('ormawa.upload.file.final', $proposal['id']) }}" method="post" enctype="multipart/form-data">
                                     @csrf
-                                    <input class="final" type="file" name="file_final" accept="application/pdf">
+                                    <input class="final" type="file" name="file_final" accept=".doc, .docx, application/pdf">
                                     <button class="final-upload" type="submit">Upload File Final</button>
                                 </form>
                                 @endif

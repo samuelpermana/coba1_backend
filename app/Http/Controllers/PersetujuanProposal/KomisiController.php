@@ -47,6 +47,7 @@ class KomisiController extends Controller
         $proposals = ProposalOrmawa::where('komisi_checked_by', $userId)
         ->where('status', 'komisi')
         ->where('status_persetujuan', 'direvisi')
+        ->where('status_persetujuan', 'direvisi')
         ->where('is_checked', 1)
         ->get();
          $proposalData = [];
@@ -210,78 +211,85 @@ class KomisiController extends Controller
     }
 
     public function createRevisi(Request $request, $proposalId)
-{
-    $request->validate([
-        'komentar' => 'required|string',
-        'file_revisi' => 'required|file|mimes:doc,docx',
-    ]);
-
-    $user_id = Auth::id();
-    $proposal = ProposalOrmawa::findOrFail($proposalId);
-    $ormawaUser = User::findOrFail($proposal->created_by);
-    $nama_ormawa = $ormawaUser->name;
-    $nama_komisi = Auth::user()->name; // Asumsi nama komisi diambil dari user yang sedang login
-    $tanggal_revisi = now()->format('Ymd');
-
-    // Menghitung nomor revisi
-    $nomor_revisi = RevisiProposal::where('proposal_id', $proposalId)->count() + 1;
-
-    // Membuat nama file revisi sesuai format yang diinginkan
-    $nama_file_revisi = "Proposal{$proposalId}-{$nama_ormawa}-Revisi{$nomor_revisi}_{$nama_komisi}-{$tanggal_revisi}.".$request->file('file_revisi')->getClientOriginalExtension();
-
-    // Menyimpan file revisi
-    $file_revisi_path = $request->file('file_revisi')->storeAs('revisi_files', $nama_file_revisi, 'public');
-
-    // Buat entri baru untuk RevisiProposal
-    $revisiProposal = new RevisiProposal();
-    $revisiProposal->proposal_id = $proposalId;
-    $revisiProposal->komentar = $request->komentar;
-    $revisiProposal->revised_by = $user_id;
-    $revisiProposal->is_revision_done_by_ormawa = false;
-    $revisiProposal->file_revisi = $file_revisi_path;
-    $revisiProposal->save();
-
-    // Mengupdate status proposal
-    $proposal->update([
-        'status' => 'komisi',
-        'status_persetujuan' => 'direvisi',
-        'is_checked'=> true
-    ]);
-
-    // Menyimpan riwayat revisi ormawa
-    RiwayatRevisiOrmawa::create([
-        'proposal_id' => $proposalId,
-        'revisi_id' => $revisiProposal->id,
-        'judul_lama' => $proposal->judul,
-        'deskripsi_lama' => $proposal->deskripsi,
-        'file_lama' => $proposal->file_proposal,
-    ]);
-
-    // Menyimpan log
-    $log = new LogProposal();
-    $log->action = 'Proposal direvisi oleh Komisi';
-    $log->keterangan = 'Proposal direvisi oleh Komisi ' . $nama_komisi;
-    $log->proposal_id = $proposalId;
-    $log->user_id = $user_id;
-    $log->save();
-
-    // Mengirim email pemberitahuan
-    $mailController = new MailController();
-    $to = $ormawaUser->email;
-    $subject = 'Proposal Direvisi oleh '. $nama_komisi;
-    $body = 'Proposal Anda telah direvisi oleh Komisi. Silakan unduh file revisi dan file proposal lama untuk informasi lebih lanjut.' . '<br>' .
+    {
+        $request->validate([
+            'komentar' => 'required|string',
+            'file_revisi' => 'nullable|file|mimes:doc,docx',
+        ]);
+    
+        $user_id = Auth::id();
+        $proposal = ProposalOrmawa::findOrFail($proposalId);
+        $ormawaUser = User::findOrFail($proposal->created_by);
+        $nama_ormawa = $ormawaUser->name;
+        $nama_komisi = Auth::user()->name; // Asumsi nama komisi diambil dari user yang sedang login
+        $tanggal_revisi = now()->format('Ymd');
+    
+        // Menghitung nomor revisi
+        $nomor_revisi = RevisiProposal::where('proposal_id', $proposalId)->count() + 1;
+    
+        // Membuat nama file revisi sesuai format yang diinginkan
+        $nama_file_revisi = "Proposal{$proposalId}-{$nama_ormawa}-Revisi{$nomor_revisi}_{$nama_komisi}-{$tanggal_revisi}.";
+    
+        // Menyimpan file revisi jika ada
+        $file_revisi_path = null;
+        if ($request->hasFile('file_revisi')) {
+            $file_revisi_path = $request->file('file_revisi')->storeAs('revisi_files', $nama_file_revisi, 'public');
+        }
+    
+        // Buat entri baru untuk RevisiProposal
+        $revisiProposal = new RevisiProposal();
+        $revisiProposal->proposal_id = $proposalId;
+        $revisiProposal->komentar = $request->komentar;
+        $revisiProposal->revised_by = $user_id;
+        $revisiProposal->is_revision_done_by_ormawa = false;
+        $revisiProposal->file_revisi = $file_revisi_path;
+        $revisiProposal->save();
+    
+        // Mengupdate status proposal
+        $proposal->update([
+            'status' => 'komisi',
+            'status_persetujuan' => 'direvisi',
+            'is_checked' => true
+        ]);
+    
+        // Menyimpan riwayat revisi ormawa
+        RiwayatRevisiOrmawa::create([
+            'proposal_id' => $proposalId,
+            'revisi_id' => $revisiProposal->id,
+            'judul_lama' => $proposal->judul,
+            'deskripsi_lama' => $proposal->deskripsi,
+            'file_lama' => $proposal->file_proposal,
+        ]);
+    
+        // Menyimpan log
+        $log = new LogProposal();
+        $log->action = 'Proposal direvisi oleh Komisi';
+        $log->keterangan = 'Proposal direvisi oleh Komisi ' . $nama_komisi;
+        $log->proposal_id = $proposalId;
+        $log->user_id = $user_id;
+        $log->save();
+    
+        // Mengirim email pemberitahuan
+        $mailController = new MailController();
+        $to = $ormawaUser->email;
+        $subject = 'Proposal Direvisi oleh ' . $nama_komisi;
+        $body = 'Proposal Anda telah direvisi oleh Komisi. Silakan unduh file revisi dan file proposal lama untuk informasi lebih lanjut.' . '<br>' .
             'Judul Proposal: ' . $proposal->judul . '<br>' .
             'Deskripsi Proposal: ' . $proposal->deskripsi . '<br>' .
             'Komentar Komisi: ' . $request->komentar . '<br>' .
-            'File Proposal Lama: <a href="' . Storage::url($proposal->file_proposal) . '">' . basename($proposal->file_proposal) . '</a>' . '<br>' .
-            'File Revisi: <a href="' . Storage::url($file_revisi_path) . '">' . $nama_file_revisi . '</a>';
-    $mailController->sendEmail($to, $subject, $body);
-
-    $user_role_slug = auth()->user()->role->role_slug;
-
-    return redirect()->route($user_role_slug . '.proposal.revisi', $proposalId)->with('success', 'Agenda kerja berhasil dibuat!');
-}
-
+            'File Proposal Lama: <a href="' . Storage::url($proposal->file_proposal) . '">' . basename($proposal->file_proposal) . '</a>' . '<br>';
+    
+        if ($file_revisi_path) {
+            $body .= 'File Revisi: <a href="' . Storage::url($file_revisi_path) . '">' . $nama_file_revisi . '</a>';
+        }
+    
+        $mailController->sendEmail($to, $subject, $body);
+    
+        $user_role_slug = auth()->user()->role->role_slug;
+    
+        return redirect()->route($user_role_slug . '.proposal.revisi', $proposalId)->with('success', 'Agenda kerja berhasil dibuat!');
+    }
+    
 
     
 }

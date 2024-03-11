@@ -206,7 +206,7 @@ class BadanAnggaranController extends Controller
     {
         $request->validate([
             'komentar' => 'required|string',
-            'file_revisi' => 'required|file|mimes:doc,docx',
+            'file_revisi' => 'nullable|file|mimes:doc,docx',
         ]);
     
         $user_id = Auth::id();

@@ -70,8 +70,8 @@
                     @csrf
                     @method('PUT')
                     <div class="form-group">
-                        <label for="file_final_sekjen"></label>
-                        <input type="file" class="form-control" id="file_final_sekjen" name="file_final_sekjen" accept=".doc,.docx,.pdf" required>
+                        <label for="file_final_sekjen">File Final Sekjen (doc, docx, pdf)</label>
+                        <input type="file" class="form-control" id="file_final_sekjen" name="file_final_sekjen" accept=".doc, .docx, application/pdf" required>
                     </div>
                     <button class="btn btn-warning" type="submit">Setujui</button>
                 </form>
