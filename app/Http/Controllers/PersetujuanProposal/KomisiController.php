@@ -46,7 +46,7 @@ class KomisiController extends Controller
         $userId = Auth::id();
         $proposals = ProposalOrmawa::where('komisi_checked_by', $userId)
         ->where('status', 'komisi')
-        ->where('status_persetujuan', 'revised')
+        ->where('status_persetujuan', 'direvisi')
         ->where('is_checked', 1)
         ->get();
          $proposalData = [];
@@ -244,7 +244,7 @@ class KomisiController extends Controller
     // Mengupdate status proposal
     $proposal->update([
         'status' => 'komisi',
-        'status_persetujuan' => 'revised',
+        'status_persetujuan' => 'direvisi',
         'is_checked'=> true
     ]);
 

@@ -57,4 +57,5 @@
         </table>
         </section>
     </div>
+    <script src="js-peminjamanruangan.js"></script>
 @endsection

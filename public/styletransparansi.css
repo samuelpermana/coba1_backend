@@ -67,6 +67,7 @@ nav {
   border-radius: 5px;
   cursor: pointer;
   transition: all 0.3s ease;
+  margin-bottom: 1rem;
   
 }
 
@@ -79,7 +80,21 @@ nav {
   cursor: pointer;
   transition: all 0.3s ease;
   margin-bottom: 2rem;
-  margin-top: 1rem;
+  
+  width: 100%;
+  
+}
+
+.btn-warning1-pimpinan {
+  padding: 1rem 1.5rem;
+  font-size: 1rem;
+  color: #fff;
+  background-color: #800000;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-bottom: 2rem;
+  margin-top: -3rem;
   width: 100%;
   
 }
@@ -225,7 +240,8 @@ section .header {
   .table__body {
     width: 98%;
     max-height: calc(89% - 1.6rem);
-    background-color: #cbb989;
+    background: rgb(208, 172, 77);
+    background: linear-gradient(90deg, rgba(208, 172, 77, 1) 10%, rgba(226, 204, 142, 1) 40%, rgba(226, 204, 142, 1) 60%, rgba(208, 172, 77, 1) 90%);
   
     margin: .8rem auto;
     border-radius: .6rem;
@@ -233,6 +249,22 @@ section .header {
     overflow: auto;
     overflow: overlay;
   }
+
+  .table__header .input-group {
+    width: 35%;
+    height: 125%;
+    /* height: 120%; */
+    /* height: 140%; */
+    background-color: #F5F5DC;
+    padding: 0 0.8rem;
+    border-radius: 2rem;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: .2s;
+}
   
   
   .table__body::-webkit-scrollbar{
@@ -268,6 +300,7 @@ section .header {
     border-collapse: collapse;
     padding: 1rem;
     text-align: center;
+    
   }
   
   thead th {
@@ -677,21 +710,24 @@ section .header {
   }
 
   .final{
-    text-align: center;
-    min-width: 300px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-family: "Poppins", sans-serif;
-   
-    line-height: 1.5;
+    border: 1px solid #18181b;
+      border-radius: 0.25rem;
+      transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+      padding: 0.375rem 0.75rem;
+      cursor: pointer;
 
   }
   .final-upload{
-    margin-top: 0.5rem;
-    text-align: center;
-    display: block;
-    font-family: "Poppins", sans-serif;
+    padding: 0.5rem 1rem;
+  font-size: 1rem;
+  color: #fff;
+  background-color: #800000;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 1rem;
+  display: block;
+  
   }
 
   .finalis{
@@ -703,6 +739,14 @@ section .header {
     margin: 0;
     margin-left: 150px;
     margin-bottom: 0.5rem;
+}
+.form-control{
+  margin-left: 60px;
+  border: 1px solid #18181b;
+    border-radius: 0.25rem;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    padding: 0.375rem 0.75rem;
+
 }
   
   @media (width < 900px) {

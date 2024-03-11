@@ -44,7 +44,7 @@ class BadanAnggaranController extends Controller
     {
         $userId = Auth::id();
         $proposals = ProposalOrmawa::where('status', 'badan anggaran')
-        ->where('status_persetujuan', 'revised')
+        ->where('status_persetujuan', 'direvisi')
         ->where('is_checked', 1)
         ->get();
          $proposalData = [];
@@ -237,7 +237,7 @@ class BadanAnggaranController extends Controller
         $proposal = ProposalOrmawa::findOrFail($proposalId);
         $proposal->update([
             'status' => 'badan anggaran',
-            'status_persetujuan' => 'revised',
+            'status_persetujuan' => 'direvisi',
             'is_checked'=> true
         ]);
     
