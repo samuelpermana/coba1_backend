@@ -2,13 +2,20 @@
 
 @section("content")
 <link href="{{ asset("styletransparansi.css") }}" rel="stylesheet">
-    <div class="container">
+    <div class="container"> 
         <div class="header-revisi">
             <h1>Daftar Revisi Proposal</h1>
             <h2>{{ $proposal->judul }}</h2>
         </div>
-
-        <section class="table__body">
+    <main class="table" id="customers_table">
+            <section class="table__header">
+                <div class="input-group">
+                    <input type="search" placeholder="Search Data...">
+                    <img src="/img/search.png" alt="">
+                </div>
+                
+            </section>
+            <section class="table__body">
             <table>
                 <thead>
                     <tr>

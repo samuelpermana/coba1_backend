@@ -31,7 +31,8 @@
                     <th>Status Persetujuan </th>
                     <th>File Disetujui SM FH </th>
                     <th>File Final</th>
-                    <th>Actions</th>
+                    <th>File Final Sekjen (doc, docx, pdf)</th>
+                    <th>Action</th>
                         
                     </tr>
                 </thead>
@@ -74,16 +75,25 @@
                     </div>
                     <button class="btn btn-warning" type="submit">Setujui</button>
                 </form>
-              <form action="{{ route( auth()->user()->role->role_slug .'.proposal.komisi-reject', $proposal['id']) }}" method="POST">
-                  @csrf
-                  @method('PUT')
-                  <button class="btn-warning1" type="submit">Tolak</button>
-              </form>
-              <a href="{{ route(auth()->user()->role->role_slug . '.proposal.revisi', $proposal['id']) }}" class="btn-warning2 ">Revisi</a>
+              
               @else
               sudah ditolak
               @endif
           </td>
+          <td>
+            @if ($proposal['status_persetujuan'] != 'rejected')
+            
+            <form action="{{ route( auth()->user()->role->role_slug .'.proposal.komisi-reject', $proposal['id']) }}" method="POST">
+                @csrf
+                @method('PUT')
+                <button class="btn-warning1-pimpinan" type="submit">Tolak</button>
+            </form>
+            <a href="{{ route(auth()->user()->role->role_slug . '.proposal.revisi', $proposal['id']) }}" class="btn-warning2 ">Revisi</a>
+            @else
+            sudah ditolak
+            @endif
+        </td>
+
 
         </tr>
       @endforeach

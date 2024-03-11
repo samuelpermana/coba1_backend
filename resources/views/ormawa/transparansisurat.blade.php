@@ -66,7 +66,7 @@
                     <td>{{ $proposal['status_persetujuan'] }}
                         @if ($proposal['status_persetujuan'] == 'direvisi')
                             <br>
-                            <a href="{{ route('ormawa.proposal.revisi', $proposal['id']) }}" target="_blank">Lihat Detail Revisi dan Kirimkan Revisi Proposal</a>
+                            <a href="{{ route('ormawa.proposal.revisi', $proposal['id']) }}" target="_blank">Kirimkan Revisi Proposal</a>
                         @endif
                     </td>
 

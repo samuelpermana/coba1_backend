@@ -47,6 +47,7 @@ class KomisiController extends Controller
         $proposals = ProposalOrmawa::where('komisi_checked_by', $userId)
         ->where('status', 'komisi')
         ->where('status_persetujuan', 'direvisi')
+        ->where('status_persetujuan', 'direvisi')
         ->where('is_checked', 1)
         ->get();
          $proposalData = [];
