@@ -40,47 +40,51 @@ class ProposalController extends Controller
 
     public function updateKomisiCheckedBy(Request $request, $proposalId)
     {
-        $request->validate([
-            'komisi_checked_by' => 'required|numeric',
-        ]);
-    
-        $proposal = ProposalOrmawa::findOrFail($proposalId);
-    
-        $komisiActions = [
-            3 => 1,
-            4 => 2,
-            5 => 3,
-            6 => 4,
-        ];
-    
-        $proposal->update([
-            'komisi_checked_by' => $request->komisi_checked_by,
-            'status' => 'komisi',
-            'status_persetujuan' => 'pending',
-        ]);
-    
-        $log = new LogProposal();
-        $log->action = 'Penugasan ke Komisi';
-        $log->keterangan = 'Proposal akan diperiksa oleh Komisi ' . $komisiActions[$request->komisi_checked_by];
-        $log->proposal_id = $proposal->id;
-        $log->user_id = Auth::id();
-        $log->save();
+        try {
+            $request->validate([
+                'komisi_checked_by' => 'required|numeric',
+            ]);
         
-        $komisiMemberEmail = User::findOrFail($request->komisi_checked_by)->email;
-        $ormawaName = User::findOrFail($proposal->created_by)->name;
+            $proposal = ProposalOrmawa::findOrFail($proposalId);
+        
+            $komisiActions = [
+                3 => 1,
+                4 => 2,
+                5 => 3,
+                6 => 4,
+            ];
+        
+            $proposal->update([
+                'komisi_checked_by' => $request->komisi_checked_by,
+                'status' => 'komisi',
+                'status_persetujuan' => 'pending',
+            ]);
+        
+            $log = new LogProposal();
+            $log->action = 'Penugasan ke Komisi';
+            $log->keterangan = 'Proposal akan diperiksa oleh Komisi ' . $komisiActions[$request->komisi_checked_by];
+            $log->proposal_id = $proposal->id;
+            $log->user_id = Auth::id();
+            $log->save();
+            
+            $komisiMemberEmail = User::findOrFail($request->komisi_checked_by)->email;
+            $ormawaName = User::findOrFail($proposal->created_by)->name;
+        
+            $mailController = new MailController();
+            $to = $komisiMemberEmail;
+            $subject = 'Pemeriksaan Komisi | Pengajuan Proposal oleh ' . $ormawaName;
+            $body = 'Judul Proposal: ' . $proposal->judul . '<br>' .
+                    'Deskripsi Proposal: ' . $proposal->deskripsi . '<br>' .
+                    'Tanggal Diajukan: ' . $proposal->created_at . '<br>' .
+                    'Nama Ormawa: ' . $ormawaName . '<br>'.
+                    'Silakan unduh file proposal di sini: <a href="' . asset('storage/' . $proposal->file_proposal) . '">Download Proposal</a>';
+        
+            $mailController->sendEmail($to, $subject, $body);
     
-        $mailController = new MailController();
-        $to = $komisiMemberEmail;
-        $subject = 'Pemeriksaan Komisi | Pengajuan Proposal oleh ' . $ormawaName;
-        $body = 'Judul Proposal: ' . $proposal->judul . '<br>' .
-                'Deskripsi Proposal: ' . $proposal->deskripsi . '<br>' .
-                'Tanggal Diajukan: ' . $proposal->created_at . '<br>' .
-                'Nama Ormawa: ' . $ormawaName . '<br>'.
-                'Silakan unduh file proposal di sini: <a href="' . asset('storage/' . $proposal->file_proposal) . '">Download Proposal</a>';
-    
-        $mailController->sendEmail($to, $subject, $body);
-
-        return redirect()->back()->with('success', 'Komisi checked by berhasil diperbarui.');
+            return redirect()->back()->with('success', 'Komisi berhasil dipilih!');       
+        } catch (\Exception $e) {
+            return redirect()->back()->with('error', 'Pemilihan Komisi Gagal!');
+        }
     }
 
 

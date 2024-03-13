@@ -34,7 +34,14 @@
                         <td>{{ $revisi->komentar }}</td>
                         <td>{{ $revisi->revisedBy->name }}</td>
                         <td>{{ $revisi->created_at->format('d M Y H:i:s') }}</td>
-                        <td><a href="{{ Storage::url($revisi['file_revisi']) }}" target="_blank">Download</a></td>
+                        <td>
+                            @if ($revisi['file_revisi'])
+                            <a href="{{ Storage::url($revisi['file_revisi']) }}" target="_blank">Download</a>
+                            @else
+                                <p>-</p>
+                            @endif
+                            
+                        </td>
                         @foreach ($riwayatRevisi as $riwayat)
                             @if ($riwayat->revisi_id == $revisi->id)
                                 <td>{{ $riwayat->judul_lama }}</td>

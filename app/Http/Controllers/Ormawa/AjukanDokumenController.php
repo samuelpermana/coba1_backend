@@ -61,11 +61,11 @@ class AjukanDokumenController extends Controller
             $body = 'Judul Proposal: ' . $proposal->judul . '<br>' .
                     'Deskripsi Proposal: ' . $proposal->deskripsi . '<br>' .
                     'Tanggal Diajukan: ' . $proposal->created_at . '<br>' .
-                    'Nama Ormawa: ' . Auth::user()->nama . '<br>'.
+                    'Nama Ormawa: ' . Auth::user()->name . '<br>'.
                     'Silakan unduh file proposal di sini: <a href="' . asset('storage/' . $file_path) . '">Download Proposal</a>';
             $mailController->sendEmail($to, $subject, $body);
 
-            return redirect()->route('ormawa.cek_progress')->with('success', 'Agenda kerja berhasil dibuat!');
+            return redirect()->route('ormawa.cek_progress')->with('success', 'Proposal berhasil diajukan!');
         } catch (\Exception $e) {
             return redirect()->back()->with('error', 'Gagal mengupload file final.');
         }
@@ -183,15 +183,15 @@ class AjukanDokumenController extends Controller
     
             $mailController = new MailController();
             $to = $pemberiRevisiEmail;
-            $subject = 'Proposal Direvisi oleh Ormawa';
-            $body = 'Proposal yang Anda revisi telah diperbarui oleh ormawa. Berikut ini detail perubahannya:' . '<br>' .
+            $subject = 'Proposal Direvisi oleh ' . Auth::user()->name;
+            $body = 'Proposal yang Anda revisi telah diperbarui oleh '. Auth::user()->name. 'Berikut ini adalah detail perubahan proposal:' . '<br>' .
                     'Judul Proposal: ' . $proposal->judul . '<br>' .
                     'Deskripsi Proposal: ' . $proposal->deskripsi . '<br>' .
-                    'Silakan unduh file proposal di sini: <a href="' . Storage::url($proposal->file_proposal) . '">Download Proposal</a>';
+                    'Silakan unduh file proposal di sini: <a href="' . asset('storage/proposal_files/' . $nama_file_revisi) . '">Download Proposal</a>';
             $mailController->sendEmail($to, $subject, $body);
     
             // Redirect dengan pesan sukses
-            return redirect()->route('ormawa.proposal.revisi', ['proposalId' => $proposalId])->with('success', 'Agenda kerja berhasil dibuat!');
+            return redirect()->route('ormawa.proposal.revisi', ['proposalId' => $proposalId])->with('success', 'Revisi berhasil dikirim!');
             
         } catch (\Exception $e) {
             return response_error(null, $e->getMessage(), $e->getCode());
@@ -202,7 +202,7 @@ class AjukanDokumenController extends Controller
     public function uploadFileFinal(Request $request, $proposalId)
     {
         $request->validate([
-            'file_final' => 'required|file|mimes:pdf', 
+            'file_final' => 'required|file|mimes:pdf,doc,docx', 
         ]);
     
         $proposal = ProposalOrmawa::findOrFail($proposalId);

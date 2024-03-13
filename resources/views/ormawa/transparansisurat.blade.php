@@ -1,7 +1,10 @@
 @extends("ormawa.layouts.layout")
 @section("content")
 <link href="{{ asset("styletransparansi.css") }}" rel="stylesheet">
-    <section class="container">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.5.0/remixicon.min.css">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.5.0/remixicon.min.css" rel="stylesheet"> 
+
+<section class="container">
         <h2 class="header">TRANSPARANSI SURAT</h2>
         <p class="sub-header">Berisikan tentang data Surat yang sudah diajukan kepada senat </p>
         <a href="ajukansurat"><button type="button" class="trans">Ajukan Surat</button></a>
@@ -106,7 +109,7 @@
                                 @else
                                 <form class="finalis" action="{{ route('ormawa.upload.file.final', $proposal['id']) }}" method="post" enctype="multipart/form-data">
                                     @csrf
-                                    <input class="final" type="file" name="file_final" accept=".doc, .docx, application/pdf">
+                                    <input class="final" type="file" name="file_final" accept=".doc, .docx, application/pdf" required>
                                     <button class="final-upload" type="submit">Upload File Final</button>
                                 </form>
                                 @endif
@@ -126,5 +129,26 @@
         </section>
     </main>
     <script src="js-peminjamanruangan.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/izitoast/1.4.0/js/iziToast.min.js" integrity="sha512-Zq9o+E00xhhR/7vJ49mxFNJ0KQw1E1TMWkPTxrWcnpfEFDEXgUiwJHIKit93EW/XxE31HSI5GEOW06G6BF1AtA==" crossorigin="anonymous"
+        referrerpolicy="no-referrer"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      @if(session('success'))
+        iziToast.success({
+          title: 'Success',
+          message: '{{ session('success') }}',
+          position: 'topRight'
+        });
+      @endif
+
+      @if(session('error'))
+        iziToast.error({
+          title: 'Error',
+          message: '{{ session('error') }}',
+          position: 'topRight'
+        });
+      @endif
+    });
+  </script>
 
     @endsection
