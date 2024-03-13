@@ -104,6 +104,6 @@ class ProposalController extends Controller
         $log->user_id = Auth::id();
         $log->save();
 
-        return redirect()->back()->with('success', 'Komisi checked by berhasil diperbarui.');
+        return redirect()->back()->with('success', 'Proposal berhasil ditolak.');
     }
 }
