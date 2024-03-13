@@ -39,7 +39,7 @@ class ForgetPasswordCtrl extends Controller
     public function resetPasswordPost(Request $request){
         $request->validate([
             'email' => 'required|email|exists:users',
-            'new_password' => 'required|string|min:6',
+            'new_password' => 'required|string|min:8',
         ]);
     $user = User::where('email', $request->email)->first();
     $user->password = Hash::make($request->new_password);

@@ -13,17 +13,17 @@
             @csrf
             <div class="form-group-revisi">
                 <label for="judul">Judul Baru:</label>
-                <input type="text" class="form-control-revisijudul" id="judul" name="judul" value="{{ $proposal->judul }}">
+                <input type="text" class="form-control-revisijudul" id="judul" name="judul" value="{{ $proposal->judul }}" required>
             </div>
 
             <div class="form-group-revisi">
                 <label for="deskripsi">Deskripsi Baru:</label>
-                <textarea class="form-control-revisi" id="deskripsi" name="deskripsi" rows="3">{{ $proposal->deskripsi }}</textarea>
+                <textarea class="form-control-revisi" id="deskripsi" name="deskripsi" rows="3" required>{{ $proposal->deskripsi }}</textarea>
             </div>
             
             <div class="form-group-revisi">
                 <label for="file_proposal">Upload File Revisi:</label>
-                <input type="file" class="form-control-file-revisi" id="file_proposal" name="file_proposal" accept=".doc, .docx, application/pdf" >
+                <input type="file" class="form-control-file-revisi" id="file_proposal" name="file_proposal" accept=".doc, .docx, application/pdf" required>
             </div>
 
             <button type="submit" class="btn btn-primary">Kirim Revisi</button>

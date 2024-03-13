@@ -151,7 +151,7 @@ class KomisiController extends Controller
         'Nama Ormawa: ' . $ormawaName . '<br>'.
         'Silakan unduh file proposal di sini: <a href="' . asset('storage/' . $proposal->file_proposal) . '">Download Proposal</a>';
         $mailController->sendEmail($to, $subject, $body);
-        return redirect()->back()->with('success', 'Komisi checked by berhasil diperbarui.');
+        return redirect()->back()->with('success', 'Proposal berhasil ditolak');
         
     } catch (\Exception $e) {
         return response_error(null, $e->getMessage(), $e->getCode());
@@ -193,7 +193,7 @@ class KomisiController extends Controller
         'Nama Ormawa: ' . $ormawaName . '<br>'.
         'Silakan unduh file proposal di sini: <a href="' . asset('storage/' . $proposal->file_proposal) . '">Download Proposal</a>';
         $mailController->sendEmail($to, $subject, $body);
-        return redirect()->back()->with('success', 'Komisi checked by berhasil diperbarui.');
+        return redirect()->back()->with('success', 'Proposal berhasil disetujui.');
     }
 
     public function listRevisi(Request $request, $proposalId)
@@ -226,15 +226,16 @@ class KomisiController extends Controller
     
         // Menghitung nomor revisi
         $nomor_revisi = RevisiProposal::where('proposal_id', $proposalId)->count() + 1;
-    
         // Membuat nama file revisi sesuai format yang diinginkan
-        $nama_file_revisi = "Proposal{$proposalId}-{$nama_ormawa}-Revisi{$nomor_revisi}_{$nama_komisi}-{$tanggal_revisi}.";
-    
+        $extension = $request->file('file_revisi')->getClientOriginalExtension(); // Dapatkan ekstensi file
+        $nama_file_revisi = "Proposal{$proposalId}-{$nama_ormawa}-Revisi{$nomor_revisi}_{$nama_komisi}-{$tanggal_revisi}.{$extension}";
+
         // Menyimpan file revisi jika ada
         $file_revisi_path = null;
         if ($request->hasFile('file_revisi')) {
             $file_revisi_path = $request->file('file_revisi')->storeAs('revisi_files', $nama_file_revisi, 'public');
         }
+
     
         // Buat entri baru untuk RevisiProposal
         $revisiProposal = new RevisiProposal();
@@ -277,17 +278,17 @@ class KomisiController extends Controller
             'Judul Proposal: ' . $proposal->judul . '<br>' .
             'Deskripsi Proposal: ' . $proposal->deskripsi . '<br>' .
             'Komentar Komisi: ' . $request->komentar . '<br>' .
-            'File Proposal Lama: <a href="' . Storage::url($proposal->file_proposal) . '">' . basename($proposal->file_proposal) . '</a>' . '<br>';
+            'File Proposal Lama: <a href="' . asset('storage/' . $proposal->file_proposal) . '">Download Proposal</a>' . '<br>';
     
         if ($file_revisi_path) {
-            $body .= 'File Revisi: <a href="' . Storage::url($file_revisi_path) . '">' . $nama_file_revisi . '</a>';
+            $body .= 'File Revisi: <a href="' . asset('storage/' . $file_revisi_path) . '">Download Proposal</a>';
         }
     
         $mailController->sendEmail($to, $subject, $body);
     
         $user_role_slug = auth()->user()->role->role_slug;
     
-        return redirect()->route($user_role_slug . '.proposal.revisi', $proposalId)->with('success', 'Agenda kerja berhasil dibuat!');
+        return redirect()->route($user_role_slug . '.proposal.revisi', $proposalId)->with('success', 'Revisi Proposal berhasil dibuat!');
     }
     
 
