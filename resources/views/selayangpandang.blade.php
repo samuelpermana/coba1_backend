@@ -210,7 +210,7 @@
     <h1 class="j-header">KOMISI & BADAN</h1>
     <div class="container1">
       <div class="slide">
-        <div class="item"  style="background-image: url(/img/BKSAP-COBA.jpg);">
+        <div class="item"  style="background-image: url(/img/bksapslyng.jpg);">
           <div class="content">
             <div class="name">BKSAP</div>
             <div class="des">Badan Kerja Sama Antar Parlemen terdiri dari Biro media dan Biro Humas</div>
@@ -219,7 +219,7 @@
             </a>
           </div>
         </div>
-        <div class="item"  style="background-image: url(/img/KOMISI1-COBA.jpg);">
+        <div class="item"  style="background-image: url(/img/komisi1slyng.jpg);">
           <div class="content">
             <div class="name">KOMISI I</div>
             <div class="des">Komisi I adalah komisi yang menaungi terkait dengan Bidang Pengembangan dan Keilmuan</div>
@@ -228,7 +228,7 @@
             </a>
           </div>
         </div>
-        <div class="item"  style="background-image: url(/img/KOMISI2-COBA.jpg);">
+        <div class="item"  style="background-image: url(/img/komisi2slyng.jpg);">
           <div class="content">
             <div class="name">KOMISI II</div>
             <div class="des">Komisi II adalah komisi yang menaungi terkait Bidang Minat, Bakat, Kaderisasi dan Keroharian</div>
@@ -237,7 +237,7 @@
             </a>
           </div>
         </div>
-        <div class="item"  style="background-image: url(/img/KOMISI3-COBA.png);">
+        <div class="item"  style="background-image: url(/img/komisi3slyng.jpg);">
           <div class="content">
             <div class="name">KOMISI III</div>
             <div class="des">Komisi III adalah komisi yang menangui terkait Bidang Hukum dan Hubungan Publik</div>
@@ -246,7 +246,7 @@
             </a>
           </div>
         </div>
-        <div class="item"  style="background-image: url(/img/KOMISI4-COBA.png);">
+        <div class="item"  style="background-image: url(/img/komisi4slyng.jpg);">
           <div class="content">
             <div class="name">KOMISI IV</div>
             <div class="des">Komisi IV adalah komisi yang menaungi terkait bidang Advokasi, Akademik, Sarana, dan Prasarana</div>
@@ -255,7 +255,7 @@
             </a>
           </div>
         </div>
-        <div class="item"  style="background-image: url(/img/BADANLEGISLASI-COBA1.jpg);">
+        <div class="item"  style="background-image: url(/img/baleg.jpg);">
           <div class="content">
             <div class="name">BADAN LEGISLASI</div>
             <div class="des">
@@ -266,7 +266,7 @@
             </a>
           </div>
         </div>
-        <div class="item"  style="background-image: url(/img/BADANKEHORMATAN-COBA.jpg);">
+        <div class="item"  style="background-image: url(/img/badankehormatanorang.jpg);">
           <div class="content">
             <div class="name">BADAN KEHORMATAN</div>
             <div class="des">
@@ -277,7 +277,7 @@
             </a>
           </div>
         </div>
-        <div class="item"  style="background-image: url(/img/BADANANGGARAN-COBA.jpg);">
+        <div class="item"  style="background-image: url(/img/banggar.jpg);">
           <div class="content">
             <div class="name">BADAN ANGGARAN</div>
             <div class="des">
@@ -289,7 +289,7 @@
             </a>
           </div>
         </div>
-        <div class="item"  style="background-image: url(/img/BKSAP-COBA.jpg);">
+        <div class="item"  style="background-image: url(/img/burt.jpg);">
           <div class="content">
             <div class="name">BURT</div>
             <div class="des">Badan Urusan Rumah Tangga</div>

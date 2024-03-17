@@ -177,7 +177,7 @@
       <div class="card-coba">
             <div class="imgbox">
               <img class="img-coba"
-                src="/img/sami-kuning.png"
+                src="/img/sutan-kuning.png"
               />
             </div>
       
@@ -191,7 +191,7 @@
         <div class="card-coba">
             <div class="imgbox">
               <img class="img-coba"
-                src="/img/habib-kuning.png"
+                src="/img/nadya-kuning.png"
               />
             </div>
       
@@ -207,7 +207,7 @@
       <div class="card-coba">
             <div class="imgbox">
               <img class="img-coba"
-                src="/img/sami-kuning.png"
+                src="/img/danang-kuning.png"
               />
             </div>
       
@@ -221,7 +221,7 @@
         <div class="card-coba">
             <div class="imgbox">
               <img class="img-coba"
-                src="/img/habib-kuning.png"
+                src="/img/amanda-kuning.png"
               />
             </div>
       
@@ -237,7 +237,7 @@
       <div class="card-coba">
             <div class="imgbox">
               <img class="img-coba"
-                src="/img/sami-kuning.png"
+                src="/img/chris.png"
               />
             </div>
       
@@ -251,7 +251,7 @@
         <div class="card-coba">
             <div class="imgbox">
               <img class="img-coba"
-                src="/img/habib-kuning.png"
+                src="/img/vania-kuning.png"
               />
             </div>
       
@@ -267,7 +267,7 @@
       <div class="card-coba">
               <div class="imgbox">
                 <img class="img-coba"
-                  src="/img/dhiyaa-kuning.png"
+                  src="/img/keysa-kuning.png"
                 />
               </div>
         

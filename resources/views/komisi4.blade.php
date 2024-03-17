@@ -187,7 +187,7 @@
           <div class="card-coba">
               <div class="imgbox">
                 <img class="img-coba"
-                  src="/img/dhiyaa-kuning.png"
+                  src="/img/zaidon-kuning.png"
                 />
               </div>
         
@@ -203,7 +203,7 @@
       <div class="card-coba">
               <div class="imgbox">
                 <img class="img-coba"
-                  src="/img/dhiyaa-kuning.png"
+                  src="/img/faheem-kuning.png"
                 />
               </div>
         
@@ -217,7 +217,7 @@
           <div class="card-coba">
               <div class="imgbox">
                 <img class="img-coba"
-                  src="/img/dhiyaa-kuning.png"
+                  src="/img/niputu-kuning.png"
                 />
               </div>
         
@@ -233,7 +233,7 @@
       <div class="card-coba">
               <div class="imgbox">
                 <img class="img-coba"
-                  src="/img/dhiyaa-kuning.png"
+                  src="/img/fitra-kuning.png"
                 />
               </div>
         
@@ -247,7 +247,7 @@
           <div class="card-coba">
               <div class="imgbox">
                 <img class="img-coba"
-                  src="/img/dhiyaa-kuning.png"
+                  src="/img/aaliyah-kuning.png"
                 />
               </div>
         
@@ -263,7 +263,7 @@
       <div class="card-coba">
               <div class="imgbox">
                 <img class="img-coba"
-                  src="/img/dhiyaa-kuning.png"
+                  src="/img/valentina-kuning.png"
                 />
               </div>
         
@@ -277,7 +277,7 @@
           <div class="card-coba">
               <div class="imgbox">
                 <img class="img-coba"
-                  src="/img/dhiyaa-kuning.png"
+                  src="/img/sakinah.png"
                 />
               </div>
         
@@ -293,7 +293,7 @@
       <div class="card-coba">
               <div class="imgbox">
                 <img class="img-coba"
-                  src="/img/dhiyaa-kuning.png"
+                  src="/img/tiara-kuning.png"
                 />
               </div>
         
@@ -307,7 +307,7 @@
           <div class="card-coba">
               <div class="imgbox">
                 <img class="img-coba"
-                  src="/img/dhiyaa-kuning.png"
+                  src="/img/faranisa-kuning.png"
                 />
               </div>
         
@@ -323,7 +323,7 @@
       <div class="card-coba">
               <div class="imgbox">
                 <img class="img-coba"
-                  src="/img/dhiyaa-kuning.png"
+                  src="/img/dzaky-kuning.png"
                 />
               </div>
         

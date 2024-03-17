@@ -164,7 +164,7 @@
     <div class="anggota-4-1">
       <div class="card-coba">
         <div class="imgbox">
-          <img class="img-coba" src="/img/zalfaritsa-kuning.png" />
+          <img class="img-coba" src="/img/naufal-kuning.png" />
         </div>
 
         <div class="content1">
@@ -176,7 +176,7 @@
       </div>
       <div class="card-coba">
         <div class="imgbox">
-          <img class="img-coba" src="/img/yosef-kuning.png" />
+          <img class="img-coba" src="/img/naila-kuning.png" />
         </div>
 
         <div class="content1">
@@ -190,7 +190,7 @@
     <div class="anggota-4-1">
       <div class="card-coba">
         <div class="imgbox">
-          <img class="img-coba" src="/img/zalfaritsa-kuning.png" />
+          <img class="img-coba" src="/img/bened-kuning.png" />
         </div>
 
         <div class="content1">
@@ -202,7 +202,7 @@
       </div>
       <div class="card-coba">
         <div class="imgbox">
-          <img class="img-coba" src="/img/yosef-kuning.png" />
+          <img class="img-coba" src="/img/chelsi-kuning.png" />
         </div>
 
         <div class="content1">
@@ -216,7 +216,7 @@
     <div class="anggota-4-1">
       <div class="card-coba">
         <div class="imgbox">
-          <img class="img-coba" src="/img/zalfaritsa-kuning.png" />
+          <img class="img-coba" src="/img/franklin-kuning.png" />
         </div>
 
         <div class="content1">
@@ -228,7 +228,7 @@
       </div>
       <div class="card-coba">
         <div class="imgbox">
-          <img class="img-coba" src="/img/yosef-kuning.png" />
+          <img class="img-coba" src="/img/ferdi-kuning.png" />
         </div>
 
         <div class="content1">
@@ -242,7 +242,7 @@
     <div class="anggota-4-1">
       <div class="card-coba">
         <div class="imgbox">
-          <img class="img-coba" src="/img/zalfaritsa-kuning.png" />
+          <img class="img-coba" src="/img/diandra-kuning.png" />
         </div>
 
         <div class="content1">
@@ -254,7 +254,7 @@
       </div>
       <div class="card-coba">
         <div class="imgbox">
-          <img class="img-coba" src="/img/yosef-kuning.png" />
+          <img class="img-coba" src="/img/firman-kuning.png" />
         </div>
 
         <div class="content1">

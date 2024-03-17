@@ -177,7 +177,7 @@
           <div class="card-coba">
               <div class="imgbox">
                 <img class="img-coba"
-                  src="/img/yosef-kuning.png"
+                  src="/img/zafira-kuning.png"
                 />
               </div>
         
@@ -193,7 +193,7 @@
       <div class="card-coba">
               <div class="imgbox">
                 <img class="img-coba"
-                  src="/img/yosef-kuning.png"
+                  src="/img/nurhaliza-kuning.png"
                 />
               </div>
         
@@ -207,7 +207,7 @@
           <div class="card-coba">
               <div class="imgbox">
                 <img class="img-coba"
-                  src="/img/yosef-kuning.png"
+                  src="/img/suci-kuning.png"
                 />
               </div>
         
@@ -223,7 +223,7 @@
       <div class="card-coba">
               <div class="imgbox">
                 <img class="img-coba"
-                  src="/img/yosef-kuning.png"
+                  src="/img/tegar-kuning.png"
                 />
               </div>
         
@@ -237,7 +237,7 @@
           <div class="card-coba">
               <div class="imgbox">
                 <img class="img-coba"
-                  src="/img/yosef-kuning.png"
+                  src="/img/erlangga-kuning.png"
                 />
               </div>
         
@@ -253,7 +253,7 @@
       <div class="card-coba">
               <div class="imgbox">
                 <img class="img-coba"
-                  src="/img/yosef-kuning.png"
+                  src="/img/ananda-kuning.png"
                 />
               </div>
         
@@ -267,7 +267,7 @@
           <div class="card-coba">
               <div class="imgbox">
                 <img class="img-coba"
-                  src="/img/yosef-kuning.png"
+                  src="/img/daniel-kuning.png"
                 />
               </div>
         
@@ -283,7 +283,7 @@
       <div class="card-coba">
               <div class="imgbox">
                 <img class="img-coba"
-                  src="/img/yosef-kuning.png"
+                  src="/img/poetty-kuning.png"
                 />
               </div>
         
@@ -297,7 +297,7 @@
           <div class="card-coba">
               <div class="imgbox">
                 <img class="img-coba"
-                  src="/img/yosef-kuning.png"
+                  src="/img/natasya-kuning.png"
                 />
               </div>
         
