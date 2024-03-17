@@ -16,7 +16,7 @@
             </a>
           </div>
         </div>
-        <div class="item"  style="background-image: url(img/KOMISI3-COBA.png);">
+        <div class="item"  style="background-image: url(img/komisi3slyng.jpg);">
           <div class="content">
             <div class="name">KOMISI III</div>
             <div class="des">Komisi III adalah komisi yang menangui terkait Bidang Hukum dan Hubungan Publik</div>

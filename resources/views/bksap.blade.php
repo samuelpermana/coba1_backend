@@ -16,7 +16,7 @@
             </a>
           </div>
         </div>
-        <div class="item"  style="background-image: url(img/BKSAP-COBA.jpg);">
+        <div class="item"  style="background-image: url(img/bksapslyng.jpg);">
           <div class="content">
             <div class="name">BKSAP</div>
             <div class="des">Badan Kerja Sama Antar Parlemen terdiri dari Biro media dan Biro Humas</div>
