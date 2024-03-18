@@ -7,6 +7,8 @@
     <link href="{{ URL::asset("cms/stylelayout.css") }}" rel="stylesheet">
     <script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
     <title>CMS Senat FH Undip</title>
+    <link type="image/x-icon" href="{{ URL::asset("img/coba23.ico") }}" rel="icon">
+    <link type="image/x-icon" href="{{ URL::asset("img/coba23.ico") }}" rel="shortcut icon">
   </head>
 
   <body>

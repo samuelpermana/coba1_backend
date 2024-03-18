@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.5.0/remixicon.min.css" rel="stylesheet">
-    <link href="{{ asset("stylelayout.css")}}" rel="stylesheet">
+    <link href="{{ asset("stylelayout.css") }}" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" rel="stylesheet" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous"
       referrerpolicy="no-referrer" />
     <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous"> -->
@@ -15,30 +15,32 @@
 
     <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.min.css" rel="stylesheet" integrity="sha512-mSYUmp1HYZDFaVKK//63EcZq4iFWFjxSL+Z3T/aCt4IO9Cejm03q3NKKYN6pFQzY0SBOr8h+eCIAZHPXcpZaNw=="
       crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link type="image/x-icon" href="{{ URL::asset("img/coba23.ico") }}" rel="icon">
+    <link type="image/x-icon" href="{{ URL::asset("img/coba23.ico") }}" rel="shortcut icon">
     <title>SENAT FH UNDIP</title>
   </head>
 
   <body>
-  <nav>
-  <div class="nav-logo">
-    <a href="{{ url("/" . auth()->user()->role->role_slug . "/agendakerja") }}">
-      <img src="/img/coba1.png" alt="Logo">
-    </a>
-  </div>
+    <nav>
+      <div class="nav-logo">
+        <a href="{{ url("/" . auth()->user()->role->role_slug . "/agendakerja") }}">
+          <img src="/img/coba1.png" alt="Logo">
+        </a>
+      </div>
 
-  <ul class="nav-links">
-    <li class="link" id="link1"><a href="{{ url("/" . auth()->user()->role->role_slug . "/agendakerja") }}">Agenda Kerja</a></li>
-    <li class="link" id="link4"><a href="{{ url("/" . auth()->user()->role->role_slug . "/transparansisurat") }}">Transparansi surat</a></li>
-  </ul>
+      <ul class="nav-links">
+        <li class="link" id="link1"><a href="{{ url("/" . auth()->user()->role->role_slug . "/agendakerja") }}">Agenda Kerja</a></li>
+        <li class="link" id="link4"><a href="{{ url("/" . auth()->user()->role->role_slug . "/transparansisurat") }}">Transparansi Surat</a></li>
+      </ul>
 
-  <a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
-    <button class="btn" type="button">Log Out</button>
-  </a>
-  <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-    @csrf
-  </form>
-</nav>
-
+      <a href="{{ route("logout") }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+        <button class="btn" type="button">Log Out</button>
+      </a>
+      <form id="logout-form" style="display: none;" action="{{ route("logout") }}" method="POST">
+        @csrf
+      </form>
+    </nav>
 
     @yield("content")
 
@@ -50,7 +52,7 @@
           <img src="/img/coba1.png">
         </div>
         <p>SENAT MAHASISWA FAKULTAS HUKUM UNDIP</p>
-        <p class="address"> 
+        <p class="address">
           Jl. Prof. Soedarto, Tembalang, Kec. Tembalang, Kota Semarang, Jawa Tengah 50275
         </p>
         <div class="socials">
@@ -59,7 +61,7 @@
           <a href="https://lin.ee/VJdJQ9z"><i class="ri-line-line"></i></a>
         </div>
       </div>
-       
+
       <div class="column">
         <h4>Komisi</h4>
         <a href="{{ url("/tentang-komisi-i") }}">Komisi I</a>
@@ -83,7 +85,6 @@
         <a href="#">Rancangan Peraturan</a>
       </div>
     </footer>
-
 
     <div class="copyright">
       Copyright © 2023 SENAT FH UNDIP. All Rights Reserved.

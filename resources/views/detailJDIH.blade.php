@@ -7,6 +7,7 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.5.0/remixicon.min.css" rel="stylesheet" />
 
     <link href="{{ asset("styledetailjdih.css") }} " rel="stylesheet" />
+
     <title>JDIH</title>
   </head>
 
@@ -67,14 +68,14 @@
                 </td>
               </tr>
               <!-- <tr>
-                      <td>Download File</td>
-                      <td><a href="img/filetransparan.svg" download>
-                        <span class="blue">
-                          <img class="imageperma" src="img/filetransparan.svg" alt=""/>
-                        </span>
-                      </a>
-                      </td>
-                    </tr> -->
+                              <td>Download File</td>
+                              <td><a href="img/filetransparan.svg" download>
+                                <span class="blue">
+                                  <img class="imageperma" src="img/filetransparan.svg" alt=""/>
+                                </span>
+                              </a>
+                              </td>
+                            </tr> -->
             </tbody>
           </table>
         </div>
