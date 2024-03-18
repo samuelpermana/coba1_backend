@@ -110,7 +110,7 @@ return [
     */
 
     'from' => [
-        'address' => env('MAIL_FROM_ADDRESS', 'admin@smfhndip.id'),
+        'address' => env('MAIL_FROM_ADDRESS', 'admin@senatfhndip.id'),
         'name' => env('MAIL_FROM_NAME', 'Senat Mahasiswa  Fakultas Hukum Undip'),
     ],
 
