@@ -20,6 +20,9 @@
       crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.min.css" rel="stylesheet" integrity="sha512-mSYUmp1HYZDFaVKK//63EcZq4iFWFjxSL+Z3T/aCt4IO9Cejm03q3NKKYN6pFQzY0SBOr8h+eCIAZHPXcpZaNw=="
       crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link type="image/x-icon" href="{{ URL::asset("img/coba23.ico") }}" rel="icon">
+    <link type="image/x-icon" href="{{ URL::asset("img/coba23.ico") }}" rel="shortcut icon">
     <title>SENAT FH UNDIP</title>
   </head>
 
@@ -154,7 +157,7 @@
         </p>
         <div class="socials">
           <a href="https://www.youtube.com/@SenatMahasiswaFakultasHukumUnd"><i class="ri-youtube-line"></i></a>
-          <a href="https://www.instagram.com/senatfhundip/"><i class="ri-instagram-line"></i></a> 
+          <a href="https://www.instagram.com/senatfhundip/"><i class="ri-instagram-line"></i></a>
           <a href="https://lin.ee/VJdJQ9z"><i class="ri-line-line"></i></a>
         </div>
       </div>
