@@ -284,6 +284,12 @@ class UserSeeder extends Seeder
             'password' => Hash::make('password'),
             'role_id' => 2,
         ]);
+        User::create([
+            'name' => 'Senat Mahasiswa FH Undip Tahun 2024 ',
+            'email' => 'senatfhundip24@gmail.com',
+            'password' => Hash::make('password'),
+            'role_id' => 2,
+        ]);
     
     }
 }
