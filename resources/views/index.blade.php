@@ -50,7 +50,7 @@
         Melalui situs web ini, Anda akan menemukan informasi terkini mengenai kegiatan, program, dan berbagai kegiatan yang kami selenggarakan. Kami juga mengundang Anda untuk terlibat secara aktif dalam berbagai kegiatan yang kami adakan, serta menyampaikan aspirasi dan gagasan Anda untuk kemajuan bersama.
         Terima kasih telah mengunjungi situs web Senat FH Undip. Mari bersama-sama menciptakan lingkungan belajar yang inspiratif dan berdaya saing tinggi bagi mahasiswa FH Undip.Viva Legislativa!
       </p>
-      <a class="btn" href="http://127.0.0.1:8000/selayangpandang">Makna Logo</a>
+      <a class="btn" href="{{ url("/selayangpandang") }}">Makna Logo</a>
     </div>
     <div class="img">
       <img src="/img/coba12.png">
@@ -119,14 +119,14 @@
       const modal = $('#modal-action')
       const csrfToken = $('meta[name=csrf_token]').attr('content')
 
-      document.addEventListener('DOMContentLoaded', function() {
-        var calendarEl = document.getElementById('calendar');
-        var calendar = new FullCalendar.Calendar(calendarEl, {
-          initialView: 'dayGridMonth',
-          themeSystem: 'bootstrap5',
-          events: "{{ route("legislasi.list") }}",
-          editable: false,
-          eventDidMount: function(info) {
+  document.addEventListener('DOMContentLoaded', function() {
+    var calendarEl = document.getElementById('calendar');
+    var calendar = new FullCalendar.Calendar(calendarEl, {
+        initialView: 'dayGridMonth',
+        themeSystem: 'bootstrap5',
+        events: "{{ route("legislasi.list") }}",
+        editable: false,
+        eventDidMount: function(info) {
             // Memeriksa kategori dari event
             var category = info.event.extendedProps.category;
 
@@ -135,35 +135,65 @@
             var borderColor;
 
             switch (category) {
-              case 'success':
-                backgroundColor = '#A13D3E';
-                borderColor = '#A13D3E';
-                break;
-              case 'danger':
-                backgroundColor = '#D4AF37';
-                borderColor = '#D4AF37';
-                break;
-              case 'warning':
-                backgroundColor = '#E1D2A2';
-                borderColor = '#E1D2A2';
-                break;
-              case 'info':
-                backgroundColor = '#A21B1B';
-                borderColor = '#A21B1B';
-                break;
-              default:
-                backgroundColor = '#CCCCCC';
-                borderColor = '#CCCCCC';
+                case 'success':
+                    backgroundColor = '#2B6172';
+                    borderColor = '#2B6172';
+                    break;
+                case 'danger':
+                    backgroundColor = '#FDF4E6';
+                    borderColor = '#FDF4E6';
+                    break;
+                case 'warning':
+                    backgroundColor = '#FEFEFE';
+                    borderColor = '#FEFEFE';
+                    break;
+                case 'info':
+                    backgroundColor = '#AEAAAA';
+                    borderColor = '#AEAAAA';
+                    break;
+                case 'primary':
+                    backgroundColor = '#A13D3E';
+                    borderColor = '#A13D3E';
+                    break;
+                case 'secondary':
+                    backgroundColor = '#94e51a';
+                    borderColor = '#94e51a';
+                    break;
+                case 'dark':
+                    backgroundColor = '#8e7e71';
+                    borderColor = '#8e7e71';
+                    break;
+                case 'light':
+                    backgroundColor = '#96a659';
+                    borderColor = '#96a659';
+                    break;
+                case 'link':
+                    backgroundColor = '#84629d';
+                    borderColor = '#84629d';
+                    break;
+                default:
+                    backgroundColor = '#CCCCCC';
+                    borderColor = '#CCCCCC';
             }
 
             // Atur warna background dan border
             info.el.style.backgroundColor = backgroundColor;
             info.el.style.borderColor = borderColor;
-          }
-        });
-
-        calendar.render();
-      });
+            const title = info.event.title;
+            info.el.setAttribute('title', title);
+        },
+        eventClick: function(arg) {
+            var title = arg.event.title; 
+            const eventDetailHTML = `
+                <div>
+                    <h2>${title}</h2>
+                </div>
+            `;
+            modal.html(eventDetailHTML).modal('show');
+        }
+    });
+    calendar.render();
+});
     </script>
 
   </section>
