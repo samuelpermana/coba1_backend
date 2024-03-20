@@ -194,7 +194,7 @@
               <div class="content1">
                  <h2>Muhammad Zaidon Rizqon Adinata</h2>
                 <p class="deskripsi">
-                  Staff Ahli</br>FH UNDIP 2022
+                  Staff Ahli</br>FH UNDIP 2023
                 </p>
               </div>
           </div>
@@ -210,7 +210,7 @@
               <div class="content1">
                  <h2>Muhammad Faheem Aulia</h2>
                 <p class="deskripsi">
-                Staff Ahli</br>FH UNDIP 2022
+                Staff Ahli</br>FH UNDIP 2023
                 </p>
               </div>
           </div>
@@ -224,7 +224,7 @@
               <div class="content1">
                  <h2>Ni Putu Elsa Sukraseni</h2>
                 <p class="deskripsi">
-                Staff Ahli</br>FH UNDIP 2022
+                Staff Ahli</br>FH UNDIP 2023
                 </p>
               </div>
           </div>
@@ -240,7 +240,7 @@
               <div class="content1">
                  <h2>Akhsana Fitra Suyono</h2>
                 <p class="deskripsi">
-                Staff Ahli</br>FH UNDIP 2022
+                Staff Ahli</br>FH UNDIP 2023
                 </p>
               </div>
           </div>
@@ -254,7 +254,7 @@
               <div class="content1">
                  <h2>Aaliyah Davalyn Setiawan</h2>
                 <p class="deskripsi">
-                Staff Ahli</br>FH UNDIP 2022
+                Staff Ahli</br>FH UNDIP 2023
                 </p>
               </div>
           </div>
@@ -270,7 +270,7 @@
               <div class="content1">
                  <h2>Valentina Natalia Sirait</h2>
                 <p class="deskripsi">
-                Staff Ahli</br>FH UNDIP 2022
+                Staff Ahli</br>FH UNDIP 2023
                 </p>
               </div>
           </div>
@@ -284,7 +284,7 @@
               <div class="content1">
                  <h2>Rizki Sakinah Rahmayani Sinaga</h2>
                 <p class="deskripsi">
-                Staff Ahli</br>FH UNDIP 2022
+                Staff Ahli</br>FH UNDIP 2023
                 </p>
               </div>
           </div>
@@ -314,7 +314,7 @@
               <div class="content1">
                  <h2>Faranisa Syifa Aulia Wibowo</h2>
                 <p class="deskripsi">
-                Staff Ahli</br>FH UNDIP 2022
+                Staff Ahli</br>FH UNDIP 2023
                 </p>
               </div>
           </div>
@@ -330,7 +330,7 @@
               <div class="content1">
                  <h2>Dzaky Al Jabar</h2>
                 <p class="deskripsi">
-                Staff Ahli</br>FH UNDIP 2022
+                Staff Ahli</br>FH UNDIP 2023
                 </p>
               </div>
           </div>

@@ -161,7 +161,7 @@
             </div>
       
             <div class="content1">
-              <h2>Alzena Raisha Daniva</h2>
+              <h2>Alzena Raisha Davina</h2>
               <p class="deskripsi">
                 Senator Anggota</br>FH UNDIP 2023
               </p>
@@ -177,7 +177,7 @@
             </div>
       
             <div class="content1">
-              <h2>Muhammad Arif Budi Winova</h2>
+              <h2>Muhamad Arif Budi Winova</h2>
               <p class="deskripsi">
                 Staff Ahli</br>FH UNDIP 2022
               </p>
@@ -193,7 +193,7 @@
             <div class="content1">
               <h2>Hijar Raziqin Susanto</h2>
               <p class="deskripsi">
-              Staff Ahli</br>FH UNDIP 2023
+              Staff Ahli</br>FH UNDIP 2022
               </p>
             </div>
         </div>
@@ -239,7 +239,7 @@
             <div class="content1">
               <h2>Jihan Naila Husna</h2>
               <p class="deskripsi">
-              Staff Ahli</br>FH UNDIP 2022
+              Staff Ahli</br>FH UNDIP 2023
               </p>
             </div>
         </div>
@@ -251,7 +251,7 @@
             </div>
       
             <div class="content1">
-              <h2>Amanda Eka</h2>
+              <h2>Amanda Eka Afriani</h2>
               <p class="deskripsi">
               Staff Ahli</br>FH UNDIP 2023
               </p>
@@ -269,7 +269,7 @@
             <div class="content1">
               <h2>Michelle Rebecca Sembiring</h2>
               <p class="deskripsi">
-              Staff Ahli</br>FH UNDIP 2022
+              Staff Ahli</br>FH UNDIP 2023
               </p>
             </div>
         </div>
@@ -299,7 +299,7 @@
               <div class="content1">
                  <h2>Dita Amanda Kusumawardani</h2>
                 <p class="deskripsi">
-                Staff Ahli</br>FH UNDIP 2022
+                Staff Ahli</br>FH UNDIP 2023
                 </p>
               </div>
           </div>
