@@ -991,11 +991,11 @@ footer .column > a:hover {
 }
 
 /* Atur tampilan hari-hari pada saat dihover */
-.fc-day:hover {
+.fc-day:hover { 
   background-color: #d4af37; /* Warna latar belakang saat dihover */
-  opacity: 0.5;
-  cursor: pointer; /* Ubah kursor saat dihover */
-}
+  opacity: 0.5; 
+  cursor: pointer;  /*Ubah kursor saat dihover */
+ } 
 
 .fc-today-button {
     background-color: #d4af37;
@@ -1027,7 +1027,7 @@ footer .column > a:hover {
     vertical-align: top;
     font-family: "Poppins", sans-serif;
     font-size: 18px;
-    margin-left: 1rem;
+    margin-left: 0rem;
 }
 
 @media (width < 1000px) {

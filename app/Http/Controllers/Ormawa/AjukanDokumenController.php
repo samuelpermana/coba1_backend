@@ -201,26 +201,63 @@ class AjukanDokumenController extends Controller
     
     public function uploadFileFinal(Request $request, $proposalId)
     {
-        $request->validate([
-            'file_final' => 'required|file|mimes:pdf,doc,docx', 
-        ]);
-    
-        $proposal = ProposalOrmawa::findOrFail($proposalId);
-    
-        if ($request->hasFile('file_final')) {
-            $file = $request->file('file_final');
-
-            $file_name = "File Final Proposal ({$proposalId})_{$proposal->judul}_Ormawa.".$file->getClientOriginalExtension();
-
-            $file_path = $file->storeAs('file_finals', $file_name, 'public');
-    
-            $proposal->file_final = $file_path;
-            $proposal->save();
-    
-            return redirect()->back()->with('success', 'File final berhasil diupload.');
+        try {
+            $request->validate([
+                'file_final' => 'required|file|mimes:pdf,doc,docx', 
+            ]);
+        
+            $proposal = ProposalOrmawa::findOrFail($proposalId);
+        
+            if ($request->hasFile('file_final')) {
+                $file = $request->file('file_final');
+        
+                $file_name = "File Final Proposal ({$proposalId})_{$proposal->judul}_Ormawa.".$file->getClientOriginalExtension();
+        
+                $file_path = $file->storeAs('file_finals', $file_name, 'public');
+        
+                $proposal->file_final = $file_path;
+                $proposal->save();
+        
+                // Kirim email kepada penerima yang ditentukan
+                $mailController = new MailController();
+        
+                // List email yang ditentukan
+                $emails = [
+                    'senatmahasiswa.fhundip@gmail.com',
+                    'bksap24cmswebsite@gmail.com',
+                    'badananggaransenatfh@gmail.com'
+                ];
+        
+                // Mendapatkan email dari user dengan id yang sesuai dengan proposal
+                $komisiId = $proposal->komisi_checked_by;
+                $komisiUser = User::where('id', $komisiId)->first();
+                $komisiEmail = $komisiUser ? $komisiUser->email : null;
+        
+                // Jika email komisi ditemukan, tambahkan ke dalam list email
+                if ($komisiEmail) {
+                    $emails[] = $komisiEmail;
+                }
+        
+                // Kirim email ke setiap alamat yang ditentukan
+                foreach ($emails as $email) {
+                    $to = $email;
+                    $subject = 'File Final Proposal oleh ' . Auth::user()->name;
+                    $body = 'File Final Proposal telah diupload oleh ' . Auth::user()->name . '. Alur pengajuan proposal telah selesai. Silakan temukan file terlampir.'. '<br>' .
+                        'Judul Proposal: ' . $proposal->judul . '<br>' .
+                        'Deskripsi Proposal: ' . $proposal->deskripsi . '<br>' .
+                        'Tanggal Diajukan: ' . $proposal->created_at . '<br>' .
+                        'Nama Ormawa: ' . Auth::user()->name . '<br>'.
+                        'Silakan unduh file proposal di sini: <a href="' . asset('storage/' . $file_path) . '">Download Proposal</a>';
+                    $mailController->sendEmail($to, $subject, $body);
+                }
+        
+                return redirect()->back()->with('success', 'File final berhasil diupload dan email telah dikirim.');
+            }
+        
+            return redirect()->back()->with('error', 'Gagal mengupload file final.');
+        } catch (\Exception $e) {
+            return response_error(null, $e->getMessage(), $e->getCode());
         }
-    
-        return redirect()->back()->with('error', 'Gagal mengupload file final.');
-    }
-    
+        
+    }    
 }
