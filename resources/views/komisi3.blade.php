@@ -178,7 +178,7 @@
         <div class="content1">
           <h2>Salsa Sabila</h2>
           <p class="deskripsi">
-            Staff Ahli</br>FH UNDIP 2022
+            Staff Ahli</br>FH UNDIP 2023
           </p>
         </div>
       </div>
@@ -188,7 +188,7 @@
         </div>
 
         <div class="content1">
-          <h2>Muhammad Fahmi Wisnu Sri Aji</h2>
+          <h2>Fahmi Wisnu Sri Aji</h2>
           <p class="deskripsi">
           Staff Ahli</br>FH UNDIP 2023
           </p>
@@ -204,7 +204,7 @@
         <div class="content1">
           <h2>Melisa Kristianti</h2>
           <p class="deskripsi">
-          Staff Ahli</br>FH UNDIP 2022
+          Staff Ahli</br>FH UNDIP 2023
           </p>
         </div>
       </div>
@@ -230,7 +230,7 @@
         <div class="content1">
           <h2>Revalinda Jasmine Ardi</h2>
           <p class="deskripsi">
-          Staff Ahli</br>FH UNDIP 2022
+          Staff Ahli</br>FH UNDIP 2023
           </p>
         </div>
       </div>
@@ -256,7 +256,7 @@
         <div class="content1">
           <h2>Hanna Silvia Angelina Pasaribu</h2>
           <p class="deskripsi">
-          Staff Ahli</br>FH UNDIP 2022
+          Staff Ahli</br>FH UNDIP 2023
           </p>
         </div>
       </div>

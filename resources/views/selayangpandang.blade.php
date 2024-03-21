@@ -53,7 +53,7 @@
           <div class="content">
             <h4>Bentuk Lingkaran</h4>
             <p>
-              Melambangkan kesatuan dan kekompakan dari Senat Mahasiswa Fakultas Hukum Universitas Dipoenegoro dalam menjalankan fungsi, tugas, dan
+              Melambangkan kesatuan dan kekompakan dari Senat Mahasiswa Fakultas Hukum Universitas Diponegoro dalam menjalankan fungsi, tugas, dan
               wewenangnya.
             </p>
           </div>
@@ -213,13 +213,13 @@
         <div class="item"  style="background-image: url(/img/bksapslyng.jpg);">
           <div class="content">
             <div class="name">BKSAP</div>
-            <div class="des">Badan Kerja Sama Antar Parlemen terdiri dari Biro media dan Biro Humas</div>
+            <div class="des">Badan Kerja Sama Antar Parlemen terdiri dari Biro humas, Biro infografis, Biro Videografis</div>
             <a href="{{ url("/tentang-bksap") }}">
               <button>Selengkapnya</button>
             </a>
           </div>
         </div>
-        <div class="item"  style="background-image: url(/img/komisi1slyng.jpg);">
+        <div class="item"  style="background-image: url(/img/komisi1fix.jpg);">
           <div class="content">
             <div class="name">KOMISI I</div>
             <div class="des">Komisi I adalah komisi yang menaungi terkait dengan Bidang Pengembangan dan Keilmuan</div>
@@ -259,7 +259,7 @@
           <div class="content">
             <div class="name">BADAN LEGISLASI</div>
             <div class="des">
-              Badan Legislasi dibentuk untuk menciptakan tata kelola organisasi yang jelas dan mempermudah pembahasan produk hukum sesuai fokus komisi
+              Badan Legislasi merupakan alat kelengkapan yang menghasilkan produk hukum SM FH Undip dan bertanggung jawab atas proses pembentukan peraturan.
             </div>
             <a href="{{ url("/tentang-badan-legislasi") }}">
               <button>Selengkapnya</button>
@@ -270,19 +270,18 @@
           <div class="content">
             <div class="name">BADAN KEHORMATAN</div>
             <div class="des">
-              Badan Kehormatan memiliki tugas untuk menegakkan tata tertib, tata beracara, dan kode etik Senat Mahasiswa Fakultas Hukum Universitas Diponegoro
+              Badan Kehormatan bertujuan untuk menjaga serta menegakkan kehormatan dan keluhuran martabat SM FH Undip sebagai lembaga perwakilan mahasiswa
             </div>
             <a href="{{ url("/tentang-badan-kehormatan") }}">
               <button>Selengkapnya</button>
             </a>
           </div>
         </div>
-        <div class="item"  style="background-image: url(/img/banggar.jpg);">
+        <div class="item"  style="background-image: url(/img/badananggaranfix.jpg);">
           <div class="content">
             <div class="name">BADAN ANGGARAN</div>
             <div class="des">
-              Badan Anggaran memiliki tugas dan fungsi yang tidak jauh dari fungsi anggaran yang dimiliki oleh Senat Mahasiswa Fakultas Hukum Universitas
-              Diponegoro
+              Badan Anggaran bertujuan dan bertanggung jawab atas pelaksanaan fungsi anggaran yang dimiliki oleh SM FH Undip
             </div>
             <a href="{{ url("/tentang-badan-anggaran") }}">
               <button>Selengkapnya</button>
@@ -292,7 +291,7 @@
         <div class="item"  style="background-image: url(/img/burt.jpg);">
           <div class="content">
             <div class="name">BURT</div>
-            <div class="des">Badan Urusan Rumah Tangga</div>
+            <div class="des">Badan Urusan Rumah Tangga bertujuan untuk membantu kesekertariatan dan kebendaharaan Sekertaris Jendral</div>
             <a href="{{ url("/tentang-burt") }}">
               <button>Selengkapnya</button>
             </a>

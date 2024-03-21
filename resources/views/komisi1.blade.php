@@ -16,7 +16,7 @@
             </a>
           </div>
         </div>
-        <div class="item"  style="background-image: url(img/komisi1slyng.jpg);">
+        <div class="item"  style="background-image: url(img/komisi1fix.jpg);">
           <div class="content">
             <div class="name">KOMISI I</div>
             <div class="des">Komisi I adalah adalah komisi yang menaungi terkait dengan Bidang Pengembangan dan Keilmuan</div>
@@ -182,7 +182,7 @@
             <div class="content1">
               <h2>Prawatya Lintang Mahisi</h2>
               <p class="deskripsi">
-                Staff Ahli</br>FH UNDIP 2022
+                Staff Ahli</br>FH UNDIP 2023
               </p>
             </div>
         </div>
@@ -242,7 +242,7 @@
             <div class="content1">
               <h2>Axel Aurellio Timothy Nalle</h2>
               <p class="deskripsi">
-                Staff Ahli</br>FH UNDIP 2022
+                Staff Ahli</br>FH UNDIP 2023
               </p>
             </div>
         </div>
@@ -272,7 +272,7 @@
               <div class="content1">
                  <h2>Risvan Tirmizi Rahim</h2>
                 <p class="deskripsi">
-                  Staff Ahli</br>FH UNDIP 2022
+                  Staff Ahli</br>FH UNDIP 2023
                 </p>
               </div>
           </div>

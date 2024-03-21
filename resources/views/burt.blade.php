@@ -119,7 +119,7 @@
           <div class="content1">
             <h2>Aida Khansa Nabila</h2>
             <p class="deskripsi">
-              Staff Ahli</br>FH UNDIP 2022
+              Sekertaris Umum II</br>FH UNDIP 2023
             </p>
           </div>
       </div>
@@ -133,7 +133,7 @@
           <div class="content1">
             <h2>Muhammad Ridho Dwi Saputra</h2>
             <p class="deskripsi">
-            Staff Ahli</br>FH UNDIP 2022
+            Sekretaris Umum I</br>FH UNDIP 2023
             </p>
           </div>
       </div>
@@ -149,7 +149,7 @@
             <div class="content1">
               <h2>Alya Safira</h2>
               <p class="deskripsi">
-              Staff Ahli</br>FH UNDIP 2022
+              Bendahara Umum I</br>FH UNDIP 2023
               </p>
             </div>
         </div>
@@ -163,7 +163,7 @@
             <div class="content1">
               <h2>Laksita Satyaning Kuncoro</h2>
               <p class="deskripsi">
-              Staff Ahli</br>FH UNDIP 2023
+              Bendahara Umum II</br>FH UNDIP 2023
               </p>
             </div>
         </div>

@@ -88,8 +88,8 @@
                 </a>
                 <a href="{{ route("jdih.jenis", ["id" => 1]) }}">Konstitusi</a>
                 <a href="{{ route("jdih.jenis", ["id" => 2]) }}">Peraturan Mahasiswa</a>
-                <a href="{{ route("jdih.jenis", ["id" => 3]) }}">Standard Operating Procedure</a>
-                <a href="{{ route("jdih.jenis", ["id" => 4]) }}">Peraturan Senat Mahasiswa</a>
+                <a href="{{ route("jdih.jenis", ["id" => 3]) }}">Peraturan Senat Mahasiswa</a>
+                <a href="{{ route("jdih.jenis", ["id" => 4]) }}">Standard Operating Procedure</a>
                 <a href="{{ route("jdih.jenis", ["id" => 5]) }}">Keputusan</a>
                 <a href="{{ route("jdih.jenis", ["id" => 6]) }}">Rancangan Peraturan</a>
               </div>
@@ -129,8 +129,8 @@
             <div class="dropdown-content">
               <a href="{{ route("jdih.jenis", ["id" => 1]) }}">Konstitusi</a>
               <a href="{{ route("jdih.jenis", ["id" => 2]) }}">Peraturan Mahasiswa</a>
-              <a href="{{ route("jdih.jenis", ["id" => 3]) }}">Standard Operating Procedure</a>
-              <a href="{{ route("jdih.jenis", ["id" => 4]) }}">Peraturan Senat Mahasiswa</a>
+              <a href="{{ route("jdih.jenis", ["id" => 3]) }}">Peraturan Senat Mahasiswa</a>
+              <a href="{{ route("jdih.jenis", ["id" => 4]) }}">Standard Operating Procedure</a>
               <a href="{{ route("jdih.jenis", ["id" => 5]) }}">Keputusan</a>
               <a href="{{ route("jdih.jenis", ["id" => 6]) }}">Rancangan Peraturan</a>
             </div>
@@ -159,6 +159,7 @@
           <a href="https://www.youtube.com/@SenatMahasiswaFakultasHukumUnd"><i class="ri-youtube-line"></i></a>
           <a href="https://www.instagram.com/senatfhundip/"><i class="ri-instagram-line"></i></a>
           <a href="https://lin.ee/VJdJQ9z"><i class="ri-line-line"></i></a>
+          <a href="https://www.tiktok.com/@senatfhundip?is_from_webapp=1&sender_device=pc"><i class="ri-tiktok-line"></i></a>
         </div>
       </div>
 
@@ -174,15 +175,17 @@
         <a href="{{ url("/tentang-badan-anggaran") }}">Badan Anggaran</a>
         <a href="{{ url("/tentang-badan-kehormatan") }}">Badan Kehormatan</a>
         <a href="{{ url("/tentang-badan-legislasi") }}">Badan Legislasi</a>
+        <a href="{{ url("/tentang-burt") }}">BURT</a>
         <a href="{{ url("/tentang-bksap") }}">BKSAP</a>
       </div>
       <div class="column">
         <h4>JDIH</h4>
-        <a href="{{ route("jdih.jenis", ["id" => 1]) }}">Peraturan Mahasiswa</a>
-        <a href="{{ route("jdih.jenis", ["id" => 2]) }}">Standard Operating Procedure</a>
+        <a href="{{ route("jdih.jenis", ["id" => 1]) }}">Konstitusi</a>
+        <a href="{{ route("jdih.jenis", ["id" => 2]) }}">Peraturan Mahasiswa</a>
         <a href="{{ route("jdih.jenis", ["id" => 3]) }}">Peraturan Senat Mahasiswa</a>
-        <a href="{{ route("jdih.jenis", ["id" => 4]) }}">Keputusan</a>
-        <a href="{{ route("jdih.jenis", ["id" => 5]) }}">Rancangan Peraturan</a>
+        <a href="{{ route("jdih.jenis", ["id" => 4]) }}">Standard Operating Procedure</a>
+        <a href="{{ route("jdih.jenis", ["id" => 5]) }}">Keputusan</a>
+        <a href="{{ route("jdih.jenis", ["id" => 6]) }}">Rancangan Peraturan</a>
       </div>
     </footer>
 
