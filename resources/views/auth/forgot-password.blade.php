@@ -5,6 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.5.0/remixicon.min.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.5.0/remixicon.min.css" rel="stylesheet">  
     <link href="stylelogin.css" rel="stylesheet">
     <link type="image/x-icon" href="img/coba23.ico" rel="icon">
     <link type="image/x-icon" href="img/coba23.ico" rel="shortcut icon">
@@ -42,3 +44,24 @@
   </body>
 
 </html>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/izitoast/1.4.0/js/iziToast.min.js" integrity="sha512-Zq9o+E00xhhR/7vJ49mxFNJ0KQw1E1TMWkPTxrWcnpfEFDEXgUiwJHIKit93EW/XxE31HSI5GEOW06G6BF1AtA==" crossorigin="anonymous"
+        referrerpolicy="no-referrer"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      @if(session('success'))
+        iziToast.success({
+          title: 'Success',
+          message: '{{ session('success') }}',
+          position: 'topRight'
+        });
+      @endif
+
+      @if(session('error'))
+        iziToast.error({
+          title: 'Error',
+          message: '{{ session('error') }}',
+          position: 'topRight'
+        });
+      @endif
+    });
+  </script>
