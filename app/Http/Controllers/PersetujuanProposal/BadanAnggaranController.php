@@ -176,7 +176,7 @@ class BadanAnggaranController extends Controller
 
         $mailController = new MailController();
         $to = $sekjen;
-        $subject = 'Pemeriksaan Pimpinan | Pengajuan Proposal oleh ' . $ormawaName;
+        $subject = 'Pengajuan Proposal oleh ' . $ormawaName;
         $body = 'Pengajuan ini telah disetujui oleh '. Auth::user()->name. '<br>' .
         'Judul Proposal: ' . $proposal->judul . '<br>' .
         'Deskripsi Proposal: ' . $proposal->deskripsi . '<br>' .

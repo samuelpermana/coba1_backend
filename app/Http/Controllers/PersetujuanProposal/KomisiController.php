@@ -185,7 +185,7 @@ class KomisiController extends Controller
         $log->save();
         $mailController = new MailController();
         $to = $badanAnggaranEmails;
-        $subject = 'Pemeriksaan Badan Anggaran | Pengajuan Proposal oleh ' . $ormawaName;
+        $subject = 'Pengajuan Proposal oleh ' . $ormawaName;
         $body = 'Pengajuan ini telah disetujui oleh '. Auth::user()->name. '<br>' .
         'Judul Proposal: ' . $proposal->judul . '<br>' .
         'Deskripsi Proposal: ' . $proposal->deskripsi . '<br>' .

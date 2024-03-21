@@ -186,7 +186,7 @@ class SekjenController extends Controller
         $mailController = new MailController();
         $to = $ormawaemail;
         $subject = 'Pengajuan Proposal Disetujui oleh ' . Auth::user()->name;
-        $body = 'Pengajuan anda disetujui, selanjutnya upload file final proposal anda yang sudah ditandatangani. <br>' .
+        $body = 'Pengajuan anda disetujui, selanjutnya upload file final proposal anda yang sudah ditandatangani secara lengkap. <br>' .
         'Judul Proposal: ' . $proposal->judul . '<br>' .
         'Deskripsi Proposal: ' . $proposal->deskripsi . '<br>' .
         'Tanggal Diajukan: ' . $proposal->created_at . '<br>' .

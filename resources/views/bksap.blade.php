@@ -251,7 +251,7 @@
             </div>
       
             <div class="content1">
-              <h2>Amanda Eka afriani</h2>
+              <h2>Amanda Eka Afriani</h2>
               <p class="deskripsi">
               Staff Ahli</br>FH UNDIP 2023
               </p>
