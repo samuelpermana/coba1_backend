@@ -72,7 +72,7 @@ class ProposalController extends Controller
         
             $mailController = new MailController();
             $to = $komisiMemberEmail;
-            $subject = 'Pemeriksaan Komisi | Pengajuan Proposal oleh ' . $ormawaName;
+            $subject = 'Pengajuan Proposal oleh ' . $ormawaName;
             $body = 'Judul Proposal: ' . $proposal->judul . '<br>' .
                     'Deskripsi Proposal: ' . $proposal->deskripsi . '<br>' .
                     'Tanggal Diajukan: ' . $proposal->created_at . '<br>' .

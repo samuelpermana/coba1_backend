@@ -88,8 +88,8 @@
                 </a>
                 <a href="{{ route("jdih.jenis", ["id" => 1]) }}">Konstitusi</a>
                 <a href="{{ route("jdih.jenis", ["id" => 2]) }}">Peraturan Mahasiswa</a>
-                <a href="{{ route("jdih.jenis", ["id" => 3]) }}">Peraturan Senat Mahasiswa</a>
-                <a href="{{ route("jdih.jenis", ["id" => 4]) }}">Standard Operating Procedure</a>
+                <a href="{{ route("jdih.jenis", ["id" => 4]) }}">Peraturan Senat Mahasiswa</a>
+                <a href="{{ route("jdih.jenis", ["id" => 3]) }}">Standard Operating Procedure</a>
                 <a href="{{ route("jdih.jenis", ["id" => 5]) }}">Keputusan</a>
                 <a href="{{ route("jdih.jenis", ["id" => 6]) }}">Rancangan Peraturan</a>
               </div>
@@ -129,8 +129,8 @@
             <div class="dropdown-content">
               <a href="{{ route("jdih.jenis", ["id" => 1]) }}">Konstitusi</a>
               <a href="{{ route("jdih.jenis", ["id" => 2]) }}">Peraturan Mahasiswa</a>
-              <a href="{{ route("jdih.jenis", ["id" => 3]) }}">Peraturan Senat Mahasiswa</a>
-              <a href="{{ route("jdih.jenis", ["id" => 4]) }}">Standard Operating Procedure</a>
+              <a href="{{ route("jdih.jenis", ["id" => 4]) }}">Peraturan Senat Mahasiswa</a>
+              <a href="{{ route("jdih.jenis", ["id" => 3]) }}">Standard Operating Procedure</a>
               <a href="{{ route("jdih.jenis", ["id" => 5]) }}">Keputusan</a>
               <a href="{{ route("jdih.jenis", ["id" => 6]) }}">Rancangan Peraturan</a>
             </div>
@@ -182,8 +182,8 @@
         <h4>JDIH</h4>
         <a href="{{ route("jdih.jenis", ["id" => 1]) }}">Konstitusi</a>
         <a href="{{ route("jdih.jenis", ["id" => 2]) }}">Peraturan Mahasiswa</a>
-        <a href="{{ route("jdih.jenis", ["id" => 3]) }}">Peraturan Senat Mahasiswa</a>
-        <a href="{{ route("jdih.jenis", ["id" => 4]) }}">Standard Operating Procedure</a>
+        <a href="{{ route("jdih.jenis", ["id" => 4]) }}">Peraturan Senat Mahasiswa</a>
+        <a href="{{ route("jdih.jenis", ["id" => 3]) }}">Standard Operating Procedure</a>
         <a href="{{ route("jdih.jenis", ["id" => 5]) }}">Keputusan</a>
         <a href="{{ route("jdih.jenis", ["id" => 6]) }}">Rancangan Peraturan</a>
       </div>
