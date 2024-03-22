@@ -6,15 +6,18 @@
   <link href="{{ URL::asset("cms/rooms/styleindex.css") }}" rel="stylesheet">
 
   <body>
-    <h1>Rooms List</h1>
+    <h1>Daftar Ruangan Fakultas Hukum Undip</h1>
 
     @if (session("success"))
       <div style="color: green;">{{ session("success") }}</div>
     @endif
 
-    <button class="btn"><a href="{{ route("admin.rooms.create") }}">Create New Room</a></button>
+    <button class="btn"><a href="{{ route("admin.rooms.create") }}">Tambahkan Data Ruangan Baru</a></button>
 
-    <ul>
+    <!-- Input for search -->
+    
+    <input type="text" id="searchInput" placeholder="Cari Nama Ruangan..." />
+    <ul id="roomList">
       @foreach ($rooms as $room)
         <li class="list">
           <table>
@@ -39,6 +42,30 @@
       @endforeach
     </ul>
   </body>
+
+  <script>
+    // Function to filter room list based on search input
+    function filterRoomList() {
+      var input, filter, ul, li, span, i, txtValue;
+      input = document.getElementById("searchInput");
+      filter = input.value.toUpperCase();
+      ul = document.getElementById("roomList");
+      li = ul.getElementsByTagName("li");
+
+      for (i = 0; i < li.length; i++) {
+        span = li[i].getElementsByClassName("list-room")[0];
+        txtValue = span.textContent || span.innerText;
+        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+          li[i].style.display = "";
+        } else {
+          li[i].style.display = "none";
+        }
+      }
+    }
+
+    // Add event listener to trigger filtering when input changes
+    document.getElementById("searchInput").addEventListener("input", filterRoomList);
+  </script>
 
   {{-- Content ends here --}}
 @endsection

@@ -42,7 +42,7 @@
           @elseif ($id == 2)
             JDIH - Peraturan Mahasiswa
           @elseif ($id == 3)
-            JDIH - Standart Operating
+            JDIH - Standard Operating Procedure
           @elseif ($id == 4)
             JDIH - Peraturan Senat Mahasiswa
           @elseif ($id == 5)
