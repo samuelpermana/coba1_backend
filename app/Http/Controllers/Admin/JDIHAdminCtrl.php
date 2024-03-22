@@ -34,12 +34,12 @@ class JDIHAdminCtrl extends Controller
             'tanggal_disahkan' => 'required|date',
             'peraturan' => 'required|string',
             'status_peraturan' => 'required|string',
-            'file_peraturan' => 'required|file|mimes:pdf',
-            'file_naskah' => 'nullable|file|mimes:pdf',
-            'file_inventarisasi' => 'nullable|file|mimes:pdf',
-            'file_lainnya.*' => 'nullable|file|mimes:pdf',
+            'file_peraturan' => 'required|file|mimes:pdf,doc,docx',
+            'file_naskah' => 'nullable|file|mimes:pdf,doc,docx',
+            'file_inventarisasi' => 'nullable|file|mimes:pdf,doc,docx',
+            'file_lainnya.*' => 'nullable|file|mimes:pdf,doc,docx',
         ]);
-
+    
         $jdih = JDIH::create([
             'tahun' => $request->input('tahun'),
             'jenis_jdih_id' => $request->input('jenis_jdih_id'),
@@ -48,33 +48,34 @@ class JDIHAdminCtrl extends Controller
             'peraturan' => $request->input('peraturan'),
             'status_peraturan' => $request->input('status_peraturan'),
         ]);
-
+    
         // Store file_peraturan
-        $filePeraturanPath = $request->file('file_peraturan')->storeAs('jdih', $this->generateUniqueFileName($request->file('file_peraturan')), 'public');
+        $filePeraturanPath = $request->file('file_peraturan')->storeAs('jdih', $request->file('file_peraturan')->getClientOriginalName(), 'public');
         $jdih->update(['file_peraturan' => $filePeraturanPath]);
-
+    
         // Store file_naskah
         if ($request->hasFile('file_naskah')) {
-            $fileNaskahPath = $request->file('file_naskah')->storeAs('jdih', $this->generateUniqueFileName($request->file('file_naskah')), 'public');
+            $fileNaskahPath = $request->file('file_naskah')->storeAs('jdih', $request->file('file_naskah')->getClientOriginalName(), 'public');
             $jdih->update(['file_naskah' => $fileNaskahPath]);
         }
-
+    
         // Store file_inventarisasi
         if ($request->hasFile('file_inventarisasi')) {
-            $fileInventarisasiPath = $request->file('file_inventarisasi')->storeAs('jdih', $this->generateUniqueFileName($request->file('file_inventarisasi')), 'public');
+            $fileInventarisasiPath = $request->file('file_inventarisasi')->storeAs('jdih', $request->file('file_inventarisasi')->getClientOriginalName(), 'public');
             $jdih->update(['file_inventarisasi' => $fileInventarisasiPath]);
         }
-
+    
         // Store file_lainnya
         if ($request->hasFile('file_lainnya')) {
             foreach ($request->file('file_lainnya') as $file) {
-                $filePath = $file->storeAs('jdih', $this->generateUniqueFileName($file), 'public');
+                $filePath = $file->storeAs('jdih', $file->getClientOriginalName(), 'public');
                 $jdih->file_lain()->create(['nama_file' => $filePath]);
             }
         }
-
+    
         return redirect()->route('admin.jdih.index')->with('success', 'JDIH record created successfully');
     }
+    
 
     public function edit($id)
     {
@@ -86,7 +87,7 @@ class JDIHAdminCtrl extends Controller
     public function update(Request $request, $id)
     {
         $jdihRecord = JDIH::findOrFail($id);
-
+    
         $request->validate([
             'tahun' => 'required|integer',
             'jenis_jdih_id' => 'required',
@@ -94,12 +95,12 @@ class JDIHAdminCtrl extends Controller
             'tanggal_disahkan' => 'required|date',
             'peraturan' => 'required|string',
             'status_peraturan' => 'required|string',
-            'file_peraturan' => 'nullable|file|mimes:pdf',
-            'file_naskah' => 'nullable|file|mimes:pdf',
-            'file_inventarisasi' => 'nullable|file|mimes:pdf',
-            'file_lainnya.*' => 'nullable|file|mimes:pdf',
+            'file_peraturan' => 'nullable|file|mimes:pdf,doc,docx',
+            'file_naskah' => 'nullable|file|mimes:pdf,doc,docx',
+            'file_inventarisasi' => 'nullable|file|mimes:pdf,doc,docx',
+            'file_lainnya.*' => 'nullable|file|mimes:pdf,doc,docx',
         ]);
-
+    
         $data = [
             'tahun' => $request->input('tahun'),
             'jenis_jdih_id' => $request->input('jenis_jdih_id'),
@@ -108,28 +109,25 @@ class JDIHAdminCtrl extends Controller
             'peraturan' => $request->input('peraturan'),
             'status_peraturan' => $request->input('status_peraturan'),
         ];
-
+    
         // Update file_peraturan
         if ($request->hasFile('file_peraturan')) {
             Storage::disk('public')->delete($jdihRecord->file_peraturan);
-            $filePeraturanPath = $request->file('file_peraturan')->storeAs('jdih', $this->generateUniqueFileName($request->file('file_peraturan')), 'public');
-            $data['file_peraturan'] = $filePeraturanPath;
+            $data['file_peraturan'] = $request->file('file_peraturan')->storeAs('jdih', $request->file('file_peraturan')->getClientOriginalName(), 'public');
         }
-
+    
         // Update file_naskah
         if ($request->hasFile('file_naskah')) {
             Storage::disk('public')->delete($jdihRecord->file_naskah);
-            $fileNaskahPath = $request->file('file_naskah')->storeAs('jdih', $this->generateUniqueFileName($request->file('file_naskah')), 'public');
-            $data['file_naskah'] = $fileNaskahPath;
+            $data['file_naskah'] = $request->file('file_naskah')->storeAs('jdih', $request->file('file_naskah')->getClientOriginalName(), 'public');
         }
-
+    
         // Update file_inventarisasi
         if ($request->hasFile('file_inventarisasi')) {
             Storage::disk('public')->delete($jdihRecord->file_inventarisasi);
-            $fileInventarisasiPath = $request->file('file_inventarisasi')->storeAs('jdih', $this->generateUniqueFileName($request->file('file_inventarisasi')), 'public');
-            $data['file_inventarisasi'] = $fileInventarisasiPath;
+            $data['file_inventarisasi'] = $request->file('file_inventarisasi')->storeAs('jdih', $request->file('file_inventarisasi')->getClientOriginalName(), 'public');
         }
-
+    
         // Menghapus file-file yang dipilih oleh pengguna
         if ($request->has('file_to_delete')) {
             foreach ($request->input('file_to_delete') as $fileId) {
@@ -138,24 +136,25 @@ class JDIHAdminCtrl extends Controller
                 $file->delete();
             }
         }
-
+    
         // Update file_lainnya
         if ($request->hasFile('file_lainnya')) {
             foreach ($jdihRecord->file_lain as $file) {
                 Storage::disk('public')->delete($file->nama_file);
                 $file->delete();
             }
-
+    
             foreach ($request->file('file_lainnya') as $file) {
-                $filePath = $file->storeAs('jdih', $this->generateUniqueFileName($file), 'public');
+                $filePath = $file->storeAs('jdih', $file->getClientOriginalName(), 'public');
                 $jdihRecord->file_lain()->create(['nama_file' => $filePath]);
             }
         }
-
+    
         $jdihRecord->update($data);
-
+    
         return redirect()->route('admin.jdih.index')->with('success', 'JDIH record updated successfully');
     }
+    
 
     public function deleteFile($id) {
         $file = File::findOrFail($id);

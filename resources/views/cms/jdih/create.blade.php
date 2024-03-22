@@ -38,16 +38,16 @@
       <input id="status_peraturan" name="status_peraturan" type="text" required><br>
 
       <label for="file_peraturan">File Peraturan:</label>
-      <input name="file_peraturan" type="file"accept="application/pdf">
+      <input name="file_peraturan" type="file"accept=".doc, .docx, application/pdf">
 
       <label for="file_naskah">File Naskah Akademik:</label>
-      <input name="file_naskah" type="file" accept="application/pdf">
+      <input name="file_naskah" type="file" accept=".doc, .docx, application/pdf">
 
       <label for="file_inventarisasi">File DIM:</label>
-      <input name="file_inventarisasi" type="file" accept="application/pdf">
+      <input name="file_inventarisasi" type="file" accept=".doc, .docx, application/pdf">
 
       <label for="file_lainnya">File Lainnya:</label>
-      <input name="file_lainnya[]" type="file" multiple accept="application/pdf">
+      <input name="file_lainnya[]" type="file" multiple accept=".doc, .docx, application/pdf">
 
       <button class="btn" type="submit">Create JDIH Record</button>
     </form>
