@@ -118,74 +118,97 @@ class BadanAnggaranController extends Controller
 
     public function adminReject(Request $request, $proposalId)
     {
-
-        $proposal = ProposalOrmawa::findOrFail($proposalId);
-        $ormawaName = User::findOrFail($proposal->created_by)->name;
-        $ormawaemail = User::findOrFail($proposal->created_by)->email;
-        $proposal->update([
-            'status'=> 'badan anggaran',
-            'status_persetujuan'=> 'rejected',
-            'is_checked'=> true,
-        ]);
-        $namaKomisi = User::where('id', Auth::id())->value('name');
-
-        $log = new LogProposal();
-        $log->action = 'Pengajuan ditolak oleh Badan Anggaran';
-        $log->keterangan = 'Pengajuan ditolak oleh Badan Anggaran ';
-        $log->proposal_id = $proposal->id;
-        $log->user_id = Auth::id();
-        $log->save();
-
-        $mailController = new MailController();
-        $to = $ormawaemail;
-        $subject = 'Pengajuan Proposal Ditolak oleh ' . Auth::user()->name;
-        $body = 'Pengajuan anda ditolak. <br>' .
-        'Judul Proposal: ' . $proposal->judul . '<br>' .
-        'Deskripsi Proposal: ' . $proposal->deskripsi . '<br>' .
-        'Tanggal Diajukan: ' . $proposal->created_at . '<br>' .
-        'Nama Ormawa: ' . $ormawaName . '<br>'.
-        'Silakan unduh file proposal di sini: <a href="' . asset('storage/' . $proposal->file_proposal) . '">Download Proposal</a>';
-        $mailController->sendEmail($to, $subject, $body);
-        return redirect()->back()->with('success', 'Proposal berhasil ditolak.');
+        DB::beginTransaction();
+        try {
+            $proposal = ProposalOrmawa::findOrFail($proposalId);
+            $ormawaName = User::findOrFail($proposal->created_by)->name;
+            $ormawaemail = User::findOrFail($proposal->created_by)->email;
+            $proposal->update([
+                'status'=> 'badan anggaran',
+                'status_persetujuan'=> 'rejected',
+                'is_checked'=> true,
+            ]);
+            $namaKomisi = User::where('id', Auth::id())->value('name');
+    
+            $log = new LogProposal();
+            $log->action = 'Pengajuan ditolak oleh Badan Anggaran';
+            $log->keterangan = 'Pengajuan ditolak oleh Badan Anggaran ';
+            $log->proposal_id = $proposal->id;
+            $log->user_id = Auth::id();
+            $log->save();
+    
+            $mailController = new MailController();
+            $to = $ormawaemail;
+            $subject = 'Pengajuan Proposal Ditolak oleh ' . Auth::user()->name;
+            $body = 'Pengajuan anda ditolak. <br>' .
+            'Judul Proposal: ' . $proposal->judul . '<br>' .
+            'Deskripsi Proposal: ' . $proposal->deskripsi . '<br>' .
+            'Tanggal Diajukan: ' . $proposal->created_at . '<br>' .
+            'Nama Ormawa: ' . $ormawaName . '<br>'.
+            'Silakan unduh file proposal di sini: <a href="' . asset('storage/' . $proposal->file_proposal) . '">Download Proposal</a>';
+            
+            $mailController->sendEmail($to, $subject, $body);
+            if (!$mailController->sendEmail($to, $subject, $body)) {
+                DB::rollback();
+                return back()->with('error', 'Gagal mengirim email. Penolakan proposal gagal.');
+            }
+    
+            DB::commit();
+            return redirect()->back()->with('success', 'Proposal berhasil ditolak.');
+            
+        } catch (\Exception $e) {
+            DB::rollback();
+            return back()->with('error', 'Terjadi kesalahan saat menolak proposal.');
+        }
     }
 
     public function adminApprove(Request $request, $proposalId)
     {
-
-        $proposal = ProposalOrmawa::findOrFail($proposalId);
-        
-        $ormawaName = User::findOrFail($proposal->created_by)->name;
-        
-        $pimpinan = User::whereHas('role', function ($query) {
-            $query->where('role_slug', 'pimpinan');
-        })->get();
-
-        
-        $sekjen = $pimpinan->pluck('email')->toArray();
-        $proposal->update([
-            'status'=> 'sekjen',
-            'status_persetujuan'=> 'pending',
-        ]);
-        $namaKomisi = User::where('id', Auth::id())->value('name');
-        $log = new LogProposal();
-        $log->action = 'Pengajuan disetujui oleh ' . $namaKomisi;
-        $log->keterangan = 'Pengajuan Disetujui oleh Badan Anggaran berlanjut ke Sekjen';
-        $log->proposal_id = $proposal->id;
-        $log->user_id = Auth::id();
-        $log->save();
-
-        $mailController = new MailController();
-        $to = $sekjen;
-        $subject = 'Pengajuan Proposal oleh ' . $ormawaName;
-        $body = 'Pengajuan ini telah disetujui oleh '. Auth::user()->name. '<br>' .
-        'Judul Proposal: ' . $proposal->judul . '<br>' .
-        'Deskripsi Proposal: ' . $proposal->deskripsi . '<br>' .
-        'Tanggal Diajukan: ' . $proposal->created_at . '<br>' .
-        'Nama Ormawa: ' . $ormawaName . '<br>'.
-        'Silakan unduh file proposal di sini: <a href="' . asset('storage/' . $proposal->file_proposal) . '">Download Proposal</a>';
-        $mailController->sendEmail($to, $subject, $body);
+        DB::beginTransaction();
+        try {
+            $proposal = ProposalOrmawa::findOrFail($proposalId);
+            
+            $ormawaName = User::findOrFail($proposal->created_by)->name;
+            
+            $pimpinan = User::whereHas('role', function ($query) {
+                $query->where('role_slug', 'pimpinan');
+            })->get();
     
-        return redirect()->back()->with('success', 'Proposal berhasil disetujui.');
+            
+            $sekjen = $pimpinan->pluck('email')->toArray();
+            $proposal->update([
+                'status'=> 'sekjen',
+                'status_persetujuan'=> 'pending',
+            ]);
+            $namaKomisi = User::where('id', Auth::id())->value('name');
+            $log = new LogProposal();
+            $log->action = 'Pengajuan disetujui oleh ' . $namaKomisi;
+            $log->keterangan = 'Pengajuan Disetujui oleh Badan Anggaran berlanjut ke Sekjen';
+            $log->proposal_id = $proposal->id;
+            $log->user_id = Auth::id();
+            $log->save();
+    
+            $mailController = new MailController();
+            $to = $sekjen;
+            $subject = 'Pengajuan Proposal oleh ' . $ormawaName;
+            $body = 'Pengajuan ini telah disetujui oleh '. Auth::user()->name. '<br>' .
+            'Judul Proposal: ' . $proposal->judul . '<br>' .
+            'Deskripsi Proposal: ' . $proposal->deskripsi . '<br>' .
+            'Tanggal Diajukan: ' . $proposal->created_at . '<br>' .
+            'Nama Ormawa: ' . $ormawaName . '<br>'.
+            'Silakan unduh file proposal di sini: <a href="' . asset('storage/' . $proposal->file_proposal) . '">Download Proposal</a>';
+            $mailController->sendEmail($to, $subject, $body);
+            if (!$mailController->sendEmail($to, $subject, $body)) {
+                DB::rollback();
+                return back()->with('error', 'Gagal mengirim email. Persetujuan proposal gagal.');
+            }
+    
+            DB::commit();
+            return redirect()->back()->with('success', 'Proposal berhasil disetujui.');
+        } catch (\Exception $e) {
+            DB::rollback();
+            return back()->with('error', 'Terjadi kesalahan saat menyetujui proposal.');
+        }
     }
 
     public function listRevisi(Request $request, $proposalId)
@@ -209,83 +232,103 @@ class BadanAnggaranController extends Controller
             'file_revisi' => 'nullable|file|mimes:doc,docx',
         ]);
     
-        $user_id = Auth::id();
-        $proposal = ProposalOrmawa::findOrFail($proposalId);
-        $ormawaUser = User::findOrFail($proposal->created_by);
-        $nama_ormawa = $ormawaUser->name;
-        $nama_komisi = Auth::user()->name; // Asumsi nama komisi diambil dari user yang sedang login
-        $tanggal_revisi = now()->format('Ymd');
-
-        $nomor_revisi = RevisiProposal::where('proposal_id', $proposalId)->count() + 1;
-
-        // Membuat nama file revisi sesuai format yang diinginkan
-        $extension = $request->file('file_revisi')->getClientOriginalExtension(); // Dapatkan ekstensi file
-        $nama_file_revisi = "Proposal{$proposalId}-{$nama_ormawa}-Revisi{$nomor_revisi}_{$nama_komisi}-{$tanggal_revisi}.{$extension}";
-
-        // Menyimpan file revisi jika ada
-        $file_revisi_path = null;
-        if ($request->hasFile('file_revisi')) {
-            $file_revisi_path = $request->file('file_revisi')->storeAs('revisi_files', $nama_file_revisi, 'public');
-        }
+        DB::beginTransaction();
+        try {
+            $user_id = Auth::id();
+            $proposal = ProposalOrmawa::findOrFail($proposalId);
+            $ormawaUser = User::findOrFail($proposal->created_by);
+            $nama_ormawa = $ormawaUser->name;
+            $nama_komisi = Auth::user()->name; // Asumsi nama komisi diambil dari user yang sedang login
+            $tanggal_revisi = now()->format('Ymd');
+    
+            $nomor_revisi = RevisiProposal::where('proposal_id', $proposalId)->count() + 1;
+    
+            // Membuat nama file revisi sesuai format yang diinginkan
+            $extension = $request->file('file_revisi') ? $request->file('file_revisi')->getClientOriginalExtension() : null;
+            $nama_file_revisi = "Proposal{$proposalId}-{$nama_ormawa}-Revisi{$nomor_revisi}_{$nama_komisi}-{$tanggal_revisi}.{$extension}";
+    
+            // Menyimpan file revisi jika ada
+            $file_revisi_path = null;
+            if ($request->hasFile('file_revisi')) {
+                $file_revisi_path = $request->file('file_revisi')->storeAs('revisi_files', $nama_file_revisi, 'public');
+            }
+            
         
-    
-        // Buat entri baru untuk RevisiProposal
-        $revisiProposal = new RevisiProposal();
-        $revisiProposal->proposal_id = $proposalId;
-        $revisiProposal->komentar = $request->komentar;
-        $revisiProposal->revised_by = $user_id;
-        $revisiProposal->is_revision_done_by_ormawa = false;
-        $revisiProposal->file_revisi = $file_revisi_path;
-        $revisiProposal->save();
-    
-        $proposal = ProposalOrmawa::findOrFail($proposalId);
-        $proposal->update([
-            'status' => 'badan anggaran',
-            'status_persetujuan' => 'direvisi',
-            'is_checked'=> true
-        ]);
-    
-        RiwayatRevisiOrmawa::create([
-            'proposal_id' => $proposalId,
-            'revisi_id' => $revisiProposal->id,
-            'judul_lama' => $proposal->judul,
-            'deskripsi_lama' => $proposal->deskripsi,
-            'file_lama' => $proposal->file_proposal,
-        ]);
-    
-        $namaKomisi = User::where('id', Auth::id())->value('name');
-    
-        $log = new LogProposal();
-        $log->action = 'Proposal direvisi oleh ';
-        $log->keterangan = 'Proposal direvisi oleh  ' . $namaKomisi;
-        $log->proposal_id = $proposalId;
-        $log->user_id = $user_id;
-        $log->save();
-
+            // Buat entri baru untuk RevisiProposal
+            $revisiProposal = new RevisiProposal();
+            $revisiProposal->proposal_id = $proposalId;
+            $revisiProposal->komentar = $request->komentar;
+            $revisiProposal->revised_by = $user_id;
+            $revisiProposal->is_revision_done_by_ormawa = false;
+            $revisiProposal->file_revisi = $file_revisi_path;
+            $revisiProposal->save();
         
-    $ormawa = $proposal->ormawa;
-    $ormawaemail = User::findOrFail($proposal->created_by)->email;
-    $file_proposal_path = $proposal->file_proposal;
-    $file_proposal_name = basename($file_proposal_path);
-    $file_revisi_name = $request->file('file_revisi')->getClientOriginalName();
-        // Mengirim email pemberitahuan
-        $mailController = new MailController();
-        $to = $ormawaUser->email;
-        $subject = 'Proposal Direvisi oleh ' . $nama_komisi;
-        $body = 'Proposal Anda telah direvisi oleh Badan Anggaran. Silakan unduh file revisi dan file proposal lama untuk informasi lebih lanjut.' . '<br>' .
-            'Judul Proposal: ' . $proposal->judul . '<br>' .
-            'Deskripsi Proposal: ' . $proposal->deskripsi . '<br>' .
-            'Komentar Komisi: ' . $request->komentar . '<br>' .
-            'File Proposal Lama: <a href="' . asset('storage/' . $proposal->file_proposal) . '">Download Proposal</a>' . '<br>';
+            $proposal = ProposalOrmawa::findOrFail($proposalId);
+            $proposal->update([
+                'status' => 'badan anggaran',
+                'status_persetujuan' => 'direvisi',
+                'is_checked'=> true
+            ]);
+        
+            RiwayatRevisiOrmawa::create([
+                'proposal_id' => $proposalId,
+                'revisi_id' => $revisiProposal->id,
+                'judul_lama' => $proposal->judul,
+                'deskripsi_lama' => $proposal->deskripsi,
+                'file_lama' => $proposal->file_proposal,
+            ]);
+        
+            $namaKomisi = User::where('id', Auth::id())->value('name');
+        
+            $log = new LogProposal();
+            $log->action = 'Proposal direvisi oleh ';
+            $log->keterangan = 'Proposal direvisi oleh  ' . $namaKomisi;
+            $log->proposal_id = $proposalId;
+            $log->user_id = $user_id;
+            $log->save();
     
-        if ($file_revisi_path) {
-            $body .= 'File Revisi: <a href="' . asset('storage/' . $file_revisi_path) . '">Download Proposal</a>';
-        }
+            
+        $ormawa = $proposal->ormawa;
+        $ormawaemail = User::findOrFail($proposal->created_by)->email;
+        $file_proposal_path = $proposal->file_proposal;
+        $file_proposal_name = basename($file_proposal_path);
+        $file_revisi_name = $request->file('file_revisi')->getClientOriginalName();
+            // Mengirim email pemberitahuan
+            $mailController = new MailController();
+            $to = $ormawaUser->email;
+            $subject = 'Proposal Direvisi oleh ' . $nama_komisi;
+            $body = 'Proposal Anda telah direvisi oleh Badan Anggaran. Silakan unduh file revisi dan file proposal lama untuk informasi lebih lanjut.' . '<br>' .
+                'Judul Proposal: ' . $proposal->judul . '<br>' .
+                'Deskripsi Proposal: ' . $proposal->deskripsi . '<br>' .
+                'Komentar Komisi: ' . $request->komentar . '<br>' .
+                'File Proposal Lama: <a href="' . asset('storage/' . $proposal->file_proposal) . '">Download Proposal</a>' . '<br>';
+        
+            if ($file_revisi_path) {
+                $body .= 'File Revisi: <a href="' . asset('storage/' . $file_revisi_path) . '">Download Proposal</a>';
+            }
+        
+            $mailController->sendEmail($to, $subject, $body);
+            if (!$mailController->sendEmail($to, $subject, $body)) {
+                throw new \Exception('Gagal mengirim email.');
+            }
     
-        $mailController->sendEmail($to, $subject, $body);
-    $user_role_slug = auth()->user()->role->role_slug;
+    
+            $user_role_slug = auth()->user()->role->role_slug;
+    
+            DB::commit();
+    
+        return redirect()->route($user_role_slug . '.proposal.revisi', $proposalId)->with('success', 'Revisi Proposal berhasil dibuat!');
+        } catch (\Exception $e) {
+            DB::rollback();
 
-    return redirect()->route($user_role_slug . '.proposal.revisi', $proposalId)->with('success', 'Revisi Proposal berhasil dibuat!');
+            if ($e instanceof \InvalidArgumentException) {
+                return back()->with('error', 'File revisi tidak valid.');
+            } elseif ($e instanceof \RuntimeException) {
+                return back()->with('error', 'Gagal menyimpan file revisi.');
+            } else {
+                return back()->with('error', 'Terjadi kesalahan saat membuat revisi proposal.');
+            }
+        }
     }
     
 }

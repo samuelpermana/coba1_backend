@@ -22,8 +22,8 @@
             </div>
             
             <div class="form-group-revisi">
-                <label for="file_proposal">Upload File Revisi:</label>
-                <input type="file" class="form-control-file-revisi" id="file_proposal" name="file_proposal" accept=".doc, .docx, application/pdf" required>
+                <label for="file_proposal">Upload File Revisi (Format Doc/Docx):</label>
+                <input type="file" class="form-control-file-revisi" id="file_proposal" name="file_proposal" accept=".doc, .docx" required>
             </div>
 
             <button type="submit" class="btn btn-primary">Kirim Revisi</button>

@@ -16,7 +16,7 @@
             </div>
             <div class="form-group-revisi">
                 <label for="file_revisi">File Revisi</label>
-                <input type="file" class="form-control-file-revisi" id="file_revisi" accept=".doc, .docx, application/pdf" name="file_revisi">
+                <input type="file" class="form-control-file-revisi" id="file_revisi" accept=".doc, .docx" name="file_revisi">
             </div>
             <button type="submit" class="btn btn-primary">Submit</button>
         </form>

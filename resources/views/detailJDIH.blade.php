@@ -46,13 +46,26 @@
                 </td>
               </tr>
               <tr>
-                <td>File Naskah Akademik</td>
-                <td><a href="{{ Storage::url($jdihRecord->file_naskah) }}" target="_blank">Download</a></td>
-              </tr>
-              <tr>
-                <td>File DIM</td>
-                <td><a href="{{ Storage::url($jdihRecord->file_inventarisasi) }}" target="_blank">Download</a></td>
-              </tr>
+              <td>File Naskah Akademik</td>
+              <td>
+                  @if($jdihRecord->file_naskah)
+                      <a href="{{ Storage::url($jdihRecord->file_naskah) }}" target="_blank">Download</a>
+                  @else
+                      -
+                  @endif
+              </td>
+          </tr>
+          <tr>
+              <td>File DIM</td>
+              <td>
+                  @if($jdihRecord->file_inventarisasi)
+                      <a href="{{ Storage::url($jdihRecord->file_inventarisasi) }}" target="_blank">Download</a>
+                  @else
+                      -
+                  @endif
+              </td>
+          </tr>
+
               <tr>
                 <td>File Lainnya</td>
                 <td>
