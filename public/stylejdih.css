@@ -152,13 +152,20 @@ section .headerJD {
     display: flex;
     flex-direction: row;
     width: 100%; /* Menggunakan lebar 100% agar mengisi seluruh kolom */
-    background: rgb(208,172,77);
-    background: linear-gradient(90deg, rgba(208,172,77,1) 10%, rgba(226,204,142,1) 40%, rgba(226,204,142,1) 60%, rgba(208,172,77,1) 90%);
+    background: rgb(208, 172, 77);
+    background: linear-gradient(
+        90deg,
+        rgba(208, 172, 77, 1) 10%,
+        rgba(226, 204, 142, 1) 40%,
+        rgba(226, 204, 142, 1) 60%,
+        rgba(208, 172, 77, 1) 90%
+    );
     padding: 0.3rem;
     border: 1px solid transparent;
     border-radius: 10px;
     transition: all 0.3s ease;
     margin: 0; /* Menghapus margin default */
+    align-items: center;
 }
 
 .features-JD .card-JD .blue {
