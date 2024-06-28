@@ -1,0 +1,1016 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  outline: none;
+  border: none;
+  box-sizing: border-box;
+}
+
+img {
+  width: 70%;
+  display: flex;
+  margin-left: 50px;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: #18181b;
+}
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 5rem 2rem;
+  }
+
+nav {
+  max-width: 1200px;
+  margin: 0 auto; /* Menggunakan auto untuk memastikan navbar berada di tengah */
+  padding: 2rem 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.nav-logo {
+  display: inline-flex;
+  align-items: center; /* Mengatur vertikal ke tengah */
+}
+
+.nav-logo img {
+  max-width: 100px;
+}
+
+.nav-title {
+  display: inline-flex;
+  margin-left: 10px;
+  font-size: 1.2rem;
+  color: #fff;
+  font-weight: 600;
+  align-items: center; /* Mengatur vertikal ke tengah */
+}
+.nav-links {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+}
+
+.link a {
+  position: relative;
+  padding-bottom: 0.75rem;
+  color: #fff;
+}
+
+.link a::after {
+  content: "";
+  position: absolute;
+  height: 2px;
+  width: 0;
+  bottom: 0;
+  left: 50%; /* Menengahkan garis bawah */
+  transform: translateX(-50%); /* Menyempurnakan penempatan garis bawah */
+  background-color: #cfb53b;
+  transition: all 0.3s ease;
+}
+
+.link a:hover::after {
+  width: 70%;
+}
+
+.btn {
+  padding: 1rem 2rem;
+  font-size: 1rem;
+  color: #fff;
+  background: rgb(2, 0, 36);
+  background: linear-gradient(135deg, rgba(2, 0, 36, 1) 0%, rgba(207, 181, 59, 1) 0%, rgba(148, 27, 63, 1) 90%);
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #cfb53b;
+}
+
+.blur {
+  position: absolute;
+  box-shadow: 0 0 1000px 50px #cfb53b;
+  z-index: -100;
+}
+
+header {
+  position: relative;
+  padding-top: 2rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  gap: 2rem;
+}
+
+header .content h4 {
+  margin-bottom: 1rem;
+  color: #ccc;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+header .content h1 {
+  color: #fff;
+  margin-bottom: 1rem;
+  font-size: 3rem;
+  font-weight: 700;
+  line-height: 4rem;
+}
+
+header .content h1 span {
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke: 1px #fff;
+}
+
+header .content p {
+  margin-bottom: 3rem;
+  color: #ccc;
+  text-align: justify;
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+}
+
+header .image {
+  position: relative;
+}
+
+header .image::before {
+  content: "o";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 38rem;
+  font-weight: 400;
+  line-height: 20rem;
+  color: #cfb53b;
+  opacity: 0.2;
+  z-index: -100;
+}
+
+header .image img {
+  max-width: 600px;
+  margin: auto;
+}
+
+section .header {
+  color: #cfb53b;
+  margin-bottom: 4rem;
+  font-size: 3rem;
+  font-weight: 700;
+  line-height: 4rem;
+  text-align: center;
+  margin-top: -4rem;
+}
+
+.card_wrapper {
+    border-radius: 1.25rem;
+    overflow: hidden;
+  }
+  
+  .card_image {
+    position: relative;
+    background-color: #27272a;
+    padding-top: 1.5rem;
+    margin-bottom: -0.75rem;
+    transition: background-color 0.3s ease;
+  }
+  
+  .card_image:hover {
+    background-color: #333;
+  }
+  
+  .card_img {
+    width: 180px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 5;
+  }
+  
+  .card_data {
+    background-color: #27272a;
+    padding: 1.5rem 2rem;
+    border-radius: 1rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    z-index: 10;
+    color: #e0e0e0;
+    transition: background-color 0.3s ease;
+  }
+  
+  .card_data:hover {
+    background-color: #333;
+  }
+
+  .card_wrapper-4-2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 1.25rem;
+    overflow: hidden;
+  }
+  
+  .card_image-4-2 {
+    width: 35%;
+    border-radius: 1.25rem 1.25rem 0 0;
+    position: relative;
+    background-color: #27272a;
+    padding-top: 1.5rem;
+    margin-bottom: -0.75rem;
+  }
+
+  .card_data-4-2 {
+    width: 35%;
+    background-color: #27272a;
+    padding: 1.5rem 2rem;
+    border-radius: 1rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    z-index: 10;
+    color: #e0e0e0;
+  }
+
+  .card_titleA {
+    height: 10vh;
+    color: #cfb53b;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .card_des {
+    height: 5vh;
+    color: #cfb53b;
+  }
+  
+  .card_nameA {
+    color: #cfb53b;
+    height: 12vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+.anggota-4 {
+    margin-top: 4em;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+  
+  .anggota-4-1 {
+    margin-top: 4em;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+  
+  .anggota-4-2 {
+    margin-top: 4em;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 2rem;
+  }
+
+.container img {
+  max-width: 450px;
+  display: block;
+}
+
+.container .star-img {
+  width: 120px;
+  margin: 0;
+}
+
+.features {
+  margin-top: 4rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.features1 {
+  margin-top: 2rem;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.features .card {
+  display: flex;
+  flex: 1;
+  background-color: #27272a;
+  padding: 1rem;
+  border: 2px solid transparent;
+  border-radius: 15px;
+  transition: all 0.3s ease;
+}
+
+.features .card .blue {
+  background: #316477;
+}
+
+.features .card .white {
+  background: #fefefe;
+}
+
+.features1 .card {
+  width: 552px;
+  display: flex;
+  flex: 1;
+  background-color: #27272a;
+  padding: 1rem;
+  border: 2px solid transparent;
+  border-radius: 15px;
+  transition: all 0.3s ease;
+  justify-self: center;
+}
+
+.features .card:hover,
+.features1 .card:hover {
+  background-color: #323232;
+  border-color: #fff;
+}
+
+.features .card .content,
+.features1 .card .content {
+  display: flex;
+  flex-direction: column;
+  max-width: 334px;
+}
+
+.features .card span,
+.features1 .card span {
+  display: flex;
+  background: linear-gradient(
+    135deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(207, 181, 59, 1) 0%,
+    rgba(148, 27, 63, 1) 90%
+  );
+  padding: 2px;
+  margin: 10px 26px 10px 10px;
+  font-size: 120px;
+  color: #000000;
+  border-radius: 8px;
+  justify-content: center;
+  align-items: center;
+  width: 150px;
+  height: 150px;
+}
+
+.features .card h4,
+.features1 .card h4 {
+  margin-bottom: 0.5rem;
+  color: #fff;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.features .card p,
+.features1 .card p {
+  color: #ccc;
+  margin-bottom: 1rem;
+  font-size: 0.9rem;
+}
+
+.features1 .card p {
+  font-size: 0.8rem;
+}
+
+.features .card a,
+.features1 .card a {
+  color: #fff;
+  transition: all 0.3s ease;
+}
+
+.features .card a:hover,
+.features1 .card a:hover {
+  color: #cfb53b;
+}
+
+.sub-header {
+  max-width: 600px;
+  margin: auto;
+  text-align: center;
+  color: #ccc;
+  margin-top: -2rem;
+  margin-bottom: 3rem;
+}
+
+.pricing {
+  margin-top: 4rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.pricing .card {
+  padding: 3rem 2rem;
+  background-color: #27272a;
+  display: flex;
+  flex-direction: column;
+  border: 2px solid transparent;
+  border-radius: 15px;
+  transition: all 0.3s ease;
+}
+
+.pricing .card:hover {
+  background-color: #323232;
+  border-color: #fff;
+}
+
+.pricing .card .content {
+  flex: 1;
+  margin-bottom: 2rem;
+}
+
+.pricing .card h4 {
+  margin-bottom: 1rem;
+  color: #fff;
+  font-size: 1.2rem;
+  font-weight: 500;
+  margin-top: 1rem;
+  text-align: center;
+}
+
+.pricing .card h5 {
+  margin-bottom: 1rem;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 500;
+  text-align: justify; /* Mengatur teks menjadi rata kanan dan kiri */
+  text-justify: distribute-all-lines; /* Pilihan tambahan untuk penyebaran yang lebih merata */
+  line-height: 1.5; /* Mengatur jarak antar baris agar lebih legible */
+  letter-spacing: 0.5px;
+}
+
+.pricing .card h3 {
+  color: #fff;
+  padding-bottom: 1rem;
+  margin-bottom: 2rem;
+  font-size: 2rem;
+  font-weight: 600;
+  border-bottom: 2px dashed #fff;
+}
+
+.pricing .card p {
+  color: #fff;
+  margin-bottom: 0.75rem;
+}
+
+.pricing .card p i {
+  color: #ccc;
+  font-size: 1.2rem;
+  margin-right: 0.3rem;
+}
+
+.pricing1 .card .warna {
+  padding: 1rem 2rem;
+  font-size: 1rem;
+  color: #fff;
+  background-color: #cfb53b;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+footer {
+  position: relative;
+  display: grid;
+  grid-template-columns: 400px repeat(3, 1fr);
+  gap: 2rem;
+}
+
+footer .column .logo {
+  max-width: 100px;
+  margin-bottom: 2rem;
+}
+
+footer .column p {
+  color: #ccc;
+  margin-bottom: 2rem;
+}
+
+footer .column .socials {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+footer .column .socials a {
+  color: #ccc;
+  border: 1px solid #ccc;
+  padding: 5px 10px;
+  font-size: 1.25rem;
+  border-radius: 100%;
+  transition: all 0.3s ease;
+}
+
+footer .column .socials a:hover {
+  color: #fff;
+  background-color: #cfb53b;
+  border-color: #cfb53b;
+}
+
+footer .column h4 {
+  color: #fff;
+  margin-bottom: 2rem;
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+footer .column > a {
+  display: block;
+  color: #ccc;
+  margin-bottom: 1rem;
+  transition: all 0.3s ease;
+}
+
+footer .column > a:hover {
+  color: #cfb53b;
+}
+
+.copyright {
+  max-width: 1200px;
+  margin: auto;
+  padding: 1rem;
+  color: #fff;
+  font-size: 0.8rem;
+  text-align: center;
+}
+
+#contact {
+  padding: 40px 20px;
+  text-align: center;
+  border-bottom: 2px solid #aeaaaa;
+  align-items: center; /* Menengahkan konten secara horizontal */
+  justify-content: center; /* Menengahkan konten secara vertikal */
+  height: 100%;
+  color: rgb(201, 193, 193);
+  border: 5px solid #27272a; /* Menyesuaikan lebar border */
+  border-radius: 15px; /* Menambahkan radius sudut untuk border */
+  transition: all 0.3s ease; /* Efek transisi untuk perubahan hover */
+  background-color: #27272a;
+  width: 50%; /* Menyesuaikan lebar elemen dengan textarea */
+  margin: auto; /* Menengahkan elemen */
+}
+
+#contact h2 {
+  margin-bottom: 20px;
+  color: #e0e0e0;
+}
+
+#contact label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+  color: #b5afaf;
+}
+
+#contact input[type="text"],
+#contact input[type="email"],
+#contact textarea {
+  width: 50%;
+  padding: 8px;
+  margin-bottom: 15px;
+  border: none; /* Remove default border */
+  border-radius: 5px; /* Add rounded corners */
+  font-size: 1.1em;
+}
+
+.message-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  text-align: center;
+}
+
+#contact textarea {
+  height: 50px;
+  resize: vertical;
+  text-align: left;
+  font-size: 1.1em;
+  font-family: inherit;
+  margin: auto; /* Untuk membuat textarea berada di tengah */
+  display: block; /* Untuk memastikan textarea memiliki display block */
+  width: 50%; /* Atur lebar sesuai kebutuhan Anda */
+  padding: 8px; /* Atur padding untuk membuatnya lebih rapih */
+  box-sizing: border-box; /* Agar padding tidak menambah lebar textarea */
+}
+
+#contact button {
+  padding: 10px 20px;
+  background: rgb(2, 0, 36);
+  background: linear-gradient(135deg, rgba(2, 0, 36, 1) 0%, rgba(207, 181, 59, 1) 0%, rgba(148, 27, 63, 1) 90%);
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  font-size: 1.1em;
+  transition: background-color 0.3s ease;
+  display: block; /* Membuat tombol menjadi blok */
+  margin: auto; /* Untuk membuat tombol berada di tengah */
+  width: 10%; /* Atur lebar sesuai kebutuhan Anda */
+  text-align: center; /* Agar teks di tengah tombol */
+  margin-top: 10px;
+}
+
+#contact button:hover {
+  background-color: #cfb53b;
+}
+
+/* CSS untuk Efek Modal */
+.modal {
+  display: none; /* Modal defaultnya disembunyikan */
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7); /* Latar belakang semi-transparan */
+  z-index: 1000; /* Z-index tinggi untuk memastikan modal muncul di atas elemen lain */
+  overflow: auto; /* Memungkinkan scrolling jika konten melebihi viewport */
+}
+
+.modal-content {
+  background-color: #fff;
+  margin: 15% auto; /* Membuat modal muncul di tengah layar */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 70%; /* Lebar modal */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  position: relative;
+}
+
+/* Tombol close di pojok kanan atas */
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.j-header4 {
+    color: #cfb53b;
+    margin-top: 1rem;
+    font-size: 5rem;
+    font-weight: 700;
+    line-height: 4rem;
+    justify-content: center; /* Memposisikan teks di tengah secara horizontal */
+    align-items: center;
+    display: flex;
+    height: 100%;
+    position: relative;
+    margin-bottom: 1rem;
+}
+  
+.container6 {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80vw;
+    height: 700px;
+    background: #f5f5f5;
+    box-shadow: 0 30px 50px #dbdbdb;
+    margin-top: 400px;
+    border-radius: 20px;
+}
+  
+.container6 .slide .item {
+    width: 200px;
+    height: 300px;
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+    border-radius: 20px;
+    box-shadow: 0 30px 50px #505050;
+    background-position: 50% 50%;
+    background-size: cover;
+    display: inline-block;
+    transition: 0.5s;
+}
+  
+.slide .item:nth-child(1),
+.slide .item:nth-child(2) {
+    top: 0;
+    left: 0;
+    transform: translate(0, 0);
+    border-radius: 20px;
+    width: 100%;
+    height: 100%;
+}
+  
+.slide .item:nth-child(3) {
+    left: 50%;
+}
+.slide .item:nth-child(4) {
+    left: calc(50% + 220px);
+}
+.slide .item:nth-child(5) {
+    left: calc(50% + 440px);
+}
+  
+  /* here n = 0, 1, 2, 3,... */
+.slide .item:nth-child(n + 6) {
+    left: calc(50% + 660px);
+    opacity: 0;
+}
+  
+.item .content {
+    position: absolute;
+    top: 50%;
+    width: 300px;
+    text-align: left;
+    color: #eee;
+    transform: translate(0, -50%);
+    font-family: system-ui;
+    display: none;
+}
+  
+.slide .item:nth-child(2) .content {
+    display: block;
+}
+  
+.content .name {
+    font-size: 40px;
+    text-transform: uppercase;
+    font-weight: bold;
+    opacity: 0;
+    animation: animate 1s ease-in-out 1 forwards;
+}
+  
+.content .des {
+    margin-top: 10px;
+    margin-bottom: 20px;
+    opacity: 0;
+    animation: animate 1s ease-in-out 0.3s 1 forwards;
+}
+  
+.content button {
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    opacity: 0;
+    animation: animate 1s ease-in-out 0.6s 1 forwards;
+}
+  
+.section-header {
+    text-align: center;
+}
+  
+.modern-header {
+    color: #cfb53b;
+    margin-bottom: 3rem;
+    font-size: 3rem;
+    font-weight: 700;
+    line-height: 4rem;
+    text-align: center;
+    margin-top: -15rem;
+}
+  
+.modern-wewenang {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+  
+.modern-card {
+    width: 30%;
+    background: rgb(2, 0, 36);
+    background: linear-gradient(135deg, rgba(2, 0, 36, 1) 0%, rgba(207, 181, 59, 1) 0%, rgba(148, 27, 63, 1) 90%);
+    border-radius: 8px;
+    margin: 15px 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+    border-color: #fff;
+}
+  
+.modern-card:hover {
+    transform: scale(1.05);
+    background-color: #323232;
+    border-color: #fff;
+}
+  
+.content {
+    padding: 15px;
+}
+  
+h4 {
+    color: #fff;
+    font-size: 1.2em;
+}
+
+.accordion-k{
+    color: #fff;
+    font-size: 1.2rem;
+    padding: 3rem 2rem;
+    width: 100%;
+    background: rgb(2, 0, 36);
+    background: linear-gradient(135deg, rgba(2, 0, 36, 1) 0%, rgba(207, 181, 59, 1) 0%, rgba(148, 27, 63, 1) 90%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: 0.5s;
+    font-family: "Poppins", sans-serif;
+}
+
+.panel-k{
+    text-align: center;
+    color: #fff;
+    padding: 0 18px;
+    border-radius: 15px;
+    background-color: #770000;
+    max-height: 0;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    overflow: hidden;
+    transition: max-height 0.5s ease-out;
+    margin-top: 10px;
+}
+
+.container-k{
+    max-width: 1200px;
+    margin: auto;
+    padding: 5rem 2rem;
+}
+
+.container-img{
+    padding-top: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.d-btn{
+    color: white;
+    margin-top: 5px;
+    padding: 5px 8px;
+    border-radius: 5px;
+    background: linear-gradient(135deg, rgba(2, 0, 36, 1) 0%, rgba(207, 181, 59, 1) 0%, rgba(148, 27, 63, 1) 90%);
+    cursor: pointer;
+}
+
+.agenda p{
+    height: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container-check {
+    padding: 60px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+    font-size: 22px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+  
+  /* Hide the browser's default checkbox */
+.container-check input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+  
+  /* Create a custom checkbox */
+.checkmark {
+    border-radius: 5px;
+    position: absolute;
+    height: 50px;
+    width: 50px;
+    background-color: #eee;
+
+}
+  
+/* When the checkbox is checked, add a blue background */
+.container-check input:checked ~ .checkmark {
+      background: linear-gradient(135deg, rgba(2, 0, 36, 1) 0%, rgba(207, 181, 59, 1) 0%, rgba(148, 27, 63, 1) 90%);
+}
+  
+  /* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+  
+  /* Show the checkmark when checked */
+.container-check input:checked ~ .checkmark:after {
+    display: block;
+}
+  
+  /* Style the checkmark/indicator */
+.container-check .checkmark:after {
+    left: 20px;
+    top: 12px;
+    width: 8px;
+    height: 20px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+.tag-divide {
+    margin-bottom: 2rem; 
+}
+
+@keyframes animate {
+    from {
+      opacity: 0;
+      transform: translate(0, 100px);
+      filter: blur(33px);
+    }
+  
+    to {
+      opacity: 1;
+      transform: translate(0);
+      filter: blur(0);
+    }
+  }
+
+@media (width < 900px) {
+    .nav-links {
+      display: none;
+    }
+    .panel-k{
+      grid-template-columns: repeat(1, 1fr);
+    }
+    header {
+      grid-template-columns: repeat(1, 1fr);
+    }
+    header .image {
+      grid-area: 1/1/2/2;
+    }
+    .features {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    .pricing {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    footer {
+      grid-template-columns: 1fr 200px;
+    }
+}
+  
+@media (width < 600px) {
+    header .image::before {
+      display: none;
+    }
+  
+    .features {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  
+    .pricing {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  
+    footer {
+      grid-template-columns: 1fr 150px;
+    }
+}

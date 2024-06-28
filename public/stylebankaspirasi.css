@@ -1,0 +1,267 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap");
+
+* {
+    padding: 0;
+    margin: 0;
+    outline: none;
+    border: none;
+    box-sizing: border-box;
+}
+
+img {
+    width: 70%;
+    display: flex;
+    margin-left: 50px;
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    background-color: #fff6ea;
+}
+
+nav {
+    width: 100%;
+    margin: 0 auto; /* Menggunakan auto untuk memastikan navbar berada di tengah */
+    padding: 2rem 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+.nav-logo {
+    display: inline-flex;
+    align-items: center; /* Mengatur vertikal ke tengah */
+}
+
+.nav-logo img {
+    max-width: 100px;
+}
+
+.nav-title {
+    display: inline-flex;
+    margin-left: 10px;
+    font-size: 1.2rem;
+    color: #cfb53b;
+    font-weight: 600;
+    align-items: center; /* Mengatur vertikal ke tengah */
+}
+.nav-links {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 5rem 2rem;
+}
+
+.blur {
+    position: absolute;
+    box-shadow: 0 0 1000px 50px #cfb53b;
+    z-index: -100;
+}
+
+section .header {
+    color: #cfb53b;
+    margin-bottom: 4rem;
+    font-size: 3rem;
+    font-weight: 700;
+    line-height: 4rem;
+    text-align: center;
+    margin-top: -4rem;
+}
+
+.sub-header {
+    max-width: 600px;
+    margin: auto;
+    text-align: center;
+    color: #18181b;
+    margin-top: -2rem;
+    margin-bottom: 3rem;
+}
+
+section .header-BA {
+    color: #cfb53b;
+    margin-bottom: 2rem;
+    font-size: 3rem;
+    font-weight: 700;
+    line-height: 4rem;
+    text-align: center;
+    margin-top: 5rem;
+}
+
+.pricing {
+    margin-top: 4rem;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 2rem;
+}
+
+.pricing .card .content {
+    background: rgb(208,172,77);
+    background: linear-gradient(90deg, rgba(208,172,77,1) 10%, rgba(226,204,142,1) 40%, rgba(226,204,142,1) 60%, rgba(208,172,77,1) 90%);
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    margin-bottom: 1rem;
+}
+
+.pricing .card h4 {
+    margin-bottom: 1rem;
+    color: #18181b;
+    font-size: 1.2rem;
+    font-weight: 500;
+    margin-top: 1rem;
+    text-align: center;
+}
+
+.btn3 {
+    color: #fff;
+    font-size: 1rem;
+    padding: 1rem 2rem;
+    width: 100%;
+    background: #cfb53b;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.5s;
+    font-family: "Poppins", sans-serif;
+}
+
+.panel {
+    color: #18181b;
+    border-radius: 15px;
+    background-color: #f1dda8;
+    max-height: 0;
+    overflow: hidden;
+    transition: 0.5s ease-out;
+    margin-top: 10px;
+    text-align: justify;
+}
+
+footer {
+    position: relative;
+    display: grid;
+    grid-template-columns: 400px repeat(3, 1fr);
+    gap: 2rem;
+}
+
+footer .column .logo {
+    max-width: 100px;
+    margin-bottom: 2rem;
+}
+
+footer .column p {
+    color: #18181b;
+    margin-bottom: 2rem;
+}
+
+footer .column .socials {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+footer .column .socials a {
+    color: #18181b;
+    border: 1px solid #18181b;
+    padding: 5px 10px;
+    font-size: 1.25rem;
+    border-radius: 100%;
+    transition: all 0.3s ease;
+}
+
+footer .column .socials a:hover {
+    color: #fff;
+    background-color: #cfb53b;
+    border-color: #cfb53b;
+}
+
+footer .column h4 {
+    color: #18181b;
+    margin-bottom: 2rem;
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+footer .column > a {
+    display: block;
+    color: #18181b;
+    margin-bottom: 1rem;
+    transition: all 0.3s ease;
+}
+
+footer .column > a:hover {
+    color: #cfb53b;
+}
+
+.copyright {
+    max-width: 1200px;
+    margin: auto;
+    padding: 1rem;
+    color: #fff;
+    font-size: 0.8rem;
+    text-align: center;
+}
+
+.container-f {
+    max-width: 1200px;
+    margin: auto;
+    padding: 2rem 2rem;
+}
+
+.slobeh{
+    justify-content: center;
+    text-align: center;
+}
+
+@media (width < 900px) {
+    .nav-links {
+        display: none;
+    }
+    header {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    header .image {
+        grid-area: 1/1/2/2;
+    }
+    .features {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .pricing {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    footer {
+        grid-template-columns: 1fr 200px;
+    }
+}
+
+@media (width < 600px) {
+    header .image::before {
+        display: none;
+    }
+
+    .features {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .pricing {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    footer {
+        grid-template-columns: 1fr 150px;
+    }
+}

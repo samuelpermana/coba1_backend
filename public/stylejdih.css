@@ -1,0 +1,446 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap");
+
+* {
+    padding: 0;
+    margin: 0;
+    outline: none;
+    border: none;
+    box-sizing: border-box;
+}
+
+img {
+    width: 70%;
+    display: flex;
+    margin-left: 50px;
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    background-color: #fff6ea;
+}
+
+nav {
+    width: 100%;
+    margin: 0 auto; /* Menggunakan auto untuk memastikan navbar berada di tengah */
+    padding: 2rem 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+.nav-logo {
+    display: inline-flex;
+    align-items: center; /* Mengatur vertikal ke tengah */
+}
+
+.nav-logo img {
+    max-width: 100px;
+}
+
+.nav-title {
+    display: inline-flex;
+    margin-left: 10px;
+    font-size: 1.2rem;
+    color: #cfb53b;
+    font-weight: 600;
+    align-items: center; /* Mengatur vertikal ke tengah */
+}
+.nav-links {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.link a {
+    position: relative;
+    padding-bottom: 0.75rem;
+    color: #18181b;
+}
+
+.link a::after {
+    content: "";
+    position: absolute;
+    height: 2px;
+    width: 0;
+    bottom: 0;
+    left: 50%; /* Menengahkan garis bawah */
+    transform: translateX(-50%); /* Menyempurnakan penempatan garis bawah */
+    background-color: #cfb53b;
+    transition: all 0.3s ease;
+}
+
+.link a:hover::after {
+    width: 70%;
+}
+
+.btn {
+    padding: 1rem 2rem;
+    font-size: 1rem;
+    color: #fff;
+    background-color: #800000;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    opacity: 80%;
+}
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 5rem 2rem;
+}
+
+.blur {
+    position: absolute;
+    box-shadow: 0 0 1000px 50px #cfb53b;
+    z-index: -100;
+}
+
+section .header-JD {
+    color: #cfb53b;
+    margin-bottom: 3rem;
+    font-size: calc(3vw + 2rem);
+    font-weight: 700;
+    line-height: 5rem;
+    margin-top: 2rem;
+    text-align: center;
+}
+
+section .headerJD {
+    color: #cfb53b;
+    margin-bottom: 3rem;
+    font-size: calc(3rem + 5px);
+    font-weight: 700;
+    line-height: 4rem;
+    margin-top: 2rem;
+    text-align: center;
+}
+
+.container img {
+    max-width: 450px;
+    display: block;
+}
+
+.container .star-img {
+    width: 80px;
+    margin: 0;
+}
+
+.belum-ada {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.features-JD {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 4 kolom */
+    gap: 2rem; /* Jarak antar card */
+}
+
+.features-JD .card-JD {
+    display: flex;
+    flex-direction: row;
+    width: 100%; /* Menggunakan lebar 100% agar mengisi seluruh kolom */
+    background: rgb(208,172,77);
+    background: linear-gradient(90deg, rgba(208,172,77,1) 10%, rgba(226,204,142,1) 40%, rgba(226,204,142,1) 60%, rgba(208,172,77,1) 90%);
+    padding: 0.3rem;
+    border: 1px solid transparent;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+    margin: 0; /* Menghapus margin default */
+}
+
+.features-JD .card-JD .blue {
+    background-color: #f5f5dc;
+}
+
+.features-JD .card-JD .content,
+.features1 .card-JD .content {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Menengahkan elemen sepanjang sumbu utama */
+    justify-content: center; /* Menengahkan elemen sepanjang sumbu lintang */
+    max-width: 334px;
+}
+
+.features-JD .card-JD span,
+.features1 .card-JD span {
+    display: flex;
+    padding: 1px;
+    margin: 10px 10px 10px 26px;
+    font-size: 120px;
+    color: #000000;
+    border-radius: 8px;
+    justify-content: center;
+    align-items: center;
+    width: 130px;
+    height: 100px;
+    transition: all 1 ease;
+    border: 2px solid transparent;
+}
+
+.features-JD .card-JD span:hover,
+.features1 .card-JD span:hover {
+    border-color: #fefefe;
+}
+
+.features-JD .card-JD h4,
+.features1 .card-JD h4 {
+    color: #fff;
+    font-size: 1.2rem;
+    font-weight: 600;
+    text-align: center;
+    justify-content: center;
+    margin-top: 0;
+    transition: all 0.3s ease;
+}
+.features-JD .card-JD h4:hover {
+    color: #cfb53b;
+}
+
+.features-JD .card-JD p,
+.features1 .card-JD p {
+    color: #ccc;
+    margin-bottom: 1rem;
+    font-size: 0.9rem;
+}
+
+.features1 .card-JD p {
+    font-size: 0.8rem;
+}
+
+.features-JD .card-JD a,
+.features1 .card-JD a {
+    color: #fff;
+    font-size: 1.2rem;
+    font-weight: 600;
+    text-align: center;
+    justify-content: center;
+    margin-top: 0;
+    transition: all 0.3s ease;
+}
+
+.features-JD .card-JD a:hover,
+.features1 .card-JD a:hover {
+    color: #cfb53b;
+}
+
+footer {
+    position: relative;
+    display: grid;
+    grid-template-columns: 400px repeat(3, 1fr);
+    gap: 2rem;
+}
+
+footer .column .logo {
+    max-width: 100px;
+    margin-bottom: 2rem;
+}
+
+footer .column p {
+    color: #18181b;
+    margin-bottom: 2rem;
+}
+
+footer .column .socials {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+footer .column .socials a {
+    color: #18181b;
+    border: 1px solid #18181b;
+    padding: 5px 10px;
+    font-size: 1.25rem;
+    border-radius: 100%;
+    transition: all 0.3s ease;
+}
+
+footer .column .socials a:hover {
+    color: #18181b;
+    background-color: #cfb53b;
+    border-color: #cfb53b;
+}
+
+footer .column h4 {
+    color: #18181b;
+    margin-bottom: 2rem;
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+footer .column > a {
+    display: block;
+    color: #18181b;
+    margin-bottom: 1rem;
+    transition: all 0.3s ease;
+}
+
+footer .column > a:hover {
+    color: #cfb53b;
+}
+
+.copyright {
+    max-width: 1200px;
+    margin: auto;
+    padding: 1rem;
+    color: #18181b;
+    font-size: 0.8rem;
+    text-align: center;
+}
+.header4 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: var(--container-color);
+    padding: 0 1rem;
+    z-index: -2rem;
+    margin-top: 2rem;
+}
+
+.header__icon,
+.header__toggle {
+    font-size: 4rem;
+    margin-left: auto;
+    display: none;
+}
+
+.header__toggle {
+    color: #aeaaaa;
+    cursor: pointer;
+}
+.nav2 {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    height: 100vh;
+    padding: 1rem 1rem 0;
+    background-color: #aeaaaa;
+    box-shadow: 1px 0 0 rgba(22, 8, 43, 0.1);
+    z-index: 2rem;
+    transition: 0.4s;
+    display: none;
+}
+
+/*===== Show menu =====*/
+.show-menu {
+    left: 0;
+}
+
+.container-f {
+    max-width: 1200px;
+    margin: auto;
+    padding: 2rem 2rem;
+}
+
+@media (width < 900px) {
+    .header__container {
+        display: flex;
+        align-items: center;
+        height: 100px;
+        justify-content: space-between;
+        z-index: -2rem;
+    }
+
+    .nav2 {
+        display: block;
+        z-index: 9999;
+    }
+    .btn {
+        display: none;
+    }
+    .header__toggle {
+        display: block;
+    }
+
+    .nav-links {
+        display: none;
+    }
+    header {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    header .image {
+        grid-area: 1/1/2/2;
+    }
+    .features {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .pricing {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    footer {
+        grid-template-columns: 1fr 200px;
+    }
+    footer {
+        z-index: -1;
+    }
+    .nav2__container {
+        z-index: 4;
+    }
+}
+
+@media (width < 1200px) {
+    .nav-links {
+        display: none;
+    }
+    .features-JD {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (width < 900px) {
+    header {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    header .image {
+        grid-area: 1/1/2/2;
+    }
+    .features {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .pricing {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    footer {
+        grid-template-columns: 1fr 200px;
+    }
+}
+
+@media (width < 700px) {
+    .features-JD {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+@media (width < 600px) {
+    header .image::before {
+        display: none;
+    }
+    .features-JD {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .features {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .pricing {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    footer {
+        grid-template-columns: 1fr 150px;
+    }
+}

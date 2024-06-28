@@ -1,0 +1,49 @@
+.custom-form {
+    font-size: 1.5rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.custom-form label {
+    margin-bottom: 8px;
+}
+
+.custom-form select,
+.custom-form input,
+.custom-form textarea {
+    padding: 3px;
+    font-size: 1rem;
+    margin-bottom: 10px;
+    width: 50%;
+}
+
+.custom-form button {
+    font-size: 1.3rem;
+}
+
+.custom-form .btn {
+    background-color: #d1e3e2;
+    padding: 10px 16px;
+    border-radius: 25px;
+    margin: 20px 30px 20px 0;
+    cursor: pointer;
+    border: solid 1px;
+    transition: 0.15s ease;
+
+    width: 50%;
+
+}
+
+.custom-form .btn:hover {
+    opacity: 0.85;
+}
+
+.custom-form .btn:active {
+    opacity: 0.7;
+}
+
+
+.main_container .top_bar {
+    border-top-right-radius: 0;
+}
+

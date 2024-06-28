@@ -1,0 +1,429 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap");
+
+* {
+    padding: 0;
+    margin: 0;
+    outline: none;
+    border: none;
+    box-sizing: border-box;
+}
+
+img {
+    width: 70%;
+    display: flex;
+    margin-left: 50px;
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    background-color: #fff6ea;
+}
+
+nav {
+    width: 100%;
+    margin: 0 auto; /* Menggunakan auto untuk memastikan navbar berada di tengah */
+    padding: 2rem 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+.nav-logo {
+    display: inline-flex;
+    align-items: center; /* Mengatur vertikal ke tengah */
+}
+
+.nav-logo img {
+    max-width: 100px;
+}
+
+.nav-title {
+    display: inline-flex;
+    margin-left: 10px;
+    font-size: 1.2rem;
+    color: #cfb53b;
+    font-weight: 600;
+    align-items: center; /* Mengatur vertikal ke tengah */
+}
+.nav-links {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 5rem 2rem;
+}
+
+.blur {
+    position: absolute;
+    box-shadow: 0 0 1000px 50px #cfb53b;
+    z-index: -100;
+}
+
+#contact {
+    padding: 40px 20px;
+    text-align: center;
+   
+    align-items: center; /* Menengahkan konten secara horizontal */
+    justify-content: center; /* Menengahkan konten secara vertikal */
+    height: 100%;
+    color: rgb(201, 193, 193);
+     /* Menyesuaikan lebar border */
+    border-radius: 15px; /* Menambahkan radius sudut untuk border */
+    transition: all 0.3s ease; /* Efek transisi untuk perubahan hover */
+    background: rgb(208,172,77);
+    background: linear-gradient(90deg, rgba(208,172,77,1) 10%, rgba(226,204,142,1) 40%, rgba(226,204,142,1) 60%, rgba(208,172,77,1) 90%);
+    width: 50%; /* Menyesuaikan lebar elemen dengan textarea */
+    margin: auto; /* Menengahkan elemen */
+}
+
+#contact h2 {
+    margin-bottom: 20px;
+    color: #18181b;
+}
+
+#contact label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #18181b;
+}
+
+#contact input[type="text"],
+#contact input[type="email"],
+#contact textarea {
+    width: 50%;
+    padding: 8px;
+    margin-bottom: 15px;
+    border: none; /* Remove default border */
+    border-radius: 5px; /* Add rounded corners */
+    font-size: 1.1em;
+}
+
+.message-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+}
+
+#contact textarea {
+    height: 200px;
+    text-align: left;
+    font-size: 1.1em;
+    font-family: inherit;
+    margin: auto; /* Untuk membuat textarea berada di tengah */
+    display: block; /* Untuk memastikan textarea memiliki display block */
+    width: 50%; /* Atur lebar sesuai kebutuhan Anda */
+    padding: 8px; /* Atur padding untuk membuatnya lebih rapih */
+    box-sizing: border-box; /* Agar padding tidak menambah lebar textarea */
+    resize: vertical;
+}
+
+#contact button {
+    padding: 10px 20px;
+    background: #18181b;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 1.1em;
+    transition: background-color 0.3s ease;
+    display: block; /* Membuat tombol menjadi blok */
+    margin: auto; /* Untuk membuat tombol berada di tengah */
+    min-width: 10%; /* Atur lebar sesuai kebutuhan Anda */
+    text-align: center; /* Agar teks di tengah tombol */
+    margin-top: 10px;
+}
+
+#contact button:hover {
+    opacity: 0.8;
+}
+
+#name,
+#email,
+#angkatan,
+#id_line,
+#message {
+    background-color: #f5f5dc;
+    color: #18181b;
+}
+
+footer {
+    position: relative;
+    display: grid;
+    grid-template-columns: 400px repeat(3, 1fr);
+    gap: 2rem;
+}
+
+footer .column .logo {
+    max-width: 100px;
+    margin-bottom: 2rem;
+}
+
+footer .column p {
+    color: #18181b;
+    margin-bottom: 2rem;
+}
+
+footer .column .socials {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+footer .column .socials a {
+    color: #18181b;
+    border: 1px solid #18181b;
+    padding: 5px 10px;
+    font-size: 1.25rem;
+    border-radius: 100%;
+    transition: all 0.3s ease;
+}
+
+footer .column .socials a:hover {
+    color: #fff;
+    background-color: #cfb53b;
+    border-color: #cfb53b;
+}
+
+footer .column h4 {
+    color: #18181b;
+    margin-bottom: 2rem;
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+footer .column > a {
+    display: block;
+    color: #18181b;
+    margin-bottom: 1rem;
+    transition: all 0.3s ease;
+}
+
+footer .column > a:hover {
+    color: #cfb53b;
+}
+
+.copyright {
+    max-width: 1200px;
+    margin: auto;
+    padding: 1rem;
+    color: #18181b;
+    font-size: 0.8rem;
+    text-align: center;
+}
+
+.modal {
+    display: none; /* Modal defaultnya disembunyikan */
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7); /* Latar belakang semi-transparan */
+    z-index: 1000; /* Z-index tinggi untuk memastikan modal muncul di atas elemen lain */
+    overflow: auto; /* Memungkinkan scrolling jika konten melebihi viewport */
+}
+
+.modal-content {
+    background-color: #fff;
+    margin: 15% auto; /* Membuat modal muncul di tengah layar */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 70%; /* Lebar modal */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    position: relative;
+}
+/*========== HEADER ==========*/
+.header4 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: var(--container-color);
+    padding: 0 1rem;
+    z-index: -2rem;
+    margin-top: 2rem;
+}
+
+.header__icon,
+.header__toggle {
+    font-size: 4rem;
+    margin-left: auto;
+    display: none;
+}
+
+.header__toggle {
+    color: #aeaaaa;
+    cursor: pointer;
+}
+
+/* Show dropdown collapse */
+.nav2__dropdown:hover {
+    max-height: 100rem;
+}
+
+/* Rotate icon arrow */
+.nav2__dropdown:hover .nav2__dropdown-icon {
+    transform: rotate(180deg);
+}
+
+/*===== Show menu =====*/
+.show-menu {
+    left: 0;
+}
+
+.container-f {
+    max-width: 1200px;
+    margin: auto;
+    padding: 2rem 2rem;
+}
+.error-popup {
+    position: fixed;
+    top: 150px; /* adjust the top value as needed */
+    right: 5px; /* adjust the right value as needed */
+    background-color: #cfb53b;
+    color: #ffffff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    z-index: 1000;
+    display: none;
+    transition: all 0.1s ease;
+  }
+  
+
+@media (width < 1300px) {
+    .header__container {
+        display: flex;
+        align-items: center;
+        height: 100px;
+        justify-content: space-between;
+        z-index: -2rem;
+    }
+
+    .nav2 {
+        display: block;
+    }
+    .btn {
+        display: none;
+    }
+    .header__toggle {
+        display: block;
+    }
+
+    .nav-links {
+        display: none;
+    }
+    header {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    header .image {
+        grid-area: 1/1/2/2;
+    }
+    .features {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .pricing {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    footer {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        gap: 1rem;
+        padding: 1rem;
+    }
+
+    footer .column {
+        text-align: center;
+        margin-bottom: 2rem;
+    }
+}
+
+@media (width < 900px) {
+
+    .header__container {
+        display: flex;
+        align-items: center;
+        height: 100px;
+        justify-content: space-between;
+        z-index: -2rem;
+    }
+
+    .nav2 {
+        display: block;
+    }
+    .btn {
+        display: none;
+    }
+    .header__toggle {
+        display: block;
+    }
+
+    .nav-links {
+        display: none;
+    }
+    header {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    header .image {
+        grid-area: 1/1/2/2;
+    }
+    .features {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .pricing {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    footer {
+        grid-template-columns: 1fr 200px;
+    }
+    footer {
+        z-index: -1;
+    }
+    
+}
+
+@media (width < 600px) {
+    header .image::before {
+        display: none;
+    }
+
+    .features {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .pricing {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    footer {
+        grid-template-columns: 1fr 150px;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    #contact {
+        width: 90%;
+    }
+
+    #contact input[type="text"],
+    #contact input[type="email"],
+    #contact textarea {
+        width: 100%; /* Lebar penuh pada layar kecil */
+    }
+
+    #contact button {
+        min-width: 80%;
+    }
+}

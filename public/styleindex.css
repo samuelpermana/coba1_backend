@@ -1,0 +1,1122 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap");
+
+/* ================= INI STYLE DROPDOWN MENU =================*/
+
+* {
+    padding: 0;
+    margin: 0;
+    outline: none;
+    border: none;
+    box-sizing: border-box;
+}
+
+img {
+    width: 70%;
+    display: flex;
+    margin-left: 50px;
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: #fff6ea;
+}
+
+.container-bg {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    display: grid;
+    place-items: center;
+    isolation: isolate;
+    overflow: hidden;
+}
+
+.container-f{
+    max-width: 1200px;
+    margin: auto;
+    padding: 2rem 2rem;   
+}
+
+.blob {
+    position: absolute;
+    opacity: 0.5;
+    width: 400px;
+    aspect-ratio: 1/1;
+    animation: animate 10s cubic-bezier(0.68, -0.55, 0.27, 1.55) infinite
+        alternate forwards;
+    filter: blur(40px);
+    z-index: -1;
+    background: linear-gradient(
+        47deg,
+        rgba(255, 88, 139, 1) 21%,
+        rgb(0 164 173) 67%,
+        rgba(118, 74, 166, 1) 81%
+    );
+
+    /*  Optional  */
+    /*   box-shadow: inset 50px 50px 17px 0px #ff588b,
+    inset 100px 100px 17px 0px #66319f; */
+}
+
+@keyframes animate {
+    0% {
+        translate: 40% -25%;
+        border-radius: 60% 40% 30% 70% / 100% 85% 92% 74%;
+    }
+    50% {
+        translate: 0% 13%;
+        border-radius: 20% 71% 47% 70% / 81% 15% 22% 54%;
+        rotate: 41deg;
+        scale: 1.15;
+    }
+    100% {
+        translate: -45% 39%;
+        border-radius: 100% 75% 92% 74% / 60% 80% 30% 70%;
+        rotate: -60deg;
+        scale: 1.05;
+    }
+}
+
+nav {
+    width: 100%;
+    margin: 0 auto; /* Menggunakan auto untuk memastikan navbar berada di tengah */
+    padding: 2rem 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+header {
+    position: relative;
+    padding-top: 2rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    gap: 2rem;
+}
+
+header .content h4 {
+    margin-bottom: 1rem;
+    color: #18181b;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+header .content h1 {
+    color: #fff;
+    margin-bottom: 1rem;
+    font-size: 3rem;
+    font-weight: 700;
+    line-height: 4rem;
+}
+
+header .content h1 span {
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke: 1px #fff;
+}
+
+header .content p {
+    margin-bottom: 3rem;
+    color: #18181b;
+    text-align: justify;
+    font-family: "Poppins", sans-serif;
+    font-size: 16px;
+}
+
+section .header {
+    color: #cfb53b;
+    margin-bottom: 4rem;
+    font-size: 3rem;
+    font-weight: 700;
+    line-height: 4rem;
+    text-align: center;
+    margin-top: -4rem;
+}
+
+.nav-logo {
+    display: inline-flex;
+    align-items: center; /* Mengatur vertikal ke tengah */
+}
+
+.nav-logo img {
+    max-width: 100px;
+}
+
+.nav-title {
+    display: inline-flex;
+    margin-left: 10px;
+    font-size: 1.2rem;
+    color: #cfb53b;
+    font-weight: 600;
+    align-items: center; /* Mengatur vertikal ke tengah */
+}
+.nav-links {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+}
+
+
+.btn-as {
+    padding: 1rem 2rem;
+    font-size: 1rem;
+    color: #fff;
+    background: rgb(2, 0, 36);
+    background: linear-gradient(
+        135deg,
+        rgba(2, 0, 36, 1) 0%,
+        rgba(207, 181, 59, 1) 0%,
+        rgba(148, 27, 63, 1) 90%
+    );
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-as:hover {
+    background-color: #cfb53b;
+}
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 5rem 2rem;
+}
+
+.blur {
+    position: absolute;
+    box-shadow: 0 0 1000px 50px #cfb53b;
+    z-index: -100;
+}
+
+.container7 {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#slideshow-grid {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+.img-aktivitas-sm {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 30px;
+    border: solid 2px #000000;
+    margin: 0;
+}
+
+.data-title {
+    margin-bottom: 20px;
+}
+
+.data-description {
+    text-align: justify;
+}
+
+#slideshow {
+    display: block;
+    width: 100%;
+    margin: 0;
+    /* position: absolute; */
+    /* transform: translate(-50%, -50%); */
+}
+
+#slideshow #slidewindow {
+    position: relative;
+    overflow: hidden;
+}
+
+#slideshow #slidewindow div {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    width: 100%;
+    transition: transform 0.5s ease;
+    max-height: 1000px;
+}
+
+#slideshow #slidewindow div img {
+    display: inline;
+    max-width: 1000px;
+}
+
+/* Controls */
+
+#slideshow #controls {
+    text-align: center;
+    transition: all 200ms ease-in-out;
+}
+
+#slideshow #controls #next,
+#slideshow #controls #prev {
+    position: relative;
+    width: 48px;
+    height: 48px;
+    margin: 8px;
+    cursor: pointer;
+    border: solid 1px gray;
+}
+
+#slideshow #controls #next {
+    float: right;
+    border-radius: 100px;
+}
+
+#slideshow #controls #prev {
+    float: left;
+    border-radius: 100px;
+}
+
+#slideshow #controls #next div,
+#slideshow #controls #prev div {
+    position: absolute;
+    pointer-events: none;
+    border-style: solid;
+    border-color: #dad5d5;
+    border-width: 2px 2px 0 0;
+    content: "";
+    display: inline-block;
+    left: 18px;
+    top: 19px;
+    transform: rotate(45deg);
+    vertical-align: top;
+    width: 8px;
+    height: 8px;
+}
+
+#slideshow #controls #prev div {
+    transform: rotate(-135deg);
+    left: 20px;
+}
+
+#slideshow #controls #dots {
+    margin: auto;
+    display: inline-block;
+    padding: 0;
+    list-style-type: none;
+    width: auto;
+}
+
+#slideshow #controls #dots li {
+    display: inline-block;
+    border: 2px solid #383838;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    cursor: pointer;
+    margin: 26px 4px;
+}
+
+#slideshow #controls #dots .active {
+    background: #383838;
+}
+
+#slideshow #controls #dots li:hover,
+#slideshow #controls #next:hover,
+#slideshow #controls #prev:hover {
+    transform: scale(1.2);
+    
+}
+
+#slideshow #controls #dots li:active,
+#slideshow #controls #next:active,
+#slideshow #controls #prev:active {
+    transform: scale(1);
+}
+
+#description {
+    font-size: 1.3rem;
+    color: white;
+    background: rgb(208,172,77);
+    background: linear-gradient(90deg, rgba(208,172,77,1) 10%, rgba(226,204,142,1) 40%, rgba(226,204,142,1) 60%, rgba(208,172,77,1) 90%);
+    padding: 5px 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 15%);
+}
+
+.container-cal {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    padding: 5px;
+    color: #fff;
+    display: flex;
+    margin-top: -4rem;
+    border-radius: 10px;
+    background: rgb(2, 0, 36);
+    background: linear-gradient(
+        135deg,
+        rgba(2, 0, 36, 1) 0%,
+        rgba(207, 181, 59, 1) 0%,
+        rgba(148, 27, 63, 1) 90%
+    );
+}
+
+.left {
+    width: 60%;
+    padding: 20px;
+}
+
+.calendar {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    color: #878895;
+    border-radius: 5px;
+    background-color: #fff;
+}
+
+/* set after behind the main element */
+.calendar::before,
+.calendar::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 100%;
+    width: 12px;
+    height: 97%;
+    border-radius: 0 5px 5px 0;
+    background-color: #d3d4d6d7;
+    transform: translateY(-50%);
+}
+
+.calendar::before {
+    height: 94%;
+    left: calc(100% + 12px);
+    background-color: rgb(153, 153, 153);
+}
+
+.calendar .month {
+    width: 100%;
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 50px;
+    font-size: 1.2rem;
+    font-weight: 500;
+    text-transform: capitalize;
+}
+
+.calendar .month .prev,
+.calendar .month .next {
+    cursor: pointer;
+}
+
+.calendar .month .prev:hover,
+.calendar .month .next:hover {
+    color: var(--primary-clr);
+}
+
+.calendar .weekdays {
+    width: 100%;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    font-size: 1rem;
+    font-weight: 500;
+    text-transform: capitalize;
+}
+
+.weekdays div {
+    width: 14.28%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.calendar .days {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 0 20px;
+    font-size: 1rem;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+.calendar .days .day {
+    width: 14.28%;
+    height: 90px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    color: var(--primary-clr);
+    border: 1px solid #f5f5f5;
+    border-radius: 10px;
+}
+
+.calendar .days .day:nth-child(7n + 1) {
+    border-left: 2px solid #f5f5f5;
+}
+
+.calendar .days .day:nth-child(7n) {
+    border-right: 2px solid #f5f5f5;
+}
+
+.calendar .days .day:nth-child(-n + 7) {
+    border-top: 2px solid #f5f5f5;
+}
+
+.calendar .days .day:nth-child(n + 29) {
+    border-bottom: 2px solid #f5f5f5;
+}
+
+.calendar .days .day:not(.prev-date, .next-date):hover {
+    color: #fff;
+    background-color: #cfb53b;
+}
+
+.calendar .days .prev-date,
+.calendar .days .next-date {
+    color: #b3b3b3;
+}
+
+.calendar .days .active {
+    position: relative;
+    font-size: 2rem;
+    color: #fff;
+    background-color: #cfb53b;
+}
+
+.calendar .days .active::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    box-shadow: 0 0 10px 2px #cfb53b;
+    border-radius: 10%;
+}
+
+.calendar .days .today {
+    font-size: 2rem;
+}
+
+.calendar .days .event {
+    position: relative;
+}
+
+.calendar .days .event::after {
+    content: "";
+    position: absolute;
+    bottom: 10%;
+    left: 50%;
+    width: 75%;
+    height: 6px;
+    border-radius: 30px;
+    transform: translateX(-50%);
+    background-color: #cfb53b;
+}
+
+.calendar .days .day:hover.event::after {
+    background-color: #cfb53b;
+}
+
+.calendar .days .active.event::after {
+    background-color: #cfb53b;
+    bottom: 20%;
+}
+
+.calendar .days .active.event {
+    padding-bottom: 10px;
+}
+
+.calendar .goto-today {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 5px;
+    padding: 0 20px;
+    margin-bottom: 20px;
+    color: var(--primary-clr);
+}
+
+.calendar .goto-today .goto {
+    display: flex;
+    align-items: center;
+    border-radius: 5px;
+    overflow: hidden;
+    border: 1px solid var(--primary-clr);
+}
+
+.calendar .goto-today .goto input {
+    width: 100%;
+    height: 30px;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    padding: 0 20px;
+    color: var(--primary-clr);
+    border-radius: 5px;
+}
+
+.calendar .goto-today button {
+    padding: 5px 10px;
+    border: 1px solid var(--primary-clr);
+    border-radius: 5px;
+    background-color: transparent;
+    cursor: pointer;
+    color: var(--primary-clr);
+}
+
+.calendar .goto-today button:hover {
+    color: #fff;
+    background-color: var(--primary-clr);
+}
+
+.calendar .goto-today .goto button {
+    border: none;
+    border-left: 1px solid var(--primary-clr);
+    border-radius: 0;
+}
+
+.container .right {
+    position: relative;
+    width: 40%;
+    min-height: 100%;
+    padding: 20px 0;
+}
+
+.right .today-date {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 40px;
+    padding-left: 70px;
+    margin-top: 50px;
+    margin-bottom: 20px;
+    text-transform: capitalize;
+}
+
+.right .today-date .event-day {
+    font-size: 2rem;
+    font-weight: 500;
+}
+
+.right .today-date .event-date {
+    font-size: 1rem;
+    font-weight: 400;
+    color: #fff;
+}
+
+.events {
+    width: 100%;
+    height: 100%;
+    max-height: 600px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    padding-left: 4px;
+}
+
+.events .event {
+    position: relative;
+    width: 95%;
+    min-height: 70px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 5px;
+    padding: 0 20px;
+    padding-left: 50px;
+    color: #fff;
+    background: linear-gradient(90deg, #cfb53b, transparent);
+    cursor: pointer;
+}
+
+/* even event */
+.events .event:nth-child(even) {
+    background: transparent;
+}
+
+.events .event:hover {
+    background: linear-gradient(90deg, #cfb53b, transparent);
+}
+
+.events .event .title {
+    display: flex;
+    align-items: center;
+    pointer-events: none;
+}
+
+.events .event .title .event-title {
+    font-size: 1rem;
+    font-weight: 400;
+    margin-left: 20px;
+}
+
+.events .event i {
+    color: var(--primary-clr);
+    font-size: 0.5rem;
+}
+
+.events .event:hover i {
+    color: #fff;
+}
+
+.events .event .event-time {
+    font-size: 0.8rem;
+    font-weight: 400;
+    color: #fff;
+    margin-left: 15px;
+    pointer-events: none;
+}
+
+.events .event:hover .event-time {
+    color: #fff;
+}
+
+/* add tick in event after */
+.events .event::after {
+    content: "✓";
+    position: absolute;
+    top: 50%;
+    right: 0;
+    font-size: 3rem;
+    line-height: 1;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    opacity: 0.3;
+    color: var(--primary-clr);
+    transform: translateY(-50%);
+}
+
+.events .event:hover::after {
+    display: flex;
+}
+
+.add-event {
+    position: absolute;
+    bottom: 30px;
+    right: 30px;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+    color: #878895;
+    border: 2px solid #878895;
+    opacity: 0.5;
+    border-radius: 50%;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.add-event:hover {
+    opacity: 1;
+}
+
+.add-event i {
+    pointer-events: none;
+}
+
+.events .no-event {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: #878895;
+}
+
+.add-event-wrapper {
+    position: absolute;
+    bottom: 100px;
+    left: 50%;
+    width: 90%;
+    max-height: 0;
+    overflow: hidden;
+    border-radius: 5px;
+    background-color: #fff;
+    transform: translateX(-50%);
+    transition: max-height 0.5s ease;
+}
+
+.add-event-wrapper.active {
+    max-height: 300px;
+}
+
+.add-event-header {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    color: #373c4f;
+    border-bottom: 1px solid #f5f5f5;
+}
+
+.add-event-header .close {
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.add-event-header .close:hover {
+    color: var(--primary-clr);
+}
+
+.add-event-header .title {
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+.add-event-body {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    padding: 20px;
+}
+
+.add-event-body .add-event-input {
+    width: 100%;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.add-event-body .add-event-input input {
+    width: 100%;
+    height: 100%;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid #f5f5f5;
+    padding: 0 10px;
+    font-size: 1rem;
+    font-weight: 400;
+    color: #373c4f;
+}
+
+.add-event-body .add-event-input input::placeholder {
+    color: #a5a5a5;
+}
+
+.add-event-body .add-event-input input:focus {
+    border-bottom: 1px solid var(--primary-clr);
+}
+
+.add-event-body .add-event-input input:focus::placeholder {
+    color: var(--primary-clr);
+}
+
+.add-event-footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.add-event-footer .add-event-btn {
+    height: 40px;
+    font-size: 1rem;
+    font-weight: 500;
+    outline: none;
+    border: none;
+    color: #fff;
+    background-color: #cfb53b;
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 5px 10px;
+    border: 1px solid var(--primary-clr);
+}
+
+.add-event-footer .add-event-btn:hover {
+    background-color: #cfb53b;
+    color: white;
+}
+
+/* CSS untuk mengubah warna teks dan border kalender menjadi putih */
+.fc th,
+.fc td {
+    color: white;
+    /* Mengubah warna teks menjadi putih */
+    border-color: white;
+    /* Mengubah warna border menjadi putih */
+}
+
+footer {
+    position: relative;
+    display: grid;
+    grid-template-columns: 400px repeat(3, 1fr);
+    gap: 2rem;
+}
+
+footer .column .logo {
+    max-width: 100px;
+    margin-bottom: 2rem;
+}
+
+footer .column p {
+    color: #18181b;
+    margin-bottom: 2rem;
+}
+
+footer .column .socials {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+footer .column .socials a {
+    color: #18181b;
+    border: 1px solid #18181b;
+    padding: 5px 10px;
+    font-size: 1.25rem;
+    border-radius: 100%;
+    transition: all 0.3s ease;
+}
+
+footer .column .socials a:hover {
+    color: #fff;
+    background-color: #cfb53b;
+    border-color: #cfb53b;
+}
+
+footer .column h4 {
+    color: #18181b;
+    margin-bottom: 2rem;
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+footer .column > a {
+    display: block;
+    color: #18181b;
+    margin-bottom: 1rem;
+    transition: all 0.3s ease;
+}
+
+footer .column > a:hover {
+    color: #cfb53b;
+}
+
+.copyright {
+    max-width: 1200px;
+    margin: auto;
+    padding: 1rem;
+    color: #18181b;
+    font-size: 0.8rem;
+    text-align: center;
+}
+
+/* Ganti latar belakang kalender */
+#calendar {
+    background: rgb(208,172,77);
+    background: linear-gradient(90deg, rgba(208,172,77,1) 10%, rgba(226,204,142,1) 40%, rgba(226,204,142,1) 60%, rgba(208,172,77,1) 90%); /* Ubah warna latar belakang sesuai keinginan Anda */
+  padding: 20px; /* Berikan padding agar konten kalender tidak terlalu dekat dengan tepi */
+  border-radius: 20px;
+  margin-top: -5rem;
+}
+
+/* Atur tata letak tombol kalender */
+.fc-toolbar.fc-header-toolbar {
+    margin-bottom: 20px; /* Jarak antara toolbar dan kalender */
+}
+
+/* Atur tampilan tombol navigasi kalender */
+.fc-prev-button,
+.fc-next-button {
+    background-color: #d4af37; /* Warna latar tombol */
+    color: #fff; /* Warna teks tombol */
+    border-color: #d4af37; /* Warna garis batas tombol */
+    border-radius: 5px; /* Ubah sudut tombol */
+    padding: 5px 10px; /* Atur padding tombol */
+    margin: 0 5px; /* Atur margin antara tombol */
+    font-size: 16px; /* Ukuran teks tombol */
+}
+
+/* Efek hover pada tombol navigasi kalender */
+.fc-prev-button:hover,
+.fc-next-button:hover {
+  opacity: 0.8;
+}
+
+/* Atur tampilan bulan dan tahun pada kalender */
+.fc-toolbar-title {
+    font-size: 20px; /* Ukuran teks bulan dan tahun */
+    font-weight: bold; /* Beri teks bulan dan tahun bold */
+    color: #333; /* Warna teks bulan dan tahun */
+}
+
+/* Atur tampilan hari-hari di kalender */
+.fc-daygrid-day {
+    padding: 10px; /* Atur padding untuk day grid */
+    background-color: transparent; /* Warna latar belakang hari */
+    border: 1px solid #ccc; /* Tambahkan garis batas untuk hari */
+}
+
+/* Atur tampilan hari-hari pada saat dihover */
+.fc-day:hover { 
+  background-color: #d4af37; /* Warna latar belakang saat dihover */
+  opacity: 0.5; 
+  cursor: pointer;  /*Ubah kursor saat dihover */
+ } 
+
+.fc-today-button {
+    background-color: #d4af37;
+    padding: 6px 10px;
+    border-radius: 5px;
+    color: white;
+    font-weight: 500;
+}
+
+.fc-toolbar-chunk {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.fc-h-event .fc-event-title-container {
+    flex-grow: 1;
+    flex-shrink: 1;
+    min-width: 0;
+    padding-top: 5px;
+    border-radius: 20px;
+}
+.fc-h-event .fc-event-title {
+    display: inline-block;
+    left: 0;
+    max-width: 100%;
+    overflow: hidden;
+    right: 0;
+    vertical-align: top;
+    font-family: "Poppins", sans-serif;
+    font-size: 18px;
+    margin-left: 0rem;
+}
+
+@media (width < 1000px) {
+    .img-aktivitas-sm {
+        height: 90%;
+        width: 90%;
+    }
+    #slideshow-grid {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .header__toggle {
+        display: block;
+    }
+    .nav-links {
+        display: none;
+    }
+    header {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    header .image {
+        grid-area: 1/1/2/2;
+    }
+    .features {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .pricing {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    footer {
+        grid-template-columns: 1fr 200px;
+    }
+}
+
+@media (width < 600px) {
+    header .image::before {
+        display: none;
+    }
+    .features {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .pricing {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    footer {
+        grid-template-columns: 1fr 150px;
+    }
+}
+/* CSS untuk menyesuaikan tampilan kalender */
+.fc-toolbar h2 {
+    color: #18181b; /* Mengubah warna teks bulan */
+}
+
+.fc-daygrid-day-number {
+    color: black; /* Mengubah warna teks tanggal */
+}
+
+
+.fc, .fc *, .fc :after, .fc :before {
+    box-sizing: border-box;
+    color: #18181b;
+}
+@media screen and (max-width: 768px) {
+    #calendar {
+        padding: 10px;
+        border-radius: 10px;
+    }
+
+    .fc-prev-button,
+    .fc-next-button {
+        font-size: 14px;
+        padding: 4px 8px;
+    }
+
+    .fc-toolbar-title {
+        font-size: 18px;
+    }
+
+    .fc-daygrid-day {
+        padding: 8px;
+    }
+
+    .fc-today-button {
+        padding: 4px 8px;
+        font-size: 14px;
+    }
+    .fc .fc-col-header-cell-cushion {
+        padding: 1px 2px;
+        font-size: 13px;
+    }
+}
